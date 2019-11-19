@@ -1,0 +1,52 @@
+<%#INTERFACE
+
+modelkit_version "~>0.8.0"
+
+parameter "zone_name"
+parameter "airsys_name"
+parameter "heating_eff", :default=>0.8
+
+
+%>
+
+AirSys   "<%=airsys_name%>PSZ AirSys"
+   TreeState = 253
+   Type = "SZAC"
+   CtrlZnRef = "<%=zone_name%>"
+   DuctLctn = "Conditioned"
+   ..
+
+AirSeg   "<%=airsys_name%>SysSupply AirSeg"
+   TreeState = 253
+   Type = "Supply"
+   Path = "Ducted"
+   ..
+
+CoilClg   "<%=airsys_name%>CoolingCoil"
+   Type = "DirectExpansion"
+   CndsrType = "Air"
+   ..
+
+CoilHtg   "<%=airsys_name%>HeatingCoil"
+   Type = "Furnace"
+   FurnAFUE = <%= heating_eff %>
+   ..
+
+Fan   "<%=airsys_name%>SupplyFan"
+   CtrlMthd = "ConstantVolume"
+   ..
+
+AirSeg   "<%=airsys_name%>SysReturnAirSeg"
+   Type = "Return"
+   ..
+
+TrmlUnit   "<%=airsys_name%> TU"
+   Type = "Uncontrolled"
+   ZnServedRef = "<%=zone_name%>"
+   PriAirSegRef = "<%=airsys_name%>SysSupply AirSeg"
+   ..
+
+OACtrl   "CoreZnOAControl"
+   AirSegSupRef = "<%=airsys_name%>SysSupply AirSeg"
+   AirSegRetRef = "<%=airsys_name%>SysReturnAirSeg"
+   ..
