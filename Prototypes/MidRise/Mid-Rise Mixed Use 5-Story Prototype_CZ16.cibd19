@@ -2,12 +2,12 @@ RulesetFilename   "T24N_2019.bin"
 
 Proj   "Mid-Rise Mixed-Use (5-story)"  
    BldgEngyModelVersion = 14
-   CreateDate = 1567115585
-   ModDate = 1570125142
-   RunDate = 1570125143
+   CreateDate = 1567115649
+   ModDate = 1570128706
+   RunDate = 1570128707
    GasType = "NaturalGas"
-   CliZn = "ClimateZone3"
-   WeatherStation = "OAKLAND_724930"
+   CliZn = "ClimateZone16"
+   WeatherStation = "BLUE-CANYON_725845"
    HVACAutoSizing = 0
    ExcptCondNoClgSys = "No"
    ExcptCondRtdCap = "No"
@@ -15,8 +15,8 @@ Proj   "Mid-Rise Mixed-Use (5-story)"
    UseExcptDsgnModel = 0
    AutoHardSize = 1
    AutoEffInput = 1
-   AutoHardSizeAirFlowPerSqFt = 0.52592
-   AutoHardSizeAirFlowPerTon = 449.488
+   AutoHardSizeAirFlowPerSqFt = 0.6651
+   AutoHardSizeAirFlowPerTon = 449.487
    DefaultDayltgCtrls = 0
    RunTitle = "Mid-Rise Mixed-Use (5-story)"
    CompOptLtg = 1
@@ -52,12 +52,26 @@ Mat   "Plywood - 5/8 in."
    CodeItem = "Plywood - 5/8 in."
    ..
 
+Mat   "Compliance Insulation R1.54"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R1.54"
+   ..
+
 Mat   "WoodFrameWall16inOC R11.25"  
    CodeCat = "Composite"
    FrmMat = "Wood"
    FrmConfig = "Wall16inOC"
    FrmDepth = "3_5In"
    CavityIns = 11.25
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR10.5"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 10.5
    ..
 
 Mat   "Concrete - 140 lb/ft3 - 10 in."  
@@ -77,7 +91,7 @@ ConsAssm   "ResWoodWallU059"
    MatRef[1] = "Stucco - 7/8 in."
    MatRef[2] = "Plywood - 5/8 in."
    MatRef[3] = "Compliance Insulation R1.54"
-   MatRef[4] = "WoodFrameWall16inOCCavInsR5"
+   MatRef[4] = "WoodFrameWall16inOCCavInsR10.5"
    MatRef[5] = "Gypsum Board - 5/8 in."
    ..
 
@@ -15556,12 +15570,12 @@ ZnSys   "ZnSys F2-4 1-Bed Core N"
 
 CoilClg   "CoilCooling 1"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 1"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 1"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15580,12 +15594,12 @@ ZnSys   "ZnSys F2-4 1-Bed Core West"
 
 CoilClg   "CoilCooling 2"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 2"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 2"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15605,12 +15619,12 @@ ZnSys   "ZnSys F2-4 1-Bed Core East"
 
 CoilClg   "CoilCooling 3"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 3"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 3"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15630,12 +15644,12 @@ ZnSys   "ZnSys F2-4 1-Bed North"
 
 CoilClg   "CoilCooling 4"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 4"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 4"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15655,12 +15669,12 @@ ZnSys   "ZnSys F2-4 2-Bed Core NE-NW"
 
 CoilClg   "CoilCooling 5"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 5"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 5"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15680,12 +15694,12 @@ ZnSys   "ZnSys F2-4 2-Bed East"
 
 CoilClg   "CoilCooling 6"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 6"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 6"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15705,12 +15719,12 @@ ZnSys   "ZnSys F2-4 2-Bed West"
 
 CoilClg   "CoilCooling 7"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 7"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 7"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15730,12 +15744,12 @@ ZnSys   "ZnSys F2-4 3-Bed NE"
 
 CoilClg   "CoilCooling 8"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 8"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 8"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15755,12 +15769,12 @@ ZnSys   "ZnSys F2-4 3-Bed NW"
 
 CoilClg   "CoilCooling 9"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 9"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 9"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15780,12 +15794,12 @@ ZnSys   "ZnSys F2-4 Studio SE"
 
 CoilClg   "CoilCooling 10"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 10"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 10"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15805,12 +15819,12 @@ ZnSys   "ZnSys F2-4 Studio SW"
 
 CoilClg   "CoilCooling 11"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 11"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 11"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15829,12 +15843,12 @@ ZnSys   "ZnSys F5 1-Bed Core N"
 
 CoilClg   "CoilCooling 17"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 17"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 17"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15854,12 +15868,12 @@ ZnSys   "ZnSys F5 1-Bed Core West"
 
 CoilClg   "CoilCooling 18"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 18"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 18"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15879,12 +15893,12 @@ ZnSys   "ZnSys F5 1-Bed Core East"
 
 CoilClg   "CoilCooling 19"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 19"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 19"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15904,12 +15918,12 @@ ZnSys   "ZnSys F5 1-Bed North"
 
 CoilClg   "CoilCooling 20"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 20"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 20"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15929,12 +15943,12 @@ ZnSys   "ZnSys F5 2-Bed Core NE-NW"
 
 CoilClg   "CoilCooling 21"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 21"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 21"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15954,12 +15968,12 @@ ZnSys   "ZnSys F5 2-Bed East"
 
 CoilClg   "CoilCooling 22"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 22"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 22"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15979,12 +15993,12 @@ ZnSys   "ZnSys F5 2-Bed West"
 
 CoilClg   "CoilCooling 23"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 23"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 23"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -15997,17 +16011,18 @@ CoilHtg   "SupCoilHtg 23"
    ..
 
 ZnSys   "ZnSys F5 3-Bed NE"  
+   TreeState = 253
    Type = "SZHP"
    ..
 
 CoilClg   "CoilCooling 24"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 24"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 24"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -16026,12 +16041,12 @@ ZnSys   "ZnSys F5 3-Bed NW"
 
 CoilClg   "CoilCooling 25"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 25"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 25"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -16050,12 +16065,12 @@ ZnSys   "ZnSys F5 Studio SE"
 
 CoilClg   "CoilCooling 26"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 26"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 26"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -16074,12 +16089,12 @@ ZnSys   "ZnSys F5 Studio SW"
 
 CoilClg   "CoilCooling 27"  
    Type = "DirectExpansion"
-   DXSEER = 14
+   DXSEER = 17
    ..
 
 CoilHtg   "CoilHtg 27"  
    Type = "HeatPump"
-   HtPumpCOP = 4.7
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "SupCoilHtg 27"
    HtPumpDefHtSrc = "Electric"
    ..
@@ -16268,8 +16283,8 @@ AirSys   "BaseSys5 F1"
    SubType = "Packaged3Phase"
    CtrlSysType = "DDCToZone"
    OptStart = 1
-   AirFlowPerSqFt = 0.84051
-   AirFlowPerTon = 414.66
+   AirFlowPerSqFt = 1.07669
+   AirFlowPerTon = 414.918
    ClgCtrl = "WarmestReset"
    ..
 
@@ -16280,19 +16295,19 @@ AirSeg   "BaseSys5 SupAirSeg"
 CoilClg   "BaseSys5 CoilClg"  
    Type = "DirectExpansion"
    NumClgStages = 2
-   CapTotNetRtd = 550202
+   CapTotNetRtd = 704371
    ..
 
 CoilHtg   "BaseSys5 CoilHtg"  
    Type = "HotWater"
    FluidSegInRef = "BaseHW PriSupSeg"
    FluidSegOutRef = "BaseHW PriRetSeg"
-   CapTotGrossRtd = 140127
+   CapTotGrossRtd = 195827
    ..
 
 Fan   "BaseSys5 Fan"  
    CtrlMthd = "VariableSpeedDrive"
-   FlowCap = 19012.2
+   FlowCap = 24354.6
    ..
 
 AirSeg   "BaseSys5 RetAirSeg"  
@@ -16309,7 +16324,7 @@ OACtrl   "BaseSys5 OACtrl"
 TrmlUnit   "BaseVAV TrmlUnit"  
    Type = "VAVReheatBox"
    ZnServedRef = "Thermal Zone: F1 Business Center"
-   PriAirFlowMax = 426.24
+   PriAirFlowMax = 538.231
    ReheatCtrlMthd = "DualMaximum"
    ..
 
@@ -16317,13 +16332,13 @@ CoilHtg   "BaseVAVBox CoilHtg"
    Type = "HotWater"
    FluidSegInRef = "BaseHW PriSupSeg"
    FluidSegOutRef = "BaseHW PriRetSeg"
-   CapTotGrossRtd = 9731.3
+   CapTotGrossRtd = 8785.27
    ..
 
 TrmlUnit   "BaseVAV TrmlUnit-2"  
    Type = "VAVReheatBox"
    ZnServedRef = "Thermal Zone: F1 Corridor"
-   PriAirFlowMax = 1373
+   PriAirFlowMax = 1788.9
    ReheatCtrlMthd = "DualMaximum"
    ..
 
@@ -16331,13 +16346,13 @@ CoilHtg   "BaseVAVBox CoilHtg-2"
    Type = "HotWater"
    FluidSegInRef = "BaseHW PriSupSeg"
    FluidSegOutRef = "BaseHW PriRetSeg"
-   CapTotGrossRtd = 52529.3
+   CapTotGrossRtd = 47520.3
    ..
 
 TrmlUnit   "BaseVAV TrmlUnit-3"  
    Type = "VAVReheatBox"
    ZnServedRef = "Thermal Zone: F1 Lounge"
-   PriAirFlowMax = 1115.06
+   PriAirFlowMax = 1405.91
    ReheatCtrlMthd = "DualMaximum"
    ..
 
@@ -16345,13 +16360,13 @@ CoilHtg   "BaseVAVBox CoilHtg-3"
    Type = "HotWater"
    FluidSegInRef = "BaseHW PriSupSeg"
    FluidSegOutRef = "BaseHW PriRetSeg"
-   CapTotGrossRtd = 22129.5
+   CapTotGrossRtd = 18585.1
    ..
 
 TrmlUnit   "BaseVAV TrmlUnit-4"  
    Type = "VAVReheatBox"
    ZnServedRef = "Thermal Zone: F1 Fitness Center"
-   PriAirFlowMax = 615.938
+   PriAirFlowMax = 797.866
    ReheatCtrlMthd = "DualMaximum"
    ..
 
@@ -16359,13 +16374,13 @@ CoilHtg   "BaseVAVBox CoilHtg-4"
    Type = "HotWater"
    FluidSegInRef = "BaseHW PriSupSeg"
    FluidSegOutRef = "BaseHW PriRetSeg"
-   CapTotGrossRtd = 18248.2
+   CapTotGrossRtd = 15186.4
    ..
 
 TrmlUnit   "BaseVAV TrmlUnit-5"  
    Type = "VAVReheatBox"
    ZnServedRef = "Thermal Zone: F1 Leasing Office"
-   PriAirFlowMax = 281.652
+   PriAirFlowMax = 365.532
    ReheatCtrlMthd = "DualMaximum"
    ..
 
@@ -16373,13 +16388,13 @@ CoilHtg   "BaseVAVBox CoilHtg-5"
    Type = "HotWater"
    FluidSegInRef = "BaseHW PriSupSeg"
    FluidSegOutRef = "BaseHW PriRetSeg"
-   CapTotGrossRtd = 8646.09
+   CapTotGrossRtd = 7828.34
    ..
 
 TrmlUnit   "BaseVAV TrmlUnit-6"  
    Type = "VAVReheatBox"
    ZnServedRef = "Thermal Zone: F1 Mechanical Room"
-   PriAirFlowMax = 572.269
+   PriAirFlowMax = 708.614
    ReheatCtrlMthd = "DualMaximum"
    ..
 
@@ -16387,13 +16402,13 @@ CoilHtg   "BaseVAVBox CoilHtg-6"
    Type = "HotWater"
    FluidSegInRef = "BaseHW PriSupSeg"
    FluidSegOutRef = "BaseHW PriRetSeg"
-   CapTotGrossRtd = 9037.76
+   CapTotGrossRtd = 7520.52
    ..
 
 TrmlUnit   "BaseVAV TrmlUnit-7"  
    Type = "VAVReheatBox"
    ZnServedRef = "Thermal Zone: F1 Retail N-NW"
-   PriAirFlowMax = 4023.06
+   PriAirFlowMax = 5094.98
    ReheatCtrlMthd = "DualMaximum"
    ..
 
@@ -16401,13 +16416,13 @@ CoilHtg   "BaseVAVBox CoilHtg-7"
    Type = "HotWater"
    FluidSegInRef = "BaseHW PriSupSeg"
    FluidSegOutRef = "BaseHW PriRetSeg"
-   CapTotGrossRtd = 96822.7
+   CapTotGrossRtd = 77184.9
    ..
 
 TrmlUnit   "BaseVAV TrmlUnit-8"  
    Type = "VAVReheatBox"
    ZnServedRef = "Thermal Zone: F1 Retail NE"
-   PriAirFlowMax = 3064.45
+   PriAirFlowMax = 3910.5
    ReheatCtrlMthd = "DualMaximum"
    ..
 
@@ -16415,13 +16430,13 @@ CoilHtg   "BaseVAVBox CoilHtg-8"
    Type = "HotWater"
    FluidSegInRef = "BaseHW PriSupSeg"
    FluidSegOutRef = "BaseHW PriRetSeg"
-   CapTotGrossRtd = 71504.1
+   CapTotGrossRtd = 57679.5
    ..
 
 TrmlUnit   "BaseVAV TrmlUnit-9"  
    Type = "VAVReheatBox"
    ZnServedRef = "Thermal Zone: F1 Retail SE"
-   PriAirFlowMax = 2034.43
+   PriAirFlowMax = 2649.39
    ReheatCtrlMthd = "DualMaximum"
    ..
 
@@ -16429,13 +16444,13 @@ CoilHtg   "BaseVAVBox CoilHtg-9"
    Type = "HotWater"
    FluidSegInRef = "BaseHW PriSupSeg"
    FluidSegOutRef = "BaseHW PriRetSeg"
-   CapTotGrossRtd = 52270.6
+   CapTotGrossRtd = 44589
    ..
 
 TrmlUnit   "BaseVAV TrmlUnit-10"  
    Type = "VAVReheatBox"
    ZnServedRef = "Thermal Zone: F1 Retail SW"
-   PriAirFlowMax = 3026.25
+   PriAirFlowMax = 3918.03
    ReheatCtrlMthd = "DualMaximum"
    ..
 
@@ -16443,7 +16458,7 @@ CoilHtg   "BaseVAVBox CoilHtg-10"
    Type = "HotWater"
    FluidSegInRef = "BaseHW PriSupSeg"
    FluidSegOutRef = "BaseHW PriRetSeg"
-   CapTotGrossRtd = 77460.4
+   CapTotGrossRtd = 65027.5
    ..
 
 AirSys   "DOAS1"  
@@ -16453,6 +16468,7 @@ AirSys   "DOAS1"
    OptStart = 1
    AirFlowPerSqFt = 0.15
    AirFlowPerTon = 400
+   HtgDsgnSupAirTemp = 75
    ClgCtrl = "WarmestReset"
    ClRstSupHi = 75
    ClRstSupLow = 55
@@ -16469,7 +16485,7 @@ CoilClg   "DOAS1 CoilClg"
 
 CoilHtg   "DOAS1 CoilHtg"  
    Type = "HeatPump"
-   HtPumpCOP = 4.8
+   HtPumpCOP = 6.5
    HtPumpSuppCoilHtgRef = "DOAS1 SuppCoilHtg"
    ..
 
@@ -16529,11 +16545,12 @@ FenCons   "Nonres Fixed Window"
 ConsAssm   "OtherFloorU071"  
    CompatibleSurfType = "InteriorFloor"
    MatRef[1] = "Concrete - 140 lb/ft3 - 10 in."
-   MatRef[2] = "Compliance Insulation R6.00"
-   MatRef[3] = "Compliance Insulation R2.15"
-   MatRef[4] = "Compliance Insulation R0.50"
+   MatRef[2] = "Compliance Insulation R20.00"
+   MatRef[3] = "Compliance Insulation R0.20"
+   MatRef[4] = "Compliance Insulation R0.01"
    MatRef[5] = "Plywood - 5/8 in."
    MatRef[6] = "Carpet - 3/4 in."
+   MatRef[7] = "- none -"
    ..
 
 ResDHWSys   "Residential DHW System"  
@@ -16541,7 +16558,7 @@ ResDHWSys   "Residential DHW System"
    CentralSys = 1
    DistType = "No Control (continuous pumping)"
    SysStoryCnt = 4
-   AnnualSolFrac = 0.2
+   AnnualSolFrac = 0.35
    ..
 
 ResWtrHtr   "Res Gas Water Heater"  
@@ -16597,11 +16614,12 @@ ConsAssm   "WoodFramingAndOtherRoofU028"
    MatRef[1] = "Roofing felt - 1/8 in."
    MatRef[2] = "Building Paper - 1/16 in."
    MatRef[3] = "Fiberboard sheathing - 1/2 in."
-   MatRef[4] = "Compliance Insulation R0.50"
-   MatRef[5] = "Compliance Insulation R0.02"
-   MatRef[6] = "Compliance Insulation R0.01"
-   MatRef[7] = "Gypsum Board - 1/2 in."
-   MatRef[8] = "WoodRoof16OCCavInsR38"
+   MatRef[4] = "Compliance Insulation R1.54"
+   MatRef[5] = "Compliance Insulation R5.00"
+   MatRef[6] = "Compliance Insulation R0.20"
+   MatRef[7] = "Compliance Insulation R0.10"
+   MatRef[8] = "Gypsum Board - 1/2 in."
+   MatRef[9] = "WoodRoof16OCCavInsR38"
    ..
 
 Mat   "Roofing felt - 1/8 in."  
@@ -16633,9 +16651,9 @@ ConsAssm   "NonResConcreteExteriorWall"
    CompatibleSurfType = "ExteriorWall"
    MatRef[1] = "Stucco - 7/8 in."
    MatRef[2] = "Concrete - 140 lb/ft3 - 8 in."
-   MatRef[3] = "Compliance Insulation R8.07"
-   MatRef[4] = "Compliance Insulation R0.20"
-   MatRef[5] = "Compliance Insulation R1.00"
+   MatRef[3] = "Compliance Insulation R1.35"
+   MatRef[4] = "Compliance Insulation R1.00"
+   MatRef[5] = "Compliance Insulation R15.54"
    MatRef[6] = "WoodFraming16inOC"
    MatRef[7] = "Gypsum Board - 1/2 in."
    MatRef[8] = "- none -"
@@ -16718,24 +16736,14 @@ Pump   "Base HW Pump"
    SpdCtrl = "VariableSpeed"
    ..
 
-Mat   "Compliance Insulation R8.07"  
+Mat   "Compliance Insulation R1.35"  
    CodeCat = "Insulation Board"
-   CodeItem = "Compliance Insulation R8.07"
+   CodeItem = "Compliance Insulation R1.35"
    ..
 
-Mat   "Compliance Insulation R0.50"  
+Mat   "Compliance Insulation R5.00"  
    CodeCat = "Insulation Board"
-   CodeItem = "Compliance Insulation R0.50"
-   ..
-
-Mat   "Compliance Insulation R0.02"  
-   CodeCat = "Insulation Board"
-   CodeItem = "Compliance Insulation R0.02"
-   ..
-
-Mat   "Compliance Insulation R1.00"  
-   CodeCat = "Insulation Board"
-   CodeItem = "Compliance Insulation R1.00"
+   CodeItem = "Compliance Insulation R5.00"
    ..
 
 Mat   "Compliance Insulation R0.01"  
@@ -16743,14 +16751,9 @@ Mat   "Compliance Insulation R0.01"
    CodeItem = "Compliance Insulation R0.01"
    ..
 
-Mat   "Compliance Insulation R6.00"  
+Mat   "Compliance Insulation R20.00"  
    CodeCat = "Insulation Board"
-   CodeItem = "Compliance Insulation R6.00"
-   ..
-
-Mat   "Compliance Insulation R2.15"  
-   CodeCat = "Insulation Board"
-   CodeItem = "Compliance Insulation R2.15"
+   CodeItem = "Compliance Insulation R20.00"
    ..
 
 Mat   "Compliance Insulation R0.20"  
@@ -16758,18 +16761,19 @@ Mat   "Compliance Insulation R0.20"
    CodeItem = "Compliance Insulation R0.20"
    ..
 
-Mat   "WoodFrameWall16inOCCavInsR5"  
-   CodeCat = "Composite"
-   CodeItem = "- specify -"
-   FrmMat = "Wood"
-   FrmConfig = "Wall16inOC"
-   FrmDepth = "5_5In"
-   CavityIns = 5
+Mat   "Compliance Insulation R0.10"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R0.10"
    ..
 
-Mat   "Compliance Insulation R1.54"  
+Mat   "Compliance Insulation R15.54"  
    CodeCat = "Insulation Board"
-   CodeItem = "Compliance Insulation R1.54"
+   CodeItem = "Compliance Insulation R15.54"
+   ..
+
+Mat   "Compliance Insulation R1.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R1.00"
    ..
 
 EUseSummary   "EUseSummary"  
@@ -16795,29 +16799,29 @@ EUseSummary   "EUseSummary"
    Title3[6] = "Site (MBtu)"
    Title3[7] = "(kBtu/ft²-yr)"
    Title3[8] = "(kBtu/ft²-yr)"
-   Enduse1 = ( "Space Heating", "15.5", "249.4", "7.74", "0.0", "416.5", 
-               "7.23", "-0.51", "--", "--" )
-   Enduse2 = ( "Space Cooling", "37.7", "--", "14.24", "39.4", "--", 
-               "14.77", "0.53", "25.5", "26.3" )
-   Enduse3 = ( "Indoor Fans", "40.1", "--", "10.54", "40.6", "--", 
-               "10.71", "0.17", "7.8", "8.2" )
+   Enduse1 = ( "Space Heating", "50.4", "448.8", "21.20", "0.0", 
+               "1,055.6", "18.56", "-2.64", "--", "--" )
+   Enduse2 = ( "Space Cooling", "48.4", "--", "14.14", "56.1", "--", 
+               "16.31", "2.17", "31.1", "35.5" )
+   Enduse3 = ( "Indoor Fans", "51.0", "--", "13.22", "52.0", "--", 
+               "13.43", "0.21", "10.1", "10.6" )
    Enduse4 = ( "Heat Rejection", "--", "--", "--", "--", "--", "--", 
                "--", "--", "--" )
-   Enduse5 = ( "Pumps & Misc.", "0.3", "--", "0.08", "0.1", "--", "0.02", 
-               "-0.06", "0.0", "0.0" )
-   Enduse6 = ( "Domestic Hot Water", "18.1", "1,003.4", "20.51", "18.1", 
-               "1,003.4", "20.51", "--", "2.8", "2.8" )
-   Enduse7 = ( "Indoor Lighting", "81.5", "--", "20.81", "81.5", "--", 
-               "20.81", "--", "14.4", "14.4" )
-   Enduse8 = ( "COMPLIANCE TOTAL", "193.2", "1,252.8", "73.92", "179.7", 
-               "1,419.9", "74.05", "0.13", "50.5", "51.7" )
+   Enduse5 = ( "Pumps & Misc.", "0.3", "--", "0.07", "0.2", "--", "0.05", 
+               "-0.02", "0.0", "--" )
+   Enduse6 = ( "Domestic Hot Water", "19.4", "967.2", "20.52", "19.4", 
+               "967.2", "20.52", "--", "2.9", "2.9" )
+   Enduse7 = ( "Indoor Lighting", "81.7", "--", "20.52", "81.7", "--", 
+               "20.52", "--", "14.3", "14.3" )
+   Enduse8 = ( "COMPLIANCE TOTAL", "251.2", "1,416.0", "89.67", "209.4", 
+               "2,022.8", "89.39", "-0.28", "58.5", "63.3" )
    Enduse9[1] = "Receptacle"
    Enduse9[2] = "217.4"
    Enduse9[3] = "58.7"
-   Enduse9[4] = "58.15"
+   Enduse9[4] = "58.68"
    Enduse9[5] = "217.4"
    Enduse9[6] = "58.7"
-   Enduse9[7] = "58.15"
+   Enduse9[7] = "58.68"
    Enduse9[9] = "38.3"
    Enduse9[10] = "38.3"
    Enduse10[1] = "Process"
@@ -16832,19 +16836,19 @@ EUseSummary   "EUseSummary"
    Enduse11[1] = "Other Ltg"
    Enduse11[2] = "149.1"
    Enduse11[3] = "--"
-   Enduse11[4] = "39.77"
+   Enduse11[4] = "40.64"
    Enduse11[5] = "149.1"
    Enduse11[6] = "--"
-   Enduse11[7] = "39.77"
+   Enduse11[7] = "40.64"
    Enduse11[9] = "25.7"
    Enduse11[10] = "25.7"
    Enduse12[1] = "Process Motors"
    Enduse12[2] = "34.6"
    Enduse12[3] = "--"
-   Enduse12[4] = "8.42"
+   Enduse12[4] = "8.59"
    Enduse12[5] = "8.6"
    Enduse12[6] = "--"
-   Enduse12[7] = "2.10"
+   Enduse12[7] = "2.15"
    Enduse12[9] = "3.9"
    Enduse12[10] = "1.0"
    Enduse13[1] = "Photovoltaics"
@@ -16866,14 +16870,14 @@ EUseSummary   "EUseSummary"
    Enduse14[9] = "--"
    Enduse14[10] = "--"
    Enduse15[1] = "TOTAL"
-   Enduse15[2] = "594.3"
-   Enduse15[3] = "1,311.5"
-   Enduse15[4] = "180.26"
-   Enduse15[5] = "554.8"
-   Enduse15[6] = "1,478.6"
-   Enduse15[7] = "174.07"
-   Enduse15[9] = "118.5"
-   Enduse15[10] = "116.7"
+   Enduse15[2] = "652.3"
+   Enduse15[3] = "1,474.7"
+   Enduse15[4] = "197.58"
+   Enduse15[5] = "584.5"
+   Enduse15[6] = "2,081.5"
+   Enduse15[7] = "190.86"
+   Enduse15[9] = "126.5"
+   Enduse15[10] = "128.4"
    ZoneUMLHsLoaded = ( 1, 1 )
    ZoneUMLHs = ( 
                  "clg: 0  htg: 0  'Thermal Zone: F1 Business Center'
@@ -16886,30 +16890,30 @@ clg: 0  htg: 0  'Thermal Zone: F1 Retail N-NW'
 clg: 0  htg: 0  'Thermal Zone: F1 Retail NE'
 clg: 0  htg: 0  'Thermal Zone: F1 Retail SE'
 clg: 0  htg: 0  'Thermal Zone: F1 Retail SW'
-clg: 0  htg: 0  'Thermal Zone: F2-4 1-Bed Core N'
-clg: 0  htg: 1  'Thermal Zone: F2-4 1-Bed Core West'
-clg: 0  htg: 1  'Thermal Zone: F2-4 1-Bed Core East'
-clg: 0  htg: 1  'Thermal Zone: F2-4 1-Bed North'
+clg: 0  htg: 5  'Thermal Zone: F2-4 1-Bed Core N'
+clg: 0  htg: 14  'Thermal Zone: F2-4 1-Bed Core West'
+clg: 0  htg: 14  'Thermal Zone: F2-4 1-Bed Core East'
+clg: 0  htg: 12  'Thermal Zone: F2-4 1-Bed North'
 clg: 0  htg: 0  'Thermal Zone: F2-4 2-Bed Core NE-NW'
-clg: 0  htg: 2  'Thermal Zone: F2-4 2-Bed East'
-clg: 0  htg: 2  'Thermal Zone: F2-4 2-Bed West'
-clg: 0  htg: 7  'Thermal Zone: F2-4 3-Bed NE'
-clg: 0  htg: 6  'Thermal Zone: F2-4 3-Bed NW'
-clg: 0  htg: 9  'Thermal Zone: F2-4 Studio SE'
-clg: 0  htg: 10  'Thermal Zone: F2-4 Studio SW'
-clg: 590  htg: 8  'Thermal Zone: F2-4 Corridor'
-clg: 0  htg: 6  'Thermal Zone: F5 1-Bed Core N'
-clg: 0  htg: 16  'Thermal Zone: F5 1-Bed Core West'
-clg: 0  htg: 14  'Thermal Zone: F5 1-Bed Core East'
-clg: 0  htg: 14  'Thermal Zone: F5 1-Bed North'
-clg: 0  htg: 2  'Thermal Zone: F5 2-Bed Core NE-NW'
-clg: 0  htg: 20  'Thermal Zone: F5 2-Bed East'
-clg: 0  htg: 18  'Thermal Zone: F5 2-Bed West'
-clg: 0  htg: 27  'Thermal Zone: F5 3-Bed NE'
-clg: 0  htg: 26  'Thermal Zone: F5 3-Bed NW'
-clg: 0  htg: 34  'Thermal Zone: F5 Studio SE'
-clg: 0  htg: 35  'Thermal Zone: F5 Studio SW'
-clg: 923  htg: 199  'Thermal Zone: F5 Corridor'
+clg: 0  htg: 16  'Thermal Zone: F2-4 2-Bed East'
+clg: 0  htg: 15  'Thermal Zone: F2-4 2-Bed West'
+clg: 0  htg: 27  'Thermal Zone: F2-4 3-Bed NE'
+clg: 0  htg: 26  'Thermal Zone: F2-4 3-Bed NW'
+clg: 0  htg: 29  'Thermal Zone: F2-4 Studio SE'
+clg: 0  htg: 29  'Thermal Zone: F2-4 Studio SW'
+clg: 1229  htg: 142  'Thermal Zone: F2-4 Corridor'
+clg: 0  htg: 24  'Thermal Zone: F5 1-Bed Core N'
+clg: 0  htg: 33  'Thermal Zone: F5 1-Bed Core West'
+clg: 0  htg: 31  'Thermal Zone: F5 1-Bed Core East'
+clg: 0  htg: 34  'Thermal Zone: F5 1-Bed North'
+clg: 0  htg: 14  'Thermal Zone: F5 2-Bed Core NE-NW'
+clg: 0  htg: 35  'Thermal Zone: F5 2-Bed East'
+clg: 0  htg: 34  'Thermal Zone: F5 2-Bed West'
+clg: 0  htg: 43  'Thermal Zone: F5 3-Bed NE'
+clg: 0  htg: 41  'Thermal Zone: F5 3-Bed NW'
+clg: 0  htg: 46  'Thermal Zone: F5 Studio SE'
+clg: 0  htg: 46  'Thermal Zone: F5 Studio SW'
+clg: 1394  htg: 666  'Thermal Zone: F5 Corridor'
 clg: 0  htg: 0  'Thermal Zone: Parking Garage'", 
                  "clg: 0  htg: 0  'Thermal Zone: F1 Business Center'
 clg: 0  htg: 0  'Thermal Zone: F1 Corridor'
@@ -16921,39 +16925,39 @@ clg: 0  htg: 0  'Thermal Zone: F1 Retail N-NW'
 clg: 0  htg: 0  'Thermal Zone: F1 Retail NE'
 clg: 0  htg: 0  'Thermal Zone: F1 Retail SE'
 clg: 0  htg: 0  'Thermal Zone: F1 Retail SW'
-clg: 0  htg: 0  'Thermal Zone: F2-4 1-Bed Core N'
-clg: 0  htg: 1  'Thermal Zone: F2-4 1-Bed Core West'
-clg: 0  htg: 1  'Thermal Zone: F2-4 1-Bed Core East'
-clg: 0  htg: 1  'Thermal Zone: F2-4 1-Bed North'
-clg: 0  htg: 0  'Thermal Zone: F2-4 2-Bed Core NE-NW'
-clg: 0  htg: 2  'Thermal Zone: F2-4 2-Bed East'
-clg: 0  htg: 2  'Thermal Zone: F2-4 2-Bed West'
-clg: 0  htg: 4  'Thermal Zone: F2-4 3-Bed NE'
-clg: 0  htg: 4  'Thermal Zone: F2-4 3-Bed NW'
-clg: 0  htg: 5  'Thermal Zone: F2-4 Studio SE'
-clg: 0  htg: 5  'Thermal Zone: F2-4 Studio SW'
+clg: 0  htg: 14  'Thermal Zone: F2-4 1-Bed Core N'
+clg: 0  htg: 22  'Thermal Zone: F2-4 1-Bed Core West'
+clg: 0  htg: 22  'Thermal Zone: F2-4 1-Bed Core East'
+clg: 0  htg: 22  'Thermal Zone: F2-4 1-Bed North'
+clg: 0  htg: 8  'Thermal Zone: F2-4 2-Bed Core NE-NW'
+clg: 0  htg: 26  'Thermal Zone: F2-4 2-Bed East'
+clg: 0  htg: 25  'Thermal Zone: F2-4 2-Bed West'
+clg: 0  htg: 30  'Thermal Zone: F2-4 3-Bed NE'
+clg: 0  htg: 30  'Thermal Zone: F2-4 3-Bed NW'
+clg: 0  htg: 30  'Thermal Zone: F2-4 Studio SE'
+clg: 0  htg: 31  'Thermal Zone: F2-4 Studio SW'
 clg: 0  htg: 0  'Thermal Zone: F2-4 Corridor'
-clg: 0  htg: 4  'Thermal Zone: F5 1-Bed Core N'
-clg: 0  htg: 8  'Thermal Zone: F5 1-Bed Core West'
-clg: 0  htg: 7  'Thermal Zone: F5 1-Bed Core East'
-clg: 0  htg: 7  'Thermal Zone: F5 1-Bed North'
-clg: 0  htg: 3  'Thermal Zone: F5 2-Bed Core NE-NW'
-clg: 0  htg: 10  'Thermal Zone: F5 2-Bed East'
-clg: 0  htg: 9  'Thermal Zone: F5 2-Bed West'
-clg: 0  htg: 14  'Thermal Zone: F5 3-Bed NE'
-clg: 0  htg: 13  'Thermal Zone: F5 3-Bed NW'
-clg: 0  htg: 14  'Thermal Zone: F5 Studio SE'
-clg: 0  htg: 14  'Thermal Zone: F5 Studio SW'
+clg: 0  htg: 26  'Thermal Zone: F5 1-Bed Core N'
+clg: 0  htg: 32  'Thermal Zone: F5 1-Bed Core West'
+clg: 0  htg: 32  'Thermal Zone: F5 1-Bed Core East'
+clg: 0  htg: 34  'Thermal Zone: F5 1-Bed North'
+clg: 0  htg: 22  'Thermal Zone: F5 2-Bed Core NE-NW'
+clg: 0  htg: 36  'Thermal Zone: F5 2-Bed East'
+clg: 0  htg: 34  'Thermal Zone: F5 2-Bed West'
+clg: 0  htg: 39  'Thermal Zone: F5 3-Bed NE'
+clg: 0  htg: 39  'Thermal Zone: F5 3-Bed NW'
+clg: 0  htg: 39  'Thermal Zone: F5 Studio SE'
+clg: 0  htg: 39  'Thermal Zone: F5 Studio SW'
 clg: 0  htg: 0  'Thermal Zone: F5 Corridor'
 clg: 0  htg: 0  'Thermal Zone: Parking Garage'" )
-   SimSummary[1] = "Successful (268 warnings)"
-   SimSummary[3] = "Successful (224 warnings)"
-   PassFail = "PASS"
-   PctSavingsTDV = -3.55604
-   PctSavingsCmpTDV = 0.175557
-   PctSavTDVLbl = "-3.6"
-   PctSavCmpTDVLbl = "0.2"
-   MarginkW = -1.8
+   SimSummary[1] = "Successful (267 warnings)"
+   SimSummary[3] = "Successful (223 warnings)"
+   PassFail = "FAIL"
+   PctSavingsTDV = -3.52091
+   PctSavingsCmpTDV = -0.313234
+   PctSavTDVLbl = "-3.5"
+   PctSavCmpTDVLbl = "-0.3"
+   MarginkW = 1.9
    ..
 
 
