@@ -5,31 +5,34 @@ modelkit_version "~>0.8.0"
 parameter "zone_name"
 parameter "count"
 parameter "seer", :default=> 14 #Need to check
-parameter "hspf", :default=> 8  #Need to check
-
+parameter "hspf", :default=> 8.2  #Need to check
+parameter "index"
 
 %>
 
 ZnSys   "<%=zone_name%>"
+   <%if index !=1 %>
+   <%= "TreeState = 253"%>
+   <% end %> 
    Type = "SZHP"
    Cnt = <%=count%>
    ..
 
-CoilClg   "CoilCooling 1"
+CoilClg   "CoilCooling <%=index%>"
    Type = "DirectExpansion"
    DXSEER = <%=seer%>
    ..
 
-CoilHtg   "CoilHtg 1"
+CoilHtg   "CoilHtg <%=index%>"
    Type = "HeatPump"
    HtPumpHSPF = <%=hspf%>
    HtPumpSuppCoilHtgRef = "SupCoilHtg 1"
    HtPumpDefHtSrc = "Electric"
    ..
 
-Fan   "Fan 1"
+Fan   "Fan <%=index%>"
    ..
 
-CoilHtg   "SupCoilHtg 1"
+CoilHtg   "SupCoilHtg <%=index%>"
    Type = "Resistance"
    ..
