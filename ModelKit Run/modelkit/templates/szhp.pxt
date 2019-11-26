@@ -11,9 +11,9 @@ parameter "index"
 %>
 
 ZnSys   "<%=zone_name%>"
-   <%if index !=1 %>
-   <%= "TreeState = 253"%>
-   <% end %> 
+   <%if index != "1" %>
+   TreeState = 253
+   <% end %>
    Type = "SZHP"
    Cnt = <%=count%>
    ..
@@ -26,7 +26,7 @@ CoilClg   "CoilCooling <%=index%>"
 CoilHtg   "CoilHtg <%=index%>"
    Type = "HeatPump"
    HtPumpHSPF = <%=hspf%>
-   HtPumpSuppCoilHtgRef = "SupCoilHtg 1"
+   HtPumpSuppCoilHtgRef = "SupCoilHtg <%=index%>"
    HtPumpDefHtSrc = "Electric"
    ..
 
