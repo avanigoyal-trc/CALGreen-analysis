@@ -4,9 +4,10 @@ modelkit_version "~>0.8.0"
 
 parameter "zone_name"
 parameter "count"
-parameter "seer", :default=> 14 #Need to check
-parameter "hspf", :default=> 8.2  #Need to check
+parameter "seer", :default=> 14 #Need to implement if statements based on capacity
+parameter "hspf", :default=> 8.2 #Need to implement if statements based on capacity
 parameter "index"
+parameter "cooling_capacity", :default => 0
 
 %>
 
@@ -21,6 +22,9 @@ ZnSys   "<%=zone_name%>"
 CoilClg   "CoilCooling <%=index%>"
    Type = "DirectExpansion"
    DXSEER = <%=seer%>
+   <%if cooling_capacity != 0 %>
+   CapTotNetRtd = <%=cooling_capacity%>
+   <%end%>
    ..
 
 CoilHtg   "CoilHtg <%=index%>"
