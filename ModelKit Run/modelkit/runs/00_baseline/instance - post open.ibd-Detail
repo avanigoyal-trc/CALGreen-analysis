@@ -198,7 +198,7 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    SoftwareVersion = UVal: "CBECC-Com 2019.1.0 (1079)"
    CompReportNum = RVal: 0
    ResultsCurrentMessage = UVal: "(not current)"
-   ModelPath = PDef: "C:\Users\mnakajima\Documents\GitHub\T24-2022-CASE-Modeling\cbecc-com-project\modelkit\runs\00_baseline\"
+   ModelPath = PDef: "C:\Users\mnakajima\Documents\GitHub\T24-2022-CASE-Modeling\ModelKit Run\modelkit\runs\00_baseline\"
    ModelFile = PDef: "instance"
    PropHasUnknownHVACZns = RVal: 0
    WtrHtrCnt = RVal: 3
@@ -118201,8 +118201,8 @@ CoilHtg   User: "CoilHtg 1"
    CapTotGrossRtdSim = RVal: 33831.1
    CapTotNetRtd = RVal: 11762.2
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = UVal: 8
-   HtPumpCOP = RVal: 3.1891
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
    HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 1"
    HtPumpCprsrLockoutTemp = RDef: 17
@@ -118226,7 +118226,7 @@ CoilHtg   User: "CoilHtg 1"
    FanHtRtd = RVal: 485.17
    PumpPwrRtd = RVal: 0
    CapTotNetRtdSim = RVal: 35286.6
-   IsLessThanMinEff = RVal: 1
+   IsLessThanMinEff = RVal: 0
    CapNonHydronic = RVal: 33831.1
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
@@ -118234,7 +118234,7 @@ CoilHtg   User: "CoilHtg 1"
    CodeMinHSPF = RVal: 8.2
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   TreeDescrip = RVal: "HeatPump, Net = 12 MBH, HSPF-8.0"
+   TreeDescrip = RVal: "HeatPump, Net = 12 MBH, HSPF-8.2"
    ..
 
 Fan   User: "Fan 1"  
@@ -118312,6 +118312,7 @@ CoilHtg   User: "SupCoilHtg 1"
    ..
 
 ZnSys   User: "ZnSys F2-4 1-Bed Core West"  
+   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZHP"  (2)
    TypeSim = RVal: "PTHP"  (104)
@@ -118540,9 +118541,9 @@ CoilClg   User: "CoilCooling 2"
    CapTotGrossRtdSim = RVal: 70123.6
    CapTotNetRtd = RVal: 11202.1
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -118565,7 +118566,7 @@ CoilClg   User: "CoilCooling 2"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 11 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 11 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 2"  
@@ -118578,8 +118579,8 @@ CoilHtg   User: "CoilHtg 2"
    CapTotGrossRtdSim = RVal: 67662.2
    CapTotNetRtd = RVal: 11762.2
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
    HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 2"
    HtPumpCprsrLockoutTemp = RDef: 17
@@ -118918,9 +118919,9 @@ CoilClg   User: "CoilCooling 3"
    CapTotGrossRtdSim = RVal: 70123.6
    CapTotNetRtd = RVal: 11202.1
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -118943,7 +118944,7 @@ CoilClg   User: "CoilCooling 3"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 11 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 11 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 3"  
@@ -118956,8 +118957,8 @@ CoilHtg   User: "CoilHtg 3"
    CapTotGrossRtdSim = RVal: 67662.2
    CapTotNetRtd = RVal: 11762.2
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
    HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 3"
    HtPumpCprsrLockoutTemp = RDef: 17
@@ -119296,9 +119297,9 @@ CoilClg   User: "CoilCooling 4"
    CapTotGrossRtdSim = RVal: 181153
    CapTotNetRtd = RVal: 11575.5
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -119321,7 +119322,7 @@ CoilClg   User: "CoilCooling 4"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 12 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 12 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 4"  
@@ -119334,8 +119335,8 @@ CoilHtg   User: "CoilHtg 4"
    CapTotGrossRtdSim = RVal: 174794
    CapTotNetRtd = RVal: 12154.3
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
    HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 4"
    HtPumpCprsrLockoutTemp = RDef: 17
@@ -119674,9 +119675,9 @@ CoilClg   User: "CoilCooling 5"
    CapTotGrossRtdSim = RVal: 105185
    CapTotNetRtd = RVal: 16803.1
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -119699,7 +119700,7 @@ CoilClg   User: "CoilCooling 5"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 17 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 17 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 5"  
@@ -119712,8 +119713,8 @@ CoilHtg   User: "CoilHtg 5"
    CapTotGrossRtdSim = RVal: 101493
    CapTotNetRtd = RVal: 17643.3
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
    HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 5"
    HtPumpCprsrLockoutTemp = RDef: 17
@@ -120052,9 +120053,9 @@ CoilClg   User: "CoilCooling 6"
    CapTotGrossRtdSim = RVal: 157778
    CapTotNetRtd = RVal: 16803.1
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -120077,7 +120078,7 @@ CoilClg   User: "CoilCooling 6"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 17 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 17 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 6"  
@@ -120090,8 +120091,8 @@ CoilHtg   User: "CoilHtg 6"
    CapTotGrossRtdSim = RVal: 152240
    CapTotNetRtd = RVal: 17643.3
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
    HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 6"
    HtPumpCprsrLockoutTemp = RDef: 17
@@ -120430,9 +120431,9 @@ CoilClg   User: "CoilCooling 7"
    CapTotGrossRtdSim = RVal: 157778
    CapTotNetRtd = RVal: 16803.1
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -120455,7 +120456,7 @@ CoilClg   User: "CoilCooling 7"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 17 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 17 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 7"  
@@ -120468,8 +120469,8 @@ CoilHtg   User: "CoilHtg 7"
    CapTotGrossRtdSim = RVal: 152240
    CapTotNetRtd = RVal: 17643.3
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
    HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 7"
    HtPumpCprsrLockoutTemp = RDef: 17
@@ -120808,9 +120809,9 @@ CoilClg   User: "CoilCooling 8"
    CapTotGrossRtdSim = RVal: 68662.7
    CapTotNetRtd = RVal: 21937.4
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -120833,7 +120834,7 @@ CoilClg   User: "CoilCooling 8"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 22 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 22 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 8"  
@@ -120846,8 +120847,8 @@ CoilHtg   User: "CoilHtg 8"
    CapTotGrossRtdSim = RVal: 66252.6
    CapTotNetRtd = RVal: 23034.3
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
    HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 8"
    HtPumpCprsrLockoutTemp = RDef: 17
@@ -121186,9 +121187,9 @@ CoilClg   User: "CoilCooling 9"
    CapTotGrossRtdSim = RVal: 68662.7
    CapTotNetRtd = RVal: 21937.4
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -121211,7 +121212,7 @@ CoilClg   User: "CoilCooling 9"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 22 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 22 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 9"  
@@ -121224,8 +121225,8 @@ CoilHtg   User: "CoilHtg 9"
    CapTotGrossRtdSim = RVal: 66252.6
    CapTotNetRtd = RVal: 23034.3
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
    HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 9"
    HtPumpCprsrLockoutTemp = RDef: 17
@@ -121564,9 +121565,9 @@ CoilClg   User: "CoilCooling 10"
    CapTotGrossRtdSim = RVal: 26296.3
    CapTotNetRtd = RVal: 8401.57
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -121589,7 +121590,7 @@ CoilClg   User: "CoilCooling 10"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 8 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 8 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 10"  
@@ -121602,8 +121603,8 @@ CoilHtg   User: "CoilHtg 10"
    CapTotGrossRtdSim = RVal: 25373.3
    CapTotNetRtd = RVal: 8821.65
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
    HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 10"
    HtPumpCprsrLockoutTemp = RDef: 17
@@ -121942,9 +121943,9 @@ CoilClg   User: "CoilCooling 11"
    CapTotGrossRtdSim = RVal: 26296.3
    CapTotNetRtd = RVal: 8401.57
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -121967,7 +121968,7 @@ CoilClg   User: "CoilCooling 11"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 8 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 8 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 11"  
@@ -121980,8 +121981,8 @@ CoilHtg   User: "CoilHtg 11"
    CapTotGrossRtdSim = RVal: 25373.3
    CapTotNetRtd = RVal: 8821.65
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
    HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 11"
    HtPumpCprsrLockoutTemp = RDef: 17
@@ -122099,7 +122100,7 @@ ZnSys   User: "ZnSys F5 1-Bed Core N"
    FanCtrl = RDef: "Cycling"  (2)
    NightCycleFanCtrl = RVal: "CycleOnCallPrimaryZone"  (2)
    ClgCtrl = PDef: "NoSATControl"  (1)
-   Cnt = RDef: 1
+   Cnt = UVal: 1
    FanPos = RVal: "DrawThrough"  (1)
    OptStart = RVal: 0
    OptStartCtrl = RVal: "None"  (1)
@@ -122164,9 +122165,9 @@ ZnSys   User: "ZnSys F5 1-Bed Core N"
    GasPhaseAirCleanersDsgnPD = RDef: 0
    ERVEff = RVal: 0
    ExcludeFromSizing = RVal: 0
-   CoilClgRef = RVal: "CoilCooling 17"
-   CoilHtgRef = RVal: "CoilHtg 17"
-   FanRef = RVal: "Fan 17"
+   CoilClgRef = RVal: "CoilCooling 12"
+   CoilHtgRef = RVal: "CoilHtg 12"
+   FanRef = RVal: "Fan 12"
    BaseSysNum = RVal: 0
    SysRefStatus = RVal: "Invalid"  (2)
    IsActiveBeam = RVal: 0
@@ -122311,7 +122312,7 @@ ZnSys   User: "ZnSys F5 1-Bed Core N"
    TreeDescrip = RVal: "SZHP, (Qty 1), CtrlZn = Thermal Zone: F5 1-Bed Core N, New"
    ..
 
-CoilClg   User: "CoilCooling 17"  
+CoilClg   User: "CoilCooling 12"  
    Status = RVal: "New"  (1)
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
@@ -122320,9 +122321,9 @@ CoilClg   User: "CoilCooling 17"
    CapTotGrossRtdSim = RVal: 11687.3
    CapTotNetRtd = RVal: 11202.1
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -122345,10 +122346,10 @@ CoilClg   User: "CoilCooling 17"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 11 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 11 MBH, SEER-14.0"
    ..
 
-CoilHtg   User: "CoilHtg 17"  
+CoilHtg   User: "CoilHtg 12"  
    Status = RVal: "New"  (1)
    Type = UVal: "HeatPump"  (3)
    FuelSrc = RDef: "Electric"  (1)
@@ -122358,10 +122359,10 @@ CoilHtg   User: "CoilHtg 17"
    CapTotGrossRtdSim = RVal: 11277
    CapTotNetRtd = RVal: 11762.2
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
-   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 17"
+   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 12"
    HtPumpCprsrLockoutTemp = RDef: 17
    HtPumpSuppTemp = RDef: 40
    HtPumpDefHtSrc = UVal: "Electric"  (1)
@@ -122394,7 +122395,7 @@ CoilHtg   User: "CoilHtg 17"
    TreeDescrip = RVal: "HeatPump, Net = 12 MBH, HSPF-8.2"
    ..
 
-Fan   User: "Fan 17"  
+Fan   User: "Fan 12"  
    Status = RVal: "New"  (1)
    ParentComp = RVal: "ZnSys"  (2)
    CtrlMthd = RVal: "ConstantVolume"  (1)
@@ -122433,7 +122434,7 @@ Fan   User: "Fan 17"
    TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 420 cfm"
    ..
 
-CoilHtg   User: "SupCoilHtg 17"  
+CoilHtg   User: "SupCoilHtg 12"  
    Status = RVal: "New"  (1)
    Type = UVal: "Resistance"  (1)
    FuelSrc = RDef: "Electric"  (1)
@@ -122542,9 +122543,9 @@ ZnSys   User: "ZnSys F5 1-Bed Core West"
    GasPhaseAirCleanersDsgnPD = RDef: 0
    ERVEff = RVal: 0
    ExcludeFromSizing = RVal: 0
-   CoilClgRef = RVal: "CoilCooling 18"
-   CoilHtgRef = RVal: "CoilHtg 18"
-   FanRef = RVal: "Fan 18"
+   CoilClgRef = RVal: "CoilCooling 13"
+   CoilHtgRef = RVal: "CoilHtg 13"
+   FanRef = RVal: "Fan 13"
    BaseSysNum = RVal: 0
    SysRefStatus = RVal: "Invalid"  (2)
    IsActiveBeam = RVal: 0
@@ -122689,7 +122690,7 @@ ZnSys   User: "ZnSys F5 1-Bed Core West"
    TreeDescrip = RVal: "SZHP, (Qty 2), CtrlZn = Thermal Zone: F5 1-Bed Core West, New"
    ..
 
-CoilClg   User: "CoilCooling 18"  
+CoilClg   User: "CoilCooling 13"  
    Status = RVal: "New"  (1)
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
@@ -122698,9 +122699,9 @@ CoilClg   User: "CoilCooling 18"
    CapTotGrossRtdSim = RVal: 23374.5
    CapTotNetRtd = RVal: 11202.1
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -122723,10 +122724,10 @@ CoilClg   User: "CoilCooling 18"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 11 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 11 MBH, SEER-14.0"
    ..
 
-CoilHtg   User: "CoilHtg 18"  
+CoilHtg   User: "CoilHtg 13"  
    Status = RVal: "New"  (1)
    Type = UVal: "HeatPump"  (3)
    FuelSrc = RDef: "Electric"  (1)
@@ -122736,10 +122737,10 @@ CoilHtg   User: "CoilHtg 18"
    CapTotGrossRtdSim = RVal: 22554.1
    CapTotNetRtd = RVal: 11762.2
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
-   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 18"
+   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 13"
    HtPumpCprsrLockoutTemp = RDef: 17
    HtPumpSuppTemp = RDef: 40
    HtPumpDefHtSrc = UVal: "Electric"  (1)
@@ -122772,7 +122773,7 @@ CoilHtg   User: "CoilHtg 18"
    TreeDescrip = RVal: "HeatPump, Net = 12 MBH, HSPF-8.2"
    ..
 
-Fan   User: "Fan 18"  
+Fan   User: "Fan 13"  
    Status = RVal: "New"  (1)
    ParentComp = RVal: "ZnSys"  (2)
    CtrlMthd = RVal: "ConstantVolume"  (1)
@@ -122811,7 +122812,7 @@ Fan   User: "Fan 18"
    TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 420 cfm"
    ..
 
-CoilHtg   User: "SupCoilHtg 18"  
+CoilHtg   User: "SupCoilHtg 13"  
    Status = RVal: "New"  (1)
    Type = UVal: "Resistance"  (1)
    FuelSrc = RDef: "Electric"  (1)
@@ -122920,9 +122921,9 @@ ZnSys   User: "ZnSys F5 1-Bed Core East"
    GasPhaseAirCleanersDsgnPD = RDef: 0
    ERVEff = RVal: 0
    ExcludeFromSizing = RVal: 0
-   CoilClgRef = RVal: "CoilCooling 19"
-   CoilHtgRef = RVal: "CoilHtg 19"
-   FanRef = RVal: "Fan 19"
+   CoilClgRef = RVal: "CoilCooling 14"
+   CoilHtgRef = RVal: "CoilHtg 14"
+   FanRef = RVal: "Fan 14"
    BaseSysNum = RVal: 0
    SysRefStatus = RVal: "Invalid"  (2)
    IsActiveBeam = RVal: 0
@@ -123067,7 +123068,7 @@ ZnSys   User: "ZnSys F5 1-Bed Core East"
    TreeDescrip = RVal: "SZHP, (Qty 2), CtrlZn = Thermal Zone: F5 1-Bed Core East, New"
    ..
 
-CoilClg   User: "CoilCooling 19"  
+CoilClg   User: "CoilCooling 14"  
    Status = RVal: "New"  (1)
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
@@ -123076,9 +123077,9 @@ CoilClg   User: "CoilCooling 19"
    CapTotGrossRtdSim = RVal: 23374.5
    CapTotNetRtd = RVal: 11202.1
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -123101,10 +123102,10 @@ CoilClg   User: "CoilCooling 19"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 11 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 11 MBH, SEER-14.0"
    ..
 
-CoilHtg   User: "CoilHtg 19"  
+CoilHtg   User: "CoilHtg 14"  
    Status = RVal: "New"  (1)
    Type = UVal: "HeatPump"  (3)
    FuelSrc = RDef: "Electric"  (1)
@@ -123114,10 +123115,10 @@ CoilHtg   User: "CoilHtg 19"
    CapTotGrossRtdSim = RVal: 22554.1
    CapTotNetRtd = RVal: 11762.2
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
-   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 19"
+   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 14"
    HtPumpCprsrLockoutTemp = RDef: 17
    HtPumpSuppTemp = RDef: 40
    HtPumpDefHtSrc = UVal: "Electric"  (1)
@@ -123150,7 +123151,7 @@ CoilHtg   User: "CoilHtg 19"
    TreeDescrip = RVal: "HeatPump, Net = 12 MBH, HSPF-8.2"
    ..
 
-Fan   User: "Fan 19"  
+Fan   User: "Fan 14"  
    Status = RVal: "New"  (1)
    ParentComp = RVal: "ZnSys"  (2)
    CtrlMthd = RVal: "ConstantVolume"  (1)
@@ -123189,7 +123190,7 @@ Fan   User: "Fan 19"
    TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 420 cfm"
    ..
 
-CoilHtg   User: "SupCoilHtg 19"  
+CoilHtg   User: "SupCoilHtg 14"  
    Status = RVal: "New"  (1)
    Type = UVal: "Resistance"  (1)
    FuelSrc = RDef: "Electric"  (1)
@@ -123298,9 +123299,9 @@ ZnSys   User: "ZnSys F5 1-Bed North"
    GasPhaseAirCleanersDsgnPD = RDef: 0
    ERVEff = RVal: 0
    ExcludeFromSizing = RVal: 0
-   CoilClgRef = RVal: "CoilCooling 20"
-   CoilHtgRef = RVal: "CoilHtg 20"
-   FanRef = RVal: "Fan 20"
+   CoilClgRef = RVal: "CoilCooling 15"
+   CoilHtgRef = RVal: "CoilHtg 15"
+   FanRef = RVal: "Fan 15"
    BaseSysNum = RVal: 0
    SysRefStatus = RVal: "Invalid"  (2)
    IsActiveBeam = RVal: 0
@@ -123445,7 +123446,7 @@ ZnSys   User: "ZnSys F5 1-Bed North"
    TreeDescrip = RVal: "SZHP, (Qty 5), CtrlZn = Thermal Zone: F5 1-Bed North, New"
    ..
 
-CoilClg   User: "CoilCooling 20"  
+CoilClg   User: "CoilCooling 15"  
    Status = RVal: "New"  (1)
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
@@ -123454,9 +123455,9 @@ CoilClg   User: "CoilCooling 20"
    CapTotGrossRtdSim = RVal: 60384.2
    CapTotNetRtd = RVal: 11575.5
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -123479,10 +123480,10 @@ CoilClg   User: "CoilCooling 20"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 12 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 12 MBH, SEER-14.0"
    ..
 
-CoilHtg   User: "CoilHtg 20"  
+CoilHtg   User: "CoilHtg 15"  
    Status = RVal: "New"  (1)
    Type = UVal: "HeatPump"  (3)
    FuelSrc = RDef: "Electric"  (1)
@@ -123492,10 +123493,10 @@ CoilHtg   User: "CoilHtg 20"
    CapTotGrossRtdSim = RVal: 58264.7
    CapTotNetRtd = RVal: 12154.3
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
-   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 20"
+   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 15"
    HtPumpCprsrLockoutTemp = RDef: 17
    HtPumpSuppTemp = RDef: 40
    HtPumpDefHtSrc = UVal: "Electric"  (1)
@@ -123528,7 +123529,7 @@ CoilHtg   User: "CoilHtg 20"
    TreeDescrip = RVal: "HeatPump, Net = 12 MBH, HSPF-8.2"
    ..
 
-Fan   User: "Fan 20"  
+Fan   User: "Fan 15"  
    Status = RVal: "New"  (1)
    ParentComp = RVal: "ZnSys"  (2)
    CtrlMthd = RVal: "ConstantVolume"  (1)
@@ -123567,7 +123568,7 @@ Fan   User: "Fan 20"
    TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 434 cfm"
    ..
 
-CoilHtg   User: "SupCoilHtg 20"  
+CoilHtg   User: "SupCoilHtg 15"  
    Status = RVal: "New"  (1)
    Type = UVal: "Resistance"  (1)
    FuelSrc = RDef: "Electric"  (1)
@@ -123676,9 +123677,9 @@ ZnSys   User: "ZnSys F5 2-Bed Core NE-NW"
    GasPhaseAirCleanersDsgnPD = RDef: 0
    ERVEff = RVal: 0
    ExcludeFromSizing = RVal: 0
-   CoilClgRef = RVal: "CoilCooling 21"
-   CoilHtgRef = RVal: "CoilHtg 21"
-   FanRef = RVal: "Fan 21"
+   CoilClgRef = RVal: "CoilCooling 16"
+   CoilHtgRef = RVal: "CoilHtg 16"
+   FanRef = RVal: "Fan 16"
    BaseSysNum = RVal: 0
    SysRefStatus = RVal: "Invalid"  (2)
    IsActiveBeam = RVal: 0
@@ -123823,7 +123824,7 @@ ZnSys   User: "ZnSys F5 2-Bed Core NE-NW"
    TreeDescrip = RVal: "SZHP, (Qty 2), CtrlZn = Thermal Zone: F5 2-Bed Core NE-NW, New"
    ..
 
-CoilClg   User: "CoilCooling 21"  
+CoilClg   User: "CoilCooling 16"  
    Status = RVal: "New"  (1)
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
@@ -123832,9 +123833,9 @@ CoilClg   User: "CoilCooling 21"
    CapTotGrossRtdSim = RVal: 35061.8
    CapTotNetRtd = RVal: 16803.1
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -123857,10 +123858,10 @@ CoilClg   User: "CoilCooling 21"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 17 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 17 MBH, SEER-14.0"
    ..
 
-CoilHtg   User: "CoilHtg 21"  
+CoilHtg   User: "CoilHtg 16"  
    Status = RVal: "New"  (1)
    Type = UVal: "HeatPump"  (3)
    FuelSrc = RDef: "Electric"  (1)
@@ -123870,10 +123871,10 @@ CoilHtg   User: "CoilHtg 21"
    CapTotGrossRtdSim = RVal: 33831.1
    CapTotNetRtd = RVal: 17643.3
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
-   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 21"
+   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 16"
    HtPumpCprsrLockoutTemp = RDef: 17
    HtPumpSuppTemp = RDef: 40
    HtPumpDefHtSrc = UVal: "Electric"  (1)
@@ -123906,7 +123907,7 @@ CoilHtg   User: "CoilHtg 21"
    TreeDescrip = RVal: "HeatPump, Net = 18 MBH, HSPF-8.2"
    ..
 
-Fan   User: "Fan 21"  
+Fan   User: "Fan 16"  
    Status = RVal: "New"  (1)
    ParentComp = RVal: "ZnSys"  (2)
    CtrlMthd = RVal: "ConstantVolume"  (1)
@@ -123945,7 +123946,7 @@ Fan   User: "Fan 21"
    TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 629 cfm"
    ..
 
-CoilHtg   User: "SupCoilHtg 21"  
+CoilHtg   User: "SupCoilHtg 16"  
    Status = RVal: "New"  (1)
    Type = UVal: "Resistance"  (1)
    FuelSrc = RDef: "Electric"  (1)
@@ -124054,9 +124055,9 @@ ZnSys   User: "ZnSys F5 2-Bed East"
    GasPhaseAirCleanersDsgnPD = RDef: 0
    ERVEff = RVal: 0
    ExcludeFromSizing = RVal: 0
-   CoilClgRef = RVal: "CoilCooling 22"
-   CoilHtgRef = RVal: "CoilHtg 22"
-   FanRef = RVal: "Fan 22"
+   CoilClgRef = RVal: "CoilCooling 17"
+   CoilHtgRef = RVal: "CoilHtg 17"
+   FanRef = RVal: "Fan 17"
    BaseSysNum = RVal: 0
    SysRefStatus = RVal: "Invalid"  (2)
    IsActiveBeam = RVal: 0
@@ -124201,7 +124202,7 @@ ZnSys   User: "ZnSys F5 2-Bed East"
    TreeDescrip = RVal: "SZHP, (Qty 3), CtrlZn = Thermal Zone: F5 2-Bed East, New"
    ..
 
-CoilClg   User: "CoilCooling 22"  
+CoilClg   User: "CoilCooling 17"  
    Status = RVal: "New"  (1)
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
@@ -124210,9 +124211,9 @@ CoilClg   User: "CoilCooling 22"
    CapTotGrossRtdSim = RVal: 52592.7
    CapTotNetRtd = RVal: 16803.1
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -124235,10 +124236,10 @@ CoilClg   User: "CoilCooling 22"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 17 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 17 MBH, SEER-14.0"
    ..
 
-CoilHtg   User: "CoilHtg 22"  
+CoilHtg   User: "CoilHtg 17"  
    Status = RVal: "New"  (1)
    Type = UVal: "HeatPump"  (3)
    FuelSrc = RDef: "Electric"  (1)
@@ -124248,10 +124249,10 @@ CoilHtg   User: "CoilHtg 22"
    CapTotGrossRtdSim = RVal: 50746.6
    CapTotNetRtd = RVal: 17643.3
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
-   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 22"
+   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 17"
    HtPumpCprsrLockoutTemp = RDef: 17
    HtPumpSuppTemp = RDef: 40
    HtPumpDefHtSrc = UVal: "Electric"  (1)
@@ -124284,7 +124285,7 @@ CoilHtg   User: "CoilHtg 22"
    TreeDescrip = RVal: "HeatPump, Net = 18 MBH, HSPF-8.2"
    ..
 
-Fan   User: "Fan 22"  
+Fan   User: "Fan 17"  
    Status = RVal: "New"  (1)
    ParentComp = RVal: "ZnSys"  (2)
    CtrlMthd = RVal: "ConstantVolume"  (1)
@@ -124323,7 +124324,7 @@ Fan   User: "Fan 22"
    TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 629 cfm"
    ..
 
-CoilHtg   User: "SupCoilHtg 22"  
+CoilHtg   User: "SupCoilHtg 17"  
    Status = RVal: "New"  (1)
    Type = UVal: "Resistance"  (1)
    FuelSrc = RDef: "Electric"  (1)
@@ -124432,9 +124433,9 @@ ZnSys   User: "ZnSys F5 2-Bed West"
    GasPhaseAirCleanersDsgnPD = RDef: 0
    ERVEff = RVal: 0
    ExcludeFromSizing = RVal: 0
-   CoilClgRef = RVal: "CoilCooling 23"
-   CoilHtgRef = RVal: "CoilHtg 23"
-   FanRef = RVal: "Fan 23"
+   CoilClgRef = RVal: "CoilCooling 18"
+   CoilHtgRef = RVal: "CoilHtg 18"
+   FanRef = RVal: "Fan 18"
    BaseSysNum = RVal: 0
    SysRefStatus = RVal: "Invalid"  (2)
    IsActiveBeam = RVal: 0
@@ -124579,7 +124580,7 @@ ZnSys   User: "ZnSys F5 2-Bed West"
    TreeDescrip = RVal: "SZHP, (Qty 3), CtrlZn = Thermal Zone: F5 2-Bed West, New"
    ..
 
-CoilClg   User: "CoilCooling 23"  
+CoilClg   User: "CoilCooling 18"  
    Status = RVal: "New"  (1)
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
@@ -124588,9 +124589,9 @@ CoilClg   User: "CoilCooling 23"
    CapTotGrossRtdSim = RVal: 52592.7
    CapTotNetRtd = RVal: 16803.1
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -124613,10 +124614,10 @@ CoilClg   User: "CoilCooling 23"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 17 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 17 MBH, SEER-14.0"
    ..
 
-CoilHtg   User: "CoilHtg 23"  
+CoilHtg   User: "CoilHtg 18"  
    Status = RVal: "New"  (1)
    Type = UVal: "HeatPump"  (3)
    FuelSrc = RDef: "Electric"  (1)
@@ -124626,10 +124627,10 @@ CoilHtg   User: "CoilHtg 23"
    CapTotGrossRtdSim = RVal: 50746.6
    CapTotNetRtd = RVal: 17643.3
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
-   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 23"
+   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 18"
    HtPumpCprsrLockoutTemp = RDef: 17
    HtPumpSuppTemp = RDef: 40
    HtPumpDefHtSrc = UVal: "Electric"  (1)
@@ -124662,7 +124663,7 @@ CoilHtg   User: "CoilHtg 23"
    TreeDescrip = RVal: "HeatPump, Net = 18 MBH, HSPF-8.2"
    ..
 
-Fan   User: "Fan 23"  
+Fan   User: "Fan 18"  
    Status = RVal: "New"  (1)
    ParentComp = RVal: "ZnSys"  (2)
    CtrlMthd = RVal: "ConstantVolume"  (1)
@@ -124701,7 +124702,7 @@ Fan   User: "Fan 23"
    TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 629 cfm"
    ..
 
-CoilHtg   User: "SupCoilHtg 23"  
+CoilHtg   User: "SupCoilHtg 18"  
    Status = RVal: "New"  (1)
    Type = UVal: "Resistance"  (1)
    FuelSrc = RDef: "Electric"  (1)
@@ -124745,7 +124746,7 @@ ZnSys   User: "ZnSys F5 3-Bed NE"
    FanCtrl = RDef: "Cycling"  (2)
    NightCycleFanCtrl = RVal: "CycleOnCallPrimaryZone"  (2)
    ClgCtrl = PDef: "NoSATControl"  (1)
-   Cnt = RDef: 1
+   Cnt = UVal: 1
    FanPos = RVal: "DrawThrough"  (1)
    OptStart = RVal: 0
    OptStartCtrl = RVal: "None"  (1)
@@ -124810,9 +124811,9 @@ ZnSys   User: "ZnSys F5 3-Bed NE"
    GasPhaseAirCleanersDsgnPD = RDef: 0
    ERVEff = RVal: 0
    ExcludeFromSizing = RVal: 0
-   CoilClgRef = RVal: "CoilCooling 24"
-   CoilHtgRef = RVal: "CoilHtg 24"
-   FanRef = RVal: "Fan 24"
+   CoilClgRef = RVal: "CoilCooling 19"
+   CoilHtgRef = RVal: "CoilHtg 19"
+   FanRef = RVal: "Fan 19"
    BaseSysNum = RVal: 0
    SysRefStatus = RVal: "Invalid"  (2)
    IsActiveBeam = RVal: 0
@@ -124957,7 +124958,7 @@ ZnSys   User: "ZnSys F5 3-Bed NE"
    TreeDescrip = RVal: "SZHP, (Qty 1), CtrlZn = Thermal Zone: F5 3-Bed NE, New"
    ..
 
-CoilClg   User: "CoilCooling 24"  
+CoilClg   User: "CoilCooling 19"  
    Status = RVal: "New"  (1)
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
@@ -124966,9 +124967,9 @@ CoilClg   User: "CoilCooling 24"
    CapTotGrossRtdSim = RVal: 22887.6
    CapTotNetRtd = RVal: 21937.4
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -124991,10 +124992,10 @@ CoilClg   User: "CoilCooling 24"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 22 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 22 MBH, SEER-14.0"
    ..
 
-CoilHtg   User: "CoilHtg 24"  
+CoilHtg   User: "CoilHtg 19"  
    Status = RVal: "New"  (1)
    Type = UVal: "HeatPump"  (3)
    FuelSrc = RDef: "Electric"  (1)
@@ -125004,10 +125005,10 @@ CoilHtg   User: "CoilHtg 24"
    CapTotGrossRtdSim = RVal: 22084.2
    CapTotNetRtd = RVal: 23034.3
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
-   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 24"
+   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 19"
    HtPumpCprsrLockoutTemp = RDef: 17
    HtPumpSuppTemp = RDef: 40
    HtPumpDefHtSrc = UVal: "Electric"  (1)
@@ -125040,7 +125041,7 @@ CoilHtg   User: "CoilHtg 24"
    TreeDescrip = RVal: "HeatPump, Net = 23 MBH, HSPF-8.2"
    ..
 
-Fan   User: "Fan 24"  
+Fan   User: "Fan 19"  
    Status = RVal: "New"  (1)
    ParentComp = RVal: "ZnSys"  (2)
    CtrlMthd = RVal: "ConstantVolume"  (1)
@@ -125079,7 +125080,7 @@ Fan   User: "Fan 24"
    TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 822 cfm"
    ..
 
-CoilHtg   User: "SupCoilHtg 24"  
+CoilHtg   User: "SupCoilHtg 19"  
    Status = RVal: "New"  (1)
    Type = UVal: "Resistance"  (1)
    FuelSrc = RDef: "Electric"  (1)
@@ -125123,7 +125124,7 @@ ZnSys   User: "ZnSys F5 3-Bed NW"
    FanCtrl = RDef: "Cycling"  (2)
    NightCycleFanCtrl = RVal: "CycleOnCallPrimaryZone"  (2)
    ClgCtrl = PDef: "NoSATControl"  (1)
-   Cnt = RDef: 1
+   Cnt = UVal: 1
    FanPos = RVal: "DrawThrough"  (1)
    OptStart = RVal: 0
    OptStartCtrl = RVal: "None"  (1)
@@ -125188,9 +125189,9 @@ ZnSys   User: "ZnSys F5 3-Bed NW"
    GasPhaseAirCleanersDsgnPD = RDef: 0
    ERVEff = RVal: 0
    ExcludeFromSizing = RVal: 0
-   CoilClgRef = RVal: "CoilCooling 25"
-   CoilHtgRef = RVal: "CoilHtg 25"
-   FanRef = RVal: "Fan 25"
+   CoilClgRef = RVal: "CoilCooling 20"
+   CoilHtgRef = RVal: "CoilHtg 20"
+   FanRef = RVal: "Fan 20"
    BaseSysNum = RVal: 0
    SysRefStatus = RVal: "Invalid"  (2)
    IsActiveBeam = RVal: 0
@@ -125335,7 +125336,7 @@ ZnSys   User: "ZnSys F5 3-Bed NW"
    TreeDescrip = RVal: "SZHP, (Qty 1), CtrlZn = Thermal Zone: F5 3-Bed NW, New"
    ..
 
-CoilClg   User: "CoilCooling 25"  
+CoilClg   User: "CoilCooling 20"  
    Status = RVal: "New"  (1)
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
@@ -125344,9 +125345,9 @@ CoilClg   User: "CoilCooling 25"
    CapTotGrossRtdSim = RVal: 22887.6
    CapTotNetRtd = RVal: 21937.4
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -125369,10 +125370,10 @@ CoilClg   User: "CoilCooling 25"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 22 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 22 MBH, SEER-14.0"
    ..
 
-CoilHtg   User: "CoilHtg 25"  
+CoilHtg   User: "CoilHtg 20"  
    Status = RVal: "New"  (1)
    Type = UVal: "HeatPump"  (3)
    FuelSrc = RDef: "Electric"  (1)
@@ -125382,10 +125383,10 @@ CoilHtg   User: "CoilHtg 25"
    CapTotGrossRtdSim = RVal: 22084.2
    CapTotNetRtd = RVal: 23034.3
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
-   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 25"
+   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 20"
    HtPumpCprsrLockoutTemp = RDef: 17
    HtPumpSuppTemp = RDef: 40
    HtPumpDefHtSrc = UVal: "Electric"  (1)
@@ -125418,7 +125419,7 @@ CoilHtg   User: "CoilHtg 25"
    TreeDescrip = RVal: "HeatPump, Net = 23 MBH, HSPF-8.2"
    ..
 
-Fan   User: "Fan 25"  
+Fan   User: "Fan 20"  
    Status = RVal: "New"  (1)
    ParentComp = RVal: "ZnSys"  (2)
    CtrlMthd = RVal: "ConstantVolume"  (1)
@@ -125457,7 +125458,7 @@ Fan   User: "Fan 25"
    TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 822 cfm"
    ..
 
-CoilHtg   User: "SupCoilHtg 25"  
+CoilHtg   User: "SupCoilHtg 20"  
    Status = RVal: "New"  (1)
    Type = UVal: "Resistance"  (1)
    FuelSrc = RDef: "Electric"  (1)
@@ -125501,7 +125502,7 @@ ZnSys   User: "ZnSys F5 Studio SE"
    FanCtrl = RDef: "Cycling"  (2)
    NightCycleFanCtrl = RVal: "CycleOnCallPrimaryZone"  (2)
    ClgCtrl = PDef: "NoSATControl"  (1)
-   Cnt = RDef: 1
+   Cnt = UVal: 1
    FanPos = RVal: "DrawThrough"  (1)
    OptStart = RVal: 0
    OptStartCtrl = RVal: "None"  (1)
@@ -125566,9 +125567,9 @@ ZnSys   User: "ZnSys F5 Studio SE"
    GasPhaseAirCleanersDsgnPD = RDef: 0
    ERVEff = RVal: 0
    ExcludeFromSizing = RVal: 0
-   CoilClgRef = RVal: "CoilCooling 26"
-   CoilHtgRef = RVal: "CoilHtg 26"
-   FanRef = RVal: "Fan 26"
+   CoilClgRef = RVal: "CoilCooling 21"
+   CoilHtgRef = RVal: "CoilHtg 21"
+   FanRef = RVal: "Fan 21"
    BaseSysNum = RVal: 0
    SysRefStatus = RVal: "Invalid"  (2)
    IsActiveBeam = RVal: 0
@@ -125713,7 +125714,7 @@ ZnSys   User: "ZnSys F5 Studio SE"
    TreeDescrip = RVal: "SZHP, (Qty 1), CtrlZn = Thermal Zone: F5 Studio SE, New"
    ..
 
-CoilClg   User: "CoilCooling 26"  
+CoilClg   User: "CoilCooling 21"  
    Status = RVal: "New"  (1)
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
@@ -125722,9 +125723,9 @@ CoilClg   User: "CoilCooling 26"
    CapTotGrossRtdSim = RVal: 8765.45
    CapTotNetRtd = RVal: 8401.57
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -125747,10 +125748,10 @@ CoilClg   User: "CoilCooling 26"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 8 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 8 MBH, SEER-14.0"
    ..
 
-CoilHtg   User: "CoilHtg 26"  
+CoilHtg   User: "CoilHtg 21"  
    Status = RVal: "New"  (1)
    Type = UVal: "HeatPump"  (3)
    FuelSrc = RDef: "Electric"  (1)
@@ -125760,10 +125761,10 @@ CoilHtg   User: "CoilHtg 26"
    CapTotGrossRtdSim = RVal: 8457.77
    CapTotNetRtd = RVal: 8821.65
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
-   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 26"
+   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 21"
    HtPumpCprsrLockoutTemp = RDef: 17
    HtPumpSuppTemp = RDef: 40
    HtPumpDefHtSrc = UVal: "Electric"  (1)
@@ -125796,7 +125797,7 @@ CoilHtg   User: "CoilHtg 26"
    TreeDescrip = RVal: "HeatPump, Net = 9 MBH, HSPF-8.2"
    ..
 
-Fan   User: "Fan 26"  
+Fan   User: "Fan 21"  
    Status = RVal: "New"  (1)
    ParentComp = RVal: "ZnSys"  (2)
    CtrlMthd = RVal: "ConstantVolume"  (1)
@@ -125835,7 +125836,7 @@ Fan   User: "Fan 26"
    TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 315 cfm"
    ..
 
-CoilHtg   User: "SupCoilHtg 26"  
+CoilHtg   User: "SupCoilHtg 21"  
    Status = RVal: "New"  (1)
    Type = UVal: "Resistance"  (1)
    FuelSrc = RDef: "Electric"  (1)
@@ -125879,7 +125880,7 @@ ZnSys   User: "ZnSys F5 Studio SW"
    FanCtrl = RDef: "Cycling"  (2)
    NightCycleFanCtrl = RVal: "CycleOnCallPrimaryZone"  (2)
    ClgCtrl = PDef: "NoSATControl"  (1)
-   Cnt = RDef: 1
+   Cnt = UVal: 1
    FanPos = RVal: "DrawThrough"  (1)
    OptStart = RVal: 0
    OptStartCtrl = RVal: "None"  (1)
@@ -125944,9 +125945,9 @@ ZnSys   User: "ZnSys F5 Studio SW"
    GasPhaseAirCleanersDsgnPD = RDef: 0
    ERVEff = RVal: 0
    ExcludeFromSizing = RVal: 0
-   CoilClgRef = RVal: "CoilCooling 27"
-   CoilHtgRef = RVal: "CoilHtg 27"
-   FanRef = RVal: "Fan 27"
+   CoilClgRef = RVal: "CoilCooling 22"
+   CoilHtgRef = RVal: "CoilHtg 22"
+   FanRef = RVal: "Fan 22"
    BaseSysNum = RVal: 0
    SysRefStatus = RVal: "Invalid"  (2)
    IsActiveBeam = RVal: 0
@@ -126091,7 +126092,7 @@ ZnSys   User: "ZnSys F5 Studio SW"
    TreeDescrip = RVal: "SZHP, (Qty 1), CtrlZn = Thermal Zone: F5 Studio SW, New"
    ..
 
-CoilClg   User: "CoilCooling 27"  
+CoilClg   User: "CoilCooling 22"  
    Status = RVal: "New"  (1)
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
@@ -126100,9 +126101,9 @@ CoilClg   User: "CoilCooling 27"
    CapTotGrossRtdSim = RVal: 8765.45
    CapTotNetRtd = RVal: 8401.57
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14.5
-   DXEER = RVal: 11.674
-   DXEERAdj = RVal: 14.2984
+   DXSEER = UVal: 14
+   DXEER = RVal: 11.4072
+   DXEERAdj = RVal: 13.9163
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -126125,10 +126126,10 @@ CoilClg   User: "CoilCooling 27"
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 8 MBH, SEER-14.5"
+   TreeDescrip = RVal: "DirectExpansion, Net = 8 MBH, SEER-14.0"
    ..
 
-CoilHtg   User: "CoilHtg 27"  
+CoilHtg   User: "CoilHtg 22"  
    Status = RVal: "New"  (1)
    Type = UVal: "HeatPump"  (3)
    FuelSrc = RDef: "Electric"  (1)
@@ -126138,10 +126139,10 @@ CoilHtg   User: "CoilHtg 27"
    CapTotGrossRtdSim = RVal: 8457.77
    CapTotNetRtd = RVal: 8821.65
    CndsrType = RDef: "Air"  (1)
-   HtPumpHSPF = RVal: 8.2
-   HtPumpCOP = UVal: 4.7
+   HtPumpHSPF = UVal: 8.2
+   HtPumpCOP = RVal: 3.24466
    BypassMinEffCheck = RDef: 0
-   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 27"
+   HtPumpSuppCoilHtgRef = UVal: "SupCoilHtg 22"
    HtPumpCprsrLockoutTemp = RDef: 17
    HtPumpSuppTemp = RDef: 40
    HtPumpDefHtSrc = UVal: "Electric"  (1)
@@ -126174,7 +126175,7 @@ CoilHtg   User: "CoilHtg 27"
    TreeDescrip = RVal: "HeatPump, Net = 9 MBH, HSPF-8.2"
    ..
 
-Fan   User: "Fan 27"  
+Fan   User: "Fan 22"  
    Status = RVal: "New"  (1)
    ParentComp = RVal: "ZnSys"  (2)
    CtrlMthd = RVal: "ConstantVolume"  (1)
@@ -126213,7 +126214,7 @@ Fan   User: "Fan 27"
    TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 315 cfm"
    ..
 
-CoilHtg   User: "SupCoilHtg 27"  
+CoilHtg   User: "SupCoilHtg 22"  
    Status = RVal: "New"  (1)
    Type = UVal: "Resistance"  (1)
    FuelSrc = RDef: "Electric"  (1)
