@@ -8,7 +8,8 @@ parameter "seer", :default=> 14 #Need to implement if statements based on capaci
 parameter "hspf", :default=> 8.2 #Need to implement if statements based on capacity
 parameter "index"
 parameter "cooling_capacity", :default => 0
-
+parameter "heating_capacity", :default => 0
+parameter "supply_fan_cfm", :default => 0
 %>
 
 ZnSys   "<%=zone_name%>"
@@ -29,12 +30,18 @@ CoilClg   "CoilCooling <%=index%>"
 
 CoilHtg   "CoilHtg <%=index%>"
    Type = "HeatPump"
+   <%if heating_capacity != 0 %>
+   CapToNetRtd = <%=heating_capacity%>
+   <%end%>
    HtPumpHSPF = <%=hspf%>
    HtPumpSuppCoilHtgRef = "SupCoilHtg <%=index%>"
    HtPumpDefHtSrc = "Electric"
    ..
 
 Fan   "Fan <%=index%>"
+  <%if supply_fan_cfm != 0 %>
+  FlowCap = <%=supply_fan_cfm%>
+  <%end%>
    ..
 
 CoilHtg   "SupCoilHtg <%=index%>"

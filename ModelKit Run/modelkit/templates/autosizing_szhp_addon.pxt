@@ -1,21 +1,50 @@
-<% #testing SZHP template
+<% 
 
 #Using csv guides from https://www.rubyguides.com/2018/10/parse-csv-ruby/
 
 require 'csv'
 puts Dir.pwd
-file = Dir.pwd + "/SZHP_ZnSys.csv"
-table = CSV.parse(File.read(file), headers: true)
+file_zones = Dir.pwd + "/SZHP_ZnSys.csv"
+file_capacities = Dir.pwd + "/autosizing/CZ" + cz + ".csv" #Updates by Climate Zone
+
+puts "Directory used for capacities:"
+puts file_capacities
+
+# https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
+table_capacities = CSV.parse(File.readlines(file_capacities).drop(13).join, headers: true)
+table_zones = CSV.parse(File.read(file_zones), headers: true)
+
 
 #Get list of all zone names and counts
-zones = table.by_col[1]
-counts = table.by_col[2]
-index = table.by_col[0]
-
+zones = table_zones.by_col[1]
 num_zones = zones.length() -1 #Subtract 1 since indexing at 0
+counts = table_capacities.by_col[2][0..num_zones]
+counts_original = table_zones.by_col[2]
 
+#Implement check to see if original counts is the same as counts in baseline model
+check = counts <=> counts_original
+if check != 0
+  warn("Order of SZHP zones in HVACSecondary CSV file may not match original cibd file.")
+  puts "Original:"
+  puts counts_original
+  puts "HVACSecondary"
+  puts counts
+end
+
+#Define Parameters
+index = table_zones.by_col[0]
+capacity_cooling = table_capacities.by_col[4]
+capacity_heating = table_capacities.by_col[8]
+supply_cfm = table_capacities.by_col[11]
+
+
+
+#Use for loop to create szhp chunk for each zone
 for a in 0..num_zones do
   insert 'szhp.pxt',
+    :cooling_capacity => capacity_cooling[a],
+    :heating_capacity => capacity_heating[a],
+    :supply_fan_cfm => supply_cfm[a],
     :zone_name => zones[a],
     :count => counts[a],
     :index => index[a]
