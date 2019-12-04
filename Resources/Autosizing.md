@@ -20,3 +20,4 @@
 
 5. Take the same `root.pxt` file but now replace the Ruby chunk from `pre_autosizing_szhp_addon` with [autosizing_szhp_addon.pxt](https://github.com/TRC-RTC/T24-2022-CASE-Modeling/blob/master/ModelKit%20Run/modelkit/templates/autosizing_szhp_addon.pxt).
    - As long as capacities do not change and CZ is specified, this "add-on" pxt file will match the proposed model SZHP cooling capacity, heating capacity, and Supply Fan CFM to the baseline model. Steps from "First Run" and "Batch Scripts" do not have to be run again.
+6. Note: To use `_compose_all` use the `_compose_all` in the `parameters/cases` folder. There may be a better way to do this in the future... 
