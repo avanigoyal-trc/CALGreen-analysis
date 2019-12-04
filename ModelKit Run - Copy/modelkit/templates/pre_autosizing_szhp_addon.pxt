@@ -1,0 +1,22 @@
+<% 
+#Using csv guides from https://www.rubyguides.com/2018/10/parse-csv-ruby/
+
+require 'csv'
+puts Dir.pwd
+file = Dir.pwd + "/SZHP_ZnSys.csv"
+table = CSV.parse(File.read(file), headers: true)
+
+#Get list of all zone names and counts
+zones = table.by_col[1]
+counts = table.by_col[2]
+index = table.by_col[0]
+
+num_zones = zones.length() -1 #Subtract 1 since indexing at 0
+
+for a in 0..num_zones do
+  insert 'szhp.pxt',
+    :zone_name => zones[a],
+    :count => counts[a],
+    :index => index[a]
+end
+%>

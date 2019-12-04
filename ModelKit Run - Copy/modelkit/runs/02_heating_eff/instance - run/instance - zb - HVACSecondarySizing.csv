@@ -1,0 +1,46 @@
+; Tables for Std model AutoHardSize capacity look-up rules
+TABLE OffSmlCECStd19020012STrmlUnit
+PropName,BaseName,Type,System,Zone,PriAirFlowMax,PriAirFlowMin,HtgAirFlowMax,ReheatCtrlMthd
+;,,,,,(cfm),(cfm),( cfm)
+,"BaseVAVNoReheatTrmlUnit","VAVNoReheatBox","BaseAirSys7","Core_ZN Thermal Zone",-99996.000,241.635,-99996.000,""
+,"BaseVAVNoReheatTrmlUnit-2","VAVNoReheatBox","BaseAirSys7-2","Perimeter_ZN_1 Thermal Zone",-99996.000,183.175,-99996.000,""
+,"BaseVAVNoReheatTrmlUnit-3","VAVNoReheatBox","BaseAirSys7-3","Perimeter_ZN_2 Thermal Zone",-99996.000,108.662,-99996.000,""
+,"BaseVAVNoReheatTrmlUnit-4","VAVNoReheatBox","BaseAirSys7-4","Perimeter_ZN_3 Thermal Zone",-99996.000,183.175,-99996.000,""
+,"BaseVAVNoReheatTrmlUnit-5","VAVNoReheatBox","BaseAirSys7-5","Perimeter_ZN_4 Thermal Zone",-99996.000,108.662,-99996.000,""
+ENDTABLE
+TABLE OffSmlCECStd19020012SCoilClg
+PropName,BaseName,Type,System,Zone,CapTotNetRtd,CapTotGrossRtd,FluidFlowRtDsgn,DXSEER,DXEER,NumClgStages
+;,,,,,(Btu/hr),(Btu/hr),( gpm),
+,"BaseSys7 CoilClg","DirectExpansion","BaseAirSys7","n/a",-99996.000,-99996.000,-99996.00000,-99996.000,-99996.000,1
+,"BaseSys7 CoilClg-2","DirectExpansion","BaseAirSys7-2","n/a",-99996.000,-99996.000,-99996.00000,-99996.000,-99996.000,1
+,"BaseSys7 CoilClg-3","DirectExpansion","BaseAirSys7-3","n/a",-99996.000,-99996.000,-99996.00000,-99996.000,-99996.000,1
+,"BaseSys7 CoilClg-4","DirectExpansion","BaseAirSys7-4","n/a",-99996.000,-99996.000,-99996.00000,-99996.000,-99996.000,1
+,"BaseSys7 CoilClg-5","DirectExpansion","BaseAirSys7-5","n/a",-99996.000,-99996.000,-99996.00000,-99996.000,-99996.000,1
+ENDTABLE
+TABLE OffSmlCECStd19020012SCoilHtg
+PropName,BaseName,Type,System,Zone,CapTotNetRtd,CapTotGrossRtd,FluidFlowRtDsgn,FurnAFUE,FurnThrmlEff,
+;,,,,,(Btu/hr),(Btu/hr),( gpm),
+,"BaseSys7 CoilHtg","Furnace","BaseAirSys7","n/a",-99996.000,-99996.000,-99996.00000,-99996.000,0.800
+,"BaseSys7 CoilHtg-2","Furnace","BaseAirSys7-2","n/a",-99996.000,-99996.000,-99996.00000,-99996.000,0.800
+,"BaseSys7 CoilHtg-3","Furnace","BaseAirSys7-3","n/a",-99996.000,-99996.000,-99996.00000,-99996.000,0.800
+,"BaseSys7 CoilHtg-4","Furnace","BaseAirSys7-4","n/a",-99996.000,-99996.000,-99996.00000,-99996.000,0.800
+,"BaseSys7 CoilHtg-5","Furnace","BaseAirSys7-5","n/a",-99996.000,-99996.000,-99996.00000,-99996.000,0.800
+ENDTABLE
+TABLE OffSmlCECStd19020012SFan
+PropName,BaseName,CtrlMthd,System,Zone,FlowCap,FlowMin,FlowEff,ModelingMthd,TotStaticPress,MtrBHP,MtrHP,MtrPos,MtrEff
+;,,,,,(cfm),(cfm),,,(inH2O),(hp),(hp),
+,"BaseSys7 Fan","VariableSpeedDrive","BaseAirSys7","n/a",0.000,-99996.000,1.000,"StaticPressure",0.000,0.000,-99996.000,"InAirStream",1.000
+,"BaseSys7 Fan-2","VariableSpeedDrive","BaseAirSys7-2","n/a",0.000,-99996.000,1.000,"StaticPressure",0.000,0.000,-99996.000,"InAirStream",1.000
+,"BaseSys7 Fan-3","VariableSpeedDrive","BaseAirSys7-3","n/a",0.000,-99996.000,1.000,"StaticPressure",0.000,0.000,-99996.000,"InAirStream",1.000
+,"BaseSys7 Fan-4","VariableSpeedDrive","BaseAirSys7-4","n/a",0.000,-99996.000,1.000,"StaticPressure",0.000,0.000,-99996.000,"InAirStream",1.000
+,"BaseSys7 Fan-5","VariableSpeedDrive","BaseAirSys7-5","n/a",0.000,-99996.000,1.000,"StaticPressure",0.000,0.000,-99996.000,"InAirStream",1.000
+ENDTABLE
+TABLE OffSmlCECStd19020012SOACtrl
+PropName,BaseName,EconoCtrlMthd,System,EconoIntegration
+;
+,"BaseSys7 OACtrl","NoEconomizer","BaseAirSys7","UNDEFINED"
+,"BaseSys7 OACtrl-2","NoEconomizer","BaseAirSys7-2","UNDEFINED"
+,"BaseSys7 OACtrl-3","NoEconomizer","BaseAirSys7-3","UNDEFINED"
+,"BaseSys7 OACtrl-4","NoEconomizer","BaseAirSys7-4","UNDEFINED"
+,"BaseSys7 OACtrl-5","NoEconomizer","BaseAirSys7-5","UNDEFINED"
+ENDTABLE
