@@ -2,19 +2,52 @@
 
 modelkit_version "~>0.8.0"
 
+
 parameter "climate_zone", :default=>"ClimateZone3"
 parameter "weather_station", :default=>"OAKLAND_724930"
 
+#parameters for autosizing
+parameter "measure_folder"
+parameter "folder_name"
+parameter "prototype"
+parameter "software"
+parameter "autosizing", :default=> "No"
+parameter "hvac_type", :default=> "SZAC"
+
+#measure parameters
 parameter "res_wood_wall", :default=>"Stucco - 7/8 in.;Plywood - 5/8 in.;Compliance Insulation R1.54;WoodFrameWall16inOCCavInsR5;Gypsum Board - 5/8 in."
 
 parameter "window_u", :default=>0.36
 parameter "heating_eff", :default=>0.8
 
-#parameter "cz"
-
 
 %>
 
+<%
+#create climate zone coding for SZHP/SZAC usage. Can be used for other measures if needed.
+
+climate_zone_table = {
+  "ClimateZone1" => "cz01",
+  "ClimateZone2" => "cz02",
+  "ClimateZone3" => "cz03",
+  "ClimateZone4" => "cz04",
+  "ClimateZone5" => "cz05",
+  "ClimateZone6" => "cz06",
+  "ClimateZone7" => "cz07",
+  "ClimateZone8" => "cz08",
+  "ClimateZone9" => "cz09",
+  "ClimateZone10" => "cz10",
+  "ClimateZone11" => "cz11",
+  "ClimateZone12" => "cz12",
+  "ClimateZone13" => "cz13",
+  "ClimateZone14" => "cz14",
+  "ClimateZone15" => "cz15",
+  "ClimateZone16" => "cz16"
+}
+
+cz = climate_zone_table[climate_zone]
+
+%>
 
 RulesetFilename   "T24N_2019.bin"
 
@@ -15573,28 +15606,56 @@ ThrmlZn   "Thermal Zone: Parking Garage"
 
 
 
-<%# #testing SZHP template
+<%
 
 #Using csv guides from https://www.rubyguides.com/2018/10/parse-csv-ruby/
 
 require 'csv'
 puts Dir.pwd
-file_zones = Dir.pwd + "/SZHP_ZnSys.csv"
-file_capacities = Dir.pwd + "/autosizing/CZ" + cz + ".csv" #need to change this to be updated by climate zone
 
+file_zones = Dir.pwd + "/prototypes/" + software + "/" + prototype + "/" + "ZnSys_Parameters.csv"
+table_zones = CSV.parse(File.read(file_zones), headers: true)
+
+#Get list of all zone names and counts
+zones = table_zones.by_col[1]
+counts_original = table_zones.by_col[2]
+index = table_zones.by_col[0]
+
+
+num_zones = zones.length() -1 #Subtract 1 since indexing at 0
+
+if (hvac_type == "SZHP")
+  template_name = 'szhp.pxt'
+elsif (hvac_type == "SZAC")
+  template_name = 'szac.pxt'
+end
+
+
+if (autosizing == "No")
+
+for a in 0..num_zones do
+  insert template_name,
+    :zone_name => zones[a],
+    :count => counts_original[a],
+    :index => index[a]
+end
+
+
+elsif (autosizing == "Yes")
+
+file_capacities = Dir.pwd + "/analysis/" + measure_folder + "/" + "runs" + "/" + folder_name + "/" + cz + "/instance - run/instance - ab - HVACSecondary.csv"
 puts "Directory used for capacities:"
 puts file_capacities
 
 # https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
 table_capacities = CSV.parse(File.readlines(file_capacities).drop(13).join, headers: true)
-table_zones = CSV.parse(File.read(file_zones), headers: true)
 
 
-#Get list of all zone names and counts
-zones = table_zones.by_col[1]
-num_zones = zones.length() -1 #Subtract 1 since indexing at 0
+
+
+
 counts = table_capacities.by_col[2][0..num_zones]
-counts_original = table_zones.by_col[2]
+
 
 #Implement check to see if original counts is the same as counts in baseline model
 check = counts <=> counts_original
@@ -15607,17 +15668,14 @@ if check != 0
 end
 
 #Define Parameters
-index = table_zones.by_col[0]
 capacity_cooling = table_capacities.by_col[4]
 capacity_heating = table_capacities.by_col[8]
 supply_cfm = table_capacities.by_col[11]
 
 
-if (hvac_type == "SZHP")
-
 #Use for loop to create szhp chunk for each zone
 for a in 0..num_zones do
-  insert 'szhp.pxt',
+  insert template_name,
     :cooling_capacity => capacity_cooling[a],
     :heating_capacity => capacity_heating[a],
     :supply_fan_cfm => supply_cfm[a],
@@ -15626,10 +15684,7 @@ for a in 0..num_zones do
     :index => index[a]
 end
 
-elsif (hvac_type == "SZAC")
-
 end
-
 %>
 
 

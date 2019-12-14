@@ -3,50 +3,41 @@
 modelkit_version "~>0.8.0"
 
 parameter "zone_name"
-parameter "airsys_name"
-parameter "heating_eff", :default=>0.8
-
-
+parameter "count"
+parameter "seer", :default=> 14 #Need to implement if statements based on capacity
+parameter "afue", :default=> 0.8 #Need to implement if statements based on capacity
+parameter "index"
+parameter "cooling_capacity", :default => 0
+parameter "heating_capacity", :default => 0
+parameter "supply_fan_cfm", :default => 0
 %>
 
-AirSys   "<%=airsys_name%>PSZ AirSys"
+ZnSys   "<%=zone_name%>"
+   <%if index != "1" %>
    TreeState = 253
+   <% end %>
    Type = "SZAC"
-   CtrlZnRef = "<%=zone_name%>"
-   DuctLctn = "Conditioned"
+   Cnt = <%=count%>
    ..
 
-AirSeg   "<%=airsys_name%>SysSupply AirSeg"
-   TreeState = 253
-   Type = "Supply"
-   Path = "Ducted"
+CoilClg   "CoilCooling <%=index%>"
+   Type = "DirectExpansion"
+   DXSEER = <%=seer%>
+   <%if cooling_capacity != 0 %>
+   CapTotNetRtd = <%=cooling_capacity%>
+   <%end%>
    ..
 
-CoilClg   "<%=airsys_name%>CoolingCoil"
-    Type = "DirectExpansion"
-   CndsrType = "Air"
-   ..
-
-CoilHtg   "<%=airsys_name%>HeatingCoil"
+CoilHtg   "CoilHtg <%=index%>"
    Type = "Furnace"
-   FurnAFUE = <%= heating_eff %>
+   <%if heating_capacity != 0 %>
+   CapTotNetRtd = <%=heating_capacity%>
+   <%end%>
+   FurnAFUE = <%=afue%>
    ..
 
-Fan   "<%=airsys_name%>SupplyFan"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-AirSeg   "<%=airsys_name%>SysReturnAirSeg"
-   Type = "Return"
-   ..
-
-TrmlUnit   "<%=airsys_name%> TU"
-   Type = "Uncontrolled"
-   ZnServedRef = "<%=zone_name%>"
-   PriAirSegRef = "<%=airsys_name%>SysSupply AirSeg"
-   ..
-
-OACtrl   "CoreZnOAControl"
-   AirSegSupRef = "<%=airsys_name%>SysSupply AirSeg"
-   AirSegRetRef = "<%=airsys_name%>SysReturnAirSeg"
+Fan   "Fan <%=index%>"
+  <%if supply_fan_cfm != 0 %>
+  FlowCap = <%=supply_fan_cfm%>
+  <%end%>
    ..
