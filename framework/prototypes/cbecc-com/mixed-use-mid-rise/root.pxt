@@ -18,7 +18,7 @@ parameter "hvac_type", :default=> "SZAC"
 parameter "res_wood_wall", :default=>"Stucco - 7/8 in.;Plywood - 5/8 in.;Compliance Insulation R1.54;WoodFrameWall16inOCCavInsR5;Gypsum Board - 5/8 in."
 parameter "other_floor", :default=>"Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R6.00;Compliance Insulation R2.15;Compliance Insulation R0.50;Plywood - 5/8 in.;Carpet - 3/4 in."
 parameter "nonres_concrete_wall", :default=>"Stucco - 7/8 in.;Concrete - 140 lb/ft3 - 8 in.;Compliance Insulation R8.07;Compliance Insulation R0.20;Compliance Insulation R1.00;WoodFraming16inOC;Gypsum Board - 1/2 in."
-parameter "wood_framing_roof", :default=>"Roofing felt - 1/8 in.;Building Paper - 1/16 in.;Fiberboard sheathing - 1/2 in.;Compliance Insulation R0.5;Compliance Insulation R0.02;Compliance Insulation R0.01;Gypsum Board - 1/2 in.;WoodRoof16OCCavInsR38"
+parameter "wood_framing_roof", :default=>"Roofing felt - 1/8 in.;Building Paper - 1/16 in.;Fiberboard sheathing - 1/2 in.;Compliance Insulation R0.50;Compliance Insulation R0.02;Compliance Insulation R0.01;Gypsum Board - 1/2 in.;WoodRoof16OCCavInsR38"
 parameter "res_fixed_window", :default=>"FixedWindow;0.25;0.36;0.42"
 parameter "nonres_fixed_window", :default=>"FixedWindow;0.25;0.36;0.42"
 
@@ -16316,6 +16316,11 @@ Mat   "Compliance Insulation R0.01"
    CodeItem = "Compliance Insulation R0.01"
    ..
 
+ Mat   "Compliance Insulation R0.02"
+    CodeCat = "Insulation Board"
+    CodeItem = "Compliance Insulation R0.01"
+    ..
+
 Mat   "Compliance Insulation R20.00"
    CodeCat = "Insulation Board"
    CodeItem = "Compliance Insulation R20.00"
@@ -16330,6 +16335,11 @@ Mat   "Compliance Insulation R5.00"
    CodeCat = "Insulation Board"
    CodeItem = "Compliance Insulation R5.00"
    ..
+
+   Mat   "Compliance Insulation R8.07"
+      CodeCat = "Insulation Board"
+      CodeItem = "Compliance Insulation R8.07"
+      ..
 
 Mat   "Compliance Insulation R0.10"
    CodeCat = "Insulation Board"
