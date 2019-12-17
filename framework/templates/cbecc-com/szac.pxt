@@ -6,10 +6,17 @@ parameter "zone_name"
 parameter "count"
 parameter "seer", :default=> 14 #Need to implement if statements based on capacity
 parameter "afue", :default=> 0.8 #Need to implement if statements based on capacity
+parameter "eer", :default=> 12.2
 parameter "index"
 parameter "cooling_capacity", :default => 0
 parameter "heating_capacity", :default => 0
 parameter "supply_fan_cfm", :default => 0
+%>
+
+<%
+if (cooling_capacity >= 45000)
+  eer = 11.7
+end
 %>
 
 ZnSys   "<%=zone_name%>"
@@ -22,6 +29,7 @@ ZnSys   "<%=zone_name%>"
 
 CoilClg   "CoilCooling <%=index%>"
    Type = "DirectExpansion"
+   DXEER = <%=eer%>
    DXSEER = <%=seer%>
    <%if cooling_capacity != 0 %>
    CapTotNetRtd = <%=cooling_capacity%>
