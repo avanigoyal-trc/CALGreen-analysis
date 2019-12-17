@@ -15616,7 +15616,6 @@ ThrmlZn   "Thermal Zone: Parking Garage"
 #Using csv guides from https://www.rubyguides.com/2018/10/parse-csv-ruby/
 
 require 'csv'
-puts Dir.pwd
 
 file_zones = Dir.pwd + "/prototypes/" + software + "/" + prototype + "/" + "ZnSys_Parameters.csv"
 table_zones = CSV.parse(File.read(file_zones), headers: true)
@@ -15649,8 +15648,6 @@ end
 elsif (autosizing == "Yes")
 
 file_capacities = Dir.pwd + "/analysis/" + measure_folder + "/" + "runs" + "/" + folder_name + "/" + cz + "/instance - run/instance - ab - HVACSecondary.csv"
-puts "Directory used for capacities:"
-puts file_capacities
 
 # https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
 table_capacities = CSV.parse(File.readlines(file_capacities).drop(13).join, headers: true)
@@ -15680,6 +15677,12 @@ supply_cfm = table_capacities.by_col[11]
 
 #Use for loop to create szhp chunk for each zone
 for a in 0..num_zones do
+
+  if (capacity_cooling[a].to_f > 65000)
+    string = "Warning: " + zones[a] +  " Cooling Capacity > 65,000 Btu/h"
+    puts string
+  end
+
   insert template_name,
     :cooling_capacity => capacity_cooling[a],
     :heating_capacity => capacity_heating[a],
