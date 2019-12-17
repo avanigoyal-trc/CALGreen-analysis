@@ -1,0 +1,15 @@
+<%#INTERFACE
+
+parameter "res_wood_wall", :default=>"Stucco - 7/8 in.,Plywood - 5/8 in.,Compliance Insulation R1.54,WoodFrameWall16inOCCavInsR5,Gypsum Board - 5/8 in."
+
+%>
+
+
+
+ConsAssm   "ResWoodWallU059"
+   SpecMthd = "Layers"
+   ExtRoughness = "Smooth"
+<% res_wood_wall.split(",").each_with_index do |material, i| %>
+   MatRef[<%= i + 1 %>] = "<%= material %>"
+<% end %>
+   ..

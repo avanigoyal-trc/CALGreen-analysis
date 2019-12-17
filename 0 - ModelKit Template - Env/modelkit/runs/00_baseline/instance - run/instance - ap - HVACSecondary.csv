@@ -1,0 +1,69 @@
+AirSystems
+,,,,,Cooling,,,,Heating,,,Fan/Ventilation,,,Controls
+Name,Type,Status,System Count,Floor Area Served,Net Capacity,Design Supply T,Capacity/Area,Supply Flow/Ton,Net Capacity,Design Supply T,Capacity/Area,Supply Flow,Supply Flow/Area,Design OA,OA/Area,Control Zone Name,Temp Control,FixedT,Supply HiT,At Outdoor,Supply LowT,At OutdoorT,ReheatCtrlMthd,Availability Schedule,Night Cycle Control
+,,,(#),(ft2),(Btu/hr),(degF),(Btu/ft2),(cfm/ton),(Btu/hr),(degF),(Btu/ft2),(cfm),(cfm/ft2),(cfm),(cfm/ft2),,,(degF),(degF),(degF),(degF),( degF),,,
+"CoreZnPSZ AirSys","SZAC","New",1,1610.9,31717.6,55,19.6894,425.495,29287.7,95,18.181,1124.64,0.698145,241.635,0.15,"Core_ZN Thermal Zone","NoSATControl",,-99996,,-99996,,"UNDEFINED","OfficeHVACAvail","CycleOnCallPrimaryZone"
+"Perim1ZnPSZ AirSys","SZAC","New",1,1221.17,30708.6,55,25.1469,425.495,25861.1,95,21.1773,1088.86,0.891656,183.175,0.15,"Perimeter_ZN_1 Thermal Zone","NoSATControl",,-99996,,-99996,,"UNDEFINED","OfficeHVACAvail","CycleOnCallPrimaryZone"
+"Perim2ZnPSZ AirSys","SZAC","New",1,724.411,18851.3,55,26.023,409.957,15312.5,95,21.1378,644.02,0.889026,108.662,0.15,"Perimeter_ZN_2 Thermal Zone","NoSATControl",,-99996,,-99996,,"UNDEFINED","OfficeHVACAvail","CycleOnCallPrimaryZone"
+"Perim3ZnPSZ AirSys","SZAC","New",1,1221.17,31131.3,55,25.493,348.812,23051.2,95,18.8763,904.913,0.741021,183.175,0.15,"Perimeter_ZN_3 Thermal Zone","NoSATControl",,-99996,,-99996,,"UNDEFINED","OfficeHVACAvail","CycleOnCallPrimaryZone"
+"Perim4ZnPSZ AirSys","SZAC","New",1,724.411,22919.1,55,31.6382,385.985,16730.8,95,23.0957,737.201,1.01766,108.662,0.15,"Perimeter_ZN_4 Thermal Zone","NoSATControl",,-99996,,-99996,,"UNDEFINED","OfficeHVACAvail","CycleOnCallPrimaryZone"
+
+
+
+Terminal Units
+,,,,Relationships,,,,,AirFlow,,VAV,,Fan Powered Terminal
+Name,Type,Status,Qty,System,System Qty,Zone,Floor Area,HVAC Zones,Primary Max,Primary Min,Heating Max,Reheat Control,Induced Air Zone,Induction Ratio,Fan Power,Parallel Box Control,Flow Fraction
+,,,(#),,(#),,(ft2),(#),(cfm),(cfm),(cfm),,,,( W/cfm)
+"CoreZn TU","Uncontrolled","New",1,"CoreZnPSZ AirSys",1,"Core_ZN Thermal Zone",1610.9,1,1124.64,-99996,-99996,"","NONE",-99996,-99996,"UNDEFINED",-99996
+"Perim1Zn TU","Uncontrolled","New",1,"Perim1ZnPSZ AirSys",1,"Perimeter_ZN_1 Thermal Zone",1221.17,1,-99996,-99996,-99996,"","NONE",-99996,-99996,"UNDEFINED",-99996
+"Perim2Zn TU","Uncontrolled","New",1,"Perim2ZnPSZ AirSys",1,"Perimeter_ZN_2 Thermal Zone",724.411,1,-99996,-99996,-99996,"","NONE",-99996,-99996,"UNDEFINED",-99996
+"Perim3Zn TU","Uncontrolled","New",1,"Perim3ZnPSZ AirSys",1,"Perimeter_ZN_3 Thermal Zone",1221.17,1,-99996,-99996,-99996,"","NONE",-99996,-99996,"UNDEFINED",-99996
+"Perim4Zn TU","Uncontrolled","New",1,"Perim4ZnPSZ AirSys",1,"Perimeter_ZN_4 Thermal Zone",724.411,1,-99996,-99996,-99996,"","NONE",-99996,-99996,"UNDEFINED",-99996
+
+
+
+Cooling Coils
+,,,,Relationships,,,Capacity,,,,ChilledWater,,,DirectExpansion
+Name,Type,Status,Fuel Src,System,System Qty,Zone,Total-Net,Total-Gross,FluidSegIn,FluidSegOut,Design Flow Rate,Condenser Type,Number Stages,SEER,CodeMin SEER,EER,CodeMin EER,IEER,CodeMin IEER,EIR,Sizing Ratio
+,,,,,(#),,(Btu/hr),(Btu/hr),(Btu/hr),(Btu/hr),( gpm)
+"CoreZnCoolingCoil","DirectExpansion","New","Electric","CoreZnPSZ AirSys",1,"n/a",31717.6,33091.4,"NONE","NONE",-99996,"Air",1,13,13,10.8446,-99996,-99996,-99996,0.259903,0.906028
+"Perim1ZnCoolingCoil","DirectExpansion","New","Electric","Perim1ZnPSZ AirSys",1,"n/a",30708.6,32038.6,"NONE","NONE",-99996,"Air",1,13,13,10.8446,-99996,-99996,-99996,0.259903,0.906028
+"Perim2ZnCoolingCoil","DirectExpansion","New","Electric","Perim2ZnPSZ AirSys",1,"n/a",18851.3,19667.8,"NONE","NONE",-99996,"Air",1,13,13,10.8446,-99996,-99996,-99996,0.259903,0.908401
+"Perim3ZnCoolingCoil","DirectExpansion","New","Electric","Perim3ZnPSZ AirSys",1,"n/a",31131.3,32479.6,"NONE","NONE",-99996,"Air",1,13,13,10.8446,-99996,-99996,-99996,0.259903,0.922063
+"Perim4ZnCoolingCoil","DirectExpansion","New","Electric","Perim4ZnPSZ AirSys",1,"n/a",22919.1,23911.7,"NONE","NONE",-99996,"Air",1,13,13,10.8446,-99996,-99996,-99996,0.259903,0.913757
+
+
+
+Heating Coils
+,,,,Relationships,,,Capacity,,HotWater,,,HeatPump,,,,,,,,,Furnace
+Name,Type,Status,Fuel Src,System,System Qty,Zone,Total-Net,Total-Gross,FluidSeg In,FluidSeg Out,Design Flow Rate,Condenser Type,Number Stages,HSPF,CodeMin HSPF,COP,CodeMin COP,EIR,Comp Lockout Temp,Supp Htr Temp,AFUE,CodeMin AFUE,Thrml Eff,CodeMin Thrml Eff,SizingRatio
+,,,,,(#),,(Btu/hr),(Btu/hr),,,(gpm),,,,,,,,(?F),( ?F)
+"CoreZnHeatingCoil","Furnace","New","Gas","CoreZnPSZ AirSys",1,"n/a",29287.7,29287.7,"NONE","NONE",-99996,"UNDEFINED",1,-99996,-99996,-99996,-99996,-99996,-99996,-99996,0.85,0.78,0.836029,-99996,1
+"Perim1ZnHeatingCoil","Furnace","New","Gas","Perim1ZnPSZ AirSys",1,"n/a",25861.1,25861.1,"NONE","NONE",-99996,"UNDEFINED",1,-99996,-99996,-99996,-99996,-99996,-99996,-99996,0.85,0.78,0.836029,-99996,1
+"Perim2ZnHeatingCoil","Furnace","New","Gas","Perim2ZnPSZ AirSys",1,"n/a",15312.5,15312.5,"NONE","NONE",-99996,"UNDEFINED",1,-99996,-99996,-99996,-99996,-99996,-99996,-99996,0.85,0.78,0.836029,-99996,1
+"Perim3ZnHeatingCoil","Furnace","New","Gas","Perim3ZnPSZ AirSys",1,"n/a",23051.2,23051.2,"NONE","NONE",-99996,"UNDEFINED",1,-99996,-99996,-99996,-99996,-99996,-99996,-99996,0.85,0.78,0.836029,-99996,1
+"Perim4ZnHeatingCoil","Furnace","New","Gas","Perim4ZnPSZ AirSys",1,"n/a",16730.8,16730.8,"NONE","NONE",-99996,"UNDEFINED",1,-99996,-99996,-99996,-99996,-99996,-99996,-99996,0.85,0.78,0.836029,-99996,1
+
+
+
+Fans
+,,,,,Relationships,,,Capacity,,,Power,,,,Motor
+Name,Control Method,Status,Class,Cent Type,System,System Qty,Zone,Maximum,Minimum,Efficiency,Modeling Method,Brake HP,Total Static,Power Index,Nameplate HP,Position,Efficiency
+,,,,,,(#),,(cfm),(cfm),,,(hp),(inH2O),(W/cfm),( hp)
+"CoreZnSupplyFan","ConstantVolume","New","Centrifugal","AirFoil","CoreZnPSZ AirSys",1,"n/a",1124.64,-99996,0.65,"BrakeHorsePower",1.05716,3.87712,0.810247,1.5,"InAirStream",0.865
+"Perim1ZnSupplyFan","ConstantVolume","New","Centrifugal","AirFoil","Perim1ZnPSZ AirSys",1,"n/a",1088.86,-99996,0.65,"BrakeHorsePower",1.02353,3.87712,0.810247,1.5,"InAirStream",0.865
+"Perim2ZnSupplyFan","ConstantVolume","New","Centrifugal","AirFoil","Perim2ZnPSZ AirSys",1,"n/a",644.02,-99996,0.65,"BrakeHorsePower",0.605379,3.87712,0.819724,0.75,"InAirStream",0.855
+"Perim3ZnSupplyFan","ConstantVolume","New","Centrifugal","AirFoil","Perim3ZnPSZ AirSys",1,"n/a",904.913,-99996,0.65,"BrakeHorsePower",0.850618,3.87712,0.819724,1,"InAirStream",0.855
+"Perim4ZnSupplyFan","ConstantVolume","New","Centrifugal","AirFoil","Perim4ZnPSZ AirSys",1,"n/a",737.201,-99996,0.65,"BrakeHorsePower",0.692969,3.87712,0.819724,0.75,"InAirStream",0.855
+
+
+
+Outside Air Control
+,,,,Relationships,,Control
+Name,Control,Status,Design OA,Name,System Count,Econo Integration,Max OA Ratio,High DB Lockout,Low DB Lockout,High Enthalpy Lockout,OA Schedule Method,Delay,Schedule Name
+,,,(cfm),,(#),,,(F),(F),(Btu/lb),,( hrs)
+"CoreZnOAControl","NoEconomizer","New",241.635,"CoreZnPSZ AirSys",1,"UNDEFINED",-99996,-99996,-99996,-99996,"FollowHVACAvailability",0,"NONE"
+"CoreZnOAControl 2","NoEconomizer","New",183.175,"Perim1ZnPSZ AirSys",1,"UNDEFINED",-99996,-99996,-99996,-99996,"FollowHVACAvailability",0,"NONE"
+"CoreZnOAControl 3","NoEconomizer","New",108.662,"Perim2ZnPSZ AirSys",1,"UNDEFINED",-99996,-99996,-99996,-99996,"FollowHVACAvailability",0,"NONE"
+"CoreZnOAControl 4","NoEconomizer","New",183.175,"Perim3ZnPSZ AirSys",1,"UNDEFINED",-99996,-99996,-99996,-99996,"FollowHVACAvailability",0,"NONE"
+"CoreZnOAControl 5","NoEconomizer","New",108.662,"Perim4ZnPSZ AirSys",1,"UNDEFINED",-99996,-99996,-99996,-99996,"FollowHVACAvailability",0,"NONE"

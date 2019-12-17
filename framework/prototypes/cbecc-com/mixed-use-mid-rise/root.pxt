@@ -16,6 +16,11 @@ parameter "hvac_type", :default=> "SZAC"
 
 #measure parameters
 parameter "res_wood_wall", :default=>"Stucco - 7/8 in.;Plywood - 5/8 in.;Compliance Insulation R1.54;WoodFrameWall16inOCCavInsR5;Gypsum Board - 5/8 in."
+parameter "Other_floor", :default=>"Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R6.00;Compliance Insulation R2.15;Compliance Insulation R0.50;Plywood - 5/8 in.;Carpet - 3/4 in."
+parameter "NonRes_Wall", :default=>"Stucco - 7/8 in.;Concrete - 140 lb/ft3 - 8 in.;Compliance Insulation R8.07;Compliance Insulation R0.20;Compliance Insulation R1.00;WoodFraming16inOC;Gypsum Board - 1/2 in."
+parameter "woodframingandotherroof", :default=>"Roofing felt - 1/8 in.;Building Paper - 1/16 in.;Fiberboard sheathing - 1/2 in.;Compliance Insulation R0.5;Compliance Insulation R0.02;Compliance Insulation R0.01;Gypsum Board - 1/2 in.;WoodRoof16OCCavInsR38"
+parameter "res_fixed_Window", :default=>"FixedWindow;0.25;0.36;0.42"
+parameter "Nonres_Fixed_Window", :default=>"FixedWindow;0.25;0.36;0.42"
 
 parameter "window_u", :default=>0.36
 parameter "heating_eff", :default=>0.8
@@ -16125,12 +16130,10 @@ FenCons   "Nonres Fixed Window"
 
 ConsAssm   "OtherFloorU071"
    CompatibleSurfType = "InteriorFloor"
-   MatRef[1] = "Concrete - 140 lb/ft3 - 10 in."
-   MatRef[2] = "Compliance Insulation R6.00"
-   MatRef[3] = "Compliance Insulation R2.15"
-   MatRef[4] = "Compliance Insulation R0.50"
-   MatRef[5] = "Plywood - 5/8 in."
-   MatRef[6] = "Carpet - 3/4 in."
+
+   <% other_floor.split(";").each_with_index do |material, i| %>
+      MatRef[<%= i + 1 %>] = "<%= material %>"
+   <% end %>
    ..
 
 ResDHWSys   "Residential DHW System"
@@ -16191,13 +16194,11 @@ Mat   "Fiberboard sheathing - 1/2 in."
 
 ConsAssm   "WoodFramingAndOtherRoofU028"
    CompatibleSurfType = "Roof"
-   MatRef[1] = "Roofing felt - 1/8 in."
-   MatRef[2] = "Building Paper - 1/16 in."
-   MatRef[3] = "Fiberboard sheathing - 1/2 in."
-   MatRef[4] = "Compliance Insulation R0.05"
-   MatRef[5] = "Compliance Insulation R4.50"
-   MatRef[6] = "Gypsum Board - 1/2 in."
-   MatRef[7] = "WoodRoof16OCCavInsR38"
+
+<% wood_framing_roof.split(";").each_with_index do |material, i| %>
+   MatRef[<%= i + 1 %>] = "<%= material %>"
+<% end %>
+
    ..
 
 Mat   "Roofing felt - 1/8 in."
@@ -16227,14 +16228,10 @@ Mat   "Stone - 1 in."
 
 ConsAssm   "NonResConcreteExteriorWall"
    CompatibleSurfType = "ExteriorWall"
-   MatRef[1] = "Stucco - 7/8 in."
-   MatRef[2] = "Concrete - 140 lb/ft3 - 8 in."
-   MatRef[3] = "Compliance Insulation R13.00"
-   MatRef[4] = "Compliance Insulation R0.10"
-   MatRef[5] = "Compliance Insulation R0.10"
-   MatRef[6] = "WoodFraming16inOC"
-   MatRef[7] = "Gypsum Board - 1/2 in."
-   MatRef[8] = "- none -"
+
+<% nonres_concrete_wall.split(";").each_with_index do |material, i| %>
+   MatRef[<%= i + 1 %>] = "<%= material %>"
+<% end %>
    ..
 
 Mat   "WoodFraming16inOC"

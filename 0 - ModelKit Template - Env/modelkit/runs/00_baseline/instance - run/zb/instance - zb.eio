@@ -1,0 +1,367 @@
+Program Version,EnergyPlus, Version 9.0.1-bb7ca4f0da, YMD=2019.11.07 12:07
+! <Version>, Version ID
+ Version, 9.0
+! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
+ Timesteps per Hour,  4, 15
+! <System Convergence Limits>, Minimum System TimeStep {minutes}, Max HVAC Iterations, Minimum Plant Iterations, Maximum Plant Iterations
+ System Convergence Limits, 1, 20, 2, 8
+! <Simulation Control>, Do Zone Sizing, Do System Sizing, Do Plant Sizing, Do Design Days, Do Weather Simulation, Do HVAC Sizing Simulation
+ Simulation Control, Yes, Yes, Yes, Yes, No, No
+! <Output Reporting Tolerances>, Tolerance for Time Heating Setpoint Not Met, Tolerance for Zone Cooling Setpoint Not Met Time
+ Output Reporting Tolerances, 0.556, 0.556, 
+! <Site:GroundTemperature:BuildingSurface>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:BuildingSurface,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00
+! <Site:GroundTemperature:FCfactorMethod>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:FCfactorMethod,   8.79,  10.12,  12.72,  15.17,  19.83,  22.28,  22.95,  21.71,  18.84,  15.27,  11.75,   9.42
+! <Site:GroundTemperature:Shallow>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Shallow,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00
+! <Site:GroundTemperature:Deep>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Deep,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00
+! <Site:GroundReflectance>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:SnowModifier>, Normal, Daylighting {dimensionless}
+ Site:GroundReflectance:SnowModifier,   1.000,   1.000
+! <Site:GroundReflectance:Snow>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:Snow:Daylighting>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow:Daylighting,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Environment:Weather Station>,Wind Sensor Height Above Ground {m},Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Sensor Height Above Ground {m},Wind Speed Modifier Coefficient-Internal,Temperature Modifier Coefficient-Internal
+Environment:Weather Station,10.000,0.140,270.000,1.500,1.586,9.750E-003
+! <Site:Location>, Location Name, Latitude {N+/S- Deg}, Longitude {E+/W- Deg},  Time Zone Number {GMT+/-}, Elevation {m},  Standard Pressure at Elevation {Pa}, Standard RhoAir at Elevation
+Site:Location,SACRAMENTO-EXECUTIVE-AP - USA Custom-724830 WMO#=724830,38.50,-121.50,-8.00,5.00,101265,1.2036
+! <Site Water Mains Temperature Information>,Calculation Method{},Water Mains Temperature Schedule Name{},Annual Average Outdoor Air Temperature{C},Maximum Difference In Monthly Average Outdoor Air Temperatures{deltaC},Fixed Default Water Mains Temperature{C}
+Site Water Mains Temperature Information,Schedule,WATERMAINCZ12,0.00,0.00,NA
+! <Building Information>, Building Name,North Axis {deg},Terrain,  Loads Convergence Tolerance Value,Temperature Convergence Tolerance Value,  Solar Distribution,Maximum Number of Warmup Days,Minimum Number of Warmup Days
+ Building Information,Small Office,0.000,Suburbs,4.00000E-002,0.40000,MinimalShadowing,50,6
+! <Inside Convection Algorithm>, Algorithm {Simple | TARP | CeilingDiffuser | AdaptiveConvectionAlgorithm}
+Inside Convection Algorithm,TARP
+! <Outside Convection Algorithm>, Algorithm {SimpleCombined | TARP | MoWitt | DOE-2 | AdaptiveConvectionAlgorithm}
+Outside Convection Algorithm,DOE-2
+! <Sky Radiance Distribution>, Value {Anisotropic}
+Sky Radiance Distribution,Anisotropic
+! <Zone Air Solution Algorithm>, Value {ThirdOrderBackwardDifference | AnalyticalSolution | EulerMethod}
+ Zone Air Solution Algorithm, ThirdOrderBackwardDifference
+! <Zone Air Carbon Dioxide Balance Simulation>, Simulation {Yes/No}, Carbon Dioxide Concentration
+ Zone Air Carbon Dioxide Balance Simulation, No,N/A
+! <Zone Air Generic Contaminant Balance Simulation>, Simulation {Yes/No}, Generic Contaminant Concentration
+ Zone Air Generic Contaminant Balance Simulation, No,N/A
+! <Zone Air Mass Flow Balance Simulation>, Enforce Mass Balance, Adjust Zone Mixing, Adjust Zone Infiltration {AddInfiltration | AdjustInfiltration | None}, Infiltration Zones {MixingSourceZonesOnly | AllZones}
+ Zone Air Mass Flow Balance Simulation, No,N/A,N/A,N/A
+! <HVACSystemRootFindingAlgorithm>, Value {RegulaFalsi | Bisection | BisectionThenRegulaFalsi | RegulaFalsiThenBisection}
+ HVACSystemRootFindingAlgorithm, RegulaFalsi
+! <Environment:Site Atmospheric Variation>,Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Gradient Coefficient {K/m}
+Environment:Site Atmospheric Variation,0.220,370.000,6.500000E-003
+! <Surface Geometry>,Starting Corner,Vertex Input Direction,Coordinate System,Daylight Reference Point Coordinate System,Rectangular (Simple) Surface Coordinate System
+ Surface Geometry,UpperLeftCorner,Counterclockwise,RelativeCoordinateSystem,RelativeCoordinateSystem,RelativeToZoneOrigin
+! <Surface Heat Transfer Algorithm>, Value {CTF - ConductionTransferFunction | EMPD - MoisturePenetrationDepthConductionTransferFunction | CondFD - ConductionFiniteDifference | HAMT - CombinedHeatAndMoistureFiniteElement} - Description,Inside Surface Max Temperature Limit{C}, Surface Convection Coefficient Lower Limit {W/m2-K}, Surface Convection Coefficient Upper Limit {W/m2-K}
+Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.0
+! <Shading Summary>, Number of Fixed Detached Shades, Number of Building Detached Shades, Number of Attached Shades
+ Shading Summary,0,0,0
+! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
+ Zone Summary,6,64,21
+! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
+ Zone Information, ATTIC THERMAL ZONE,0.0,0.00,0.00,0.00,2.72,-0.80,2.60,1,1,1,-14.05,15.06,-13.33,13.33,0.00,7.50,5.06,1731.20,TARP,DOE-2,567.98,0.00,0.00,0.00,13,0,0,Yes
+ Zone Information, CORE_ZN THERMAL ZONE,0.0,0.00,0.00,0.00,2.66,-2.56,0.53,1,1,1,-17.10,16.71,-12.23,10.59,0.00,3.05,3.05,456.16,TARP,DOE-2,149.66,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, PERIMETER_ZN_1 THERMAL ZONE,0.0,0.00,0.00,0.00,4.99,-1.93,0.68,1,1,1,-17.10,27.71,-10.65,7.53,0.00,3.05,3.05,345.80,TARP,DOE-2,113.45,84.46,63.83,20.62,6,7,0,Yes
+ Zone Information, PERIMETER_ZN_2 THERMAL ZONE,0.0,0.00,0.00,0.00,1.93,-5.69E-002,0.73,1,1,1,-7.05,10.05,-8.18,18.47,0.00,3.05,3.05,205.13,TARP,DOE-2,67.30,56.30,45.15,11.15,6,4,0,Yes
+ Zone Information, PERIMETER_ZN_3 THERMAL ZONE,0.0,0.00,0.00,0.00,-2.93E-002,-0.92,0.68,1,1,1,-27.71,14.55,-10.15,9.22,0.00,3.05,3.05,345.80,TARP,DOE-2,113.45,84.46,67.73,16.72,6,6,0,Yes
+ Zone Information, PERIMETER_ZN_4 THERMAL ZONE,0.0,0.00,0.00,0.00,2.38,-3.21,0.73,1,1,1,-5.00,11.60,-18.47,5.80,0.00,3.05,3.05,205.13,TARP,DOE-2,67.30,56.30,45.15,11.15,6,4,0,Yes
+! <Zone Internal Gains Nominal>,Zone Name, Floor Area {m2},# Occupants,Area per Occupant {m2/person},Occupant per Area {person/m2},Interior Lighting {W/m2},Electric Load {W/m2},Gas Load {W/m2},Other Load {W/m2},Hot Water Eq {W/m2},Steam Equipment {W/m2},Sum Loads per Area {W/m2},Outdoor Controlled Baseboard Heat
+ Zone Internal Gains Nominal, ATTIC THERMAL ZONE,567.98,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, CORE_ZN THERMAL ZONE,149.66,8.1,18.581,5.382E-002,6.458,16.146,0.000,0.000,0.000,0.000,22.604,No
+ Zone Internal Gains Nominal, PERIMETER_ZN_1 THERMAL ZONE,113.45,6.1,18.581,5.382E-002,6.458,16.146,0.000,0.000,0.000,0.000,22.604,No
+ Zone Internal Gains Nominal, PERIMETER_ZN_2 THERMAL ZONE,67.30,3.6,18.581,5.382E-002,6.458,16.146,0.000,0.000,0.000,0.000,22.604,No
+ Zone Internal Gains Nominal, PERIMETER_ZN_3 THERMAL ZONE,113.45,6.1,18.581,5.382E-002,6.458,16.146,0.000,0.000,0.000,0.000,22.604,No
+ Zone Internal Gains Nominal, PERIMETER_ZN_4 THERMAL ZONE,67.30,3.6,18.581,5.382E-002,6.458,16.146,0.000,0.000,0.000,0.000,22.604,No
+! <People Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Number of People {},People/Floor Area {person/m2},Floor Area per person {m2/person},Fraction Radiant,Fraction Convected,Sensible Fraction Calculation,Activity level,ASHRAE 55 Warnings,Carbon Dioxide Generation Rate,Nominal Minimum Number of People,Nominal Maximum Number of People
+ People Internal Gains Nominal, CORE_ZN PEOPLE,OFFICEOCCUPANCY,CORE_ZN THERMAL ZONE,149.66,8.1,8.1,5.382E-002,18.581,0.300,0.700,0.556,CORE_ZN PEOPLE ACTIVITY LEVEL,No,3.8200E-008,0,8
+ People Internal Gains Nominal, PERIMETER_ZN_1 PEOPLE,OFFICEOCCUPANCY,PERIMETER_ZN_1 THERMAL ZONE,113.45,6.1,6.1,5.382E-002,18.581,0.300,0.700,0.556,PERIMETER_ZN_1 PEOPLE ACTIVITY LEVEL,No,3.8200E-008,0,6
+ People Internal Gains Nominal, PERIMETER_ZN_2 PEOPLE,OFFICEOCCUPANCY,PERIMETER_ZN_2 THERMAL ZONE,67.30,3.6,3.6,5.382E-002,18.581,0.300,0.700,0.556,PERIMETER_ZN_2 PEOPLE ACTIVITY LEVEL,No,3.8200E-008,0,4
+ People Internal Gains Nominal, PERIMETER_ZN_3 PEOPLE,OFFICEOCCUPANCY,PERIMETER_ZN_3 THERMAL ZONE,113.45,6.1,6.1,5.382E-002,18.581,0.300,0.700,0.556,PERIMETER_ZN_3 PEOPLE ACTIVITY LEVEL,No,3.8200E-008,0,6
+ People Internal Gains Nominal, PERIMETER_ZN_4 PEOPLE,OFFICEOCCUPANCY,PERIMETER_ZN_4 THERMAL ZONE,67.30,3.6,3.6,5.382E-002,18.581,0.300,0.700,0.556,PERIMETER_ZN_4 PEOPLE ACTIVITY LEVEL,No,3.8200E-008,0,4
+! <Lights Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Lighting Level {W},Lights/Floor Area {W/m2},Lights per person {W/person},Fraction Return Air,Fraction Radiant,Fraction Short Wave,Fraction Convected,Fraction Replaceable,End-Use Category,Nominal Minimum Lighting Level {W},Nominal Maximum Lighting Level {W}
+ Lights Internal Gains Nominal, CORE_ZN REGULATED LIGHTS,OFFICELIGHTS,CORE_ZN THERMAL ZONE,149.66,8.1,966.548,6.458,120.000,0.000,0.580,0.000,0.420,1.000,ComplianceLtg,0.000,966.548
+ Lights Internal Gains Nominal, PERIMETER_ZN_1 REGULATED LIGHTS,OFFICELIGHTS,PERIMETER_ZN_1 THERMAL ZONE,113.45,6.1,732.692,6.458,120.000,0.000,0.580,0.000,0.420,1.000,ComplianceLtg,0.000,732.692
+ Lights Internal Gains Nominal, PERIMETER_ZN_2 REGULATED LIGHTS,OFFICELIGHTS,PERIMETER_ZN_2 THERMAL ZONE,67.30,3.6,434.653,6.458,120.000,0.000,0.580,0.000,0.420,1.000,ComplianceLtg,0.000,434.653
+ Lights Internal Gains Nominal, PERIMETER_ZN_3 REGULATED LIGHTS,OFFICELIGHTS,PERIMETER_ZN_3 THERMAL ZONE,113.45,6.1,732.693,6.458,120.000,0.000,0.580,0.000,0.420,1.000,ComplianceLtg,0.000,732.693
+ Lights Internal Gains Nominal, PERIMETER_ZN_4 REGULATED LIGHTS,OFFICELIGHTS,PERIMETER_ZN_4 THERMAL ZONE,67.30,3.6,434.660,6.458,120.000,0.000,0.580,0.000,0.420,1.000,ComplianceLtg,0.000,434.660
+! <ElectricEquipment Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Latent,Fraction Radiant,Fraction Lost,Fraction Convected,End-Use SubCategory,Nominal Minimum Equipment Level {W},Nominal Maximum Equipment Level {W}
+ ElectricEquipment Internal Gains Nominal, CORE_ZN RECEPTICLE LOADS,OFFICERECEPTACLE,CORE_ZN THERMAL ZONE,149.66,8.1,2416.369,16.146,300.000,0.000,0.200,0.000,0.800,Receptacle,0.000,2416.369
+ ElectricEquipment Internal Gains Nominal, PERIMETER_ZN_1 RECEPTICLE LOADS,OFFICERECEPTACLE,PERIMETER_ZN_1 THERMAL ZONE,113.45,6.1,1831.730,16.146,300.000,0.000,0.200,0.000,0.800,Receptacle,0.000,1831.730
+ ElectricEquipment Internal Gains Nominal, PERIMETER_ZN_2 RECEPTICLE LOADS,OFFICERECEPTACLE,PERIMETER_ZN_2 THERMAL ZONE,67.30,3.6,1086.632,16.146,300.000,0.000,0.200,0.000,0.800,Receptacle,0.000,1086.632
+ ElectricEquipment Internal Gains Nominal, PERIMETER_ZN_3 RECEPTICLE LOADS,OFFICERECEPTACLE,PERIMETER_ZN_3 THERMAL ZONE,113.45,6.1,1831.732,16.146,300.000,0.000,0.200,0.000,0.800,Receptacle,0.000,1831.732
+ ElectricEquipment Internal Gains Nominal, PERIMETER_ZN_4 RECEPTICLE LOADS,OFFICERECEPTACLE,PERIMETER_ZN_4 THERMAL ZONE,67.30,3.6,1086.651,16.146,300.000,0.000,0.200,0.000,0.800,Receptacle,0.000,1086.651
+! <Shadowing/Sun Position Calculations Annual Simulations>, Calculation Method, Value {days}, Allowable Number Figures in Shadow Overlap {}, Polygon Clipping Algorithm, Sky Diffuse Modeling Algorithm, External Shading Calculation Method, Output External Shading Calculation Results, Disable Self-Shading Within Shading Zone Groups, Disable Self-Shading From Shading Zone Groups to Other Zones
+Shadowing/Sun Position Calculations Annual Simulations,AverageOverDaysInFrequency,20,15000,SutherlandHodgman,SimpleSkyDiffuseModeling,InternalCalculation,No,No,No
+! <Water Heater Information>,Type,Name,Volume {m3},Maximum Capacity {W},Standard Rated Recovery Efficiency, Standard Rated Energy Factor
+! <ZoneInfiltration Airflow Stats Nominal>,Name,Schedule Name,Zone Name, Zone Floor Area {m2}, # Zone Occupants,Design Volume Flow Rate {m3/s},Volume Flow Rate/Floor Area {m3/s/m2},Volume Flow Rate/Exterior Surface Area {m3/s/m2},ACH - Air Changes per Hour,Equation A - Constant Term Coefficient {},Equation B - Temperature Term Coefficient {1/C},Equation C - Velocity Term Coefficient {s/m}, Equation D - Velocity Squared Term Coefficient {s2/m2}
+ ZoneInfiltration Airflow Stats Nominal, ATTIC SPACE INFILTRATION DESIGN FLOW RATE 1,ON,ATTIC THERMAL ZONE,567.98,0.0,0.000,0.000,0.000,0.000,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, CORE_ZN SPACE INFILTRATION DESIGN FLOW RATE 1,OFFICEINFILTRATION,CORE_ZN THERMAL ZONE,149.66,8.1,0.000,0.000,N/A,0.000,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, PERIMETER_ZN_1 SPACE INFILTRATION DESIGN FLOW RATE 1,OFFICEINFILTRATION,PERIMETER_ZN_1 THERMAL ZONE,113.45,6.1,1.922E-002,1.694E-004,2.276E-004,0.200,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, PERIMETER_ZN_2 SPACE INFILTRATION DESIGN FLOW RATE 1,OFFICEINFILTRATION,PERIMETER_ZN_2 THERMAL ZONE,67.30,3.6,1.281E-002,1.904E-004,2.276E-004,0.225,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, PERIMETER_ZN_3 SPACE INFILTRATION DESIGN FLOW RATE 1,OFFICEINFILTRATION,PERIMETER_ZN_3 THERMAL ZONE,113.45,6.1,1.922E-002,1.694E-004,2.276E-004,0.200,0.000,0.000,0.224,0.000
+ ZoneInfiltration Airflow Stats Nominal, PERIMETER_ZN_4 SPACE INFILTRATION DESIGN FLOW RATE 1,OFFICEINFILTRATION,PERIMETER_ZN_4 THERMAL ZONE,67.30,3.6,1.281E-002,1.904E-004,2.276E-004,0.225,0.000,0.000,0.224,0.000
+! <AirFlow Model>, Simple
+ AirFlow Model, Simple
+! <RoomAir Model>, Zone Name, Mixing/Mundt/UCSDDV/UCSDCV/UCSDUFI/UCSDUFE/User Defined
+RoomAir Model,ATTIC THERMAL ZONE,Mixing/Well-Stirred
+RoomAir Model,CORE_ZN THERMAL ZONE,Mixing/Well-Stirred
+RoomAir Model,PERIMETER_ZN_1 THERMAL ZONE,Mixing/Well-Stirred
+RoomAir Model,PERIMETER_ZN_2 THERMAL ZONE,Mixing/Well-Stirred
+RoomAir Model,PERIMETER_ZN_3 THERMAL ZONE,Mixing/Well-Stirred
+RoomAir Model,PERIMETER_ZN_4 THERMAL ZONE,Mixing/Well-Stirred
+! <AirflowNetwork Model:Control>, No Multizone or Distribution/Multizone with Distribution/Multizone without Distribution/Multizone with Distribution only during Fan Operation
+AirflowNetwork Model:Control,NoMultizoneOrDistribution
+! <Zone Volume Capacitance Multiplier>, Sensible Heat Capacity Multiplier, Moisture Capacity Multiplier, Carbon Dioxide Capacity Multiplier, Generic Contaminant Capacity Multiplier
+Zone Volume Capacitance Multiplier,   1.000 ,   1.000,   1.000,   1.000
+! <Load Timesteps in Zone Design Calculation Averaging Window>, Value
+ Load Timesteps in Zone Design Calculation Averaging Window,    4
+! <Heating Sizing Factor Information>, Sizing Factor ID, Value
+ Heating Sizing Factor Information, Global,   1.0000    
+! <Cooling Sizing Factor Information>, Sizing Factor ID, Value
+ Cooling Sizing Factor Information, Global,   1.0000    
+! <Zone Sizing Information>, Zone Name, Load Type, Calc Des Load {W}, User Des Load {W}, Calc Des Air Flow Rate {m3/s}, User Des Air Flow Rate {m3/s}, Design Day Name, Date/Time of Peak, Temperature at Peak {C}, Humidity Ratio at Peak {kgWater/kgDryAir}, Floor Area {m2}, # Occupants, Calc Outdoor Air Flow Rate {m3/s}, Calc DOAS Heat Addition Rate {W}
+ Zone Sizing Information, CORE_ZN THERMAL ZONE, Cooling, 6300.41547, 6300.41547, 0.46159, 0.46159, SACRAMENTO-EXECUTIVE-ARP JUL CLG 0.4% CONDNS DB=>MCWB, 7/21 06:00:00, 24.04600, 8.93876E-003, 149.65869, 8.05456, 0.11404, 0.00000
+ Zone Sizing Information, CORE_ZN THERMAL ZONE, Heating, 2753.72481, 2753.72481, 0.16155, 0.16155, SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB, 1/21 06:00:00, -0.20000, 3.71401E-003, 149.65869, 8.05456, 0.11404, 0.00000
+ Zone Sizing Information, PERIMETER_ZN_1 THERMAL ZONE, Cooling, 6099.97857, 6099.97857, 0.44691, 0.44691, SACRAMENTO-EXECUTIVE-ARP OCT CLG 0.4% CONDNS DB=>MCWB, 10/21 13:45:00, 32.53750, 7.25632E-003, 113.44883, 6.10577, 8.64480E-002, 0.00000
+ Zone Sizing Information, PERIMETER_ZN_1 THERMAL ZONE, Heating, 3925.86797, 3809.01466, 0.23031, 0.22345, SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB, 1/21 06:00:00, -0.20000, 3.71401E-003, 113.44883, 6.10577, 8.64480E-002, 0.00000
+ Zone Sizing Information, PERIMETER_ZN_2 THERMAL ZONE, Cooling, 3607.89912, 3607.89912, 0.26433, 0.26433, SACRAMENTO-EXECUTIVE-ARP JUL CLG 0.4% CONDNS DB=>MCWB, 7/21 09:45:00, 33.69075, 8.93875E-003, 67.30093, 3.62211, 5.12833E-002, 0.00000
+ Zone Sizing Information, PERIMETER_ZN_2 THERMAL ZONE, Heating, 2469.04504, 2252.88343, 0.14485, 0.13216, SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB, 1/21 06:00:00, -0.20000, 3.71401E-003, 67.30093, 3.62211, 5.12833E-002, 0.00000
+ Zone Sizing Information, PERIMETER_ZN_3 THERMAL ZONE, Cooling, 5069.46578, 5069.46578, 0.37141, 0.37141, SACRAMENTO-EXECUTIVE-ARP JUL CLG 0.4% CONDNS DB=>MCWB, 7/21 15:30:00, 40.48100, 8.93875E-003, 113.44900, 6.10577, 8.64481E-002, 0.00000
+ Zone Sizing Information, PERIMETER_ZN_3 THERMAL ZONE, Heating, 3765.88014, 3165.53070, 0.22092, 0.18570, SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB, 1/21 06:00:00, -0.20000, 3.71401E-003, 113.44900, 6.10577, 8.64481E-002, 0.00000
+ Zone Sizing Information, PERIMETER_ZN_4 THERMAL ZONE, Cooling, 4129.91438, 4129.91438, 0.30257, 0.30257, SACRAMENTO-EXECUTIVE-ARP JUL CLG 0.4% CONDNS DB=>MCWB, 7/21 17:15:00, 38.14550, 8.93875E-003, 67.30213, 3.62217, 5.12842E-002, 0.00000
+ Zone Sizing Information, PERIMETER_ZN_4 THERMAL ZONE, Heating, 2462.52419, 2462.52419, 0.14446, 0.14446, SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB, 1/21 06:00:00, -0.20000, 3.71401E-003, 67.30213, 3.62217, 5.12842E-002, 0.00000
+! <System Sizing Information>, System Name, Load Type, Peak Load Kind, User Design Capacity, Calc Des Air Flow Rate [m3/s], User Des Air Flow Rate [m3/s], Design Day Name, Date/Time of Peak
+ System Sizing Information, BASEAIRSYS7, Cooling, Sensible, 6286.90, 0.46159, 0.46159, SACRAMENTO-EXECUTIVE-ARP JUL CLG 0.4% CONDNS DB=>MCWB, 7/21 05:00:00
+ System Sizing Information, BASEAIRSYS7, Heating, Sensible, 5673.61, 0.16155, 0.16155, SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB, 1/21 06:00:00
+ System Sizing Information, BASEAIRSYS7-2, Cooling, Sensible, 6909.14, 0.44691, 0.44691, SACRAMENTO-EXECUTIVE-ARP SEP CLG 0.4% CONDNS DB=>MCWB, 9/21 05:00:00
+ System Sizing Information, BASEAIRSYS7-2, Heating, Sensible, 6063.57, 0.22345, 0.22345, SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB, 1/21 06:00:00
+ System Sizing Information, BASEAIRSYS7-3, Cooling, Sensible, 4159.69, 0.26433, 0.26433, SACRAMENTO-EXECUTIVE-ARP JUL CLG 0.4% CONDNS DB=>MCWB, 7/21 05:00:00
+ System Sizing Information, BASEAIRSYS7-3, Heating, Sensible, 3590.26, 0.13216, 0.13216, SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB, 1/21 06:00:00
+ System Sizing Information, BASEAIRSYS7-4, Cooling, Sensible, 6725.22, 0.37141, 0.37141, SACRAMENTO-EXECUTIVE-ARP JUL CLG 0.4% CONDNS DB=>MCWB, 7/21 05:00:00
+ System Sizing Information, BASEAIRSYS7-4, Heating, Sensible, 5404.73, 0.18570, 0.18570, SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB, 1/21 06:00:00
+ System Sizing Information, BASEAIRSYS7-5, Cooling, Sensible, 4949.81, 0.30257, 0.30257, SACRAMENTO-EXECUTIVE-ARP JUL CLG 0.4% CONDNS DB=>MCWB, 7/21 05:00:00
+ System Sizing Information, BASEAIRSYS7-5, Heating, Sensible, 3804.11, 0.14446, 0.14446, SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB, 1/21 06:00:00
+! <Component Sizing Information>, Component Type, Component Name, Input Field Description, Value
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT, Design Size Maximum Air Flow Rate [m3/s], 0.46159
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT, Design Size Fixed Minimum Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT, User-Specified Fixed Minimum Air Flow Rate [m3/s], 0.11404
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT, Design Size Minimum Air Flow Fraction [m3/s], 0.24706
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT-2, Design Size Maximum Air Flow Rate [m3/s], 0.44691
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT-2, Design Size Fixed Minimum Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT-2, User-Specified Fixed Minimum Air Flow Rate [m3/s], 8.64490E-002
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT-2, Design Size Minimum Air Flow Fraction [m3/s], 0.19344
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT-3, Design Size Maximum Air Flow Rate [m3/s], 0.26433
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT-3, Design Size Fixed Minimum Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT-3, User-Specified Fixed Minimum Air Flow Rate [m3/s], 5.12828E-002
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT-3, Design Size Minimum Air Flow Fraction [m3/s], 0.19401
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT-4, Design Size Maximum Air Flow Rate [m3/s], 0.37141
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT-4, Design Size Fixed Minimum Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT-4, User-Specified Fixed Minimum Air Flow Rate [m3/s], 8.64490E-002
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT-4, Design Size Minimum Air Flow Fraction [m3/s], 0.23276
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT-5, Design Size Maximum Air Flow Rate [m3/s], 0.30257
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT-5, Design Size Fixed Minimum Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT-5, User-Specified Fixed Minimum Air Flow Rate [m3/s], 5.12828E-002
+ Component Sizing Information, AirTerminal:SingleDuct:VAV:NoReheat, BASEVAVNOREHEATTRMLUNIT-5, Design Size Minimum Air Flow Fraction [m3/s], 0.16949
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.11404
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.11404
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.46159
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7, Adjusted Heating Design Air Flow Rate [m3/s], 0.16155
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7, Adjusted Cooling Design Air Flow Rate [m3/s], 0.46159
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7, Adjusted Main Design Air Flow Rate [m3/s], 0.46159
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7, User Heating Air Flow Ratio [], 0.50000
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7, Calculated Heating Air Flow Ratio [], 0.34997
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-2, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 8.64490E-002
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-2, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 8.64490E-002
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-2, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.44691
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-2, Adjusted Heating Design Air Flow Rate [m3/s], 0.22345
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-2, Adjusted Cooling Design Air Flow Rate [m3/s], 0.44691
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-2, Adjusted Main Design Air Flow Rate [m3/s], 0.44691
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-2, User Heating Air Flow Ratio [], 0.50000
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-2, Calculated Heating Air Flow Ratio [], 0.50000
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-3, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 5.12828E-002
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-3, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 5.12828E-002
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-3, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.26433
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-3, Adjusted Heating Design Air Flow Rate [m3/s], 0.13216
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-3, Adjusted Cooling Design Air Flow Rate [m3/s], 0.26433
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-3, Adjusted Main Design Air Flow Rate [m3/s], 0.26433
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-3, User Heating Air Flow Ratio [], 0.50000
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-3, Calculated Heating Air Flow Ratio [], 0.50000
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-4, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 8.64490E-002
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-4, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 8.64490E-002
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-4, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.37141
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-4, Adjusted Heating Design Air Flow Rate [m3/s], 0.18570
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-4, Adjusted Cooling Design Air Flow Rate [m3/s], 0.37141
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-4, Adjusted Main Design Air Flow Rate [m3/s], 0.37141
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-4, User Heating Air Flow Ratio [], 0.50000
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-4, Calculated Heating Air Flow Ratio [], 0.50000
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-5, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 5.12828E-002
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-5, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 5.12828E-002
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-5, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.30257
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-5, Adjusted Heating Design Air Flow Rate [m3/s], 0.14446
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-5, Adjusted Cooling Design Air Flow Rate [m3/s], 0.30257
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-5, Adjusted Main Design Air Flow Rate [m3/s], 0.30257
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-5, User Heating Air Flow Ratio [], 0.50000
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-5, Calculated Heating Air Flow Ratio [], 0.47745
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7, Design Supply Air Flow Rate [m3/s], 0.46159
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-2, Design Supply Air Flow Rate [m3/s], 0.44691
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-3, Design Supply Air Flow Rate [m3/s], 0.26433
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-4, Design Supply Air Flow Rate [m3/s], 0.37141
+ Component Sizing Information, AirLoopHVAC, BASEAIRSYS7-5, Design Supply Air Flow Rate [m3/s], 0.30257
+!<Controller:MechanicalVentilation>,Name,Availability Schedule Name,Demand Controlled Ventilation {Yes/No},System Outdoor Air Method,Zone Maximum Outdoor Air Fraction,Number of Zones,Zone Name,DSOA Name,DSZAD Name
+ Controller:MechanicalVentilation,BASESYS7 OACTRL MECH VENT CONTROLLER,BASESYS7 OACTRL SCHEDULE,No,ZoneSum,1.00,1,CORE_ZN THERMAL ZONE,CORE_ZN THERMAL ZONE DESIGN SPECIFICATION OUTDOOR AIR,CORE_ZN THERMAL ZONE DESIGN SPEC ZONE AIR DIST
+ Controller:MechanicalVentilation,BASESYS7 OACTRL-2 MECH VENT CONTROLLER,BASESYS7 OACTRL-2 SCHEDULE,No,ZoneSum,1.00,1,PERIMETER_ZN_1 THERMAL ZONE,PERIMETER_ZN_1 THERMAL ZONE DESIGN SPECIFICATION OUTDOOR AIR,PERIMETER_ZN_1 THERMAL ZONE DESIGN SPEC ZONE AIR DIST
+ Controller:MechanicalVentilation,BASESYS7 OACTRL-3 MECH VENT CONTROLLER,BASESYS7 OACTRL-3 SCHEDULE,No,ZoneSum,1.00,1,PERIMETER_ZN_2 THERMAL ZONE,PERIMETER_ZN_2 THERMAL ZONE DESIGN SPECIFICATION OUTDOOR AIR,PERIMETER_ZN_2 THERMAL ZONE DESIGN SPEC ZONE AIR DIST
+ Controller:MechanicalVentilation,BASESYS7 OACTRL-4 MECH VENT CONTROLLER,BASESYS7 OACTRL-4 SCHEDULE,No,ZoneSum,1.00,1,PERIMETER_ZN_3 THERMAL ZONE,PERIMETER_ZN_3 THERMAL ZONE DESIGN SPECIFICATION OUTDOOR AIR,PERIMETER_ZN_3 THERMAL ZONE DESIGN SPEC ZONE AIR DIST
+ Controller:MechanicalVentilation,BASESYS7 OACTRL-5 MECH VENT CONTROLLER,BASESYS7 OACTRL-5 SCHEDULE,No,ZoneSum,1.00,1,PERIMETER_ZN_4 THERMAL ZONE,PERIMETER_ZN_4 THERMAL ZONE DESIGN SPECIFICATION OUTDOOR AIR,PERIMETER_ZN_4 THERMAL ZONE DESIGN SPEC ZONE AIR DIST
+ Component Sizing Information, Controller:OutdoorAir, BASESYS7 OACTRL, Maximum Outdoor Air Flow Rate [m3/s], 0.46159
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG, Design Size Rated Air Flow Rate [m3/s], 0.46159
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG, Design Size Gross Rated Total Cooling Capacity [W], 7640.98685
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG, Design Size Gross Rated Sensible Heat Ratio, 0.80066
+! <DX Cooling Coil Standard Rating Information>, Component Type, Component Name, Standard Rating (Net) Cooling Capacity {W}, Standard Rated Net COP {W/W}, EER {Btu/W-h}, SEER {Btu/W-h}, IEER {Btu/W-h}
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG, 7271.9, 2.51, 8.55, 9.06, 8.70
+ Component Sizing Information, Coil:Heating:Fuel, BASESYS7 COILHTG, Design Size Nominal Capacity [W], 6866.99101
+ Component Sizing Information, Fan:VariableVolume, BASESYS7 FAN, Design Size Maximum Flow Rate [m3/s], 0.46159
+ Component Sizing Information, Controller:OutdoorAir, BASESYS7 OACTRL-2, Maximum Outdoor Air Flow Rate [m3/s], 0.44691
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG-2, Design Size Rated Air Flow Rate [m3/s], 0.44691
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG-2, Design Size Gross Rated Total Cooling Capacity [W], 7397.90197
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG-2, Design Size Gross Rated Sensible Heat Ratio, 0.80066
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG-2, 7040.5, 2.51, 8.55, 9.06, 8.70
+ Component Sizing Information, Coil:Heating:Fuel, BASESYS7 COILHTG-2, Design Size Nominal Capacity [W], 6063.57065
+ Component Sizing Information, Fan:VariableVolume, BASESYS7 FAN-2, Design Size Maximum Flow Rate [m3/s], 0.44691
+ Component Sizing Information, Controller:OutdoorAir, BASESYS7 OACTRL-3, Maximum Outdoor Air Flow Rate [m3/s], 0.26433
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG-3, Design Size Rated Air Flow Rate [m3/s], 0.26433
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG-3, Design Size Gross Rated Total Cooling Capacity [W], 4553.30338
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG-3, Design Size Gross Rated Sensible Heat Ratio, 0.80030
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG-3, 4341.6, 2.52, 8.61, 9.12, 8.79
+ Component Sizing Information, Coil:Heating:Fuel, BASESYS7 COILHTG-3, Design Size Nominal Capacity [W], 3590.26235
+ Component Sizing Information, Fan:VariableVolume, BASESYS7 FAN-3, Design Size Maximum Flow Rate [m3/s], 0.26433
+ Component Sizing Information, Controller:OutdoorAir, BASESYS7 OACTRL-4, Maximum Outdoor Air Flow Rate [m3/s], 0.37141
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG-4, Design Size Rated Air Flow Rate [m3/s], 0.37141
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG-4, Design Size Gross Rated Total Cooling Capacity [W], 7632.46003
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG-4, Design Size Gross Rated Sensible Heat Ratio, 0.76215
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG-4, 7333.1, 2.59, 8.85, 9.38, 9.16
+ Component Sizing Information, Coil:Heating:Fuel, BASESYS7 COILHTG-4, Design Size Nominal Capacity [W], 5404.72628
+ Component Sizing Information, Fan:VariableVolume, BASESYS7 FAN-4, Design Size Maximum Flow Rate [m3/s], 0.37141
+ Component Sizing Information, Controller:OutdoorAir, BASESYS7 OACTRL-5, Maximum Outdoor Air Flow Rate [m3/s], 0.30257
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG-5, Design Size Rated Air Flow Rate [m3/s], 0.30257
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG-5, Design Size Gross Rated Total Cooling Capacity [W], 5568.45636
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG-5, Design Size Gross Rated Sensible Heat Ratio, 0.80069
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, BASESYS7 COILCLG-5, 5325.6, 2.55, 8.70, 9.22, 8.94
+ Component Sizing Information, Coil:Heating:Fuel, BASESYS7 COILHTG-5, Design Size Nominal Capacity [W], 3922.81377
+ Component Sizing Information, Fan:VariableVolume, BASESYS7 FAN-5, Design Size Maximum Flow Rate [m3/s], 0.30257
+Water Heater Information,WaterHeater:Mixed,NONRESBASEELECWATERHEATER,0.1135,8743.9,1.004,0.9654
+ Component Sizing Information, PlantLoop, NONRESBASEELECSHWSYSTEM, Maximum Loop Flow Rate [m3/s], 5.20689E-006
+ Component Sizing Information, PlantLoop, NONRESBASEELECSHWSYSTEM, Plant Loop Volume [m3], 6.24826E-004
+ Component Sizing Information, Pump:VariableSpeed, {148AD55F-C495-4497-A032-6D71848B8107}, Design Flow Rate [m3/s], 5.20689E-006
+ Component Sizing Information, Pump:VariableSpeed, {148AD55F-C495-4497-A032-6D71848B8107}, Design Power Consumption [W], 0.00000
+ Component Sizing Information, WaterHeater:Mixed, NONRESBASEELECWATERHEATER, Use Side Design Flow Rate [m3/s], 5.20689E-006
+! <Environment>,Environment Name,Environment Type, Start Date, End Date, Start DayOfWeek, Duration {#days}, Source:Start DayOfWeek,  Use Daylight Saving, Use Holidays, Apply Weekend Holiday Rule,  Use Rain Values, Use Snow Values
+! <Environment:Special Days>, Special Day Name, Special Day Type, Source, Start Date, Duration {#days}
+! <Environment:Daylight Saving>, Daylight Saving Indicator, Source, Start Date, End Date
+! <Environment:WarmupDays>, NumberofWarmupDays
+Environment,SACRAMENTO-EXECUTIVE-ARP ANN CLG 0.4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+! <Environment:Design Day Data>, Max Dry-Bulb Temp {C}, Temp Range {dC}, Temp Range Ind Type, Hum Ind Value at Max Temp, Hum Ind Type,Pressure {Pa}, Wind Direction {deg CW from N}, Wind Speed {m/s}, Clearness, Rain, Snow
+! <Environment:Design Day Misc>,DayOfYear,ASHRAE A Coeff,ASHRAE B Coeff,ASHRAE C Coeff,Solar Constant-Annual Variation,Eq of Time {minutes}, Solar Declination Angle {deg}, Solar Model
+Environment:Design Day Data,37.90,17.30,DefaultMultipliers,101277,270,3.4,0.00,No,No
+Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAETau
+Environment:WarmupDays,  6
+! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
+ Warmup Convergence Information,ATTIC THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN CLG 0.4% CONDNS DB=>MCWB,0.1497592809,0.1064535425,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,CORE_ZN THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN CLG 0.4% CONDNS DB=>MCWB,0.1222454725,0.5050135138,Pass,Pass,7.5653264499E-002,0.4933910215,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_1 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN CLG 0.4% CONDNS DB=>MCWB,0.1157647381,0.5305512414,Pass,Pass,8.2418925542E-002,0.5458662380,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_2 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN CLG 0.4% CONDNS DB=>MCWB,0.1157732260,0.5280059001,Pass,Pass,8.3894883326E-002,0.5792884993,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_3 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN CLG 0.4% CONDNS DB=>MCWB,0.1157771603,0.5044477506,Pass,Pass,8.2517449708E-002,0.5455824557,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_4 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN CLG 0.4% CONDNS DB=>MCWB,0.1157646104,0.5557202236,Pass,Pass,9.2094352556E-002,0.5894250058,Pass,Pass
+Environment,SACRAMENTO-EXECUTIVE-ARP ANN CLG 0.4% CONDNS DP=>MCDB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,28.50,17.30,DefaultMultipliers,101277,270,3.3,0.00,No,No
+Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAETau
+Environment:WarmupDays,  6
+ Warmup Convergence Information,ATTIC THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN CLG 0.4% CONDNS DP=>MCDB,0.1543252370,0.1212486790,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,CORE_ZN THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN CLG 0.4% CONDNS DP=>MCDB,8.2442474077E-002,0.3533412229,Pass,Pass,2.8002430903E-002,0.1401730681,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_1 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN CLG 0.4% CONDNS DP=>MCDB,5.6994849674E-002,0.2757696094,Pass,Pass,2.9971357440E-002,0.1270809729,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_2 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN CLG 0.4% CONDNS DP=>MCDB,5.7443211053E-002,0.2781133898,Pass,Pass,3.0001766632E-002,0.1360372354,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_3 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN CLG 0.4% CONDNS DP=>MCDB,5.8383315793E-002,0.2731575797,Pass,Pass,2.8104796723E-002,0.1277315915,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_4 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN CLG 0.4% CONDNS DP=>MCDB,6.0151448234E-002,0.2962000151,Pass,Pass,3.7275482940E-002,0.1435076799,Pass,Pass
+Environment,SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB,SizingPeriod:DesignDay,01/21,01/21,WinterDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,-0.20,0.00,DefaultMultipliers,101277,90,0.4,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAEClearSky
+Environment:WarmupDays,  8
+ Warmup Convergence Information,ATTIC THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB,2.6677494898E-002,2.9846695025E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,CORE_ZN THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB,9.1405638066E-002,0.2905691798,Pass,Pass,6.1758349155E-002,0.3049632930,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_1 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB,4.7970097367E-002,0.1922935386,Pass,Pass,7.6801812849E-002,0.5274557245,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_2 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB,4.4842929391E-002,0.1811669833,Pass,Pass,5.5707434956E-002,0.3698454827,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_3 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB,5.1958205923E-002,0.2048287618,Pass,Pass,8.4361732077E-002,0.6229848545,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_4 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP ANN HTG 99.6% CONDNS DB,4.5125465465E-002,0.1820021171,Pass,Pass,5.7286664361E-002,0.4001267140,Pass,Pass
+Environment,SACRAMENTO-EXECUTIVE-ARP AUG CLG 0.4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,39.20,17.90,DefaultMultipliers,101277,292,3.0,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau
+Environment:WarmupDays,  6
+ Warmup Convergence Information,ATTIC THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP AUG CLG 0.4% CONDNS DB=>MCWB,0.1562206498,0.1116489636,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,CORE_ZN THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP AUG CLG 0.4% CONDNS DB=>MCWB,0.1300349971,0.5051220084,Pass,Pass,8.7362266244E-002,0.5716116422,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_1 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP AUG CLG 0.4% CONDNS DB=>MCWB,0.1291311298,0.5317219439,Pass,Pass,9.5414039081E-002,0.6438198145,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_2 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP AUG CLG 0.4% CONDNS DB=>MCWB,0.1179804882,0.5300544258,Pass,Pass,9.6230374630E-002,0.6768046365,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_3 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP AUG CLG 0.4% CONDNS DB=>MCWB,0.1157845944,0.5107066577,Pass,Pass,9.2609384506E-002,0.6334002544,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_4 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP AUG CLG 0.4% CONDNS DB=>MCWB,0.1157718853,0.5575827742,Pass,Pass,0.1044366314,0.6845753851,Pass,Pass
+Environment,SACRAMENTO-EXECUTIVE-ARP JUL CLG 0.4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,41.00,17.30,DefaultMultipliers,101277,225,2.9,0.00,No,No
+Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAETau
+Environment:WarmupDays,  6
+ Warmup Convergence Information,ATTIC THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP JUL CLG 0.4% CONDNS DB=>MCWB,0.1552847811,0.1137906118,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,CORE_ZN THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP JUL CLG 0.4% CONDNS DB=>MCWB,0.1372121058,0.5242329246,Pass,Pass,7.7641688174E-002,0.4139674115,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_1 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP JUL CLG 0.4% CONDNS DB=>MCWB,0.1284853858,0.5563512347,Pass,Pass,0.1528606065,1.1391208588,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_2 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP JUL CLG 0.4% CONDNS DB=>MCWB,0.1263562243,0.5523026933,Pass,Pass,0.1592175365,1.2333229688,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_3 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP JUL CLG 0.4% CONDNS DB=>MCWB,0.1170113612,0.5269876313,Pass,Pass,0.1507202430,1.1431870175,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_4 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP JUL CLG 0.4% CONDNS DB=>MCWB,0.1194312677,0.5793672418,Pass,Pass,0.1662117971,1.2303256277,Pass,Pass
+Environment,SACRAMENTO-EXECUTIVE-ARP JUN CLG 0.4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,06/21,06/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,38.20,16.80,DefaultMultipliers,101277,157,4.1,0.00,No,No
+Environment:Design Day Misc,172,1088.0,0.2039,0.1335,1.0,-1.34,23.4,ASHRAETau
+Environment:WarmupDays,  6
+ Warmup Convergence Information,ATTIC THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP JUN CLG 0.4% CONDNS DB=>MCWB,0.1404449687,9.2271551102E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,CORE_ZN THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP JUN CLG 0.4% CONDNS DB=>MCWB,0.1244960504,0.5082615055,Pass,Pass,8.5901108975E-002,0.5638319319,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_1 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP JUN CLG 0.4% CONDNS DB=>MCWB,0.1157777022,0.5325202186,Pass,Pass,9.1925668050E-002,0.6296940412,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_2 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP JUN CLG 0.4% CONDNS DB=>MCWB,0.1157857417,0.5276796052,Pass,Pass,9.4812104140E-002,0.6712420913,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_3 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP JUN CLG 0.4% CONDNS DB=>MCWB,0.1157942663,0.5075174401,Pass,Pass,9.2538324713E-002,0.6312897803,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_4 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP JUN CLG 0.4% CONDNS DB=>MCWB,0.1157761869,0.5602939331,Pass,Pass,0.1037634026,0.6822385646,Pass,Pass
+Environment,SACRAMENTO-EXECUTIVE-ARP NOV CLG 0.4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,11/21,11/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,25.20,7.30,DefaultMultipliers,101277,292,2.4,0.00,No,No
+Environment:Design Day Misc,325,1220.2,0.1488,6.4032E-002,1.0,14.25,-19.7,ASHRAETau
+Environment:WarmupDays,  6
+ Warmup Convergence Information,ATTIC THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP NOV CLG 0.4% CONDNS DB=>MCWB,0.1118312649,7.6210240051E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,CORE_ZN THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP NOV CLG 0.4% CONDNS DB=>MCWB,0.1054672108,0.4325057746,Pass,Pass,4.4748326036E-002,0.2513101874,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_1 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP NOV CLG 0.4% CONDNS DB=>MCWB,8.7972717696E-002,0.4052534549,Pass,Pass,5.3677089006E-002,0.2592449303,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_2 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP NOV CLG 0.4% CONDNS DB=>MCWB,7.7199834405E-002,0.3592292212,Pass,Pass,4.5115682957E-002,0.2346103066,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_3 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP NOV CLG 0.4% CONDNS DB=>MCWB,7.8810010462E-002,0.3522873326,Pass,Pass,4.2540080869E-002,0.2268416319,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_4 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP NOV CLG 0.4% CONDNS DB=>MCWB,7.8280269825E-002,0.3718134559,Pass,Pass,4.9003122209E-002,0.2375498264,Pass,Pass
+Environment,SACRAMENTO-EXECUTIVE-ARP OCT CLG 0.4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,10/21,10/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,32.70,13.00,DefaultMultipliers,101277,337,2.1,0.00,No,No
+Environment:Design Day Misc,294,1191.2,0.1597,7.3069E-002,1.0,15.18,-10.4,ASHRAETau
+Environment:WarmupDays,  6
+ Warmup Convergence Information,ATTIC THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP OCT CLG 0.4% CONDNS DB=>MCWB,0.1388129991,9.6331077227E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,CORE_ZN THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP OCT CLG 0.4% CONDNS DB=>MCWB,0.1157380005,0.4698531432,Pass,Pass,6.4654544232E-002,0.3976017581,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_1 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP OCT CLG 0.4% CONDNS DB=>MCWB,0.1086590561,0.4870971475,Pass,Pass,7.4134310398E-002,0.4287956119,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_2 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP OCT CLG 0.4% CONDNS DB=>MCWB,0.1000824189,0.4531727690,Pass,Pass,6.7697534539E-002,0.4159740832,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_3 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP OCT CLG 0.4% CONDNS DB=>MCWB,0.1010805608,0.4342099214,Pass,Pass,6.5384577693E-002,0.3964758987,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_4 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP OCT CLG 0.4% CONDNS DB=>MCWB,0.1014583836,0.4712327461,Pass,Pass,7.2501495932E-002,0.4210252084,Pass,Pass
+Environment,SACRAMENTO-EXECUTIVE-ARP SEP CLG 0.4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,09/21,09/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,37.80,17.20,DefaultMultipliers,101277,0,2.4,0.00,No,No
+Environment:Design Day Misc,264,1151.1,0.1777,9.2179E-002,1.0,6.63,1.0,ASHRAETau
+Environment:WarmupDays,  6
+ Warmup Convergence Information,ATTIC THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP SEP CLG 0.4% CONDNS DB=>MCWB,0.1552854600,0.1094282594,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,CORE_ZN THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP SEP CLG 0.4% CONDNS DB=>MCWB,0.1195105880,0.5051473625,Pass,Pass,7.6101618381E-002,0.4879872868,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_1 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP SEP CLG 0.4% CONDNS DB=>MCWB,0.1304052262,0.5338162130,Pass,Pass,8.5157972660E-002,0.5482722278,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_2 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP SEP CLG 0.4% CONDNS DB=>MCWB,0.1145114622,0.5235505298,Pass,Pass,8.2778746713E-002,0.5608113098,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_3 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP SEP CLG 0.4% CONDNS DB=>MCWB,0.1149921092,0.4993081158,Pass,Pass,7.8911473214E-002,0.5252106598,Pass,Pass
+ Warmup Convergence Information,PERIMETER_ZN_4 THERMAL ZONE,SizingPeriod: SACRAMENTO-EXECUTIVE-ARP SEP CLG 0.4% CONDNS DB=>MCWB,0.1157552975,0.5480442034,Pass,Pass,8.9892555653E-002,0.5676217487,Pass,Pass
+! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
+Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
+End of Data
