@@ -15690,7 +15690,7 @@
       </AirSys>
       <ZnSys>
         <Name>ZnSys F2-4 1-Bed Core N</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -15702,17 +15702,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>1258.8</ClgSupFanCapSim>
-        <HtgSupFanCapSim>1258.8</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>1258.8</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>969.681</ClgSupFanCapSim>
+        <HtgSupFanCapSim>969.681</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>969.681</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 1</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>35061.8</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>27008.8</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -15720,36 +15720,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 1</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>33831.1</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 1</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>42007.9</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 1</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>27552.7</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>23076.7</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 1</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>1258.8</FlowCapSim>
+          <FlowCapSim>969.681</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -15758,7 +15739,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F2-4 1-Bed Core West</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -15770,17 +15751,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>2517.61</ClgSupFanCapSim>
-        <HtgSupFanCapSim>2517.61</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>2517.61</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>2114.26</ClgSupFanCapSim>
+        <HtgSupFanCapSim>2114.26</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>2114.26</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 2</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>70123.6</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>58889.4</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-2</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -15788,36 +15769,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 2</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>67662.2</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 2</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>84015.7</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 2</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>55105.4</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>47316.4</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 2</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>2517.61</FlowCapSim>
+          <FlowCapSim>2114.26</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -15826,7 +15788,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F2-4 1-Bed Core East</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -15838,17 +15800,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>2517.61</ClgSupFanCapSim>
-        <HtgSupFanCapSim>2517.61</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>2517.61</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>2452.93</ClgSupFanCapSim>
+        <HtgSupFanCapSim>2452.93</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>2452.93</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 3</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>70123.6</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>68322</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-3</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -15856,36 +15818,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 3</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>67662.2</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 3</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>84015.7</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 3</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>55105.4</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>47439.8</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 3</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>2517.61</FlowCapSim>
+          <FlowCapSim>2452.93</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -15894,7 +15837,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F2-4 1-Bed North</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -15906,17 +15849,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>6503.82</ClgSupFanCapSim>
-        <HtgSupFanCapSim>6503.82</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>6503.82</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>3616.07</ClgSupFanCapSim>
+        <HtgSupFanCapSim>3616.07</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>3616.07</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 4</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>181153</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>100719</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-4</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -15924,36 +15867,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 4</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>174794</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 4</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>217041</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 4</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>142356</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>116381</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 4</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>6503.82</FlowCapSim>
+          <FlowCapSim>3616.07</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -15962,7 +15886,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F2-4 2-Bed Core NE-NW</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -15974,17 +15898,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>3776.41</ClgSupFanCapSim>
-        <HtgSupFanCapSim>3776.41</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>3776.41</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>1950.38</ClgSupFanCapSim>
+        <HtgSupFanCapSim>1950.38</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>1950.38</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 5</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>105185</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>54324.3</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-5</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -15992,36 +15916,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 5</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>101493</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 5</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>126024</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 5</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>82658.2</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>60133.2</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 5</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>3776.41</FlowCapSim>
+          <FlowCapSim>1950.38</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -16030,7 +15935,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F2-4 2-Bed East</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -16042,17 +15947,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>5664.62</ClgSupFanCapSim>
-        <HtgSupFanCapSim>5664.62</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>5664.62</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>4676.85</ClgSupFanCapSim>
+        <HtgSupFanCapSim>4676.85</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>4676.85</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 6</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>157778</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>130266</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-6</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -16060,36 +15965,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 6</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>152240</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 6</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>189035</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 6</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>123987</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>106101</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 6</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>5664.62</FlowCapSim>
+          <FlowCapSim>4676.85</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -16098,7 +15984,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F2-4 2-Bed West</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -16110,17 +15996,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>5664.62</ClgSupFanCapSim>
-        <HtgSupFanCapSim>5664.62</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>5664.62</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>5453.63</ClgSupFanCapSim>
+        <HtgSupFanCapSim>5453.63</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>5453.63</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 7</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>157778</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>151902</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-7</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -16128,36 +16014,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 7</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>152240</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 7</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>189035</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 7</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>123987</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>106064</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 7</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>5664.62</FlowCapSim>
+          <FlowCapSim>5453.63</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -16166,7 +16033,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F2-4 3-Bed NE</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -16178,17 +16045,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>2465.16</ClgSupFanCapSim>
-        <HtgSupFanCapSim>2465.16</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>2465.16</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>2132.74</ClgSupFanCapSim>
+        <HtgSupFanCapSim>2132.74</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>2132.74</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 8</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>68662.7</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>59403.9</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-8</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -16196,36 +16063,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 8</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>66252.6</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 8</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>82265.4</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 8</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>53957.4</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>50856.9</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 8</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>2465.16</FlowCapSim>
+          <FlowCapSim>2132.74</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -16234,7 +16082,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F2-4 3-Bed NW</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -16246,17 +16094,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>2465.16</ClgSupFanCapSim>
-        <HtgSupFanCapSim>2465.16</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>2465.16</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>2491.81</ClgSupFanCapSim>
+        <HtgSupFanCapSim>2491.81</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>2491.81</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 9</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>68662.7</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>69405</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-9</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -16264,36 +16112,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 9</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>66252.6</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 9</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>82265.4</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 9</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>53957.4</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>50846.1</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 9</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>2465.16</FlowCapSim>
+          <FlowCapSim>2491.81</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -16302,7 +16131,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F2-4 Studio SE</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -16314,17 +16143,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>944.104</ClgSupFanCapSim>
-        <HtgSupFanCapSim>944.104</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>944.104</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>1292.65</ClgSupFanCapSim>
+        <HtgSupFanCapSim>1292.65</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>1292.65</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 10</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>26296.3</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>36004.5</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-10</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -16332,36 +16161,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 10</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>25373.3</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 10</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>31505.9</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 10</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>20664.5</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>25426.1</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 10</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>944.104</FlowCapSim>
+          <FlowCapSim>1292.65</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -16370,7 +16180,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F2-4 Studio SW</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -16382,17 +16192,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>944.104</ClgSupFanCapSim>
-        <HtgSupFanCapSim>944.104</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>944.104</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>1197.41</ClgSupFanCapSim>
+        <HtgSupFanCapSim>1197.41</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>1197.41</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 11</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>26296.3</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>33351.9</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-11</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -16400,36 +16210,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 11</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>25373.3</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 11</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>31505.9</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 11</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>20664.5</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>25419.1</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 11</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>944.104</FlowCapSim>
+          <FlowCapSim>1197.41</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -16438,7 +16229,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F5 1-Bed Core N</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -16450,17 +16241,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>419.602</ClgSupFanCapSim>
-        <HtgSupFanCapSim>419.602</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>419.602</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>380.086</ClgSupFanCapSim>
+        <HtgSupFanCapSim>380.086</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>380.086</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 12</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>11687.3</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>10586.8</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-12</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -16468,36 +16259,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 12</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>11277</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 12</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>14002.6</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 12</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>9184.24</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>10092.8</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 12</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>419.602</FlowCapSim>
+          <FlowCapSim>380.086</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -16506,7 +16278,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F5 1-Bed Core West</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -16518,17 +16290,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>839.203</ClgSupFanCapSim>
-        <HtgSupFanCapSim>839.203</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>839.203</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>864.766</ClgSupFanCapSim>
+        <HtgSupFanCapSim>864.766</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>864.766</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 13</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>23374.5</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>24086.5</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-13</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -16536,36 +16308,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 13</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>22554.1</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 13</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>28005.2</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 13</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>18368.5</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>21010.6</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 13</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>839.203</FlowCapSim>
+          <FlowCapSim>864.766</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -16574,7 +16327,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F5 1-Bed Core East</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -16586,17 +16339,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>839.203</ClgSupFanCapSim>
-        <HtgSupFanCapSim>839.203</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>839.203</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>1057.46</ClgSupFanCapSim>
+        <HtgSupFanCapSim>1057.46</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>1057.46</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 14</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>23374.5</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>29453.9</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-14</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -16604,36 +16357,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 14</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>22554.1</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 14</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>28005.2</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 14</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>18368.5</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>21009</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 14</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>839.203</FlowCapSim>
+          <FlowCapSim>1057.46</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -16642,7 +16376,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F5 1-Bed North</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -16654,17 +16388,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>2167.94</ClgSupFanCapSim>
-        <HtgSupFanCapSim>2167.94</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>2167.94</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>1762.88</ClgSupFanCapSim>
+        <HtgSupFanCapSim>1762.88</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>1762.88</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 15</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>60384.2</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>49102</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-15</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -16672,36 +16406,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 15</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>58264.7</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 15</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>72346.9</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 15</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>47451.9</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>52139.5</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 15</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>2167.94</FlowCapSim>
+          <FlowCapSim>1762.88</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -16710,7 +16425,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F5 2-Bed Core NE-NW</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -16722,17 +16437,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>1258.8</ClgSupFanCapSim>
-        <HtgSupFanCapSim>1258.8</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>1258.8</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>893.55</ClgSupFanCapSim>
+        <HtgSupFanCapSim>893.55</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>893.55</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 16</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>35061.8</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>24888.4</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-16</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -16740,36 +16455,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 16</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>33831.1</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 16</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>42007.9</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 16</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>27552.7</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>25509.8</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 16</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>1258.8</FlowCapSim>
+          <FlowCapSim>893.55</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -16778,7 +16474,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F5 2-Bed East</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -16790,17 +16486,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>1888.21</ClgSupFanCapSim>
-        <HtgSupFanCapSim>1888.21</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>1888.21</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>1845.91</ClgSupFanCapSim>
+        <HtgSupFanCapSim>1845.91</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>1845.91</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 17</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>52592.7</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>51414.8</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-17</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -16808,36 +16504,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 17</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>50746.6</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 17</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>63011.8</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 17</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>41329.1</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>46680.3</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 17</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>1888.21</FlowCapSim>
+          <FlowCapSim>1845.91</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -16846,7 +16523,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F5 2-Bed West</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -16858,17 +16535,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>1888.21</ClgSupFanCapSim>
-        <HtgSupFanCapSim>1888.21</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>1888.21</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>2262.88</ClgSupFanCapSim>
+        <HtgSupFanCapSim>2262.88</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>2262.88</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 18</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>52592.7</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>63028.4</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-18</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -16876,36 +16553,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 18</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>50746.6</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 18</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>63011.8</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 18</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>41329.1</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>46675.8</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 18</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>1888.21</FlowCapSim>
+          <FlowCapSim>2262.88</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -16914,7 +16572,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F5 3-Bed NE</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -16926,17 +16584,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>821.72</ClgSupFanCapSim>
-        <HtgSupFanCapSim>821.72</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>821.72</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>835.774</ClgSupFanCapSim>
+        <HtgSupFanCapSim>835.774</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>835.774</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 19</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>22887.6</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>23278.9</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-19</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -16944,36 +16602,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 19</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>22084.2</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 19</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>27421.8</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 19</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>17985.8</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>21867.5</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 19</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>821.72</FlowCapSim>
+          <FlowCapSim>835.774</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -16982,7 +16621,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F5 3-Bed NW</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -16994,17 +16633,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>821.72</ClgSupFanCapSim>
-        <HtgSupFanCapSim>821.72</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>821.72</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>1024.25</ClgSupFanCapSim>
+        <HtgSupFanCapSim>1024.25</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>1024.25</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 20</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>22887.6</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>28528.6</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-20</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -17012,36 +16651,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 20</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>22084.2</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 20</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>27421.8</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 20</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>17985.8</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>21865.8</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 20</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>821.72</FlowCapSim>
+          <FlowCapSim>1024.25</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -17050,7 +16670,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F5 Studio SE</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -17062,17 +16682,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>314.701</ClgSupFanCapSim>
-        <HtgSupFanCapSim>314.701</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>314.701</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>468.153</ClgSupFanCapSim>
+        <HtgSupFanCapSim>468.153</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>468.153</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 21</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>8765.45</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>13039.6</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-21</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -17080,36 +16700,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 21</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>8457.77</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 21</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>10502</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 21</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>6888.18</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>10421.3</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 21</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>314.701</FlowCapSim>
+          <FlowCapSim>468.153</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -17118,7 +16719,7 @@
       </ZnSys>
       <ZnSys>
         <Name>ZnSys F5 Studio SW</Name>
-        <TypeSim>PTHP</TypeSim>
+        <TypeSim>PTAC</TypeSim>
         <AvailSchRef>AllOnHVACAvail</AvailSchRef>
         <FanCtrl>Cycling</FanCtrl>
         <FanOperModeSchRef>CyclingHVACAvail</FanOperModeSchRef>
@@ -17130,17 +16731,17 @@
         <OptStartCtrl>None</OptStartCtrl>
         <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
         <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-        <ClgSupFanCapSim>314.701</ClgSupFanCapSim>
-        <HtgSupFanCapSim>314.701</HtgSupFanCapSim>
-        <NoClgHtgSupFanCapSim>314.701</NoClgHtgSupFanCapSim>
+        <ClgSupFanCapSim>435.516</ClgSupFanCapSim>
+        <HtgSupFanCapSim>435.516</HtgSupFanCapSim>
+        <NoClgHtgSupFanCapSim>435.516</NoClgHtgSupFanCapSim>
         <CoilClg>
           <Name>CoilCooling 22</Name>
           <Type>DirectExpansion</Type>
           <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>8765.45</CapTotGrossRtdSim>
+          <CapTotGrossRtdSim>12130.5</CapTotGrossRtdSim>
           <Cap_fTempCrvRef>CoilClgDXQRatio_fTwbToadbSI</Cap_fTempCrvRef>
           <Cap_fFlowCrvRef>CoilClgDXSnglQRatio_fCFMRatio</Cap_fFlowCrvRef>
-          <DXEIR>0.245361</DXEIR>
+          <DXEIR>0.22655</DXEIR>
           <DXEIR_fTempCrvRef>CoilClgDXSEEREIR_fTwbToadbSI-22</DXEIR_fTempCrvRef>
           <DXEIR_fPLFCrvRef>CoilClgDXSEEREIRRatio_fQFrac</DXEIR_fPLFCrvRef>
           <DXEIR_fFlowCrvRef>CoilClgDXSnglEIRRatio_fCFMRatio</DXEIR_fFlowCrvRef>
@@ -17148,36 +16749,17 @@
         </CoilClg>
         <CoilHtg>
           <Name>CoilHtg 22</Name>
-          <Type>HeatPump</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>8457.77</CapTotGrossRtdSim>
-          <HtPumpCap_fTempCrvRef>CoilHtgHPQRatio_fToadbSI</HtPumpCap_fTempCrvRef>
-          <HtPumpCap_fFlowCrvRef>CoilHtgHPQRatio_fCFMRatio</HtPumpCap_fFlowCrvRef>
-          <CndsrType>Air</CndsrType>
-          <HtPumpEIR>0.277907</HtPumpEIR>
-          <HtPumpEIR_fTempCrvRef>CoilHtgHPEIRRatio_fToadbSI</HtPumpEIR_fTempCrvRef>
-          <HtPumpEIR_fFlowCrvRef>CoilHtgHPEIRRatio_fCFMRatio</HtPumpEIR_fFlowCrvRef>
-          <HtPumpEIR_fPLFCrvRef>CoilHtgHPEIRRatio_fQFrac</HtPumpEIR_fPLFCrvRef>
-          <HtPumpSuppCoilHtgRef>SupCoilHtg 22</HtPumpSuppCoilHtgRef>
-          <HtPumpCprsrLockoutTemp>17</HtPumpCprsrLockoutTemp>
-          <HtPumpSuppTemp>40</HtPumpSuppTemp>
-          <HtPumpDefHtSrc>Electric</HtPumpDefHtSrc>
-          <HtPumpDefHtrCapSim>10502</HtPumpDefHtrCapSim>
-          <HtPumpDefCtrl>TimedCycle</HtPumpDefCtrl>
-          <HtPumpDefCtrlTemp>40</HtPumpDefCtrlTemp>
-          <AuxPwr>0</AuxPwr>
-        </CoilHtg>
-        <CoilHtg>
-          <Name>SupCoilHtg 22</Name>
-          <Type>Resistance</Type>
-          <FuelSrc>Electric</FuelSrc>
-          <CapTotGrossRtdSim>6888.18</CapTotGrossRtdSim>
+          <Type>Furnace</Type>
+          <FuelSrc>Gas</FuelSrc>
+          <CapTotGrossRtdSim>10421.8</CapTotGrossRtdSim>
+          <FurnThrmlEff>0.810316</FurnThrmlEff>
+          <FurnHIR_fPLRCrvRef>CoilHtgFurnFIRRatio_fQRatio</FurnHIR_fPLRCrvRef>
           <AuxPwr>0</AuxPwr>
         </CoilHtg>
         <Fan>
           <Name>Fan 22</Name>
           <CtrlMthdSim>ConstantVolume</CtrlMthdSim>
-          <FlowCapSim>314.701</FlowCapSim>
+          <FlowCapSim>435.516</FlowCapSim>
           <TotEff>0.4275</TotEff>
           <TotStaticPress>1.2734</TotStaticPress>
           <MtrEff>0.855</MtrEff>
@@ -17538,6 +17120,16 @@
       <MinOut>1.38</MinOut>
     </CrvQuad>
     <CrvQuad>
+      <Name>CoilHtgFurnFIRRatio_fQRatio</Name>
+      <Coef1>0.01861</Coef1>
+      <Coef2>1.09421</Coef2>
+      <Coef3>-0.112819</Coef3>
+      <MaxOut>1</MaxOut>
+      <MaxVar1>1</MaxVar1>
+      <MinOut>0.73</MinOut>
+      <MinVar1>0.7</MinVar1>
+    </CrvQuad>
+    <CrvQuad>
       <Name>BlrHWBlrFIRRatio_fQRatioSI</Name>
       <Coef1>0.6267</Coef1>
       <Coef2>0.674</Coef2>
@@ -17683,14 +17275,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-2</Name>
@@ -17719,14 +17311,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-3</Name>
@@ -17755,14 +17347,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-4</Name>
@@ -17791,14 +17383,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-5</Name>
@@ -17827,14 +17419,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-6</Name>
@@ -17863,14 +17455,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-7</Name>
@@ -17899,14 +17491,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-8</Name>
@@ -17935,14 +17527,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-9</Name>
@@ -17971,14 +17563,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-10</Name>
@@ -18007,14 +17599,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-11</Name>
@@ -18043,14 +17635,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-12</Name>
@@ -18079,14 +17671,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-13</Name>
@@ -18115,14 +17707,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-14</Name>
@@ -18151,14 +17743,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-15</Name>
@@ -18187,14 +17779,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-16</Name>
@@ -18223,14 +17815,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-17</Name>
@@ -18259,14 +17851,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-18</Name>
@@ -18295,14 +17887,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-19</Name>
@@ -18331,14 +17923,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-20</Name>
@@ -18367,14 +17959,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-21</Name>
@@ -18403,14 +17995,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-22</Name>
@@ -18439,14 +18031,14 @@
       <ArrayVar2 index="7">27.78</ArrayVar2>
       <ArrayVar2 index="8">43.33</ArrayVar2>
       <ArrayOut index="0">1</ArrayOut>
-      <ArrayOut index="1">0.784716</ArrayOut>
-      <ArrayOut index="2">1.21777</ArrayOut>
-      <ArrayOut index="3">1.16303</ArrayOut>
-      <ArrayOut index="4">0.917548</ArrayOut>
-      <ArrayOut index="5">1.41124</ArrayOut>
-      <ArrayOut index="6">0.884793</ArrayOut>
-      <ArrayOut index="7">0.69092</ArrayOut>
-      <ArrayOut index="8">1.08102</ArrayOut>
+      <ArrayOut index="1">0.848843</ArrayOut>
+      <ArrayOut index="2">1.2035</ArrayOut>
+      <ArrayOut index="3">1.16491</ArrayOut>
+      <ArrayOut index="4">0.99253</ArrayOut>
+      <ArrayOut index="5">1.39688</ArrayOut>
+      <ArrayOut index="6">0.883486</ArrayOut>
+      <ArrayOut index="7">0.747382</ArrayOut>
+      <ArrayOut index="8">1.06682</ArrayOut>
     </CrvMapDblVar>
     <CrvMapDblVar>
       <Name>CoilClgDXSEEREIR_fTwbToadbSI-23</Name>

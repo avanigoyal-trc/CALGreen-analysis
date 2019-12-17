@@ -4,7 +4,7 @@ modelkit_version "~>0.8.0"
 parameter "cz"
 parameter "window_u", :default=>0.36
 parameter "heating_eff", :default=>0.8
-
+parameter "hvac_type"
 
 %>
 
@@ -15612,7 +15612,7 @@ ThrmlZn   "Thermal Zone: Parking Garage"
 
    #Use for loop to create szhp chunk for each zone
    for a in 0..num_zones do
-     insert 'szhp.pxt',
+     insert 'szac.pxt',
        :cooling_capacity => capacity_cooling[a],
        :heating_capacity => capacity_heating[a],
        :supply_fan_cfm => supply_cfm[a],
