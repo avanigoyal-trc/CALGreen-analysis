@@ -1,0 +1,123 @@
+; Tables for Std model AutoHardSize capacity look-up rules
+TABLE TrmlUnit
+PropName,BaseName,Type,System,Zone,PriAirFlowMax,PriAirFlowMin,HtgAirFlowMax,ReheatCtrlMthd
+;,,,,,(cfm),(cfm),( cfm)
+,"BaseVAVBox TrmlUnit","VAVReheatBox","BaseAirSys5","Thermal Zone: F1 Business Center",538.232,107.646,269.116,"DualMaximum"
+,"BaseVAVBox TrmlUnit-2","VAVReheatBox","BaseAirSys5","Thermal Zone: F1 Corridor",1788.898,357.780,894.449,"DualMaximum"
+,"BaseVAVBox TrmlUnit-3","VAVReheatBox","BaseAirSys5","Thermal Zone: F1 Lounge",1405.916,281.183,702.958,"DualMaximum"
+,"BaseVAVBox TrmlUnit-4","VAVReheatBox","BaseAirSys5","Thermal Zone: F1 Fitness Center",797.868,450.000,450.000,"DualMaximum"
+,"BaseVAVBox TrmlUnit-5","VAVReheatBox","BaseAirSys5","Thermal Zone: F1 Leasing Office",365.533,73.107,182.767,"DualMaximum"
+,"BaseVAVBox TrmlUnit-6","VAVReheatBox","BaseAirSys5","Thermal Zone: F1 Mechanical Room",708.614,141.723,354.307,"DualMaximum"
+,"BaseVAVBox TrmlUnit-7","VAVReheatBox","BaseAirSys5","Thermal Zone: F1 Retail N-NW",5094.980,1496.250,2547.490,"DualMaximum"
+,"BaseVAVBox TrmlUnit-8","VAVReheatBox","BaseAirSys5","Thermal Zone: F1 Retail NE",3910.503,1080.000,1955.252,"DualMaximum"
+,"BaseVAVBox TrmlUnit-9","VAVReheatBox","BaseAirSys5","Thermal Zone: F1 Retail SE",2649.393,720.000,1324.697,"DualMaximum"
+,"BaseVAVBox TrmlUnit-10","VAVReheatBox","BaseAirSys5","Thermal Zone: F1 Retail SW",3918.028,1107.000,1959.014,"DualMaximum"
+,"BaseVAVBox TrmlUnit-11","VAVReheatBox","BaseAirSys5-2","Thermal Zone: F2-4 Corridor",1849.202,402.750,924.601,"DualMaximum"
+,"BaseVAVBox TrmlUnit-12","VAVReheatBox","BaseAirSys5-3","Thermal Zone: F5 Corridor",1910.792,402.750,955.396,"DualMaximum"
+ENDTABLE
+TABLE CoilClg
+PropName,BaseName,Type,System,Zone,CapTotNetRtd,CapTotGrossRtd,FluidFlowRtDsgn,DXSEER,DXEER,NumClgStages
+;,,,,,(Btu/hr),(Btu/hr),( gpm),
+,"BaseSys5 CoilClg","DirectExpansion","BaseAirSys5","UNDEFINED",704371.017,734877.752,-99996.00000,-99996.000,9.800,2
+,"BaseSys5 CoilClg-2","DirectExpansion","BaseAirSys5-2","UNDEFINED",61872.012,64551.726,-99996.00000,13.000,10.845,2
+,"BaseSys5 CoilClg-3","DirectExpansion","BaseAirSys5-3","UNDEFINED",62390.830,65093.015,-99996.00000,13.000,10.845,2
+,"BaseSys1 CoilClg","DirectExpansion","BaseZnSys1","Thermal Zone: F2-4 1-Bed Core N",9886.621,10314.817,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-2","DirectExpansion","BaseZnSys1-2","Thermal Zone: F2-4 1-Bed Core West",11620.751,12124.052,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-3","DirectExpansion","BaseZnSys1-3","Thermal Zone: F2-4 1-Bed Core East",12196.580,12724.821,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-4","DirectExpansion","BaseZnSys1-4","Thermal Zone: F2-4 1-Bed North",7461.865,7785.043,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-5","DirectExpansion","BaseZnSys1-5","Thermal Zone: F2-4 2-Bed Core NE-NW",9264.577,9665.831,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-6","DirectExpansion","BaseZnSys1-6","Thermal Zone: F2-4 2-Bed East",17286.468,18035.156,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-7","DirectExpansion","BaseZnSys1-7","Thermal Zone: F2-4 2-Bed West",18220.004,19009.124,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-8","DirectExpansion","BaseZnSys1-8","Thermal Zone: F2-4 3-Bed NE",23664.703,24689.635,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-9","DirectExpansion","BaseZnSys1-9","Thermal Zone: F2-4 3-Bed NW",24614.262,25680.321,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-10","DirectExpansion","BaseZnSys1-10","Thermal Zone: F2-4 Studio SE",12981.329,13543.559,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-11","DirectExpansion","BaseZnSys1-11","Thermal Zone: F2-4 Studio SW",12224.267,12753.708,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-12","DirectExpansion","BaseZnSys1-12","Thermal Zone: F5 1-Bed Core N",11880.942,12395.512,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-13","DirectExpansion","BaseZnSys1-13","Thermal Zone: F5 1-Bed Core West",13850.589,14450.466,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-14","DirectExpansion","BaseZnSys1-14","Thermal Zone: F5 1-Bed Core East",15228.175,15887.716,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-15","DirectExpansion","BaseZnSys1-15","Thermal Zone: F5 1-Bed North",10431.648,10883.449,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-16","DirectExpansion","BaseZnSys1-16","Thermal Zone: F5 2-Bed Core NE-NW",12497.041,13038.295,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-17","DirectExpansion","BaseZnSys1-17","Thermal Zone: F5 2-Bed East",19444.103,20286.239,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-18","DirectExpansion","BaseZnSys1-18","Thermal Zone: F5 2-Bed West",21576.383,22510.869,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-19","DirectExpansion","BaseZnSys1-19","Thermal Zone: F5 3-Bed NE",26405.379,27549.012,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-20","DirectExpansion","BaseZnSys1-20","Thermal Zone: F5 3-Bed NW",29052.934,30311.234,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-21","DirectExpansion","BaseZnSys1-21","Thermal Zone: F5 Studio SE",14297.373,14916.601,-99996.00000,14.000,12.200,-99996
+,"BaseSys1 CoilClg-22","DirectExpansion","BaseZnSys1-22","Thermal Zone: F5 Studio SW",13495.970,14080.489,-99996.00000,14.000,12.200,-99996
+ENDTABLE
+TABLE CoilHtg
+PropName,BaseName,Type,System,Zone,CapTotNetRtd,CapTotGrossRtd,FluidFlowRtDsgn,FurnAFUE,FurnThrmlEff,
+;,,,,,(Btu/hr),(Btu/hr),( gpm),
+,"BaseSys5 CoilHtg","HotWater","BaseAirSys5","UNDEFINED",195767.837,195767.837,9.78467,-99996.000,-99996.000
+,"BaseSys5 CoilHtg-2","HotWater","BaseAirSys5-2","UNDEFINED",10466.775,10466.775,0.52314,-99996.000,-99996.000
+,"BaseSys5 CoilHtg-3","HotWater","BaseAirSys5-3","UNDEFINED",10402.800,10402.800,0.51994,-99996.000,-99996.000
+,"BaseSys1 CoilHtg","Furnace","BaseZnSys1","Thermal Zone: F2-4 1-Bed Core N",6960.975,6960.975,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-2","Furnace","BaseZnSys1-2","Thermal Zone: F2-4 1-Bed Core West",7752.029,7752.029,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-3","Furnace","BaseZnSys1-3","Thermal Zone: F2-4 1-Bed Core East",7767.554,7767.554,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-4","Furnace","BaseZnSys1-4","Thermal Zone: F2-4 1-Bed North",7421.048,7421.048,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-5","Furnace","BaseZnSys1-5","Thermal Zone: F2-4 2-Bed Core NE-NW",8561.579,8561.579,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-6","Furnace","BaseZnSys1-6","Thermal Zone: F2-4 2-Bed East",11537.435,11537.435,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-7","Furnace","BaseZnSys1-7","Thermal Zone: F2-4 2-Bed West",11532.993,11532.993,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-8","Furnace","BaseZnSys1-8","Thermal Zone: F2-4 3-Bed NE",16940.521,16940.521,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-9","Furnace","BaseZnSys1-9","Thermal Zone: F2-4 3-Bed NW",16935.992,16935.992,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-10","Furnace","BaseZnSys1-10","Thermal Zone: F2-4 Studio SE",9003.333,9003.333,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-11","Furnace","BaseZnSys1-11","Thermal Zone: F2-4 Studio SW",9003.071,9003.071,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-12","Furnace","BaseZnSys1-12","Thermal Zone: F5 1-Bed Core N",10183.562,10183.562,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-13","Furnace","BaseZnSys1-13","Thermal Zone: F5 1-Bed Core West",10664.475,10664.475,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-14","Furnace","BaseZnSys1-14","Thermal Zone: F5 1-Bed Core East",10656.969,10656.969,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-15","Furnace","BaseZnSys1-15","Thermal Zone: F5 1-Bed North",10374.583,10374.583,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-16","Furnace","BaseZnSys1-16","Thermal Zone: F5 2-Bed Core NE-NW",12223.800,12223.800,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-17","Furnace","BaseZnSys1-17","Thermal Zone: F5 2-Bed East",15709.087,15709.087,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-18","Furnace","BaseZnSys1-18","Thermal Zone: F5 2-Bed West",15701.017,15701.017,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-19","Furnace","BaseZnSys1-19","Thermal Zone: F5 3-Bed NE",22461.863,22461.863,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-20","Furnace","BaseZnSys1-20","Thermal Zone: F5 3-Bed NW",22451.900,22451.900,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-21","Furnace","BaseZnSys1-21","Thermal Zone: F5 Studio SE",11176.212,11176.212,0.00000,0.800,0.810
+,"BaseSys1 CoilHtg-22","Furnace","BaseZnSys1-22","Thermal Zone: F5 Studio SW",11179.788,11179.788,0.00000,0.800,0.810
+,"BaseVAVBox CoilHtg","HotWater","BaseAirSys5","Thermal Zone: F1 Business Center",8785.938,8785.938,0.43913,-99996.000,-99996.000
+,"BaseVAVBox CoilHtg-2","HotWater","BaseAirSys5","Thermal Zone: F1 Corridor",47523.525,47523.525,2.37527,-99996.000,-99996.000
+,"BaseVAVBox CoilHtg-3","HotWater","BaseAirSys5","Thermal Zone: F1 Lounge",18585.787,18585.787,0.92894,-99996.000,-99996.000
+,"BaseVAVBox CoilHtg-4","HotWater","BaseAirSys5","Thermal Zone: F1 Fitness Center",15186.725,15186.725,0.75905,-99996.000,-99996.000
+,"BaseVAVBox CoilHtg-5","HotWater","BaseAirSys5","Thermal Zone: F1 Leasing Office",7829.075,7829.075,0.39131,-99996.000,-99996.000
+,"BaseVAVBox CoilHtg-6","HotWater","BaseAirSys5","Thermal Zone: F1 Mechanical Room",7523.488,7523.488,0.37603,-99996.000,-99996.000
+,"BaseVAVBox CoilHtg-7","HotWater","BaseAirSys5","Thermal Zone: F1 Retail N-NW",77187.125,77187.125,3.85789,-99996.000,-99996.000
+,"BaseVAVBox CoilHtg-8","HotWater","BaseAirSys5","Thermal Zone: F1 Retail NE",57680.975,57680.975,2.88295,-99996.000,-99996.000
+,"BaseVAVBox CoilHtg-9","HotWater","BaseAirSys5","Thermal Zone: F1 Retail SE",44589.663,44589.663,2.22864,-99996.000,-99996.000
+,"BaseVAVBox CoilHtg-10","HotWater","BaseAirSys5","Thermal Zone: F1 Retail SW",65029.850,65029.850,3.25026,-99996.000,-99996.000
+,"BaseVAVBox CoilHtg-11","HotWater","BaseAirSys5-2","Thermal Zone: F2-4 Corridor",50761.979,50761.979,2.53713,-99996.000,-99996.000
+,"BaseVAVBox CoilHtg-12","HotWater","BaseAirSys5-3","Thermal Zone: F5 Corridor",74580.475,74580.475,3.72761,-99996.000,-99996.000
+ENDTABLE
+TABLE Fan
+PropName,BaseName,CtrlMthd,System,Zone,FlowCap,FlowMin,FlowEff,ModelingMthd,TotStaticPress,MtrBHP,MtrHP,MtrPos,MtrEff
+;,,,,,(cfm),(cfm),,,(inH2O),(hp),(hp),
+,"BaseSys5 Fan","VariableSpeedDrive","BaseAirSys5","UNDEFINED",24354.654,5814.689,0.650,"BrakeHorsePower",5.362,31.661,40.000,"InAirStream",0.941
+,"BaseSys5 Fan-2","VariableSpeedDrive","BaseAirSys5-2","UNDEFINED",2126.584,402.750,0.650,"BrakeHorsePower",5.362,2.765,3.000,"InAirStream",0.895
+,"BaseSys5 Fan-3","VariableSpeedDrive","BaseAirSys5-3","UNDEFINED",2144.416,402.750,0.650,"BrakeHorsePower",5.362,2.788,3.000,"InAirStream",0.895
+,"BaseSys1 Fan","ConstantVolume","BaseZnSys1","Thermal Zone: F2-4 1-Bed Core N",370.327,-99996.000,0.500,"BrakeHorsePower",1.273,0.149,0.250,"InAirStream",0.855
+,"BaseSys1 Fan-2","ConstantVolume","BaseZnSys1-2","Thermal Zone: F2-4 1-Bed Core West",435.283,-99996.000,0.500,"BrakeHorsePower",1.273,0.175,0.250,"InAirStream",0.855
+,"BaseSys1 Fan-3","ConstantVolume","BaseZnSys1-3","Thermal Zone: F2-4 1-Bed Core East",456.851,-99996.000,0.500,"BrakeHorsePower",1.273,0.183,0.250,"InAirStream",0.855
+,"BaseSys1 Fan-4","ConstantVolume","BaseZnSys1-4","Thermal Zone: F2-4 1-Bed North",279.501,-99996.000,0.500,"BrakeHorsePower",1.273,0.112,0.125,"InAirStream",0.855
+,"BaseSys1 Fan-5","ConstantVolume","BaseZnSys1-5","Thermal Zone: F2-4 2-Bed Core NE-NW",347.026,-99996.000,0.500,"BrakeHorsePower",1.273,0.139,0.250,"InAirStream",0.855
+,"BaseSys1 Fan-6","ConstantVolume","BaseZnSys1-6","Thermal Zone: F2-4 2-Bed East",647.505,-99996.000,0.500,"BrakeHorsePower",1.273,0.260,0.500,"InAirStream",0.855
+,"BaseSys1 Fan-7","ConstantVolume","BaseZnSys1-7","Thermal Zone: F2-4 2-Bed West",682.473,-99996.000,0.500,"BrakeHorsePower",1.273,0.274,0.500,"InAirStream",0.855
+,"BaseSys1 Fan-8","ConstantVolume","BaseZnSys1-8","Thermal Zone: F2-4 3-Bed NE",886.416,-99996.000,0.500,"BrakeHorsePower",1.273,0.356,0.500,"InAirStream",0.855
+,"BaseSys1 Fan-9","ConstantVolume","BaseZnSys1-9","Thermal Zone: F2-4 3-Bed NW",921.986,-99996.000,0.500,"BrakeHorsePower",1.273,0.370,0.500,"InAirStream",0.855
+,"BaseSys1 Fan-10","ConstantVolume","BaseZnSys1-10","Thermal Zone: F2-4 Studio SE",486.247,-99996.000,0.500,"BrakeHorsePower",1.273,0.195,0.250,"InAirStream",0.855
+,"BaseSys1 Fan-11","ConstantVolume","BaseZnSys1-11","Thermal Zone: F2-4 Studio SW",457.888,-99996.000,0.500,"BrakeHorsePower",1.273,0.184,0.250,"InAirStream",0.855
+,"BaseSys1 Fan-12","ConstantVolume","BaseZnSys1-12","Thermal Zone: F5 1-Bed Core N",445.027,-99996.000,0.500,"BrakeHorsePower",1.273,0.179,0.250,"InAirStream",0.855
+,"BaseSys1 Fan-13","ConstantVolume","BaseZnSys1-13","Thermal Zone: F5 1-Bed Core West",518.805,-99996.000,0.500,"BrakeHorsePower",1.273,0.208,0.250,"InAirStream",0.855
+,"BaseSys1 Fan-14","ConstantVolume","BaseZnSys1-14","Thermal Zone: F5 1-Bed Core East",570.406,-99996.000,0.500,"BrakeHorsePower",1.273,0.229,0.250,"InAirStream",0.855
+,"BaseSys1 Fan-15","ConstantVolume","BaseZnSys1-15","Thermal Zone: F5 1-Bed North",390.742,-99996.000,0.500,"BrakeHorsePower",1.273,0.157,0.250,"InAirStream",0.855
+,"BaseSys1 Fan-16","ConstantVolume","BaseZnSys1-16","Thermal Zone: F5 2-Bed Core NE-NW",468.107,-99996.000,0.500,"BrakeHorsePower",1.273,0.188,0.250,"InAirStream",0.855
+,"BaseSys1 Fan-17","ConstantVolume","BaseZnSys1-17","Thermal Zone: F5 2-Bed East",728.326,-99996.000,0.500,"BrakeHorsePower",1.273,0.292,0.500,"InAirStream",0.855
+,"BaseSys1 Fan-18","ConstantVolume","BaseZnSys1-18","Thermal Zone: F5 2-Bed West",808.193,-99996.000,0.500,"BrakeHorsePower",1.273,0.324,0.500,"InAirStream",0.855
+,"BaseSys1 Fan-19","ConstantVolume","BaseZnSys1-19","Thermal Zone: F5 3-Bed NE",989.081,-99996.000,0.500,"BrakeHorsePower",1.273,0.397,0.500,"InAirStream",0.855
+,"BaseSys1 Fan-20","ConstantVolume","BaseZnSys1-20","Thermal Zone: F5 3-Bed NW",1088.245,-99996.000,0.500,"BrakeHorsePower",1.273,0.437,0.500,"InAirStream",0.855
+,"BaseSys1 Fan-21","ConstantVolume","BaseZnSys1-21","Thermal Zone: F5 Studio SE",535.543,-99996.000,0.500,"BrakeHorsePower",1.273,0.215,0.250,"InAirStream",0.855
+,"BaseSys1 Fan-22","ConstantVolume","BaseZnSys1-22","Thermal Zone: F5 Studio SW",505.528,-99996.000,0.500,"BrakeHorsePower",1.273,0.203,0.250,"InAirStream",0.855
+ENDTABLE
+TABLE OACtrl
+PropName,BaseName,EconoCtrlMthd,System,EconoIntegration
+;
+,"BaseSys5 OACtrl","DifferentialDryBulb","BaseAirSys5","Integrated"
+,"BaseSys5 OACtrl-2","DifferentialDryBulb","BaseAirSys5-2","Integrated"
+,"BaseSys5 OACtrl-3","DifferentialDryBulb","BaseAirSys5-3","Integrated"
+ENDTABLE
