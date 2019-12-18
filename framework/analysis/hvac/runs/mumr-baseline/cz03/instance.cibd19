@@ -3,8 +3,8 @@ RulesetFilename   "T24N_2019.bin"
 Proj   "Mid-Rise Mixed-Use (5-story)"  
    BldgEngyModelVersion = 14
    CreateDate = 1567115615
-   ModDate = 1576626751
-   RunDate = 1576626752
+   ModDate = 1576631169
+   RunDate = 1576631170
    GasType = "NaturalGas"
    CliZn = "ClimateZone3"
    WeatherStation = "OAKLAND_724930"
@@ -57,12 +57,46 @@ Mat   "Compliance Insulation R1.54"
    CodeItem = "Compliance Insulation R1.54"
    ..
 
+Mat   "Compliance Insulation R4x"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R4.00"
+   ..
+
+Mat   "Compliance Insulation R1.35"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R1.35"
+   ..
+
 Mat   "WoodFrameWall16inOC R11.25"  
    CodeCat = "Composite"
    FrmMat = "Wood"
    FrmConfig = "Wall16inOC"
    FrmDepth = "3_5In"
    CavityIns = 11.25
+   ..
+
+Mat   "WoodFrameWall16inOC R5"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 5
+   ..
+
+Mat   "WoodFrameWall16inOC R23.8"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "7_25In"
+   CavityIns = 23.8
+   ..
+
+Mat   "WoodFrameWall16inOC R21"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 21
    ..
 
 Mat   "Concrete - 140 lb/ft3 - 10 in."  
@@ -15563,6 +15597,7 @@ ZnSys   "ZnSys F2-4 1-Bed Core N"
 CoilClg   "CoilCooling 1"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 1"  
@@ -15582,6 +15617,7 @@ ZnSys   "ZnSys F2-4 1-Bed Core West"
 CoilClg   "CoilCooling 2"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 2"  
@@ -15601,6 +15637,7 @@ ZnSys   "ZnSys F2-4 1-Bed Core East"
 CoilClg   "CoilCooling 3"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 3"  
@@ -15620,6 +15657,7 @@ ZnSys   "ZnSys F2-4 1-Bed North"
 CoilClg   "CoilCooling 4"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 4"  
@@ -15639,6 +15677,7 @@ ZnSys   "ZnSys F2-4 2-Bed Core NE-NW"
 CoilClg   "CoilCooling 5"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 5"  
@@ -15658,6 +15697,7 @@ ZnSys   "ZnSys F2-4 2-Bed East"
 CoilClg   "CoilCooling 6"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 6"  
@@ -15677,6 +15717,7 @@ ZnSys   "ZnSys F2-4 2-Bed West"
 CoilClg   "CoilCooling 7"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 7"  
@@ -15696,6 +15737,7 @@ ZnSys   "ZnSys F2-4 3-Bed NE"
 CoilClg   "CoilCooling 8"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 8"  
@@ -15715,6 +15757,7 @@ ZnSys   "ZnSys F2-4 3-Bed NW"
 CoilClg   "CoilCooling 9"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 9"  
@@ -15734,6 +15777,7 @@ ZnSys   "ZnSys F2-4 Studio SE"
 CoilClg   "CoilCooling 10"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 10"  
@@ -15753,6 +15797,7 @@ ZnSys   "ZnSys F2-4 Studio SW"
 CoilClg   "CoilCooling 11"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 11"  
@@ -15772,6 +15817,7 @@ ZnSys   "ZnSys F5 1-Bed Core N"
 CoilClg   "CoilCooling 12"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 12"  
@@ -15791,6 +15837,7 @@ ZnSys   "ZnSys F5 1-Bed Core West"
 CoilClg   "CoilCooling 13"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 13"  
@@ -15810,6 +15857,7 @@ ZnSys   "ZnSys F5 1-Bed Core East"
 CoilClg   "CoilCooling 14"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 14"  
@@ -15829,6 +15877,7 @@ ZnSys   "ZnSys F5 1-Bed North"
 CoilClg   "CoilCooling 15"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 15"  
@@ -15848,6 +15897,7 @@ ZnSys   "ZnSys F5 2-Bed Core NE-NW"
 CoilClg   "CoilCooling 16"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 16"  
@@ -15867,6 +15917,7 @@ ZnSys   "ZnSys F5 2-Bed East"
 CoilClg   "CoilCooling 17"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 17"  
@@ -15886,6 +15937,7 @@ ZnSys   "ZnSys F5 2-Bed West"
 CoilClg   "CoilCooling 18"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 18"  
@@ -15905,6 +15957,7 @@ ZnSys   "ZnSys F5 3-Bed NE"
 CoilClg   "CoilCooling 19"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 19"  
@@ -15924,6 +15977,7 @@ ZnSys   "ZnSys F5 3-Bed NW"
 CoilClg   "CoilCooling 20"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 20"  
@@ -15943,6 +15997,7 @@ ZnSys   "ZnSys F5 Studio SE"
 CoilClg   "CoilCooling 21"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 21"  
@@ -15962,6 +16017,7 @@ ZnSys   "ZnSys F5 Studio SW"
 CoilClg   "CoilCooling 22"  
    Type = "DirectExpansion"
    DXSEER = 14
+   DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 22"  
@@ -16462,6 +16518,38 @@ Mat   "WoodRoof16OCCavInsR38"
    CavityIns = 38
    ..
 
+Mat   "WoodRoof16OCCavInsR25"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "7_25In"
+   CavityIns = 25
+   ..
+
+Mat   "WoodRoof16OCCavInsR20"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "7_25In"
+   CavityIns = 20
+   ..
+
+Mat   "WoodRoof16OCCavInsR10"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 10
+   ..
+
+Mat   "WoodRoof16OCCavInsR11"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 11
+   ..
+
 Mat   "Building Paper - 1/16 in."  
    CodeCat = "Building Membrane"
    CodeItem = "Building Paper - 1/16 in."
@@ -16641,6 +16729,87 @@ Mat   "WoodFrameWall16inOCCavInsR5"
    CavityIns = 5
    ..
 
+Mat   "WoodFrameWall16inOCCavInsR19"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 19
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR10"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 10
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR7"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 7
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR11"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 11
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR14"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 14
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR5.8"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 5.8
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR15"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 15
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR10.5"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 10.5
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR21"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 21
+   ..
+
 Mat   "Compliance Insulation R13.00"  
    CodeCat = "Insulation Board"
    CodeItem = "Compliance Insulation R13.00"
@@ -16671,6 +16840,36 @@ Mat   "Compliance Insulation R0.05"
    CodeItem = "Compliance Insulation R0.05"
    ..
 
+Mat   "Compliance Insulation R15.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R15.00"
+   ..
+
+Mat   "Compliance Insulation R1.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R1.00"
+   ..
+
+Mat   "Compliance Insulation R2.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R2.00"
+   ..
+
+Mat   "Compliance Insulation R10.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R10.00"
+   ..
+
+Mat   "Compliance Insulation R7.60"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R7.60"
+   ..
+
+Mat   "Compliance Insulation R15.54"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R15.54"
+   ..
+
 EUseSummary   "EUseSummary"  
    Title1[2] = "Proposed"
    Title1[3] = "Proposed"
@@ -16694,12 +16893,12 @@ EUseSummary   "EUseSummary"
    Title3[6] = "Site (MBtu)"
    Title3[7] = "(kBtu/ft²-yr)"
    Title3[8] = "(kBtu/ft²-yr)"
-   Enduse1 = ( "Space Heating", "9.4", "349.2", "8.23", "0.0", "416.5", 
-               "7.23", "-1.00", "--", "--" )
+   Enduse1 = ( "Space Heating", "9.4", "347.2", "8.19", "0.0", "416.5", 
+               "7.23", "-0.96", "--", "--" )
    Enduse2 = ( "Space Cooling", "38.5", "--", "14.53", "39.4", "--", 
                "14.77", "0.24", "26.0", "26.3" )
-   Enduse3 = ( "Indoor Fans", "40.3", "--", "10.57", "40.6", "--", 
-               "10.71", "0.14", "7.8", "8.2" )
+   Enduse3 = ( "Indoor Fans", "40.3", "--", "10.58", "40.6", "--", 
+               "10.71", "0.13", "7.8", "8.2" )
    Enduse4 = ( "Heat Rejection", "--", "--", "--", "--", "--", "--", 
                "--", "--", "--" )
    Enduse5 = ( "Pumps & Misc.", "0.3", "--", "0.08", "0.1", "--", "0.02", 
@@ -16708,8 +16907,8 @@ EUseSummary   "EUseSummary"
                "1,003.4", "20.51", "--", "2.8", "2.8" )
    Enduse7 = ( "Indoor Lighting", "81.5", "--", "20.81", "81.5", "--", 
                "20.81", "--", "14.4", "14.4" )
-   Enduse8 = ( "COMPLIANCE TOTAL", "188.1", "1,352.6", "74.73", "179.7", 
-               "1,419.9", "74.05", "-0.68", "51.0", "51.7" )
+   Enduse8 = ( "COMPLIANCE TOTAL", "188.1", "1,350.6", "74.70", "179.7", 
+               "1,419.9", "74.05", "-0.65", "51.0", "51.7" )
    Enduse9[1] = "Receptacle"
    Enduse9[2] = "217.4"
    Enduse9[3] = "58.7"
@@ -16766,8 +16965,8 @@ EUseSummary   "EUseSummary"
    Enduse14[10] = "--"
    Enduse15[1] = "TOTAL"
    Enduse15[2] = "589.2"
-   Enduse15[3] = "1,411.3"
-   Enduse15[4] = "181.07"
+   Enduse15[3] = "1,409.3"
+   Enduse15[4] = "181.04"
    Enduse15[5] = "554.8"
    Enduse15[6] = "1,478.6"
    Enduse15[7] = "174.07"
@@ -16848,8 +17047,8 @@ clg: 0  htg: 0  'Thermal Zone: Parking Garage'" )
    SimSummary[1] = "Successful (224 warnings)"
    SimSummary[3] = "Successful (224 warnings)"
    PassFail = "FAIL"
-   PctSavingsTDV = -4.02137
-   PctSavingsCmpTDV = -0.918298
+   PctSavingsTDV = -4.00414
+   PctSavingsCmpTDV = -0.877785
    PctSavTDVLbl = "-4.0"
    PctSavCmpTDVLbl = "-0.9"
    MarginkW = -2.3
