@@ -16104,16 +16104,15 @@ AirSeg   "DOAS1 SupAirSeg"
 
 CoilClg   "DOAS1 CoilClg"
    Type = "DirectExpansion"
+   DXEER = 11
+   DXSEER = 14
+   CapTotNetRtd = 60661
    ..
 
 CoilHtg   "DOAS1 CoilHtg"
-   Type = "HeatPump"
-   HtPumpCOP = 4.8
-   HtPumpSuppCoilHtgRef = "DOAS1 SuppCoilHtg"
-   ..
-
-CoilHtg   "DOAS1 SuppCoilHtg"
-   Type = "Resistance"
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   CapTotNetRtd = 46977
    ..
 
 Fan   "DOAS1 Fan"
