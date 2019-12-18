@@ -14,7 +14,7 @@ parameter "supply_fan_cfm", :default => 0
 %>
 
 <%
-if (cooling_capacity >= 45000)
+if (cooling_capacity.to_f >= 45000)
   eer = 11.7
 end
 %>
