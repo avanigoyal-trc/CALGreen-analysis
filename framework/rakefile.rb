@@ -201,9 +201,18 @@ task :results, [:analysis] do |task, args|
   end
 
   analysis_dir = "#{root_dir}/analysis/#{analysis_name}"
+  header = File.read("#{root_dir}/results-header.csv")
 
-  results_path = "#{analysis_dir}/results.csv"
-  query_path = "#{analysis_dir}/query.txt"
-  sql_paths = Dir.glob("#{analysis_dir}/runs/**/instance - ap.sql").sort
-  Modelkit::EnergyPlus.sql(sql_paths, query_path, :output => results_path)
+  File.open("#{analysis_dir}/results.csv", "w") do |line|
+    line.puts(header)  # Write the standard header
+
+    instance_log_paths = Dir.glob("#{analysis_dir}/runs/**/instance.log.csv").sort
+    instance_log_paths.each do |path|
+      case_dir = File.dirname(path)
+      dir_name = "#{File.basename(File.dirname(case_dir))}/#{File.basename(case_dir)}"
+
+      instance_log_csv = File.readlines(path)  # Read entire instance.log.csv file into an Array
+      line.puts("#{dir_name},#{instance_log_csv.last}")
+    end
+  end
 end
