@@ -13,7 +13,7 @@ get_prototype <- function(runtitle){
 
 
 write_results_savings_spreadsheet <- function(run_name){
-  
+  ##run_name: String format, name of the measure. Ie. "hvac" or "hvac_autosizing" 
   
   readin <- read_csv(here::here(paste("Analysis/", run_name, "/results.csv", sep = "")), skip = 2)
   
