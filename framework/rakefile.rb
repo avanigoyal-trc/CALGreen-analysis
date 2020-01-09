@@ -152,7 +152,7 @@ task :compose, [:analysis] do |task, args|
   case_dirs.each do |case_dir|
     baseline_pxv_path = "#{case_dir}/baseline.pxv"
     case_pxv_path = "#{case_dir}/case.pxv"
-    out_path = "#{case_dir}/instance.cibd19"
+    out_path = "#{case_dir}/instance.cibd22"
 
     prototype_name = File.read("#{case_dir}/prototype.txt")
     root_path = "#{root_dir}/prototypes/cbecc-com/#{prototype_name}/root.pxt"
@@ -183,7 +183,7 @@ task :run, [:analysis] do |task, args|
 
   analysis_dir = "#{root_dir}/analysis/#{analysis_name}"
 
-  paths = Dir.glob("#{analysis_dir}/runs/**/instance.cibd19").sort
+  paths = Dir.glob("#{analysis_dir}/runs/**/instance.cibd22").sort
   paths.each do |path|
     puts "  #{File.dirname(path)}"
     system("CALL \"#{cbecc_com_path}\" -pa -nogui \"#{path}\"")

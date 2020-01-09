@@ -1,5 +1,5 @@
 ; Tables for Std model AutoHardSize capacity look-up rules
-TABLE TrmlUnit
+TABLE instance22TrmlUnit
 PropName,BaseName,Type,System,Zone,PriAirFlowMax,PriAirFlowMin,HtgAirFlowMax,ReheatCtrlMthd
 ;,,,,,(cfm),(cfm),( cfm)
 ,"BaseVAV TrmlUnit","VAVReheatBox","BaseSys5 F1","Thermal Zone: F1 Business Center",438.947,87.789,219.474,"DualMaximum"
@@ -15,7 +15,7 @@ PropName,BaseName,Type,System,Zone,PriAirFlowMax,PriAirFlowMin,HtgAirFlowMax,Reh
 ,"DOAS1 TrmlUnit-1","Uncontrolled","DOAS1","Thermal Zone: F2-4 Corridor",1208.250,-99996.000,-99996.000,""
 ,"DOAS1 TrmlUnit-3","Uncontrolled","DOAS1","Thermal Zone: F5 Corridor",402.750,-99996.000,-99996.000,""
 ENDTABLE
-TABLE CoilClg
+TABLE instance22CoilClg
 PropName,BaseName,Type,System,Zone,CapTotNetRtd,CapTotGrossRtd,FluidFlowRtDsgn,DXSEER,DXEER,NumClgStages
 ;,,,,,(Btu/hr),(Btu/hr),( gpm),
 ,"CoilCooling 1","DirectExpansion","ZnSys F2-4 1-Bed Core N","Thermal Zone: F2-4 1-Bed Core N",11202.097,11687.266,-99996.00000,14.000,12.200,-99996
@@ -41,9 +41,9 @@ PropName,BaseName,Type,System,Zone,CapTotNetRtd,CapTotGrossRtd,FluidFlowRtDsgn,D
 ,"CoilCooling 21","DirectExpansion","ZnSys F5 Studio SE","Thermal Zone: F5 Studio SE",8401.572,8765.450,-99996.00000,14.000,12.200,-99996
 ,"CoilCooling 22","DirectExpansion","ZnSys F5 Studio SW","Thermal Zone: F5 Studio SW",8401.572,8765.450,-99996.00000,14.000,12.200,-99996
 ,"BaseSys5 CoilClg","DirectExpansion","BaseSys5 F1","UNDEFINED",566565.000,591103.273,-99996.00000,-99996.000,9.800,2
-,"DOAS1 CoilClg","DirectExpansion","DOAS1","UNDEFINED",48330.000,50423.202,-99996.00000,13.000,10.845,1
+,"DOAS1 CoilClg","DirectExpansion","DOAS1","UNDEFINED",60661.000,63288.265,-99996.00000,14.000,11.000,1
 ENDTABLE
-TABLE CoilHtg
+TABLE instance22CoilHtg
 PropName,BaseName,Type,System,Zone,CapTotNetRtd,CapTotGrossRtd,FluidFlowRtDsgn,FurnAFUE,FurnThrmlEff,
 ;,,,,,(Btu/hr),(Btu/hr),( gpm),
 ,"CoilHtg 1","Furnace","ZnSys F2-4 1-Bed Core N","Thermal Zone: F2-4 1-Bed Core N",9184.240,9184.240,-99996.00000,0.800,0.810
@@ -79,10 +79,9 @@ PropName,BaseName,Type,System,Zone,CapTotNetRtd,CapTotGrossRtd,FluidFlowRtDsgn,F
 ,"BaseVAVBox CoilHtg-8","HotWater","BaseSys5 F1","Thermal Zone: F1 Retail NE",71432.800,71432.800,3.57028,-99996.000,-99996.000
 ,"BaseVAVBox CoilHtg-9","HotWater","BaseSys5 F1","Thermal Zone: F1 Retail SE",51904.300,51904.300,2.59423,-99996.000,-99996.000
 ,"BaseVAVBox CoilHtg-10","HotWater","BaseSys5 F1","Thermal Zone: F1 Retail SW",77052.900,77052.900,3.85118,-99996.000,-99996.000
-,"DOAS1 CoilHtg","HeatPump","DOAS1","UNDEFINED",50746.500,48653.298,-99996.00000,-99996.000,-99996.000
-,"DOAS1 SuppCoilHtg","Resistance","DOAS1","UNDEFINED",35261.568,35261.568,-99996.00000,-99996.000,-99996.000
+,"DOAS1 CoilHtg","Furnace","DOAS1","UNDEFINED",46977.000,46977.000,-99996.00000,0.800,0.810
 ENDTABLE
-TABLE Fan
+TABLE instance22Fan
 PropName,BaseName,CtrlMthd,System,Zone,FlowCap,FlowMin,FlowEff,ModelingMthd,TotStaticPress,MtrBHP,MtrHP,MtrPos,MtrEff
 ;,,,,,(cfm),(cfm),,,(inH2O),(hp),(hp),
 ,"Fan 1","ConstantVolume","ZnSys F2-4 1-Bed Core N","Thermal Zone: F2-4 1-Bed Core N",419.602,-99996.000,0.500,"BrakeHorsePower",1.273,0.168,0.250,"InAirStream",0.855
@@ -112,7 +111,7 @@ PropName,BaseName,CtrlMthd,System,Zone,FlowCap,FlowMin,FlowEff,ModelingMthd,TotS
 ,"BaseSys5 Fan","VariableSpeedDrive","BaseSys5 F1","UNDEFINED",19577.600,5635.186,0.650,"BrakeHorsePower",5.362,25.451,30.000,"InAirStream",0.936
 ,"DOAS1 Fan","ConstantVolume","DOAS1","UNDEFINED",1611.000,-99996.000,0.650,"BrakeHorsePower",1.656,0.647,0.750,"InAirStream",0.855
 ENDTABLE
-TABLE OACtrl
+TABLE instance22OACtrl
 PropName,BaseName,EconoCtrlMthd,System,EconoIntegration
 ;
 ,"BaseSys5 OACtrl","DifferentialDryBulb","BaseSys5 F1","Integrated"

@@ -1,8 +1,8 @@
-RulesetFilename   "T24N_2019.bin"  
+RulesetFilename   "T24N_2022.bin"  
 
 Proj   User: "Mid-Rise Mixed-Use (5-story)"  
-   Ruleset = UDef: "CA 2019 Nonresidential, Vers. 1.0 Alpha (T24N_2019.bin)"  (0)
-   RuleFile = PDef: "T24N_2019.bin"
+   Ruleset = UVal: "CA 2022 Nonresidential, Vers. 1.0 Alpha (T24N_2022.bin)"  (1)
+   RuleFile = PDef: "T24N_2022.bin"
    DevMode = RVal: 0
    BldgEngyModelVersion = UVal: 14
    CreateDate = UVal: 1567115615
@@ -12,7 +12,7 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    SolDistribution = RVal: "FullExterior"  (2)
    NumTimeStepsPerHr = RVal: 4
    PermitScope = PDef: "PermitNonresidentialAll"  (0)
-   StdsVersion = RDef: "Compliance2019"  (2)
+   StdsVersion = RDef: "Compliance2022"  (2)
    PermitMonth = RVal: 7
    PermitDay = RVal: 1
    PermitYear = RVal: 2014
@@ -25,14 +25,14 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    CliZnCounty = PDef: "Alameda"  (0)
    CliZnNum = RVal: 11
    CliZn = RVal: "ClimateZone11"  (11)
-   Lat = RVal: 40.13
+   Lat = RVal: 40.15
    Long = RVal: -122.25
-   Elevation = RVal: 348
+   Elevation = RVal: 351
    BldgTerrain = PDef: "Suburbs"  (2)
    WtrMnTempSchRef = RVal: "WaterMainCZ11"
-   DsgnDBT = RVal: 111.2
-   MCWBT = RVal: 70.3
-   DsgnWBT = RVal: 72.7
+   DsgnDBT = RVal: 104.7
+   MCWBT = RVal: 68.4
+   DsgnWBT = RVal: 72.3
    StAddress = RVal: " - specify - "
    City = RVal: " - specify - "
    State = RVal: "CA"
@@ -85,12 +85,14 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    MechDsgnrPhone = RVal: " - specify - "
    MechDsgnrType = RVal: "- specify -"  (1)
    WeatherStationNum = RVal: 725910
-   WeatherStation = RVal: "RED-BLUFF_725910"  (50)
-   DDWeatherFile = UVal: "C:/Users/agoyal/Documents/CBECC-Com 2019 Data/EPW/RED-BLUFF_725910_CZ2010.ddy"
-   AnnualWeatherFile = UVal: "C:/Users/agoyal/Documents/CBECC-Com 2019 Data/EPW/RED-BLUFF_725910_CZ2010.epw"
+   WeatherStation = RVal: "CTZ11S22A"  (11)
+   DDWeatherFile = UVal: "C:/Users/agoyal/Documents/CBECC-Com 2022 Data/EPW/CTZ11S22A.ddy"
+   AnnualWeatherFile = UVal: "C:/Users/agoyal/Documents/CBECC-Com 2022 Data/EPW/CTZ11S22A.epw"
    HVACAutoSizing = RVal: 1
    SimDsgnDays = RVal: 1
    SimFlag = RVal: 1
+   ClgSizingRat = RVal: 1.15
+   HtgSizingRat = RVal: 1.25
    RunPeriodBeginMonth = RVal: 0
    RunPeriodBeginDay = RVal: 0
    RunPeriodEndMonth = RVal: 0
@@ -115,7 +117,7 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    ExcptCondNoClgSys = UVal: "No"  (2)
    ExcptCondRtdCap = UVal: "No"  (2)
    ExcptCondMinEffCheck = RVal: "No"  (2)
-   ExcptCondFanPress = PDef: "(null)"  (0)
+   ExcptCondFanPress = RVal: "No"  (2)
    ExcptCondWCC = PDef: "(null)"  (0)
    ExcptCondElevEscal = PDef: "(null)"  (0)
    ExcptCondWtrHtrSizing = RVal: "Yes"  (1)
@@ -144,6 +146,7 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    NarrativeDetails = RVal: " - specify - "
    ProjRemarks = RVal: " - specify - "
    OccFrac = RDef: 0.5
+   IsStdModel = RVal: 0
    SimVarsInterval = RVal: "Hourly"  (4)
    SimVarsFlagSetAll = RVal: 0
    SimVarsSite = RVal: 0
@@ -167,6 +170,7 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    HavePVShadeObj = RVal: 0
    AllowBattInps = RVal: 0
    SimBatt = RVal: 0
+   ResBaseSysChange = RVal: 0
    NumZnSys = RVal: 0
    RunTitle = UVal: "Mid-Rise Mixed-Use (5-story)"
    AnalysisType = RVal: "Title24Compliance"  (1)
@@ -183,15 +187,15 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    CompOptDHW = UVal: 1
    ZEROCode = RVal: 0
    ZEROCodeEmissionMult = RVal: 0.128993
-   VentStd = RVal: "T24-2019"  (1)
+   VentStd = RVal: "T24-2022"  (1)
    VentMult = RDef: 1
    RuleReportType = PDef: "None"  (0)
    RuleReportFileAppend = PDef: ".csv"  (0)
    RptGenUIVer = RVal: "1"
    RptGenUIApp = RVal: "CBECC-Com"
-   CompManagerVersion = RVal: "BEMCmpMgr 2019.1.0 (5962)"
-   SoftwareVersion = UVal: "CBECC-Com 2019.1.0 (1079)"
-   ProjFileName = UVal: "instance.cibd19"
+   CompManagerVersion = RVal: "BEMCmpMgr 2022.0.1 RV (6107)"
+   SoftwareVersion = UVal: "CBECC-Com 2022.0.1 RV (1113)"
+   ProjFileName = UVal: "instance.cibd22"
    CompReportNum = RVal: 0
    ResultsCurrentMessage = UVal: "(not current)"
    PropHasNoClgZns = RVal: 0
@@ -208,71 +212,70 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    CALGreenNonResBldg = RVal: 1
    CALGreenCompMarginTier1 = RVal: 1
    CALGreenCompMarginTier2 = RVal: 1
-   CompPathEnv = PDef: "Performance"  (1)
-   CompPathMech = PDef: "Performance"  (1)
-   CompPathDHW = PDef: "Performance"  (1)
-   CompPathLtg = PDef: "Performance"  (1)
-   CompPathKit = PDef: "NA"  (3)
-   CompPathComputerRm = PDef: "NA"  (3)
-   CompPathLab = PDef: "NA"  (3)
-   LtgUncondComp = PDef: "NA"  (2)
-   LtgOutdrComp = PDef: "NA"  (2)
-   LtgSignComp = PDef: "NA"  (2)
-   SolThrmlComp = PDef: "NA"  (2)
-   SimpleHVACMandComp = PDef: "NA"  (2)
-   ComplexHVACMandComp = PDef: "NA"  (2)
-   ElecMandComp = PDef: "NA"  (2)
-   SolReadyMandComp = PDef: "NA"  (2)
-   ParkingGarageMandComp = PDef: "NA"  (2)
-   ComRfrgMandComp = PDef: "NA"  (2)
-   RfrgWarehouseMandComp = PDef: "NA"  (2)
-   CompressedAirMandComp = PDef: "NA"  (2)
-   ProcBlrMandComp = PDef: "NA"  (2)
-   CommKitchenMandComp = PDef: "NA"  (2)
-   ComputerRoomMandComp = PDef: "NA"  (2)
-   LabExhaustMandComp = PDef: "NA"  (2)
-   ElevLtgVentMandComp = PDef: "NA"  (2)
-   EscalSpdCtrlMandComp = PDef: "NA"  (2)
-   NRCIEnv01E = RDef: 0
-   NRCAEnv02F = RDef: 0
-   NRCILti01E = RDef: 0
-   NRCILti02E = RDef: 0
-   NRCILti03E = RDef: 0
+   CompPathEnv = RVal: "Performance"  (1)
+   CompPathMech = RVal: "Performance"  (1)
+   CompPathDHW = RVal: "Performance"  (1)
+   CompPathLtg = RVal: "Performance"  (1)
+   SolThrmlComp = RVal: "Performance"  (1)
+   CompPathKit = RVal: "NA"  (3)
+   CompPathComputerRm = RVal: "NA"  (3)
+   CompPathLab = RVal: "NA"  (3)
+   LtgUncondComp = RDef: "NA"  (2)
+   LtgOutdrComp = RDef: "NA"  (2)
+   LtgSignComp = RDef: "NA"  (2)
+   SimpleHVACMandComp = RDef: "NA"  (2)
+   ComplexHVACMandComp = RDef: "NA"  (2)
+   ElecMandComp = RDef: "NA"  (2)
+   SolReadyMandComp = RDef: "NA"  (2)
+   ParkingGarageMandComp = RDef: "NA"  (2)
+   ComRfrgMandComp = RDef: "NA"  (2)
+   RfrgWarehouseMandComp = RDef: "NA"  (2)
+   CompressedAirMandComp = RDef: "NA"  (2)
+   ProcBlrMandComp = RDef: "NA"  (2)
+   CommKitchenMandComp = RDef: "NA"  (2)
+   ComputerRoomMandComp = RDef: "NA"  (2)
+   LabExhaustMandComp = RDef: "NA"  (2)
+   ElevLtgVentMandComp = RDef: "NA"  (2)
+   EscalSpdCtrlMandComp = RDef: "NA"  (2)
+   NRCIEnv01E = RDef: 1
+   NRCAEnv02F = RDef: 1
+   NRCILti01E = RDef: 1
+   NRCILti02E = RDef: 1
    NRCILti04E = RDef: 0
    NRCILti05E = RDef: 0
    NRCILti06E = RDef: 0
-   NRCALti02A = RDef: 0
-   NRCALti03A = RDef: 0
-   NRCALti04A = RDef: 0
+   NRCALti02A = RDef: 1
+   NRCALti03A = RDef: 1
+   NRCALti04A = RDef: 1
    NRCALti05A = RDef: 0
-   NRCIMch01E = RDef: 0
-   NRCAMch02A = RVal: 0
-   NRCAMch03A = RVal: 0
+   NRCIMch01E = RDef: 1
+   NRCAMch02A = RVal: 1
+   NRCAMch03A = RVal: 1
    NRCAMch04H = RVal: 0
-   NRCAMch05A = RVal: 0
-   NRCAMch06A = RVal: 0
-   NRCAMch07A = RVal: 0
-   NRCAMch08A = RVal: 0
+   NRCAMch05A = RVal: 1
+   NRCAMch06A = RVal: 1
+   NRCAMch07A = RVal: 1
+   NRCAMch08A = RVal: 1
    NRCAMch09A = RVal: 0
    NRCAMch10A = RVal: 0
-   NRCAMch11A = RVal: 0
-   NRCAMch12A = RVal: 0
-   NRCAMch13A = RVal: 0
+   NRCAMch11A = RVal: 1
+   NRCAMch12A = RVal: 1
+   NRCAMch13A = RVal: 1
    NRCAMch14A = RVal: 0
    NRCAMch15A = RVal: 0
    NRCAMch16A = RVal: 0
    NRCAMch17A = RVal: 0
-   NRCAMch18A = RVal: 0
-   NRCAMch19A = RVal: 0
+   NRCAMch18A = RVal: 1
+   NRCAMch19A = RVal: 1
    NRCVMch04H = RDef: 0
-   NRCIPlb01E = RDef: 0
-   NRCIPlb02E = RDef: 0
+   NRCVMch27H = RDef: 1
+   NRCVMch32H = RDef: 1
+   NRCIPlb01E = RDef: 1
+   NRCIPlb02E = RDef: 1
    NRCIPlb03E = RDef: 0
-   NRCIPlb21E = RDef: 0
-   NRCIPlb22E = RDef: 0
    NRCVPlb21H = RDef: 0
    NRCVPlb22H = RDef: 0
-   NRCISth01E = RDef: 0
+   NRCISth01E = RDef: 1
    NRCIElc01E = RDef: 0
    NRCISpv01E = RDef: 0
    NRCILto01E = RDef: 0
@@ -290,6 +293,8 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    NRCAPrc08F = RDef: 0
    NRCAPrc12F = RDef: 0
    NRCAPrc13F = RDef: 0
+   NRCAPrc14F = RDef: 0
+   NRCAPrc15F = RDef: 0
    MtlBldgWallUA[1] = RVal: 0
    MtlBldgWallUA[2] = RVal: 0
    MtlBldgWallUA[3] = RVal: 0
@@ -446,12 +451,20 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    DefaultOptionInp = PDef: "Entire Model"  (3)
    DefaultOptionObj = PDef: "Entire Model"  (3)
    DefaultOptionDone = PDef: "Entire Model"  (3)
+   NumResultsSets = RVal: 1
+   ResultSetName[1] = RVal: "Pol  0% RetAdd NoLeak"
+   TDVMultTableName[1] = RVal: "TDVbyCZandFuel_Pol-0_NoLeak"
+   ElecDemMultTableName[1] = RVal: "CANonResDemandMultipliers:DemMult"
+   CO2EmissionsElecTable[1] = RVal: "CarbonbyCZandFuel_NoLeak"
+   CO2EmissionsNatGasTable[1] = RVal: "CarbonbyCZandFuel_NoLeak"
+   CO2EmissionsOtherTable[1] = RVal: "CarbonbyCZandFuel_NoLeak"
+   SrcEngyMultTableName[1] = RVal: "SrcbyCZandFuel_NoLeak"
    TDSColumnNum[1] = RVal: -1
    TDSMult[2] = RVal: 1
    TDSMult[3] = RVal: 1
-   RuleRepoRev = RVal: 5962
-   EngyCodeYearNum = RVal: 2019
-   EngyCodeYear = RVal: "2019"
+   RuleRepoRev = RVal: 6107
+   EngyCodeYearNum = RVal: 2022
+   EngyCodeYear = RVal: "2022"
    CSEName = RVal: "CSE19"
    RptGenCompReport = RVal: "NRCC_PRF_0119"
    RptGenStdReport = RVal: "NRCC_STD_0119"
@@ -484,7 +497,7 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    IsAltOnly = RVal: 0
    IsAdd = RVal: 0
    RptFuelUseAs = RVal: -1
-   StdsVersionYr = RVal: 2019
+   StdsVersionYr = RVal: 2022
    PermitDate = RVal: 1404198000
    UnmetLdHrsFAQLink = RVal: "http://bees.archenergy.com/faq_hvac.html#umlh"
    DebugScreen = UVal: 1
@@ -498,22 +511,27 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    NumThrmlZnCond = RVal: 34
    NumThrmlZnCondWithMult = RVal: 102
    XFormFlag = RVal: 2
+   CO2EmissionsElecConvFac = RVal: 1
+   CO2EmissionsNatGasConvFac = RVal: 0.1
+   CO2EmissionsOtherConvFac = RVal: 0.1
+   CO2EmissionsResultsUnit = RVal: "tonne"
+   CO2EmissionsResultsMult = RVal: 1
+   CO2EmissionsResultsDecPrec = RVal: 2
    ZipCodeMsg = RVal: "Enter zip code to default CZ and weather file"
-   WeatherFileAppend = RVal: "_CZ2010"
    HasBaseHVAC = RVal: 1
-   ClgSizingRat = RVal: 1.15
-   HtgSizingRat = RVal: 1.25
-   ModelName = RVal: ""
-   IsStdModel = RVal: 0
+   ModelName = RVal: "NoName"
+   TblName = RVal: "NoName"
    AvgStateElecCostMsg = RVal: "Electricity cost is equal to the California state average cost"
    AvgStateOtherFuelCostMsg = RVal: " "
+   HavePVBattSim = RVal: 0
    WoodFrmRPerIn = RVal: 0.99
    DefaultedDwellingUnitArea = RVal: 44
    ExhVentMultLimRes = RVal: 1.2
-   VentTolMaxLimRes = RVal: 0.2
-   VentTolMinLimRes = RVal: 0.05
-   ExhTolMaxLimRes = RVal: 0.2
-   ExhTolMinLimRes = RVal: 0.1
+   VentTolMaxLimRes = RVal: 0.5
+   VentTolMinLimRes = RVal: 0.03
+   ExhTolMaxLimRes = RVal: 0.5
+   ExhTolMinLimRes = RVal: 0.03
+   BalancedVentTolRes = RVal: 0.3
    OccDensForReqDCV = RVal: 25
    BldgTypeScreenVal = RVal: 0
    IsResAndComboUnitCnt = RVal: 0
@@ -570,8 +588,11 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    WinOvrhngFinsGraphic = RVal: "WinOvrhngFins.jpg"
    NumWinsHavingShades = RVal: 0
    BaseHVACSameAsPropHVAC = RVal: 0
+   HighRiseResLivingUnitCnt = RVal: 88
+   HotelMotelGuestRmCnt = RVal: 0
+   ResDHWSysIsCentral = RVal: 1
+   ResDHWSysIsIndividual = RVal: 0
    StdsYr = RVal: 2019
-   HrlyElecDemMultTableAndColumnName = RVal: "CANonResDemandMultipliers:DemMult"
    CALGreenScreenVal = RVal: 1
    ..
 
@@ -6507,6 +6528,7 @@ FenCons   User: "Res Fixed Window"
    VTPenaltyMSG = RVal: " "
    UFactorLimitFlag = RVal: 0
    DebugInsideConvCoefUsed = RVal: 0
+   IsNFRCRtd = RVal: 1
    ..
 
 FenCons   User: "Nonres Fixed Window"  
@@ -6545,6 +6567,7 @@ FenCons   User: "Nonres Fixed Window"
    VTPenaltyMSG = RVal: " "
    UFactorLimitFlag = RVal: 0
    DebugInsideConvCoefUsed = RVal: 0
+   IsNFRCRtd = RVal: 1
    ..
 
 SpcFuncDefaults   User: "Retail Space"  
@@ -6552,10 +6575,11 @@ SpcFuncDefaults   User: "Retail Space"
    FuncSchGrp = RVal: "Retail"  (11)
    OccDens = RVal: 16.67
    OccFrac = RDef: 0.5
+   OccDensSim = RVal: 8.335
    OccSensHtRt = RVal: 250
    OccLatHtRt = RVal: 200
    VentSpcFunc = RDef: "Retail - Sales"  (83)
-   VentPerPerson = RDef: 0
+   VentPerPerson = RDef: 15
    VentPerArea = RDef: 0.25
    VentACH = RDef: 0
    VentPerSpc = RVal: 0
@@ -6589,6 +6613,8 @@ SpcFuncDefaults   User: "Retail Space"
    HasNoInternalLds = RVal: 0
    OccClass = RVal: "Nonresidential"  (1)
    IsRes = RVal: 0
+   VentOccDensSim = RVal: 16.6667
+   CodeVentPerAreaForDCV = RVal: 0.2
    ..
 
 SpcFuncDefaults   User: "Residential Space"  
@@ -6596,6 +6622,7 @@ SpcFuncDefaults   User: "Residential Space"
    FuncSchGrp = RVal: "ResidentialLiving"  (8)
    OccDens = RVal: 5
    OccFrac = RDef: 0.5
+   OccDensSim = RVal: 2.5
    OccSensHtRt = RVal: 245
    OccLatHtRt = RVal: 155
    VentSpcFunc = PDef: "NA"  (96)
@@ -6630,6 +6657,8 @@ SpcFuncDefaults   User: "Residential Space"
    HasNoInternalLds = RVal: 0
    OccClass = RVal: "Residential"  (2)
    IsRes = RVal: 1
+   VentOccDensSim = RVal: 0
+   CodeVentPerAreaForDCV = RVal: 0
    ..
 
 SpcFuncDefaults   User: "Elevator"  
@@ -6637,6 +6666,7 @@ SpcFuncDefaults   User: "Elevator"
    FuncSchGrp = RVal: "Warehouse"  (13)
    OccDens = RVal: 3
    OccFrac = RDef: 0.5
+   OccDensSim = RVal: 1.5
    OccSensHtRt = RVal: 250
    OccLatHtRt = RVal: 250
    VentSpcFunc = UVal: "General - Unoccupied"  (51)
@@ -6674,6 +6704,8 @@ SpcFuncDefaults   User: "Elevator"
    HasNoInternalLds = RVal: 0
    OccClass = RVal: "Nonresidential"  (1)
    IsRes = RVal: 0
+   VentOccDensSim = RVal: 0
+   CodeVentPerAreaForDCV = RVal: 0
    ..
 
 SpcFuncDefaults   User: "Corridor Space"  
@@ -6681,10 +6713,11 @@ SpcFuncDefaults   User: "Corridor Space"
    FuncSchGrp = RVal: "Office"  (6)
    OccDens = RVal: 10
    OccFrac = RDef: 0.5
+   OccDensSim = RVal: 5
    OccSensHtRt = RVal: 250
    OccLatHtRt = RVal: 250
    VentSpcFunc = RDef: "General - Corridors"  (49)
-   VentPerPerson = RDef: 0
+   VentPerPerson = RDef: 15
    VentPerArea = RDef: 0.15
    VentACH = RDef: 0
    VentPerSpc = RVal: 0
@@ -6717,6 +6750,8 @@ SpcFuncDefaults   User: "Corridor Space"
    HasNoInternalLds = RVal: 0
    OccClass = RVal: "Nonresidential"  (1)
    IsRes = RVal: 0
+   VentOccDensSim = RVal: 0
+   CodeVentPerAreaForDCV = RVal: 0.15
    ..
 
 Bldg   User: "Building 1"  
@@ -6750,8 +6785,8 @@ Bldg   User: "Building 1"
    TotFlrAreaNew = RVal: 0
    PlantClgCap = RDef: 0
    PlantHtgCap = RDef: 565565
-   CoilClgCap = RDef: 1.85086e+06
-   CoilHtgCap = RDef: 1.09724e+06
+   CoilClgCap = RDef: 1.86319e+06
+   CoilHtgCap = RDef: 1.0603e+06
    CoilClgCapHydronic = RDef: 0
    CoilHtgCapHydronic = RDef: 565565
    CondExtWallArea = RVal: 42300
@@ -6788,24 +6823,6 @@ Bldg   User: "Building 1"
    CondTMBaseGenlPwr = RVal: 0
    UncondTMBaseGenlPwr = RVal: 0
    OrientationRpt = RVal: "(N) 0 deg"
-   NRCAMch02A = RVal: 0
-   NRCAMch03A = RVal: 0
-   NRCAMch04H = RVal: 0
-   NRCAMch05A = RVal: 0
-   NRCAMch06A = RVal: 0
-   NRCAMch07A = RVal: 0
-   NRCAMch08A = RVal: 0
-   NRCAMch09A = RVal: 0
-   NRCAMch10A = RVal: 0
-   NRCAMch11A = RVal: 0
-   NRCAMch12A = RVal: 0
-   NRCAMch13A = RVal: 0
-   NRCAMch14A = RVal: 0
-   NRCAMch15A = RVal: 0
-   NRCAMch16A = RVal: 0
-   NRCAMch17A = RVal: 0
-   NRCAMch18A = RVal: 0
-   NRCAMch19A = RVal: 0
    HasAtriumGT55Ft = RVal: 0
    HighRiseResFlrArea = RVal: 79440
    HotelMotelGuestRmFlrArea = RVal: 0
@@ -6974,8 +6991,8 @@ Bldg   User: "Building 1"
    ResFlrAreaExisting = RVal: 0
    TotCondFlrAreaExisting = RVal: 0
    TotCondVolExisting = RVal: 0
-   CoilClgCapNonHydronicNew = RVal: 1.85086e+06
-   CoilHtgCapNonHydronicNew = RVal: 1.09724e+06
+   CoilClgCapNonHydronicNew = RVal: 1.86319e+06
+   CoilHtgCapNonHydronicNew = RVal: 1.0603e+06
    CoilClgCapHydronicNew = RVal: 0
    CoilHtgCapHydronicNew = RVal: 565565
    CoilClgCapHydronicExisting = RVal: 0
@@ -6986,14 +7003,32 @@ Bldg   User: "Building 1"
    CoilHtgCapNonHydronicExisting = RVal: 0
    PlantClgCapExisting = RVal: 0
    PlantHtgCapExisting = RVal: 0.98
-   TotClgCap = RVal: 1.85086e+06
-   TotHtgCap = RVal: 1.66281e+06
+   TotClgCap = RVal: 1.86319e+06
+   TotHtgCap = RVal: 1.62587e+06
    DeltaClgCapBldgRat = RVal: 1
    DeltaHtgCapBldgRat = RVal: 0.999999
    DeltaClgCapAltAddRat = RVal: 1
    DeltaHtgCapAltAddRat = RVal: 1
    DeltaCapBldgRatThreshold = RVal: 0.25
    DeltaCapAltAddRatThreshold = RVal: 0.9
+   NRCAMch02A = RVal: 25
+   NRCAMch03A = RVal: 23
+   NRCAMch04H = RVal: 0
+   NRCAMch05A = RVal: 1
+   NRCAMch06A = RVal: 1
+   NRCAMch07A = RVal: 1
+   NRCAMch08A = RVal: 0
+   NRCAMch09A = RVal: 0
+   NRCAMch10A = RVal: 0
+   NRCAMch11A = RVal: 2
+   NRCAMch12A = RVal: 1
+   NRCAMch13A = RVal: 3
+   NRCAMch14A = RVal: 0
+   NRCAMch15A = RVal: 0
+   NRCAMch16A = RVal: 0
+   NRCAMch17A = RVal: 0
+   NRCAMch18A = RVal: 2
+   NRCAMch19A = RVal: 2
    TreeDescrip = RVal: "6 stories / 113,100 cond ft2 / Orientation: (N) 0 deg"
    ..
 
@@ -7142,6 +7177,7 @@ Story   User: "Building Story Parking Garage"
    GenVentFlow = RVal: 0
    GenExhFlow = RVal: 0
    BaseHVACAreaForFlrSys = RVal: 0
+   BaseHVACAreaForLabFlrSys = RVal: 0
    NonResBaseFirstHrCap = RVal: 0
    ResBaseFirstHrCap = RVal: 0
    TotFlrAreaNewWithMult = RVal: 27900
@@ -7371,7 +7407,7 @@ Spc   User: "Parking Garage"
    HaveResSpcDHWFeatures[5] = RVal: 0
    HaveResSpcDHWFeatures[6] = RVal: 0
    NumResDWHRSysDevs = RVal: 0
-   BaseSysNum = RVal: 999
+   BaseSysNum = RVal: 0
    AreaPolyLp = RVal: 27900
    IsCond = RVal: 0
    IsPlenumSup = RVal: 0
@@ -7473,8 +7509,7 @@ Spc   User: "Parking Garage"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -7789,6 +7824,12 @@ Spc   User: "Parking Garage"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "Unconditioned, 27,900 ft2 -> Zn: Thermal Zone: Parking Garage, New"
    ..
 
@@ -8421,6 +8462,7 @@ Story   User: "Building Story Nonresidential"
    GenExhFlow = RVal: 0
    BaseHVACAreaForFlrSys = RVal: 22620
    BaseFlrSysRef = RVal: "BaseAirSys5"
+   BaseHVACAreaForLabFlrSys = RVal: 0
    NonResBaseFirstHrCap = RVal: 32.7224
    ResBaseFirstHrCap = RVal: 0
    TotFlrAreaNewWithMult = RVal: 22620
@@ -8757,8 +8799,7 @@ Spc   User: "F1 Business Center"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 33.3333
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -9084,6 +9125,12 @@ Spc   User: "F1 Business Center"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 360 ft2 -> Zn: Thermal Zone: F1 Business Center, New"
    ..
 
@@ -9835,7 +9882,7 @@ Spc   User: "F1 Corridor"
    VentPerArea = RDef: 0.15
    VentACH = RVal: 0
    VentPerSpc = RVal: 0
-   CodeOtherVentPerPerson = RVal: 0
+   CodeOtherVentPerPerson = RVal: 15
    CodeOtherVentPerArea = RVal: 0.15
    CodeOtherVentACH = RVal: 0
    CodeOtherVentPerSpc = RVal: 0
@@ -9986,8 +10033,7 @@ Spc   User: "F1 Corridor"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -10313,6 +10359,12 @@ Spc   User: "F1 Corridor"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 1
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,485 ft2 -> Zn: Thermal Zone: F1 Corridor, New"
    ..
 
@@ -12646,8 +12698,7 @@ Spc   User: "F1 Lounge"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 33.3333
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -12973,6 +13024,12 @@ Spc   User: "F1 Lounge"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,050 ft2 -> Zn: Thermal Zone: F1 Lounge, New"
    ..
 
@@ -14385,8 +14442,7 @@ Spc   User: "F1 Elevator Core"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -14702,6 +14758,12 @@ Spc   User: "F1 Elevator Core"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "IndirectlyConditioned, 25 ft2 -> Zn: Thermal Zone: F1 Corridor, New"
    ..
 
@@ -15384,8 +15446,7 @@ Spc   User: "F1 Elevator N"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -15701,6 +15762,12 @@ Spc   User: "F1 Elevator N"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "IndirectlyConditioned, 25 ft2 -> Zn: Thermal Zone: F1 Corridor, New"
    ..
 
@@ -16301,8 +16368,7 @@ Spc   User: "F1 Elevator S"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -16618,6 +16684,12 @@ Spc   User: "F1 Elevator S"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "IndirectlyConditioned, 25 ft2 -> Zn: Thermal Zone: F1 Corridor, New"
    ..
 
@@ -17225,8 +17297,7 @@ Spc   User: "F1 Fitness Center"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 33.3333
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -17552,6 +17623,12 @@ Spc   User: "F1 Fitness Center"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 900 ft2 -> Zn: Thermal Zone: F1 Fitness Center, New"
    ..
 
@@ -18370,8 +18447,7 @@ Spc   User: "F1 Leasing Office"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -18697,6 +18773,12 @@ Spc   User: "F1 Leasing Office"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 345 ft2 -> Zn: Thermal Zone: F1 Leasing Office, New"
    ..
 
@@ -19587,8 +19669,7 @@ Spc   User: "F1 Mechanical Room"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -19904,6 +19985,12 @@ Spc   User: "F1 Mechanical Room"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 432 ft2 -> Zn: Thermal Zone: F1 Mechanical Room, New"
    ..
 
@@ -20445,7 +20532,7 @@ Spc   User: "F1 Retail N Core"
    VentPerArea = RDef: 0.25
    VentACH = RVal: 0
    VentPerSpc = RVal: 0
-   CodeOtherVentPerPerson = RVal: 0
+   CodeOtherVentPerPerson = RVal: 15
    CodeOtherVentPerArea = RVal: 0.25
    CodeOtherVentACH = RVal: 0
    CodeOtherVentPerSpc = RVal: 0
@@ -20596,8 +20683,7 @@ Spc   User: "F1 Retail N Core"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 16.6667
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -20923,6 +21009,12 @@ Spc   User: "F1 Retail N Core"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,665 ft2 -> Zn: Thermal Zone: F1 Retail N-NW, New"
    ..
 
@@ -21560,7 +21652,7 @@ Spc   User: "F1 Retail NE Core"
    VentPerArea = RDef: 0.25
    VentACH = RVal: 0
    VentPerSpc = RVal: 0
-   CodeOtherVentPerPerson = RVal: 0
+   CodeOtherVentPerPerson = RVal: 15
    CodeOtherVentPerArea = RVal: 0.25
    CodeOtherVentACH = RVal: 0
    CodeOtherVentPerSpc = RVal: 0
@@ -21711,8 +21803,7 @@ Spc   User: "F1 Retail NE Core"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 16.6667
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -22038,6 +22129,12 @@ Spc   User: "F1 Retail NE Core"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,440 ft2 -> Zn: Thermal Zone: F1 Retail NE, New"
    ..
 
@@ -22708,7 +22805,7 @@ Spc   User: "F1 Retail NE Inner"
    VentPerArea = RDef: 0.25
    VentACH = RVal: 0
    VentPerSpc = RVal: 0
-   CodeOtherVentPerPerson = RVal: 0
+   CodeOtherVentPerPerson = RVal: 15
    CodeOtherVentPerArea = RVal: 0.25
    CodeOtherVentACH = RVal: 0
    CodeOtherVentPerSpc = RVal: 0
@@ -22859,8 +22956,7 @@ Spc   User: "F1 Retail NE Inner"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 16.6667
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -23186,6 +23282,12 @@ Spc   User: "F1 Retail NE Inner"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,440 ft2 -> Zn: Thermal Zone: F1 Retail NE, New"
    ..
 
@@ -23692,7 +23794,7 @@ Spc   User: "F1 Retail NE Outer"
    VentPerArea = RDef: 0.25
    VentACH = RVal: 0
    VentPerSpc = RVal: 0
-   CodeOtherVentPerPerson = RVal: 0
+   CodeOtherVentPerPerson = RVal: 15
    CodeOtherVentPerArea = RVal: 0.25
    CodeOtherVentACH = RVal: 0
    CodeOtherVentPerSpc = RVal: 0
@@ -23843,8 +23945,7 @@ Spc   User: "F1 Retail NE Outer"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 16.6667
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -24170,6 +24271,12 @@ Spc   User: "F1 Retail NE Outer"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 1
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,440 ft2 -> Zn: Thermal Zone: F1 Retail NE, New"
    ..
 
@@ -24887,7 +24994,7 @@ Spc   User: "F1 Retail NW Inner Core"
    VentPerArea = RDef: 0.25
    VentACH = RVal: 0
    VentPerSpc = RVal: 0
-   CodeOtherVentPerPerson = RVal: 0
+   CodeOtherVentPerPerson = RVal: 15
    CodeOtherVentPerArea = RVal: 0.25
    CodeOtherVentACH = RVal: 0
    CodeOtherVentPerSpc = RVal: 0
@@ -25038,8 +25145,7 @@ Spc   User: "F1 Retail NW Inner Core"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 16.6667
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -25365,6 +25471,12 @@ Spc   User: "F1 Retail NW Inner Core"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,440 ft2 -> Zn: Thermal Zone: F1 Retail N-NW, New"
    ..
 
@@ -25953,7 +26065,7 @@ Spc   User: "F1 Retail NW Outer"
    VentPerArea = RDef: 0.25
    VentACH = RVal: 0
    VentPerSpc = RVal: 0
-   CodeOtherVentPerPerson = RVal: 0
+   CodeOtherVentPerPerson = RVal: 15
    CodeOtherVentPerArea = RVal: 0.25
    CodeOtherVentACH = RVal: 0
    CodeOtherVentPerSpc = RVal: 0
@@ -26104,8 +26216,7 @@ Spc   User: "F1 Retail NW Outer"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 16.6667
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -26431,6 +26542,12 @@ Spc   User: "F1 Retail NW Outer"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 1
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,440 ft2 -> Zn: Thermal Zone: F1 Retail N-NW, New"
    ..
 
@@ -27230,7 +27347,7 @@ Spc   User: "F1 Retail NW Outer Core"
    VentPerArea = RDef: 0.25
    VentACH = RVal: 0
    VentPerSpc = RVal: 0
-   CodeOtherVentPerPerson = RVal: 0
+   CodeOtherVentPerPerson = RVal: 15
    CodeOtherVentPerArea = RVal: 0.25
    CodeOtherVentACH = RVal: 0
    CodeOtherVentPerSpc = RVal: 0
@@ -27381,8 +27498,7 @@ Spc   User: "F1 Retail NW Outer Core"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 16.6667
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -27708,6 +27824,12 @@ Spc   User: "F1 Retail NW Outer Core"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,440 ft2 -> Zn: Thermal Zone: F1 Retail N-NW, New"
    ..
 
@@ -28214,7 +28336,7 @@ Spc   User: "F1 Retail SE Bottom"
    VentPerArea = RDef: 0.25
    VentACH = RVal: 0
    VentPerSpc = RVal: 0
-   CodeOtherVentPerPerson = RVal: 0
+   CodeOtherVentPerPerson = RVal: 15
    CodeOtherVentPerArea = RVal: 0.25
    CodeOtherVentACH = RVal: 0
    CodeOtherVentPerSpc = RVal: 0
@@ -28365,8 +28487,7 @@ Spc   User: "F1 Retail SE Bottom"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 16.6667
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -28692,6 +28813,12 @@ Spc   User: "F1 Retail SE Bottom"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 1
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,440 ft2 -> Zn: Thermal Zone: F1 Retail SE, New"
    ..
 
@@ -29702,7 +29829,7 @@ Spc   User: "F1 Retail SE Top"
    VentPerArea = RDef: 0.25
    VentACH = RVal: 0
    VentPerSpc = RVal: 0
-   CodeOtherVentPerPerson = RVal: 0
+   CodeOtherVentPerPerson = RVal: 15
    CodeOtherVentPerArea = RVal: 0.25
    CodeOtherVentACH = RVal: 0
    CodeOtherVentPerSpc = RVal: 0
@@ -29853,8 +29980,7 @@ Spc   User: "F1 Retail SE Top"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 16.6667
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -30180,6 +30306,12 @@ Spc   User: "F1 Retail SE Top"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 1
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,440 ft2 -> Zn: Thermal Zone: F1 Retail SE, New"
    ..
 
@@ -30897,7 +31029,7 @@ Spc   User: "F1 Retail SW Bottom"
    VentPerArea = RDef: 0.25
    VentACH = RVal: 0
    VentPerSpc = RVal: 0
-   CodeOtherVentPerPerson = RVal: 0
+   CodeOtherVentPerPerson = RVal: 15
    CodeOtherVentPerArea = RVal: 0.25
    CodeOtherVentACH = RVal: 0
    CodeOtherVentPerSpc = RVal: 0
@@ -31048,8 +31180,7 @@ Spc   User: "F1 Retail SW Bottom"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 16.6667
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -31375,6 +31506,12 @@ Spc   User: "F1 Retail SW Bottom"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 1
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,440 ft2 -> Zn: Thermal Zone: F1 Retail SW, New"
    ..
 
@@ -32385,7 +32522,7 @@ Spc   User: "F1 Retail SW Core"
    VentPerArea = RDef: 0.25
    VentACH = RVal: 0
    VentPerSpc = RVal: 0
-   CodeOtherVentPerPerson = RVal: 0
+   CodeOtherVentPerPerson = RVal: 15
    CodeOtherVentPerArea = RVal: 0.25
    CodeOtherVentACH = RVal: 0
    CodeOtherVentPerSpc = RVal: 0
@@ -32536,8 +32673,7 @@ Spc   User: "F1 Retail SW Core"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 16.6667
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -32863,6 +32999,12 @@ Spc   User: "F1 Retail SW Core"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 1
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,440 ft2 -> Zn: Thermal Zone: F1 Retail SW, New"
    ..
 
@@ -33662,7 +33804,7 @@ Spc   User: "F1 Retail SW Top"
    VentPerArea = RDef: 0.25
    VentACH = RVal: 0
    VentPerSpc = RVal: 0
-   CodeOtherVentPerPerson = RVal: 0
+   CodeOtherVentPerPerson = RVal: 15
    CodeOtherVentPerArea = RVal: 0.25
    CodeOtherVentACH = RVal: 0
    CodeOtherVentPerSpc = RVal: 0
@@ -33813,8 +33955,7 @@ Spc   User: "F1 Retail SW Top"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 16.6667
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -34140,6 +34281,12 @@ Spc   User: "F1 Retail SW Top"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 1
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,548 ft2 -> Zn: Thermal Zone: F1 Retail SW, New"
    ..
 
@@ -35109,8 +35256,7 @@ Spc   User: "F1 Stairs E"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -35436,6 +35582,12 @@ Spc   User: "F1 Stairs E"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 180 ft2 -> Zn: Thermal Zone: F1 Corridor, New"
    ..
 
@@ -36089,8 +36241,7 @@ Spc   User: "F1 Stairs W"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -36416,6 +36567,12 @@ Spc   User: "F1 Stairs W"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 180 ft2 -> Zn: Thermal Zone: F1 Corridor, New"
    ..
 
@@ -36899,6 +37056,7 @@ Story   User: "Building Story Residential Floors 2-4"
    GenExhFlow = RVal: 0
    BaseHVACAreaForFlrSys = RVal: 2760
    BaseFlrSysRef = RVal: "BaseAirSys5-2"
+   BaseHVACAreaForLabFlrSys = RVal: 0
    NonResBaseFirstHrCap = RVal: 1.62135
    ResBaseFirstHrCap = RVal: 0
    TotFlrAreaNewWithMult = RVal: 67860
@@ -37255,8 +37413,7 @@ Spc   User: "F2-4 1-Bed Core N"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -37583,6 +37740,12 @@ Spc   User: "F2-4 1-Bed Core N"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 720 ft2 -> Zn: Thermal Zone: F2-4 1-Bed Core N, New"
    ..
 
@@ -38833,8 +38996,7 @@ Spc   User: "F2-4 1-Bed Core NE"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -39161,6 +39323,12 @@ Spc   User: "F2-4 1-Bed Core NE"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 720 ft2 -> Zn: Thermal Zone: F2-4 1-Bed Core East, New"
    ..
 
@@ -40247,8 +40415,7 @@ Spc   User: "F2-4 1-Bed Core NW"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -40575,6 +40742,12 @@ Spc   User: "F2-4 1-Bed Core NW"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 720 ft2 -> Zn: Thermal Zone: F2-4 1-Bed Core West, New"
    ..
 
@@ -41673,8 +41846,7 @@ Spc   User: "F2-4 1-Bed Core SE"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -42001,6 +42173,12 @@ Spc   User: "F2-4 1-Bed Core SE"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 720 ft2 -> Zn: Thermal Zone: F2-4 1-Bed Core East, New"
    ..
 
@@ -42923,8 +43101,7 @@ Spc   User: "F2-4 1-Bed Core SW"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -43251,6 +43428,12 @@ Spc   User: "F2-4 1-Bed Core SW"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 720 ft2 -> Zn: Thermal Zone: F2-4 1-Bed Core West, New"
    ..
 
@@ -44173,8 +44356,7 @@ Spc   User: "F2-4 1-Bed N"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -44501,6 +44683,12 @@ Spc   User: "F2-4 1-Bed N"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 744 ft2 -> Zn: Thermal Zone: F2-4 1-Bed North, New"
    ..
 
@@ -45505,8 +45693,7 @@ Spc   User: "F2-4 1-Bed NE Core"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -45833,6 +46020,12 @@ Spc   User: "F2-4 1-Bed NE Core"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 744 ft2 -> Zn: Thermal Zone: F2-4 1-Bed North, New"
    ..
 
@@ -46755,8 +46948,7 @@ Spc   User: "F2-4 1-Bed NE Outer"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -47083,6 +47275,12 @@ Spc   User: "F2-4 1-Bed NE Outer"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 744 ft2 -> Zn: Thermal Zone: F2-4 1-Bed North, New"
    ..
 
@@ -48005,8 +48203,7 @@ Spc   User: "F2-4 1-Bed NW Core"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -48333,6 +48530,12 @@ Spc   User: "F2-4 1-Bed NW Core"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 744 ft2 -> Zn: Thermal Zone: F2-4 1-Bed North, New"
    ..
 
@@ -49255,8 +49458,7 @@ Spc   User: "F2-4 1-Bed NW Outer"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -49583,6 +49785,12 @@ Spc   User: "F2-4 1-Bed NW Outer"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 744 ft2 -> Zn: Thermal Zone: F2-4 1-Bed North, New"
    ..
 
@@ -50505,8 +50713,7 @@ Spc   User: "F2-4 2-Bed Core NE"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -50833,6 +51040,12 @@ Spc   User: "F2-4 2-Bed Core NE"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,080 ft2 -> Zn: Thermal Zone: F2-4 2-Bed Core NE-NW, New"
    ..
 
@@ -52162,8 +52375,7 @@ Spc   User: "F2-4 2-Bed Core NW"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -52490,6 +52702,12 @@ Spc   User: "F2-4 2-Bed Core NW"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,080 ft2 -> Zn: Thermal Zone: F2-4 2-Bed Core NE-NW, New"
    ..
 
@@ -53643,8 +53861,7 @@ Spc   User: "F2-4 2-Bed NE"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -53971,6 +54188,12 @@ Spc   User: "F2-4 2-Bed NE"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,080 ft2 -> Zn: Thermal Zone: F2-4 2-Bed East, New"
    ..
 
@@ -55042,8 +55265,7 @@ Spc   User: "F2-4 2-Bed NW"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -55370,6 +55592,12 @@ Spc   User: "F2-4 2-Bed NW"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,080 ft2 -> Zn: Thermal Zone: F2-4 2-Bed West, New"
    ..
 
@@ -56575,8 +56803,7 @@ Spc   User: "F2-4 2-Bed SE"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -56903,6 +57130,12 @@ Spc   User: "F2-4 2-Bed SE"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,080 ft2 -> Zn: Thermal Zone: F2-4 2-Bed East, New"
    ..
 
@@ -58119,8 +58352,7 @@ Spc   User: "F2-4 2-Bed SE Core"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -58447,6 +58679,12 @@ Spc   User: "F2-4 2-Bed SE Core"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,080 ft2 -> Zn: Thermal Zone: F2-4 2-Bed East, New"
    ..
 
@@ -59354,8 +59592,7 @@ Spc   User: "F2-4 2-Bed SW"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -59682,6 +59919,12 @@ Spc   User: "F2-4 2-Bed SW"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,080 ft2 -> Zn: Thermal Zone: F2-4 2-Bed West, New"
    ..
 
@@ -60896,8 +61139,7 @@ Spc   User: "F2-4 2-Bed SW Core"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -61224,6 +61466,12 @@ Spc   User: "F2-4 2-Bed SW Core"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,080 ft2 -> Zn: Thermal Zone: F2-4 2-Bed West, New"
    ..
 
@@ -62064,8 +62312,7 @@ Spc   User: "F2-4 3-Bed NE"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -62392,6 +62639,12 @@ Spc   User: "F2-4 3-Bed NE"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,410 ft2 -> Zn: Thermal Zone: F2-4 3-Bed NE, New"
    ..
 
@@ -63442,8 +63695,7 @@ Spc   User: "F2-4 3-Bed NW"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -63770,6 +64022,12 @@ Spc   User: "F2-4 3-Bed NW"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,410 ft2 -> Zn: Thermal Zone: F2-4 3-Bed NW, New"
    ..
 
@@ -64743,7 +65001,7 @@ Spc   User: "F2-4 Corridor"
    ParentStoryRef = RVal: "Building Story Residential Floors 2-4"
    HtgTstatSchMaxVal = RVal: 70
    ClgTstatSchMinVal = RVal: 75
-   HtgFuelSrc = RVal: 0
+   HtgFuelSrc = RVal: 1
    AtriumGT55FtFlag = RVal: 0
    HasUnknownHVAC = RVal: 0
    IsProcExhSpc = RVal: 0
@@ -64788,8 +65046,7 @@ Spc   User: "F2-4 Corridor"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -65105,6 +65362,12 @@ Spc   User: "F2-4 Corridor"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 2,145 ft2 -> Zn: Thermal Zone: F2-4 Corridor, New"
    ..
 
@@ -67267,7 +67530,7 @@ Spc   User: "F2-4 Elevator Core"
    ParentStoryRef = RVal: "Building Story Residential Floors 2-4"
    HtgTstatSchMaxVal = RVal: 70
    ClgTstatSchMinVal = RVal: 75
-   HtgFuelSrc = RVal: 0
+   HtgFuelSrc = RVal: 1
    AtriumGT55FtFlag = RVal: 0
    HasUnknownHVAC = RVal: 0
    IsProcExhSpc = RVal: 0
@@ -67312,8 +67575,7 @@ Spc   User: "F2-4 Elevator Core"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -67629,6 +67891,12 @@ Spc   User: "F2-4 Elevator Core"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "IndirectlyConditioned, 25 ft2 -> Zn: Thermal Zone: F2-4 Corridor, New"
    ..
 
@@ -68178,7 +68446,7 @@ Spc   User: "F2-4 Elevator N"
    ParentStoryRef = RVal: "Building Story Residential Floors 2-4"
    HtgTstatSchMaxVal = RVal: 70
    ClgTstatSchMinVal = RVal: 75
-   HtgFuelSrc = RVal: 0
+   HtgFuelSrc = RVal: 1
    AtriumGT55FtFlag = RVal: 0
    HasUnknownHVAC = RVal: 0
    IsProcExhSpc = RVal: 0
@@ -68223,8 +68491,7 @@ Spc   User: "F2-4 Elevator N"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -68540,6 +68807,12 @@ Spc   User: "F2-4 Elevator N"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "IndirectlyConditioned, 25 ft2 -> Zn: Thermal Zone: F2-4 Corridor, New"
    ..
 
@@ -68925,7 +69198,7 @@ Spc   User: "F2-4 Elevator S"
    ParentStoryRef = RVal: "Building Story Residential Floors 2-4"
    HtgTstatSchMaxVal = RVal: 70
    ClgTstatSchMinVal = RVal: 75
-   HtgFuelSrc = RVal: 0
+   HtgFuelSrc = RVal: 1
    AtriumGT55FtFlag = RVal: 0
    HasUnknownHVAC = RVal: 0
    IsProcExhSpc = RVal: 0
@@ -68970,8 +69243,7 @@ Spc   User: "F2-4 Elevator S"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -69287,6 +69559,12 @@ Spc   User: "F2-4 Elevator S"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "IndirectlyConditioned, 25 ft2 -> Zn: Thermal Zone: F2-4 Corridor, New"
    ..
 
@@ -69761,7 +70039,7 @@ Spc   User: "F2-4 Laundry"
    ParentStoryRef = RVal: "Building Story Residential Floors 2-4"
    HtgTstatSchMaxVal = RVal: 70
    ClgTstatSchMinVal = RVal: 75
-   HtgFuelSrc = RVal: 0
+   HtgFuelSrc = RVal: 1
    AtriumGT55FtFlag = RVal: 0
    HasUnknownHVAC = RVal: 0
    IsProcExhSpc = RVal: 0
@@ -69806,8 +70084,7 @@ Spc   User: "F2-4 Laundry"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -70133,6 +70410,12 @@ Spc   User: "F2-4 Laundry"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "IndirectlyConditioned, 180 ft2 -> Zn: Thermal Zone: F2-4 Corridor, New"
    ..
 
@@ -70813,7 +71096,7 @@ Spc   User: "F2-4 Stair E"
    ParentStoryRef = RVal: "Building Story Residential Floors 2-4"
    HtgTstatSchMaxVal = RVal: 70
    ClgTstatSchMinVal = RVal: 75
-   HtgFuelSrc = RVal: 0
+   HtgFuelSrc = RVal: 1
    AtriumGT55FtFlag = RVal: 0
    HasUnknownHVAC = RVal: 0
    IsProcExhSpc = RVal: 0
@@ -70858,8 +71141,7 @@ Spc   User: "F2-4 Stair E"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -71185,6 +71467,12 @@ Spc   User: "F2-4 Stair E"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 180 ft2 -> Zn: Thermal Zone: F2-4 Corridor, New"
    ..
 
@@ -71785,7 +72073,7 @@ Spc   User: "F2-4 Stair W"
    ParentStoryRef = RVal: "Building Story Residential Floors 2-4"
    HtgTstatSchMaxVal = RVal: 70
    ClgTstatSchMinVal = RVal: 75
-   HtgFuelSrc = RVal: 0
+   HtgFuelSrc = RVal: 1
    AtriumGT55FtFlag = RVal: 0
    HasUnknownHVAC = RVal: 0
    IsProcExhSpc = RVal: 0
@@ -71830,8 +72118,7 @@ Spc   User: "F2-4 Stair W"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -72157,6 +72444,12 @@ Spc   User: "F2-4 Stair W"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 180 ft2 -> Zn: Thermal Zone: F2-4 Corridor, New"
    ..
 
@@ -72824,8 +73117,7 @@ Spc   User: "F2-4 Studio SE"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -73152,6 +73444,12 @@ Spc   User: "F2-4 Studio SE"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 540 ft2 -> Zn: Thermal Zone: F2-4 Studio SE, New"
    ..
 
@@ -74053,8 +74351,7 @@ Spc   User: "F2-4 Studio SW"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -74381,6 +74678,12 @@ Spc   User: "F2-4 Studio SW"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 540 ft2 -> Zn: Thermal Zone: F2-4 Studio SW, New"
    ..
 
@@ -75090,6 +75393,7 @@ Story   User: "Building Story Residential Floor 5"
    GenExhFlow = RVal: 0
    BaseHVACAreaForFlrSys = RVal: 2760
    BaseFlrSysRef = RVal: "BaseAirSys5-3"
+   BaseHVACAreaForLabFlrSys = RVal: 0
    NonResBaseFirstHrCap = RVal: 0.54045
    ResBaseFirstHrCap = RVal: 0
    TotFlrAreaNewWithMult = RVal: 22620
@@ -75446,8 +75750,7 @@ Spc   User: "F5 1-Bed Core N"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -75774,6 +76077,12 @@ Spc   User: "F5 1-Bed Core N"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 720 ft2 -> Zn: Thermal Zone: F5 1-Bed Core N, New"
    ..
 
@@ -77058,8 +77367,7 @@ Spc   User: "F5 1-Bed Core NE"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -77386,6 +77694,12 @@ Spc   User: "F5 1-Bed Core NE"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 720 ft2 -> Zn: Thermal Zone: F5 1-Bed Core East, New"
    ..
 
@@ -78506,8 +78820,7 @@ Spc   User: "F5 1-Bed Core NW"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -78834,6 +79147,12 @@ Spc   User: "F5 1-Bed Core NW"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 720 ft2 -> Zn: Thermal Zone: F5 1-Bed Core West, New"
    ..
 
@@ -79953,8 +80272,7 @@ Spc   User: "F5 1-Bed Core SE"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -80281,6 +80599,12 @@ Spc   User: "F5 1-Bed Core SE"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 720 ft2 -> Zn: Thermal Zone: F5 1-Bed Core East, New"
    ..
 
@@ -81236,8 +81560,7 @@ Spc   User: "F5 1-Bed Core SW"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -81564,6 +81887,12 @@ Spc   User: "F5 1-Bed Core SW"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 720 ft2 -> Zn: Thermal Zone: F5 1-Bed Core West, New"
    ..
 
@@ -82519,8 +82848,7 @@ Spc   User: "F5 1-Bed N"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -82847,6 +83175,12 @@ Spc   User: "F5 1-Bed N"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 744 ft2 -> Zn: Thermal Zone: F5 1-Bed North, New"
    ..
 
@@ -83884,8 +84218,7 @@ Spc   User: "F5 1-Bed NE Core"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -84212,6 +84545,12 @@ Spc   User: "F5 1-Bed NE Core"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 744 ft2 -> Zn: Thermal Zone: F5 1-Bed North, New"
    ..
 
@@ -85167,8 +85506,7 @@ Spc   User: "F5 1-Bed NE Outer"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -85495,6 +85833,12 @@ Spc   User: "F5 1-Bed NE Outer"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 744 ft2 -> Zn: Thermal Zone: F5 1-Bed North, New"
    ..
 
@@ -86450,8 +86794,7 @@ Spc   User: "F5 1-Bed NW Core"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -86778,6 +87121,12 @@ Spc   User: "F5 1-Bed NW Core"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 744 ft2 -> Zn: Thermal Zone: F5 1-Bed North, New"
    ..
 
@@ -87733,8 +88082,7 @@ Spc   User: "F5 1-Bed NW Outer"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -88061,6 +88409,12 @@ Spc   User: "F5 1-Bed NW Outer"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 744 ft2 -> Zn: Thermal Zone: F5 1-Bed North, New"
    ..
 
@@ -89016,8 +89370,7 @@ Spc   User: "F5 2-Bed Core NE"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -89344,6 +89697,12 @@ Spc   User: "F5 2-Bed Core NE"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,080 ft2 -> Zn: Thermal Zone: F5 2-Bed Core NE-NW, New"
    ..
 
@@ -90628,8 +90987,7 @@ Spc   User: "F5 2-Bed Core NW"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -90956,6 +91314,12 @@ Spc   User: "F5 2-Bed Core NW"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,080 ft2 -> Zn: Thermal Zone: F5 2-Bed Core NE-NW, New"
    ..
 
@@ -92076,8 +92440,7 @@ Spc   User: "F5 2-Bed NE"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -92404,6 +92767,12 @@ Spc   User: "F5 2-Bed NE"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,080 ft2 -> Zn: Thermal Zone: F5 2-Bed East, New"
    ..
 
@@ -93441,8 +93810,7 @@ Spc   User: "F5 2-Bed NW"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -93769,6 +94137,12 @@ Spc   User: "F5 2-Bed NW"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,080 ft2 -> Zn: Thermal Zone: F5 2-Bed West, New"
    ..
 
@@ -94806,8 +95180,7 @@ Spc   User: "F5 2-Bed SE"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -95134,6 +95507,12 @@ Spc   User: "F5 2-Bed SE"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,080 ft2 -> Zn: Thermal Zone: F5 2-Bed East, New"
    ..
 
@@ -96381,8 +96760,7 @@ Spc   User: "F5 2-Bed SE Core"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -96709,6 +97087,12 @@ Spc   User: "F5 2-Bed SE Core"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,080 ft2 -> Zn: Thermal Zone: F5 2-Bed East, New"
    ..
 
@@ -97582,8 +97966,7 @@ Spc   User: "F5 2-Bed SW"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -97910,6 +98293,12 @@ Spc   User: "F5 2-Bed SW"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,080 ft2 -> Zn: Thermal Zone: F5 2-Bed West, New"
    ..
 
@@ -99157,8 +99546,7 @@ Spc   User: "F5 2-Bed SW Core"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -99485,6 +99873,12 @@ Spc   User: "F5 2-Bed SW Core"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,080 ft2 -> Zn: Thermal Zone: F5 2-Bed West, New"
    ..
 
@@ -100358,8 +100752,7 @@ Spc   User: "F5 3-Bed NE"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -100686,6 +101079,12 @@ Spc   User: "F5 3-Bed NE"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,410 ft2 -> Zn: Thermal Zone: F5 3-Bed NE, New"
    ..
 
@@ -101769,8 +102168,7 @@ Spc   User: "F5 3-Bed NW"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -102097,6 +102495,12 @@ Spc   User: "F5 3-Bed NW"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 1,410 ft2 -> Zn: Thermal Zone: F5 3-Bed NW, New"
    ..
 
@@ -103103,7 +103507,7 @@ Spc   User: "F5 Corridor"
    ParentStoryRef = RVal: "Building Story Residential Floor 5"
    HtgTstatSchMaxVal = RVal: 70
    ClgTstatSchMinVal = RVal: 75
-   HtgFuelSrc = RVal: 0
+   HtgFuelSrc = RVal: 1
    AtriumGT55FtFlag = RVal: 0
    HasUnknownHVAC = RVal: 0
    IsProcExhSpc = RVal: 0
@@ -103148,8 +103552,7 @@ Spc   User: "F5 Corridor"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -103465,6 +103868,12 @@ Spc   User: "F5 Corridor"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 2,145 ft2 -> Zn: Thermal Zone: F5 Corridor, New"
    ..
 
@@ -104976,7 +105385,7 @@ Spc   User: "F5 Elevator Core"
    ParentStoryRef = RVal: "Building Story Residential Floor 5"
    HtgTstatSchMaxVal = RVal: 70
    ClgTstatSchMinVal = RVal: 75
-   HtgFuelSrc = RVal: 0
+   HtgFuelSrc = RVal: 1
    AtriumGT55FtFlag = RVal: 0
    HasUnknownHVAC = RVal: 0
    IsProcExhSpc = RVal: 0
@@ -105021,8 +105430,7 @@ Spc   User: "F5 Elevator Core"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -105338,6 +105746,12 @@ Spc   User: "F5 Elevator Core"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "IndirectlyConditioned, 25 ft2 -> Zn: Thermal Zone: F5 Corridor, New"
    ..
 
@@ -105987,7 +106401,7 @@ Spc   User: "F5 Elevator N"
    ParentStoryRef = RVal: "Building Story Residential Floor 5"
    HtgTstatSchMaxVal = RVal: 70
    ClgTstatSchMinVal = RVal: 75
-   HtgFuelSrc = RVal: 0
+   HtgFuelSrc = RVal: 1
    AtriumGT55FtFlag = RVal: 0
    HasUnknownHVAC = RVal: 0
    IsProcExhSpc = RVal: 0
@@ -106032,8 +106446,7 @@ Spc   User: "F5 Elevator N"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -106349,6 +106762,12 @@ Spc   User: "F5 Elevator N"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "IndirectlyConditioned, 25 ft2 -> Zn: Thermal Zone: F5 Corridor, New"
    ..
 
@@ -106834,7 +107253,7 @@ Spc   User: "F5 Elevator S"
    ParentStoryRef = RVal: "Building Story Residential Floor 5"
    HtgTstatSchMaxVal = RVal: 70
    ClgTstatSchMinVal = RVal: 75
-   HtgFuelSrc = RVal: 0
+   HtgFuelSrc = RVal: 1
    AtriumGT55FtFlag = RVal: 0
    HasUnknownHVAC = RVal: 0
    IsProcExhSpc = RVal: 0
@@ -106879,8 +107298,7 @@ Spc   User: "F5 Elevator S"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -107196,6 +107614,12 @@ Spc   User: "F5 Elevator S"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "IndirectlyConditioned, 25 ft2 -> Zn: Thermal Zone: F5 Corridor, New"
    ..
 
@@ -107770,7 +108194,7 @@ Spc   User: "F5 Laundry"
    ParentStoryRef = RVal: "Building Story Residential Floor 5"
    HtgTstatSchMaxVal = RVal: 70
    ClgTstatSchMinVal = RVal: 75
-   HtgFuelSrc = RVal: 0
+   HtgFuelSrc = RVal: 1
    AtriumGT55FtFlag = RVal: 0
    HasUnknownHVAC = RVal: 0
    IsProcExhSpc = RVal: 0
@@ -107815,8 +108239,7 @@ Spc   User: "F5 Laundry"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -108142,6 +108565,12 @@ Spc   User: "F5 Laundry"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "IndirectlyConditioned, 180 ft2 -> Zn: Thermal Zone: F5 Corridor, New"
    ..
 
@@ -108843,7 +109272,7 @@ Spc   User: "F5 Stair E"
    ParentStoryRef = RVal: "Building Story Residential Floor 5"
    HtgTstatSchMaxVal = RVal: 70
    ClgTstatSchMinVal = RVal: 75
-   HtgFuelSrc = RVal: 0
+   HtgFuelSrc = RVal: 1
    AtriumGT55FtFlag = RVal: 0
    HasUnknownHVAC = RVal: 0
    IsProcExhSpc = RVal: 0
@@ -108888,8 +109317,7 @@ Spc   User: "F5 Stair E"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -109215,6 +109643,12 @@ Spc   User: "F5 Stair E"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 180 ft2 -> Zn: Thermal Zone: F5 Corridor, New"
    ..
 
@@ -109915,7 +110349,7 @@ Spc   User: "F5 Stair W"
    ParentStoryRef = RVal: "Building Story Residential Floor 5"
    HtgTstatSchMaxVal = RVal: 70
    ClgTstatSchMinVal = RVal: 75
-   HtgFuelSrc = RVal: 0
+   HtgFuelSrc = RVal: 1
    AtriumGT55FtFlag = RVal: 0
    HasUnknownHVAC = RVal: 0
    IsProcExhSpc = RVal: 0
@@ -109960,8 +110394,7 @@ Spc   User: "F5 Stair W"
    IncludeInBal = RVal: 1
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Maximum"  (2)
@@ -110287,6 +110720,12 @@ Spc   User: "F5 Stair W"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: -999
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 180 ft2 -> Zn: Thermal Zone: F5 Corridor, New"
    ..
 
@@ -111054,8 +111493,7 @@ Spc   User: "F5 Studio SE"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -111382,6 +111820,12 @@ Spc   User: "F5 Studio SE"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 540 ft2 -> Zn: Thermal Zone: F5 Studio SE, New"
    ..
 
@@ -112385,8 +112829,7 @@ Spc   User: "F5 Studio SW"
    IncludeInBal = RVal: 0
    VentOccDensSim = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentTolMaxLimNonRes = RVal: 0.1
-   VentStd = RVal: "T24-2019"  (3)
+   VentStd = RVal: "T24-2022"  (4)
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
    VentSpecMthd = RVal: "Sum"  (3)
@@ -112713,6 +113156,12 @@ Spc   User: "F5 Studio SW"
    IsExistingHVAC = RVal: 0
    IsNewVent = RVal: 1
    IsNewExh = RVal: 1
+   IsProcKit = RVal: 0
+   HasNewComputerRmHVAC = RVal: 0
+   IsProcLab = RVal: 0
+   IsProcParking = RVal: 0
+   HasDayltgCtrls = RVal: 0
+   IsVideoconferencingStudio = RVal: 0
    TreeDescrip = RVal: "DirectlyConditioned, 540 ft2 -> Zn: Thermal Zone: F5 Studio SW, New"
    ..
 
@@ -113403,8 +113852,7 @@ ThrmlZn   User: "Thermal Zone: F1 Business Center"
    HtgDsgnSupAirTempDiff = RDef: 25
    HtgDsgnSizingFac = RVal: 1
    HtgDsgnMaxFlowFrac = RDef: 0.5
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -113438,6 +113886,7 @@ ThrmlZn   User: "Thermal Zone: F1 Business Center"
    HasDCV = RVal: 1
    HasDDCCtrl = RVal: 1
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 1
    BaseSysNum = RVal: 5
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -113452,7 +113901,7 @@ ThrmlZn   User: "Thermal Zone: F1 Business Center"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 61.25
@@ -113648,6 +114097,7 @@ ThrmlZn   User: "Thermal Zone: F1 Business Center"
    SndAttnPwrAdj = RVal: 0
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0
+   PropResVentSysPwrIdx = RVal: 0
    PropLabExhSysMinExhACH = RVal: 0
    PropLabExhSysMinVentACH = RVal: 0
    IsLabFumeHoodIntensive = RVal: 0
@@ -113687,8 +114137,7 @@ ThrmlZn   User: "Thermal Zone: F1 Corridor"
    HtgDsgnSupAirTempDiff = RDef: 25
    HtgDsgnSizingFac = RVal: 1
    HtgDsgnMaxFlowFrac = RDef: 0.5
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -113722,6 +114171,7 @@ ThrmlZn   User: "Thermal Zone: F1 Corridor"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 1
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 1
    BaseSysNum = RVal: 5
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -113736,7 +114186,7 @@ ThrmlZn   User: "Thermal Zone: F1 Corridor"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 372.368
@@ -113932,6 +114382,7 @@ ThrmlZn   User: "Thermal Zone: F1 Corridor"
    SndAttnPwrAdj = RVal: 0
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0
+   PropResVentSysPwrIdx = RVal: 0
    PropLabExhSysMinExhACH = RVal: 0
    PropLabExhSysMinVentACH = RVal: 0
    IsLabFumeHoodIntensive = RVal: 0
@@ -113971,8 +114422,7 @@ ThrmlZn   User: "Thermal Zone: F1 Lounge"
    HtgDsgnSupAirTempDiff = RDef: 25
    HtgDsgnSizingFac = RVal: 1
    HtgDsgnMaxFlowFrac = RDef: 0.5
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -114006,6 +114456,7 @@ ThrmlZn   User: "Thermal Zone: F1 Lounge"
    HasDCV = RVal: 1
    HasDDCCtrl = RVal: 1
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 5
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -114020,7 +114471,7 @@ ThrmlZn   User: "Thermal Zone: F1 Lounge"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 130.667
@@ -114216,6 +114667,7 @@ ThrmlZn   User: "Thermal Zone: F1 Lounge"
    SndAttnPwrAdj = RVal: 0
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0
+   PropResVentSysPwrIdx = RVal: 0
    PropLabExhSysMinExhACH = RVal: 0
    PropLabExhSysMinVentACH = RVal: 0
    IsLabFumeHoodIntensive = RVal: 0
@@ -114255,8 +114707,7 @@ ThrmlZn   User: "Thermal Zone: F1 Fitness Center"
    HtgDsgnSupAirTempDiff = RDef: 25
    HtgDsgnSizingFac = RVal: 1
    HtgDsgnMaxFlowFrac = RDef: 0.5
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -114290,6 +114741,7 @@ ThrmlZn   User: "Thermal Zone: F1 Fitness Center"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 1
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 5
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -114304,7 +114756,7 @@ ThrmlZn   User: "Thermal Zone: F1 Fitness Center"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 122.5
@@ -114500,6 +114952,7 @@ ThrmlZn   User: "Thermal Zone: F1 Fitness Center"
    SndAttnPwrAdj = RVal: 0
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0
+   PropResVentSysPwrIdx = RVal: 0
    PropLabExhSysMinExhACH = RVal: 0
    PropLabExhSysMinVentACH = RVal: 0
    IsLabFumeHoodIntensive = RVal: 0
@@ -114539,8 +114992,7 @@ ThrmlZn   User: "Thermal Zone: F1 Leasing Office"
    HtgDsgnSupAirTempDiff = RDef: 25
    HtgDsgnSizingFac = RVal: 1
    HtgDsgnMaxFlowFrac = RDef: 0.5
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -114574,6 +115026,7 @@ ThrmlZn   User: "Thermal Zone: F1 Leasing Office"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 1
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 5
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -114588,7 +115041,7 @@ ThrmlZn   User: "Thermal Zone: F1 Leasing Office"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 93.9167
@@ -114784,6 +115237,7 @@ ThrmlZn   User: "Thermal Zone: F1 Leasing Office"
    SndAttnPwrAdj = RVal: 0
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0
+   PropResVentSysPwrIdx = RVal: 0
    PropLabExhSysMinExhACH = RVal: 0
    PropLabExhSysMinVentACH = RVal: 0
    IsLabFumeHoodIntensive = RVal: 0
@@ -114823,8 +115277,7 @@ ThrmlZn   User: "Thermal Zone: F1 Mechanical Room"
    HtgDsgnSupAirTempDiff = RDef: 25
    HtgDsgnSizingFac = RVal: 1
    HtgDsgnMaxFlowFrac = RDef: 0.5
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -114858,6 +115311,7 @@ ThrmlZn   User: "Thermal Zone: F1 Mechanical Room"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 1
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 5
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -114872,7 +115326,7 @@ ThrmlZn   User: "Thermal Zone: F1 Mechanical Room"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 0
@@ -115068,6 +115522,7 @@ ThrmlZn   User: "Thermal Zone: F1 Mechanical Room"
    SndAttnPwrAdj = RVal: 0
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0
+   PropResVentSysPwrIdx = RVal: 0
    PropLabExhSysMinExhACH = RVal: 0
    PropLabExhSysMinVentACH = RVal: 0
    IsLabFumeHoodIntensive = RVal: 0
@@ -115107,8 +115562,7 @@ ThrmlZn   User: "Thermal Zone: F1 Retail N-NW"
    HtgDsgnSupAirTempDiff = RDef: 25
    HtgDsgnSizingFac = RVal: 1
    HtgDsgnMaxFlowFrac = RDef: 0.5
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -115142,6 +115596,7 @@ ThrmlZn   User: "Thermal Zone: F1 Retail N-NW"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 1
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 5
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -115156,7 +115611,7 @@ ThrmlZn   User: "Thermal Zone: F1 Retail N-NW"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 640.743
@@ -115352,6 +115807,7 @@ ThrmlZn   User: "Thermal Zone: F1 Retail N-NW"
    SndAttnPwrAdj = RVal: 0
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0
+   PropResVentSysPwrIdx = RVal: 0
    PropLabExhSysMinExhACH = RVal: 0
    PropLabExhSysMinVentACH = RVal: 0
    IsLabFumeHoodIntensive = RVal: 0
@@ -115391,8 +115847,7 @@ ThrmlZn   User: "Thermal Zone: F1 Retail NE"
    HtgDsgnSupAirTempDiff = RDef: 25
    HtgDsgnSizingFac = RVal: 1
    HtgDsgnMaxFlowFrac = RDef: 0.5
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -115426,6 +115881,7 @@ ThrmlZn   User: "Thermal Zone: F1 Retail NE"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 1
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 5
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -115440,7 +115896,7 @@ ThrmlZn   User: "Thermal Zone: F1 Retail NE"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 522.326
@@ -115636,6 +116092,7 @@ ThrmlZn   User: "Thermal Zone: F1 Retail NE"
    SndAttnPwrAdj = RVal: 0
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0
+   PropResVentSysPwrIdx = RVal: 0
    PropLabExhSysMinExhACH = RVal: 0
    PropLabExhSysMinVentACH = RVal: 0
    IsLabFumeHoodIntensive = RVal: 0
@@ -115675,8 +116132,7 @@ ThrmlZn   User: "Thermal Zone: F1 Retail SE"
    HtgDsgnSupAirTempDiff = RDef: 25
    HtgDsgnSizingFac = RVal: 1
    HtgDsgnMaxFlowFrac = RDef: 0.5
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -115710,6 +116166,7 @@ ThrmlZn   User: "Thermal Zone: F1 Retail SE"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 1
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 5
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -115724,7 +116181,7 @@ ThrmlZn   User: "Thermal Zone: F1 Retail SE"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 603.653
@@ -115920,6 +116377,7 @@ ThrmlZn   User: "Thermal Zone: F1 Retail SE"
    SndAttnPwrAdj = RVal: 0
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0
+   PropResVentSysPwrIdx = RVal: 0
    PropLabExhSysMinExhACH = RVal: 0
    PropLabExhSysMinVentACH = RVal: 0
    IsLabFumeHoodIntensive = RVal: 0
@@ -115959,8 +116417,7 @@ ThrmlZn   User: "Thermal Zone: F1 Retail SW"
    HtgDsgnSupAirTempDiff = RDef: 25
    HtgDsgnSizingFac = RVal: 1
    HtgDsgnMaxFlowFrac = RDef: 0.5
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -115994,6 +116451,7 @@ ThrmlZn   User: "Thermal Zone: F1 Retail SW"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 1
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 5
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -116008,7 +116466,7 @@ ThrmlZn   User: "Thermal Zone: F1 Retail SW"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 824.153
@@ -116204,6 +116662,7 @@ ThrmlZn   User: "Thermal Zone: F1 Retail SW"
    SndAttnPwrAdj = RVal: 0
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0
+   PropResVentSysPwrIdx = RVal: 0
    PropLabExhSysMinExhACH = RVal: 0
    PropLabExhSysMinVentACH = RVal: 0
    IsLabFumeHoodIntensive = RVal: 0
@@ -116241,8 +116700,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed Core N"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -116284,6 +116742,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed Core N"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -116298,7 +116757,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed Core N"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 131
@@ -116453,8 +116912,8 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed Core N"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.146861
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.02123
-   TotPropFanPwr = RVal: 0.168091
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.146861
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -116494,6 +116953,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed Core N"
    TotSysZnExhFlowSim = RVal: 109.8
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.580055
+   PropResVentSysPwrIdx = RVal: 0.580055
    ExhFanMtrPerfIdx = RVal: 1
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -116534,8 +116994,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed Core West"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -116577,6 +117036,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed Core West"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -116591,7 +117051,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed Core West"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 327.5
@@ -116746,8 +117206,8 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed Core West"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.146861
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.04246
-   TotPropFanPwr = RVal: 0.189321
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.146861
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -116787,6 +117247,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed Core West"
    TotSysZnExhFlowSim = RVal: 219.6
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.580055
+   PropResVentSysPwrIdx = RVal: 0.580055
    ExhFanMtrPerfIdx = RVal: 1
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -116827,8 +117288,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed Core East"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -116870,6 +117330,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed Core East"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -116884,7 +117345,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed Core East"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 327.5
@@ -117039,8 +117500,8 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed Core East"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.146861
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.04246
-   TotPropFanPwr = RVal: 0.189321
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.146861
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -117080,6 +117541,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed Core East"
    TotSysZnExhFlowSim = RVal: 219.6
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.580055
+   PropResVentSysPwrIdx = RVal: 0.580055
    ExhFanMtrPerfIdx = RVal: 1
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -117120,8 +117582,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed North"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -117163,6 +117624,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed North"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -117177,7 +117639,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed North"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 655
@@ -117332,8 +117794,8 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed North"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.151756
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.10615
-   TotPropFanPwr = RVal: 0.257906
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.151756
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -117373,6 +117835,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 1-Bed North"
    TotSysZnExhFlowSim = RVal: 559.8
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.568864
+   PropResVentSysPwrIdx = RVal: 0.568864
    ExhFanMtrPerfIdx = RVal: 3
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -117413,8 +117876,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 2-Bed Core NE-NW"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -117456,6 +117918,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 2-Bed Core NE-NW"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -117470,7 +117933,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 2-Bed Core NE-NW"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 159.656
@@ -117625,8 +118088,8 @@ ThrmlZn   User: "Thermal Zone: F2-4 2-Bed Core NE-NW"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.220291
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.0637
-   TotPropFanPwr = RVal: 0.283991
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.220291
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -117666,6 +118129,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 2-Bed Core NE-NW"
    TotSysZnExhFlowSim = RVal: 329.4
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.580146
+   PropResVentSysPwrIdx = RVal: 0.580146
    ExhFanMtrPerfIdx = RVal: 2
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -117706,8 +118170,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 2-Bed East"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -117749,6 +118212,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 2-Bed East"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -117763,7 +118227,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 2-Bed East"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 723.457
@@ -117918,8 +118382,8 @@ ThrmlZn   User: "Thermal Zone: F2-4 2-Bed East"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.220291
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.09555
-   TotPropFanPwr = RVal: 0.315841
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.220291
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -117959,6 +118423,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 2-Bed East"
    TotSysZnExhFlowSim = RVal: 494.1
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.580146
+   PropResVentSysPwrIdx = RVal: 0.580146
    ExhFanMtrPerfIdx = RVal: 3
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -117999,8 +118464,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 2-Bed West"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -118042,6 +118506,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 2-Bed West"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -118056,7 +118521,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 2-Bed West"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 723.457
@@ -118211,8 +118676,8 @@ ThrmlZn   User: "Thermal Zone: F2-4 2-Bed West"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.220291
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.09555
-   TotPropFanPwr = RVal: 0.315841
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.220291
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -118252,6 +118717,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 2-Bed West"
    TotSysZnExhFlowSim = RVal: 494.1
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.580146
+   PropResVentSysPwrIdx = RVal: 0.580146
    ExhFanMtrPerfIdx = RVal: 3
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -118292,8 +118758,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 3-Bed NE"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -118335,6 +118800,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 3-Bed NE"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -118349,7 +118815,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 3-Bed NE"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 390.498
@@ -118504,8 +118970,8 @@ ThrmlZn   User: "Thermal Zone: F2-4 3-Bed NE"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.287602
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.0419
-   TotPropFanPwr = RVal: 0.329502
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.287602
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -118545,6 +119011,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 3-Bed NE"
    TotSysZnExhFlowSim = RVal: 216.9
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.57953
+   PropResVentSysPwrIdx = RVal: 0.57953
    ExhFanMtrPerfIdx = RVal: 1
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -118585,8 +119052,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 3-Bed NW"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -118628,6 +119094,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 3-Bed NW"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -118642,7 +119109,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 3-Bed NW"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 390.498
@@ -118797,8 +119264,8 @@ ThrmlZn   User: "Thermal Zone: F2-4 3-Bed NW"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.287602
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.0419
-   TotPropFanPwr = RVal: 0.329502
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.287602
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -118838,6 +119305,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 3-Bed NW"
    TotSysZnExhFlowSim = RVal: 216.9
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.57953
+   PropResVentSysPwrIdx = RVal: 0.57953
    ExhFanMtrPerfIdx = RVal: 1
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -118878,8 +119346,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 Studio SE"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -118921,6 +119388,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 Studio SE"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -118935,7 +119403,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 Studio SE"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 232.207
@@ -119090,8 +119558,8 @@ ThrmlZn   User: "Thermal Zone: F2-4 Studio SE"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.110145
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.0181
-   TotPropFanPwr = RVal: 0.128245
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.110145
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -119131,6 +119599,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 Studio SE"
    TotSysZnExhFlowSim = RVal: 93.6
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.580128
+   PropResVentSysPwrIdx = RVal: 0.580128
    ExhFanMtrPerfIdx = RVal: 1
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -119171,8 +119640,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 Studio SW"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -119214,6 +119682,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 Studio SW"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -119228,7 +119697,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 Studio SW"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 232.207
@@ -119383,8 +119852,8 @@ ThrmlZn   User: "Thermal Zone: F2-4 Studio SW"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.110145
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.0181
-   TotPropFanPwr = RVal: 0.128245
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.110145
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -119424,6 +119893,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 Studio SW"
    TotSysZnExhFlowSim = RVal: 93.6
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.580128
+   PropResVentSysPwrIdx = RVal: 0.580128
    ExhFanMtrPerfIdx = RVal: 1
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -119466,8 +119936,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 Corridor"
    HtgDsgnSupAirTempDiff = RDef: 25
    HtgDsgnSizingFac = RVal: 1
    HtgDsgnMaxFlowFrac = RDef: 0.5
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -119498,10 +119967,11 @@ ThrmlZn   User: "Thermal Zone: F2-4 Corridor"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 1
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 1
    BaseSysNum = RVal: 5
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
-   HtgFuelSrc = RVal: 0
+   HtgFuelSrc = RVal: 1
    MinOccDens = RVal: 9.80978
    OccDens = RVal: 9.80978
    OccDensSim = RVal: 4.90489
@@ -119512,7 +119982,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 Corridor"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 174.667
@@ -119708,6 +120178,7 @@ ThrmlZn   User: "Thermal Zone: F2-4 Corridor"
    SndAttnPwrAdj = RVal: 0
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0
+   PropResVentSysPwrIdx = RVal: 0
    PropLabExhSysMinExhACH = RVal: 0
    PropLabExhSysMinVentACH = RVal: 0
    IsLabFumeHoodIntensive = RVal: 0
@@ -119745,8 +120216,7 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed Core N"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -119788,6 +120258,7 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed Core N"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -119802,7 +120273,7 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed Core N"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 131
@@ -119957,8 +120428,8 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed Core N"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.146861
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.02123
-   TotPropFanPwr = RVal: 0.168091
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.146861
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -119998,6 +120469,7 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed Core N"
    TotSysZnExhFlowSim = RVal: 36.6
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.580055
+   PropResVentSysPwrIdx = RVal: 0.580055
    ExhFanMtrPerfIdx = RVal: 1
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -120038,8 +120510,7 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed Core West"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -120081,6 +120552,7 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed Core West"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -120095,7 +120567,7 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed Core West"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 327.5
@@ -120250,8 +120722,8 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed Core West"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.146861
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.04246
-   TotPropFanPwr = RVal: 0.189321
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.146861
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -120291,6 +120763,7 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed Core West"
    TotSysZnExhFlowSim = RVal: 73.2
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.580055
+   PropResVentSysPwrIdx = RVal: 0.580055
    ExhFanMtrPerfIdx = RVal: 1
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -120331,8 +120804,7 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed Core East"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -120374,6 +120846,7 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed Core East"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -120388,7 +120861,7 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed Core East"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 327.5
@@ -120543,8 +121016,8 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed Core East"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.146861
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.04246
-   TotPropFanPwr = RVal: 0.189321
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.146861
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -120584,6 +121057,7 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed Core East"
    TotSysZnExhFlowSim = RVal: 73.2
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.580055
+   PropResVentSysPwrIdx = RVal: 0.580055
    ExhFanMtrPerfIdx = RVal: 1
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -120624,8 +121098,7 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed North"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -120667,6 +121140,7 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed North"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -120681,7 +121155,7 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed North"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 655
@@ -120836,8 +121310,8 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed North"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.151756
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.10615
-   TotPropFanPwr = RVal: 0.257906
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.151756
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -120877,6 +121351,7 @@ ThrmlZn   User: "Thermal Zone: F5 1-Bed North"
    TotSysZnExhFlowSim = RVal: 186.6
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.568864
+   PropResVentSysPwrIdx = RVal: 0.568864
    ExhFanMtrPerfIdx = RVal: 3
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -120917,8 +121392,7 @@ ThrmlZn   User: "Thermal Zone: F5 2-Bed Core NE-NW"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -120960,6 +121434,7 @@ ThrmlZn   User: "Thermal Zone: F5 2-Bed Core NE-NW"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -120974,7 +121449,7 @@ ThrmlZn   User: "Thermal Zone: F5 2-Bed Core NE-NW"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 159.656
@@ -121129,8 +121604,8 @@ ThrmlZn   User: "Thermal Zone: F5 2-Bed Core NE-NW"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.220291
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.0637
-   TotPropFanPwr = RVal: 0.283991
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.220291
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -121170,6 +121645,7 @@ ThrmlZn   User: "Thermal Zone: F5 2-Bed Core NE-NW"
    TotSysZnExhFlowSim = RVal: 109.8
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.580146
+   PropResVentSysPwrIdx = RVal: 0.580146
    ExhFanMtrPerfIdx = RVal: 2
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -121210,8 +121686,7 @@ ThrmlZn   User: "Thermal Zone: F5 2-Bed East"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -121253,6 +121728,7 @@ ThrmlZn   User: "Thermal Zone: F5 2-Bed East"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -121267,7 +121743,7 @@ ThrmlZn   User: "Thermal Zone: F5 2-Bed East"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 723.457
@@ -121422,8 +121898,8 @@ ThrmlZn   User: "Thermal Zone: F5 2-Bed East"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.220291
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.09555
-   TotPropFanPwr = RVal: 0.315841
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.220291
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -121463,6 +121939,7 @@ ThrmlZn   User: "Thermal Zone: F5 2-Bed East"
    TotSysZnExhFlowSim = RVal: 164.7
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.580146
+   PropResVentSysPwrIdx = RVal: 0.580146
    ExhFanMtrPerfIdx = RVal: 3
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -121503,8 +121980,7 @@ ThrmlZn   User: "Thermal Zone: F5 2-Bed West"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -121546,6 +122022,7 @@ ThrmlZn   User: "Thermal Zone: F5 2-Bed West"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -121560,7 +122037,7 @@ ThrmlZn   User: "Thermal Zone: F5 2-Bed West"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 723.457
@@ -121715,8 +122192,8 @@ ThrmlZn   User: "Thermal Zone: F5 2-Bed West"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.220291
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.09555
-   TotPropFanPwr = RVal: 0.315841
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.220291
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -121756,6 +122233,7 @@ ThrmlZn   User: "Thermal Zone: F5 2-Bed West"
    TotSysZnExhFlowSim = RVal: 164.7
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.580146
+   PropResVentSysPwrIdx = RVal: 0.580146
    ExhFanMtrPerfIdx = RVal: 3
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -121796,8 +122274,7 @@ ThrmlZn   User: "Thermal Zone: F5 3-Bed NE"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -121839,6 +122316,7 @@ ThrmlZn   User: "Thermal Zone: F5 3-Bed NE"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -121853,7 +122331,7 @@ ThrmlZn   User: "Thermal Zone: F5 3-Bed NE"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 390.498
@@ -122008,8 +122486,8 @@ ThrmlZn   User: "Thermal Zone: F5 3-Bed NE"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.287602
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.0419
-   TotPropFanPwr = RVal: 0.329502
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.287602
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -122049,6 +122527,7 @@ ThrmlZn   User: "Thermal Zone: F5 3-Bed NE"
    TotSysZnExhFlowSim = RVal: 72.3
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.57953
+   PropResVentSysPwrIdx = RVal: 0.57953
    ExhFanMtrPerfIdx = RVal: 1
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -122089,8 +122568,7 @@ ThrmlZn   User: "Thermal Zone: F5 3-Bed NW"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -122132,6 +122610,7 @@ ThrmlZn   User: "Thermal Zone: F5 3-Bed NW"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -122146,7 +122625,7 @@ ThrmlZn   User: "Thermal Zone: F5 3-Bed NW"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 390.498
@@ -122301,8 +122780,8 @@ ThrmlZn   User: "Thermal Zone: F5 3-Bed NW"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.287602
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.0419
-   TotPropFanPwr = RVal: 0.329502
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.287602
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -122342,6 +122821,7 @@ ThrmlZn   User: "Thermal Zone: F5 3-Bed NW"
    TotSysZnExhFlowSim = RVal: 72.3
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.57953
+   PropResVentSysPwrIdx = RVal: 0.57953
    ExhFanMtrPerfIdx = RVal: 1
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -122382,8 +122862,7 @@ ThrmlZn   User: "Thermal Zone: F5 Studio SE"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -122425,6 +122904,7 @@ ThrmlZn   User: "Thermal Zone: F5 Studio SE"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -122439,7 +122919,7 @@ ThrmlZn   User: "Thermal Zone: F5 Studio SE"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 232.207
@@ -122594,8 +123074,8 @@ ThrmlZn   User: "Thermal Zone: F5 Studio SE"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.110145
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.0181
-   TotPropFanPwr = RVal: 0.128245
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.110145
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -122635,6 +123115,7 @@ ThrmlZn   User: "Thermal Zone: F5 Studio SE"
    TotSysZnExhFlowSim = RVal: 31.2
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.580128
+   PropResVentSysPwrIdx = RVal: 0.580128
    ExhFanMtrPerfIdx = RVal: 1
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -122675,8 +123156,7 @@ ThrmlZn   User: "Thermal Zone: F5 Studio SW"
    HtgDsgnSupAirTemp = RDef: 95
    HtgDsgnSupAirTempDiff = RDef: 27
    HtgDsgnSizingFac = RVal: 1
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -122718,6 +123198,7 @@ ThrmlZn   User: "Thermal Zone: F5 Studio SW"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 0
    BaseSysNum = RVal: 1
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
@@ -122732,7 +123213,7 @@ ThrmlZn   User: "Thermal Zone: F5 Studio SW"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 1
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 232.207
@@ -122887,8 +123368,8 @@ ThrmlZn   User: "Thermal Zone: F5 Studio SW"
    TotPropReliefFanPwr = RVal: 0
    TotPriSysPropFanPwr = RVal: 0.110145
    TotVentSysPropFanPwr = RVal: 0
-   PropExhFanPwr = RVal: 0.0181
-   TotPropFanPwr = RVal: 0.128245
+   PropExhFanPwr = RVal: 0
+   TotPropFanPwr = RVal: 0.110145
    FullyDuctedExhPwrAdjAllowed = RVal: 1
    FullyDuctedExhPwrAdj = RVal: 0
    ExhCtrlPwrAdjAllowed = RVal: 0
@@ -122928,6 +123409,7 @@ ThrmlZn   User: "Thermal Zone: F5 Studio SW"
    TotSysZnExhFlowSim = RVal: 31.2
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0.580128
+   PropResVentSysPwrIdx = RVal: 0.580128
    ExhFanMtrPerfIdx = RVal: 1
    ExhFanMtrEff = RVal: 0.855
    ExhFanFlowEff = RVal: 0.65
@@ -122970,8 +123452,7 @@ ThrmlZn   User: "Thermal Zone: F5 Corridor"
    HtgDsgnSupAirTempDiff = RDef: 25
    HtgDsgnSizingFac = RVal: 1
    HtgDsgnMaxFlowFrac = RDef: 0.5
-   SizeForDOAS = RVal: 0
-   VentStd = RDef: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -123002,10 +123483,11 @@ ThrmlZn   User: "Thermal Zone: F5 Corridor"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 1
    CondgStatus = RVal: 1
+   HasOccSensorCtrl = RVal: 1
    BaseSysNum = RVal: 5
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
-   HtgFuelSrc = RVal: 0
+   HtgFuelSrc = RVal: 1
    MinOccDens = RVal: 9.80978
    OccDens = RVal: 9.80978
    OccDensSim = RVal: 4.90489
@@ -123016,7 +123498,7 @@ ThrmlZn   User: "Thermal Zone: F5 Corridor"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 174.667
@@ -123212,6 +123694,7 @@ ThrmlZn   User: "Thermal Zone: F5 Corridor"
    SndAttnPwrAdj = RVal: 0
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 0
+   PropResVentSysPwrIdx = RVal: 0
    PropLabExhSysMinExhACH = RVal: 0
    PropLabExhSysMinVentACH = RVal: 0
    IsLabFumeHoodIntensive = RVal: 0
@@ -123238,8 +123721,7 @@ ThrmlZn   User: "Thermal Zone: Parking Garage"
    HasUnknownHVAC = RDef: 0
    HasNoClg = RVal: 0
    AddClgSys = RVal: 0
-   SizeForDOAS = RVal: 0
-   VentStd = UVal: "T24-2019"  (1)
+   VentStd = RDef: "T24-2022"  (1)
    VentAirDistEff = RVal: 1
    VentSrc = RVal: "Forced"  (2)
    VentCtrlMthd = RDef: "Fixed"  (1)
@@ -123264,10 +123746,10 @@ ThrmlZn   User: "Thermal Zone: Parking Garage"
    ExhFlowSchRef = RVal: "On"
    ExhBalancedSchRef = RVal: "On"
    LabFumeHoodDens = RVal: 0
-   ExhFanName = RVal: "Thermal Zone: Parking Garage BaseExhFan"
+   ExhFanName = RVal: "Thermal Zone: Parking Garage PropExhFan"
    ExhFlowSim = RVal: 20925
    ExhTotEff = RVal: 0.6045
-   ExhTotStaticPress = RVal: 1e-05
+   ExhTotStaticPress = RVal: 7.75424
    ExhFanEndUseCat = RVal: "ProcessMotors"  (2)
    ClgUMLHLimit = RVal: 8760
    HtgUMLHLimit = RVal: 8760
@@ -123281,7 +123763,8 @@ ThrmlZn   User: "Thermal Zone: Parking Garage"
    HasDCV = RVal: 0
    HasDDCCtrl = RVal: 0
    CondgStatus = RVal: 0
-   BaseSysNum = RVal: 999
+   HasOccSensorCtrl = RVal: 0
+   BaseSysNum = RVal: 0
    IsPlenumSup = RVal: 0
    IsPlenumRet = RVal: 0
    HtgFuelSrc = RVal: -1
@@ -123295,7 +123778,7 @@ ThrmlZn   User: "Thermal Zone: Parking Garage"
    HighRiseResVentSysIsSup = RVal: 0
    HighRiseResVentSysIsBalanced = RVal: 0
    DCVExceptionArea = RVal: 0
-   VentStdIdx = RVal: 3
+   VentStdIdx = RVal: 4
    VentSysEff = RVal: 1
    SkylitDaylitArea = RVal: 0
    PriSideDaylitArea = RVal: 0
@@ -123490,6 +123973,7 @@ ThrmlZn   User: "Thermal Zone: Parking Garage"
    TotSysZnCodeExhFlowSim = RVal: 20925
    ExhLabCtrlPwrAdj = RVal: 0
    ExhSysPwrIdx = RVal: 1.50723
+   PropResVentSysPwrIdx = RVal: 0
    ExhFanMtrPerfIdx = RVal: 14
    ExhFanMtrEff = RVal: 0.93
    ExhFanFlowEff = RVal: 0.65
@@ -123523,6 +124007,7 @@ AirSys   User: "BaseAirSys5"
    NightCycleRunTime = RVal: 900
    Cnt = RDef: 1
    FanPos = RDef: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 55
    HtgDsgnSupAirTemp = RDef: 60
@@ -123557,6 +124042,7 @@ AirSys   User: "BaseAirSys5"
    IsAltered = RVal: 0
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
+   SysCodeVentFlow = RVal: 5951.55
    TotCondFlrArea = RVal: 22620
    NumThrmlZnCond = RVal: 10
    NumThrmlZnVent = RVal: 10
@@ -123587,11 +124073,14 @@ AirSys   User: "BaseAirSys5"
    SupFanFlowMin = RVal: 0
    SupFanFlowMinRat = RVal: 0
    FanHtDsgn = RVal: 0
+   DDCIsRequired = RVal: 1
    SysOARat = RVal: 0
    PropSysOARat = RVal: 0.303998
    SupFanPwrIdx = RVal: 0
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
+   SysExhFlow = RVal: 0
+   SysCodeExhFlow = RVal: 0
    ExhSysFanPwr = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
    ..
@@ -124217,7 +124706,6 @@ AirSys   User: "BaseAirSys5-2"
    Type = UVal: "PVAV"  (1)
    TypeSim = RVal: "PVAV"  (1)
    SubType = UVal: "Packaged3Phase"  (1)
-   CtrlSysType = RDef: "DDCToZone"  (1)
    IsAllOA = RDef: 0
    VentCtrl = RVal: "AverageFlow"  (1)
    AvailSchRef = RVal: "OfficeHVACAvail"
@@ -124227,6 +124715,7 @@ AirSys   User: "BaseAirSys5-2"
    NightCycleRunTime = RVal: 900
    Cnt = RDef: 3
    FanPos = RDef: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 55
    HtgDsgnSupAirTemp = RDef: 60
@@ -124261,6 +124750,7 @@ AirSys   User: "BaseAirSys5-2"
    IsAltered = RVal: 0
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
+   SysCodeVentFlow = RVal: 402.75
    TotCondFlrArea = RVal: 8280
    NumThrmlZnCond = RVal: 1
    NumThrmlZnVent = RVal: 1
@@ -124291,11 +124781,14 @@ AirSys   User: "BaseAirSys5-2"
    SupFanFlowMin = RVal: 0
    SupFanFlowMinRat = RVal: 0
    FanHtDsgn = RVal: 0
+   DDCIsRequired = RVal: 0
    SysOARat = RVal: 0
    PropSysOARat = RVal: 1
    SupFanPwrIdx = RVal: 0
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
+   SysExhFlow = RVal: 0
+   SysCodeExhFlow = RVal: 0
    ExhSysFanPwr = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
    ..
@@ -124471,7 +124964,6 @@ AirSys   User: "BaseAirSys5-3"
    Type = UVal: "PVAV"  (1)
    TypeSim = RVal: "PVAV"  (1)
    SubType = UVal: "Packaged3Phase"  (1)
-   CtrlSysType = RDef: "DDCToZone"  (1)
    IsAllOA = RDef: 0
    VentCtrl = RVal: "AverageFlow"  (1)
    AvailSchRef = RVal: "OfficeHVACAvail"
@@ -124481,6 +124973,7 @@ AirSys   User: "BaseAirSys5-3"
    NightCycleRunTime = RVal: 900
    Cnt = RDef: 1
    FanPos = RDef: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 55
    HtgDsgnSupAirTemp = RDef: 60
@@ -124515,6 +125008,7 @@ AirSys   User: "BaseAirSys5-3"
    IsAltered = RVal: 0
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
+   SysCodeVentFlow = RVal: 402.75
    TotCondFlrArea = RVal: 2760
    NumThrmlZnCond = RVal: 1
    NumThrmlZnVent = RVal: 1
@@ -124545,11 +125039,14 @@ AirSys   User: "BaseAirSys5-3"
    SupFanFlowMin = RVal: 0
    SupFanFlowMinRat = RVal: 0
    FanHtDsgn = RVal: 0
+   DDCIsRequired = RVal: 0
    SysOARat = RVal: 0
    PropSysOARat = RVal: 1
    SupFanPwrIdx = RVal: 0
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
+   SysExhFlow = RVal: 0
+   SysCodeExhFlow = RVal: 0
    ExhSysFanPwr = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
    ..
@@ -124733,6 +125230,7 @@ ZnSys   User: "BaseZnSys1"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 3
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -124761,6 +125259,7 @@ ZnSys   User: "BaseZnSys1"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 2160
    CondHVACZnCntWithMult = RVal: 3
    CompRmArea = RVal: 0
@@ -124791,6 +125290,7 @@ ZnSys   User: "BaseZnSys1"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -124886,6 +125386,7 @@ ZnSys   User: "BaseZnSys1-2"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 6
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -124914,6 +125415,7 @@ ZnSys   User: "BaseZnSys1-2"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 4320
    CondHVACZnCntWithMult = RVal: 6
    CompRmArea = RVal: 0
@@ -124944,6 +125446,7 @@ ZnSys   User: "BaseZnSys1-2"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -125039,6 +125542,7 @@ ZnSys   User: "BaseZnSys1-3"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 6
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -125067,6 +125571,7 @@ ZnSys   User: "BaseZnSys1-3"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 4320
    CondHVACZnCntWithMult = RVal: 6
    CompRmArea = RVal: 0
@@ -125097,6 +125602,7 @@ ZnSys   User: "BaseZnSys1-3"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -125192,6 +125698,7 @@ ZnSys   User: "BaseZnSys1-4"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 15
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -125220,6 +125727,7 @@ ZnSys   User: "BaseZnSys1-4"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 11160
    CondHVACZnCntWithMult = RVal: 15
    CompRmArea = RVal: 0
@@ -125250,6 +125758,7 @@ ZnSys   User: "BaseZnSys1-4"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -125345,6 +125854,7 @@ ZnSys   User: "BaseZnSys1-5"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 6
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -125373,6 +125883,7 @@ ZnSys   User: "BaseZnSys1-5"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 6480
    CondHVACZnCntWithMult = RVal: 6
    CompRmArea = RVal: 0
@@ -125403,6 +125914,7 @@ ZnSys   User: "BaseZnSys1-5"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -125498,6 +126010,7 @@ ZnSys   User: "BaseZnSys1-6"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 9
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -125526,6 +126039,7 @@ ZnSys   User: "BaseZnSys1-6"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 9720
    CondHVACZnCntWithMult = RVal: 9
    CompRmArea = RVal: 0
@@ -125556,6 +126070,7 @@ ZnSys   User: "BaseZnSys1-6"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -125651,6 +126166,7 @@ ZnSys   User: "BaseZnSys1-7"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 9
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -125679,6 +126195,7 @@ ZnSys   User: "BaseZnSys1-7"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 9720
    CondHVACZnCntWithMult = RVal: 9
    CompRmArea = RVal: 0
@@ -125709,6 +126226,7 @@ ZnSys   User: "BaseZnSys1-7"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -125804,6 +126322,7 @@ ZnSys   User: "BaseZnSys1-8"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 3
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -125832,6 +126351,7 @@ ZnSys   User: "BaseZnSys1-8"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 4230
    CondHVACZnCntWithMult = RVal: 3
    CompRmArea = RVal: 0
@@ -125862,6 +126382,7 @@ ZnSys   User: "BaseZnSys1-8"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -125957,6 +126478,7 @@ ZnSys   User: "BaseZnSys1-9"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 3
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -125985,6 +126507,7 @@ ZnSys   User: "BaseZnSys1-9"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 4230
    CondHVACZnCntWithMult = RVal: 3
    CompRmArea = RVal: 0
@@ -126015,6 +126538,7 @@ ZnSys   User: "BaseZnSys1-9"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -126110,6 +126634,7 @@ ZnSys   User: "BaseZnSys1-10"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 3
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -126138,6 +126663,7 @@ ZnSys   User: "BaseZnSys1-10"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 1620
    CondHVACZnCntWithMult = RVal: 3
    CompRmArea = RVal: 0
@@ -126168,6 +126694,7 @@ ZnSys   User: "BaseZnSys1-10"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -126263,6 +126790,7 @@ ZnSys   User: "BaseZnSys1-11"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 3
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -126291,6 +126819,7 @@ ZnSys   User: "BaseZnSys1-11"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 1620
    CondHVACZnCntWithMult = RVal: 3
    CompRmArea = RVal: 0
@@ -126321,6 +126850,7 @@ ZnSys   User: "BaseZnSys1-11"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -126416,6 +126946,7 @@ ZnSys   User: "BaseZnSys1-12"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 1
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -126444,6 +126975,7 @@ ZnSys   User: "BaseZnSys1-12"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 720
    CondHVACZnCntWithMult = RVal: 1
    CompRmArea = RVal: 0
@@ -126474,6 +127006,7 @@ ZnSys   User: "BaseZnSys1-12"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -126569,6 +127102,7 @@ ZnSys   User: "BaseZnSys1-13"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 2
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -126597,6 +127131,7 @@ ZnSys   User: "BaseZnSys1-13"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 1440
    CondHVACZnCntWithMult = RVal: 2
    CompRmArea = RVal: 0
@@ -126627,6 +127162,7 @@ ZnSys   User: "BaseZnSys1-13"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -126722,6 +127258,7 @@ ZnSys   User: "BaseZnSys1-14"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 2
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -126750,6 +127287,7 @@ ZnSys   User: "BaseZnSys1-14"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 1440
    CondHVACZnCntWithMult = RVal: 2
    CompRmArea = RVal: 0
@@ -126780,6 +127318,7 @@ ZnSys   User: "BaseZnSys1-14"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -126875,6 +127414,7 @@ ZnSys   User: "BaseZnSys1-15"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 5
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -126903,6 +127443,7 @@ ZnSys   User: "BaseZnSys1-15"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 3720
    CondHVACZnCntWithMult = RVal: 5
    CompRmArea = RVal: 0
@@ -126933,6 +127474,7 @@ ZnSys   User: "BaseZnSys1-15"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -127028,6 +127570,7 @@ ZnSys   User: "BaseZnSys1-16"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 2
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -127056,6 +127599,7 @@ ZnSys   User: "BaseZnSys1-16"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 2160
    CondHVACZnCntWithMult = RVal: 2
    CompRmArea = RVal: 0
@@ -127086,6 +127630,7 @@ ZnSys   User: "BaseZnSys1-16"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -127181,6 +127726,7 @@ ZnSys   User: "BaseZnSys1-17"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 3
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -127209,6 +127755,7 @@ ZnSys   User: "BaseZnSys1-17"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 3240
    CondHVACZnCntWithMult = RVal: 3
    CompRmArea = RVal: 0
@@ -127239,6 +127786,7 @@ ZnSys   User: "BaseZnSys1-17"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -127334,6 +127882,7 @@ ZnSys   User: "BaseZnSys1-18"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 3
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -127362,6 +127911,7 @@ ZnSys   User: "BaseZnSys1-18"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 3240
    CondHVACZnCntWithMult = RVal: 3
    CompRmArea = RVal: 0
@@ -127392,6 +127942,7 @@ ZnSys   User: "BaseZnSys1-18"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -127487,6 +128038,7 @@ ZnSys   User: "BaseZnSys1-19"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 1
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -127515,6 +128067,7 @@ ZnSys   User: "BaseZnSys1-19"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 1410
    CondHVACZnCntWithMult = RVal: 1
    CompRmArea = RVal: 0
@@ -127545,6 +128098,7 @@ ZnSys   User: "BaseZnSys1-19"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -127640,6 +128194,7 @@ ZnSys   User: "BaseZnSys1-20"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 1
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -127668,6 +128223,7 @@ ZnSys   User: "BaseZnSys1-20"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 1410
    CondHVACZnCntWithMult = RVal: 1
    CompRmArea = RVal: 0
@@ -127698,6 +128254,7 @@ ZnSys   User: "BaseZnSys1-20"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -127793,6 +128350,7 @@ ZnSys   User: "BaseZnSys1-21"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 1
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -127821,6 +128379,7 @@ ZnSys   User: "BaseZnSys1-21"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 540
    CondHVACZnCntWithMult = RVal: 1
    CompRmArea = RVal: 0
@@ -127851,6 +128410,7 @@ ZnSys   User: "BaseZnSys1-21"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -127946,6 +128506,7 @@ ZnSys   User: "BaseZnSys1-22"
    ClgCtrl = RVal: "NoSATControl"  (1)
    Cnt = RDef: 1
    FanPos = RVal: "DrawThrough"  (1)
+   OptStart = RDef: 0
    OptStartCtrl = RVal: "None"  (1)
    ClgDsgnSupAirTemp = RDef: 58
    HtgDsgnSupAirTemp = RDef: 95
@@ -127974,6 +128535,7 @@ ZnSys   User: "BaseZnSys1-22"
    IsNew = RVal: 1
    AirDistType = RVal: "Mixing"  (1)
    SysVentFlowUncorrected = RVal: 0
+   SysCodeVentFlow = RVal: 0
    TotCondFlrArea = RVal: 540
    CondHVACZnCntWithMult = RVal: 1
    CompRmArea = RVal: 0
@@ -128004,6 +128566,7 @@ ZnSys   User: "BaseZnSys1-22"
    NoClgHtgOAFlowCap = RVal: 0
    FanPwr = RVal: 0
    SupFanPwrIdx = RVal: 0
+   SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ..
 
@@ -128133,6 +128696,7 @@ ResDHWSys   User: "Residential DHW System"
    NewCntrlAreaServed = RVal: 79440
    IsStdDesignElec = RVal: 0
    MaxUserElecHtrTankZn = RVal: 0
+   ResDHWSysIsIndividual = RVal: 0
    ..
 
 ResWtrHtr   User: "Res Gas Water Heater"  
@@ -128140,6 +128704,7 @@ ResWtrHtr   User: "Res Gas Water Heater"
    ElementType = RVal: "Gas"  (1)
    IsUEFRtd = RVal: 0
    IsUEFRtdSim = RVal: 0
+   HtPumpWtrHtrNEEARtd = RVal: 0
    HPWHBrand = PDef: "n/a"  (0)
    HPWHModel = PDef: "n/a"  (0)
    AirSrcHtPumpType = RVal: "- select HPWH type -"  (0)
@@ -128205,30 +128770,6 @@ CrvQuad   User: "CoilClgDXSnglEIRRatio_fCFMRatio"
    Coef1 = UVal: 1.156
    Coef2 = UVal: -0.1816
    Coef3 = UVal: 0.0256
-   ..
-
-CrvQuad   User: "CoilHtgHPQRatio_fCFMRatio"  
-   Coef1 = UVal: 0.84
-   Coef2 = UVal: 0.16
-   Coef3 = UVal: 0
-   MinOut = UVal: 0.84
-   ..
-
-CrvQuad   User: "CoilHtgHPEIRRatio_fQFrac"  
-   Coef1 = UVal: 0.85
-   Coef2 = UVal: 0.15
-   Coef3 = UVal: 0
-   MaxOut = UVal: 1
-   MaxVar1 = UVal: 1
-   MinOut = UVal: 0.85
-   ..
-
-CrvQuad   User: "CoilHtgHPEIRRatio_fCFMRatio"  
-   Coef1 = UVal: 1.3824
-   Coef2 = UVal: -0.4336
-   Coef3 = UVal: 0.0512
-   MaxVar1 = UVal: 1
-   MinOut = UVal: 1.38
    ..
 
 CrvQuad   User: "CoilHtgFurnFIRRatio_fQRatio"  
@@ -128297,26 +128838,6 @@ CrvCubic   User: "CoilClgDXDblEIRRatio_fCFMRatio"
    Coef2 = UVal: 0.345441
    Coef3 = UVal: -0.692289
    Coef4 = UVal: 0.338899
-   ..
-
-CrvCubic   User: "CoilHtgHPQRatio_fToadbSI"  
-   Coef1 = UVal: 0.729009
-   Coef2 = UVal: 0.031928
-   Coef3 = UVal: 0.000136
-   Coef4 = UVal: -9e-06
-   MaxOut = UVal: 1.05
-   MaxVar1 = UVal: 10
-   MinOut = UVal: 0.17
-   ..
-
-CrvCubic   User: "CoilHtgHPEIRRatio_fToadbSI"  
-   Coef1 = UVal: 1.21829
-   Coef2 = UVal: -0.036117
-   Coef3 = UVal: 0.00142
-   Coef4 = UVal: -2.7e-05
-   MaxOut = UVal: 3.18
-   MaxVar1 = UVal: 10
-   MinOut = UVal: 0.97
    ..
 
 CrvCubic   User: "PumpVSDNoRstEPPwrRatio_fGPMRatio"  
@@ -129398,24 +129919,24 @@ CrvMapDblVar   User: "CoilClgDXSEEREIR_fTwbToadbSI-23"
    ArrayVar2[8] = UVal: 27.78
    ArrayVar2[9] = UVal: 43.33
    ArrayOut[1] = RVal: 1
-   ArrayOut[2] = RVal: 0.808787
-   ArrayOut[3] = RVal: 1.22944
-   ArrayOut[4] = RVal: 1.16171
-   ArrayOut[5] = RVal: 0.943718
-   ArrayOut[6] = RVal: 1.42321
-   ArrayOut[7] = RVal: 0.885711
-   ArrayOut[8] = RVal: 0.713475
-   ArrayOut[9] = RVal: 1.09247
-   EERRtd = RVal: 10.8446
-   EIRRtdnf = RVal: 0.26239
-   EERfT67_82 = RVal: 13
-   EERfT67_110 = RVal: 9.0446
-   EERfT57_95 = RVal: 9.51071
-   EERT57_82 = RVal: 11.401
-   EERT57_110 = RVal: 7.93211
-   EERT77_95 = RVal: 12.0375
-   EERT77_82 = RVal: 14.43
-   EERT77_110 = RVal: 10.0395
+   ArrayOut[2] = RVal: 0.75234
+   ArrayOut[3] = RVal: 1.22607
+   ArrayOut[4] = RVal: 1.16207
+   ArrayOut[5] = RVal: 0.879691
+   ArrayOut[6] = RVal: 1.41973
+   ArrayOut[7] = RVal: 0.885459
+   ArrayOut[8] = RVal: 0.662414
+   ArrayOut[9] = RVal: 1.08918
+   EERRtd = RVal: 11
+   EIRRtdnf = RVal: 0.258115
+   EERfT67_82 = RVal: 14
+   EERfT67_110 = RVal: 9.2
+   EERfT57_95 = RVal: 9.647
+   EERT57_82 = RVal: 12.278
+   EERT57_110 = RVal: 8.0684
+   EERT77_95 = RVal: 12.21
+   EERT77_82 = RVal: 15.54
+   EERT77_110 = RVal: 10.212
    ..
 
 FluidSys   User: "NonResBaseGasSHWSystem"  
@@ -129424,11 +129945,11 @@ FluidSys   User: "NonResBaseGasSHWSystem"
    AvailSchRef = RDef: "On"
    DsgnSupWtrTemp = RDef: 135
    DsgnSupWtrDelT = RDef: 80
-   SizingOption = RVal: "NonCoincident"  (2)
    CommonPipeSim = RVal: "None"  (1)
    TempCtrl = RDef: "Fixed"  (1)
    FixedSupTemp = RDef: 135
    HotWtrSupTemp = RDef: 135
+   SizingOption = RVal: "NonCoincident"  (2)
    IsBaseSys = UVal: 1
    WtrHtrRef = UVal: "NonResBaseGasWaterHeater"
    SHWSysCnt = RVal: 1
@@ -129541,11 +130062,11 @@ FluidSys   User: "NonResBaseElecSHWSystem"
    AvailSchRef = RDef: "On"
    DsgnSupWtrTemp = RDef: 135
    DsgnSupWtrDelT = RDef: 80
-   SizingOption = RVal: "NonCoincident"  (2)
    CommonPipeSim = RVal: "None"  (1)
    TempCtrl = RDef: "Fixed"  (1)
    FixedSupTemp = RDef: 135
    HotWtrSupTemp = RDef: 135
+   SizingOption = RVal: "NonCoincident"  (2)
    IsBaseSys = UVal: 1
    WtrHtrRef = UVal: "NonResBaseElecWaterHeater"
    SHWSysCnt = RVal: 1
@@ -130065,10 +130586,10 @@ FluidSys   User: "BaseHWSystem"
    AvailSchRef = RDef: "On"
    DsgnSupWtrTemp = RDef: 180
    DsgnSupWtrDelT = RDef: 40
-   SizingOption = RVal: "NonCoincident"  (2)
    CtrlType = RDef: "DDC"  (1)
    TempCtrl = RDef: "Fixed"  (1)
    FixedSupTemp = RDef: 180
+   SizingOption = RVal: "NonCoincident"  (2)
    IsBaseSys = UVal: 1
    BlrRef = UVal: "Base Blr"
    ExcludeFromSizing = RVal: 0
