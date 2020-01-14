@@ -7,12 +7,14 @@ parameter "climate_zone", :default=>"ClimateZone3"
 parameter "weather_station", :default=>"OAKLAND_724930"
 
 #parameters for autosizing
-parameter "measure_folder"
-parameter "folder_name"
 parameter "prototype"
 parameter "software"
 parameter "autosizing", :default=> "No"
 parameter "hvac_type", :default=> "SZAC"
+
+#parameters for residential DHW
+
+parameter "is_central_dhw"
 
 #measure parameters
 parameter "res_wood_wall", :default=>"Stucco - 7/8 in.;Plywood - 5/8 in.;Compliance Insulation R1.54;WoodFrameWall16inOCCavInsR5;Gypsum Board - 5/8 in."
@@ -15682,7 +15684,7 @@ end
 
 elsif (autosizing == "Yes")
 
-file_capacities = Dir.pwd + "/analysis/" + measure_folder + "/" + "runs" + "/" + folder_name + "/" + cz + "/instance - run/instance - ab - HVACSecondary.csv"
+file_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + cz + "/instance - ab - HVACSecondary.csv"
 
 # https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
 table_capacities = CSV.parse(File.readlines(file_capacities).drop(13).join, headers: true)
@@ -16173,21 +16175,15 @@ ConsAssm   "OtherFloorU071"
    <% end %>
    ..
 
-ResDHWSys   "Residential DHW System"
-   TreeState = 253
-   CentralSys = 1
-   DistType = "No Control (continuous pumping)"
-   SysStoryCnt = 4
-   AnnualSolFrac = 0.2
-   ..
 
-ResWtrHtr   "Res Gas Water Heater"
-   InpRating = 200000
-   UEF = 0.57
-   TankVol = 100
-   StdbyLossFrac = 0.02
-   ThrmlEff = 0.8
-   ..
+<%
+
+
+insert 'waterheater.pxt',
+ :name => "Residential DHW System",
+ :central => is_central_dhw
+
+%>
 
 FluidSys   "Nonresidential Gas DHW System"
    TreeState = 253

@@ -1,0 +1,25 @@
+<%#INTERFACE
+
+modelkit_version "~>0.8.0"
+parameter "name"
+parameter "central", :default=> 0
+
+
+%>
+
+
+
+ResDHWSys   "<%=name%>"
+   CentralSys = <%=central%>
+   DistType = "No Control (continuous pumping)"
+   SysStoryCnt = 4
+   AnnualSolFrac = 0.2
+   ..
+
+ResWtrHtr   "Res Gas Water Heater"
+  InpRating = 200000
+  UEF = 0.57
+  TankVol = 100
+  StdbyLossFrac = 0.02
+  ThrmlEff = 0.8
+  ..
