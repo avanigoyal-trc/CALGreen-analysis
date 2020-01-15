@@ -1,13 +1,13 @@
-// INSERT TEMPLATE 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-com/mixed-use-mid-rise/root.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-com/mixed-use-mid-rise/root.pxt'
+// INSERT TEMPLATE 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-com/mixed-use-mid-rise/root.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-com/mixed-use-mid-rise/root.pxt'
 // * climate_zone = "ClimateZone14" (:default => "ClimateZone3")
-// * weather_station = "PALMDALE_723820" (:default => "OAKLAND_724930")
-// * measure_folder = "hvac" (:default => nil)
-// * folder_name = "mumr-baseline" (:default => nil)
+// * weather_station = "CTZ14S22A" (:default => "OAKLAND_724930")
 // * prototype = "mixed-use-mid-rise" (:default => nil)
 // * software = "cbecc-com" (:default => nil)
 //   autosizing = "No"
 //   hvac_type = "SZAC"
+// * is_central_dhw = "Yes" (:default => nil)
+// * fan_efficacy = 0.7 (:default => nil)
 // * res_wood_wall = "Stucco - 7/8 in.;Plywood - 5/8 in.;Compliance Insulation R1.54;WoodFrameWall16inOCCavInsR14;Gypsum Board - 5/8 in." (:default => "Stucco - 7/8 in.;Plywood - 5/8 in.;Compliance Insulation R1.54;WoodFrameWall16inOCCavInsR5;Gypsum Board - 5/8 in.")
 // * other_floor = "Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R20.00;Compliance Insulation R0.20;Compliance Insulation R0.01;Plywood - 5/8 in.;Carpet - 3/4 in." (:default => "Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R6.00;Compliance Insulation R2.15;Compliance Insulation R0.50;Plywood - 5/8 in.;Carpet - 3/4 in.")
 // * nonres_concrete_wall = "Stucco - 7/8 in.;Concrete - 140 lb/ft3 - 8 in.;Compliance Insulation R1.35;Compliance Insulation R0.20;Compliance Insulation R10.00;WoodFraming16inOC;Gypsum Board - 1/2 in." (:default => "Stucco - 7/8 in.;Concrete - 140 lb/ft3 - 8 in.;Compliance Insulation R8.07;Compliance Insulation R0.20;Compliance Insulation R1.00;WoodFraming16inOC;Gypsum Board - 1/2 in.")
@@ -30,7 +30,7 @@ Proj   "Mid-Rise Mixed-Use (5-story)"
    RunDate = 1570125408
    GasType = "NaturalGas"
    CliZn = "ClimateZone14"
-   WeatherStation = "PALMDALE_723820"
+   WeatherStation = "CTZ14S22A"
    HVACAutoSizing = 0
    ExcptCondNoClgSys = "No"
    ExcptCondRtdCap = "No"
@@ -15607,7 +15607,7 @@ ThrmlZn   "Thermal Zone: Parking Garage"
    Type = "Unconditioned"
    VentSysRef = "Parking Garage Vent System"
    HasUnknownHVAC = 0
-   VentStd = "T24-2019"
+   VentStd = "T24-2022"
    VentStdDesc = "Exhaust"
    VentSrc = "Forced"
    ..
@@ -15615,7 +15615,7 @@ ThrmlZn   "Thermal Zone: Parking Garage"
 
 
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F2-4 1-Bed Core N" (:default => nil)
 // * count = "3" (:default => nil)
 //   seer = 14
@@ -15653,7 +15653,7 @@ Fan   "Fan 1"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F2-4 1-Bed Core West" (:default => nil)
 // * count = "6" (:default => nil)
 //   seer = 14
@@ -15693,7 +15693,7 @@ Fan   "Fan 2"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F2-4 1-Bed Core East" (:default => nil)
 // * count = "6" (:default => nil)
 //   seer = 14
@@ -15733,7 +15733,7 @@ Fan   "Fan 3"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F2-4 1-Bed North" (:default => nil)
 // * count = "15" (:default => nil)
 //   seer = 14
@@ -15773,7 +15773,7 @@ Fan   "Fan 4"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F2-4 2-Bed Core NE-NW" (:default => nil)
 // * count = "6" (:default => nil)
 //   seer = 14
@@ -15813,7 +15813,7 @@ Fan   "Fan 5"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F2-4 2-Bed East" (:default => nil)
 // * count = "9" (:default => nil)
 //   seer = 14
@@ -15853,7 +15853,7 @@ Fan   "Fan 6"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F2-4 2-Bed West" (:default => nil)
 // * count = "9" (:default => nil)
 //   seer = 14
@@ -15893,7 +15893,7 @@ Fan   "Fan 7"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F2-4 3-Bed NE" (:default => nil)
 // * count = "3" (:default => nil)
 //   seer = 14
@@ -15933,7 +15933,7 @@ Fan   "Fan 8"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F2-4 3-Bed NW" (:default => nil)
 // * count = "3" (:default => nil)
 //   seer = 14
@@ -15973,7 +15973,7 @@ Fan   "Fan 9"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F2-4 Studio SE" (:default => nil)
 // * count = "3" (:default => nil)
 //   seer = 14
@@ -16013,7 +16013,7 @@ Fan   "Fan 10"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F2-4 Studio SW" (:default => nil)
 // * count = "3" (:default => nil)
 //   seer = 14
@@ -16053,7 +16053,7 @@ Fan   "Fan 11"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F5 1-Bed Core N" (:default => nil)
 // * count = "1" (:default => nil)
 //   seer = 14
@@ -16093,7 +16093,7 @@ Fan   "Fan 12"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F5 1-Bed Core West" (:default => nil)
 // * count = "2" (:default => nil)
 //   seer = 14
@@ -16133,7 +16133,7 @@ Fan   "Fan 13"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F5 1-Bed Core East" (:default => nil)
 // * count = "2" (:default => nil)
 //   seer = 14
@@ -16173,7 +16173,7 @@ Fan   "Fan 14"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F5 1-Bed North" (:default => nil)
 // * count = "5" (:default => nil)
 //   seer = 14
@@ -16213,7 +16213,7 @@ Fan   "Fan 15"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F5 2-Bed Core NE-NW" (:default => nil)
 // * count = "2" (:default => nil)
 //   seer = 14
@@ -16253,7 +16253,7 @@ Fan   "Fan 16"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F5 2-Bed East" (:default => nil)
 // * count = "3" (:default => nil)
 //   seer = 14
@@ -16293,7 +16293,7 @@ Fan   "Fan 17"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F5 2-Bed West" (:default => nil)
 // * count = "3" (:default => nil)
 //   seer = 14
@@ -16333,7 +16333,7 @@ Fan   "Fan 18"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F5 3-Bed NE" (:default => nil)
 // * count = "1" (:default => nil)
 //   seer = 14
@@ -16373,7 +16373,7 @@ Fan   "Fan 19"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F5 3-Bed NW" (:default => nil)
 // * count = "1" (:default => nil)
 //   seer = 14
@@ -16413,7 +16413,7 @@ Fan   "Fan 20"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F5 Studio SE" (:default => nil)
 // * count = "1" (:default => nil)
 //   seer = 14
@@ -16453,7 +16453,7 @@ Fan   "Fan 21"
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F5 Studio SW" (:default => nil)
 // * count = "1" (:default => nil)
 //   seer = 14
@@ -16492,7 +16492,12 @@ Fan   "Fan 22"
   
    ..
 // END TEMPLATE 'szac.pxt'
-
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 1-Bed Core N" (:default => nil)
+// * count = "3" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
 
 
 
@@ -16500,150 +16505,347 @@ ZnSys   "Bal F2 1-Bed Core N"
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
-   RtdPwr = 21.23
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 1-Bed Core West" (:default => nil)
+// * count = "6" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F2 1-Bed Core West"
    Type = "VentilationOnly"
    Cnt = 6
    ExhSysType = "Balanced"
-   RtdPwr = 21.23
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 1-Bed Core East" (:default => nil)
+// * count = "6" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F2 1-Bed Core East"
    Type = "VentilationOnly"
    Cnt = 6
    ExhSysType = "Balanced"
-   RtdPwr = 21.23
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 1-Bed North" (:default => nil)
+// * count = "15" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F2 1-Bed North"
    Type = "VentilationOnly"
    Cnt = 15
    ExhSysType = "Balanced"
-   RtdPwr = 21.23
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 2-Bed Core NE-NW" (:default => nil)
+// * count = "6" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F2 2-Bed Core NE-NW"
    Type = "VentilationOnly"
    Cnt = 6
    ExhSysType = "Balanced"
-   RtdPwr = 31.85
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 2-Bed East" (:default => nil)
+// * count = "9" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F2 2-Bed East"
    Type = "VentilationOnly"
    Cnt = 9
    ExhSysType = "Balanced"
-   RtdPwr = 31.85
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 2-Bed West" (:default => nil)
+// * count = "9" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F2 2-Bed West"
    Type = "VentilationOnly"
    Cnt = 9
    ExhSysType = "Balanced"
-   RtdPwr = 31.85
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 3-Bed NE" (:default => nil)
+// * count = "3" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F2 3-Bed NE"
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
-   RtdPwr = 41.9
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 3-Bed NW" (:default => nil)
+// * count = "3" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F2 3-Bed NW"
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
-   RtdPwr = 41.9
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 Studio SE" (:default => nil)
+// * count = "3" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F2 Studio SE"
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
-   RtdPwr = 18.1
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 Studio SW" (:default => nil)
+// * count = "3" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F2 Studio SW"
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
-   RtdPwr = 18.1
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 1-Bed Core N" (:default => nil)
+// * count = "1" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F5 1-Bed Core N"
    Type = "VentilationOnly"
+   Cnt = 1
    ExhSysType = "Balanced"
-   RtdPwr = 21.23
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 1-Bed Core West" (:default => nil)
+// * count = "2" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F5 1-Bed Core West"
    Type = "VentilationOnly"
    Cnt = 2
    ExhSysType = "Balanced"
-   RtdPwr = 21.23
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 1-Bed Core East" (:default => nil)
+// * count = "2" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F5 1-Bed Core East"
    Type = "VentilationOnly"
    Cnt = 2
    ExhSysType = "Balanced"
-   RtdPwr = 21.23
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 1-Bed North" (:default => nil)
+// * count = "5" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F5 1-Bed North"
    Type = "VentilationOnly"
    Cnt = 5
    ExhSysType = "Balanced"
-   RtdPwr = 21.23
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 2-Bed Core NE-NW" (:default => nil)
+// * count = "2" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F5 2-Bed Core NE-NW"
    Type = "VentilationOnly"
    Cnt = 2
    ExhSysType = "Balanced"
-   RtdPwr = 31.85
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 2-Bed East" (:default => nil)
+// * count = "3" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F5 2-Bed East"
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
-   RtdPwr = 31.85
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 2-Bed West" (:default => nil)
+// * count = "3" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F5 2-Bed West"
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
-   RtdPwr = 31.85
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 3-Bed NE" (:default => nil)
+// * count = "1" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F5 3-Bed NE"
    Type = "VentilationOnly"
+   Cnt = 1
    ExhSysType = "Balanced"
-   RtdPwr = 41.9
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 3-Bed NW" (:default => nil)
+// * count = "1" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F5 3-Bed NW"
    Type = "VentilationOnly"
+   Cnt = 1
    ExhSysType = "Balanced"
-   RtdPwr = 41.9
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 Studio SE" (:default => nil)
+// * count = "1" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F5 Studio SE"
    Type = "VentilationOnly"
+   Cnt = 1
    ExhSysType = "Balanced"
-   RtdPwr = 18.1
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 Studio SW" (:default => nil)
+// * count = "1" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
 
 ZnSys   "Bal F5 Studio SW"
    Type = "VentilationOnly"
+   Cnt = 1
    ExhSysType = "Balanced"
-   RtdPwr = 18.1
+   
    ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+
+
 
 AirSys   "Parking Garage Vent System"
    TreeState = 253
@@ -16947,21 +17149,31 @@ ConsAssm   "OtherFloorU071"
    
    ..
 
+
+// INSERT TEMPLATE 'waterheater.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/waterheater.pxt'
+// * name = "Residential DHW System" (:default => nil)
+// * central = "Yes" (:default => 0)
+
+
+
+
 ResDHWSys   "Residential DHW System"
-   TreeState = 253
-   CentralSys = 1
+   CentralSys = Yes
    DistType = "No Control (continuous pumping)"
    SysStoryCnt = 4
    AnnualSolFrac = 0.2
    ..
 
 ResWtrHtr   "Res Gas Water Heater"
-   InpRating = 200000
-   UEF = 0.57
-   TankVol = 100
-   StdbyLossFrac = 0.02
-   ThrmlEff = 0.8
-   ..
+  InpRating = 200000
+  UEF = 0.57
+  TankVol = 100
+  StdbyLossFrac = 0.02
+  ThrmlEff = 0.8
+  ..
+// END TEMPLATE 'waterheater.pxt'
+
 
 FluidSys   "Nonresidential Gas DHW System"
    TreeState = 253
@@ -17606,4 +17818,4 @@ clg: 0  htg: 0  'Thermal Zone: Parking Garage'" )
 
 
 END_OF_FILE
-// END TEMPLATE 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-com/mixed-use-mid-rise/root.pxt'
+// END TEMPLATE 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-com/mixed-use-mid-rise/root.pxt'
