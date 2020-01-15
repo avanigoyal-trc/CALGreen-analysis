@@ -1,0 +1,43 @@
+<%#INTERFACE
+
+modelkit_version "~>0.8.0"
+
+parameter "zone_name"
+parameter "count"
+parameter "index"
+parameter "cooling_capacity", :default => 0
+parameter "heating_capacity", :default => 0
+parameter "supply_fan_cfm", :default => 0
+%>
+
+
+ZnSys   "<%=zone_name%>"
+   TreeState = 253
+   Type = "FPFC"
+   AirFlowPerSqFt = 0.8
+   ..
+
+CoilClg   "CoilCooling <%=index%>"
+   Type = "ChilledWater"
+   FluidSegInRef = "ChW Supply"
+   FluidSegOutRef = "ChW Return"
+   <%if cooling_capacity != 0 %>
+   CapTotNetRtd = <%=cooling_capacity%>
+   <%end%>
+   ..
+
+CoilHtg   "CoilHtg <%=index%>"
+   Type = "HotWater"
+   FluidSegInRef = "HW Supply"
+   FluidSegOutRef = "HW Return"
+   <%if heating_capacity != 0 %>
+   CapTotNetRtd = <%=heating_capacity%>
+   <%end%>
+   ..
+
+Fan   "Fan 23"
+   CtrlMthd = "ConstantVolume"
+   <%if supply_fan_cfm != 0 %>
+   FlowCap = <%=supply_fan_cfm%>
+   <%end%>
+   ..

@@ -1,5 +1,5 @@
 ; Tables for Std model AutoHardSize capacity look-up rules
-TABLE TrmlUnit
+TABLE instance22TrmlUnit
 PropName,BaseName,Type,System,Zone,PriAirFlowMax,PriAirFlowMin,HtgAirFlowMax,ReheatCtrlMthd
 ;,,,,,(cfm),(cfm),( cfm)
 ,"BaseVAVBox TrmlUnit","VAVReheatBox","BaseAirSys5","Thermal Zone: F1 Business Center",-99996.000,180.000,-99996.000,"DualMaximum"
@@ -15,7 +15,7 @@ PropName,BaseName,Type,System,Zone,PriAirFlowMax,PriAirFlowMin,HtgAirFlowMax,Reh
 ,"BaseVAVBox TrmlUnit-11","VAVReheatBox","BaseAirSys5-2","Thermal Zone: F2-4 Corridor",-99996.000,402.750,-99996.000,"DualMaximum"
 ,"BaseVAVBox TrmlUnit-12","VAVReheatBox","BaseAirSys5-3","Thermal Zone: F5 Corridor",-99996.000,402.750,-99996.000,"DualMaximum"
 ENDTABLE
-TABLE CoilClg
+TABLE instance22CoilClg
 PropName,BaseName,Type,System,Zone,CapTotNetRtd,CapTotGrossRtd,FluidFlowRtDsgn,DXSEER,DXEER,NumClgStages
 ;,,,,,(Btu/hr),(Btu/hr),( gpm),
 ,"BaseSys5 CoilClg","DirectExpansion","BaseAirSys5","UNDEFINED",-99996.000,-99996.000,-99996.00000,-99996.000,-99996.000,1
@@ -44,7 +44,7 @@ PropName,BaseName,Type,System,Zone,CapTotNetRtd,CapTotGrossRtd,FluidFlowRtDsgn,D
 ,"BaseSys1 CoilClg-21","DirectExpansion","BaseZnSys1-21","Thermal Zone: F5 Studio SE",-99996.000,-99996.000,-99996.00000,-99996.000,-99996.000,-99996
 ,"BaseSys1 CoilClg-22","DirectExpansion","BaseZnSys1-22","Thermal Zone: F5 Studio SW",-99996.000,-99996.000,-99996.00000,-99996.000,-99996.000,-99996
 ENDTABLE
-TABLE CoilHtg
+TABLE instance22CoilHtg
 PropName,BaseName,Type,System,Zone,CapTotNetRtd,CapTotGrossRtd,FluidFlowRtDsgn,FurnAFUE,FurnThrmlEff,
 ;,,,,,(Btu/hr),(Btu/hr),( gpm),
 ,"BaseSys5 CoilHtg","HotWater","BaseAirSys5","UNDEFINED",-99996.000,-99996.000,-99996.00000,-99996.000,-99996.000
@@ -85,7 +85,7 @@ PropName,BaseName,Type,System,Zone,CapTotNetRtd,CapTotGrossRtd,FluidFlowRtDsgn,F
 ,"BaseVAVBox CoilHtg-11","HotWater","BaseAirSys5-2","Thermal Zone: F2-4 Corridor",-99996.000,-99996.000,-99996.00000,-99996.000,-99996.000
 ,"BaseVAVBox CoilHtg-12","HotWater","BaseAirSys5-3","Thermal Zone: F5 Corridor",-99996.000,-99996.000,-99996.00000,-99996.000,-99996.000
 ENDTABLE
-TABLE Fan
+TABLE instance22Fan
 PropName,BaseName,CtrlMthd,System,Zone,FlowCap,FlowMin,FlowEff,ModelingMthd,TotStaticPress,MtrBHP,MtrHP,MtrPos,MtrEff
 ;,,,,,(cfm),(cfm),,,(inH2O),(hp),(hp),
 ,"BaseSys5 Fan","VariableSpeedDrive","BaseAirSys5","UNDEFINED",0.000,-99996.000,1.000,"StaticPressure",0.000,0.000,-99996.000,"InAirStream",1.000
@@ -114,7 +114,7 @@ PropName,BaseName,CtrlMthd,System,Zone,FlowCap,FlowMin,FlowEff,ModelingMthd,TotS
 ,"BaseSys1 Fan-21","ConstantVolume","BaseZnSys1-21","Thermal Zone: F5 Studio SE",-99996.000,-99996.000,1.000,"StaticPressure",0.000,0.000,-99996.000,"InAirStream",1.000
 ,"BaseSys1 Fan-22","ConstantVolume","BaseZnSys1-22","Thermal Zone: F5 Studio SW",-99996.000,-99996.000,1.000,"StaticPressure",0.000,0.000,-99996.000,"InAirStream",1.000
 ENDTABLE
-TABLE OACtrl
+TABLE instance22OACtrl
 PropName,BaseName,EconoCtrlMthd,System,EconoIntegration
 ;
 ,"BaseSys5 OACtrl","NoEconomizer","BaseAirSys5","UNDEFINED"
