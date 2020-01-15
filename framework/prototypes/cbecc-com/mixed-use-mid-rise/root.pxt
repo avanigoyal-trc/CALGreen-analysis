@@ -16,6 +16,8 @@ parameter "hvac_type", :default=> "SZAC"
 
 parameter "is_central_dhw"
 
+parameter "fan_efficacy"
+
 #measure parameters
 parameter "res_wood_wall", :default=>"Stucco - 7/8 in.;Plywood - 5/8 in.;Compliance Insulation R1.54;WoodFrameWall16inOCCavInsR5;Gypsum Board - 5/8 in."
 parameter "other_floor", :default=>"Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R6.00;Compliance Insulation R2.15;Compliance Insulation R0.50;Plywood - 5/8 in.;Carpet - 3/4 in."
@@ -15661,6 +15663,7 @@ table_zones = CSV.parse(File.read(file_zones), headers: true)
 zones = table_zones.by_col[1]
 counts_original = table_zones.by_col[2]
 index = table_zones.by_col[0]
+vent_zones = table_zones.by_col[3]
 
 
 num_zones = zones.length() -1 #Subtract 1 since indexing at 0
@@ -15730,158 +15733,50 @@ for a in 0..num_zones do
 end
 
 end
+
+
+
+# Ventilation Systems
+
+if (autosizing == "No")
+  for a in 0..num_zones do
+    insert 'znsys_ventilation.pxt',
+      :name => vent_zones[a],
+      :count => counts_original[a]
+
+  end
+
+elsif (autosizing == "Yes")
+
+  file_capacities_vent = Dir.pwd + "/autosizing/" + prototype + "/" + cz + "/instance - ap - FanPowerAdjustment.csv"
+
+  # https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
+  table_capacities_vent = CSV.parse(File.readlines(file_capacities_vent).drop(11).join, headers: true)
+
+  vent_capacities = table_capacities_vent.by_col[5][num_zones+1..num_zones+num_zones+1] #skip thermal zones
+  vent_names = table_capacities_vent.by_col[0][num_zones+1..num_zones+num_zones+1]
+
+  #Implement check to see if original names is same as ventilation names from individual csv files.
+  check = vent_names <=> vent_zones
+  if check != 0
+    warn("FanPowerAdjustment.csv is not matching original ventilation zones")
+    puts "Original:"
+    puts vent_zones
+    puts "FanPowerAdjustment:"
+    puts vent_names
+  end
+
+  for a in 0..num_zones do
+    insert 'znsys_ventilation.pxt',
+      :name => vent_zones[a],
+      :count => counts_original[a],
+      :capacity => vent_capacities[a],
+      :efficacy => fan_efficacy
+  end
+
+end
 %>
 
-
-
-ZnSys   "Bal F2 1-Bed Core N"
-   Type = "VentilationOnly"
-   Cnt = 3
-   ExhSysType = "Balanced"
-   RtdPwr = 21.23
-   ..
-
-ZnSys   "Bal F2 1-Bed Core West"
-   Type = "VentilationOnly"
-   Cnt = 6
-   ExhSysType = "Balanced"
-   RtdPwr = 21.23
-   ..
-
-ZnSys   "Bal F2 1-Bed Core East"
-   Type = "VentilationOnly"
-   Cnt = 6
-   ExhSysType = "Balanced"
-   RtdPwr = 21.23
-   ..
-
-ZnSys   "Bal F2 1-Bed North"
-   Type = "VentilationOnly"
-   Cnt = 15
-   ExhSysType = "Balanced"
-   RtdPwr = 21.23
-   ..
-
-ZnSys   "Bal F2 2-Bed Core NE-NW"
-   Type = "VentilationOnly"
-   Cnt = 6
-   ExhSysType = "Balanced"
-   RtdPwr = 31.85
-   ..
-
-ZnSys   "Bal F2 2-Bed East"
-   Type = "VentilationOnly"
-   Cnt = 9
-   ExhSysType = "Balanced"
-   RtdPwr = 31.85
-   ..
-
-ZnSys   "Bal F2 2-Bed West"
-   Type = "VentilationOnly"
-   Cnt = 9
-   ExhSysType = "Balanced"
-   RtdPwr = 31.85
-   ..
-
-ZnSys   "Bal F2 3-Bed NE"
-   Type = "VentilationOnly"
-   Cnt = 3
-   ExhSysType = "Balanced"
-   RtdPwr = 41.9
-   ..
-
-ZnSys   "Bal F2 3-Bed NW"
-   Type = "VentilationOnly"
-   Cnt = 3
-   ExhSysType = "Balanced"
-   RtdPwr = 41.9
-   ..
-
-ZnSys   "Bal F2 Studio SE"
-   Type = "VentilationOnly"
-   Cnt = 3
-   ExhSysType = "Balanced"
-   RtdPwr = 18.1
-   ..
-
-ZnSys   "Bal F2 Studio SW"
-   Type = "VentilationOnly"
-   Cnt = 3
-   ExhSysType = "Balanced"
-   RtdPwr = 18.1
-   ..
-
-ZnSys   "Bal F5 1-Bed Core N"
-   Type = "VentilationOnly"
-   ExhSysType = "Balanced"
-   RtdPwr = 21.23
-   ..
-
-ZnSys   "Bal F5 1-Bed Core West"
-   Type = "VentilationOnly"
-   Cnt = 2
-   ExhSysType = "Balanced"
-   RtdPwr = 21.23
-   ..
-
-ZnSys   "Bal F5 1-Bed Core East"
-   Type = "VentilationOnly"
-   Cnt = 2
-   ExhSysType = "Balanced"
-   RtdPwr = 21.23
-   ..
-
-ZnSys   "Bal F5 1-Bed North"
-   Type = "VentilationOnly"
-   Cnt = 5
-   ExhSysType = "Balanced"
-   RtdPwr = 21.23
-   ..
-
-ZnSys   "Bal F5 2-Bed Core NE-NW"
-   Type = "VentilationOnly"
-   Cnt = 2
-   ExhSysType = "Balanced"
-   RtdPwr = 31.85
-   ..
-
-ZnSys   "Bal F5 2-Bed East"
-   Type = "VentilationOnly"
-   Cnt = 3
-   ExhSysType = "Balanced"
-   RtdPwr = 31.85
-   ..
-
-ZnSys   "Bal F5 2-Bed West"
-   Type = "VentilationOnly"
-   Cnt = 3
-   ExhSysType = "Balanced"
-   RtdPwr = 31.85
-   ..
-
-ZnSys   "Bal F5 3-Bed NE"
-   Type = "VentilationOnly"
-   ExhSysType = "Balanced"
-   RtdPwr = 41.9
-   ..
-
-ZnSys   "Bal F5 3-Bed NW"
-   Type = "VentilationOnly"
-   ExhSysType = "Balanced"
-   RtdPwr = 41.9
-   ..
-
-ZnSys   "Bal F5 Studio SE"
-   Type = "VentilationOnly"
-   ExhSysType = "Balanced"
-   RtdPwr = 18.1
-   ..
-
-ZnSys   "Bal F5 Studio SW"
-   Type = "VentilationOnly"
-   ExhSysType = "Balanced"
-   RtdPwr = 18.1
-   ..
 
 AirSys   "Parking Garage Vent System"
    TreeState = 253

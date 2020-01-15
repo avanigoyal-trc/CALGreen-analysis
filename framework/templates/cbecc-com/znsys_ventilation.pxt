@@ -1,0 +1,20 @@
+<%#INTERFACE
+modelkit_version "~>0.8.0"
+
+parameter "name"
+parameter "count"
+parameter "capacity"
+parameter "efficacy", :default=> 0.7
+
+%>
+
+
+ZnSys   "<%=name%>"
+   Type = "VentilationOnly"
+   Cnt = <%=count%>
+   ExhSysType = "Balanced"
+   <%if capacity != 0 %>
+   RtdFlowCap = <%=capacity%>
+   RtdPwr = <%=0.7*capacity.to_f%>
+   <%end%>
+   ..
