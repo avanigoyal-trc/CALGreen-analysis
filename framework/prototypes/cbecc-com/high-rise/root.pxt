@@ -12,6 +12,8 @@ parameter "software"
 parameter "autosizing", :default=> "No"
 parameter "hvac_type", :default=> "SZAC"
 
+parameter "is_central_dhw"
+
 #measure parameters
 parameter "res_metal_wall", :default=>"Stucco - 7/8 in.;Compliance Insulation R10.06;Compliance Insulation R2.00;Compliance Insulation R0.20;Compliance Insulation R0.10;Air - Metal Wall Framing - 16 or 24 in. OC;Gypsum Board - 1/2 in."
 parameter "other_floor", :default=>"Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R9.40;Compliance Insulation R6.00;Plywood - 5/8 in.;Carpet - 3/4 in."
@@ -11354,21 +11356,14 @@ WtrHtr   "Nonres Gas Water Heater"
    FuelSrc = "Gas"
    ..
 
-ResDHWSys   "Residential DHW System"
-   TreeState = 253
-   CentralSys = 1
-   DistType = "Demand Control (Standard Design for new construction)"
-   SysStoryCnt = 9
-   AnnualSolFrac = 0.35
-   ..
+  <%
 
-ResWtrHtr   "Res Gas Water Heater"
-   InpRating = 200000
-   UEF = 0.57
-   TankVol = 100
-   StdbyLossFrac = 0.02
-   ThrmlEff = 0.8
-   ..
+
+  insert 'waterheater.pxt',
+  :name => "Residential DHW System",
+  :central => is_central_dhw
+
+  %>
 
 SpcFuncDefaults   "Elevator"
    SpcFunc = "Electrical, Mechanical, Telephone Rooms"
