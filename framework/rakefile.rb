@@ -14,7 +14,6 @@ end
 
 require("modelkit/config")
 require("modelkit/parametrics/template")
-require("modelkit/energyplus")
 
 require("fileutils")
 require("csv")
@@ -29,6 +28,21 @@ CONFIG = Modelkit::Config.new("#{root_dir}/.modelkit-config")
 cbecc_com_path = CONFIG["cbecc-com-path"]
 templates_dir = "#{root_dir}/templates/cbecc-com"
 global_pxv_path = "#{root_dir}/global.pxv"
+
+max_workers = CONFIG["max-workers"]
+if (max_workers.nil?)
+  max_workers = 1
+end
+QUEUE = WorkQueue.new(max_workers, nil)
+
+
+trap("INT") do  # Ctrl+C (polite kill)
+  puts "\nCanceling all simulation runs."
+  if ($child_pids)
+    $child_pids.each { |pid| Process.kill("KILL", pid) }
+  end
+  exit
+end
 
 
 task :default do
@@ -180,14 +194,30 @@ task :run, [:analysis] do |task, args|
   end
 
   puts "Running cases for: #{analysis_name}"
+  puts "Type Ctrl+C to cancel all simulation runs."
+  sleep(1)
 
   analysis_dir = "#{root_dir}/analysis/#{analysis_name}"
 
   paths = Dir.glob("#{analysis_dir}/runs/**/instance.cibd22").sort
   paths.each do |path|
-    puts "  #{File.dirname(path)}"
-    system("CALL \"#{cbecc_com_path}\" -pa -nogui \"#{path}\"")
+    case_dir = File.dirname(path)
+    short_name = "#{File.basename(File.dirname(case_dir))}/#{File.basename(case_dir)}"
+    puts "Queueing: #{short_name}\n"
+
+    # Can't seem to eliminate the Terminate batch job (Y/N)? prompt upon Ctrl+C.
+    # Tried changing CALL to START with no change.
+    #command = "CALL \"#{cbecc_com_path}\" -pa -nogui \"#{path}\""
+    # Don't use CALL here because it wraps the process in another layer of shell environment.
+    # Makes it impossible to kill the grandchild process.
+    command = "\"#{cbecc_com_path}\" -pa -nogui \"#{path}\""
+    QUEUE.enqueue_b(command, case_dir) do |command, dir|
+      name = "#{File.basename(File.dirname(dir))}/#{File.basename(dir)}"
+      puts "Running: #{name}\n"
+      run_process(command, dir)
+    end
   end
+  QUEUE.join  # Wait for all remaining jobs to finish
 end
 
 
