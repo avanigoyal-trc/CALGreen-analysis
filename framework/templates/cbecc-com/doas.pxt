@@ -1,0 +1,75 @@
+<%#INTERFACE
+
+modelkit_version "~>0.8.0"
+
+parameter "name"
+parameter "hvac_type"
+
+%>
+
+
+AirSys   "<%=name%>"
+   Type = "DOASCV"
+   CtrlSysType = "DDCToZone"
+   NightCycleFanCtrl = "StaysOff"
+   OptStart = 1
+   AirFlowPerSqFt = 0.15
+   AirFlowPerTon = 400
+   ClgCtrl = "WarmestReset"
+   ClRstSupHi = 75
+   ClRstSupLow = 55
+   ..
+
+AirSeg   "<%=name%> SupAirSeg"
+   Type = "Supply"
+   ..
+
+CoilClg   "<%=name%> CoilClg"
+   Type = "DirectExpansion"
+   DXEER = 11
+   DXSEER = 14
+   CapTotNetRtd = 60661
+   ..
+
+<%if hvac_type == "SZAC" %>
+CoilHtg   "<%=name%> CoilHtg"
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   CapTotNetRtd = 46977
+   ..
+<%end%>
+
+<%if hvac_type == "SZHP" %>
+CoilHtg   "<%=name%> CoilHtg"
+   Type = "HeatPump"
+   CapTotNetRtd = 46977
+   HtPumpCOP = 4.5
+   HtPumpSuppCoilHtgRef = "<%=name%> SuppCoilHtg"
+   ..
+
+CoilHtg   "<%=name%> SuppCoilHtg"
+   Type = "Resistance"
+   ..
+<%end%>
+
+Fan   "<%=name%> Fan"
+   MtrBHP = 0.647
+   ..
+
+AirSeg   "<%=name%> ReliefAirSeg"
+   Type = "Relief"
+   Path = "Ducted"
+   ..
+
+OACtrl   "<%=name%> OACtrl"
+   ..
+
+TrmlUnit   "<%=name%> TrmlUnit-1"
+   Type = "Uncontrolled"
+   ZnServedRef = "Thermal Zone: F2-4 Corridor"
+   ..
+
+TrmlUnit   "<%=name%> TrmlUnit-3"
+   Type = "Uncontrolled"
+   ZnServedRef = "Thermal Zone: F5 Corridor"
+   ..
