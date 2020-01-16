@@ -2,7 +2,7 @@
 
 modelkit_version "~>0.8.0"
 
-
+parameter "proposed_only", :default => "No"
 parameter "climate_zone", :default=>"ClimateZone3"
 parameter "weather_station", :default=>"OAKLAND_724930"
 
@@ -63,6 +63,9 @@ RulesetFilename   "T24N_2022.bin"
 Proj   "Mid-Rise Mixed-Use (5-story)"
    AnalysisType = "Title24ProposedOnly"
    Ruleset = "CA 2022 Nonresidential, Vers. 1.0 Alpha (T24N_2022.bin)"
+   <%if proposed_only == "Yes"%>
+   AnalysisType = "Title24ProposedOnly"
+   <%end%>
    BldgEngyModelVersion = 14
    CreateDate = 1567115615
    ModDate = 1570125407
@@ -15985,56 +15988,13 @@ CoilHtg   "BaseVAVBox CoilHtg-10"
    CapTotGrossRtd = 77052.9
    ..
 
-AirSys   "DOAS1"
-   Type = "DOASCV"
-   CtrlSysType = "DDCToZone"
-   NightCycleFanCtrl = "StaysOff"
-   OptStart = 1
-   AirFlowPerSqFt = 0.15
-   AirFlowPerTon = 400
-   ClgCtrl = "WarmestReset"
-   ClRstSupHi = 75
-   ClRstSupLow = 55
-   ..
+<%
 
-AirSeg   "DOAS1 SupAirSeg"
-   Type = "Supply"
-   ..
+insert 'doas.pxt',
+  :name => "DOAS1",
+  :hvac_type => hvac_type
 
-CoilClg   "DOAS1 CoilClg"
-   Type = "DirectExpansion"
-   DXEER = 11
-   DXSEER = 14
-   CapTotNetRtd = 60661
-   ..
-
-CoilHtg   "DOAS1 CoilHtg"
-   Type = "Furnace"
-   FurnAFUE = 0.8
-   CapTotNetRtd = 46977
-   ..
-
-Fan   "DOAS1 Fan"
-   MtrBHP = 0.647
-   ..
-
-AirSeg   "DOAS1 ReliefAirSeg"
-   Type = "Relief"
-   Path = "Ducted"
-   ..
-
-OACtrl   "DOAS1 OACtrl"
-   ..
-
-TrmlUnit   "DOAS1 TrmlUnit-1"
-   Type = "Uncontrolled"
-   ZnServedRef = "Thermal Zone: F2-4 Corridor"
-   ..
-
-TrmlUnit   "DOAS1 TrmlUnit-3"
-   Type = "Uncontrolled"
-   ZnServedRef = "Thermal Zone: F5 Corridor"
-   ..
+%>
 
 SpcFuncDefaults   "Retail Space"
    SpcFunc = "Retail Sales Area (Retail Merchandise Sales)"
