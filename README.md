@@ -7,6 +7,7 @@
 ## Current File Organization: 
 
 - `framework` folder contains all folders and files needed to run ModelKit. 
+
         - If you need to create a new ModelKit run, please create a new folder in the `analysis` folder. 
         - `analysis` folder: contains all run files. Create cases in `cases.csv` and view results in `results.csv` here. 
         - `autosizing` folder: contains files needed for autosizing HVAC systems. 
