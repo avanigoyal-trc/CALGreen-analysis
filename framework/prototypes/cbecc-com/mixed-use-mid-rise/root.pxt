@@ -14,8 +14,8 @@ parameter "hvac_type", :default=> "SZAC"
 
 #parameters for residential DHW
 
-parameter "is_central_dhw"
-parameter "sol_frac"
+parameter "is_central_dhw", :default=>1
+parameter "sol_frac", :default=>0.2
 
 parameter "fan_efficacy"
 
@@ -16038,8 +16038,8 @@ ConsAssm   "OtherFloorU071"
 
 insert 'waterheater.pxt',
  :name => "Residential DHW System",
- :central => is_central_dhw
- :sol_frac => sol_frac
+ :central => is_central_dhw,
+ :solfrac => sol_frac
 
 %>
 
