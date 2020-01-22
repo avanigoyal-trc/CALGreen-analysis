@@ -10625,8 +10625,8 @@ TrmlUnit   "TU22 F10 Corridor"
    file_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + cz + "/instance - ab - HVACSecondary.csv"
 
    # https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
-   table_capacities = CSV.parse(File.readlines(file_capacities).drop(20).join, headers: false)
-   puts table_capacities
+   table_capacities = CSV.parse(File.readlines(file_capacities).drop(13).join, headers: true)
+
 
 
 
