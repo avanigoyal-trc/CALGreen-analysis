@@ -30,6 +30,17 @@ cbecc_com_path = CONFIG["cbecc-com-path"]
 templates_dir = "#{root_dir}/templates/cbecc-com"
 global_pxv_path = "#{root_dir}/global.pxv"
 
+analysis_name = ENV["analysis"]
+if (analysis_name.nil?)
+  puts "You must specify the name of the analysis. For example:\n"
+  puts "  #{program_name} analysis=hvac run"
+  exit
+end
+
+climate_pattern = ENV["climate"] || "*"
+case_pattern = ENV["case"] || "*"
+
+
 max_workers = CONFIG["max-workers"]
 if (max_workers.nil?)
   max_workers = 1
@@ -53,14 +64,7 @@ end
 
 
 desc "Clean/delete previous runs"
-task :clean, [:analysis] do |task, args|
-  analysis_name = args[:analysis]
-  if (analysis_name.nil?)
-    puts "You must specify the name of the analysis. For example:\n"
-    puts "  #{program_name} #{task.name}[hvac]"
-    exit
-  end
-
+task :clean do |task|
   puts "Cleaning runs for: #{analysis_name}"
 
   runs_dir = "#{root_dir}/analysis/#{analysis_name}/runs"
@@ -71,14 +75,7 @@ end
 
 
 desc "Generate pxv files for cases"
-task :cases, [:analysis] do |task, args|
-  analysis_name = args[:analysis]
-  if (analysis_name.nil?)
-    puts "You must specify the name of the analysis. For example:\n"
-    puts "  #{program_name} #{task.name}[hvac]"
-    exit
-  end
-
+task :cases do |task|
   analysis_dir = "#{root_dir}/analysis/#{analysis_name}"
   cases_path = "#{analysis_dir}/cases.csv"
   if (not File.exist?(cases_path))
@@ -86,7 +83,7 @@ task :cases, [:analysis] do |task, args|
     exit
   end
 
-  puts "Generating cases for: #{analysis_name}"
+  puts "Cases: ANALYSIS=#{analysis_name} CASE=#{case_pattern} CLIMATE=#{climate_pattern}"
 
   cases_csv = CSV.read(cases_path, :headers=>true)
   cases_csv.each do |case_row|
@@ -114,6 +111,8 @@ task :cases, [:analysis] do |task, args|
       end
     end
 
+    next if (case_pattern != "*" and case_pattern != case_name)
+
     baseline_path = "#{root_dir}/baselines/#{prototype_name}/#{baseline_name}.csv"
     if (not File.exist?(baseline_path))
       puts "File not found (#{baseline_name}.csv) at expected path: #{baseline_path}"
@@ -138,6 +137,8 @@ task :cases, [:analysis] do |task, args|
         end
       end
 
+      next if (climate_pattern != "*" and climate_pattern != climate_name)
+
       case_dir = "#{analysis_dir}/runs/#{case_name}/#{climate_name}"
       puts "  #{case_name}/#{climate_name}"
       FileUtils.mkdir_p(case_dir)
@@ -151,20 +152,14 @@ end
 
 
 desc "Compose the simulation runs"
-task :compose, [:analysis] do |task, args|
-  analysis_name = args[:analysis]
-  if (analysis_name.nil?)
-    puts "You must specify the name of the analysis. For example:\n"
-    puts "  #{program_name} #{task.name}[hvac]"
-    exit
-  end
-
-  puts "Composing cases for: #{analysis_name}"
+task :compose do |task|
+  puts "Composing: ANALYSIS=#{analysis_name} CASE=#{case_pattern} CLIMATE=#{climate_pattern}"
 
   analysis_dir = "#{root_dir}/analysis/#{analysis_name}"
 
-  case_dirs = Dir.glob("#{analysis_dir}/runs/**/cz*").sort
-  case_dirs.each do |case_dir|
+  paths = Dir.glob("#{analysis_dir}/runs/#{case_pattern}/#{climate_pattern}/case.pxv").sort  # Look for this file as a surrogate for input file
+  paths.each do |path|
+    case_dir = File.dirname(path)
     baseline_pxv_path = "#{case_dir}/baseline.pxv"
     case_pxv_path = "#{case_dir}/case.pxv"
     out_path = "#{case_dir}/instance.cibd22"
@@ -186,21 +181,14 @@ end
 
 
 desc "Run simulations"
-task :run, [:analysis] do |task, args|
-  analysis_name = args[:analysis]
-  if (analysis_name.nil?)
-    puts "You must specify the name of the analysis. For example:\n"
-    puts "  #{program_name} #{task.name}[hvac]"
-    exit
-  end
-
-  puts "Running cases for: #{analysis_name}"
+task :run do |task|
+  puts "Running: ANALYSIS=#{analysis_name} CASE=#{case_pattern} CLIMATE=#{climate_pattern}"
   puts "Type Ctrl+C to cancel all simulation runs."
   sleep(1)
 
   analysis_dir = "#{root_dir}/analysis/#{analysis_name}"
 
-  paths = Dir.glob("#{analysis_dir}/runs/**/instance.cibd22").sort
+  paths = Dir.glob("#{analysis_dir}/runs/#{case_pattern}/#{climate_pattern}/case.pxv").sort  # Look for this file as a surrogate for input file
   paths.each do |path|
     case_dir = File.dirname(path)
     short_name = "#{File.basename(File.dirname(case_dir))}/#{File.basename(case_dir)}"
@@ -223,13 +211,8 @@ end
 
 
 desc "Aggregate the simulation results"
-task :results, [:analysis] do |task, args|
-  analysis_name = args[:analysis]
-  if (analysis_name.nil?)
-    puts "You must specify the name of the analysis. For example:\n"
-    puts "  #{program_name} #{task.name}[hvac]"
-    exit
-  end
+task :results do |task|
+  puts "Results: ANALYSIS=#{analysis_name} CASE=#{case_pattern} CLIMATE=#{climate_pattern}"
 
   analysis_dir = "#{root_dir}/analysis/#{analysis_name}"
   header = File.read("#{root_dir}/results-header.csv")
@@ -237,7 +220,7 @@ task :results, [:analysis] do |task, args|
   File.open("#{analysis_dir}/results.csv", "w") do |line|
     line.puts(header)  # Write the standard header
 
-    instance_log_paths = Dir.glob("#{analysis_dir}/runs/**/instance.log.csv").sort
+    instance_log_paths = Dir.glob("#{analysis_dir}/runs/#{case_pattern}/#{climate_pattern}/instance.log.csv").sort
     instance_log_paths.each do |path|
       case_dir = File.dirname(path)
       dir_name = "#{File.basename(File.dirname(case_dir))}/#{File.basename(case_dir)}"
