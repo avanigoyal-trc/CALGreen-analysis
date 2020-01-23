@@ -11,6 +11,7 @@ if (not defined?(Modelkit))
   end
 end
 
+program_name = defined?(Modelkit::CLI) ? "modelkit rake" : "rake"
 
 require("modelkit/config")
 require("modelkit/parametrics/template")
