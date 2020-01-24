@@ -13,6 +13,9 @@ parameter "autosizing", :default=> "No"
 parameter "hvac_type", :default=> "SZAC"
 
 parameter "is_central_dhw"
+parameter "sol_frac"
+
+
 
 #measure parameters
 parameter "res_metal_wall", :default=>"Stucco - 7/8 in.;Compliance Insulation R10.06;Compliance Insulation R2.00;Compliance Insulation R0.20;Compliance Insulation R0.10;Air - Metal Wall Framing - 16 or 24 in. OC;Gypsum Board - 1/2 in."
@@ -11359,11 +11362,10 @@ WtrHtr   "Nonres Gas Water Heater"
 
   <%
 
-
-  insert 'waterheater.pxt',
+  insert 'waterheater - hr.pxt',
   :name => "Residential DHW System",
-  :central => is_central_dhw
-
+  :central => is_central_dhw,
+  :solfrac => sol_frac
   %>
 
 SpcFuncDefaults   "Elevator"
