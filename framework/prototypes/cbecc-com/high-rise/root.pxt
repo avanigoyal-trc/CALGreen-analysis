@@ -11,11 +11,20 @@ parameter "prototype"
 parameter "software"
 parameter "autosizing", :default=> "No"
 parameter "hvac_type", :default=> "SZAC"
+#Needed for Highrise prototype since baseline system is served with VAV for corridor/laundry
+parameter "corridor_cooling_capacity", :default => 36000
+parameter "corridor_heating_capacity", :default => 26266
+parameter "corridor_supply_cfm", :default => 1200
+parameter "laundry_cooling_capacity", :default => 5400
+parameter "laundry_heating_capacity", :default => 3940
+parameter "laundry_supply_cfm", :default =>180
+
 
 parameter "is_central_dhw"
 parameter "sol_frac"
 
-
+#DOAS system
+parameter "doas_fan_type", :default => "Exhaust"
 
 #measure parameters
 parameter "res_metal_wall", :default=>"Stucco - 7/8 in.;Compliance Insulation R10.06;Compliance Insulation R2.00;Compliance Insulation R0.20;Compliance Insulation R0.10;Air - Metal Wall Framing - 16 or 24 in. OC;Gypsum Board - 1/2 in."
@@ -25,6 +34,8 @@ parameter "wood_framing_roof", :default=>"Roofing felt - 1/8 in.;Building Paper 
 
 parameter "window_u", :default=>0.36
 parameter "heating_eff", :default=>0.8
+
+
 
 %>
 
@@ -10437,45 +10448,30 @@ ThrmlZn   "Thermal Zone: F2-9 Studio N"
    VentSysPriority = 1
    ..
 
-AirSys   "Residential DOAS"
-   Type = "DOASCV"
-   CtrlSysType = "DDCToZone"
-   OptStart = 1
-   ClgCtrl = "FixedDualSetpoint"
-   ClgFixedSupTemp = 75
-   HtgFixedSupTemp = 60
-   ..
 
-AirSeg   "Res DOAS Supply"
-   TreeState = 253
-   Type = "Supply"
-   ..
 
-CoilClg   "Res DOAS Clg Coil"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
+<%
+require 'csv'
+file_doas_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + "DOAS_Laundry_Corridor.csv"
 
-CoilHtg   "Res DOAS Htg Coil"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
+# https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
+table_doas_capacities = CSV.parse(File.read(file_doas_capacities), headers: true)
+row_num = cz.scan(/\d/).join('').to_i() - 1
+cooling_capacity_doas = table_doas_capacities.by_col[1][row_num]
+heating_capacity_doas = table_doas_capacities.by_col[2][row_num]
+cfm_doas = table_doas_capacities.by_col[3][row_num]
 
-Fan   "Res DOAS Supply Fan"
-   ..
 
-AirSeg   "Res DOAS Exhaust"
-   TreeState = 253
-   Type = "Exhaust"
-   ..
+insert 'doas.pxt',
+  :name => "Residential DOAS",
+  :hvac_type => hvac_type,
+  :cooling_capacity => cooling_capacity_doas,
+  :heating_capacity => heating_capacity_doas,
+  :supply_fan_cfm => cfm_doas,
+  :fan_type => doas_fan_type
 
-Fan   "Res DOAS Exhaust Fan"
-   ..
 
-OACtrl   "Res DOAS Econo"
-   ..
+%>
 
 TrmlUnit   "TU1 F10 1-Bed N"
    Type = "Uncontrolled"
@@ -10671,6 +10667,31 @@ TrmlUnit   "TU22 F10 Corridor"
 
    end
 
+ #Insert Laundry and Corridor HVAC Systems
+ laundry_zones = ["ZnSys F2-9 Laundry",  "ZnSys F10 Laundry"]
+ corridor_zones = ["ZnSys F2-9 Corridor","ZnSys F10 Corridor"]
+ lc_counts = [8, 1]
+ indices = [num_zones + 2, num_zones + 3, num_zones + 4, num_zones + 5]
+
+ for a in 0..1 do
+  insert template_name,
+    :cooling_capacity => laundry_cooling_capacity,
+    :heating_capacity => laundry_heating_capacity,
+    :supply_fan_cfm => laundry_supply_cfm,
+    :zone_name => laundry_zones[a],
+    :count => lc_counts[a],
+    :index => indices[a]
+
+
+   insert template_name,
+     :cooling_capacity => corridor_cooling_capacity,
+     :heating_capacity => corridor_heating_capacity,
+     :supply_fan_cfm => corridor_supply_cfm,
+     :zone_name => corridor_zones[a],
+     :count => lc_counts[a],
+     :index => indices[a + 2]
+
+  end
 
 %>
 

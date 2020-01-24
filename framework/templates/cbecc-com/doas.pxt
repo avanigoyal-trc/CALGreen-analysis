@@ -4,6 +4,10 @@ modelkit_version "~>0.8.0"
 
 parameter "name"
 parameter "hvac_type"
+parameter "cooling_capacity"
+parameter "heating_capacity"
+parameter "supply_fan_cfm"
+parameter "fan_type"
 
 %>
 
@@ -28,21 +32,21 @@ CoilClg   "<%=name%> CoilClg"
    Type = "DirectExpansion"
    DXEER = 11
    DXSEER = 14
-   CapTotNetRtd = 60661
+   CapTotNetRtd = <%=cooling_capacity%>
    ..
 
 <%if hvac_type == "SZAC" %>
 CoilHtg   "<%=name%> CoilHtg"
    Type = "Furnace"
    FurnAFUE = 0.8
-   CapTotNetRtd = 46977
+   CapTotNetRtd = <%=heating_capacity%>
    ..
 <%end%>
 
 <%if hvac_type == "SZHP" %>
 CoilHtg   "<%=name%> CoilHtg"
    Type = "HeatPump"
-   CapTotNetRtd = 46977
+   CapTotNetRtd = <%=heating_capacity%>
    HtPumpCOP = 4.5
    HtPumpSuppCoilHtgRef = "<%=name%> SuppCoilHtg"
    ..
@@ -52,24 +56,20 @@ CoilHtg   "<%=name%> SuppCoilHtg"
    ..
 <%end%>
 
-Fan   "<%=name%> Fan"
-   MtrBHP = 0.647
+Fan   "<%=name%> Supply Fan"
+   FlowCap = <%=supply_fan_cfm%>
    ..
 
 AirSeg   "<%=name%> ReliefAirSeg"
-   Type = "Relief"
+   Type = "<%=fan_type%>"
    Path = "Ducted"
    ..
 
+<% if fan_type == "Exhaust" %>
+Fan "<%=name%> Exhaust Fan"
+  Type = "Exhaust"
+  FlowCap = <%=supply_fan_cfm%>
+<%end%>
+
 OACtrl   "<%=name%> OACtrl"
-   ..
-
-TrmlUnit   "<%=name%> TrmlUnit-1"
-   Type = "Uncontrolled"
-   ZnServedRef = "Thermal Zone: F2-4 Corridor"
-   ..
-
-TrmlUnit   "<%=name%> TrmlUnit-3"
-   Type = "Uncontrolled"
-   ZnServedRef = "Thermal Zone: F5 Corridor"
    ..

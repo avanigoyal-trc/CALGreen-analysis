@@ -5,10 +5,17 @@
 // * weather_station = "CTZ12S22A" (:default => "CTZ01S22A")
 // * prototype = "high-rise" (:default => nil)
 // * software = "cbecc-com" (:default => nil)
-//   autosizing = "No"
+// * autosizing = "Yes" (:default => "No")
 //   hvac_type = "SZAC"
-//   is_central_dhw = 1
-//   fan_efficacy = 0.7
+//   corridor_cooling_capacity = 36000
+//   corridor_heating_capacity = 26266
+//   corridor_supply_cfm = 1200
+//   laundry_cooling_capacity = 5400
+//   laundry_heating_capacity = 3940
+//   laundry_supply_cfm = 180
+// * is_central_dhw = 1 (:default => nil)
+// * sol_frac = 0.35 (:default => nil)
+//   doas_fan_type = "Exhaust"
 // * res_metal_wall = "Stucco - 7/8 in.;Compliance Insulation R18.00;Air - Metal Wall Framing - 16 or 24 in. OC;Gypsum Board - 1/2 in." (:default => "Stucco - 7/8 in.;Compliance Insulation R10.06;Compliance Insulation R2.00;Compliance Insulation R0.20;Compliance Insulation R0.10;Air - Metal Wall Framing - 16 or 24 in. OC;Gypsum Board - 1/2 in.")
 // * other_floor = "Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R8.07;Compliance Insulation R0.50;Plywood - 5/8 in.;Carpet - 3/4 in." (:default => "Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R9.40;Compliance Insulation R6.00;Plywood - 5/8 in.;Carpet - 3/4 in.")
 // * nonres_metal_wall = "Stucco - 7/8 in.;Compliance Insulation R10.00;Compliance Insulation R0.01;Air - Metal Wall Framing - 16 or 24 in. OC;Gypsum Board - 1/2 in." (:default => "Stucco - 7/8 in.;Compliance Insulation R12.00;Compliance Insulation R0.20;Compliance Insulation R0.20;Air - Metal Wall Framing - 16 or 24 in. OC;Gypsum Board - 1/2 in.")
@@ -10400,45 +10407,66 @@ ThrmlZn   "Thermal Zone: F2-9 Studio N"
    VentSysPriority = 1
    ..
 
+
+
+// INSERT TEMPLATE 'doas.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/doas.pxt'
+// * name = "Residential DOAS" (:default => nil)
+// * hvac_type = "SZAC" (:default => nil)
+// * cooling_capacity = "257328.7469" (:default => nil)
+// * heating_capacity = "199279.44" (:default => nil)
+// * supply_fan_cfm = "6834" (:default => nil)
+// * fan_type = "Exhaust" (:default => nil)
+
+
+
 AirSys   "Residential DOAS"
    Type = "DOASCV"
    CtrlSysType = "DDCToZone"
+   NightCycleFanCtrl = "StaysOff"
    OptStart = 1
-   ClgCtrl = "FixedDualSetpoint"
-   ClgFixedSupTemp = 75
-   HtgFixedSupTemp = 60
+   AirFlowPerSqFt = 0.15
+   AirFlowPerTon = 400
+   ClgCtrl = "WarmestReset"
+   ClRstSupHi = 75
+   ClRstSupLow = 55
    ..
 
-AirSeg   "Res DOAS Supply"
-   TreeState = 253
+AirSeg   "Residential DOAS SupAirSeg"
    Type = "Supply"
    ..
 
-CoilClg   "Res DOAS Clg Coil"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
+CoilClg   "Residential DOAS CoilClg"
+   Type = "DirectExpansion"
+   DXEER = 11
+   DXSEER = 14
+   CapTotNetRtd = 257328.7469
    ..
 
-CoilHtg   "Res DOAS Htg Coil"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
+CoilHtg   "Residential DOAS CoilHtg"
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   CapTotNetRtd = 199279.44
    ..
 
-Fan   "Res DOAS Supply Fan"
+
+Fan   "Residential DOAS Supply Fan"
+   FlowCap = 6834
    ..
 
-AirSeg   "Res DOAS Exhaust"
-   TreeState = 253
+AirSeg   "Residential DOAS ReliefAirSeg"
    Type = "Exhaust"
+   Path = "Ducted"
    ..
 
-Fan   "Res DOAS Exhaust Fan"
-   ..
+Fan "Residential DOAS Exhaust Fan"
+  Type = "Exhaust"
+  FlowCap = 6834
 
-OACtrl   "Res DOAS Econo"
+OACtrl   "Residential DOAS OACtrl"
    ..
+// END TEMPLATE 'doas.pxt'
+
 
 TrmlUnit   "TU1 F10 1-Bed N"
    Type = "Uncontrolled"
@@ -10558,9 +10586,9 @@ TrmlUnit   "TU22 F10 Corridor"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "1" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "9605.76" (:default => 0)
+// * heating_capacity = "11343.5" (:default => 0)
+// * supply_fan_cfm = "306.905" (:default => 0)
 
 
 
@@ -10575,15 +10603,21 @@ CoilClg   "CoilCooling 1"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 9605.76
+   
    ..
 
 CoilHtg   "CoilHtg 1"
    Type = "Furnace"
    
+   CapTotNetRtd = 11343.5
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 1"
+  
+  FlowCap = 306.905
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10595,9 +10629,9 @@ Fan   "Fan 1"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "2" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "14631.3" (:default => 0)
+// * heating_capacity = "10561.4" (:default => 0)
+// * supply_fan_cfm = "474.87" (:default => 0)
 
 
 
@@ -10612,15 +10646,21 @@ CoilClg   "CoilCooling 2"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 14631.3
+   
    ..
 
 CoilHtg   "CoilHtg 2"
    Type = "Furnace"
    
+   CapTotNetRtd = 10561.4
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 2"
+  
+  FlowCap = 474.87
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10632,9 +10672,9 @@ Fan   "Fan 2"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "3" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "14509.4" (:default => 0)
+// * heating_capacity = "10537.6" (:default => 0)
+// * supply_fan_cfm = "470.815" (:default => 0)
 
 
 
@@ -10649,15 +10689,21 @@ CoilClg   "CoilCooling 3"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 14509.4
+   
    ..
 
 CoilHtg   "CoilHtg 3"
    Type = "Furnace"
    
+   CapTotNetRtd = 10537.6
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 3"
+  
+  FlowCap = 470.815
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10669,9 +10715,9 @@ Fan   "Fan 3"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "4" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "13049" (:default => 0)
+// * heating_capacity = "14880.7" (:default => 0)
+// * supply_fan_cfm = "415.19" (:default => 0)
 
 
 
@@ -10686,15 +10732,21 @@ CoilClg   "CoilCooling 4"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 13049
+   
    ..
 
 CoilHtg   "CoilHtg 4"
    Type = "Furnace"
    
+   CapTotNetRtd = 14880.7
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 4"
+  
+  FlowCap = 415.19
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10706,9 +10758,9 @@ Fan   "Fan 4"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "5" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "18036.3" (:default => 0)
+// * heating_capacity = "17821.7" (:default => 0)
+// * supply_fan_cfm = "580.42" (:default => 0)
 
 
 
@@ -10723,15 +10775,21 @@ CoilClg   "CoilCooling 5"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 18036.3
+   
    ..
 
 CoilHtg   "CoilHtg 5"
    Type = "Furnace"
    
+   CapTotNetRtd = 17821.7
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 5"
+  
+  FlowCap = 580.42
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10743,9 +10801,9 @@ Fan   "Fan 5"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "6" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "24150.4" (:default => 0)
+// * heating_capacity = "17820.1" (:default => 0)
+// * supply_fan_cfm = "784.73" (:default => 0)
 
 
 
@@ -10760,15 +10818,21 @@ CoilClg   "CoilCooling 6"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 24150.4
+   
    ..
 
 CoilHtg   "CoilHtg 6"
    Type = "Furnace"
    
+   CapTotNetRtd = 17820.1
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 6"
+  
+  FlowCap = 784.73
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10780,9 +10844,9 @@ Fan   "Fan 6"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "7" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "21562.4" (:default => 0)
+// * heating_capacity = "17818.6" (:default => 0)
+// * supply_fan_cfm = "700.06" (:default => 0)
 
 
 
@@ -10797,15 +10861,21 @@ CoilClg   "CoilCooling 7"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 21562.4
+   
    ..
 
 CoilHtg   "CoilHtg 7"
    Type = "Furnace"
    
+   CapTotNetRtd = 17818.6
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 7"
+  
+  FlowCap = 700.06
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10817,9 +10887,9 @@ Fan   "Fan 7"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "8" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "25479.8" (:default => 0)
+// * heating_capacity = "17807.8" (:default => 0)
+// * supply_fan_cfm = "830.3" (:default => 0)
 
 
 
@@ -10834,15 +10904,21 @@ CoilClg   "CoilCooling 8"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 25479.8
+   
    ..
 
 CoilHtg   "CoilHtg 8"
    Type = "Furnace"
    
+   CapTotNetRtd = 17807.8
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 8"
+  
+  FlowCap = 830.3
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10854,9 +10930,9 @@ Fan   "Fan 8"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "9" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "6834.12" (:default => 0)
+// * heating_capacity = "7851.5" (:default => 0)
+// * supply_fan_cfm = "214.94" (:default => 0)
 
 
 
@@ -10871,15 +10947,21 @@ CoilClg   "CoilCooling 9"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 6834.12
+   
    ..
 
 CoilHtg   "CoilHtg 9"
    Type = "Furnace"
    
+   CapTotNetRtd = 7851.5
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 9"
+  
+  FlowCap = 214.94
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10891,9 +10973,9 @@ Fan   "Fan 9"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "10" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "7139.52" (:default => 0)
+// * heating_capacity = "7978.64" (:default => 0)
+// * supply_fan_cfm = "225.075" (:default => 0)
 
 
 
@@ -10908,15 +10990,21 @@ CoilClg   "CoilCooling 10"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 7139.52
+   
    ..
 
 CoilHtg   "CoilHtg 10"
    Type = "Furnace"
    
+   CapTotNetRtd = 7978.64
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 10"
+  
+  FlowCap = 225.075
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10928,9 +11016,9 @@ Fan   "Fan 10"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "11" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "12966.4" (:default => 0)
+// * heating_capacity = "7172.09" (:default => 0)
+// * supply_fan_cfm = "419.302" (:default => 0)
 
 
 
@@ -10945,15 +11033,21 @@ CoilClg   "CoilCooling 11"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 12966.4
+   
    ..
 
 CoilHtg   "CoilHtg 11"
    Type = "Furnace"
    
+   CapTotNetRtd = 7172.09
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 11"
+  
+  FlowCap = 419.302
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10965,9 +11059,9 @@ Fan   "Fan 11"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "12" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "12818.8" (:default => 0)
+// * heating_capacity = "7149.9" (:default => 0)
+// * supply_fan_cfm = "414.423" (:default => 0)
 
 
 
@@ -10982,15 +11076,21 @@ CoilClg   "CoilCooling 12"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 12818.8
+   
    ..
 
 CoilHtg   "CoilHtg 12"
    Type = "Furnace"
    
+   CapTotNetRtd = 7149.9
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 12"
+  
+  FlowCap = 414.423
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -11002,9 +11102,9 @@ Fan   "Fan 12"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "13" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "9553.66" (:default => 0)
+// * heating_capacity = "10051.5" (:default => 0)
+// * supply_fan_cfm = "299.259" (:default => 0)
 
 
 
@@ -11019,15 +11119,21 @@ CoilClg   "CoilCooling 13"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 9553.66
+   
    ..
 
 CoilHtg   "CoilHtg 13"
    Type = "Furnace"
    
+   CapTotNetRtd = 10051.5
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 13"
+  
+  FlowCap = 299.259
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -11039,9 +11145,9 @@ Fan   "Fan 13"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "14" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "16373.5" (:default => 0)
+// * heating_capacity = "13501.4" (:default => 0)
+// * supply_fan_cfm = "525.398" (:default => 0)
 
 
 
@@ -11056,15 +11162,21 @@ CoilClg   "CoilCooling 14"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 16373.5
+   
    ..
 
 CoilHtg   "CoilHtg 14"
    Type = "Furnace"
    
+   CapTotNetRtd = 13501.4
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 14"
+  
+  FlowCap = 525.398
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -11076,9 +11188,9 @@ Fan   "Fan 14"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "15" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "21164.3" (:default => 0)
+// * heating_capacity = "13522.3" (:default => 0)
+// * supply_fan_cfm = "685.442" (:default => 0)
 
 
 
@@ -11093,15 +11205,21 @@ CoilClg   "CoilCooling 15"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 21164.3
+   
    ..
 
 CoilHtg   "CoilHtg 15"
    Type = "Furnace"
    
+   CapTotNetRtd = 13522.3
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 15"
+  
+  FlowCap = 685.442
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -11113,9 +11231,9 @@ Fan   "Fan 15"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "16" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "19524.4" (:default => 0)
+// * heating_capacity = "13493.2" (:default => 0)
+// * supply_fan_cfm = "631.829" (:default => 0)
 
 
 
@@ -11130,15 +11248,21 @@ CoilClg   "CoilCooling 16"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 19524.4
+   
    ..
 
 CoilHtg   "CoilHtg 16"
    Type = "Furnace"
    
+   CapTotNetRtd = 13493.2
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 16"
+  
+  FlowCap = 631.829
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -11150,9 +11274,9 @@ Fan   "Fan 16"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "17" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "23080.5" (:default => 0)
+// * heating_capacity = "13457.1" (:default => 0)
+// * supply_fan_cfm = "750.075" (:default => 0)
 
 
 
@@ -11167,15 +11291,21 @@ CoilClg   "CoilCooling 17"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 23080.5
+   
    ..
 
 CoilHtg   "CoilHtg 17"
    Type = "Furnace"
    
+   CapTotNetRtd = 13457.1
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 17"
+  
+  FlowCap = 750.075
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -11187,9 +11317,9 @@ Fan   "Fan 17"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "18" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * cooling_capacity = "5082.25" (:default => 0)
+// * heating_capacity = "5351.78" (:default => 0)
+// * supply_fan_cfm = "156.833" (:default => 0)
 
 
 
@@ -11204,66 +11334,35 @@ CoilClg   "CoilCooling 18"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 5082.25
+   
    ..
 
 CoilHtg   "CoilHtg 18"
    Type = "Furnace"
+   
+   CapTotNetRtd = 5351.78
    
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 18"
   
-   ..
-// END TEMPLATE 'szac.pxt'
-// INSERT TEMPLATE 'szac.pxt'
-// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
-// * zone_name = "ZnSys F2-9 Corridor" (:default => nil)
-// * count = "8" (:default => nil)
-//   seer = 14
-//   afue = 0.8
-//   eer = 12.2
-// * index = "19" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
-
-
-
-
-ZnSys   "ZnSys F2-9 Corridor"
-   Type = "SZAC"
-   Cnt = 8
-   ..
-
-CoilClg   "CoilCooling 19"
-   Type = "DirectExpansion"
-   DXEER = 12.2
-   DXSEER = 14
-   
-   ..
-
-CoilHtg   "CoilHtg 19"
-   Type = "Furnace"
-   
-   FurnAFUE = 0.8
-   ..
-
-Fan   "Fan 19"
+  FlowCap = 156.833
   
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F2-9 Laundry" (:default => nil)
-// * count = "8" (:default => nil)
+// * count = 8 (:default => nil)
 //   seer = 14
 //   afue = 0.8
 //   eer = 12.2
-// * index = "20" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * index = 19 (:default => nil)
+// * cooling_capacity = 5400 (:default => 0)
+// * heating_capacity = 3940 (:default => 0)
+// * supply_fan_cfm = 180 (:default => 0)
 
 
 
@@ -11273,41 +11372,47 @@ ZnSys   "ZnSys F2-9 Laundry"
    Cnt = 8
    ..
 
-CoilClg   "CoilCooling 20"
+CoilClg   "CoilCooling 19"
    Type = "DirectExpansion"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 5400
+   
    ..
 
-CoilHtg   "CoilHtg 20"
+CoilHtg   "CoilHtg 19"
    Type = "Furnace"
+   
+   CapTotNetRtd = 3940
    
    FurnAFUE = 0.8
    ..
 
-Fan   "Fan 20"
+Fan   "Fan 19"
+  
+  FlowCap = 180
   
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
-// * zone_name = "ZnSys F10 Corridor" (:default => nil)
-// * count = "1" (:default => nil)
+// * zone_name = "ZnSys F2-9 Corridor" (:default => nil)
+// * count = 8 (:default => nil)
 //   seer = 14
 //   afue = 0.8
 //   eer = 12.2
-// * index = "21" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * index = 21 (:default => nil)
+// * cooling_capacity = 36000 (:default => 0)
+// * heating_capacity = 26266 (:default => 0)
+// * supply_fan_cfm = 1200 (:default => 0)
 
 
 
 
-ZnSys   "ZnSys F10 Corridor"
+ZnSys   "ZnSys F2-9 Corridor"
    Type = "SZAC"
-   Cnt = 1
+   Cnt = 8
    ..
 
 CoilClg   "CoilCooling 21"
@@ -11315,29 +11420,35 @@ CoilClg   "CoilCooling 21"
    DXEER = 12.2
    DXSEER = 14
    
+   CapTotNetRtd = 36000
+   
    ..
 
 CoilHtg   "CoilHtg 21"
    Type = "Furnace"
+   
+   CapTotNetRtd = 26266
    
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 21"
   
+  FlowCap = 1200
+  
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F10 Laundry" (:default => nil)
-// * count = "1" (:default => nil)
+// * count = 1 (:default => nil)
 //   seer = 14
 //   afue = 0.8
 //   eer = 12.2
-// * index = "22" (:default => nil)
-//   cooling_capacity = 0
-//   heating_capacity = 0
-//   supply_fan_cfm = 0
+// * index = 20 (:default => nil)
+// * cooling_capacity = 5400 (:default => 0)
+// * heating_capacity = 3940 (:default => 0)
+// * supply_fan_cfm = 180 (:default => 0)
 
 
 
@@ -11347,20 +11458,69 @@ ZnSys   "ZnSys F10 Laundry"
    Cnt = 1
    ..
 
+CoilClg   "CoilCooling 20"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 5400
+   
+   ..
+
+CoilHtg   "CoilHtg 20"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 3940
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 20"
+  
+  FlowCap = 180
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F10 Corridor" (:default => nil)
+// * count = 1 (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = 22 (:default => nil)
+// * cooling_capacity = 36000 (:default => 0)
+// * heating_capacity = 26266 (:default => 0)
+// * supply_fan_cfm = 1200 (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F10 Corridor"
+   Type = "SZAC"
+   Cnt = 1
+   ..
+
 CoilClg   "CoilCooling 22"
    Type = "DirectExpansion"
    DXEER = 12.2
    DXSEER = 14
+   
+   CapTotNetRtd = 36000
    
    ..
 
 CoilHtg   "CoilHtg 22"
    Type = "Furnace"
    
+   CapTotNetRtd = 26266
+   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 22"
+  
+  FlowCap = 1200
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -11647,11 +11807,11 @@ WtrHtr   "Nonres Gas Water Heater"
    FuelSrc = "Gas"
    ..
 
-  // INSERT TEMPLATE 'waterheater_highrise_temp.pxt'
-// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/waterheater_highrise_temp.pxt'
+  // INSERT TEMPLATE 'waterheater - hr.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/waterheater - hr.pxt'
 // * name = "Residential DHW System" (:default => nil)
-//   central = 1
-//   sol_frac = 0.2
+// * central = 1 (:default => 0)
+// * solfrac = 0.35 (:default => 0.2)
 
 
 
@@ -11660,17 +11820,19 @@ ResDHWSys   "Residential DHW System"
    CentralSys = 1
    DistType = "Demand Control (Standard Design for new construction)"
    SysStoryCnt = 9
-   AnnualSolFrac = 0.2
+   AnnualSolFrac = 0.35
+   WtrHtrTankVol = 280
    ..
 
 ResWtrHtr   "Res Gas Water Heater"
-  InpRating = 200000
+  InpRating = 187000
   UEF = 0.57
   TankVol = 200
   StdbyLossFrac = 0.02
   ThrmlEff = 0.8
+  Cnt = 4
   ..
-// END TEMPLATE 'waterheater_highrise_temp.pxt'
+// END TEMPLATE 'waterheater - hr.pxt'
 
 
 SpcFuncDefaults   "Elevator"
