@@ -2,7 +2,7 @@
 
 modelkit_version "~>0.8.0"
 
-
+parameter "proposed_only", :default=> "No"
 parameter "climate_zone", :default=>"ClimateZone1"
 parameter "weather_station", :default=>"CTZ01S22A"
 
@@ -61,6 +61,9 @@ RulesetFilename   "T24N_2022.bin"
 Proj   "High-Rise Mixed-Use (10-story)"
    AnalysisType = "Title24ProposedOnly"
    Ruleset = "CA 2022 Nonresidential, Vers. 1.0 Alpha (T24N_2022.bin)"
+   <%if proposed_only == "Yes"%>
+   AnalysisType = "Title24ProposedOnly"
+   <%end%>
    BldgEngyModelVersion = 14
    CreateDate = 1568323931
    ModDate = 1573837145
@@ -10584,500 +10587,92 @@ TrmlUnit   "TU22 F10 Corridor"
    ZnServedRef = "Thermal Zone: F10 Corridor"
    ..
 
-ZnSys   "ZnSys F2-9 1-Bed N"
-   TreeState = 253
-   Type = "FPFC"
-   Cnt = 16
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 5"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 5"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 5"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F2-9 1-Bed SE"
-   TreeState = 253
-   Type = "FPFC"
-   Cnt = 16
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 6"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 6"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 6"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F2-9 1-Bed SW"
-   TreeState = 253
-   Type = "FPFC"
-   Cnt = 16
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 7"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 7"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 7"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F2-9 2-Bed N Core"
-   TreeState = 253
-   Type = "FPFC"
-   Cnt = 8
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 8"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 8"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 8"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F2-9 2-Bed NE"
-   TreeState = 253
-   Type = "FPFC"
-   Cnt = 8
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 9"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 9"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 9"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F2-9 2-Bed NW"
-   TreeState = 253
-   Type = "FPFC"
-   Cnt = 8
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 10"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 10"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 10"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F2-9 2-Bed SE"
-   TreeState = 253
-   Type = "FPFC"
-   Cnt = 8
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 11"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 11"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 11"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F2-9 2-Bed SW"
-   TreeState = 253
-   Type = "FPFC"
-   Cnt = 8
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 12"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 12"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 12"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F2-9 Corridor"
-   TreeState = 253
-   Type = "FPFC"
-   Cnt = 8
-   ..
-
-CoilClg   "CoilCooling 13"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 13"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 13"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F2-9 Laundry"
-   TreeState = 253
-   Type = "FPFC"
-   Cnt = 8
-   ..
-
-CoilClg   "CoilCooling 14"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 14"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 14"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F2-9 Studio N"
-   TreeState = 253
-   Type = "FPFC"
-   Cnt = 16
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 15"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 15"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 15"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F10 1-Bed N"
-   TreeState = 253
-   Type = "FPFC"
-   Cnt = 2
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 16"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 16"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 16"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F10 1-Bed SE"
-   TreeState = 253
-   Type = "FPFC"
-   Cnt = 2
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 17"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 17"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 17"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F10 1-Bed SW"
-   TreeState = 253
-   Type = "FPFC"
-   Cnt = 2
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 18"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 18"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 18"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F10 2-Bed N Core"
-   TreeState = 253
-   Type = "FPFC"
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 19"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 19"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 19"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F10 2-Bed NE"
-   TreeState = 253
-   Type = "FPFC"
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 20"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 20"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 20"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F10 2-Bed NW"
-   TreeState = 253
-   Type = "FPFC"
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 21"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 21"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 21"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F10 2-Bed SE"
-   TreeState = 253
-   Type = "FPFC"
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 22"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 22"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 22"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F10 2-Bed SW"
-   TreeState = 253
-   Type = "FPFC"
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 23"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 23"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 23"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F10 Corridor"
-   TreeState = 253
-   Type = "FPFC"
-   ..
-
-CoilClg   "CoilCooling 24"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 24"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 24"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F10 Laundry"
-   TreeState = 253
-   Type = "FPFC"
-   ..
-
-CoilClg   "CoilCooling 25"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 25"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 25"
-   CtrlMthd = "ConstantVolume"
-   ..
-
-ZnSys   "ZnSys F10 Studio N"
-   TreeState = 253
-   Type = "FPFC"
-   Cnt = 2
-   AirFlowPerSqFt = 0.8
-   ..
-
-CoilClg   "CoilCooling 26"
-   Type = "ChilledWater"
-   FluidSegInRef = "ChW Supply"
-   FluidSegOutRef = "ChW Return"
-   ..
-
-CoilHtg   "CoilHtg 26"
-   Type = "HotWater"
-   FluidSegInRef = "HW Supply"
-   FluidSegOutRef = "HW Return"
-   ..
-
-Fan   "Fan 26"
-   CtrlMthd = "ConstantVolume"
-   ..
+   <%
+
+   #Using csv guides from https://www.rubyguides.com/2018/10/parse-csv-ruby/
+
+   require 'csv'
+
+   file_zones = Dir.pwd + "/prototypes/" + software + "/" + prototype + "/" + "ZnSys_Parameters.csv"
+   table_zones = CSV.parse(File.read(file_zones), headers: true)
+
+   #Get list of all zone names and counts
+   zones = table_zones.by_col[1]
+   counts_original = table_zones.by_col[2]
+   index = table_zones.by_col[0]
+   vent_zones = table_zones.by_col[3]
+
+
+   num_zones = zones.length() -1 #Subtract 1 since indexing at 0
+
+   if (hvac_type == "SZHP")
+     template_name = 'szhp.pxt'
+   elsif (hvac_type == "SZAC")
+     template_name = 'szac.pxt'
+   end
+
+
+   if (autosizing == "No")
+
+   for a in 0..num_zones do
+     insert template_name,
+       :zone_name => zones[a],
+       :count => counts_original[a],
+       :index => index[a]
+   end
+
+
+   elsif (autosizing == "Yes")
+
+   file_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + cz + "/instance - ab - HVACSecondary.csv"
+
+   # https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
+   table_capacities = CSV.parse(File.readlines(file_capacities).drop(13).join, headers: true)
+
+
+
+
+
+   counts = table_capacities.by_col[2][0..num_zones]
+
+
+   #Implement check to see if original counts is the same as counts in baseline model
+   check = counts <=> counts_original
+   if check != 0
+     warn("Order of SZHP zones in HVACSecondary CSV file may not match original cibd file.")
+     puts "Original:"
+     puts counts_original
+     puts "HVACSecondary"
+     puts counts
+   end
+
+   #Define Parameters
+   capacity_cooling = table_capacities.by_col[4]
+   capacity_heating = table_capacities.by_col[8]
+   supply_cfm = table_capacities.by_col[11]
+
+
+   #Use for loop to create szhp chunk for each zone
+   for a in 0..num_zones do
+
+     if (capacity_cooling[a].to_f > 65000)
+       string = "Warning: " + zones[a] +  " Cooling Capacity > 65,000 Btu/h"
+       puts string
+     end
+
+     insert template_name,
+       :cooling_capacity => capacity_cooling[a],
+       :heating_capacity => capacity_heating[a],
+       :supply_fan_cfm => supply_cfm[a],
+       :zone_name => zones[a],
+       :count => counts[a],
+       :index => index[a]
+   end
+
+   end
+
+
+%>
 
 AirSys   "BaseAirSys6"
    TreeState = 253
