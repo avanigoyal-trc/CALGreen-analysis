@@ -1,0 +1,25 @@
+<%#INTERFACE
+
+modelkit_version "~>0.8.0"
+parameter "name"
+parameter "central", :default=> 1
+parameter "sol_frac", :default=> 0.2
+
+%>
+
+
+
+ResDHWSys   "<%=name%>"
+   CentralSys = <%=central%>
+   DistType = "Demand Control (Standard Design for new construction)"
+   SysStoryCnt = 9
+   AnnualSolFrac = <%=sol_frac%>
+   ..
+
+ResWtrHtr   "Res Gas Water Heater"
+  InpRating = 200000
+  UEF = 0.57
+  TankVol = 200
+  StdbyLossFrac = 0.02
+  ThrmlEff = 0.8
+  ..

@@ -12,7 +12,7 @@ parameter "software"
 parameter "autosizing", :default=> "No"
 parameter "hvac_type", :default=> "SZAC"
 
-parameter "is_central_dhw"
+parameter "is_central_dhw", :default => 1
 parameter "fan_efficacy", :default => 0.7
 
 #measure parameters
@@ -10956,7 +10956,7 @@ WtrHtr   "Nonres Gas Water Heater"
   <%
 
 
-  insert 'waterheater.pxt',
+  insert 'waterheater_highrise_temp.pxt',
   :name => "Residential DHW System",
   :central => is_central_dhw
 

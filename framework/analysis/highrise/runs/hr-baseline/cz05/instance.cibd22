@@ -5,9 +5,9 @@
 // * weather_station = "CTZ05S22A" (:default => "CTZ01S22A")
 // * prototype = "high-rise" (:default => nil)
 // * software = "cbecc-com" (:default => nil)
-// * autosizing = "Yes" (:default => "No")
+//   autosizing = "No"
 //   hvac_type = "SZAC"
-// * is_central_dhw = "No" (:default => nil)
+//   is_central_dhw = 1
 //   fan_efficacy = 0.7
 //   res_metal_wall = "Stucco - 7/8 in.;Compliance Insulation R10.06;Compliance Insulation R2.00;Compliance Insulation R0.20;Compliance Insulation R0.10;Air - Metal Wall Framing - 16 or 24 in. OC;Gypsum Board - 1/2 in."
 // * other_floor = "Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R8.07;Compliance Insulation R0.50;Plywood - 5/8 in.;Carpet - 3/4 in." (:default => "Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R9.40;Compliance Insulation R6.00;Plywood - 5/8 in.;Carpet - 3/4 in.")
@@ -10558,15 +10558,14 @@ TrmlUnit   "TU22 F10 Corridor"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "1" (:default => nil)
-// * cooling_capacity = "8399.84" (:default => 0)
-// * heating_capacity = "11238.3" (:default => 0)
-// * supply_fan_cfm = "289.25" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F10 1-Bed N"
-   
    Type = "SZAC"
    Cnt = 2
    ..
@@ -10576,21 +10575,15 @@ CoilClg   "CoilCooling 1"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 8399.84
-   
    ..
 
 CoilHtg   "CoilHtg 1"
    Type = "Furnace"
    
-   CapTotNetRtd = 11238.3
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 1"
-  
-  FlowCap = 289.25
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10602,17 +10595,14 @@ Fan   "Fan 1"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "2" (:default => nil)
-// * cooling_capacity = "14851.7" (:default => 0)
-// * heating_capacity = "10445.3" (:default => 0)
-// * supply_fan_cfm = "484.56" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F10 1-Bed SE"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 2
    ..
@@ -10622,21 +10612,15 @@ CoilClg   "CoilCooling 2"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 14851.7
-   
    ..
 
 CoilHtg   "CoilHtg 2"
    Type = "Furnace"
    
-   CapTotNetRtd = 10445.3
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 2"
-  
-  FlowCap = 484.56
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10648,17 +10632,14 @@ Fan   "Fan 2"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "3" (:default => nil)
-// * cooling_capacity = "14723.7" (:default => 0)
-// * heating_capacity = "10423" (:default => 0)
-// * supply_fan_cfm = "480.285" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F10 1-Bed SW"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 2
    ..
@@ -10668,21 +10649,15 @@ CoilClg   "CoilCooling 3"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 14723.7
-   
    ..
 
 CoilHtg   "CoilHtg 3"
    Type = "Furnace"
    
-   CapTotNetRtd = 10423
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 3"
-  
-  FlowCap = 480.285
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10694,17 +10669,14 @@ Fan   "Fan 3"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "4" (:default => nil)
-// * cooling_capacity = "11435.2" (:default => 0)
-// * heating_capacity = "14743" (:default => 0)
-// * supply_fan_cfm = "379.45" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F10 2-Bed N Core"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 1
    ..
@@ -10714,21 +10686,15 @@ CoilClg   "CoilCooling 4"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 11435.2
-   
    ..
 
 CoilHtg   "CoilHtg 4"
    Type = "Furnace"
    
-   CapTotNetRtd = 14743
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 4"
-  
-  FlowCap = 379.45
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10740,17 +10706,14 @@ Fan   "Fan 4"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "5" (:default => nil)
-// * cooling_capacity = "16118.8" (:default => 0)
-// * heating_capacity = "17574.3" (:default => 0)
-// * supply_fan_cfm = "520.72" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F10 2-Bed NE"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 1
    ..
@@ -10760,21 +10723,15 @@ CoilClg   "CoilCooling 5"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 16118.8
-   
    ..
 
 CoilHtg   "CoilHtg 5"
    Type = "Furnace"
    
-   CapTotNetRtd = 17574.3
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 5"
-  
-  FlowCap = 520.72
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10786,17 +10743,14 @@ Fan   "Fan 5"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "6" (:default => nil)
-// * cooling_capacity = "20873.9" (:default => 0)
-// * heating_capacity = "17577.7" (:default => 0)
-// * supply_fan_cfm = "679.64" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F10 2-Bed NW"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 1
    ..
@@ -10806,21 +10760,15 @@ CoilClg   "CoilCooling 6"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 20873.9
-   
    ..
 
 CoilHtg   "CoilHtg 6"
    Type = "Furnace"
    
-   CapTotNetRtd = 17577.7
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 6"
-  
-  FlowCap = 679.64
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10832,17 +10780,14 @@ Fan   "Fan 6"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "7" (:default => nil)
-// * cooling_capacity = "21403.1" (:default => 0)
-// * heating_capacity = "17564.7" (:default => 0)
-// * supply_fan_cfm = "698.34" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F10 2-Bed SE"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 1
    ..
@@ -10852,21 +10797,15 @@ CoilClg   "CoilCooling 7"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 21403.1
-   
    ..
 
 CoilHtg   "CoilHtg 7"
    Type = "Furnace"
    
-   CapTotNetRtd = 17564.7
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 7"
-  
-  FlowCap = 698.34
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10878,17 +10817,14 @@ Fan   "Fan 7"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "8" (:default => nil)
-// * cooling_capacity = "25237.5" (:default => 0)
-// * heating_capacity = "17558.8" (:default => 0)
-// * supply_fan_cfm = "826.37" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F10 2-Bed SW"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 1
    ..
@@ -10898,21 +10834,15 @@ CoilClg   "CoilCooling 8"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 25237.5
-   
    ..
 
 CoilHtg   "CoilHtg 8"
    Type = "Furnace"
    
-   CapTotNetRtd = 17558.8
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 8"
-  
-  FlowCap = 826.37
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10924,17 +10854,14 @@ Fan   "Fan 8"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "9" (:default => nil)
-// * cooling_capacity = "6030.52" (:default => 0)
-// * heating_capacity = "7781.06" (:default => 0)
-// * supply_fan_cfm = "200.265" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F10 Studio N"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 2
    ..
@@ -10944,21 +10871,15 @@ CoilClg   "CoilCooling 9"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 6030.52
-   
    ..
 
 CoilHtg   "CoilHtg 9"
    Type = "Furnace"
    
-   CapTotNetRtd = 7781.06
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 9"
-  
-  FlowCap = 200.265
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -10970,17 +10891,14 @@ Fan   "Fan 9"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "10" (:default => nil)
-// * cooling_capacity = "6124.05" (:default => 0)
-// * heating_capacity = "7771.24" (:default => 0)
-// * supply_fan_cfm = "200.013" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F2-9 1-Bed N"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 16
    ..
@@ -10990,21 +10908,15 @@ CoilClg   "CoilCooling 10"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 6124.05
-   
    ..
 
 CoilHtg   "CoilHtg 10"
    Type = "Furnace"
    
-   CapTotNetRtd = 7771.24
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 10"
-  
-  FlowCap = 200.013
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -11016,17 +10928,14 @@ Fan   "Fan 10"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "11" (:default => nil)
-// * cooling_capacity = "13341.6" (:default => 0)
-// * heating_capacity = "6955.99" (:default => 0)
-// * supply_fan_cfm = "433.799" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F2-9 1-Bed SE"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 16
    ..
@@ -11036,21 +10945,15 @@ CoilClg   "CoilCooling 11"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 13341.6
-   
    ..
 
 CoilHtg   "CoilHtg 11"
    Type = "Furnace"
    
-   CapTotNetRtd = 6955.99
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 11"
-  
-  FlowCap = 433.799
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -11062,17 +10965,14 @@ Fan   "Fan 11"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "12" (:default => nil)
-// * cooling_capacity = "13198" (:default => 0)
-// * heating_capacity = "6924.09" (:default => 0)
-// * supply_fan_cfm = "429.001" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F2-9 1-Bed SW"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 16
    ..
@@ -11082,21 +10982,15 @@ CoilClg   "CoilCooling 12"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 13198
-   
    ..
 
 CoilHtg   "CoilHtg 12"
    Type = "Furnace"
    
-   CapTotNetRtd = 6924.09
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 12"
-  
-  FlowCap = 429.001
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -11108,17 +11002,14 @@ Fan   "Fan 12"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "13" (:default => nil)
-// * cooling_capacity = "8170.47" (:default => 0)
-// * heating_capacity = "9737.22" (:default => 0)
-// * supply_fan_cfm = "255.252" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F2-9 2-Bed N Core"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 8
    ..
@@ -11128,21 +11019,15 @@ CoilClg   "CoilCooling 13"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 8170.47
-   
    ..
 
 CoilHtg   "CoilHtg 13"
    Type = "Furnace"
    
-   CapTotNetRtd = 9737.22
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 13"
-  
-  FlowCap = 255.252
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -11154,17 +11039,14 @@ Fan   "Fan 13"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "14" (:default => nil)
-// * cooling_capacity = "14744.5" (:default => 0)
-// * heating_capacity = "13133.7" (:default => 0)
-// * supply_fan_cfm = "474.428" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F2-9 2-Bed NE"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 8
    ..
@@ -11174,21 +11056,15 @@ CoilClg   "CoilCooling 14"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 14744.5
-   
    ..
 
 CoilHtg   "CoilHtg 14"
    Type = "Furnace"
    
-   CapTotNetRtd = 13133.7
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 14"
-  
-  FlowCap = 474.428
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -11200,17 +11076,14 @@ Fan   "Fan 14"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "15" (:default => nil)
-// * cooling_capacity = "18433.1" (:default => 0)
-// * heating_capacity = "13159.8" (:default => 0)
-// * supply_fan_cfm = "597.645" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F2-9 2-Bed NW"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 8
    ..
@@ -11220,21 +11093,15 @@ CoilClg   "CoilCooling 15"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 18433.1
-   
    ..
 
 CoilHtg   "CoilHtg 15"
    Type = "Furnace"
    
-   CapTotNetRtd = 13159.8
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 15"
-  
-  FlowCap = 597.645
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -11246,17 +11113,14 @@ Fan   "Fan 15"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "16" (:default => nil)
-// * cooling_capacity = "19181" (:default => 0)
-// * heating_capacity = "13114" (:default => 0)
-// * supply_fan_cfm = "623.374" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F2-9 2-Bed SE"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 8
    ..
@@ -11266,21 +11130,15 @@ CoilClg   "CoilCooling 16"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 19181
-   
    ..
 
 CoilHtg   "CoilHtg 16"
    Type = "Furnace"
    
-   CapTotNetRtd = 13114
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 16"
-  
-  FlowCap = 623.374
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -11292,17 +11150,14 @@ Fan   "Fan 16"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "17" (:default => nil)
-// * cooling_capacity = "22626.5" (:default => 0)
-// * heating_capacity = "13084.4" (:default => 0)
-// * supply_fan_cfm = "738.617" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F2-9 2-Bed SW"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 8
    ..
@@ -11312,21 +11167,15 @@ CoilClg   "CoilCooling 17"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 22626.5
-   
    ..
 
 CoilHtg   "CoilHtg 17"
    Type = "Furnace"
    
-   CapTotNetRtd = 13084.4
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 17"
-  
-  FlowCap = 738.617
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -11338,17 +11187,14 @@ Fan   "Fan 17"
 //   afue = 0.8
 //   eer = 12.2
 // * index = "18" (:default => nil)
-// * cooling_capacity = "4381.42" (:default => 0)
-// * heating_capacity = "5146.88" (:default => 0)
-// * supply_fan_cfm = "134.534" (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F2-9 Studio N"
-   
-   TreeState = 253
-   
    Type = "SZAC"
    Cnt = 16
    ..
@@ -11358,45 +11204,36 @@ CoilClg   "CoilCooling 18"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 4381.42
-   
    ..
 
 CoilHtg   "CoilHtg 18"
    Type = "Furnace"
-   
-   CapTotNetRtd = 5146.88
    
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 18"
   
-  FlowCap = 134.534
-  
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F2-9 Corridor" (:default => nil)
-//   count = nil
+// * count = "8" (:default => nil)
 //   seer = 14
 //   afue = 0.8
 //   eer = 12.2
 // * index = "19" (:default => nil)
-// * cooling_capacity = nil (:default => 0)
-// * heating_capacity = nil (:default => 0)
-// * supply_fan_cfm = nil (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F2-9 Corridor"
-   
-   TreeState = 253
-   
    Type = "SZAC"
-   Cnt = 
+   Cnt = 8
    ..
 
 CoilClg   "CoilCooling 19"
@@ -11404,45 +11241,36 @@ CoilClg   "CoilCooling 19"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 
-   
    ..
 
 CoilHtg   "CoilHtg 19"
    Type = "Furnace"
-   
-   CapTotNetRtd = 
    
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 19"
   
-  FlowCap = 
-  
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F2-9 Laundry" (:default => nil)
-//   count = nil
+// * count = "8" (:default => nil)
 //   seer = 14
 //   afue = 0.8
 //   eer = 12.2
 // * index = "20" (:default => nil)
-// * cooling_capacity = nil (:default => 0)
-// * heating_capacity = nil (:default => 0)
-// * supply_fan_cfm = nil (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F2-9 Laundry"
-   
-   TreeState = 253
-   
    Type = "SZAC"
-   Cnt = 
+   Cnt = 8
    ..
 
 CoilClg   "CoilCooling 20"
@@ -11450,45 +11278,36 @@ CoilClg   "CoilCooling 20"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 
-   
    ..
 
 CoilHtg   "CoilHtg 20"
    Type = "Furnace"
-   
-   CapTotNetRtd = 
    
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 20"
   
-  FlowCap = 
-  
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F10 Corridor" (:default => nil)
-//   count = nil
+// * count = "1" (:default => nil)
 //   seer = 14
 //   afue = 0.8
 //   eer = 12.2
 // * index = "21" (:default => nil)
-// * cooling_capacity = nil (:default => 0)
-// * heating_capacity = nil (:default => 0)
-// * supply_fan_cfm = nil (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F10 Corridor"
-   
-   TreeState = 253
-   
    Type = "SZAC"
-   Cnt = 
+   Cnt = 1
    ..
 
 CoilClg   "CoilCooling 21"
@@ -11496,45 +11315,36 @@ CoilClg   "CoilCooling 21"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 
-   
    ..
 
 CoilHtg   "CoilHtg 21"
    Type = "Furnace"
-   
-   CapTotNetRtd = 
    
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 21"
   
-  FlowCap = 
-  
    ..
 // END TEMPLATE 'szac.pxt'
 // INSERT TEMPLATE 'szac.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
 // * zone_name = "ZnSys F10 Laundry" (:default => nil)
-//   count = nil
+// * count = "1" (:default => nil)
 //   seer = 14
 //   afue = 0.8
 //   eer = 12.2
 // * index = "22" (:default => nil)
-// * cooling_capacity = nil (:default => 0)
-// * heating_capacity = nil (:default => 0)
-// * supply_fan_cfm = nil (:default => 0)
+//   cooling_capacity = 0
+//   heating_capacity = 0
+//   supply_fan_cfm = 0
 
 
 
 
 ZnSys   "ZnSys F10 Laundry"
-   
-   TreeState = 253
-   
    Type = "SZAC"
-   Cnt = 
+   Cnt = 1
    ..
 
 CoilClg   "CoilCooling 22"
@@ -11542,21 +11352,15 @@ CoilClg   "CoilCooling 22"
    DXEER = 12.2
    DXSEER = 14
    
-   CapTotNetRtd = 
-   
    ..
 
 CoilHtg   "CoilHtg 22"
    Type = "Furnace"
    
-   CapTotNetRtd = 
-   
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 22"
-  
-  FlowCap = 
   
    ..
 // END TEMPLATE 'szac.pxt'
@@ -11843,32 +11647,30 @@ WtrHtr   "Nonres Gas Water Heater"
    FuelSrc = "Gas"
    ..
 
-  // INSERT TEMPLATE 'waterheater.pxt'
-// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/waterheater.pxt'
+  // INSERT TEMPLATE 'waterheater_highrise_temp.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/waterheater_highrise_temp.pxt'
 // * name = "Residential DHW System" (:default => nil)
-// * central = "No" (:default => 0)
+//   central = 1
 //   sol_frac = 0.2
 
 
 
 
 ResDHWSys   "Residential DHW System"
-   CentralSys = No
+   CentralSys = 1
    DistType = "Demand Control (Standard Design for new construction)"
-   SysStoryCnt = 4
+   SysStoryCnt = 9
    AnnualSolFrac = 0.2
-   WtrHtrTankVol = 280
    ..
 
 ResWtrHtr   "Res Gas Water Heater"
-  InpRating = 160000
+  InpRating = 200000
   UEF = 0.57
   TankVol = 200
   StdbyLossFrac = 0.02
   ThrmlEff = 0.8
-  Cnt = 3
   ..
-// END TEMPLATE 'waterheater.pxt'
+// END TEMPLATE 'waterheater_highrise_temp.pxt'
 
 
 SpcFuncDefaults   "Elevator"
