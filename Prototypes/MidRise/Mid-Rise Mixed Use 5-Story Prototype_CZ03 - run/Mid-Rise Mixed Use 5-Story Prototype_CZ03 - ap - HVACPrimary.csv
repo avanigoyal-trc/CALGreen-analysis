@@ -1,0 +1,34 @@
+FluidSystems
+,,,,,Controls,,,,,,Supply Side Components,,,Demand Side Components,,,
+Name,Type,Status,Design SupplyT,Design DelT,TempCtrl,FixedT,Supply HiT,At Outdoor,Supply LowT,At OutdoorT,Num Comps,Total Capacity,Flow Rate,Num Comps,Total Capacity,Sensible Capacity,Flow Rate,
+,,,(degF),(degF),,(degF),(degF),(degF),(degF),(degF),,(Btu/hr),(gpm),,(Btu/hr),(Btu/hr),( gpm),
+"Nonresidential Gas DHW System","ServiceHotWater","New",135,80,"Fixed",135,-99996,-99996,-99996,-99996,0,0,0,0,0,0,0
+"Nonresidential Elec DHW System","ServiceHotWater","New",135,80,"Fixed",135,-99996,-99996,-99996,-99996,0,0,0,0,0,0,0
+"BaseHWSystem","HotWater","New",180,40,"Fixed",180,-99996,-99996,-99996,-99996,1,558507,27.9147,11,558507,0,27.9147
+
+
+Boiler
+Name,Fluid System Name,Status,Type,Fuel,Draft Type,Rated Capacity,AFUE,Thermal Efficiency,Forced Draft Power,Minimum Unload Ratio
+,,,,,,(Btu/h),,,hp
+"Base Blr","BaseHWSystem","New","HotWater","Gas","Natural",558507,-99996,0.8,-99996,0.25
+
+
+Pump
+Name,Serving Equipment,Status,Count,Operation,Speed Type,Design Flow Rate,Nameplate HP,Power,Power Per Flow,Break Horse Power,Head,Motor Efficiency,Impeller Efficiency,Minimum Flow Rate
+,,,,,,(gpm),(hp),(kW),(W/gpm),(bhp),(ft. H20),,,(gpm)
+"Base HW Pump","Base Blr","New",1,"OnDemand","VariableSpeed",27.9147,0.75,0.53038,19,0.608201,60.3958,0.855,0.7
+
+
+Water Heater
+,System,,,Water Heater
+Name,System Name,System Type,System Count,Status,Type,Fuel,Count,Thermal Efficiency,StandbyLoss Fraction,Storage Capacity,Rated Capacity,Energy Factor
+,,,,,,,,,,(gal),(Btu/h),
+"Nonres Gas Water Heater","Nonresidential Gas DHW System","ServiceHotWater",1,"New","Conventional","Gas",1,0.8,-99996.000,5.89175,7324.35,0.666
+"Nonres Elec Water Heater","Nonresidential Elec DHW System","ServiceHotWater",1,"New","Conventional","Electricity",1,0.99,-99996.000,24.1083,23976.2,0.953
+
+
+Residential Water Heater
+,System,,,,Water Heater
+Name,System Name,System Type,System Count,Distribution Type,Status,Type,Fuel,Count,Thermal Efficiency,StandbyLoss Fraction,Storage Capacity,Rated Capacity,Energy Factor,Tank Exterior Insulation Rval,Tank Interior Insulation Rval
+,,,,,,,,,,,(gal),(Btu/h),,(?F-ft2-h/Btu),(?F-ft2-h/Btu)
+"Res Gas Water Heater","Residential DHW System","Standard",1,"No Control (continuous pumping)","New","Storage","Gas",1,0.8,0.020,100,200000,0.600,-99996,-99996
