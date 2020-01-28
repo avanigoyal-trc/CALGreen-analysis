@@ -220,6 +220,11 @@ Mat   "Compliance Insulation R13.99"
    CodeItem = "Compliance Insulation R13.99"
    ..
 
+Mat   "Gypsum Board - 3/4 in."
+  CodeCat = "Bldg Board and Siding"
+  CodeItem = "Gypsum Board - 3/4 in."
+  ..
+
 ConsAssm   "BelowGradeWall"
    CompatibleSurfType = "UndergroundWall"
    SpecMthd = "Layers"
@@ -292,6 +297,11 @@ ConsAssm   "TypicalFloorInterior"
    MatRef[2] = "Concrete - 140 lb/ft3 - 4 in."
    MatRef[3] = "Carpet - 3/4 in."
    ..
+
+ConsAssm   "IntCeiling"
+  CompatibleSurfType = "Ceiling"
+  MatRef[1] = "Gypsum Board - 3/4 in."
+  ..
 
 FenCons   "Res Fixed Window"
    FenProdType = "FixedWindow"
@@ -3301,6 +3311,29 @@ CartesianPt   "CartesianPoint 1052"
    Coord = ( 154, 36, 20 )
    ..
 
+Ceiling   "Surface 144"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 253"
+  ..
+
+CartesianPt   "CartesianPoint 1053"
+  Coord = ( 154, 36, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1054"
+  Coord = ( 154, 66, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1055"
+  Coord = ( 128, 66, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1056"
+  Coord = ( 128, 36, 20 )
+  ..
+
 IntFlr   "Surface 1496"
    ConsAssmRef = "TypicalFloorInterior"
    ..
@@ -3449,6 +3482,29 @@ CartesianPt   "CartesianPoint 1079"
 CartesianPt   "CartesianPoint 1080"
    Coord = ( 56, 66, 20 )
    ..
+
+Ceiling   "Surface 235"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 260"
+  ..
+
+CartesianPt   "CartesianPoint 1081"
+  Coord = ( 56, 36, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1082"
+  Coord = ( 56, 66, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1083"
+  Coord = ( 30, 66, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1084"
+  Coord = ( 30, 36, 20 )
+  ..
 
 ExtWall   "Surface 236"
    TreeState = 254
@@ -3740,6 +3796,29 @@ CartesianPt   "CartesianPoint 1132"
    Coord = ( 108, 0, 20 )
    ..
 
+Ceiling   "Surface 127"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 273"
+  ..
+
+CartesianPt   "CartesianPoint 1133"
+  Coord = ( 134, 0, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1134"
+  Coord = ( 134, 30, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1135"
+  Coord = ( 108, 30, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1136"
+  Coord = ( 108, 0, 20 )
+  ..
+
 IntWall   "Surface 128"
    AdjacentSpcRef = "F2-9 Corridor"
    ConsAssmRef = "MetalFrameWallInterior"
@@ -3887,6 +3966,29 @@ CartesianPt   "CartesianPoint 1159"
 CartesianPt   "CartesianPoint 1160"
    Coord = ( 134, 30, 10 )
    ..
+
+Ceiling   "Surface 192"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 280"
+  ..
+
+CartesianPt   "CartesianPoint 1161"
+  Coord = ( 160, 0, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1162"
+  Coord = ( 160, 30, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1163"
+  Coord = ( 134, 30, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1164"
+  Coord = ( 134, 0, 20 )
+  ..
 
 IntWall   "Surface 193"
    AdjacentSpcRef = "F2-9 2-Bed SE"
@@ -4154,6 +4256,30 @@ CartesianPt   "CartesianPoint 1208"
    Coord = ( 87.9167, 0, 17.0259 )
    ..
 
+Ceiling   "Surface 222"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 292"
+  ..
+
+CartesianPt   "CartesianPoint 1209"
+  Coord = ( 88, 0, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1210"
+  Coord = ( 88, 30, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1211"
+  Coord = ( 62, 30, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1212"
+  Coord = ( 62, 0, 20 )
+  ..
+
+
 IntWall   "Surface 223"
    AdjacentSpcRef = "F2-9 Elevator SW"
    ConsAssmRef = "MetalFrameWallInterior"
@@ -4374,6 +4500,29 @@ CartesianPt   "CartesianPoint 1248"
    Coord = ( 61.9167, 0, 17.0259 )
    ..
 
+Ceiling   "Surface 242"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 302"
+  ..
+
+CartesianPt   "CartesianPoint 1249"
+  Coord = ( 62, 0, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1250"
+  Coord = ( 62, 30, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1251"
+  Coord = ( 36, 30, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1252"
+  Coord = ( 36, 0, 20 )
+  ..
+
 IntFlr   "Surface 243"
    ConsAssmRef = "TypicalFloorInterior"
    ..
@@ -4450,6 +4599,29 @@ CartesianPt   "CartesianPoint 1263"
 CartesianPt   "CartesianPoint 1264"
    Coord = ( 72, 66, 10 )
    ..
+
+Ceiling   "Surface 202"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 306"
+  ..
+
+CartesianPt   "CartesianPoint 1265"
+  Coord = ( 92, 36, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1266"
+  Coord = ( 92, 66, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1267"
+  Coord = ( 56, 66, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1268"
+  Coord = ( 56, 36, 20 )
+  ..
 
 IntWall   "Surface 203"
    AdjacentSpcRef = "F2-9 Studio NW"
@@ -4716,6 +4888,29 @@ CartesianPt   "CartesianPoint 1312"
    Coord = ( 160, 36, 20 )
    ..
 
+Ceiling   "Surface 179"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 318"
+  ..
+
+CartesianPt   "CartesianPoint 1313"
+  Coord = ( 190, 36, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1314"
+  Coord = ( 190, 66, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1315"
+  Coord = ( 154, 66, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1316"
+  Coord = ( 154, 36, 20 )
+  ..
+
 ExtWall   "Surface 180"
    ConsAssmRef = "ResMetalFramedWall"
    ..
@@ -4886,6 +5081,29 @@ CartesianPt   "CartesianPoint 1343"
 CartesianPt   "CartesianPoint 1344"
    Coord = ( 30, 30, 20 )
    ..
+
+Ceiling   "Surface 197"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 326"
+  ..
+
+CartesianPt   "CartesianPoint 1345"
+  Coord = ( 30, 30, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1346"
+  Coord = ( 30, 66, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1347"
+  Coord = ( 0, 66, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1348"
+  Coord = ( 0, 30, 20 )
+  ..
 
 ExtWall   "Surface 198"
    ConsAssmRef = "ResMetalFramedWall"
@@ -5079,6 +5297,29 @@ CartesianPt   "CartesianPoint 1380"
    Coord = ( 160, 36, 10 )
    ..
 
+Ceiling   "Surface 252"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 335"
+  ..
+
+CartesianPt   "CartesianPoint 1381"
+  Coord = ( 190, 0, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1382"
+  Coord = ( 190, 36, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1383"
+  Coord = ( 160, 36, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1384"
+  Coord = ( 160, 0, 20 )
+  ..
+
 ExtWall   "Surface 253"
    ConsAssmRef = "ResMetalFramedWall"
    ..
@@ -5248,6 +5489,29 @@ CartesianPt   "CartesianPoint 1411"
 CartesianPt   "CartesianPoint 1412"
    Coord = ( 24, 30, 10 )
    ..
+
+Ceiling   "Surface 208"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 343"
+  ..
+
+CartesianPt   "CartesianPoint 1413"
+  Coord = ( 36, 0, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1414"
+  Coord = ( 36, 30, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1415"
+  Coord = ( 0, 30, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1416"
+  Coord = ( 0, 0, 20 )
+  ..
 
 IntWall   "Surface 209"
    AdjacentSpcRef = "F2-9 Corridor"
@@ -5806,6 +6070,62 @@ CartesianPt   "CartesianPoint 1516"
    Coord = ( 110, 36, 20 )
    ..
 
+Ceiling   "Surface 165"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 364"
+  ..
+
+CartesianPt   "CartesianPoint 1517"
+  Coord = ( 103, 18, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1518"
+  Coord = ( 103, 28, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1519"
+  Coord = ( 108, 28, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1520"
+  Coord = ( 108, 30, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1521"
+  Coord = ( 160, 30, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1522"
+  Coord = ( 160, 36, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1523"
+  Coord = ( 30, 36, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1524"
+  Coord = ( 30, 30, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1525"
+  Coord = ( 88, 30, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1526"
+  Coord = ( 88, 28, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1527"
+  Coord = ( 93, 28, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1528"
+  Coord = ( 93, 18, 20 )
+  ..
+
+
 IntWall   "Surface 168"
    AdjacentSpcRef = "F2-9 Elevator SE"
    ConsAssmRef = "MetalFrameWallInterior"
@@ -5928,6 +6248,29 @@ CartesianPt   "CartesianPoint 1548"
    Coord = ( 103, 28, 10 )
    ..
 
+Ceiling   "Surface 188"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 370"
+  ..
+
+CartesianPt   "CartesianPoint 1549"
+  Coord = ( 108, 23, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1550"
+  Coord = ( 108, 28, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1551"
+  Coord = ( 103, 28, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1552"
+  Coord = ( 103, 23, 20 )
+  ..
+
 Spc   "F2-9 Elevator NW"
    TreeState = 254
    CondgType = "IndirectlyConditioned"
@@ -6002,6 +6345,29 @@ CartesianPt   "CartesianPoint 1564"
    Coord = ( 93, 23, 20 )
    ..
 
+Ceiling   "Surface 263"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 374"
+  ..
+
+CartesianPt   "CartesianPoint 1565"
+  Coord = ( 93, 23, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1566"
+  Coord = ( 93, 28, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1567"
+  Coord = ( 88, 28, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1568"
+  Coord = ( 88, 23, 20 )
+  ..
+
 Spc   "F2-9 Elevator SE"
    TreeState = 254
    CondgType = "IndirectlyConditioned"
@@ -6051,6 +6417,29 @@ CartesianPt   "CartesianPoint 1575"
 CartesianPt   "CartesianPoint 1576"
    Coord = ( 103, 23, 10 )
    ..
+
+Ceiling   "Surface 171"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 377"
+  ..
+
+CartesianPt   "CartesianPoint 1577"
+  Coord = ( 108, 18, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1578"
+  Coord = ( 108, 23, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1579"
+  Coord = ( 103, 23, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1580"
+  Coord = ( 103, 18, 20 )
+  ..
 
 IntWall   "Surface 172"
    AdjacentSpcRef = "F2-9 Laundry"
@@ -6150,6 +6539,29 @@ CartesianPt   "CartesianPoint 1596"
    Coord = ( 88, 23, 10 )
    ..
 
+Ceiling   "Surface 228"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 382"
+  ..
+
+CartesianPt   "CartesianPoint 1597"
+  Coord = ( 93, 18, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1598"
+  Coord = ( 93, 23, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1599"
+  Coord = ( 88, 23, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1600"
+  Coord = ( 88, 18, 20 )
+  ..
+
 Spc   "F2-9 Laundry"
    TreeState = 254
    ThrmlZnRef = "Thermal Zone: F2-9 Laundry"
@@ -6199,6 +6611,29 @@ CartesianPt   "CartesianPoint 1607"
 CartesianPt   "CartesianPoint 1608"
    Coord = ( 98, 18, 10 )
    ..
+
+Ceiling   "Surface 116"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 385"
+  ..
+
+CartesianPt   "CartesianPoint 1609"
+  Coord = ( 108, 0, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1610"
+  Coord = ( 108, 18, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1611"
+  Coord = ( 98, 18, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1612"
+  Coord = ( 98, 0, 20 )
+  ..
 
 IntWall   "Surface 118"
    AdjacentSpcRef = "F2-9 Stairs"
@@ -6368,6 +6803,29 @@ CartesianPt   "CartesianPoint 1640"
    Coord = ( 97.9167, 0, 17.0677 )
    ..
 
+Ceiling   "Surface 250"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 393"
+  ..
+
+CartesianPt   "CartesianPoint 1641"
+  Coord = ( 98, 0, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1642"
+  Coord = ( 98, 18, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1643"
+  Coord = ( 88, 18, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1644"
+  Coord = ( 88, 0, 20 )
+  ..
+
 Spc   "F2-9 Studio NE"
    TreeState = 254
    ThrmlZnRef = "Thermal Zone: F2-9 Studio N"
@@ -6489,6 +6947,29 @@ CartesianPt   "CartesianPoint 1664"
    Coord = ( 110.083, 66, 17.0373 )
    ..
 
+Ceiling   "Surface 138"
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 399"
+  ..
+
+CartesianPt   "CartesianPoint 1665"
+  Coord = ( 128, 36, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1666"
+  Coord = ( 128, 66, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1667"
+  Coord = ( 110, 66, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1668"
+  Coord = ( 110, 36, 20 )
+  ..
+
 IntFlr   "Surface 1474"
    ConsAssmRef = "TypicalFloorInterior"
    ..
@@ -6542,6 +7023,29 @@ CartesianPt   "CartesianPoint 1675"
 CartesianPt   "CartesianPoint 1676"
    Coord = ( 92, 66, 10 )
    ..
+
+Ceiling   "Surface 132"  
+  ConsAssmRef = "IntCeiling"
+  ..
+
+PolyLp   "PolyLoop 402"
+  ..
+
+CartesianPt   "CartesianPoint 1677"
+  Coord = ( 110, 36, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1678"
+  Coord = ( 110, 66, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1679"
+  Coord = ( 92, 66, 20 )
+  ..
+
+CartesianPt   "CartesianPoint 1680"
+  Coord = ( 92, 36, 20 )
+  ..
 
 IntFlr   "Surface 1473"
    ConsAssmRef = "TypicalFloorInterior"
