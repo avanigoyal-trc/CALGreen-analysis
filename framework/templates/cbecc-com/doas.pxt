@@ -8,6 +8,7 @@ parameter "cooling_capacity"
 parameter "heating_capacity"
 parameter "supply_fan_cfm"
 parameter "fan_type"
+parameter "supplytempcontrol"
 
 %>
 
@@ -19,7 +20,10 @@ AirSys   "<%=name%>"
    OptStart = 1
    AirFlowPerSqFt = 0.15
    AirFlowPerTon = 400
-   ClgCtrl = "WarmestReset"
+   ClgCtrl = "<%=supplytempcontrol%>"
+   <%if supplytempcontrol == "FixedDualSetpoint" %>
+   ClgFixedSupTemp = 75
+   <%end%>
    ClRstSupHi = 75
    ClRstSupLow = 55
    ..
@@ -30,8 +34,6 @@ AirSeg   "<%=name%> SupAirSeg"
 
 CoilClg   "<%=name%> CoilClg"
    Type = "DirectExpansion"
-   DXEER = 11
-   DXSEER = 14
    CapTotNetRtd = <%=cooling_capacity%>
    ..
 

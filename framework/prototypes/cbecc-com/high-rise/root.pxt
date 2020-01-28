@@ -25,6 +25,7 @@ parameter "sol_frac"
 
 #DOAS system
 parameter "doas_fan_type", :default => "Exhaust"
+parameter "supply_temp_control"
 
 #measure parameters
 parameter "res_metal_wall", :default=>"Stucco - 7/8 in.;Compliance Insulation R10.06;Compliance Insulation R2.00;Compliance Insulation R0.20;Compliance Insulation R0.10;Air - Metal Wall Framing - 16 or 24 in. OC;Gypsum Board - 1/2 in."
@@ -7024,7 +7025,7 @@ CartesianPt   "CartesianPoint 1676"
    Coord = ( 92, 66, 10 )
    ..
 
-Ceiling   "Surface 132"  
+Ceiling   "Surface 132"
   ConsAssmRef = "IntCeiling"
   ..
 
@@ -10972,7 +10973,8 @@ insert 'doas.pxt',
   :cooling_capacity => cooling_capacity_doas,
   :heating_capacity => heating_capacity_doas,
   :supply_fan_cfm => cfm_doas,
-  :fan_type => doas_fan_type
+  :fan_type => doas_fan_type,
+  :supplytempcontrol => supply_temp_control
 
 
 %>
