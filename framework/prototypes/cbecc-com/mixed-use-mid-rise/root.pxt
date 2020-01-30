@@ -19,6 +19,10 @@ parameter "sol_frac", :default=>0.2
 
 parameter "fan_efficacy"
 
+#DOAS system
+parameter "doas_fan_type", :default => "Relief"
+parameter "supply_temp_control"
+
 #measure parameters
 parameter "res_wood_wall", :default=>"Stucco - 7/8 in.;Plywood - 5/8 in.;Compliance Insulation R1.54;WoodFrameWall16inOCCavInsR5;Gypsum Board - 5/8 in."
 parameter "other_floor", :default=>"Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R6.00;Compliance Insulation R2.15;Compliance Insulation R0.50;Plywood - 5/8 in.;Carpet - 3/4 in."
@@ -15991,11 +15995,37 @@ CoilHtg   "BaseVAVBox CoilHtg-10"
 
 <%
 
+require 'csv'
+file_doas_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + "DOAS_Laundry_Corridor.csv"
+
+# https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
+table_doas_capacities = CSV.parse(File.read(file_doas_capacities), headers: true)
+row_num = cz.scan(/\d/).join('').to_i() - 1
+cooling_capacity_doas = table_doas_capacities.by_col[1][row_num]
+heating_capacity_doas = table_doas_capacities.by_col[2][row_num]
+cfm_doas = table_doas_capacities.by_col[3][row_num]
+
+
 insert 'doas.pxt',
   :name => "DOAS1",
-  :hvac_type => hvac_type
+  :hvac_type => hvac_type,
+  :cooling_capacity => cooling_capacity_doas,
+  :heating_capacity => heating_capacity_doas,
+  :supply_fan_cfm => cfm_doas,
+  :fan_type => doas_fan_type,
+  :supplytempcontrol => supply_temp_control
 
 %>
+
+TrmlUnit   "DOAS1 TrmlUnit-1"
+   Type = "Uncontrolled"
+   ZnServedRef = "Thermal Zone: F2-4 Corridor"
+   ..
+
+TrmlUnit   "DOAS1 TrmlUnit-3"
+   Type = "Uncontrolled"
+   ZnServedRef = "Thermal Zone: F5 Corridor"
+   ..
 
 SpcFuncDefaults   "Retail Space"
    SpcFunc = "Retail Sales Area (Retail Merchandise Sales)"

@@ -41,7 +41,6 @@ CoilClg   "<%=name%> CoilClg"
 <%if hvac_type == "SZAC" %>
 CoilHtg   "<%=name%> CoilHtg"
    Type = "Furnace"
-   FurnAFUE = 0.8
    CapTotNetRtd = <%=heating_capacity%>
    ..
 <%end%>
@@ -50,7 +49,6 @@ CoilHtg   "<%=name%> CoilHtg"
 CoilHtg   "<%=name%> CoilHtg"
    Type = "HeatPump"
    CapTotNetRtd = <%=heating_capacity%>
-   HtPumpCOP = 4.5
    HtPumpSuppCoilHtgRef = "<%=name%> SuppCoilHtg"
    ..
 
