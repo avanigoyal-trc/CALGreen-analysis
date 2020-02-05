@@ -31,19 +31,22 @@ CONFIG = Modelkit::Config.new("#{root_dir}/.modelkit-config")
 RUN_COMMAND = {
   "cbecc-com" => "\"#{CONFIG["cbecc-com-path"]}\" -pa -nogui \"%<input_file>s\"",
   "cbecc-res" => "\"#{CONFIG["cbecc-res-path"]}\" -pa -nogui \"%<input_file>s\"",
-  "energyplus" => "modelkit-energyplus energyplus-run --weather=\"%<weather_file>s\" \"%<input_file>s\""
+  "energyplus" => "modelkit-energyplus energyplus-run --weather=\"%<weather_file>s\" \"%<input_file>s\"",
+  "cse" => "\"#{CONFIG["cse-path"]}\" \"%<input_file>s\""
 }
 
 INPUT_FILE_EXT = {
   "cbecc-com" => "cibd22",
   "cbecc-res" => "ribd22",
-  "energyplus" => "idf"
+  "energyplus" => "idf",
+  "cse" => "cse"
 }
 
 ESC_LINE = {
 "cbecc-com" => "// ",
 "cbecc-res" => "// ",
-"energyplus" => "! "
+"energyplus" => "! ",
+"cse" => "// "
 }
 
 analysis_name = ENV["analysis"]
