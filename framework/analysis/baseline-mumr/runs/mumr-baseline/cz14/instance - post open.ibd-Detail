@@ -177,7 +177,7 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    ResBaseSysChange = RVal: 0
    NumZnSys = RVal: 44
    RunTitle = UVal: "Mid-Rise Mixed-Use (5-story)"
-   AnalysisType = RVal: "Title24Compliance"  (1)
+   AnalysisType = UVal: "Title24ProposedOnly"  (2)
    CompType = RDef: "NewComplete"  (1)
    CompOptNew = RVal: 1
    CompOptExist = RVal: 0
@@ -202,10 +202,10 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    SoftwareVersion = UVal: "CBECC-Com 2022.0.1 RV (1113)"
    CompReportNum = RVal: 0
    ResultsCurrentMessage = UVal: "(not current)"
-   ModelPath = PDef: "C:\Users\mnakajima\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hvac_autosizing\runs\mumr-baseline\cz14\"
+   ModelPath = PDef: "C:\Users\mnakajima\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\baseline-mumr\runs\mumr-baseline\cz14\"
    ModelFile = PDef: "instance"
    PropHasUnknownHVACZns = RVal: 0
-   WtrHtrCnt = RVal: 3
+   WtrHtrCnt = RVal: 5
    CALGreenOutdrLtg = RVal: 0
    CALGreenSHWRestaurant = RVal: 0
    CALGreenWarehouse = RVal: 0
@@ -582,7 +582,7 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    IsNewResDHWSys = RVal: 1
    IsNewResDHWHtr = RVal: 1
    IsNewDHWFluidSys = RVal: 1
-   BasePropResWtrHtgTot = RVal: 397.619
+   BasePropResWtrHtgTot = RVal: 1314.29
    SimulateResStdDHW = RVal: 0
    WinOvrhngFinsGraphic = RVal: "WinOvrhngFins.jpg"
    NumWinsHavingShades = RVal: 0
@@ -1385,8 +1385,8 @@ Bldg   User: "Building 1"
    TotFlrAreaNew = RVal: 0
    PlantClgCap = RDef: 0
    PlantHtgCap = RDef: 565565
-   CoilClgCap = RDef: 1.82439e+06
-   CoilHtgCap = RDef: 951185
+   CoilClgCap = RDef: 1.81867e+06
+   CoilHtgCap = RDef: 954664
    CoilClgCapHydronic = RDef: 0
    CoilHtgCapHydronic = RDef: 565565
    CondExtWallArea = RVal: 42300
@@ -1566,8 +1566,8 @@ Bldg   User: "Building 1"
    ResFlrAreaExisting = RVal: 0
    TotCondFlrAreaExisting = RVal: 0
    TotCondVolExisting = RVal: 0
-   CoilClgCapNonHydronicNew = RVal: 1.82439e+06
-   CoilHtgCapNonHydronicNew = RVal: 951185
+   CoilClgCapNonHydronicNew = RVal: 1.81867e+06
+   CoilHtgCapNonHydronicNew = RVal: 954664
    CoilClgCapHydronicNew = RVal: 0
    CoilHtgCapHydronicNew = RVal: 565565
    CoilClgCapHydronicExisting = RVal: 0
@@ -1578,8 +1578,8 @@ Bldg   User: "Building 1"
    CoilHtgCapNonHydronicExisting = RVal: 0
    PlantClgCapExisting = RVal: 0
    PlantHtgCapExisting = RVal: 0.98
-   TotClgCap = RVal: 1.82439e+06
-   TotHtgCap = RVal: 1.51675e+06
+   TotClgCap = RVal: 1.81867e+06
+   TotHtgCap = RVal: 1.52023e+06
    DeltaClgCapBldgRat = RVal: 1
    DeltaHtgCapBldgRat = RVal: 0.999999
    DeltaClgCapAltAddRat = RVal: 1
@@ -118871,7 +118871,6 @@ Fan   User: "Fan 1"
    ..
 
 ZnSys   User: "ZnSys F2-4 1-Bed Core West"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -119212,7 +119211,6 @@ Fan   User: "Fan 2"
    ..
 
 ZnSys   User: "ZnSys F2-4 1-Bed Core East"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -119553,7 +119551,6 @@ Fan   User: "Fan 3"
    ..
 
 ZnSys   User: "ZnSys F2-4 1-Bed North"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -119894,7 +119891,6 @@ Fan   User: "Fan 4"
    ..
 
 ZnSys   User: "ZnSys F2-4 2-Bed Core NE-NW"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -120235,7 +120231,6 @@ Fan   User: "Fan 5"
    ..
 
 ZnSys   User: "ZnSys F2-4 2-Bed East"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -120576,7 +120571,6 @@ Fan   User: "Fan 6"
    ..
 
 ZnSys   User: "ZnSys F2-4 2-Bed West"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -120917,7 +120911,6 @@ Fan   User: "Fan 7"
    ..
 
 ZnSys   User: "ZnSys F2-4 3-Bed NE"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -121258,7 +121251,6 @@ Fan   User: "Fan 8"
    ..
 
 ZnSys   User: "ZnSys F2-4 3-Bed NW"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -121599,7 +121591,6 @@ Fan   User: "Fan 9"
    ..
 
 ZnSys   User: "ZnSys F2-4 Studio SE"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -121940,7 +121931,6 @@ Fan   User: "Fan 10"
    ..
 
 ZnSys   User: "ZnSys F2-4 Studio SW"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -122281,7 +122271,6 @@ Fan   User: "Fan 11"
    ..
 
 ZnSys   User: "ZnSys F5 1-Bed Core N"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -122622,7 +122611,6 @@ Fan   User: "Fan 12"
    ..
 
 ZnSys   User: "ZnSys F5 1-Bed Core West"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -122963,7 +122951,6 @@ Fan   User: "Fan 13"
    ..
 
 ZnSys   User: "ZnSys F5 1-Bed Core East"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -123304,7 +123291,6 @@ Fan   User: "Fan 14"
    ..
 
 ZnSys   User: "ZnSys F5 1-Bed North"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -123645,7 +123631,6 @@ Fan   User: "Fan 15"
    ..
 
 ZnSys   User: "ZnSys F5 2-Bed Core NE-NW"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -123986,7 +123971,6 @@ Fan   User: "Fan 16"
    ..
 
 ZnSys   User: "ZnSys F5 2-Bed East"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -124327,7 +124311,6 @@ Fan   User: "Fan 17"
    ..
 
 ZnSys   User: "ZnSys F5 2-Bed West"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -124668,7 +124651,6 @@ Fan   User: "Fan 18"
    ..
 
 ZnSys   User: "ZnSys F5 3-Bed NE"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -125009,7 +124991,6 @@ Fan   User: "Fan 19"
    ..
 
 ZnSys   User: "ZnSys F5 3-Bed NW"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -125350,7 +125331,6 @@ Fan   User: "Fan 20"
    ..
 
 ZnSys   User: "ZnSys F5 Studio SE"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -125691,7 +125671,6 @@ Fan   User: "Fan 21"
    ..
 
 ZnSys   User: "ZnSys F5 Studio SW"  
-   TreeState = 253
    Status = RDef: "New"  (1)
    Type = UVal: "SZAC"  (1)
    TypeSim = RVal: "PTAC"  (103)
@@ -132539,16 +132518,18 @@ AirSys   User: "DOAS1"
    HtgAllOutsdAir = RVal: "No"  (2)
    ClgDsgnHumidityRat = RVal: 0.0085
    HtgDsgnHumidityRat = RVal: 0.008
-   ClgCtrl = UVal: "WarmestReset"  (7)
+   ClgCtrl = UVal: "FixedDualSetpoint"  (8)
+   ClgFixedSupTemp = UVal: 75
+   HtgFixedSupTemp = UVal: 55
    ClRstSupHi = UVal: 75
    ClRstSupLow = UVal: 55
-   ClgCap = RVal: 60661
-   HtgCap = RVal: 46977
+   ClgCap = RVal: 54940.2
+   HtgCap = RVal: 50456.5
    SupFanCap = RVal: 1611
-   SupFanPwr = RVal: 0.564214
+   SupFanPwr = RVal: 1.30531
    SysVentFlow = RVal: 1611
    VentAirDistEff = RVal: 1
-   VentSysEff = RVal: 1
+   VentSysEff = RVal: 0
    ExhCtrlMthd = PDef: "ConstantFlowConstantSpeedFan"  (1)
    LabFumeHoodDens = RVal: 0
    LabExhHasAnemometerCtrl = RVal: 0
@@ -132716,12 +132697,12 @@ AirSys   User: "DOAS1"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 2627.26
+   FanHtRtd = RVal: 2379.49
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 60661
+   CoilClgCapNonHydronic = RVal: 54940.2
    HtgFuelSrc = RVal: 1
    DDCIsRequired = RVal: 0
-   IsWarmestCtrl = RVal: 1
+   IsWarmestCtrl = RVal: 0
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
    LabExhSysMinExhFlow = RVal: 0
@@ -132734,22 +132715,22 @@ AirSys   User: "DOAS1"
    TotTrmlHtgAirFlowMaxSim = RVal: 0
    TrmlUnitHtgCapHotWtr = RVal: 0
    TrmlUnitHtgCapOther = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 46977
-   SupFanPwrIdx = RVal: 0.350226
+   CoilHtgCapNonHydronic = RVal: 50456.5
+   SupFanPwrIdx = RVal: 0.810247
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
-   ExhSysFanPwr = RVal: 0.564214
+   ExhSysFanPwr = RVal: 1.30531
    ExhSysFanPwrIdx = RVal: 0
    TrmlFanCap = RVal: 0
    TrmlCoilHtgCap = RVal: 0
-   ClgCapPerArea = RVal: 5.49466
-   SupFlowPerTon = RVal: 318.689
-   HtgCapPerArea = RVal: 4.25516
+   ClgCapPerArea = RVal: 4.97647
+   SupFlowPerTon = RVal: 351.873
+   HtgCapPerArea = RVal: 4.57034
    SupFlowPerArea = RVal: 0.145924
    OAFlowPerArea = RVal: 0.145924
-   SupAirSegHtgCap = RVal: 46977
+   SupAirSegHtgCap = RVal: 50456.5
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
    DuctLeakage = RVal: 0
@@ -132765,12 +132746,12 @@ AirSeg   User: "DOAS1 SupAirSeg"
    Path = RDef: "Ducted"  (3)
    CoilClgRef = RVal: "DOAS1 CoilClg"
    CoilHtgRef = RVal: "DOAS1 CoilHtg"
-   DXCap = RVal: 60661
-   ClgCap = RVal: 60661
+   DXCap = RVal: 54940.2
+   ClgCap = RVal: 54940.2
    ElecResHtgCap = RVal: 0
    HtPumpCap = RVal: 0
-   NonElecHtgCap = RVal: 46977
-   HtgCap = RVal: 46977
+   NonElecHtgCap = RVal: 50456.5
+   HtgCap = RVal: 50456.5
    CoilClgCnt = RVal: 1
    CoilHtgCnt = RVal: 1
    FanCnt = RVal: 1
@@ -132783,7 +132764,7 @@ AirSeg   User: "DOAS1 SupAirSeg"
    FanFlowMinCap = RVal: 0
    IsCVSupFan = RVal: 1
    FanMtrHP = RVal: 0
-   FanPwr = RVal: 0.564214
+   FanPwr = RVal: 1.30531
    TreeDescrip = RVal: "Supply, Path = Ducted"
    ..
 
@@ -132793,13 +132774,13 @@ CoilClg   User: "DOAS1 CoilClg"
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 1
    NumClgStages = RDef: 1
-   CapTotGrossRtd = RVal: 63288.3
-   CapTotGrossRtdSim = RVal: 63288.3
-   CapTotNetRtd = UVal: 60661
+   CapTotGrossRtd = RVal: 57319.7
+   CapTotGrossRtdSim = RVal: 57319.7
+   CapTotNetRtd = UVal: 54940.2
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = UVal: 14
-   DXEER = UVal: 11
-   DXEERAdj = RVal: 13.3389
+   DXSEER = RVal: 13
+   DXEER = RVal: 10.8446
+   DXEERAdj = RVal: 13.1204
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -132807,22 +132788,22 @@ CoilClg   User: "DOAS1 CoilClg"
    SysType = RVal: "DOASCV"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 60661
+   SysClgCap = RVal: 54940.2
    ParentAirSysRef = RVal: "DOAS1"
    CondHVACZnCntWithMult = RVal: 4
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 2627.26
+   FanHtRtd = RVal: 2379.49
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 60661
+   CapTotNetRtdSim = RVal: 54940.2
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 60661
+   CapNonHydronic = RVal: 54940.2
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 13
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 61 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 55 MBH, SEER-13.0"
    ..
 
 CoilHtg   User: "DOAS1 CoilHtg"  
@@ -132832,10 +132813,10 @@ CoilHtg   User: "DOAS1 CoilHtg"
    SysCnt = RVal: 1
    IsDummy = RVal: 0
    NumHtgStages = RVal: 1
-   CapTotGrossRtd = RVal: 46977
-   CapTotGrossRtdSim = RVal: 46977
-   CapTotNetRtd = UVal: 46977
-   FurnAFUE = UVal: 0.8
+   CapTotGrossRtd = RVal: 50456.5
+   CapTotGrossRtdSim = RVal: 50456.5
+   CapTotNetRtd = UVal: 50456.5
+   FurnAFUE = RVal: 0.78
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
    AuxPwr = RVal: 0
@@ -132844,7 +132825,7 @@ CoilHtg   User: "DOAS1 CoilHtg"
    SysType = RVal: "DOASCV"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 60661
+   SysClgCap = RVal: 54940.2
    ParentAirSysRef = RVal: "DOAS1"
    CondHVACZnCntWithMult = RVal: 4
    IsNew = RVal: 1
@@ -132852,20 +132833,20 @@ CoilHtg   User: "DOAS1 CoilHtg"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 46977
+   CapTotNetRtdSim = RVal: 50456.5
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 46977
+   CapNonHydronic = RVal: 50456.5
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 57973.7
+   CapTotInpRtd = RVal: 63068.2
    CodeMinAFUE = RVal: 0.78
-   TreeDescrip = RVal: "Furnace, Gross = 47 MBH, AFUE-80.0%"
+   TreeDescrip = RVal: "Furnace, Gross = 50 MBH, AFUE-78.0%"
    ..
 
-Fan   User: "DOAS1 Fan"  
+Fan   User: "DOAS1 Supply Fan"  
    Status = RVal: "New"  (1)
    ParentComp = RVal: "AirSys"  (1)
    CtrlMthd = RVal: "ConstantVolume"  (1)
@@ -132874,19 +132855,19 @@ Fan   User: "DOAS1 Fan"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 1
    IsDummy = RVal: 0
-   FlowCap = RVal: 1611
+   FlowCap = UVal: 1611
    FlowCapSim = RVal: 1611
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.65
-   TotEff = RVal: 0.55575
-   PwrIdx = RDef: 0.350226
-   TotStaticPress = RVal: 1.6565
-   MtrBHP = UVal: 0.647
-   MtrHP = RVal: 0.75
+   TotEff = RVal: 0.56225
+   PwrIdx = RDef: 0.810247
+   TotStaticPress = RVal: 3.87712
+   MtrBHP = RVal: 1.51434
+   MtrHP = RVal: 2
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
-   MtrEff = RVal: 0.855
+   MtrEff = RVal: 0.865
    MtrPos = RDef: "InAirStream"  (1)
    FanIdx = RVal: 1
    SysType = RVal: "DOASCV"
@@ -132895,12 +132876,12 @@ Fan   User: "DOAS1 Fan"
    IsNew = RVal: 1
    IsExisting = RVal: 0
    AutoEffInputMtrBHP = RVal: 1.51434
-   MtrHPIdx_i = RVal: 5
-   MtrHPIdx_iminus1 = RVal: 4
-   MinMtrBHP = RVal: 0.475
-   MtrBHPIdx = RVal: 0.401614
-   MtrPerfIdx = RVal: 5
-   Pwr = RVal: 0.564214
+   MtrHPIdx_i = RVal: 8
+   MtrHPIdx_iminus1 = RVal: 7
+   MinMtrBHP = RVal: 1.425
+   MtrBHPIdx = RVal: 0.94
+   MtrPerfIdx = RVal: 8
+   Pwr = RVal: 1.30531
    TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 1,611 cfm"
    ..
 
@@ -133316,22 +133297,23 @@ ResDHWSys   User: "Residential DHW System"
    CompactDist = RVal: "not compact"  (1)
    Type = RVal: "Standard"  (3840)
    CentralSys = UVal: 1
-   DistType = UVal: "No Control (continuous pumping)"  (5056)
+   DistType = UVal: "Demand Control (Standard Design for new construction)"  (6336)
    PumpBHP = RVal: 0.5
    PumpEff = RVal: 0.6
    LpPipeInsThkns[1] = RVal: 1.5
    SysStoryCnt = UVal: 4
    LivingUnitCnt = RVal: 88
    SysFlrArea = RVal: 79440
-   WtrHtrCnt = RVal: 1
+   WtrHtrCnt = RVal: 3
    IsRecircSys = RVal: 1
    CompactDistAllowed = RVal: 0
    PipeLctn = RVal: "Conditioned"  (0)
    LpCnt = RVal: 1
    SolFracType = RVal: 1
-   AnnualSolFrac = UVal: 0.2
+   AnnualSolFrac = UVal: 0.35
    SolFracFluidSysName = RVal: "Residential DHW System"
-   SolFracRpt = RVal: 0.2
+   WtrHtrTankVol = UVal: 280
+   SolFracRpt = RVal: 0.35
    SimStdEngyUse = RVal: 1
    ExcludeFromSizing = RVal: 0
    IsBaseSys = RVal: 0
@@ -133345,14 +133327,14 @@ ResDHWSys   User: "Residential DHW System"
    HERSResDHWSysRecircDemCtrlOccSensor = RVal: 0
    HERSResDHWSysCompactDistSys = RVal: 0
    SysHotWtrHrlyUse = RVal: 0
-   BasePropResWtrHtgTot = RVal: 397.619
+   BasePropResWtrHtgTot = RVal: 1314.29
    TankVolTotBase = RVal: 0
    InpRatingTotBase = RVal: 0
    AvgFlrHgt = RVal: 10
    NumDUsServed = RVal: 88
    NumBedroomsServed = RVal: 128
    HeatersAllElec = RVal: 0
-   NumGasHtrs = RVal: 1
+   NumGasHtrs = RVal: 3
    NewOrAltServedArea = RVal: 79440
    NewCntrlAreaServed = RVal: 79440
    IsStdDesignElec = RVal: 0
@@ -133375,29 +133357,29 @@ ResWtrHtr   User: "Res Gas Water Heater"
    TankZn = RVal: "Unconditioned"  (1)
    TankType = RVal: "Commercial Storage (TE & SBL)"  (13)
    CprsrZn = PDef: "(null)"  (3)
-   InpRating = UVal: 200000
-   InpRatingElec = RVal: 58616
+   InpRating = UVal: 160000
+   InpRatingElec = RVal: 46893
    EF = RVal: 0.6
    UEF = UVal: 0.57
-   TankVol = UVal: 100
+   TankVol = UVal: 200
    FirstHrRating = RVal: 0
    FlowRate = RVal: 0
    AmbCond = RVal: "Unconditioned"  (1)
    StdbyLossFrac = UVal: 0.02
    ThrmlEff = UVal: 0.8
    PilotEngy = RVal: 0
-   Cnt = RVal: 1
+   Cnt = UVal: 3
    UEFModelDrawVar = PDef: "na"  (0)
    UEFModelDrawPattern = PDef: "na"  (0)
    UEFModelType = PDef: "na"  (0)
    IsNewResDHWHtr = RVal: 1
    IsExistingDHWHtr = RVal: 0
-   NewResDHWHtr = RVal: 1
-   BasePropResWtrHtgTot = RVal: 397.619
-   InputPerVol = RVal: 2000
+   NewResDHWHtr = RVal: 3
+   BasePropResWtrHtgTot = RVal: 1314.29
+   InputPerVol = RVal: 800
    IsWtrHtrNewDsgn = RVal: 2
-   InpRatingSim = RVal: 200000
-   InpRatingElecSim = RVal: 58616
+   InpRatingSim = RVal: 160000
+   InpRatingElecSim = RVal: 46893
    ScreenVal = RVal: 20
    TEDisp = RVal: 1
    EFDisp = RVal: 0
@@ -135023,6 +135005,39 @@ Mat   User: "Compliance Insulation R0.10"
    SimpleCompositeR = RVal: 0
    HeatCap = RVal: 0.0003591
    InsCheck = RVal: 0.1
+   ..
+
+Mat   User: "Compliance Insulation R4.00"  
+   CodeCat = UVal: "Insulation Board"  (100)
+   CodeItem = UVal: "Compliance Insulation R4.00"  (9094)
+   RVal = RVal: 4
+   ThrmlCndct = RVal: 0.0133
+   SpecHt = RVal: 0.27
+   Dens = RVal: 1
+   Thkns = RVal: 0.6384
+   FrmMat = PDef: "- specify -"  (0)
+   FrmConfig = PDef: "- specify -"  (0)
+   FrmDepth = PDef: "- specify -"  (0)
+   CavityIns = RVal: 0
+   FrmFacHeaders = RVal: 0
+   HeaderIns = RVal: 0
+   CMUWt = PDef: "- specify -"  (0)
+   CMUFill = PDef: "- specify -"  (0)
+   CavityInsVal = RVal: 0
+   FrmDepthVal = RVal: 0
+   IsSpandrel = RVal: 0
+   IsHollowCoreMasonry = RVal: 0
+   IsMetalWall = RVal: 0
+   IsMetalFrame = RVal: 0
+   IsWoodFrame = RVal: 0
+   IsMetalFrameLayer = RVal: 0
+   IsWoodFrameLayer = RVal: 0
+   IsMetalRoof = RVal: 0
+   IsWoodFrameRoof = RVal: 0
+   RefCnt = RVal: 0
+   SimpleCompositeR = RVal: 0
+   HeatCap = RVal: 0.014364
+   InsCheck = RVal: 4
    ..
 
 Mat   User: "WoodFrameWall16inOCCavInsR5"  
