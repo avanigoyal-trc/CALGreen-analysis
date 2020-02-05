@@ -1,0 +1,3819 @@
+RulesetFilename   "T24N_2022.bin"  
+
+Proj   "Mid-Rise Mixed-Use (5-story)"  
+   Ruleset = "CA 2022 Nonresidential, Vers. 1.0 Alpha (T24N_2022.bin)"
+   BldgEngyModelVersion = 14
+   CreateDate = 1567115615
+   ModDate = 1580875523
+   RunDate = 1580875524
+   GasType = "NaturalGas"
+   CliZn = "ClimateZone5"
+   WeatherStation = "CTZ05S22A"
+   HVACAutoSizing = 0
+   ExcptCondNoClgSys = "No"
+   ExcptCondRtdCap = "No"
+   ExcptCondNarrative = "No"
+   UseExcptDsgnModel = 0
+   AutoHardSize = 1
+   AutoEffInput = 1
+   AutoHardSizeAirFlowPerSqFt = 0.58278
+   AutoHardSizeAirFlowPerTon = 449.489
+   DefaultDayltgCtrls = 0
+   RunTitle = "Mid-Rise Mixed-Use (5-story)"
+   AnalysisType = "Title24ProposedOnly"
+   CompOptLtg = 1
+   CompOptMech = 1
+   CompOptDHW = 1
+   SoftwareVersion = "CBECC-Com 2022.0.1 RV (1113)"
+   ResultsCurrentMessage = "(not current)"
+   DebugScreen = 1
+   ..
+
+Mat   "Gypsum Board - 1/2 in."  
+   CodeCat = "Bldg Board and Siding"
+   CodeItem = "Gypsum Board - 1/2 in."
+   ..
+
+Mat   "Gypsum Board - 5/8 in."  
+   CodeCat = "Bldg Board and Siding"
+   CodeItem = "Gypsum Board - 5/8 in."
+   ..
+
+Mat   "Stucco - 7/8 in."  
+   CodeCat = "Plastering Materials"
+   CodeItem = "Stucco - 7/8 in."
+   ..
+
+Mat   "Carpet - 3/4 in."  
+   CodeCat = "Finish Materials"
+   CodeItem = "Carpet - 3/4 in."
+   ..
+
+Mat   "Plywood - 5/8 in."  
+   CodeCat = "Bldg Board and Siding"
+   CodeItem = "Plywood - 5/8 in."
+   ..
+
+Mat   "Compliance Insulation R1.54"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R1.54"
+   ..
+
+Mat   "Compliance Insulation R4x"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R4.00"
+   ..
+
+Mat   "Compliance Insulation R1.35"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R1.35"
+   ..
+
+Mat   "WoodFrameWall16inOC R11.25"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "3_5In"
+   CavityIns = 11.25
+   ..
+
+Mat   "WoodFrameWall16inOC R5"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 5
+   ..
+
+Mat   "WoodFrameWall16inOC R23.8"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "7_25In"
+   CavityIns = 23.8
+   ..
+
+Mat   "WoodFrameWall16inOC R21"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 21
+   ..
+
+Mat   "Concrete - 140 lb/ft3 - 10 in."  
+   CodeCat = "Concrete"
+   CodeItem = "Concrete - 140 lb/ft3 - 10 in."
+   ..
+
+ConsAssm   "SlabOnOrBelowGradeF073"  
+   SpecMthd = "FFactor"
+   ExtRoughness = "MediumRough"
+   MatRef[1] = "Concrete - 140 lb/ft3 - 6 in."
+   ..
+
+ConsAssm   "ResWoodWallU059"  
+   SpecMthd = "Layers"
+   ExtRoughness = "Smooth"
+   MatRef[1] = "Compliance Insulation R0.10"
+   MatRef[2] = "Compliance Insulation R1.35"
+   MatRef[3] = "Gypsum Board - 5/8 in."
+   MatRef[4] = "WoodFrameWall16inOCCavInsR15"
+   MatRef[5] = "Gypsum Board - 5/8 in."
+   ..
+
+ConsAssm   "WoodFramedInteriorWallU099"  
+   SpecMthd = "Layers"
+   ExtRoughness = "MediumSmooth"
+   MatRef[1] = "Gypsum Board - 1/2 in."
+   MatRef[2] = "WoodFrameWall16inOC R11.25"
+   MatRef[3] = "Gypsum Board - 1/2 in."
+   ..
+
+ConsAssm   "Concrete Podium Roof"  
+   CompatibleSurfType = "Roof"
+   MatRef[1] = "Stone - 1 in."
+   MatRef[2] = "Concrete - 140 lb/ft3 - 10 in."
+   MatRef[3] = "- none -"
+   ..
+
+ConsAssm   "BelowGradeWallC114"  
+   CompatibleSurfType = "UndergroundWall"
+   SpecMthd = "Layers"
+   ExtRoughness = "Smooth"
+   MatRef[1] = "Concrete - 140 lb/ft3 - 10 in."
+   MatRef[2] = "- none -"
+   MatRef[3] = "- none -"
+   MatRef[4] = "- none -"
+   ..
+
+FenCons   "Res Fixed Window"  
+   FenProdType = "FixedWindow"
+   SHGC = 0.25
+   UFactor = 0.36
+   VT = 0.42
+   ..
+
+Bldg   "Building 1"  
+   BldgAz = 0
+   AboveGrdStoryCnt = 5
+   ..
+
+Story   "Building Story Parking Garage"  
+   TreeState = 254
+   ..
+
+Spc   "Parking Garage"  
+   TreeState = 254
+   CondgType = "Unconditioned"
+   ThrmlZnRef = "Thermal Zone: Parking Garage"
+   Vol = 558000
+   SpcFunc = "Parking Garage Area (Parking Zone)"
+   HasProcExh = 1
+   ..
+
+PolyLp   "PolyLoop 1"  
+   ..
+
+CartesianPt   "CartesianPoint 1"  
+   Coord = ( 180, 155, -20 )
+   ..
+
+CartesianPt   "CartesianPoint 2"  
+   Coord = ( 180, 0, -20 )
+   ..
+
+CartesianPt   "CartesianPoint 3"  
+   Coord = ( 0, 0, -20 )
+   ..
+
+CartesianPt   "CartesianPoint 4"  
+   Coord = ( 0, 155, -20 )
+   ..
+
+Roof   "Surface 1085"  
+   ConsAssmRef = "Concrete Podium Roof"
+   ..
+
+PolyLp   "PolyLoop 2"  
+   ..
+
+CartesianPt   "CartesianPoint 5"  
+   Coord = ( 120, 0, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 6"  
+   Coord = ( 120, 88, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 7"  
+   Coord = ( 60, 88, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 8"  
+   Coord = ( 60, 0, 0 )
+   ..
+
+UndgrFlr   "Surface 171"  
+   ConsAssmRef = "SlabOnOrBelowGradeF073"
+   ..
+
+PolyLp   "PolyLoop 3"  
+   ..
+
+CartesianPt   "CartesianPoint 9"  
+   Coord = ( 180, 155, -20 )
+   ..
+
+CartesianPt   "CartesianPoint 10"  
+   Coord = ( 180, 0, -20 )
+   ..
+
+CartesianPt   "CartesianPoint 11"  
+   Coord = ( 0, 0, -20 )
+   ..
+
+CartesianPt   "CartesianPoint 12"  
+   Coord = ( 0, 155, -20 )
+   ..
+
+UndgrWall   "Surface 172-uw"  
+   ConsAssmRef = "BelowGradeWallC114"
+   ..
+
+PolyLp   "PolyLoop 4-2"  
+   ..
+
+CartesianPt   "CartesianPoint 13-2"  
+   Coord = ( 0, 0, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 14-2"  
+   Coord = ( 0, 0, -20 )
+   ..
+
+CartesianPt   "CartesianPoint 15-2"  
+   Coord = ( 180, 0, -20 )
+   ..
+
+CartesianPt   "CartesianPoint 16-2"  
+   Coord = ( 180, 0, 0 )
+   ..
+
+UndgrWall   "Surface 173-uw"  
+   ConsAssmRef = "BelowGradeWallC114"
+   ..
+
+PolyLp   "PolyLoop 5-2"  
+   ..
+
+CartesianPt   "CartesianPoint 17-2"  
+   Coord = ( 0, 155, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 18-2"  
+   Coord = ( 0, 155, -20 )
+   ..
+
+CartesianPt   "CartesianPoint 19-2"  
+   Coord = ( 0, 0, -20 )
+   ..
+
+CartesianPt   "CartesianPoint 20-2"  
+   Coord = ( 0, 0, 0 )
+   ..
+
+UndgrWall   "Surface 174-uw"  
+   ConsAssmRef = "BelowGradeWallC114"
+   ..
+
+PolyLp   "PolyLoop 6-2"  
+   ..
+
+CartesianPt   "CartesianPoint 21-2"  
+   Coord = ( 180, 155, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 22-2"  
+   Coord = ( 180, 155, -20 )
+   ..
+
+CartesianPt   "CartesianPoint 23-2"  
+   Coord = ( 0, 155, -20 )
+   ..
+
+CartesianPt   "CartesianPoint 24-2"  
+   Coord = ( 0, 155, 0 )
+   ..
+
+UndgrWall   "Surface 175-uw"  
+   ConsAssmRef = "BelowGradeWallC114"
+   ..
+
+PolyLp   "PolyLoop 7-2"  
+   ..
+
+CartesianPt   "CartesianPoint 25-2"  
+   Coord = ( 180, 0, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 26-2"  
+   Coord = ( 180, 0, -20 )
+   ..
+
+CartesianPt   "CartesianPoint 27-2"  
+   Coord = ( 180, 155, -20 )
+   ..
+
+CartesianPt   "CartesianPoint 28-2"  
+   Coord = ( 180, 155, 0 )
+   ..
+
+Story   "Building Story Nonresidential"  
+   TreeState = 254
+   ..
+
+Spc   "F1 Business Center"  
+   TreeState = 254
+   ThrmlZnRef = "Thermal Zone: F1 Business Center"
+   Vol = 3600
+   SpcFunc = "Convention, Conference, Multipurpose and Meeting Area"
+   SHWFluidSegRef = "DHW Supply Elec"
+   OccSensorCtrl = 1
+   ..
+
+PolyLp   "PolyLoop 8"  
+   ..
+
+CartesianPt   "CartesianPoint 29"  
+   Coord = ( 144, 63, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 30"  
+   Coord = ( 144, 48, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 31"  
+   Coord = ( 120, 48, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 32"  
+   Coord = ( 120, 63, 0 )
+   ..
+
+IntFlr   "Surface 64"  
+   AdjacentSpcRef = "Parking Garage"
+   ConsAssmRef = "OtherFloorU071"
+   ..
+
+PolyLp   "PolyLoop 9"  
+   ..
+
+CartesianPt   "CartesianPoint 33"  
+   Coord = ( 144, 63, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 34"  
+   Coord = ( 144, 48, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 35"  
+   Coord = ( 120, 48, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 36"  
+   Coord = ( 120, 63, 0 )
+   ..
+
+ExtWall   "Surface 65"  
+   TreeState = 254
+   ConsAssmRef = "NonResConcreteExteriorWall"
+   ..
+
+PolyLp   "PolyLoop 10"  
+   ..
+
+CartesianPt   "CartesianPoint 37"  
+   Coord = ( 120, 63, 10 )
+   ..
+
+CartesianPt   "CartesianPoint 38"  
+   Coord = ( 120, 63, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 39"  
+   Coord = ( 120, 48, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 40"  
+   Coord = ( 120, 48, 10 )
+   ..
+
+Win   "Sub Surface 28"  
+   FenConsRef = "Nonres Fixed Window"
+   ..
+
+PolyLp   "PolyLoop 11"  
+   ..
+
+CartesianPt   "CartesianPoint 41"  
+   Coord = ( 120, 62.9167, 4.09883 )
+   ..
+
+CartesianPt   "CartesianPoint 42"  
+   Coord = ( 120, 62.9167, 3.0876 )
+   ..
+
+CartesianPt   "CartesianPoint 43"  
+   Coord = ( 120, 48.0833, 3.0876 )
+   ..
+
+CartesianPt   "CartesianPoint 44"  
+   Coord = ( 120, 48.0833, 4.09883 )
+   ..
+
+IntWall   "Surface 66"  
+   AdjacentSpcRef = "F1 Corridor"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 12"  
+   ..
+
+CartesianPt   "CartesianPoint 45"  
+   Coord = ( 144, 63, 10 )
+   ..
+
+CartesianPt   "CartesianPoint 46"  
+   Coord = ( 144, 63, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 47"  
+   Coord = ( 120, 63, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 48"  
+   Coord = ( 120, 63, 10 )
+   ..
+
+IntWall   "Surface 67"  
+   AdjacentSpcRef = "F1 Corridor"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 13"  
+   ..
+
+CartesianPt   "CartesianPoint 49"  
+   Coord = ( 144, 48, 10 )
+   ..
+
+CartesianPt   "CartesianPoint 50"  
+   Coord = ( 144, 48, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 51"  
+   Coord = ( 144, 63, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 52"  
+   Coord = ( 144, 63, 10 )
+   ..
+
+IntWall   "Surface 68"  
+   AdjacentSpcRef = "F1 Retail SE Top"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 14"  
+   ..
+
+CartesianPt   "CartesianPoint 53"  
+   Coord = ( 120, 48, 10 )
+   ..
+
+CartesianPt   "CartesianPoint 54"  
+   Coord = ( 120, 48, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 55"  
+   Coord = ( 144, 48, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 56"  
+   Coord = ( 144, 48, 10 )
+   ..
+
+Spc   "F1 Corridor"  
+   TreeState = 254
+   ThrmlZnRef = "Thermal Zone: F1 Corridor"
+   Vol = 14850
+   SpcFuncDefaultsRef = "Corridor Space"
+   PriSide100PctControlled = 1
+   SecSide100PctControlled = 1
+   OccSensorCtrl = 1
+   ..
+
+PolyLp   "PolyLoop 15"  
+   ..
+
+CartesianPt   "CartesianPoint 57"  
+   Coord = ( 108, 155, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 58"  
+   Coord = ( 108, 95, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 59"  
+   Coord = ( 150, 95, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 60"  
+   Coord = ( 150, 78, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 67"  
+   Coord = ( 138, 78, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 68"  
+   Coord = ( 138, 88, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 69"  
+   Coord = ( 15, 88, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 70"  
+   Coord = ( 15, 95, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 71"  
+   Coord = ( 101, 95, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 72"  
+   Coord = ( 101, 155, 0 )
+   ..
+
+IntFlr   "Surface 35"  
+   AdjacentSpcRef = "Parking Garage"
+   ConsAssmRef = "OtherFloorU071"
+   ..
+
+PolyLp   "PolyLoop 16"  
+   ..
+
+CartesianPt   "CartesianPoint 73"  
+   Coord = ( 108, 155, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 74"  
+   Coord = ( 108, 95, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 75"  
+   Coord = ( 150, 95, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 76"  
+   Coord = ( 150, 78, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 83"  
+   Coord = ( 138, 78, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 84"  
+   Coord = ( 138, 88, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 85"  
+   Coord = ( 15, 88, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 86"  
+   Coord = ( 15, 95, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 87"  
+   Coord = ( 101, 95, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 88"  
+   Coord = ( 101, 155, 0 )
+   ..
+
+IntWall   "Surface 41"  
+   AdjacentSpcRef = "F1 Stairs E"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 21"  
+   ..
+
+CartesianPt   "CartesianPoint 105"  
+   Coord = ( 138, 88, 10 )
+   ..
+
+CartesianPt   "CartesianPoint 106"  
+   Coord = ( 138, 88, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 107"  
+   Coord = ( 138, 78, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 108"  
+   Coord = ( 138, 78, 10 )
+   ..
+
+ExtWall   "Surface 43"  
+   TreeState = 254
+   ConsAssmRef = "NonResConcreteExteriorWall"
+   ..
+
+PolyLp   "PolyLoop 23"  
+   ..
+
+CartesianPt   "CartesianPoint 113"  
+   Coord = ( 60, 88, 10 )
+   ..
+
+CartesianPt   "CartesianPoint 114"  
+   Coord = ( 60, 88, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 115"  
+   Coord = ( 120, 88, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 116"  
+   Coord = ( 120, 88, 10 )
+   ..
+
+Win   "Sub Surface 4"  
+   FenConsRef = "Nonres Fixed Window"
+   ..
+
+PolyLp   "PolyLoop 24"  
+   ..
+
+CartesianPt   "CartesianPoint 117"  
+   Coord = ( 60.0833, 88, 4.09038 )
+   ..
+
+CartesianPt   "CartesianPoint 118"  
+   Coord = ( 60.0833, 88, 3.0876 )
+   ..
+
+CartesianPt   "CartesianPoint 119"  
+   Coord = ( 119.917, 88, 3.0876 )
+   ..
+
+CartesianPt   "CartesianPoint 120"  
+   Coord = ( 119.917, 88, 4.09038 )
+   ..
+
+IntWall   "Surface 44"  
+   AdjacentSpcRef = "F1 Stairs W"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 25"  
+   ..
+
+CartesianPt   "CartesianPoint 121"  
+   Coord = ( 42, 88, 10 )
+   ..
+
+CartesianPt   "CartesianPoint 122"  
+   Coord = ( 42, 88, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 123"  
+   Coord = ( 60, 88, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 124"  
+   Coord = ( 60, 88, 10 )
+   ..
+
+IntWall   "Surface 45"  
+   AdjacentSpcRef = "F1 Mechanical Room"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 26"  
+   ..
+
+CartesianPt   "CartesianPoint 125"  
+   Coord = ( 15, 88, 10 )
+   ..
+
+CartesianPt   "CartesianPoint 126"  
+   Coord = ( 15, 88, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 127"  
+   Coord = ( 42, 88, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 128"  
+   Coord = ( 42, 88, 10 )
+   ..
+
+IntWall   "Surface 46"  
+   AdjacentSpcRef = "F1 Leasing Office"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 27"  
+   ..
+
+CartesianPt   "CartesianPoint 129"  
+   Coord = ( 15, 95, 10 )
+   ..
+
+CartesianPt   "CartesianPoint 130"  
+   Coord = ( 15, 95, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 131"  
+   Coord = ( 15, 88, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 132"  
+   Coord = ( 15, 88, 10 )
+   ..
+
+IntWall   "Surface 47"  
+   AdjacentSpcRef = "F1 Retail NW Outer"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 28"  
+   ..
+
+CartesianPt   "CartesianPoint 133"  
+   Coord = ( 24, 95, 10 )
+   ..
+
+CartesianPt   "CartesianPoint 134"  
+   Coord = ( 24, 95, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 135"  
+   Coord = ( 15, 95, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 136"  
+   Coord = ( 15, 95, 10 )
+   ..
+
+IntWall   "Surface 48"  
+   AdjacentSpcRef = "F1 Retail NW Outer Core"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 29"  
+   ..
+
+CartesianPt   "CartesianPoint 137"  
+   Coord = ( 48, 95, 10 )
+   ..
+
+CartesianPt   "CartesianPoint 138"  
+   Coord = ( 48, 95, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 139"  
+   Coord = ( 24, 95, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 140"  
+   Coord = ( 24, 95, 10 )
+   ..
+
+IntWall   "Surface 49"  
+   AdjacentSpcRef = "F1 Retail NW Inner Core"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 30"  
+   ..
+
+CartesianPt   "CartesianPoint 141"  
+   Coord = ( 72, 95, 10 )
+   ..
+
+CartesianPt   "CartesianPoint 142"  
+   Coord = ( 72, 95, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 143"  
+   Coord = ( 48, 95, 0 )
+   ..
+
+CartesianPt   "CartesianPoint 144"  
+   Coord = ( 48, 95, 10 )
+   ..
+
+IntWall   "Surface 50"  
+   AdjacentSpcRef = "F1 Retail N Core"
+   ConsAssmRef = "WoodFramedI"  
+   ConsAssmRef = "ResWoodFramedTypicalInteriorFloor"
+   ..
+
+PolyLp   "PolyLoop 924"  
+   ..
+
+CartesianPt   "CartesianPoint 3827"  
+   Coord = ( 30, 155, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3828"  
+   Coord = ( 30, 108, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3829"  
+   Coord = ( 0, 108, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3830"  
+   Coord = ( 0, 155, 40 )
+   ..
+
+ResSpcDHWFeatures   "F5 3-Bed NW rsd3"  
+   ..
+
+Spc   "F5 Corridor"  
+   TreeState = 254
+   CondgType = "DirectlyConditioned"
+   ThrmlZnRef = "Thermal Zone: F5 Corridor"
+   Vol = 21450
+   SpcFunc = "Corridor Area"
+   OccSensorCtrl = 1
+   ..
+
+PolyLp   "PolyLoop 925"  
+   ..
+
+CartesianPt   "CartesianPoint 3831"  
+   Coord = ( 150, 124, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3832"  
+   Coord = ( 150, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3833"  
+   Coord = ( 144, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3834"  
+   Coord = ( 144, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3835"  
+   Coord = ( 138, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3836"  
+   Coord = ( 138, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3837"  
+   Coord = ( 144, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3838"  
+   Coord = ( 144, 118, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3839"  
+   Coord = ( 108, 118, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3840"  
+   Coord = ( 108, 103, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3841"  
+   Coord = ( 101, 103, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3842"  
+   Coord = ( 101, 118, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3843"  
+   Coord = ( 36, 118, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3844"  
+   Coord = ( 36, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3845"  
+   Coord = ( 42, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3846"  
+   Coord = ( 42, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3847"  
+   Coord = ( 36, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3848"  
+   Coord = ( 36, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3849"  
+   Coord = ( 30, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3850"  
+   Coord = ( 30, 124, 40 )
+   ..
+
+IntWall   "Surface 680"  
+   AdjacentSpcRef = "F5 Elevator N"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 926"  
+   ..
+
+CartesianPt   "CartesianPoint 3851"  
+   Coord = ( 101, 118, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3852"  
+   Coord = ( 101, 118, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3853"  
+   Coord = ( 101, 113, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3854"  
+   Coord = ( 101, 113, 50 )
+   ..
+
+IntWall   "Surface 681"  
+   AdjacentSpcRef = "F5 Elevator S"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 927"  
+   ..
+
+CartesianPt   "CartesianPoint 3855"  
+   Coord = ( 101, 108, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3856"  
+   Coord = ( 101, 108, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3857"  
+   Coord = ( 101, 103, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3858"  
+   Coord = ( 101, 103, 50 )
+   ..
+
+IntFlr   "Surface 689"  
+   ConsAssmRef = "ResWoodFramedTypicalInteriorFloor"
+   ..
+
+PolyLp   "PolyLoop 928"  
+   ..
+
+CartesianPt   "CartesianPoint 3859"  
+   Coord = ( 150, 124, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3860"  
+   Coord = ( 150, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3861"  
+   Coord = ( 144, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3862"  
+   Coord = ( 144, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3863"  
+   Coord = ( 138, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3864"  
+   Coord = ( 138, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3865"  
+   Coord = ( 144, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3866"  
+   Coord = ( 144, 118, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3867"  
+   Coord = ( 108, 118, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3868"  
+   Coord = ( 108, 103, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3869"  
+   Coord = ( 101, 103, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3870"  
+   Coord = ( 101, 118, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3871"  
+   Coord = ( 36, 118, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3872"  
+   Coord = ( 36, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3873"  
+   Coord = ( 42, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3874"  
+   Coord = ( 42, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3875"  
+   Coord = ( 36, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3876"  
+   Coord = ( 36, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3877"  
+   Coord = ( 30, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3878"  
+   Coord = ( 30, 124, 40 )
+   ..
+
+IntWall   "Surface 690"  
+   AdjacentSpcRef = "F5 Elevator N"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 929"  
+   ..
+
+CartesianPt   "CartesianPoint 3879"  
+   Coord = ( 96, 118, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3880"  
+   Coord = ( 96, 118, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3881"  
+   Coord = ( 101, 118, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3882"  
+   Coord = ( 101, 118, 50 )
+   ..
+
+IntWall   "Surface 691"  
+   AdjacentSpcRef = "F5 Studio SW"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 930"  
+   ..
+
+CartesianPt   "CartesianPoint 3883"  
+   Coord = ( 30, 18, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3884"  
+   Coord = ( 30, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3885"  
+   Coord = ( 36, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3886"  
+   Coord = ( 36, 18, 50 )
+   ..
+
+IntWall   "Surface 694"  
+   AdjacentSpcRef = "F5 Elevator Core"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 931"  
+   ..
+
+CartesianPt   "CartesianPoint 3887"  
+   Coord = ( 101, 113, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3888"  
+   Coord = ( 101, 113, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3889"  
+   Coord = ( 101, 108, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3890"  
+   Coord = ( 101, 108, 50 )
+   ..
+
+Roof   "Surface 696"  
+   ConsAssmRef = "WoodFramingAndOtherRoofU028"
+   ..
+
+PolyLp   "PolyLoop 932"  
+   ..
+
+CartesianPt   "CartesianPoint 3891"  
+   Coord = ( 150, 18, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3892"  
+   Coord = ( 150, 124, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3893"  
+   Coord = ( 30, 124, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3894"  
+   Coord = ( 30, 18, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3895"  
+   Coord = ( 36, 18, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3896"  
+   Coord = ( 36, 78, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3897"  
+   Coord = ( 42, 78, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3898"  
+   Coord = ( 42, 88, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3899"  
+   Coord = ( 36, 88, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3900"  
+   Coord = ( 36, 118, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3901"  
+   Coord = ( 101, 118, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3902"  
+   Coord = ( 101, 103, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3903"  
+   Coord = ( 108, 103, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3904"  
+   Coord = ( 108, 118, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3905"  
+   Coord = ( 144, 118, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3906"  
+   Coord = ( 144, 88, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3907"  
+   Coord = ( 138, 88, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3908"  
+   Coord = ( 138, 78, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3909"  
+   Coord = ( 144, 78, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3910"  
+   Coord = ( 144, 18, 50 )
+   ..
+
+IntWall   "Surface 704"  
+   AdjacentSpcRef = "F5 Stair E"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 933"  
+   ..
+
+CartesianPt   "CartesianPoint 3911"  
+   Coord = ( 138, 88, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3912"  
+   Coord = ( 138, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3913"  
+   Coord = ( 138, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3914"  
+   Coord = ( 138, 78, 50 )
+   ..
+
+IntWall   "Surface 707"  
+   AdjacentSpcRef = "F5 Laundry"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 934"  
+   ..
+
+CartesianPt   "CartesianPoint 3915"  
+   Coord = ( 101, 103, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3916"  
+   Coord = ( 101, 103, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3917"  
+   Coord = ( 108, 103, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3918"  
+   Coord = ( 108, 103, 50 )
+   ..
+
+IntWall   "Surface 709"  
+   AdjacentSpcRef = "F5 Stair W"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 935"  
+   ..
+
+CartesianPt   "CartesianPoint 3919"  
+   Coord = ( 42, 78, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3920"  
+   Coord = ( 42, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3921"  
+   Coord = ( 42, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3922"  
+   Coord = ( 42, 88, 50 )
+   ..
+
+IntWall   "Surface 712"  
+   AdjacentSpcRef = "F5 Studio SE"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 936"  
+   ..
+
+CartesianPt   "CartesianPoint 3923"  
+   Coord = ( 144, 18, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3924"  
+   Coord = ( 144, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3925"  
+   Coord = ( 150, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3926"  
+   Coord = ( 150, 18, 50 )
+   ..
+
+Spc   "F5 Elevator Core"  
+   TreeState = 254
+   CondgType = "IndirectlyConditioned"
+   ThrmlZnRef = "Thermal Zone: F5 Corridor"
+   Vol = 250
+   SpcFuncDefaultsRef = "Elevator"
+   ..
+
+PolyLp   "PolyLoop 937"  
+   ..
+
+CartesianPt   "CartesianPoint 3927"  
+   Coord = ( 101, 113, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3928"  
+   Coord = ( 101, 108, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3929"  
+   Coord = ( 96, 108, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3930"  
+   Coord = ( 96, 113, 40 )
+   ..
+
+Roof   "Surface 754"  
+   ConsAssmRef = "WoodFramingAndOtherRoofU028"
+   ..
+
+PolyLp   "PolyLoop 938"  
+   ..
+
+CartesianPt   "CartesianPoint 3931"  
+   Coord = ( 101, 108, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3932"  
+   Coord = ( 101, 113, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3933"  
+   Coord = ( 96, 113, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3934"  
+   Coord = ( 96, 108, 50 )
+   ..
+
+IntWall   "Surface 756"  
+   AdjacentSpcRef = "F5 Elevator N"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 939"  
+   ..
+
+CartesianPt   "CartesianPoint 3935"  
+   Coord = ( 101, 113, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3936"  
+   Coord = ( 101, 113, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3937"  
+   Coord = ( 96, 113, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3938"  
+   Coord = ( 96, 113, 50 )
+   ..
+
+IntWall   "Surface 758"  
+   AdjacentSpcRef = "F5 Elevator S"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 940"  
+   ..
+
+CartesianPt   "CartesianPoint 3939"  
+   Coord = ( 96, 108, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3940"  
+   Coord = ( 96, 108, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3941"  
+   Coord = ( 101, 108, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3942"  
+   Coord = ( 101, 108, 50 )
+   ..
+
+IntFlr   "Surface 759"  
+   ConsAssmRef = "ResWoodFramedTypicalInteriorFloor"
+   ..
+
+PolyLp   "PolyLoop 941"  
+   ..
+
+CartesianPt   "CartesianPoint 3943"  
+   Coord = ( 101, 113, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3944"  
+   Coord = ( 101, 108, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3945"  
+   Coord = ( 96, 108, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3946"  
+   Coord = ( 96, 113, 40 )
+   ..
+
+Spc   "F5 Elevator N"  
+   TreeState = 254
+   CondgType = "IndirectlyConditioned"
+   ThrmlZnRef = "Thermal Zone: F5 Corridor"
+   Vol = 250
+   SpcFuncDefaultsRef = "Elevator"
+   ..
+
+PolyLp   "PolyLoop 942"  
+   ..
+
+CartesianPt   "CartesianPoint 3947"  
+   Coord = ( 101, 118, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3948"  
+   Coord = ( 101, 113, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3949"  
+   Coord = ( 96, 113, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3950"  
+   Coord = ( 96, 118, 40 )
+   ..
+
+Roof   "Surface 744"  
+   ConsAssmRef = "WoodFramingAndOtherRoofU028"
+   ..
+
+PolyLp   "PolyLoop 943"  
+   ..
+
+CartesianPt   "CartesianPoint 3951"  
+   Coord = ( 101, 113, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3952"  
+   Coord = ( 101, 118, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3953"  
+   Coord = ( 96, 118, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3954"  
+   Coord = ( 96, 113, 50 )
+   ..
+
+IntFlr   "Surface 745"  
+   ConsAssmRef = "ResWoodFramedTypicalInteriorFloor"
+   ..
+
+PolyLp   "PolyLoop 944"  
+   ..
+
+CartesianPt   "CartesianPoint 3955"  
+   Coord = ( 101, 118, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3956"  
+   Coord = ( 101, 113, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3957"  
+   Coord = ( 96, 113, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3958"  
+   Coord = ( 96, 118, 40 )
+   ..
+
+Spc   "F5 Elevator S"  
+   TreeState = 254
+   CondgType = "IndirectlyConditioned"
+   ThrmlZnRef = "Thermal Zone: F5 Corridor"
+   Vol = 250
+   SpcFuncDefaultsRef = "Elevator"
+   ..
+
+PolyLp   "PolyLoop 945"  
+   ..
+
+CartesianPt   "CartesianPoint 3959"  
+   Coord = ( 101, 108, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3960"  
+   Coord = ( 101, 103, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3961"  
+   Coord = ( 96, 103, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3962"  
+   Coord = ( 96, 108, 40 )
+   ..
+
+Roof   "Surface 1007"  
+   ConsAssmRef = "WoodFramingAndOtherRoofU028"
+   ..
+
+PolyLp   "PolyLoop 946"  
+   ..
+
+CartesianPt   "CartesianPoint 3963"  
+   Coord = ( 101, 103, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3964"  
+   Coord = ( 101, 108, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3965"  
+   Coord = ( 96, 108, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3966"  
+   Coord = ( 96, 103, 50 )
+   ..
+
+IntFlr   "Surface 1009"  
+   ConsAssmRef = "ResWoodFramedTypicalInteriorFloor"
+   ..
+
+PolyLp   "PolyLoop 947"  
+   ..
+
+CartesianPt   "CartesianPoint 3967"  
+   Coord = ( 101, 108, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3968"  
+   Coord = ( 101, 103, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3969"  
+   Coord = ( 96, 103, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3970"  
+   Coord = ( 96, 108, 40 )
+   ..
+
+IntWall   "Surface 1012"  
+   AdjacentSpcRef = "F5 Laundry"
+   ConsAssmRef = "WoodFramedInteriorWallU099"
+   ..
+
+PolyLp   "PolyLoop 948"  
+   ..
+
+CartesianPt   "CartesianPoint 3971"  
+   Coord = ( 96, 103, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3972"  
+   Coord = ( 96, 103, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3973"  
+   Coord = ( 101, 103, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3974"  
+   Coord = ( 101, 103, 50 )
+   ..
+
+Spc   "F5 Laundry"  
+   TreeState = 254
+   CondgType = "IndirectlyConditioned"
+   ThrmlZnRef = "Thermal Zone: F5 Corridor"
+   Vol = 1800
+   SpcFunc = "Laundry Area"
+   SHWFluidSegRef = "DHW Supply Gas"
+   ..
+
+PolyLp   "PolyLoop 949"  
+   ..
+
+CartesianPt   "CartesianPoint 3975"  
+   Coord = ( 108, 103, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3976"  
+   Coord = ( 108, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3977"  
+   Coord = ( 96, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3978"  
+   Coord = ( 96, 103, 40 )
+   ..
+
+IntFlr   "Surface 894"  
+   ConsAssmRef = "ResWoodFramedTypicalInteriorFloor"
+   ..
+
+PolyLp   "PolyLoop 950"  
+   ..
+
+CartesianPt   "CartesianPoint 3979"  
+   Coord = ( 108, 103, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3980"  
+   Coord = ( 108, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3981"  
+   Coord = ( 96, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3982"  
+   Coord = ( 96, 103, 40 )
+   ..
+
+ExtWall   "Surface 898"  
+   TreeState = 254
+   ConsAssmRef = "ResWoodWallU059"
+   ..
+
+PolyLp   "PolyLoop 951"  
+   ..
+
+CartesianPt   "CartesianPoint 3983"  
+   Coord = ( 96, 88, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3984"  
+   Coord = ( 96, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3985"  
+   Coord = ( 108, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3986"  
+   Coord = ( 108, 88, 50 )
+   ..
+
+Win   "Sub Surface 128"  
+   FenConsRef = "Res Fixed Window"
+   ..
+
+PolyLp   "PolyLoop 952"  
+   ..
+
+CartesianPt   "CartesianPoint 3987"  
+   Coord = ( 96.0833, 88, 45.456 )
+   ..
+
+CartesianPt   "CartesianPoint 3988"  
+   Coord = ( 96.0833, 88, 42.9528 )
+   ..
+
+CartesianPt   "CartesianPoint 3989"  
+   Coord = ( 107.917, 88, 42.9528 )
+   ..
+
+CartesianPt   "CartesianPoint 3990"  
+   Coord = ( 107.917, 88, 45.456 )
+   ..
+
+Roof   "Surface 900"  
+   ConsAssmRef = "WoodFramingAndOtherRoofU028"
+   ..
+
+PolyLp   "PolyLoop 953"  
+   ..
+
+CartesianPt   "CartesianPoint 3991"  
+   Coord = ( 108, 88, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3992"  
+   Coord = ( 108, 103, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3993"  
+   Coord = ( 96, 103, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 3994"  
+   Coord = ( 96, 88, 50 )
+   ..
+
+Spc   "F5 Stair E"  
+   TreeState = 254
+   CondgType = "DirectlyConditioned"
+   ThrmlZnRef = "Thermal Zone: F5 Corridor"
+   Vol = 1800
+   SpcFunc = "Stairwell"
+   OccSensorCtrl = 1
+   ..
+
+PolyLp   "PolyLoop 954"  
+   ..
+
+CartesianPt   "CartesianPoint 3995"  
+   Coord = ( 138, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3996"  
+   Coord = ( 138, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3997"  
+   Coord = ( 120, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 3998"  
+   Coord = ( 120, 88, 40 )
+   ..
+
+Roof   "Surface 850"  
+   ConsAssmRef = "WoodFramingAndOtherRoofU028"
+   ..
+
+PolyLp   "PolyLoop 955"  
+   ..
+
+CartesianPt   "CartesianPoint 3999"  
+   Coord = ( 138, 78, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4000"  
+   Coord = ( 138, 88, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4001"  
+   Coord = ( 120, 88, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4002"  
+   Coord = ( 120, 78, 50 )
+   ..
+
+ExtWall   "Surface 851"  
+   ConsAssmRef = "ResWoodWallU059"
+   ..
+
+PolyLp   "PolyLoop 956"  
+   ..
+
+CartesianPt   "CartesianPoint 4003"  
+   Coord = ( 120, 88, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4004"  
+   Coord = ( 120, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4005"  
+   Coord = ( 120, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4006"  
+   Coord = ( 120, 78, 50 )
+   ..
+
+Win   "Sub Surface 117"  
+   FenConsRef = "Res Fixed Window"
+   ..
+
+PolyLp   "PolyLoop 957"  
+   ..
+
+CartesianPt   "CartesianPoint 4007"  
+   Coord = ( 120, 87.9167, 45.4702 )
+   ..
+
+CartesianPt   "CartesianPoint 4008"  
+   Coord = ( 120, 87.9167, 42.9528 )
+   ..
+
+CartesianPt   "CartesianPoint 4009"  
+   Coord = ( 120, 78.0833, 42.9528 )
+   ..
+
+CartesianPt   "CartesianPoint 4010"  
+   Coord = ( 120, 78.0833, 45.4702 )
+   ..
+
+IntFlr   "Surface 852"  
+   ConsAssmRef = "ResWoodFramedTypicalInteriorFloor"
+   ..
+
+PolyLp   "PolyLoop 958"  
+   ..
+
+CartesianPt   "CartesianPoint 4011"  
+   Coord = ( 138, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4012"  
+   Coord = ( 138, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4013"  
+   Coord = ( 120, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4014"  
+   Coord = ( 120, 88, 40 )
+   ..
+
+Spc   "F5 Stair W"  
+   TreeState = 254
+   CondgType = "DirectlyConditioned"
+   ThrmlZnRef = "Thermal Zone: F5 Corridor"
+   Vol = 1800
+   SpcFunc = "Stairwell"
+   OccSensorCtrl = 1
+   ..
+
+PolyLp   "PolyLoop 959"  
+   ..
+
+CartesianPt   "CartesianPoint 4015"  
+   Coord = ( 60, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4016"  
+   Coord = ( 60, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4017"  
+   Coord = ( 42, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4018"  
+   Coord = ( 42, 88, 40 )
+   ..
+
+ExtWall   "Surface 760"  
+   ConsAssmRef = "ResWoodWallU059"
+   ..
+
+PolyLp   "PolyLoop 960"  
+   ..
+
+CartesianPt   "CartesianPoint 4019"  
+   Coord = ( 60, 78, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4020"  
+   Coord = ( 60, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4021"  
+   Coord = ( 60, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4022"  
+   Coord = ( 60, 88, 50 )
+   ..
+
+Win   "Sub Surface 101"  
+   FenConsRef = "Res Fixed Window"
+   ..
+
+PolyLp   "PolyLoop 961"  
+   ..
+
+CartesianPt   "CartesianPoint 4023"  
+   Coord = ( 60, 78.0833, 45.4702 )
+   ..
+
+CartesianPt   "CartesianPoint 4024"  
+   Coord = ( 60, 78.0833, 42.9528 )
+   ..
+
+CartesianPt   "CartesianPoint 4025"  
+   Coord = ( 60, 87.9167, 42.9528 )
+   ..
+
+CartesianPt   "CartesianPoint 4026"  
+   Coord = ( 60, 87.9167, 45.4702 )
+   ..
+
+IntFlr   "Surface 763"  
+   ConsAssmRef = "ResWoodFramedTypicalInteriorFloor"
+   ..
+
+PolyLp   "PolyLoop 962"  
+   ..
+
+CartesianPt   "CartesianPoint 4027"  
+   Coord = ( 60, 88, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4028"  
+   Coord = ( 60, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4029"  
+   Coord = ( 42, 78, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4030"  
+   Coord = ( 42, 88, 40 )
+   ..
+
+Roof   "Surface 765"  
+   ConsAssmRef = "WoodFramingAndOtherRoofU028"
+   ..
+
+PolyLp   "PolyLoop 963"  
+   ..
+
+CartesianPt   "CartesianPoint 4031"  
+   Coord = ( 60, 78, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4032"  
+   Coord = ( 60, 88, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4033"  
+   Coord = ( 42, 88, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4034"  
+   Coord = ( 42, 78, 50 )
+   ..
+
+Spc   "F5 Studio SE"  
+   TreeState = 254
+   ThrmlZnRef = "Thermal Zone: F5 Studio SE"
+   Vol = 5400
+   SpcFuncDefaultsRef = "Residential Space"
+   DwellingUnitTypeCnt[1] = 1
+   ResSpcDHWFeaturesRef[1] = "F5 Studio SE rsd0"
+   ..
+
+PolyLp   "PolyLoop 964"  
+   ..
+
+CartesianPt   "CartesianPoint 4035"  
+   Coord = ( 150, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4036"  
+   Coord = ( 150, 0, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4037"  
+   Coord = ( 120, 0, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4038"  
+   Coord = ( 120, 18, 40 )
+   ..
+
+ExtWall   "Surface 1013"  
+   TreeState = 254
+   ConsAssmRef = "ResWoodWallU059"
+   ..
+
+PolyLp   "PolyLoop 965"  
+   ..
+
+CartesianPt   "CartesianPoint 4039"  
+   Coord = ( 120, 0, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4040"  
+   Coord = ( 120, 0, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4041"  
+   Coord = ( 150, 0, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4042"  
+   Coord = ( 150, 0, 50 )
+   ..
+
+Win   "Sub Surface 142"  
+   FenConsRef = "Res Fixed Window"
+   ..
+
+PolyLp   "PolyLoop 966"  
+   ..
+
+CartesianPt   "CartesianPoint 4043"  
+   Coord = ( 120.083, 0, 45.4702 )
+   ..
+
+CartesianPt   "CartesianPoint 4044"  
+   Coord = ( 120.083, 0, 42.9528 )
+   ..
+
+CartesianPt   "CartesianPoint 4045"  
+   Coord = ( 149.917, 0, 42.9528 )
+   ..
+
+CartesianPt   "CartesianPoint 4046"  
+   Coord = ( 149.917, 0, 45.4702 )
+   ..
+
+ExtWall   "Surface 1014"  
+   TreeState = 254
+   ConsAssmRef = "ResWoodWallU059"
+   ..
+
+PolyLp   "PolyLoop 967"  
+   ..
+
+CartesianPt   "CartesianPoint 4047"  
+   Coord = ( 120, 18, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4048"  
+   Coord = ( 120, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4049"  
+   Coord = ( 120, 0, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4050"  
+   Coord = ( 120, 0, 50 )
+   ..
+
+Win   "Sub Surface 143"  
+   FenConsRef = "Res Fixed Window"
+   ..
+
+PolyLp   "PolyLoop 968"  
+   ..
+
+CartesianPt   "CartesianPoint 4051"  
+   Coord = ( 120, 17.9167, 45.4702 )
+   ..
+
+CartesianPt   "CartesianPoint 4052"  
+   Coord = ( 120, 17.9167, 42.9528 )
+   ..
+
+CartesianPt   "CartesianPoint 4053"  
+   Coord = ( 120, 0.0833333, 42.9528 )
+   ..
+
+CartesianPt   "CartesianPoint 4054"  
+   Coord = ( 120, 0.0833333, 45.4702 )
+   ..
+
+Roof   "Surface 1016"  
+   ConsAssmRef = "WoodFramingAndOtherRoofU028"
+   ..
+
+PolyLp   "PolyLoop 969"  
+   ..
+
+CartesianPt   "CartesianPoint 4055"  
+   Coord = ( 150, 0, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4056"  
+   Coord = ( 150, 18, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4057"  
+   Coord = ( 120, 18, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4058"  
+   Coord = ( 120, 0, 50 )
+   ..
+
+IntFlr   "Surface 1017"  
+   ConsAssmRef = "ResWoodFramedTypicalInteriorFloor"
+   ..
+
+PolyLp   "PolyLoop 970"  
+   ..
+
+CartesianPt   "CartesianPoint 4059"  
+   Coord = ( 150, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4060"  
+   Coord = ( 150, 0, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4061"  
+   Coord = ( 120, 0, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4062"  
+   Coord = ( 120, 18, 40 )
+   ..
+
+ResSpcDHWFeatures   "F5 Studio SE rsd0"  
+   ..
+
+Spc   "F5 Studio SW"  
+   TreeState = 254
+   ThrmlZnRef = "Thermal Zone: F5 Studio SW"
+   Vol = 5400
+   SpcFuncDefaultsRef = "Residential Space"
+   DwellingUnitTypeCnt[1] = 1
+   ResSpcDHWFeaturesRef[1] = "F5 Studio SW rsd0"
+   ..
+
+PolyLp   "PolyLoop 971"  
+   ..
+
+CartesianPt   "CartesianPoint 4063"  
+   Coord = ( 60, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4064"  
+   Coord = ( 60, 0, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4065"  
+   Coord = ( 30, 0, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4066"  
+   Coord = ( 30, 18, 40 )
+   ..
+
+ExtWall   "Surface 747"  
+   TreeState = 254
+   ConsAssmRef = "ResWoodWallU059"
+   ..
+
+PolyLp   "PolyLoop 972"  
+   ..
+
+CartesianPt   "CartesianPoint 4067"  
+   Coord = ( 30, 0, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4068"  
+   Coord = ( 30, 0, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4069"  
+   Coord = ( 60, 0, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4070"  
+   Coord = ( 60, 0, 50 )
+   ..
+
+Win   "Sub Surface 99"  
+   FenConsRef = "Res Fixed Window"
+   ..
+
+PolyLp   "PolyLoop 973"  
+   ..
+
+CartesianPt   "CartesianPoint 4071"  
+   Coord = ( 30.0833, 0, 45.4702 )
+   ..
+
+CartesianPt   "CartesianPoint 4072"  
+   Coord = ( 30.0833, 0, 42.9528 )
+   ..
+
+CartesianPt   "CartesianPoint 4073"  
+   Coord = ( 59.9167, 0, 42.9528 )
+   ..
+
+CartesianPt   "CartesianPoint 4074"  
+   Coord = ( 59.9167, 0, 45.4702 )
+   ..
+
+Roof   "Surface 749"  
+   ConsAssmRef = "WoodFramingAndOtherRoofU028"
+   ..
+
+PolyLp   "PolyLoop 974"  
+   ..
+
+CartesianPt   "CartesianPoint 4075"  
+   Coord = ( 60, 0, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4076"  
+   Coord = ( 60, 18, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4077"  
+   Coord = ( 30, 18, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4078"  
+   Coord = ( 30, 0, 50 )
+   ..
+
+ExtWall   "Surface 750"  
+   TreeState = 254
+   ConsAssmRef = "ResWoodWallU059"
+   ..
+
+PolyLp   "PolyLoop 975"  
+   ..
+
+CartesianPt   "CartesianPoint 4079"  
+   Coord = ( 60, 0, 50 )
+   ..
+
+CartesianPt   "CartesianPoint 4080"  
+   Coord = ( 60, 0, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4081"  
+   Coord = ( 60, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4082"  
+   Coord = ( 60, 18, 50 )
+   ..
+
+Win   "Sub Surface 100"  
+   FenConsRef = "Res Fixed Window"
+   ..
+
+PolyLp   "PolyLoop 976"  
+   ..
+
+CartesianPt   "CartesianPoint 4083"  
+   Coord = ( 60, 0.0833333, 45.4702 )
+   ..
+
+CartesianPt   "CartesianPoint 4084"  
+   Coord = ( 60, 0.0833333, 42.9528 )
+   ..
+
+CartesianPt   "CartesianPoint 4085"  
+   Coord = ( 60, 17.9167, 42.9528 )
+   ..
+
+CartesianPt   "CartesianPoint 4086"  
+   Coord = ( 60, 17.9167, 45.4702 )
+   ..
+
+IntFlr   "Surface 751"  
+   ConsAssmRef = "ResWoodFramedTypicalInteriorFloor"
+   ..
+
+PolyLp   "PolyLoop 977"  
+   ..
+
+CartesianPt   "CartesianPoint 4087"  
+   Coord = ( 60, 18, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4088"  
+   Coord = ( 60, 0, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4089"  
+   Coord = ( 30, 0, 40 )
+   ..
+
+CartesianPt   "CartesianPoint 4090"  
+   Coord = ( 30, 18, 40 )
+   ..
+
+ResSpcDHWFeatures   "F5 Studio SW rsd0"  
+   ..
+
+ThrmlZn   "Thermal Zone: F1 Business Center"  
+   Type = "Conditioned"
+   VentSysRef = "BaseSys5 F1"
+   HasUnknownHVAC = 0
+   ..
+
+ThrmlZn   "Thermal Zone: F1 Corridor"  
+   Type = "Conditioned"
+   VentSysRef = "BaseSys5 F1"
+   HasUnknownHVAC = 0
+   ..
+
+ThrmlZn   "Thermal Zone: F1 Lounge"  
+   Type = "Conditioned"
+   VentSysRef = "BaseSys5 F1"
+   HasUnknownHVAC = 0
+   ..
+
+ThrmlZn   "Thermal Zone: F1 Fitness Center"  
+   Type = "Conditioned"
+   VentSysRef = "BaseSys5 F1"
+   HasUnknownHVAC = 0
+   ..
+
+ThrmlZn   "Thermal Zone: F1 Leasing Office"  
+   Type = "Conditioned"
+   VentSysRef = "BaseSys5 F1"
+   HasUnknownHVAC = 0
+   ..
+
+ThrmlZn   "Thermal Zone: F1 Mechanical Room"  
+   Type = "Conditioned"
+   VentSysRef = "BaseSys5 F1"
+   HasUnknownHVAC = 0
+   ..
+
+ThrmlZn   "Thermal Zone: F1 Retail N-NW"  
+   Type = "Conditioned"
+   VentSysRef = "BaseSys5 F1"
+   HasUnknownHVAC = 0
+   ..
+
+ThrmlZn   "Thermal Zone: F1 Retail NE"  
+   Type = "Conditioned"
+   VentSysRef = "BaseSys5 F1"
+   HasUnknownHVAC = 0
+   ..
+
+ThrmlZn   "Thermal Zone: F1 Retail SE"  
+   Type = "Conditioned"
+   VentSysRef = "BaseSys5 F1"
+   HasUnknownHVAC = 0
+   ..
+
+ThrmlZn   "Thermal Zone: F1 Retail SW"  
+   Type = "Conditioned"
+   VentSysRef = "BaseSys5 F1"
+   HasUnknownHVAC = 0
+   ..
+
+ThrmlZn   "Thermal Zone: F2-4 1-Bed Core N"  
+   Type = "Conditioned"
+   PriAirCondgSysRef[1] = "ZnSys F2-4 1-Bed Core N"
+   VentSysRef = "Bal F2 1-Bed Core N"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F2-4 1-Bed Core West"  
+   Type = "Conditioned"
+   HVACZnCnt = 2
+   PriAirCondgSysRef[1] = "ZnSys F2-4 1-Bed Core West"
+   VentSysRef = "Bal F2 1-Bed Core West"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F2-4 1-Bed Core East"  
+   Type = "Conditioned"
+   HVACZnCnt = 2
+   PriAirCondgSysRef[1] = "ZnSys F2-4 1-Bed Core East"
+   VentSysRef = "Bal F2 1-Bed Core East"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F2-4 1-Bed North"  
+   Type = "Conditioned"
+   HVACZnCnt = 5
+   PriAirCondgSysRef[1] = "ZnSys F2-4 1-Bed North"
+   VentSysRef = "Bal F2 1-Bed North"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F2-4 2-Bed Core NE-NW"  
+   Type = "Conditioned"
+   HVACZnCnt = 2
+   PriAirCondgSysRef[1] = "ZnSys F2-4 2-Bed Core NE-NW"
+   VentSysRef = "Bal F2 2-Bed Core NE-NW"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F2-4 2-Bed East"  
+   Type = "Conditioned"
+   HVACZnCnt = 3
+   PriAirCondgSysRef[1] = "ZnSys F2-4 2-Bed East"
+   VentByPriAirCondgSys[2] = 1
+   VentSysRef = "Bal F2 2-Bed East"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F2-4 2-Bed West"  
+   Type = "Conditioned"
+   HVACZnCnt = 3
+   PriAirCondgSysRef[1] = "ZnSys F2-4 2-Bed West"
+   VentSysRef = "Bal F2 2-Bed West"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F2-4 3-Bed NE"  
+   Type = "Conditioned"
+   PriAirCondgSysRef[1] = "ZnSys F2-4 3-Bed NE"
+   VentSysRef = "Bal F2 3-Bed NE"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F2-4 3-Bed NW"  
+   Type = "Conditioned"
+   PriAirCondgSysRef[1] = "ZnSys F2-4 3-Bed NW"
+   VentSysRef = "Bal F2 3-Bed NW"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F2-4 Studio SE"  
+   Type = "Conditioned"
+   PriAirCondgSysRef[1] = "ZnSys F2-4 Studio SE"
+   VentSysRef = "Bal F2 Studio SE"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F2-4 Studio SW"  
+   Type = "Conditioned"
+   PriAirCondgSysRef[1] = "ZnSys F2-4 Studio SW"
+   VentSysRef = "Bal F2 Studio SW"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F2-4 Corridor"  
+   Type = "Conditioned"
+   ..
+
+ThrmlZn   "Thermal Zone: F5 1-Bed Core N"  
+   Type = "Conditioned"
+   PriAirCondgSysRef[1] = "ZnSys F5 1-Bed Core N"
+   VentSysRef = "Bal F5 1-Bed Core N"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F5 1-Bed Core West"  
+   Type = "Conditioned"
+   HVACZnCnt = 2
+   PriAirCondgSysRef[1] = "ZnSys F5 1-Bed Core West"
+   VentSysRef = "Bal F5 1-Bed Core West"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F5 1-Bed Core East"  
+   Type = "Conditioned"
+   HVACZnCnt = 2
+   PriAirCondgSysRef[1] = "ZnSys F5 1-Bed Core East"
+   VentSysRef = "Bal F5 1-Bed Core East"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F5 1-Bed North"  
+   Type = "Conditioned"
+   HVACZnCnt = 5
+   PriAirCondgSysRef[1] = "ZnSys F5 1-Bed North"
+   VentSysRef = "Bal F5 1-Bed North"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F5 2-Bed Core NE-NW"  
+   Type = "Conditioned"
+   HVACZnCnt = 2
+   PriAirCondgSysRef[1] = "ZnSys F5 2-Bed Core NE-NW"
+   VentSysRef = "Bal F5 2-Bed Core NE-NW"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F5 2-Bed East"  
+   Type = "Conditioned"
+   HVACZnCnt = 3
+   PriAirCondgSysRef[1] = "ZnSys F5 2-Bed East"
+   VentSysRef = "Bal F5 2-Bed East"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F5 2-Bed West"  
+   Type = "Conditioned"
+   HVACZnCnt = 3
+   PriAirCondgSysRef[1] = "ZnSys F5 2-Bed West"
+   VentSysRef = "Bal F5 2-Bed West"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F5 3-Bed NE"  
+   Type = "Conditioned"
+   PriAirCondgSysRef[1] = "ZnSys F5 3-Bed NE"
+   VentSysRef = "Bal F5 3-Bed NE"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F5 3-Bed NW"  
+   Type = "Conditioned"
+   PriAirCondgSysRef[1] = "ZnSys F5 3-Bed NW"
+   VentSysRef = "Bal F5 3-Bed NW"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F5 Studio SE"  
+   Type = "Conditioned"
+   PriAirCondgSysRef[1] = "ZnSys F5 Studio SE"
+   VentSysRef = "Bal F5 Studio SE"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F5 Studio SW"  
+   Type = "Conditioned"
+   PriAirCondgSysRef[1] = "ZnSys F5 Studio SW"
+   VentSysRef = "Bal F5 Studio SW"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F5 Corridor"  
+   Type = "Conditioned"
+   ..
+
+ThrmlZn   "Thermal Zone: Parking Garage"  
+   Type = "Unconditioned"
+   VentSysRef = "Parking Garage Vent System"
+   HasUnknownHVAC = 0
+   VentStd = "T24-2022"
+   VentStdDesc = "Exhaust"
+   VentSrc = "Forced"
+   ..
+
+ZnSys   "ZnSys F2-4 1-Bed Core N"  
+   Type = "SZAC"
+   Cnt = 3
+   ..
+
+CoilClg   "CoilCooling 1"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 1"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 1"  
+   ..
+
+ZnSys   "ZnSys F2-4 1-Bed Core West"  
+   Type = "SZAC"
+   Cnt = 6
+   ..
+
+CoilClg   "CoilCooling 2"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 2"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 2"  
+   ..
+
+ZnSys   "ZnSys F2-4 1-Bed Core East"  
+   Type = "SZAC"
+   Cnt = 6
+   ..
+
+CoilClg   "CoilCooling 3"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 3"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 3"  
+   ..
+
+ZnSys   "ZnSys F2-4 1-Bed North"  
+   Type = "SZAC"
+   Cnt = 15
+   ..
+
+CoilClg   "CoilCooling 4"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 4"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 4"  
+   ..
+
+ZnSys   "ZnSys F2-4 2-Bed Core NE-NW"  
+   Type = "SZAC"
+   Cnt = 6
+   ..
+
+CoilClg   "CoilCooling 5"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 5"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 5"  
+   ..
+
+ZnSys   "ZnSys F2-4 2-Bed East"  
+   Type = "SZAC"
+   Cnt = 9
+   ..
+
+CoilClg   "CoilCooling 6"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 6"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 6"  
+   ..
+
+ZnSys   "ZnSys F2-4 2-Bed West"  
+   Type = "SZAC"
+   Cnt = 9
+   ..
+
+CoilClg   "CoilCooling 7"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 7"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 7"  
+   ..
+
+ZnSys   "ZnSys F2-4 3-Bed NE"  
+   Type = "SZAC"
+   Cnt = 3
+   ..
+
+CoilClg   "CoilCooling 8"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 8"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 8"  
+   ..
+
+ZnSys   "ZnSys F2-4 3-Bed NW"  
+   Type = "SZAC"
+   Cnt = 3
+   ..
+
+CoilClg   "CoilCooling 9"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 9"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 9"  
+   ..
+
+ZnSys   "ZnSys F2-4 Studio SE"  
+   Type = "SZAC"
+   Cnt = 3
+   ..
+
+CoilClg   "CoilCooling 10"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 10"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 10"  
+   ..
+
+ZnSys   "ZnSys F2-4 Studio SW"  
+   Type = "SZAC"
+   Cnt = 3
+   ..
+
+CoilClg   "CoilCooling 11"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 11"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 11"  
+   ..
+
+ZnSys   "ZnSys F5 1-Bed Core N"  
+   Type = "SZAC"
+   Cnt = 1
+   ..
+
+CoilClg   "CoilCooling 12"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 12"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 12"  
+   ..
+
+ZnSys   "ZnSys F5 1-Bed Core West"  
+   Type = "SZAC"
+   Cnt = 2
+   ..
+
+CoilClg   "CoilCooling 13"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 13"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 13"  
+   ..
+
+ZnSys   "ZnSys F5 1-Bed Core East"  
+   Type = "SZAC"
+   Cnt = 2
+   ..
+
+CoilClg   "CoilCooling 14"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 14"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 14"  
+   ..
+
+ZnSys   "ZnSys F5 1-Bed North"  
+   Type = "SZAC"
+   Cnt = 5
+   ..
+
+CoilClg   "CoilCooling 15"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 15"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 15"  
+   ..
+
+ZnSys   "ZnSys F5 2-Bed Core NE-NW"  
+   Type = "SZAC"
+   Cnt = 2
+   ..
+
+CoilClg   "CoilCooling 16"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 16"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 16"  
+   ..
+
+ZnSys   "ZnSys F5 2-Bed East"  
+   Type = "SZAC"
+   Cnt = 3
+   ..
+
+CoilClg   "CoilCooling 17"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 17"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 17"  
+   ..
+
+ZnSys   "ZnSys F5 2-Bed West"  
+   Type = "SZAC"
+   Cnt = 3
+   ..
+
+CoilClg   "CoilCooling 18"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 18"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 18"  
+   ..
+
+ZnSys   "ZnSys F5 3-Bed NE"  
+   Type = "SZAC"
+   Cnt = 1
+   ..
+
+CoilClg   "CoilCooling 19"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 19"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 19"  
+   ..
+
+ZnSys   "ZnSys F5 3-Bed NW"  
+   Type = "SZAC"
+   Cnt = 1
+   ..
+
+CoilClg   "CoilCooling 20"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 20"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 20"  
+   ..
+
+ZnSys   "ZnSys F5 Studio SE"  
+   Type = "SZAC"
+   Cnt = 1
+   ..
+
+CoilClg   "CoilCooling 21"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 21"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 21"  
+   ..
+
+ZnSys   "ZnSys F5 Studio SW"  
+   Type = "SZAC"
+   Cnt = 1
+   ..
+
+CoilClg   "CoilCooling 22"  
+   Type = "DirectExpansion"
+   DXSEER = 14
+   DXEER = 12.2
+   ..
+
+CoilHtg   "CoilHtg 22"  
+   Type = "Furnace"
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 22"  
+   ..
+
+ZnSys   "Bal F2 1-Bed Core N"  
+   Type = "VentilationOnly"
+   Cnt = 3
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F2 1-Bed Core West"  
+   Type = "VentilationOnly"
+   Cnt = 6
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F2 1-Bed Core East"  
+   Type = "VentilationOnly"
+   Cnt = 6
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F2 1-Bed North"  
+   Type = "VentilationOnly"
+   Cnt = 15
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F2 2-Bed Core NE-NW"  
+   Type = "VentilationOnly"
+   Cnt = 6
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F2 2-Bed East"  
+   Type = "VentilationOnly"
+   Cnt = 9
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F2 2-Bed West"  
+   Type = "VentilationOnly"
+   Cnt = 9
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F2 3-Bed NE"  
+   Type = "VentilationOnly"
+   Cnt = 3
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F2 3-Bed NW"  
+   Type = "VentilationOnly"
+   Cnt = 3
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F2 Studio SE"  
+   Type = "VentilationOnly"
+   Cnt = 3
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F2 Studio SW"  
+   Type = "VentilationOnly"
+   Cnt = 3
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F5 1-Bed Core N"  
+   Type = "VentilationOnly"
+   Cnt = 1
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F5 1-Bed Core West"  
+   Type = "VentilationOnly"
+   Cnt = 2
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F5 1-Bed Core East"  
+   Type = "VentilationOnly"
+   Cnt = 2
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F5 1-Bed North"  
+   Type = "VentilationOnly"
+   Cnt = 5
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F5 2-Bed Core NE-NW"  
+   Type = "VentilationOnly"
+   Cnt = 2
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F5 2-Bed East"  
+   Type = "VentilationOnly"
+   Cnt = 3
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F5 2-Bed West"  
+   Type = "VentilationOnly"
+   Cnt = 3
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F5 3-Bed NE"  
+   Type = "VentilationOnly"
+   Cnt = 1
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F5 3-Bed NW"  
+   Type = "VentilationOnly"
+   Cnt = 1
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F5 Studio SE"  
+   Type = "VentilationOnly"
+   Cnt = 1
+   ExhSysType = "Balanced"
+   ..
+
+ZnSys   "Bal F5 Studio SW"  
+   Type = "VentilationOnly"
+   Cnt = 1
+   ExhSysType = "Balanced"
+   ..
+
+AirSys   "Parking Garage Vent System"  
+   TreeState = 253
+   Type = "Exhaust"
+   ExhSysType = "ParkingGarage"
+   ExhCtrlMthd = "COControl"
+   ..
+
+AirSeg   "Parking Garage Supply AirSeg"  
+   Type = "Supply"
+   ..
+
+Fan   "Parking Garage Supply Fan"  
+   CtrlMthd = "VariableSpeedDrive"
+   ..
+
+AirSeg   "Parking Garage Exhaust AirSeg"  
+   Type = "Exhaust"
+   ..
+
+Fan   "Parkig Garage Exhaust Fan"  
+   CtrlMthd = "VariableSpeedDrive"
+   ..
+
+AirSys   "BaseSys5 F1"  
+   Type = "PVAV"
+   SubType = "Packaged3Phase"
+   CtrlSysType = "DDCToZone"
+   OptStart = 1
+   AirFlowPerSqFt = 0.86551
+   AirFlowPerTon = 414.66
+   ClgCtrl = "WarmestReset"
+   ..
+
+AirSeg   "BaseSys5 SupAirSeg"  
+   Type = "Supply"
+   ..
+
+CoilClg   "BaseSys5 CoilClg"  
+   Type = "DirectExpansion"
+   NumClgStages = 2
+   CapTotNetRtd = 566565
+   ..
+
+CoilHtg   "BaseSys5 CoilHtg"  
+   Type = "HotWater"
+   FluidSegInRef = "BaseHW PriSupSeg"
+   FluidSegOutRef = "BaseHW PriRetSeg"
+   CapTotGrossRtd = 148259
+   ..
+
+Fan   "BaseSys5 Fan"  
+   CtrlMthd = "VariableSpeedDrive"
+   FlowCap = 19577.6
+   ..
+
+AirSeg   "BaseSys5 RetAirSeg"  
+   Type = "Return"
+   ..
+
+OACtrl   "BaseSys5 OACtrl"  
+   EconoCtrlMthd = "DifferentialDryBulb"
+   EconoIntegration = "Integrated"
+   AirSegSupRef = "BaseSys5 SupAirSeg"
+   AirSegRetRef = "BaseSys5 RetAirSeg"
+   ..
+
+TrmlUnit   "BaseVAV TrmlUnit"  
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Business Center"
+   PriAirFlowMax = 438.947
+   ReheatCtrlMthd = "DualMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg"  
+   Type = "HotWater"
+   FluidSegInRef = "BaseHW PriSupSeg"
+   FluidSegOutRef = "BaseHW PriRetSeg"
+   CapTotGrossRtd = 9698.88
+   ..
+
+TrmlUnit   "BaseVAV TrmlUnit-2"  
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Corridor"
+   PriAirFlowMax = 1448.88
+   ReheatCtrlMthd = "DualMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-2"  
+   Type = "HotWater"
+   FluidSegInRef = "BaseHW PriSupSeg"
+   FluidSegOutRef = "BaseHW PriRetSeg"
+   CapTotGrossRtd = 52391
+   ..
+
+TrmlUnit   "BaseVAV TrmlUnit-3"  
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Lounge"
+   PriAirFlowMax = 1138.84
+   ReheatCtrlMthd = "DualMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-3"  
+   Type = "HotWater"
+   FluidSegInRef = "BaseHW PriSupSeg"
+   FluidSegOutRef = "BaseHW PriRetSeg"
+   CapTotGrossRtd = 22098.5
+   ..
+
+TrmlUnit   "BaseVAV TrmlUnit-4"  
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Fitness Center"
+   PriAirFlowMax = 635.596
+   ReheatCtrlMthd = "DualMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-4"  
+   Type = "HotWater"
+   FluidSegInRef = "BaseHW PriSupSeg"
+   FluidSegOutRef = "BaseHW PriRetSeg"
+   CapTotGrossRtd = 18215.4
+   ..
+
+TrmlUnit   "BaseVAV TrmlUnit-5"  
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Leasing Office"
+   PriAirFlowMax = 295.916
+   ReheatCtrlMthd = "DualMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-5"  
+   Type = "HotWater"
+   FluidSegInRef = "BaseHW PriSupSeg"
+   FluidSegOutRef = "BaseHW PriRetSeg"
+   CapTotGrossRtd = 8577.05
+   ..
+
+TrmlUnit   "BaseVAV TrmlUnit-6"  
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Mechanical Room"
+   PriAirFlowMax = 587.095
+   ReheatCtrlMthd = "DualMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-6"  
+   Type = "HotWater"
+   FluidSegInRef = "BaseHW PriSupSeg"
+   FluidSegOutRef = "BaseHW PriRetSeg"
+   CapTotGrossRtd = 9091.35
+   ..
+
+TrmlUnit   "BaseVAV TrmlUnit-7"  
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Retail N-NW"
+   PriAirFlowMax = 4151.57
+   ReheatCtrlMthd = "DualMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-7"  
+   Type = "HotWater"
+   FluidSegInRef = "BaseHW PriSupSeg"
+   FluidSegOutRef = "BaseHW PriRetSeg"
+   CapTotGrossRtd = 96843.8
+   ..
+
+TrmlUnit   "BaseVAV TrmlUnit-8"  
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Retail NE"
+   PriAirFlowMax = 3151.43
+   ReheatCtrlMthd = "DualMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-8"  
+   Type = "HotWater"
+   FluidSegInRef = "BaseHW PriSupSeg"
+   FluidSegOutRef = "BaseHW PriRetSeg"
+   CapTotGrossRtd = 71432.8
+   ..
+
+TrmlUnit   "BaseVAV TrmlUnit-9"  
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Retail SE"
+   PriAirFlowMax = 2105.12
+   ReheatCtrlMthd = "DualMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-9"  
+   Type = "HotWater"
+   FluidSegInRef = "BaseHW PriSupSeg"
+   FluidSegOutRef = "BaseHW PriRetSeg"
+   CapTotGrossRtd = 51904.3
+   ..
+
+TrmlUnit   "BaseVAV TrmlUnit-10"  
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Retail SW"
+   PriAirFlowMax = 3131.41
+   ReheatCtrlMthd = "DualMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-10"  
+   Type = "HotWater"
+   FluidSegInRef = "BaseHW PriSupSeg"
+   FluidSegOutRef = "BaseHW PriRetSeg"
+   CapTotGrossRtd = 77052.9
+   ..
+
+AirSys   "DOAS1"  
+   Type = "DOASCV"
+   CtrlSysType = "DDCToZone"
+   NightCycleFanCtrl = "StaysOff"
+   OptStart = 1
+   AirFlowPerSqFt = 0.15
+   AirFlowPerTon = 400
+   ClgCtrl = "FixedDualSetpoint"
+   ClgFixedSupTemp = 75
+   HtgFixedSupTemp = 55
+   ClRstSupHi = 75
+   ClRstSupLow = 55
+   ..
+
+AirSeg   "DOAS1 SupAirSeg"  
+   Type = "Supply"
+   ..
+
+CoilClg   "DOAS1 CoilClg"  
+   Type = "DirectExpansion"
+   CapTotNetRtd = 55409.1
+   ..
+
+CoilHtg   "DOAS1 CoilHtg"  
+   Type = "Furnace"
+   CapTotNetRtd = 41757.1
+   ..
+
+Fan   "DOAS1 Supply Fan"  
+   FlowCap = 1611
+   ..
+
+AirSeg   "DOAS1 ReliefAirSeg"  
+   Type = "Relief"
+   Path = "Ducted"
+   ..
+
+OACtrl   "DOAS1 OACtrl"  
+   ..
+
+TrmlUnit   "DOAS1 TrmlUnit-1"  
+   Type = "Uncontrolled"
+   ZnServedRef = "Thermal Zone: F2-4 Corridor"
+   ..
+
+TrmlUnit   "DOAS1 TrmlUnit-3"  
+   Type = "Uncontrolled"
+   ZnServedRef = "Thermal Zone: F5 Corridor"
+   ..
+
+SpcFuncDefaults   "Retail Space"  
+   SpcFunc = "Retail Sales Area (Retail Merchandise Sales)"
+   SHWFluidSegRef = "DHW Supply Elec"
+   ..
+
+SpcFuncDefaults   "Residential Space"  
+   SpcFunc = "High-Rise Residential Living Spaces"
+   ResDHWSysRef = "Residential DHW System"
+   ..
+
+SpcFuncDefaults   "Elevator"  
+   SpcFunc = "Electrical, Mechanical, Telephone Rooms"
+   VentSpcFunc = "General - Unoccupied"
+   SHWFluidSegRef = "DHW Supply Elec"
+   ..
+
+SpcFuncDefaults   "Corridor Space"  
+   SpcFunc = "Corridor Area"
+   ..
+
+FenCons   "Nonres Fixed Window"  
+   FenProdType = "FixedWindow"
+   SHGC = 0.25
+   UFactor = 0.36
+   VT = 0.42
+   ..
+
+ConsAssm   "OtherFloorU071"  
+   CompatibleSurfType = "InteriorFloor"
+   MatRef[1] = "Concrete - 140 lb/ft3 - 10 in."
+   MatRef[2] = "Compliance Insulation R6.00"
+   MatRef[3] = "Compliance Insulation R2.15"
+   MatRef[4] = "Compliance Insulation R0.50"
+   MatRef[5] = "Plywood - 5/8 in."
+   MatRef[6] = "Carpet - 3/4 in."
+   ..
+
+ResDHWSys   "Residential DHW System"  
+   CentralSys = 1
+   DistType = "Demand Control (Standard Design for new construction)"
+   SysStoryCnt = 4
+   AnnualSolFrac = 0.2
+   WtrHtrTankVol = 280
+   ..
+
+ResWtrHtr   "Res Gas Water Heater"  
+   InpRating = 160000
+   UEF = 0.57
+   TankVol = 200
+   StdbyLossFrac = 0.02
+   ThrmlEff = 0.8
+   Cnt = 3
+   ..
+
+FluidSys   "Nonresidential Gas DHW System"  
+   TreeState = 253
+   Type = "ServiceHotWater"
+   ..
+
+FluidSeg   "DHW Supply Gas"  
+   Type = "PrimarySupply"
+   ..
+
+FluidSeg   "DHW Makeup Gas"  
+   Type = "MakeupFluid"
+   Src = "MunicipalWater"
+   ..
+
+WtrHtr   "Nonres Gas Water Heater"  
+   FluidSegOutRef = "DHW Supply Gas"
+   FluidSegMakeupRef = "DHW Makeup Gas"
+   StorCap = 5.89175
+   RE = 0.8
+   CapRtd = 7324.35
+   ..
+
+Mat   "WoodRoof16OCCavInsR38"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "7_25In"
+   CavityIns = 38
+   ..
+
+Mat   "WoodRoof16OCCavInsR25"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "7_25In"
+   CavityIns = 25
+   ..
+
+Mat   "WoodRoof16OCCavInsR20"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "7_25In"
+   CavityIns = 20
+   ..
+
+Mat   "WoodRoof16OCCavInsR10"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 10
+   ..
+
+Mat   "WoodRoof16OCCavInsR11"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 11
+   ..
+
+Mat   "Building Paper - 1/16 in."  
+   CodeCat = "Building Membrane"
+   CodeItem = "Building Paper - 1/16 in."
+   ..
+
+Mat   "Fiberboard sheathing - 1/2 in."  
+   CodeCat = "Bldg Board and Siding"
+   CodeItem = "Fiberboard sheathing - 1/2 in."
+   ..
+
+ConsAssm   "WoodFramingAndOtherRoofU028"  
+   CompatibleSurfType = "Roof"
+   MatRef[1] = "Roofing felt - 1/8 in."
+   MatRef[2] = "Building Paper - 1/16 in."
+   MatRef[3] = "Fiberboard sheathing - 1/2 in."
+   MatRef[4] = "Compliance Insulation R0.50"
+   MatRef[5] = "Compliance Insulation R0.02"
+   MatRef[6] = "Compliance Insulation R0.01"
+   MatRef[7] = "Gypsum Board - 1/2 in."
+   MatRef[8] = "WoodRoof16OCCavInsR38"
+   ..
+
+Mat   "Roofing felt - 1/8 in."  
+   CodeCat = "Building Membrane"
+   CodeItem = "Roofing felt - 1/8 in."
+   ..
+
+Mat   "WoodFloor16inOCCavInsR0"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Floor16inOC"
+   FrmDepth = "5_5In"
+   ..
+
+ConsAssm   "ResWoodFramedTypicalInteriorFloor"  
+   CompatibleSurfType = "InteriorFloor"
+   MatRef[1] = "Gypsum Board - 1/2 in."
+   MatRef[2] = "WoodFloor16inOCCavInsR0"
+   MatRef[3] = "Plywood - 5/8 in."
+   MatRef[4] = "Carpet - 3/4 in."
+   ..
+
+Mat   "Stone - 1 in."  
+   CodeCat = "Masonry Materials"
+   CodeItem = "Stone - 1 in."
+   ..
+
+ConsAssm   "NonResConcreteExteriorWall"  
+   CompatibleSurfType = "ExteriorWall"
+   MatRef[1] = "Stucco - 7/8 in."
+   MatRef[2] = "Concrete - 140 lb/ft3 - 8 in."
+   MatRef[3] = "Compliance Insulation R13.00"
+   MatRef[4] = "Compliance Insulation R0.10"
+   MatRef[5] = "Compliance Insulation R0.10"
+   MatRef[6] = "WoodFraming16inOC"
+   MatRef[7] = "Gypsum Board - 1/2 in."
+   ..
+
+Mat   "WoodFraming16inOC"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "3_5In"
+   CavityIns = 0
+   ..
+
+Mat   "Concrete - 140 lb/ft3 - 8 in."  
+   CodeCat = "Concrete"
+   CodeItem = "Concrete - 140 lb/ft3 - 8 in."
+   ..
+
+ConsAssm   "ResF2ConcreteInteriorFloor"  
+   CompatibleSurfType = "InteriorFloor"
+   MatRef[1] = "Gypsum Board - 1/2 in."
+   MatRef[2] = "Concrete - 140 lb/ft3 - 4 in."
+   MatRef[3] = "Plywood - 5/8 in."
+   MatRef[4] = "Carpet - 3/4 in."
+   ..
+
+Mat   "Concrete - 140 lb/ft3 - 4 in."  
+   CodeCat = "Concrete"
+   CodeItem = "Concrete - 140 lb/ft3 - 4 in."
+   ..
+
+FluidSys   "Nonresidential Elec DHW System"  
+   TreeState = 253
+   Type = "ServiceHotWater"
+   ..
+
+FluidSeg   "DHW Supply Elec"  
+   Type = "PrimarySupply"
+   ..
+
+FluidSeg   "DHW Makeup Elec"  
+   Type = "MakeupFluid"
+   ..
+
+WtrHtr   "Nonres Elec Water Heater"  
+   FluidSegOutRef = "DHW Supply Elec"
+   FluidSegMakeupRef = "DHW Makeup Elec"
+   StorCap = 24.1083
+   UEF = 0.9357
+   RE = 0.99
+   FuelSrc = "Electricity"
+   InpPwr = 7.02702
+   ..
+
+FluidSys   "BaseHWSystem"  
+   TreeState = 253
+   Type = "HotWater"
+   ..
+
+FluidSeg   "BaseHW PriSupSeg"  
+   Type = "PrimarySupply"
+   ..
+
+FluidSeg   "BaseHW PriRetSeg"  
+   Type = "PrimaryReturn"
+   ..
+
+Blr   "Base Blr"  
+   TreeState = 253
+   Type = "HotWater"
+   FuelSrc = "Gas"
+   DraftType = "Natural"
+   FluidSegInRef = "BaseHW PriRetSeg"
+   FluidSegOutRef = "BaseHW PriSupSeg"
+   ThrmlEff = 0.8
+   ..
+
+Pump   "Base HW Pump"  
+   SpdCtrl = "VariableSpeed"
+   ..
+
+Mat   "Compliance Insulation R0.01"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R0.01"
+   ..
+
+Mat   "Compliance Insulation R0.02"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R0.01"
+   ..
+
+Mat   "Compliance Insulation R20.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R20.00"
+   ..
+
+Mat   "Compliance Insulation R0.20"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R0.20"
+   ..
+
+Mat   "Compliance Insulation R5.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R5.00"
+   ..
+
+Mat   "Compliance Insulation R8.07"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R8.07"
+   ..
+
+Mat   "Compliance Insulation R0.10"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R0.10"
+   ..
+
+Mat   "Compliance Insulation R4.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R4.00"
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR5"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 5
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR19"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 19
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR10"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 10
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR7"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 7
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR11"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 11
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR14"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 14
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR5.8"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 5.8
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR15"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 15
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR10.5"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 10.5
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR21"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 21
+   ..
+
+Mat   "Compliance Insulation R13.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R13.00"
+   ..
+
+Mat   "Compliance Insulation R6.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R6.00"
+   ..
+
+Mat   "Compliance Insulation R2.15"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R2.15"
+   ..
+
+Mat   "Compliance Insulation R0.50"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R0.50"
+   ..
+
+Mat   "Compliance Insulation R4.50"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R4.50"
+   ..
+
+Mat   "Compliance Insulation R0.05"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R0.05"
+   ..
+
+Mat   "Compliance Insulation R15.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R15.00"
+   ..
+
+Mat   "Compliance Insulation R1.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R1.00"
+   ..
+
+Mat   "Compliance Insulation R2.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R2.00"
+   ..
+
+Mat   "Compliance Insulation R10.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R10.00"
+   ..
+
+Mat   "Compliance Insulation R7.60"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R7.60"
+   ..
+
+Mat   "Compliance Insulation R15.54"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R15.54"
+   ..
+
+
+END_OF_FILE
