@@ -47,7 +47,7 @@ ESC_LINE = {
 }
 
 analysis_name = ENV["analysis"]
-if (analysis_name.nil?)
+if (analysis_name.nil? and not ARGV.empty?)
   puts "You must specify the name of the analysis. For example:\n"
   puts "  #{program_name} analysis=hvac run"
   exit
