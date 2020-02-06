@@ -87,6 +87,9 @@ task :clean do |task|
   puts "Cleaning runs for: #{analysis_name}"
 
   runs_dir = "#{root_dir}/analysis/#{analysis_name}/runs"
+
+  #Dir.glob("#{analysis_dir}/runs/**/cz*")
+
   FileUtils.rm_rf(runs_dir)
   FileUtils.mkdir_p(runs_dir)
   puts "Clean completed."
@@ -226,7 +229,6 @@ task :run do |task|
       puts "Queueing: #{short_name}\n"
 
       command = sprintf(RUN_COMMAND[software_name], :input_file => input_file, :weather_file => "")
-      puts command
       QUEUE.enqueue_b(command, case_dir) do |command, dir|
         puts "Running: #{short_name}\n"
         run_process(command, dir)
