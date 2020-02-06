@@ -87,6 +87,9 @@ task :clean do |task|
   puts "Cleaning runs for: #{analysis_name}"
 
   runs_dir = "#{root_dir}/analysis/#{analysis_name}/runs"
+
+  #Dir.glob("#{analysis_dir}/runs/**/cz*")
+
   FileUtils.rm_rf(runs_dir)
   FileUtils.mkdir_p(runs_dir)
   puts "Clean completed."
@@ -226,7 +229,6 @@ task :run do |task|
       puts "Queueing: #{short_name}\n"
 
       command = sprintf(RUN_COMMAND[software_name], :input_file => input_file, :weather_file => "")
-      puts command
       QUEUE.enqueue_b(command, case_dir) do |command, dir|
         puts "Running: #{short_name}\n"
         run_process(command, dir)
@@ -247,16 +249,42 @@ task :results do |task|
   software_name = File.read(software_name_path)
   header = File.read("#{root_dir}/results-header-#{software_name}.csv")
 
-  File.open("#{analysis_dir}/results.csv", "w") do |line|
-    line.puts(header)  # Write the standard header
+  case (software_name)
+  when "cbecc-res", "cbecc-com"
+    File.open("#{analysis_dir}/results.csv", "w") do |line|
+      line.puts(header)  # Write the standard header
 
-    instance_log_paths = Dir.glob("#{analysis_dir}/runs/#{case_pattern}/#{climate_pattern}/instance.log.csv").sort
-    instance_log_paths.each do |path|
-      case_dir = File.dirname(path)
-      dir_name = "#{File.basename(File.dirname(case_dir))}/#{File.basename(case_dir)}"
+      instance_log_paths = Dir.glob("#{analysis_dir}/runs/#{case_pattern}/#{climate_pattern}/instance.log.csv").sort
+      instance_log_paths.each do |path|
+        case_dir = File.dirname(path)
+        dir_name = "#{File.basename(File.dirname(case_dir))}/#{File.basename(case_dir)}"
 
-      instance_log_csv = File.readlines(path)  # Read entire instance.log.csv file into an Array
-      line.puts("#{dir_name},#{instance_log_csv.last}")
+        instance_log_csv = File.readlines(path)  # Read entire file into an Array
+        line.puts("#{dir_name},#{instance_log_csv.last}")
+      end
     end
+
+  when "cse"
+    File.open("#{analysis_dir}/results.csv", "w") do |line|
+      line.puts(header)  # Write the standard header
+
+      instance_annual_paths = Dir.glob("#{analysis_dir}/runs/#{case_pattern}/#{climate_pattern}/INSTANCE-ANNUAL.CSV").sort
+      instance_annual_paths.each do |path|
+        case_dir = File.dirname(path)
+        dir_name = "#{File.basename(File.dirname(case_dir))}/#{File.basename(case_dir)}"
+
+        instance_annual_csv = File.readlines(path)  # Read entire file into an Array
+        elec_results = instance_annual_csv[4][19..-1].chomp!  # Get correct row and remove unwanted fields
+        gas_results = instance_annual_csv[10][21..-1].chomp!
+
+        line.puts("#{dir_name},#{elec_results},#{gas_results}")
+      end
+    end
+
+  when "energyplus"
+    puts "ERROR: Results processing is not yet implemented for EnergyPlus"
+
+  else
+    puts "ERROR: Unknown software specified '#{software_name}'"
   end
 end
