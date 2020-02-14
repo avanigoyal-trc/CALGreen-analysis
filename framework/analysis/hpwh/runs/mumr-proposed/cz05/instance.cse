@@ -2,14 +2,9 @@
 // Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cse/mixed-use-mid-rise-hpwhp/root.pxt'
 // PARAMETER ERROR:  Undefined parameter specified (prototype); parameter ignored.
 // PARAMETER ERROR:  Undefined parameter specified (software); parameter ignored.
-// PARAMETER ERROR:  Undefined parameter specified (autosizing); parameter ignored.
-// PARAMETER ERROR:  Undefined parameter specified (hvac_type); parameter ignored.
-// PARAMETER ERROR:  Undefined parameter specified (is_central_dhw); parameter ignored.
-// PARAMETER ERROR:  Undefined parameter specified (fan_efficacy); parameter ignored.
-// PARAMETER ERROR:  Undefined parameter specified (supply_temp_control); parameter ignored.
 //   proposed_only = "No"
 // * climate_zone = "ClimateZone5" (:default => "ClimateZone12")
-// * weather_station = "CTZ05S22A" (:default => nil)
+// * weather_station = "CTZ05S22A.epw" (:default => nil)
 
 
  #define  ISSEASONCOOLING  (@weather.taDbAvg07 > SEASONCHANGESETPT)
@@ -30,7 +25,7 @@
 
    repHdrL = "Mid-Rise Mixed-Use (5-story)"
    // wfName = "OAKLAND_724930_CZ2010.epw"
-   wfName = "CTZ05S22A"
+   wfName = "CTZ05S22A.epw"
    ebTolHour = 0.001
    ebTolDay = 0.001
    ebTolMon = 0.001
