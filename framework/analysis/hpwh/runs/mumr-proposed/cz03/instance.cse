@@ -988,6 +988,15 @@ EXPORT   "ExportNatGas"
    exDayBeg = Jan 1
    exDayEnd = Dec 31
 
+   EXPORTFILE   "instance-annual"
+      xfFileName = "instance-annual.csv"
+
+   EXPORT   "elec mtr expt"
+      exType = MTR  exMeter="MtrElec"  exFreq=Year  exBtuSf=1000  exExportfile="instance-annual"
+
+   EXPORT   "natgas mtr expt"
+      exType = MTR  exMeter="MtrNatGas"  exFreq=Year  exBtuSf=1000  exExportfile="instance-annual"
+
 
  RUN
  $EOF

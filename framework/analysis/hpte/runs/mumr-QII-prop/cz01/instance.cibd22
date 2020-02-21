@@ -9,7 +9,7 @@
 //   hvac_type = "SZAC"
 //   is_central_dhw = 1
 //   sol_frac = 0.2
-// * fan_efficacy = 0.7 (:default => nil)
+//   fan_efficacy = 0.7
 //   doas_fan_type = "Relief"
 // * supply_temp_control = "FixedDualSetpoint" (:default => nil)
 // * res_wood_wall = "Compliance Insulation R0.10;Compliance Insulation R1.35;Gypsum Board - 5/8 in.;WoodFrameWall16inOCCavInsR18;Gypsum Board - 5/8 in." (:default => "Stucco - 7/8 in.;Plywood - 5/8 in.;Compliance Insulation R1.54;WoodFrameWall16inOCCavInsR5;Gypsum Board - 5/8 in.")
@@ -19,6 +19,7 @@
 //   res_fixed_window = "FixedWindow;0.25;0.36;0.42"
 //   nonres_fixed_window = "FixedWindow;0.25;0.36;0.42"
 //   window_u = 0.36
+//   window_shgc = 0.25
 //   heating_eff = 0.8
 
 
@@ -96,6 +97,11 @@ Mat   "Compliance Insulation R4x"
    CodeItem = "Compliance Insulation R1.35"
    ..
 
+ Mat   "Compliance Insulation R3.00"
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R3.00"
+   ..
+
 Mat   "WoodFrameWall16inOC R11.25"
    CodeCat = "Composite"
    FrmMat = "Wood"
@@ -127,6 +133,14 @@ Mat   "WoodFrameWall16inOC R21"
    FrmDepth = "5_5In"
    CavityIns = 21
    ..
+
+ Mat   "WoodFrameWall16inOC R25"
+    CodeCat = "Composite"
+    FrmMat = "Wood"
+    FrmConfig = "Wall16inOC"
+    FrmDepth = "5_5In"
+    CavityIns = 25
+    ..
 
 Mat   "Concrete - 140 lb/ft3 - 10 in."
    CodeCat = "Concrete"
@@ -17406,7 +17420,14 @@ Mat   "WoodFrameWall16inOCCavInsR18"
   CavityIns = 18
   ..
 
-
+Mat   "WoodFrameWall16inOCCavInsR25"
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 25
+   ..
 
 
 
