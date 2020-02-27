@@ -28,8 +28,7 @@ parameter "res_wood_wall", :default=>"Stucco - 7/8 in.;Plywood - 5/8 in.;Complia
 parameter "other_floor", :default=>"Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R6.00;Compliance Insulation R2.15;Compliance Insulation R0.50;Plywood - 5/8 in.;Carpet - 3/4 in."
 parameter "nonres_concrete_wall", :default=>"Stucco - 7/8 in.;Concrete - 140 lb/ft3 - 8 in.;Compliance Insulation R8.07;Compliance Insulation R0.20;Compliance Insulation R1.00;WoodFraming16inOC;Gypsum Board - 1/2 in."
 parameter "wood_framing_roof", :default=>"Roofing felt - 1/8 in.;Building Paper - 1/16 in.;Fiberboard sheathing - 1/2 in.;Compliance Insulation R0.50;Compliance Insulation R0.02;Compliance Insulation R0.01;Gypsum Board - 1/2 in.;WoodRoof16OCCavInsR38"
-parameter "res_fixed_window", :default=>"FixedWindow;0.25;0.36;0.42"
-parameter "nonres_fixed_window", :default=>"FixedWindow;0.25;0.36;0.42"
+
 
 parameter "window_u", :default=>0.36
 parameter "window_shgc", :default=>0.25
@@ -142,6 +141,17 @@ Mat   "Compliance Insulation R4x"
  Mat   "Compliance Insulation R3.00"
    CodeCat = "Insulation Board"
    CodeItem = "Compliance Insulation R3.00"
+   ..
+
+
+ Mat   "Compliance Insulation R7.10"
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R7.10"
+   ..
+
+ Mat   "Compliance Insulation R3.63"
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R3.63"
    ..
 
 Mat   "WoodFrameWall16inOC R11.25"
@@ -16356,7 +16366,35 @@ Mat   "WoodFrameWall16inOCCavInsR25"
    CavityIns = 25
    ..
 
+ Mat   "MetalFrameWall16inOC R13.00"
+    CodeCat = "Composite"
+    CodeItem = "- specify -"
+    FrmMat = "Metal"
+    FrmConfig = "Wall16inOC"
+    FrmDepth = "3_5In"
+    CavityIns = 13.00
+    CavityInsOpt = "R-13"
+    ..
 
+Mat   "MetalFrameWall16inOC R11.00"
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Metal"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "3_5In"
+   CavityIns = 11.25
+   CavityInsOpt = "R-11"
+   ..
+
+  Mat   "MetalFrameWall16inOC R0.00"
+     CodeCat = "Composite"
+     CodeItem = "- specify -"
+     FrmMat = "Metal"
+     FrmConfig = "Wall16inOC"
+     FrmDepth = "3_5In"
+     CavityIns = 0.00
+     CavityInsOpt = "R-0"
+     ..
 
 Mat   "WoodFrameWall16inOCCavInsR10"
    CodeCat = "Composite"
@@ -16434,6 +16472,11 @@ Mat   "Compliance Insulation R13.00"
    CodeCat = "Insulation Board"
    CodeItem = "Compliance Insulation R13.00"
    ..
+
+ Mat   "Compliance Insulation R14.00"
+    CodeCat = "Insulation Board"
+    CodeItem = "Compliance Insulation R14.00"
+    ..
 
 Mat   "Compliance Insulation R6.00"
    CodeCat = "Insulation Board"
