@@ -1630,11 +1630,7 @@ DHWSys   "DHWGas"
    TotShowersServed = 1
    TotBathsServed = 1
    SolFracType = "Annual"
-<%if climate_zone == "cz01" | climate_zone == "cz02" | climate_zone == "cz03" | climate_zone == "cz04" | climate_zone == "cz05" | climate_zone == "cz06" | climate_zone == "cz07" | climate_zone == "cz08" | climate_zone == "cz09"
-	SolFracAnn = 0.2
-elseif climate_zone == "cz10" | climate_zone == "cz11" | climate_zone == "cz12" | climate_zone == "cz13" | climate_zone == "cz14" | climate_zone == "cz15" | climate_zone == "cz16"
-	SolFracAnn = 0.35
-%>
+   SolFracAnn = "<%= SolFracAnn %>"
    ..
 
 DHWSys   "DHWHeatpump"  
@@ -1659,11 +1655,7 @@ DHWSys   "DHWHeatpump"
    TotShowersServed = 1
    TotBathsServed = 1
    SolFracType = "Annual"
-<%if climate_zone == "cz01" | climate_zone == "cz02" | climate_zone == "cz03" | climate_zone == "cz04" | climate_zone == "cz05" | climate_zone == "cz06" | climate_zone == "cz07" | climate_zone == "cz08" | climate_zone == "cz09"
-	SolFracAnn = 0.2
-elseif climate_zone == "cz10" | climate_zone == "cz11" | climate_zone == "cz12" | climate_zone == "cz13" | climate_zone == "cz14" | climate_zone == "cz15" | climate_zone == "cz16"
-	SolFracAnn = 0.35
-%>
+   SolFracAnn = "<%= SolFracAnn %>"
    ..
 
 DHWSys   "DHWElectric"  
