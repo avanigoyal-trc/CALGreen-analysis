@@ -15,6 +15,7 @@ program_name = defined?(Modelkit::CLI) ? "modelkit rake" : "rake"
 
 require("modelkit/config")
 require("modelkit/parametrics/template")
+require("modelkit/energyplus")
 
 require("fileutils")
 require("csv")
@@ -27,6 +28,10 @@ templates_dir = "#{root_dir}/templates"
 global_pxv_path = "#{root_dir}/global.pxv"
 
 CONFIG = Modelkit::Config.new("#{root_dir}/.modelkit-config")
+
+idd_path = "#{CONFIG["energyplus-run.engine"]}/Energy+.idd"
+weather_dir = CONFIG["cbecc-com-weather"]
+
 
 RUN_COMMAND = {
   "cbecc-com" => "\"#{CONFIG["cbecc-com-path"]}\" -pa -nogui \"%<input_file>s\"",
@@ -151,6 +156,7 @@ task :cases do |task|
 
       # Parse the row for this baseline.
       baseline_pxv = ""
+      weather_name = ""
       climate_name = nil  # Have to do this so result stays in scope
       baseline_row.each do |header, value|
         if (header == "climate")
@@ -160,6 +166,9 @@ task :cases do |task|
           variable_name = match.captures.first
           if (value)
             baseline_pxv << ":#{variable_name}=>#{value_from_string(value)},\n"
+          end
+          if (variable_name == "weather_station")
+            weather_name = value
           end
         end
       end
@@ -173,6 +182,23 @@ task :cases do |task|
       File.write("#{case_dir}/case.pxv", case_pxv)
       File.write("#{case_dir}/baseline.pxv", baseline_pxv)
       File.write("#{case_dir}/software.txt", software_name)
+      File.write("#{case_dir}/weather.txt", weather_name)
+
+      if (software_name == "energyplus")
+        if (not defined?(IDD))
+          puts "Opening Energy+.idd...\n"
+          if (File.exists?(idd_path))
+            IDD = OpenStudio::DataDictionary.open(idd_path)
+          else
+            raise("Energy+.idd not found: #{idd_path}")
+            exit
+          end
+        end
+
+        ddy_path = "#{weather_dir}/#{weather_name}.ddy"
+        site_path = "#{case_dir}/location.pxt"
+        generate_location_pxt(IDD, ddy_path, site_path)
+      end
     end
   end
 
@@ -202,7 +228,7 @@ task :compose do |task|
       :annotate => true,
       #:indent => "    ",  # Turn off indent because it adds blank lines that CBECC does not like
       :"esc-line" => ESC_LINE[software_name],
-      :dirs => "#{templates_dir}/#{software_name}",
+      :dirs => "#{templates_dir}/#{software_name};#{case_dir}",
       :files => "#{case_pxv_path};#{baseline_pxv_path};#{global_pxv_path}",
       :output => out_path)
   end
@@ -224,11 +250,14 @@ task :run do |task|
     software_name = File.read("#{case_dir}/software.txt")
     input_file = "#{case_dir}/instance.#{INPUT_FILE_EXT[software_name]}"
 
+    weather_name = File.read("#{case_dir}/weather.txt")
+    weather_path = "#{weather_dir}/#{weather_name}.epw"
+
     if (File.exist?(input_file))
       short_name = "#{File.basename(File.dirname(case_dir))}/#{File.basename(case_dir)}"
       puts "Queueing: #{short_name}\n"
 
-      command = sprintf(RUN_COMMAND[software_name], :input_file => input_file, :weather_file => "")
+      command = sprintf(RUN_COMMAND[software_name], :input_file => input_file, :weather_file => weather_path)
       QUEUE.enqueue_b(command, case_dir) do |command, dir|
         puts "Running: #{short_name}\n"
         run_process(command, dir)
@@ -247,10 +276,10 @@ task :results do |task|
 
   software_name_path = Dir.glob("#{analysis_dir}/runs/#{case_pattern}/#{climate_pattern}/software.txt").first
   software_name = File.read(software_name_path)
-  header = File.read("#{root_dir}/results-header-#{software_name}.csv")
 
   case (software_name)
   when "cbecc-res", "cbecc-com"
+    header = File.read("#{root_dir}/results-header-#{software_name}.csv")
     File.open("#{analysis_dir}/results.csv", "w") do |line|
       line.puts(header)  # Write the standard header
 
@@ -265,6 +294,7 @@ task :results do |task|
     end
 
   when "cse"
+    header = File.read("#{root_dir}/results-header-#{software_name}.csv")
     File.open("#{analysis_dir}/results.csv", "w") do |line|
       line.puts(header)  # Write the standard header
 
@@ -282,7 +312,16 @@ task :results do |task|
     end
 
   when "energyplus"
-    puts "ERROR: Results processing is not yet implemented for EnergyPlus"
+    query_path = "#{root_dir}/results-query-energyplus.txt"
+    output_path = "#{analysis_dir}/results.csv"
+    instance_paths = Dir.glob("#{analysis_dir}/runs/#{case_pattern}/#{climate_pattern}/instance-out.sql").sort
+    batch_path = "#{analysis_dir}/batch.txt"
+    File.open(batch_path, "w") do |file|
+      instance_paths.each { |path| file.puts(path) }
+    end
+
+    command = "modelkit-energyplus energyplus-sql --query=\"#{query_path}\" --output=\"#{output_path}\" --batch=\"#{batch_path}\""
+    system(command)
 
   else
     puts "ERROR: Unknown software specified '#{software_name}'"

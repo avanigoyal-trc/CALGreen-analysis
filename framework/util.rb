@@ -25,6 +25,56 @@ def value_from_string(string)
 end
 
 
+def generate_location_pxt(idd, ddy_path, site_path)
+  location_file = File.open(site_path, "w")
+
+  if (File.exists?(ddy_path))
+    input_file = OpenStudio::InputFile.open(idd, ddy_path)
+  else
+    puts "File not found: #{ddy_path}"
+    exit
+  end
+
+  site_locations = input_file.find_objects_by_class_name("Site:Location").to_a  # Kind of annoying this is a Collection, not an Array
+
+  if (site_locations.empty?)
+    puts "Error: could not find Site:Location object"
+    exit
+  else
+    location_file.puts(site_locations.first.to_idf)
+  end
+
+  all_design_days = input_file.find_objects_by_class_name("SizingPeriod:DesignDay").to_a  # Kind of annoying this is a Collection, not an Array
+
+  # Better to pass in array of requested days, e.g., ["Ann Htg 99.6% Condns DB"), "Ann Clg .4% Condns DB=>MWB"]
+  selected_design_days = all_design_days.find_all { |dd| dd.name.include?("Ann Htg 99.6% Condns DB") or dd.name.include?("Ann Clg .4% Condns DB=>MWB") }  # or "Ann Htg 99% Condns DB" and "Ann Clg 1% Condns DB=>MWB"
+
+  if (selected_design_days.length < 2)
+    puts "Warning:  Could not find requested design days; including all design days"
+    puts ddy_path
+    selected_design_days = all_design_days
+  end
+
+  # Write design days to location file.
+  selected_design_days.each { |dd| location_file.puts(dd.to_idf) }
+
+
+# 'CorrelationFromWeatherFile' is available starting in EP 9.0.
+
+# Does this work for design-day only runs?
+# Seems to work for annual.
+  location_file.puts("\n\nSite:WaterMainsTemperature,\n  CorrelationFromWeatherFile;\n")
+
+  daylight_saving_time = input_file.find_objects_by_class_name("RunPeriodControl:DaylightSavingTime").to_a
+  if (not daylight_saving_time.empty?)
+    location_file.puts
+    location_file.puts(daylight_saving_time.first.to_idf)
+  end
+
+  location_file.close
+end
+
+
 # Support for running simulations in parallel.
 # Should move into Modelkit somewhere.
 require_relative("work_queue")
