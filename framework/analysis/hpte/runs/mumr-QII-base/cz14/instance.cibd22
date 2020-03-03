@@ -4,8 +4,8 @@ Proj   "Mid-Rise Mixed-Use (5-story)"
    Ruleset = "CA 2022 Nonresidential, Vers. 1.0 Alpha (T24N_2022.bin)"
    BldgEngyModelVersion = 14
    CreateDate = 1567115615
-   ModDate = 1580939982
-   RunDate = 1580939983
+   ModDate = 1583186315
+   RunDate = 1583186316
    GasType = "NaturalGas"
    CliZn = "ClimateZone14"
    WeatherStation = "CTZ14S22A"
@@ -69,6 +69,21 @@ Mat   "Compliance Insulation R1.35"
    CodeItem = "Compliance Insulation R1.35"
    ..
 
+Mat   "Compliance Insulation R3.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R3.00"
+   ..
+
+Mat   "Compliance Insulation R7.10"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R7.10"
+   ..
+
+Mat   "Compliance Insulation R3.63"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R3.63"
+   ..
+
 Mat   "WoodFrameWall16inOC R11.25"  
    CodeCat = "Composite"
    FrmMat = "Wood"
@@ -101,6 +116,14 @@ Mat   "WoodFrameWall16inOC R21"
    CavityIns = 21
    ..
 
+Mat   "WoodFrameWall16inOC R25"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 25
+   ..
+
 Mat   "Concrete - 140 lb/ft3 - 10 in."  
    CodeCat = "Concrete"
    CodeItem = "Concrete - 140 lb/ft3 - 10 in."
@@ -115,8 +138,8 @@ ConsAssm   "SlabOnOrBelowGradeF073"
 ConsAssm   "ResWoodWallU059"  
    SpecMthd = "Layers"
    ExtRoughness = "Smooth"
-   MatRef[1] = "Compliance Insulation R0.10"
-   MatRef[2] = "Compliance Insulation R1.35"
+   MatRef[1] = "Compliance Insulation R5.00"
+   MatRef[2] = "Compliance Insulation R2.00"
    MatRef[3] = "Gypsum Board - 5/8 in."
    MatRef[4] = "WoodFrameWall16inOCCavInsR15"
    MatRef[5] = "Gypsum Board - 5/8 in."
@@ -15598,16 +15621,19 @@ ZnSys   "ZnSys F2-4 1-Bed Core N"
 
 CoilClg   "CoilCooling 1"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 9652.85
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 1"  
    Type = "Furnace"
+   CapTotNetRtd = 6735.38
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 1"  
+   FlowCap = 361.572
    ..
 
 ZnSys   "ZnSys F2-4 1-Bed Core West"  
@@ -15617,16 +15643,19 @@ ZnSys   "ZnSys F2-4 1-Bed Core West"
 
 CoilClg   "CoilCooling 2"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 10564.3
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 2"  
    Type = "Furnace"
+   CapTotNetRtd = 7447.11
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 2"  
+   FlowCap = 395.709
    ..
 
 ZnSys   "ZnSys F2-4 1-Bed Core East"  
@@ -15636,16 +15665,19 @@ ZnSys   "ZnSys F2-4 1-Bed Core East"
 
 CoilClg   "CoilCooling 3"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 12612.4
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 3"  
    Type = "Furnace"
+   CapTotNetRtd = 7465.34
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 3"  
+   FlowCap = 472.428
    ..
 
 ZnSys   "ZnSys F2-4 1-Bed North"  
@@ -15655,16 +15687,19 @@ ZnSys   "ZnSys F2-4 1-Bed North"
 
 CoilClg   "CoilCooling 4"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 7926.78
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 4"  
    Type = "Furnace"
+   CapTotNetRtd = 7185.61
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 4"  
+   FlowCap = 296.916
    ..
 
 ZnSys   "ZnSys F2-4 2-Bed Core NE-NW"  
@@ -15674,16 +15709,19 @@ ZnSys   "ZnSys F2-4 2-Bed Core NE-NW"
 
 CoilClg   "CoilCooling 5"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 9686.52
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 5"  
    Type = "Furnace"
+   CapTotNetRtd = 8628.05
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 5"  
+   FlowCap = 362.831
    ..
 
 ZnSys   "ZnSys F2-4 2-Bed East"  
@@ -15693,16 +15731,19 @@ ZnSys   "ZnSys F2-4 2-Bed East"
 
 CoilClg   "CoilCooling 6"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 15678.8
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 6"  
    Type = "Furnace"
+   CapTotNetRtd = 11155.2
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 6"  
+   FlowCap = 587.287
    ..
 
 ZnSys   "ZnSys F2-4 2-Bed West"  
@@ -15712,16 +15753,19 @@ ZnSys   "ZnSys F2-4 2-Bed West"
 
 CoilClg   "CoilCooling 7"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 18907.8
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 7"  
    Type = "Furnace"
+   CapTotNetRtd = 11151.5
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 7"  
+   FlowCap = 708.235
    ..
 
 ZnSys   "ZnSys F2-4 3-Bed NE"  
@@ -15731,16 +15775,19 @@ ZnSys   "ZnSys F2-4 3-Bed NE"
 
 CoilClg   "CoilCooling 8"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 21414.7
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 8"  
    Type = "Furnace"
+   CapTotNetRtd = 16368
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 8"  
+   FlowCap = 802.14
    ..
 
 ZnSys   "ZnSys F2-4 3-Bed NW"  
@@ -15750,16 +15797,19 @@ ZnSys   "ZnSys F2-4 3-Bed NW"
 
 CoilClg   "CoilCooling 9"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 25905
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 9"  
    Type = "Furnace"
+   CapTotNetRtd = 16364.5
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 9"  
+   FlowCap = 970.332
    ..
 
 ZnSys   "ZnSys F2-4 Studio SE"  
@@ -15769,16 +15819,19 @@ ZnSys   "ZnSys F2-4 Studio SE"
 
 CoilClg   "CoilCooling 10"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 13149
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 10"  
    Type = "Furnace"
+   CapTotNetRtd = 8645.38
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 10"  
+   FlowCap = 492.526
    ..
 
 ZnSys   "ZnSys F2-4 Studio SW"  
@@ -15788,16 +15841,19 @@ ZnSys   "ZnSys F2-4 Studio SW"
 
 CoilClg   "CoilCooling 11"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 12016.6
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 11"  
    Type = "Furnace"
+   CapTotNetRtd = 8644.85
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 11"  
+   FlowCap = 450.11
    ..
 
 ZnSys   "ZnSys F5 1-Bed Core N"  
@@ -15807,16 +15863,19 @@ ZnSys   "ZnSys F5 1-Bed Core N"
 
 CoilClg   "CoilCooling 12"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 10716.5
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 12"  
    Type = "Furnace"
+   CapTotNetRtd = 9975.25
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 12"  
+   FlowCap = 401.407
    ..
 
 ZnSys   "ZnSys F5 1-Bed Core West"  
@@ -15826,16 +15885,19 @@ ZnSys   "ZnSys F5 1-Bed Core West"
 
 CoilClg   "CoilCooling 13"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 11634.1
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 13"  
    Type = "Furnace"
+   CapTotNetRtd = 10414.4
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 13"  
+   FlowCap = 435.787
    ..
 
 ZnSys   "ZnSys F5 1-Bed Core East"  
@@ -15845,16 +15907,19 @@ ZnSys   "ZnSys F5 1-Bed Core East"
 
 CoilClg   "CoilCooling 14"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 14587
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 14"  
    Type = "Furnace"
+   CapTotNetRtd = 10412.6
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 14"  
+   FlowCap = 546.394
    ..
 
 ZnSys   "ZnSys F5 1-Bed North"  
@@ -15864,16 +15929,19 @@ ZnSys   "ZnSys F5 1-Bed North"
 
 CoilClg   "CoilCooling 15"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 9430.56
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 15"  
    Type = "Furnace"
+   CapTotNetRtd = 10176.8
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 15"  
+   FlowCap = 353.243
    ..
 
 ZnSys   "ZnSys F5 2-Bed Core NE-NW"  
@@ -15883,16 +15951,19 @@ ZnSys   "ZnSys F5 2-Bed Core NE-NW"
 
 CoilClg   "CoilCooling 16"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 11614.3
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 16"  
    Type = "Furnace"
+   CapTotNetRtd = 12079
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 16"  
+   FlowCap = 435.045
    ..
 
 ZnSys   "ZnSys F5 2-Bed East"  
@@ -15902,16 +15973,19 @@ ZnSys   "ZnSys F5 2-Bed East"
 
 CoilClg   "CoilCooling 17"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 16537.7
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 17"  
    Type = "Furnace"
+   CapTotNetRtd = 15351.3
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 17"  
+   FlowCap = 619.459
    ..
 
 ZnSys   "ZnSys F5 2-Bed West"  
@@ -15921,16 +15995,19 @@ ZnSys   "ZnSys F5 2-Bed West"
 
 CoilClg   "CoilCooling 18"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 20922.7
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 18"  
    Type = "Furnace"
+   CapTotNetRtd = 15349.6
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 18"  
+   FlowCap = 783.71
    ..
 
 ZnSys   "ZnSys F5 3-Bed NE"  
@@ -15940,16 +16017,19 @@ ZnSys   "ZnSys F5 3-Bed NE"
 
 CoilClg   "CoilCooling 19"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 22560.7
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 19"  
    Type = "Furnace"
+   CapTotNetRtd = 21881.4
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 19"  
+   FlowCap = 845.066
    ..
 
 ZnSys   "ZnSys F5 3-Bed NW"  
@@ -15959,16 +16039,19 @@ ZnSys   "ZnSys F5 3-Bed NW"
 
 CoilClg   "CoilCooling 20"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 28567.3
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 20"  
    Type = "Furnace"
+   CapTotNetRtd = 21879.5
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 20"  
+   FlowCap = 1070.05
    ..
 
 ZnSys   "ZnSys F5 Studio SE"  
@@ -15978,16 +16061,19 @@ ZnSys   "ZnSys F5 Studio SE"
 
 CoilClg   "CoilCooling 21"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 13768.7
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 21"  
    Type = "Furnace"
+   CapTotNetRtd = 10805.2
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 21"  
+   FlowCap = 515.74
    ..
 
 ZnSys   "ZnSys F5 Studio SW"  
@@ -15997,148 +16083,195 @@ ZnSys   "ZnSys F5 Studio SW"
 
 CoilClg   "CoilCooling 22"  
    Type = "DirectExpansion"
+   CapTotNetRtd = 12567.7
    DXSEER = 14
    DXEER = 12.2
    ..
 
 CoilHtg   "CoilHtg 22"  
    Type = "Furnace"
+   CapTotNetRtd = 10805.8
    FurnAFUE = 0.8
    ..
 
 Fan   "Fan 22"  
+   FlowCap = 470.752
    ..
 
 ZnSys   "Bal F2 1-Bed Core N"  
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
+   RtdFlowCap = 36.6
+   RtdPwr = 25.62
    ..
 
 ZnSys   "Bal F2 1-Bed Core West"  
    Type = "VentilationOnly"
    Cnt = 6
    ExhSysType = "Balanced"
+   RtdFlowCap = 36.6
+   RtdPwr = 25.62
    ..
 
 ZnSys   "Bal F2 1-Bed Core East"  
    Type = "VentilationOnly"
    Cnt = 6
    ExhSysType = "Balanced"
+   RtdFlowCap = 36.6
+   RtdPwr = 25.62
    ..
 
 ZnSys   "Bal F2 1-Bed North"  
    Type = "VentilationOnly"
    Cnt = 15
    ExhSysType = "Balanced"
+   RtdFlowCap = 37.3
+   RtdPwr = 26.11
    ..
 
 ZnSys   "Bal F2 2-Bed Core NE-NW"  
    Type = "VentilationOnly"
    Cnt = 6
    ExhSysType = "Balanced"
+   RtdFlowCap = 54.9
+   RtdPwr = 38.43
    ..
 
 ZnSys   "Bal F2 2-Bed East"  
    Type = "VentilationOnly"
    Cnt = 9
    ExhSysType = "Balanced"
+   RtdFlowCap = 54.9
+   RtdPwr = 38.43
    ..
 
 ZnSys   "Bal F2 2-Bed West"  
    Type = "VentilationOnly"
    Cnt = 9
    ExhSysType = "Balanced"
+   RtdFlowCap = 54.9
+   RtdPwr = 38.43
    ..
 
 ZnSys   "Bal F2 3-Bed NE"  
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
+   RtdFlowCap = 72.3
+   RtdPwr = 50.61
    ..
 
 ZnSys   "Bal F2 3-Bed NW"  
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
+   RtdFlowCap = 72.3
+   RtdPwr = 50.61
    ..
 
 ZnSys   "Bal F2 Studio SE"  
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
+   RtdFlowCap = 31.2
+   RtdPwr = 21.84
    ..
 
 ZnSys   "Bal F2 Studio SW"  
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
+   RtdFlowCap = 31.2
+   RtdPwr = 21.84
    ..
 
 ZnSys   "Bal F5 1-Bed Core N"  
    Type = "VentilationOnly"
    Cnt = 1
    ExhSysType = "Balanced"
+   RtdFlowCap = 36.6
+   RtdPwr = 25.62
    ..
 
 ZnSys   "Bal F5 1-Bed Core West"  
    Type = "VentilationOnly"
    Cnt = 2
    ExhSysType = "Balanced"
+   RtdFlowCap = 36.6
+   RtdPwr = 25.62
    ..
 
 ZnSys   "Bal F5 1-Bed Core East"  
    Type = "VentilationOnly"
    Cnt = 2
    ExhSysType = "Balanced"
+   RtdFlowCap = 36.6
+   RtdPwr = 25.62
    ..
 
 ZnSys   "Bal F5 1-Bed North"  
    Type = "VentilationOnly"
    Cnt = 5
    ExhSysType = "Balanced"
+   RtdFlowCap = 37.3
+   RtdPwr = 26.11
    ..
 
 ZnSys   "Bal F5 2-Bed Core NE-NW"  
    Type = "VentilationOnly"
    Cnt = 2
    ExhSysType = "Balanced"
+   RtdFlowCap = 54.9
+   RtdPwr = 38.43
    ..
 
 ZnSys   "Bal F5 2-Bed East"  
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
+   RtdFlowCap = 54.9
+   RtdPwr = 38.43
    ..
 
 ZnSys   "Bal F5 2-Bed West"  
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
+   RtdFlowCap = 54.9
+   RtdPwr = 38.43
    ..
 
 ZnSys   "Bal F5 3-Bed NE"  
    Type = "VentilationOnly"
    Cnt = 1
    ExhSysType = "Balanced"
+   RtdFlowCap = 72.3
+   RtdPwr = 50.61
    ..
 
 ZnSys   "Bal F5 3-Bed NW"  
    Type = "VentilationOnly"
    Cnt = 1
    ExhSysType = "Balanced"
+   RtdFlowCap = 72.3
+   RtdPwr = 50.61
    ..
 
 ZnSys   "Bal F5 Studio SE"  
    Type = "VentilationOnly"
    Cnt = 1
    ExhSysType = "Balanced"
+   RtdFlowCap = 31.2
+   RtdPwr = 21.84
    ..
 
 ZnSys   "Bal F5 Studio SW"  
    Type = "VentilationOnly"
    Cnt = 1
    ExhSysType = "Balanced"
+   RtdFlowCap = 31.2
+   RtdPwr = 21.84
    ..
 
 AirSys   "Parking Garage Vent System"  
@@ -16707,6 +16840,54 @@ Mat   "WoodFrameWall16inOCCavInsR19"
    CavityIns = 19
    ..
 
+Mat   "WoodFrameWall16inOCCavInsR18"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 18
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR25"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 25
+   ..
+
+Mat   "MetalFrameWall16inOC R13.00"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Metal"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "3_5In"
+   CavityIns = 13
+   CavityInsOpt = "R-13"
+   ..
+
+Mat   "MetalFrameWall16inOC R11.00"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Metal"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "3_5In"
+   CavityIns = 11.25
+   CavityInsOpt = "R-11"
+   ..
+
+Mat   "MetalFrameWall16inOC R0.00"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Metal"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "3_5In"
+   CavityIns = 0
+   CavityInsOpt = "R-0"
+   ..
+
 Mat   "WoodFrameWall16inOCCavInsR10"  
    CodeCat = "Composite"
    CodeItem = "- specify -"
@@ -16782,6 +16963,11 @@ Mat   "WoodFrameWall16inOCCavInsR21"
 Mat   "Compliance Insulation R13.00"  
    CodeCat = "Insulation Board"
    CodeItem = "Compliance Insulation R13.00"
+   ..
+
+Mat   "Compliance Insulation R14.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R14.00"
    ..
 
 Mat   "Compliance Insulation R6.00"  
@@ -16864,29 +17050,29 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Title3[19] = "Emis. (tonne)"
    Enduse1[1] = "Space Heating"
    Enduse1[2] = "0.0"
-   Enduse1[3] = "338.2"
-   Enduse1[4] = "8.13"
+   Enduse1[3] = "314.2"
+   Enduse1[4] = "7.55"
    Enduse1[9] = "--"
-   Enduse1[11] = "2.75"
+   Enduse1[11] = "2.55"
    Enduse1[17] = "0.00"
-   Enduse1[18] = "1.62"
-   Enduse1[19] = "1.62"
+   Enduse1[18] = "1.51"
+   Enduse1[19] = "1.51"
    Enduse2[1] = "Space Cooling"
-   Enduse2[2] = "128.9"
+   Enduse2[2] = "127.8"
    Enduse2[3] = "--"
-   Enduse2[4] = "41.41"
-   Enduse2[9] = "46.2"
-   Enduse2[11] = "2.34"
-   Enduse2[17] = "14.04"
-   Enduse2[19] = "14.04"
+   Enduse2[4] = "41.02"
+   Enduse2[9] = "45.8"
+   Enduse2[11] = "2.35"
+   Enduse2[17] = "14.14"
+   Enduse2[19] = "14.14"
    Enduse3[1] = "Indoor Fans"
-   Enduse3[2] = "65.8"
+   Enduse3[2] = "65.4"
    Enduse3[3] = "--"
-   Enduse3[4] = "17.56"
-   Enduse3[9] = "13.0"
-   Enduse3[11] = "1.52"
-   Enduse3[17] = "9.12"
-   Enduse3[19] = "9.12"
+   Enduse3[4] = "17.42"
+   Enduse3[9] = "12.9"
+   Enduse3[11] = "1.51"
+   Enduse3[17] = "9.07"
+   Enduse3[19] = "9.07"
    Enduse4[1] = "Heat Rejection"
    Enduse4[2] = "--"
    Enduse4[3] = "--"
@@ -16919,14 +17105,14 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Enduse7[17] = "9.03"
    Enduse7[19] = "9.03"
    Enduse8[1] = "Compliance Total"
-   Enduse8[2] = "290.2"
-   Enduse8[3] = "1,214.2"
-   Enduse8[4] = "109.07"
-   Enduse8[9] = "75.8"
-   Enduse8[11] = "15.51"
-   Enduse8[17] = "33.93"
-   Enduse8[18] = "5.82"
-   Enduse8[19] = "39.75"
+   Enduse8[2] = "288.7"
+   Enduse8[3] = "1,190.2"
+   Enduse8[4] = "107.96"
+   Enduse8[9] = "75.2"
+   Enduse8[11] = "15.31"
+   Enduse8[17] = "33.98"
+   Enduse8[18] = "5.71"
+   Enduse8[19] = "39.69"
    Enduse9[1] = "Receptacle"
    Enduse9[2] = "217.4"
    Enduse9[3] = "58.7"
@@ -16971,14 +17157,14 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Enduse14[9] = "--"
    Enduse14[11] = "--"
    Enduse15[1] = "TOTAL"
-   Enduse15[2] = "691.3"
-   Enduse15[3] = "1,272.9"
-   Enduse15[4] = "210.70"
-   Enduse15[9] = "143.8"
-   Enduse15[11] = "26.58"
-   Enduse15[17] = "97.53"
-   Enduse15[18] = "6.10"
-   Enduse15[19] = "103.63"
+   Enduse15[2] = "689.8"
+   Enduse15[3] = "1,248.9"
+   Enduse15[4] = "209.59"
+   Enduse15[9] = "143.2"
+   Enduse15[11] = "26.38"
+   Enduse15[17] = "97.58"
+   Enduse15[18] = "5.99"
+   Enduse15[19] = "103.57"
    ZoneUMLHsLoaded[1] = 1
    ZoneUMLHs[1] = "clg: 0  htg: 0  'Thermal Zone: F1 Business Center'
 clg: 0  htg: 0  'Thermal Zone: F1 Corridor'
@@ -16991,29 +17177,29 @@ clg: 0  htg: 0  'Thermal Zone: F1 Retail NE'
 clg: 0  htg: 0  'Thermal Zone: F1 Retail SE'
 clg: 0  htg: 0  'Thermal Zone: F1 Retail SW'
 clg: 0  htg: 1  'Thermal Zone: F2-4 1-Bed Core N'
-clg: 0  htg: 9  'Thermal Zone: F2-4 1-Bed Core West'
-clg: 0  htg: 7  'Thermal Zone: F2-4 1-Bed Core East'
-clg: 0  htg: 9  'Thermal Zone: F2-4 1-Bed North'
+clg: 0  htg: 6  'Thermal Zone: F2-4 1-Bed Core West'
+clg: 0  htg: 6  'Thermal Zone: F2-4 1-Bed Core East'
+clg: 0  htg: 8  'Thermal Zone: F2-4 1-Bed North'
 clg: 0  htg: 0  'Thermal Zone: F2-4 2-Bed Core NE-NW'
-clg: 0  htg: 9  'Thermal Zone: F2-4 2-Bed East'
-clg: 0  htg: 7  'Thermal Zone: F2-4 2-Bed West'
-clg: 0  htg: 18  'Thermal Zone: F2-4 3-Bed NE'
-clg: 0  htg: 16  'Thermal Zone: F2-4 3-Bed NW'
-clg: 0  htg: 19  'Thermal Zone: F2-4 Studio SE'
-clg: 0  htg: 20  'Thermal Zone: F2-4 Studio SW'
-clg: 3224  htg: 589  'Thermal Zone: F2-4 Corridor'
-clg: 0  htg: 17  'Thermal Zone: F5 1-Bed Core N'
-clg: 0  htg: 24  'Thermal Zone: F5 1-Bed Core West'
-clg: 0  htg: 23  'Thermal Zone: F5 1-Bed Core East'
-clg: 0  htg: 23  'Thermal Zone: F5 1-Bed North'
+clg: 0  htg: 6  'Thermal Zone: F2-4 2-Bed East'
+clg: 0  htg: 6  'Thermal Zone: F2-4 2-Bed West'
+clg: 0  htg: 14  'Thermal Zone: F2-4 3-Bed NE'
+clg: 0  htg: 12  'Thermal Zone: F2-4 3-Bed NW'
+clg: 0  htg: 11  'Thermal Zone: F2-4 Studio SE'
+clg: 0  htg: 11  'Thermal Zone: F2-4 Studio SW'
+clg: 3273  htg: 509  'Thermal Zone: F2-4 Corridor'
+clg: 0  htg: 12  'Thermal Zone: F5 1-Bed Core N'
+clg: 0  htg: 20  'Thermal Zone: F5 1-Bed Core West'
+clg: 0  htg: 19  'Thermal Zone: F5 1-Bed Core East'
+clg: 0  htg: 20  'Thermal Zone: F5 1-Bed North'
 clg: 0  htg: 9  'Thermal Zone: F5 2-Bed Core NE-NW'
-clg: 0  htg: 26  'Thermal Zone: F5 2-Bed East'
-clg: 0  htg: 26  'Thermal Zone: F5 2-Bed West'
-clg: 0  htg: 30  'Thermal Zone: F5 3-Bed NE'
-clg: 0  htg: 30  'Thermal Zone: F5 3-Bed NW'
-clg: 18  htg: 46  'Thermal Zone: F5 Studio SE'
-clg: 0  htg: 46  'Thermal Zone: F5 Studio SW'
-clg: 3020  htg: 964  'Thermal Zone: F5 Corridor'
+clg: 0  htg: 22  'Thermal Zone: F5 2-Bed East'
+clg: 0  htg: 22  'Thermal Zone: F5 2-Bed West'
+clg: 0  htg: 26  'Thermal Zone: F5 3-Bed NE'
+clg: 0  htg: 26  'Thermal Zone: F5 3-Bed NW'
+clg: 0  htg: 26  'Thermal Zone: F5 Studio SE'
+clg: 0  htg: 27  'Thermal Zone: F5 Studio SW'
+clg: 3042  htg: 937  'Thermal Zone: F5 Corridor'
 clg: 0  htg: 0  'Thermal Zone: Parking Garage'"
    SimSummary[1] = "Successful (220 warnings)"
    ..
