@@ -5,8 +5,8 @@ Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Gas DHW"
    SoftwareVersion = "CBECC-Res 2022.0.2 RV (1117)"
    BEMVersion = 7
    CreateDate = 1579906005
-   ModDate = 1583268358
-   ProjFileName = "2019_MF36_In-Unit_GasDHW.ribd22"
+   ModDate = 1583271446
+   ProjFileName = "instance.ribd22"
    RunTitle = "TDSv30 V06R12 V06 R12 UGLASS15 NGAS PVSTD"
    AnalysisType = "Proposed and Standard"
    CALGreen = 0
@@ -33,17 +33,12 @@ Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Gas DHW"
                          "- specify relative position -", 
                          "- specify relative position -", 
                          "- specify relative position -" )
-   PVWAzm[1] = 170
-   PVWArrayTiltInput = ( "deg", "deg", "deg", "deg", "deg" )
-   PVWArrayTiltPitch[1] = 5
-   PVWArrayTiltDeg[1] = 22.6199
    PVWArrayType = ( "Fixed (open rack)", "Fixed (open rack)", 
                     "Fixed (open rack)", "Fixed (open rack)", 
                     "Fixed (open rack)" )
    PVWPwrElec = ( "- none -", "- none -", "- none -", "- none -", 
                   "- none -" )
    PVWSolarAccess[1] = 100
-   PVWInverterEff[1] = 96
    AllowExcessPVEDR = 0
    ReducedPVReq = 0
    ReducedPVReqExcept = "- select applicable required PV exception -"
@@ -77,7 +72,6 @@ Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Gas DHW"
    DfltMFamLaundryZn = "Laundry1"
    ZonalControl = 0
    Description = "2019 CEC Prototype with flat roof"
-   ACH50 = 7
    Status = "New"
    IsVerified = 0
    IsAddAlone = 0
@@ -104,7 +98,6 @@ Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Gas DHW"
    Appl_HaveDryer[1] = 1
    ApplCookFuel[1] = "Gas"
    ApplDryerFuel[1] = "Gas"
-   Appl_RefrigUsage[1] = 898
    ApplRefrigEffMethod[1] = "from # bedrooms/unit"
    ApplDishUsageMethod[1] = "from # bedrooms/unit"
    ResultsCurrentMsg = "(not current)"
@@ -152,7 +145,6 @@ Zone   "Zone1"
 ExtWall   "Zone1WallFront"  
    TreeState = 254
    Status = "New"
-   IsVerified = 0
    Orientation = "Front"
    OrientationValue = 0
    Area = 1334.5
@@ -164,9 +156,7 @@ ExtWall   "Zone1WallFront"
 
 Win   "Zone1WinFront"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 28.95
@@ -174,7 +164,6 @@ Win   "Zone1WinFront"
    NFRCSHGC = 0.25
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 27.34
@@ -211,7 +200,6 @@ Win   "Zone1WinFront"
 
 ExtWall   "Zone1WallLeft"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Left"
    OrientationValue = 90
    Area = 578
@@ -223,9 +211,7 @@ ExtWall   "Zone1WallLeft"
 
 Win   "Zone1WinLeft"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 10.2
@@ -233,7 +219,6 @@ Win   "Zone1WinLeft"
    NFRCSHGC = 0.25
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 9.63
@@ -270,7 +255,6 @@ Win   "Zone1WinLeft"
 
 ExtWall   "Zone1WallBack"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Back"
    OrientationValue = 180
    Area = 1334.5
@@ -282,9 +266,7 @@ ExtWall   "Zone1WallBack"
 
 Win   "Zone1WinBack"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 28.95
@@ -292,7 +274,6 @@ Win   "Zone1WinBack"
    NFRCSHGC = 0.25
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 27.34
@@ -329,7 +310,6 @@ Win   "Zone1WinBack"
 
 ExtWall   "Zone1WallRight"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Right"
    OrientationValue = 270
    Area = 578
@@ -341,9 +321,7 @@ ExtWall   "Zone1WallRight"
 
 Win   "Zone1WinRight"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 10.2
@@ -351,7 +329,6 @@ Win   "Zone1WinRight"
    NFRCSHGC = 0.25
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 9.63
@@ -388,7 +365,6 @@ Win   "Zone1WinRight"
 
 SlabFloor   "Zone1Slab"  
    Status = "New"
-   IsVerified = 0
    Area = 9916
    Surface = "Default (80% carpeted/covered, 20% exposed)"
    Perimeter = 450
@@ -443,7 +419,6 @@ Zone   "Zone2"
 
 ExtWall   "Zone2WallFront"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Front"
    OrientationValue = 0
    Area = 1640.5
@@ -455,9 +430,7 @@ ExtWall   "Zone2WallFront"
 
 Win   "Zone2WinFront"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 28.95
@@ -465,7 +438,6 @@ Win   "Zone2WinFront"
    NFRCSHGC = 0.25
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 27.34
@@ -502,7 +474,6 @@ Win   "Zone2WinFront"
 
 ExtWall   "Zone2WallLeft"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Left"
    OrientationValue = 90
    Area = 578
@@ -514,9 +485,7 @@ ExtWall   "Zone2WallLeft"
 
 Win   "Zone2WinLeft"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 10.2
@@ -524,7 +493,6 @@ Win   "Zone2WinLeft"
    NFRCSHGC = 0.25
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 9.63
@@ -561,7 +529,6 @@ Win   "Zone2WinLeft"
 
 ExtWall   "Zone2WallBack"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Back"
    OrientationValue = 180
    Area = 1334.5
@@ -573,9 +540,7 @@ ExtWall   "Zone2WallBack"
 
 Win   "Zone2WinBack"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 28.95
@@ -583,7 +548,6 @@ Win   "Zone2WinBack"
    NFRCSHGC = 0.25
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 27.34
@@ -620,7 +584,6 @@ Win   "Zone2WinBack"
 
 ExtWall   "Zone2WallRight"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Right"
    OrientationValue = 270
    Area = 578
@@ -632,9 +595,7 @@ ExtWall   "Zone2WallRight"
 
 Win   "Zone2WinRight"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 10.2
@@ -642,7 +603,6 @@ Win   "Zone2WinRight"
    NFRCSHGC = 0.25
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 9.63
@@ -679,7 +639,6 @@ Win   "Zone2WinRight"
 
 InteriorFloor   "Zone2ToZone1InteriorFloor"  
    Status = "New"
-   IsVerified = 0
    Area = 9916
    FloorZ = 9.7
    Construction = "Interior Floor"
@@ -722,7 +681,6 @@ DwellUnit   "StudioZone2"
 
 InteriorFloor   "Zone2ToBusinessCenter1InteriorFloor"  
    Status = "New"
-   IsVerified = 0
    Area = 324
    FloorZ = 9.7
    Construction = "Interior Floor"
@@ -733,7 +691,6 @@ InteriorFloor   "Zone2ToBusinessCenter1InteriorFloor"
 
 InteriorFloor   "Zone2ToLeasingOffice1InteriorFloor"  
    Status = "New"
-   IsVerified = 0
    Area = 216
    FloorZ = 9.7
    Construction = "Interior Floor"
@@ -744,7 +701,6 @@ InteriorFloor   "Zone2ToLeasingOffice1InteriorFloor"
 
 InteriorFloor   "Zone2ToFitnessCenter1InteriorFloor"  
    Status = "New"
-   IsVerified = 0
    Area = 324
    FloorZ = 9.7
    Construction = "Interior Floor"
@@ -755,7 +711,6 @@ InteriorFloor   "Zone2ToFitnessCenter1InteriorFloor"
 
 InteriorFloor   "Zone2ToLaundry1InteriorFloor"  
    Status = "New"
-   IsVerified = 0
    Area = 108
    FloorZ = 9.7
    Construction = "Interior Floor"
@@ -766,7 +721,6 @@ InteriorFloor   "Zone2ToLaundry1InteriorFloor"
 
 InteriorFloor   "Zone2ToLobby1InteriorFloor"  
    Status = "New"
-   IsVerified = 0
    Area = 540
    FloorZ = 9.7
    Construction = "Interior Floor"
@@ -777,7 +731,6 @@ InteriorFloor   "Zone2ToLobby1InteriorFloor"
 
 InteriorFloor   "Zone2ToMechanicalRoom1InteriorFloor"  
    Status = "New"
-   IsVerified = 0
    Area = 108
    FloorZ = 9.7
    Construction = "Interior Floor"
@@ -806,7 +759,6 @@ Zone   "Zone3"
 
 ExtWall   "Zone3WallFront"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Front"
    OrientationValue = 0
    Area = 1640.5
@@ -818,9 +770,7 @@ ExtWall   "Zone3WallFront"
 
 Win   "Zone3WinFront"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 28.95
@@ -828,7 +778,6 @@ Win   "Zone3WinFront"
    NFRCSHGC = 0.25
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 27.34
@@ -865,7 +814,6 @@ Win   "Zone3WinFront"
 
 ExtWall   "Zone3WallLeft"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Left"
    OrientationValue = 90
    Area = 578
@@ -877,9 +825,7 @@ ExtWall   "Zone3WallLeft"
 
 Win   "Zone3WinLeft"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 10.2
@@ -887,7 +833,6 @@ Win   "Zone3WinLeft"
    NFRCSHGC = 0.25
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 9.63
@@ -924,7 +869,6 @@ Win   "Zone3WinLeft"
 
 ExtWall   "Zone3WallBack"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Back"
    OrientationValue = 180
    Area = 1334.5
@@ -936,9 +880,7 @@ ExtWall   "Zone3WallBack"
 
 Win   "Zone3WinBack"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 28.95
@@ -946,7 +888,6 @@ Win   "Zone3WinBack"
    NFRCSHGC = 0.25
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 27.34
@@ -983,7 +924,6 @@ Win   "Zone3WinBack"
 
 ExtWall   "Zone3WallRight"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Right"
    OrientationValue = 270
    Area = 578
@@ -995,9 +935,7 @@ ExtWall   "Zone3WallRight"
 
 Win   "Zone3WinRight"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 10.2
@@ -1005,7 +943,6 @@ Win   "Zone3WinRight"
    NFRCSHGC = 0.25
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 9.63
@@ -1042,7 +979,6 @@ Win   "Zone3WinRight"
 
 CeilingBelowAttic   "Zone3ToAtticCeiling"  
    Status = "New"
-   IsVerified = 0
    Area = 11536
    Construction = "Ceiling Below Attic Cons"
    AtticZone = "Attic"
@@ -1050,7 +986,6 @@ CeilingBelowAttic   "Zone3ToAtticCeiling"
 
 InteriorFloor   "Zone3ToZone2InteriorFloor"  
    Status = "New"
-   IsVerified = 0
    Area = 11536
    FloorZ = 18.7
    Construction = "Interior Floor"
@@ -1107,7 +1042,6 @@ OtherZone   "Corridor1"
 
 IntWall   "Corridor1ToZone1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 1938
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1117,7 +1051,6 @@ IntWall   "Corridor1ToZone1IntWall"
 
 SlabFloor   "Corridor1Slab"  
    Status = "New"
-   IsVerified = 0
    Area = 1444
    Surface = "Carpeted"
    Perimeter = 0
@@ -1145,7 +1078,6 @@ OtherZone   "BusinessCenter1"
 
 IntWall   "BusinessCenter1ToCorridor1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 153
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1155,7 +1087,6 @@ IntWall   "BusinessCenter1ToCorridor1IntWall"
 
 IntWall   "BusinessCenter1ToLobby1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 153
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1165,7 +1096,6 @@ IntWall   "BusinessCenter1ToLobby1IntWall"
 
 IntWall   "BusinessCenter1ToLeasingOffice1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 153
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1175,7 +1105,6 @@ IntWall   "BusinessCenter1ToLeasingOffice1IntWall"
 
 IntWall   "BusinessCenter1ToZone1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 153
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1185,7 +1114,6 @@ IntWall   "BusinessCenter1ToZone1IntWall"
 
 SlabFloor   "BusinessCenter1Slab"  
    Status = "New"
-   IsVerified = 0
    Area = 324
    Surface = "Carpeted"
    Perimeter = 0
@@ -1213,7 +1141,6 @@ OtherZone   "FitnessCenter1"
 
 IntWall   "FitnessCenter1ToCorridor1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 306
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1223,7 +1150,6 @@ IntWall   "FitnessCenter1ToCorridor1IntWall"
 
 IntWall   "FitnessCenter1ToLaundry1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 76.5
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1233,7 +1159,6 @@ IntWall   "FitnessCenter1ToLaundry1IntWall"
 
 IntWall   "FitnessCenter1ToMechanicalRoom1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 76.5
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1243,7 +1168,6 @@ IntWall   "FitnessCenter1ToMechanicalRoom1IntWall"
 
 IntWall   "FitnessCenter1ToZone1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 153
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1253,7 +1177,6 @@ IntWall   "FitnessCenter1ToZone1IntWall"
 
 SlabFloor   "FitnessCenter1Slab"  
    Status = "New"
-   IsVerified = 0
    Area = 324
    Surface = "Carpeted"
    Perimeter = 0
@@ -1281,7 +1204,6 @@ OtherZone   "Laundry1"
 
 IntWall   "Laundry1ToCorridor1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 34
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1291,7 +1213,6 @@ IntWall   "Laundry1ToCorridor1IntWall"
 
 IntWall   "Laundry1ToMechanicalRoom1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 102
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1301,7 +1222,6 @@ IntWall   "Laundry1ToMechanicalRoom1IntWall"
 
 ExtWall   "Laundry1WallBack"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Back"
    OrientationValue = 180
    Area = 76.5
@@ -1313,9 +1233,7 @@ ExtWall   "Laundry1WallBack"
 
 Win   "Laundry1WinBack"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 1.35
@@ -1323,7 +1241,6 @@ Win   "Laundry1WinBack"
    NFRCSHGC = 0.25
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 27.34
@@ -1360,7 +1277,6 @@ Win   "Laundry1WinBack"
 
 SlabFloor   "Laundry1Slab"  
    Status = "New"
-   IsVerified = 0
    Area = 108
    Surface = "Carpeted"
    Perimeter = 9
@@ -1388,7 +1304,6 @@ OtherZone   "LeasingOffice1"
 
 IntWall   "LeasingOffice1ToLobby1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 102
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1398,7 +1313,6 @@ IntWall   "LeasingOffice1ToLobby1IntWall"
 
 IntWall   "LeasingOffice1ToZone1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 102
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1408,7 +1322,6 @@ IntWall   "LeasingOffice1ToZone1IntWall"
 
 ExtWall   "LeasingOffice1WallFront"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Front"
    OrientationValue = 0
    Area = 153
@@ -1420,9 +1333,7 @@ ExtWall   "LeasingOffice1WallFront"
 
 Win   "LeasingOffice1WinFront"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 2.7
@@ -1430,7 +1341,6 @@ Win   "LeasingOffice1WinFront"
    NFRCSHGC = 0.25
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 27.34
@@ -1467,7 +1377,6 @@ Win   "LeasingOffice1WinFront"
 
 SlabFloor   "LeasingOffice1Slab"  
    Status = "New"
-   IsVerified = 0
    Area = 216
    Surface = "Carpeted"
    Perimeter = 18
@@ -1495,7 +1404,6 @@ OtherZone   "Lobby1"
 
 IntWall   "Lobby1ToZone1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 255
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1505,7 +1413,6 @@ IntWall   "Lobby1ToZone1IntWall"
 
 ExtWall   "Lobby1WallFront"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Front"
    OrientationValue = 0
    Area = 153
@@ -1517,7 +1424,6 @@ ExtWall   "Lobby1WallFront"
 
 Door   "Lobby1DoorFront"  
    Status = "New"
-   IsVerified = 0
    Area = 40
    Ufactor = 0.2
    exUfactor = 0.2
@@ -1525,9 +1431,7 @@ Door   "Lobby1DoorFront"
 
 Win   "Lobby1WinFront"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 2.7
@@ -1535,7 +1439,6 @@ Win   "Lobby1WinFront"
    NFRCSHGC = 0.25
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 27.34
@@ -1572,7 +1475,6 @@ Win   "Lobby1WinFront"
 
 SlabFloor   "Lobby1Slab"  
    Status = "New"
-   IsVerified = 0
    Area = 540
    Surface = "Carpeted"
    Perimeter = 18
@@ -1600,7 +1502,6 @@ OtherZone   "MechanicalRoom1"
 
 IntWall   "MechanicalRoom1ToZone1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 102
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1610,7 +1511,6 @@ IntWall   "MechanicalRoom1ToZone1IntWall"
 
 ExtWall   "MechanicalRoom1WallBack"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Back"
    OrientationValue = 180
    Area = 76.5
@@ -1622,7 +1522,6 @@ ExtWall   "MechanicalRoom1WallBack"
 
 SlabFloor   "MechanicalRoom1Slab"  
    Status = "New"
-   IsVerified = 0
    Area = 108
    Surface = "Exposed"
    Perimeter = 9
@@ -1650,7 +1549,6 @@ OtherZone   "Stairs1"
 
 IntWall   "Stairs1ToCorridor1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 153
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1660,7 +1558,6 @@ IntWall   "Stairs1ToCorridor1IntWall"
 
 IntWall   "Stairs1ToZone1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 68
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1670,7 +1567,6 @@ IntWall   "Stairs1ToZone1IntWall"
 
 ExtWall   "Stairs1WallBack"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Back"
    OrientationValue = 180
    Area = 153
@@ -1682,7 +1578,6 @@ ExtWall   "Stairs1WallBack"
 
 SlabFloor   "Stairs1Slab"  
    Status = "New"
-   IsVerified = 0
    Area = 144
    Surface = "Exposed"
    Perimeter = 18
@@ -1695,7 +1590,6 @@ SlabFloor   "Stairs1Slab"
 
 IntWall   "Stairs1ToLaundry1IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 68
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1720,7 +1614,6 @@ OtherZone   "Corridor2"
 
 InteriorFloor   "Corridor2ToCorridor1InteriorFloor"  
    Status = "New"
-   IsVerified = 0
    Area = 1444
    FloorZ = 9.7
    Construction = "Interior Floor"
@@ -1731,7 +1624,6 @@ InteriorFloor   "Corridor2ToCorridor1InteriorFloor"
 
 IntWall   "Corridor2ToZone2IntWall-1"  
    Status = "New"
-   IsVerified = 0
    Area = 646
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1741,7 +1633,6 @@ IntWall   "Corridor2ToZone2IntWall-1"
 
 IntWall   "Corridor2ToZone2IntWall-2"  
    Status = "New"
-   IsVerified = 0
    Area = 646
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1751,7 +1642,6 @@ IntWall   "Corridor2ToZone2IntWall-2"
 
 IntWall   "Corridor2ToZone2IntWall-3"  
    Status = "New"
-   IsVerified = 0
    Area = 646
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1761,7 +1651,6 @@ IntWall   "Corridor2ToZone2IntWall-3"
 
 IntWall   "Corridor2ToZone2IntWall-4"  
    Status = "New"
-   IsVerified = 0
    Area = 646
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1786,7 +1675,6 @@ OtherZone   "Corridor3"
 
 InteriorFloor   "Corridor3ToCorridor2InteriorFloor"  
    Status = "New"
-   IsVerified = 0
    Area = 1444
    FloorZ = 18.7
    Construction = "Interior Floor"
@@ -1797,7 +1685,6 @@ InteriorFloor   "Corridor3ToCorridor2InteriorFloor"
 
 IntWall   "Corridor3ToZone3IntWall-1"  
    Status = "New"
-   IsVerified = 0
    Area = 646
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1807,7 +1694,6 @@ IntWall   "Corridor3ToZone3IntWall-1"
 
 CeilingBelowAttic   "Corridor3ToAtticCeiling"  
    Status = "New"
-   IsVerified = 0
    Area = 1444
    Construction = "Ceiling Below Attic Cons"
    AtticZone = "Attic"
@@ -1815,7 +1701,6 @@ CeilingBelowAttic   "Corridor3ToAtticCeiling"
 
 IntWall   "Corridor3ToZone3IntWall-2"  
    Status = "New"
-   IsVerified = 0
    Area = 646
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1825,7 +1710,6 @@ IntWall   "Corridor3ToZone3IntWall-2"
 
 IntWall   "Corridor3ToZone3IntWall-3"  
    Status = "New"
-   IsVerified = 0
    Area = 646
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1835,7 +1719,6 @@ IntWall   "Corridor3ToZone3IntWall-3"
 
 IntWall   "Corridor3ToZone3IntWall-4"  
    Status = "New"
-   IsVerified = 0
    Area = 646
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1860,7 +1743,6 @@ OtherZone   "Stairs2"
 
 IntWall   "Stairs2ToCorridor2IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 153
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1870,7 +1752,6 @@ IntWall   "Stairs2ToCorridor2IntWall"
 
 IntWall   "Stairs2ToZone2IntWall-1"  
    Status = "New"
-   IsVerified = 0
    Area = 68
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1880,7 +1761,6 @@ IntWall   "Stairs2ToZone2IntWall-1"
 
 ExtWall   "Stairs2WallBack"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Back"
    OrientationValue = 180
    Area = 153
@@ -1892,7 +1772,6 @@ ExtWall   "Stairs2WallBack"
 
 InteriorFloor   "Stairs2ToStairs1InteriorFloor"  
    Status = "New"
-   IsVerified = 0
    Area = 144
    FloorZ = 9.7
    Construction = "Interior Floor"
@@ -1903,7 +1782,6 @@ InteriorFloor   "Stairs2ToStairs1InteriorFloor"
 
 IntWall   "Stairs2ToZone2IntWall-2"  
    Status = "New"
-   IsVerified = 0
    Area = 68
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1928,7 +1806,6 @@ OtherZone   "Stairs3"
 
 IntWall   "Stairs3ToCorridor3IntWall"  
    Status = "New"
-   IsVerified = 0
    Area = 153
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1938,7 +1815,6 @@ IntWall   "Stairs3ToCorridor3IntWall"
 
 IntWall   "Stairs3ToZone3IntWall-1"  
    Status = "New"
-   IsVerified = 0
    Area = 68
    Construction = "IntWall Cons"
    IsPartySurface = 1
@@ -1948,7 +1824,6 @@ IntWall   "Stairs3ToZone3IntWall-1"
 
 ExtWall   "Stairs3WallBack"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Back"
    OrientationValue = 180
    Area = 153
@@ -1960,7 +1835,6 @@ ExtWall   "Stairs3WallBack"
 
 CeilingBelowAttic   "Stairs3ToAtticCeiling"  
    Status = "New"
-   IsVerified = 0
    Area = 144
    Construction = "Ceiling Below Attic Cons"
    AtticZone = "Attic"
@@ -1968,7 +1842,6 @@ CeilingBelowAttic   "Stairs3ToAtticCeiling"
 
 InteriorFloor   "Stairs3ToStairs2InteriorFloor"  
    Status = "New"
-   IsVerified = 0
    Area = 144
    FloorZ = 18.7
    Construction = "Interior Floor"
@@ -1979,12 +1852,20 @@ InteriorFloor   "Stairs3ToStairs2InteriorFloor"
 
 IntWall   "Stairs3ToZone3IntWall-2"  
    Status = "New"
-   IsVerified = 0
    Area = 68
    Construction = "IntWall Cons"
    IsPartySurface = 1
    OtherSideModeled = 1
    Outside = "Zone3"
+   ..
+
+Attic   "Attic"  
+   Type = "Ventilated"
+   Status = "New"
+   RoofRise = 0
+   Construction = "Attic Roof Cons"
+   RoofSolReflect = 0.1
+   RoofEmiss = 0.85
    ..
 
 EUseSummary   "EUSummary"  
@@ -2037,21 +1918,21 @@ EUseSummary   "EUSummary"
    Title3[1] = "End Use"
    Title3[2] = "(kWh)"
    Title3[3] = "(therms)"
-   Title3[4] = "(kTDV/ftÂ²-yr)"
+   Title3[4] = "(kTDV/ft²-yr)"
    Title3[5] = "(kWh)"
    Title3[6] = "(therms)"
-   Title3[7] = "(kTDV/ftÂ²-yr)"
-   Title3[8] = "(kTDV/ftÂ²-yr)"
+   Title3[7] = "(kTDV/ft²-yr)"
+   Title3[8] = "(kTDV/ft²-yr)"
    Title3[10] = "(kW)"
    Title3[11] = "(kW)"
    Title3[12] = "(kWh)"
    Title3[13] = "(therms)"
-   Title3[14] = "(kTDV/ftÂ²-yr)"
-   Title3[15] = "(kTDV/ftÂ²-yr)"
+   Title3[14] = "(kTDV/ft²-yr)"
+   Title3[15] = "(kTDV/ft²-yr)"
    Title3[16] = "(kW)"
    Title3[17] = "(kWh)"
    Title3[18] = "(therms)"
-   Title3[19] = "(kTDV/ftÂ²-yr)"
+   Title3[19] = "(kTDV/ft²-yr)"
    Title3[23] = "Emis. (kg)"
    Title3[24] = "Emis. (kg)"
    Title3[25] = "Emis. (kg)"
@@ -2059,56 +1940,56 @@ EUseSummary   "EUSummary"
    Title3[28] = "Emis. (kg)"
    Title3[29] = "Emis. (kg)"
    Title3[30] = "Margin (kg)"
-   Title3[31] = "(kBtu/ftÂ²-yr)"
-   Title3[32] = "(kBtu/ftÂ²-yr)"
-   Title3[33] = "(kBtu/ftÂ²-yr)"
-   Title3[34] = "(kBtu/ftÂ²-yr)"
-   Title3[35] = "(kBtu/ftÂ²-yr)"
-   Title3[36] = "(kBtu/ftÂ²-yr)"
+   Title3[31] = "(kBtu/ft²-yr)"
+   Title3[32] = "(kBtu/ft²-yr)"
+   Title3[33] = "(kBtu/ft²-yr)"
+   Title3[34] = "(kBtu/ft²-yr)"
+   Title3[35] = "(kBtu/ft²-yr)"
+   Title3[36] = "(kBtu/ft²-yr)"
    Enduse1[1] = "Space Heating"
-   Enduse1[2] = "13,256"
-   Enduse1[4] = "9.79"
-   Enduse1[5] = "13,012"
-   Enduse1[7] = "9.61"
-   Enduse1[8] = "-0.18"
+   Enduse1[2] = "14,161"
+   Enduse1[4] = "10.46"
+   Enduse1[5] = "13,038"
+   Enduse1[7] = "9.63"
+   Enduse1[8] = "-0.83"
    Enduse1[10] = "0.00"
    Enduse1[11] = "0.00"
-   Enduse1[12] = "27,574"
-   Enduse1[14] = "20.39"
-   Enduse1[15] = "10.60"
+   Enduse1[12] = "27,614"
+   Enduse1[14] = "20.42"
+   Enduse1[15] = "9.96"
    Enduse1[16] = "0.00"
-   Enduse1[17] = "13,256"
-   Enduse1[19] = "9.79"
-   Enduse1[23] = "2,789"
-   Enduse1[25] = "2,789"
-   Enduse1[27] = "2,743"
-   Enduse1[29] = "2,743"
-   Enduse1[30] = "-46"
-   Enduse1[31] = "1.33"
+   Enduse1[17] = "14,161"
+   Enduse1[19] = "10.46"
+   Enduse1[23] = "2,988"
+   Enduse1[25] = "2,988"
+   Enduse1[27] = "2,749"
+   Enduse1[29] = "2,749"
+   Enduse1[30] = "-239"
+   Enduse1[31] = "1.43"
    Enduse1[32] = "1.31"
-   Enduse1[33] = "-0.02"
-   Enduse1[34] = "1.33"
-   Enduse1[35] = "2.80"
-   Enduse1[36] = "1.47"
+   Enduse1[33] = "-0.12"
+   Enduse1[34] = "1.43"
+   Enduse1[35] = "2.81"
+   Enduse1[36] = "1.38"
    Enduse2[1] = "Space Cooling"
-   Enduse2[2] = "15,956"
-   Enduse2[4] = "23.64"
-   Enduse2[5] = "16,347"
+   Enduse2[2] = "16,008"
+   Enduse2[4] = "23.96"
+   Enduse2[5] = "16,333"
    Enduse2[7] = "23.31"
-   Enduse2[8] = "-0.33"
-   Enduse2[10] = "13.50"
-   Enduse2[11] = "14.06"
-   Enduse2[12] = "37,068"
+   Enduse2[8] = "-0.65"
+   Enduse2[10] = "13.58"
+   Enduse2[11] = "14.05"
+   Enduse2[12] = "37,048"
    Enduse2[14] = "44.43"
-   Enduse2[15] = "20.79"
+   Enduse2[15] = "20.47"
    Enduse2[16] = "22.53"
-   Enduse2[17] = "15,956"
-   Enduse2[19] = "23.64"
+   Enduse2[17] = "16,008"
+   Enduse2[19] = "23.96"
    Enduse2[23] = "2,417"
    Enduse2[25] = "2,417"
-   Enduse2[27] = "2,463"
-   Enduse2[29] = "2,463"
-   Enduse2[30] = "46"
+   Enduse2[27] = "2,461"
+   Enduse2[29] = "2,461"
+   Enduse2[30] = "44"
    Enduse2[31] = "1.16"
    Enduse2[32] = "1.18"
    Enduse2[33] = "0.02"
@@ -2215,30 +2096,30 @@ EUseSummary   "EUSummary"
    Enduse6[35] = "2.51"
    Enduse6[36] = "1.34"
    Enduse7[1] = "Appl. & Cooking"
-   Enduse7[2] = "25,702"
+   Enduse7[2] = "25,676"
    Enduse7[3] = "1,344.3"
-   Enduse7[4] = "28.80"
-   Enduse7[5] = "25,768"
+   Enduse7[4] = "28.78"
+   Enduse7[5] = "25,767"
    Enduse7[6] = "1,344.3"
    Enduse7[7] = "28.83"
-   Enduse7[8] = "0.03"
+   Enduse7[8] = "0.05"
    Enduse7[10] = "3.45"
    Enduse7[11] = "3.45"
    Enduse7[12] = "29,939"
    Enduse7[13] = "1,331.9"
    Enduse7[14] = "31.62"
-   Enduse7[15] = "2.82"
+   Enduse7[15] = "2.84"
    Enduse7[16] = "3.71"
-   Enduse7[17] = "25,702"
+   Enduse7[17] = "25,676"
    Enduse7[18] = "1,344.3"
-   Enduse7[19] = "28.80"
-   Enduse7[23] = "3,214"
+   Enduse7[19] = "28.78"
+   Enduse7[23] = "3,211"
    Enduse7[24] = "6,061"
-   Enduse7[25] = "9,275"
+   Enduse7[25] = "9,272"
    Enduse7[27] = "3,219"
    Enduse7[28] = "6,061"
    Enduse7[29] = "9,281"
-   Enduse7[30] = "6"
+   Enduse7[30] = "9"
    Enduse7[31] = "4.53"
    Enduse7[32] = "4.53"
    Enduse7[33] = "0.00"
@@ -2296,77 +2177,77 @@ EUseSummary   "EUSummary"
    Enduse9[35] = "0.21"
    Enduse9[36] = "0.07"
    Enduse10[1] = "TOTAL"
-   Enduse10[2] = "13,036"
+   Enduse10[2] = "13,977"
    Enduse10[3] = "3,785.1"
-   Enduse10[4] = "82.40"
-   Enduse10[5] = "13,402"
+   Enduse10[4] = "83.37"
+   Enduse10[5] = "13,425"
    Enduse10[6] = "4,652.6"
-   Enduse10[7] = "89.22"
-   Enduse10[8] = "6.82"
-   Enduse10[10] = "29.02"
-   Enduse10[11] = "29.61"
-   Enduse10[12] = "192,917"
+   Enduse10[7] = "89.24"
+   Enduse10[8] = "5.87"
+   Enduse10[10] = "29.10"
+   Enduse10[11] = "29.60"
+   Enduse10[12] = "192,937"
    Enduse10[13] = "5,787.5"
-   Enduse10[14] = "204.18"
-   Enduse10[15] = "121.78"
+   Enduse10[14] = "204.21"
+   Enduse10[15] = "120.84"
    Enduse10[16] = "45.37"
-   Enduse10[17] = "13,036"
+   Enduse10[17] = "13,977"
    Enduse10[18] = "3,785.1"
-   Enduse10[19] = "82.40"
-   Enduse10[23] = "16,639"
+   Enduse10[19] = "83.37"
+   Enduse10[23] = "16,835"
    Enduse10[24] = "17,066"
-   Enduse10[25] = "33,706"
-   Enduse10[27] = "16,665"
+   Enduse10[25] = "33,902"
+   Enduse10[27] = "16,669"
    Enduse10[28] = "20,978"
-   Enduse10[29] = "37,644"
-   Enduse10[30] = "3,938"
-   Enduse10[31] = "16.38"
+   Enduse10[29] = "37,648"
+   Enduse10[30] = "3,746"
+   Enduse10[31] = "16.48"
    Enduse10[32] = "18.32"
-   Enduse10[33] = "1.94"
-   Enduse10[34] = "16.38"
-   Enduse10[35] = "26.02"
-   Enduse10[36] = "9.64"
+   Enduse10[33] = "1.84"
+   Enduse10[34] = "16.48"
+   Enduse10[35] = "26.03"
+   Enduse10[36] = "9.55"
    Enduse11[1] = "Compliance Total"
-   Enduse11[2] = "32,996"
+   Enduse11[2] = "33,953"
    Enduse11[3] = "2,440.8"
-   Enduse11[4] = "56.41"
-   Enduse11[5] = "33,296"
+   Enduse11[4] = "57.40"
+   Enduse11[5] = "33,309"
    Enduse11[6] = "3,308.3"
-   Enduse11[7] = "63.21"
-   Enduse11[8] = "6.80"
-   Enduse11[10] = "13.93"
-   Enduse11[11] = "14.51"
-   Enduse11[12] = "68,580"
+   Enduse11[7] = "63.23"
+   Enduse11[8] = "5.83"
+   Enduse11[10] = "14.01"
+   Enduse11[11] = "14.50"
+   Enduse11[12] = "68,600"
    Enduse11[13] = "4,455.6"
-   Enduse11[14] = "104.69"
-   Enduse11[15] = "48.28"
+   Enduse11[14] = "104.72"
+   Enduse11[15] = "47.32"
    Enduse11[16] = "22.98"
-   Enduse11[17] = "32,996"
+   Enduse11[17] = "33,953"
    Enduse11[18] = "3,785.1"
-   Enduse11[19] = "56.41"
-   Enduse11[23] = "5,712"
+   Enduse11[19] = "57.40"
+   Enduse11[23] = "5,911"
    Enduse11[24] = "11,005"
-   Enduse11[25] = "16,718"
-   Enduse11[27] = "5,733"
+   Enduse11[25] = "16,917"
+   Enduse11[27] = "5,737"
    Enduse11[28] = "14,917"
-   Enduse11[29] = "20,650"
-   Enduse11[30] = "3,932"
-   Enduse11[31] = "8.16"
+   Enduse11[29] = "20,654"
+   Enduse11[30] = "3,737"
+   Enduse11[31] = "8.26"
    Enduse11[32] = "10.10"
-   Enduse11[33] = "1.94"
-   Enduse11[34] = "8.16"
-   Enduse11[35] = "14.79"
-   Enduse11[36] = "6.63"
+   Enduse11[33] = "1.84"
+   Enduse11[34] = "8.26"
+   Enduse11[35] = "14.80"
+   Enduse11[36] = "6.54"
    Enduse13[1] = "Photovoltaics"
-   Enduse13[2] = "-128,561"
+   Enduse13[2] = "-128,550"
    Enduse13[4] = "-60.62"
-   Enduse13[5] = "-128,561"
+   Enduse13[5] = "-128,550"
    Enduse13[7] = "-60.63"
    Enduse13[8] = "-0.01"
    Enduse13[10] = "-1.77"
    Enduse13[14] = " "
    Enduse13[15] = "60.62"
-   Enduse13[17] = "-128,561"
+   Enduse13[17] = "-128,550"
    Enduse13[19] = "-60.62"
    Enduse13[23] = "-3,572"
    Enduse13[25] = "-3,572"
@@ -2414,80 +2295,80 @@ EUseSummary   "EUSummary"
    SummaryCol1[5] = "Proposed Design"
    SummaryCol2[1] = "Compliance"
    SummaryCol2[2] = "Energy Use"
-   SummaryCol2[3] = "(kTDV/ftÂ²-yr)"
-   SummaryCol2[4] = "63.21"
-   SummaryCol2[5] = "56.41"
-   SummaryColNPVMarg[2] = "EfficiencyÂ¹"
+   SummaryCol2[3] = "(kTDV/ft²-yr)"
+   SummaryCol2[4] = "63.23"
+   SummaryCol2[5] = "57.40"
+   SummaryColNPVMarg[2] = "Efficiency¹"
    SummaryColNPVMarg[3] = "(EDR2)"
-   SummaryColNPVMarg[5] = "3.4"
-   SummaryColFinMarg[2] = "TotalÂ²"
+   SummaryColNPVMarg[5] = "2.9"
+   SummaryColFinMarg[2] = "Total²"
    SummaryColFinMarg[3] = "(EDR2)"
-   SummaryColFinMarg[5] = "3.3"
-   SummaryColNoPVDR[2] = "EfficiencyÂ¹"
+   SummaryColFinMarg[5] = "2.9"
+   SummaryColNoPVDR[2] = "Efficiency¹"
    SummaryColNoPVDR[3] = "(EDR2)"
    SummaryColNoPVDR[4] = "73.4"
-   SummaryColNoPVDR[5] = "70.0"
+   SummaryColNoPVDR[5] = "70.5"
    SummaryColPVOnlyDR[2] = "Flexibility"
    SummaryColPVOnlyDR[3] = "(EDR2)"
    SummaryColPVOnlyDR[4] = "29.7"
-   SummaryColPVOnlyDR[5] = "29.6"
-   SummaryColFinDR[2] = "TotalÂ²"
+   SummaryColPVOnlyDR[5] = "29.7"
+   SummaryColFinDR[2] = "Total²"
    SummaryColFinDR[3] = "(EDR2)"
    SummaryColFinDR[4] = "43.7"
-   SummaryColFinDR[5] = "40.4"
+   SummaryColFinDR[5] = "40.8"
    SummaryColEDR1Marg[2] = "Source"
    SummaryColEDR1Marg[3] = "(EDR1)"
-   SummaryColEDR1Marg[5] = "7.4"
+   SummaryColEDR1Marg[5] = "7.1"
    SummaryColEDR1[2] = "Source"
    SummaryColEDR1[3] = "(EDR1)"
    SummaryColEDR1[4] = "70.4"
-   SummaryColEDR1[5] = "63.0"
-   MarginkW = ( 0.58, 16.35 )
-   MarginkWh = 365.5
+   SummaryColEDR1[5] = "63.3"
+   MarginkW = ( 0.5, 16.27 )
+   MarginkWh = -551.8
    MarginTherms = 867.52
-   PctSavingskW = 2
-   PctSavingskWh = 2.7
+   PctSavingskW = 1.7
+   PctSavingskWh = -4.1
    PctSavingsTherms = 18.6
-   PctSavingsTDV = 7.6
-   PctSavingsCmpTDV = 10.8
-   PctSavkWLbl = "2.0"
-   PctSavkWhLbl = "2.7"
+   PctSavingsTDV = 6.6
+   PctSavingsCmpTDV = 9.2
+   PctSavkWLbl = "1.7"
+   PctSavkWhLbl = "-4.1"
    PctSavThermsLbl = "18.6"
-   PctSavTDVLbl = "7.6"
-   PctSavCmpTDVLbl = "10.8"
-   PropElecDemand = ( 29.022, 29.022 )
-   StdElecDemand = 29.6066
-   DRtgElecDemand = 45.3737
-   StdMixedFuelkWh = 128599
+   PctSavTDVLbl = "6.6"
+   PctSavCmpTDVLbl = "9.2"
+   PropElecDemand = ( 29.1015, 29.1015 )
+   StdElecDemand = 29.5967
+   DRtgElecDemand = 45.3734
+   StdMixedFuelkWh = 128588
    StdMixedFuelPV = -1601.81
    PropDesignPVInp[1] = 1
    PropDesignPVInp[6] = 1
-   PropDesignPVSize[1] = 80.2835
-   StdDesignPVSize = 80.2835
+   PropDesignPVSize[1] = 80.2767
+   StdDesignPVSize = 80.2767
    StdMixedFuelPVTDV = -60.55
-   StdMixedFuelPVMlt = 80.2835
-   PrelimPropkWh = 141638
-   PrelimPropCompTDV = 56.4027
+   StdMixedFuelPVMlt = 80.2767
+   PrelimPropkWh = 142569
+   PrelimPropCompTDV = 57.3981
    PrelimPropPV = -1601.81
-   UnscaledPropPVRatio = 0.907936
-   ResultsNotes[1] = "PV System resized to 80.28 kWdc (a factor of 80.283) to achieve 'Standard Design PV' PV scaling"
-   ResultsNotes[4] = "PV System resized to 80.28 kWdc (a factor of 80.283) to achieve 'Standard Design PV' PV scaling"
+   UnscaledPropPVRatio = 0.901934
+   ResultsNotes[1] = "PV System resized to 80.28 kWdc (a factor of 80.277) to achieve 'Standard Design PV' PV scaling"
+   ResultsNotes[4] = "PV System resized to 80.28 kWdc (a factor of 80.277) to achieve 'Standard Design PV' PV scaling"
    ResultsNotes[5] = "Standard Design PV Capacity: 80.28 kWdc"
    HaveResultsNotesPV[1] = 1
    HaveResultsNotesPV[4] = 1
    HaveResultsNotesPV[5] = 1
-   DesignRating = 40.4
-   DesignRatingNoPV = 70
+   DesignRating = 40.8
+   DesignRatingNoPV = 70.5
    ShowDesignRtgNoPV = 1
-   DesignRatingPVOnly = 29.6
+   DesignRatingPVOnly = 29.7
    DesignRatingStd = 43.7
    DesignRatingStdNoPV = 73.4
    DesignRatingStdPVOnly = 29.7
-   MarginEfficEDR = 3.4
-   MarginFinalEDR = 3.3
-   EDR1DesignRating = 63
+   MarginEfficEDR = 2.9
+   MarginFinalEDR = 2.9
+   EDR1DesignRating = 63.3
    EDR1DesignRatingStd = 70.4
-   EDR1Margin = 7.4
+   EDR1Margin = 7.1
    CO2FuelUnitLabel = "kg"
    CO2TotalUnitLabel = "kg"
    GHCEnergyEffCap = 0
@@ -2498,36 +2379,26 @@ EUseSummary   "EUSummary"
    MeetsTier1 = 0
    MeetsTier2 = 0
    MeetsZNETier = 0
-   PropElecCarbon[1] = 16.6391
+   PropElecCarbon[1] = 16.8351
    PropFuelCarbon[1] = 17.067
-   PropFinalCarbon[1] = 33.71
-   PropExclExpCarbon[1] = 34.99
+   PropFinalCarbon[1] = 33.9
+   PropExclExpCarbon[1] = 35.17
    PropExportCarbon[1] = 1.28
-   PropSelfConsCarbon[1] = 2.29
-   PropNoSolFlxCarbon[1] = 37.28
-   StdFinalCarbon = 37.64
+   PropSelfConsCarbon[1] = 2.3
+   PropNoSolFlxCarbon[1] = 37.47
+   StdFinalCarbon = 37.65
    StdExclExpCarbon = 38.93
    StdExportCarbon = 1.28
    StdSelfConsCarbon = 2.29
    StdNoSolFlxCarbon = 41.22
-   DRtgFinalCarbon = 53.5991
-   DRtgExclExpCarbon = 53.5991
+   DRtgFinalCarbon = 53.6068
+   DRtgExclExpCarbon = 53.6068
    DRtgExportCarbon = 0
    DRtgSelfConsCarbon = 0
-   DRtgNoSolFlxCarbon = 53.5991
+   DRtgNoSolFlxCarbon = 53.6068
    HideCompSummary = 0
    HideEDRs = 0
    HideC02Emissions = 0
-   ..
-
-Attic   "Attic"  
-   Type = "Ventilated"
-   Status = "New"
-   IsVerified = 0
-   RoofRise = 0
-   Construction = "Attic Roof Cons"
-   RoofSolReflect = 0.1
-   RoofEmiss = 0.85
    ..
 
 SchDay   "CARes2013 InsLighting Hrly"  
@@ -3115,13 +2986,13 @@ DwellUnitType   "OneBedroom1"
    HVACSysType = "Heat Pump Heating and Cooling System"
    NumHeatEquipTypes = 1
    HVACHeatRef[1] = "HeatingComponent"
-   HeatEquipCount = ( 1, 0, 0, 0, 0 )
+   HeatEquipCount[1] = 1
    NumCoolEquipTypes = 1
    HVACCoolRef[1] = "CoolingComponent"
-   CoolEquipCount = ( 1, 0, 0, 0, 0 )
+   CoolEquipCount[1] = 1
    NumHtPumpEquipTypes = 1
    HVACHtPumpRef[1] = "HeatpumpSystem-Res"
-   HtPumpEquipCount = ( 1, 0, 0, 0, 0 )
+   HtPumpEquipCount[1] = 1
    HVACFanRef = "HVACFan-HeatPump"
    HVACDistRef = "AirDistributionSystem-Res"
    NumDHWSysTypes = 1
@@ -3148,13 +3019,13 @@ DwellUnitType   "OneBedroom2"
    HVACSysType = "Heat Pump Heating and Cooling System"
    NumHeatEquipTypes = 1
    HVACHeatRef[1] = "HeatingComponent"
-   HeatEquipCount = ( 1, 0, 0, 0, 0 )
+   HeatEquipCount[1] = 1
    NumCoolEquipTypes = 1
    HVACCoolRef[1] = "CoolingComponent"
-   CoolEquipCount = ( 1, 0, 0, 0, 0 )
+   CoolEquipCount[1] = 1
    NumHtPumpEquipTypes = 1
    HVACHtPumpRef[1] = "HeatpumpSystem-Res"
-   HtPumpEquipCount = ( 1, 0, 0, 0, 0 )
+   HtPumpEquipCount[1] = 1
    HVACFanRef = "HVACFan-HeatPump"
    HVACDistRef = "AirDistributionSystem-Res"
    NumDHWSysTypes = 1
@@ -3181,13 +3052,13 @@ DwellUnitType   "OneBedroom3"
    HVACSysType = "Heat Pump Heating and Cooling System"
    NumHeatEquipTypes = 1
    HVACHeatRef[1] = "HeatingComponent"
-   HeatEquipCount = ( 1, 0, 0, 0, 0 )
+   HeatEquipCount[1] = 1
    NumCoolEquipTypes = 1
    HVACCoolRef[1] = "CoolingComponent"
-   CoolEquipCount = ( 1, 0, 0, 0, 0 )
+   CoolEquipCount[1] = 1
    NumHtPumpEquipTypes = 1
    HVACHtPumpRef[1] = "HeatpumpSystem-Res"
-   HtPumpEquipCount = ( 1, 0, 0, 0, 0 )
+   HtPumpEquipCount[1] = 1
    HVACFanRef = "HVACFan-HeatPump"
    HVACDistRef = "AirDistributionSystem-Res"
    NumDHWSysTypes = 1
@@ -3222,13 +3093,13 @@ DwellUnitType   "TwoBedroom1"
    HVACSysType = "Heat Pump Heating and Cooling System"
    NumHeatEquipTypes = 1
    HVACHeatRef[1] = "HeatingComponent"
-   HeatEquipCount = ( 1, 0, 0, 0, 0 )
+   HeatEquipCount[1] = 1
    NumCoolEquipTypes = 1
    HVACCoolRef[1] = "CoolingComponent"
-   CoolEquipCount = ( 1, 0, 0, 0, 0 )
+   CoolEquipCount[1] = 1
    NumHtPumpEquipTypes = 1
    HVACHtPumpRef[1] = "HeatpumpSystem-Res"
-   HtPumpEquipCount = ( 1, 0, 0, 0, 0 )
+   HtPumpEquipCount[1] = 1
    HVACFanRef = "HVACFan-HeatPump"
    HVACDistRef = "AirDistributionSystem-Res"
    NumDHWSysTypes = 1
@@ -3263,13 +3134,13 @@ DwellUnitType   "TwoBedroom2"
    HVACSysType = "Heat Pump Heating and Cooling System"
    NumHeatEquipTypes = 1
    HVACHeatRef[1] = "HeatingComponent"
-   HeatEquipCount = ( 1, 0, 0, 0, 0 )
+   HeatEquipCount[1] = 1
    NumCoolEquipTypes = 1
    HVACCoolRef[1] = "CoolingComponent"
-   CoolEquipCount = ( 1, 0, 0, 0, 0 )
+   CoolEquipCount[1] = 1
    NumHtPumpEquipTypes = 1
    HVACHtPumpRef[1] = "HeatpumpSystem-Res"
-   HtPumpEquipCount = ( 1, 0, 0, 0, 0 )
+   HtPumpEquipCount[1] = 1
    HVACFanRef = "HVACFan-HeatPump"
    HVACDistRef = "AirDistributionSystem-Res"
    NumDHWSysTypes = 1
@@ -3304,13 +3175,13 @@ DwellUnitType   "TwoBedroom3"
    HVACSysType = "Heat Pump Heating and Cooling System"
    NumHeatEquipTypes = 1
    HVACHeatRef[1] = "HeatingComponent"
-   HeatEquipCount = ( 1, 0, 0, 0, 0 )
+   HeatEquipCount[1] = 1
    NumCoolEquipTypes = 1
    HVACCoolRef[1] = "CoolingComponent"
-   CoolEquipCount = ( 1, 0, 0, 0, 0 )
+   CoolEquipCount[1] = 1
    NumHtPumpEquipTypes = 1
    HVACHtPumpRef[1] = "HeatpumpSystem-Res"
-   HtPumpEquipCount = ( 1, 0, 0, 0, 0 )
+   HtPumpEquipCount[1] = 1
    HVACFanRef = "HVACFan-HeatPump"
    HVACDistRef = "AirDistributionSystem-Res"
    NumDHWSysTypes = 1
@@ -3345,13 +3216,13 @@ DwellUnitType   "ThreeBedroom1"
    HVACSysType = "Heat Pump Heating and Cooling System"
    NumHeatEquipTypes = 1
    HVACHeatRef[1] = "HeatingComponent"
-   HeatEquipCount = ( 1, 0, 0, 0, 0 )
+   HeatEquipCount[1] = 1
    NumCoolEquipTypes = 1
    HVACCoolRef[1] = "CoolingComponent"
-   CoolEquipCount = ( 1, 0, 0, 0, 0 )
+   CoolEquipCount[1] = 1
    NumHtPumpEquipTypes = 1
    HVACHtPumpRef[1] = "HeatpumpSystem-Res"
-   HtPumpEquipCount = ( 1, 0, 0, 0, 0 )
+   HtPumpEquipCount[1] = 1
    HVACFanRef = "HVACFan-HeatPump"
    HVACDistRef = "AirDistributionSystem-Res"
    NumDHWSysTypes = 1
@@ -3386,13 +3257,13 @@ DwellUnitType   "ThreeBedroom2"
    HVACSysType = "Heat Pump Heating and Cooling System"
    NumHeatEquipTypes = 1
    HVACHeatRef[1] = "HeatingComponent"
-   HeatEquipCount = ( 1, 0, 0, 0, 0 )
+   HeatEquipCount[1] = 1
    NumCoolEquipTypes = 1
    HVACCoolRef[1] = "CoolingComponent"
-   CoolEquipCount = ( 1, 0, 0, 0, 0 )
+   CoolEquipCount[1] = 1
    NumHtPumpEquipTypes = 1
    HVACHtPumpRef[1] = "HeatpumpSystem-Res"
-   HtPumpEquipCount = ( 1, 0, 0, 0, 0 )
+   HtPumpEquipCount[1] = 1
    HVACFanRef = "HVACFan-HeatPump"
    HVACDistRef = "AirDistributionSystem-Res"
    NumDHWSysTypes = 1
@@ -3427,13 +3298,13 @@ DwellUnitType   "ThreeBedroom3"
    HVACSysType = "Heat Pump Heating and Cooling System"
    NumHeatEquipTypes = 1
    HVACHeatRef[1] = "HeatingComponent"
-   HeatEquipCount = ( 1, 0, 0, 0, 0 )
+   HeatEquipCount[1] = 1
    NumCoolEquipTypes = 1
    HVACCoolRef[1] = "CoolingComponent"
-   CoolEquipCount = ( 1, 0, 0, 0, 0 )
+   CoolEquipCount[1] = 1
    NumHtPumpEquipTypes = 1
    HVACHtPumpRef[1] = "HeatpumpSystem-Res"
-   HtPumpEquipCount = ( 1, 0, 0, 0, 0 )
+   HtPumpEquipCount[1] = 1
    HVACFanRef = "HVACFan-HeatPump"
    HVACDistRef = "AirDistributionSystem-Res"
    NumDHWSysTypes = 1
@@ -3468,13 +3339,13 @@ DwellUnitType   "Studio2"
    HVACSysType = "Heat Pump Heating and Cooling System"
    NumHeatEquipTypes = 1
    HVACHeatRef[1] = "HeatingComponent"
-   HeatEquipCount = ( 1, 0, 0, 0, 0 )
+   HeatEquipCount[1] = 1
    NumCoolEquipTypes = 1
    HVACCoolRef[1] = "CoolingComponent"
-   CoolEquipCount = ( 1, 0, 0, 0, 0 )
+   CoolEquipCount[1] = 1
    NumHtPumpEquipTypes = 1
    HVACHtPumpRef[1] = "HeatpumpSystem-Res"
-   HtPumpEquipCount = ( 1, 0, 0, 0, 0 )
+   HtPumpEquipCount[1] = 1
    HVACFanRef = "HVACFan-HeatPump"
    HVACDistRef = "AirDistributionSystem-Res"
    NumDHWSysTypes = 1
@@ -3509,13 +3380,13 @@ DwellUnitType   "Studio3"
    HVACSysType = "Heat Pump Heating and Cooling System"
    NumHeatEquipTypes = 1
    HVACHeatRef[1] = "HeatingComponent"
-   HeatEquipCount = ( 1, 0, 0, 0, 0 )
+   HeatEquipCount[1] = 1
    NumCoolEquipTypes = 1
    HVACCoolRef[1] = "CoolingComponent"
-   CoolEquipCount = ( 1, 0, 0, 0, 0 )
+   CoolEquipCount[1] = 1
    NumHtPumpEquipTypes = 1
    HVACHtPumpRef[1] = "HeatpumpSystem-Res"
-   HtPumpEquipCount = ( 1, 0, 0, 0, 0 )
+   HtPumpEquipCount[1] = 1
    HVACFanRef = "HVACFan-HeatPump"
    HVACDistRef = "AirDistributionSystem-Res"
    NumDHWSysTypes = 1
@@ -3545,12 +3416,12 @@ HVACSys   "HVACGasElectric"
    CFIClVentFlow = 0
    CFIClVentPwr = 0
    NumHeatSystemTypes = 1
-   HeatSystemCount = ( 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+   HeatSystemCount[1] = 1
    HeatSystem[1] = "HeatingComponent"
    AutoSizeHeatInp = 1
    HeatDucted = 1
    NumCoolSystemTypes = 1
-   CoolSystemCount = ( 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+   CoolSystemCount[1] = 1
    CoolSystem[1] = "CoolingComponent"
    AutoSizeCoolInp = 1
    CoolDucted = 1
@@ -3579,7 +3450,7 @@ HVACSys   "HVACHeatpump-Res"
    AutoSizeCoolInp = 1
    CoolDucted = 1
    NumHtPumpSystemTypes = 1
-   HtPumpSystemCount = ( 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+   HtPumpSystemCount[1] = 1
    HtPumpSystem[1] = "HeatpumpSystem-Res"
    HtPumpDucted = 1
    ServesAsDHWHtr = 0
@@ -3605,7 +3476,7 @@ HVACSys   "HVACHeatpump-Corridor1"
    AutoSizeCoolInp = 1
    CoolDucted = 1
    NumHtPumpSystemTypes = 1
-   HtPumpSystemCount = ( 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+   HtPumpSystemCount[1] = 1
    HtPumpSystem[1] = "HeatpumpSystem-Corridor1"
    HtPumpDucted = 1
    ServesAsDHWHtr = 0
@@ -3631,7 +3502,7 @@ HVACSys   "HVACHeatpump-BusinessCenter1"
    AutoSizeCoolInp = 1
    CoolDucted = 1
    NumHtPumpSystemTypes = 1
-   HtPumpSystemCount = ( 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+   HtPumpSystemCount[1] = 1
    HtPumpSystem[1] = "HeatpumpSystem-BusinessCenter1"
    HtPumpDucted = 1
    ServesAsDHWHtr = 0
@@ -3657,7 +3528,7 @@ HVACSys   "HVACHeatpump-FitnessCenter1"
    AutoSizeCoolInp = 1
    CoolDucted = 1
    NumHtPumpSystemTypes = 1
-   HtPumpSystemCount = ( 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+   HtPumpSystemCount[1] = 1
    HtPumpSystem[1] = "HeatpumpSystem-FitnessCenter1"
    HtPumpDucted = 1
    ServesAsDHWHtr = 0
@@ -3683,7 +3554,7 @@ HVACSys   "HVACHeatpump-Laundry1"
    AutoSizeCoolInp = 1
    CoolDucted = 1
    NumHtPumpSystemTypes = 1
-   HtPumpSystemCount = ( 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+   HtPumpSystemCount[1] = 1
    HtPumpSystem[1] = "HeatpumpSystem-Laundry1"
    HtPumpDucted = 1
    ServesAsDHWHtr = 0
@@ -3709,7 +3580,7 @@ HVACSys   "HVACHeatpump-LeasingOffice1"
    AutoSizeCoolInp = 1
    CoolDucted = 1
    NumHtPumpSystemTypes = 1
-   HtPumpSystemCount = ( 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+   HtPumpSystemCount[1] = 1
    HtPumpSystem[1] = "HeatpumpSystem-LeasingOffice1"
    HtPumpDucted = 1
    ServesAsDHWHtr = 0
@@ -3735,7 +3606,7 @@ HVACSys   "HVACHeatpump-Lobby1"
    AutoSizeCoolInp = 1
    CoolDucted = 1
    NumHtPumpSystemTypes = 1
-   HtPumpSystemCount = ( 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+   HtPumpSystemCount[1] = 1
    HtPumpSystem[1] = "HeatpumpSystem-Lobby1"
    HtPumpDucted = 1
    ServesAsDHWHtr = 0
@@ -3761,7 +3632,7 @@ HVACSys   "HVACHeatpump-Stairs"
    AutoSizeCoolInp = 1
    CoolDucted = 1
    NumHtPumpSystemTypes = 1
-   HtPumpSystemCount = ( 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+   HtPumpSystemCount[1] = 1
    HtPumpSystem[1] = "HeatpumpSystem-Stairs"
    HtPumpDucted = 1
    ServesAsDHWHtr = 0
@@ -3787,7 +3658,7 @@ HVACSys   "HVACHeatpump-Corridor2"
    AutoSizeCoolInp = 1
    CoolDucted = 1
    NumHtPumpSystemTypes = 1
-   HtPumpSystemCount = ( 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+   HtPumpSystemCount[1] = 1
    HtPumpSystem[1] = "HeatpumpSystem-Corridor2"
    HtPumpDucted = 1
    ServesAsDHWHtr = 0
@@ -3813,7 +3684,7 @@ HVACSys   "HVACHeatpump-Corridor3"
    AutoSizeCoolInp = 1
    CoolDucted = 1
    NumHtPumpSystemTypes = 1
-   HtPumpSystemCount = ( 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+   HtPumpSystemCount[1] = 1
    HtPumpSystem[1] = "HeatpumpSystem-Corridor3"
    HtPumpDucted = 1
    ServesAsDHWHtr = 0
@@ -4027,45 +3898,24 @@ HVACHtPump   "HeatpumpSystem-Corridor3"
 HVACDist   "AirDistributionSystem-Res"  
    Type = "Ducts located entirely in conditioned space"
    Status = "New"
-   IsVerified = 0
    DefaultSystem = 1
-   DuctLeakage = "Sealed and tested"
-   DuctLeakageVal = 5
    HasBypassDuct = 0
-   DuctInsRvalOpt = "4.2"
-   exDuctInsRvalOpt = "2.1"
-   DuctDesign = 0
-   LowLkgAH = 0
    IsLessThanFortyFt = 0
    ..
 
 HVACDist   "AirDistributionSystem-NonRes"  
    Type = "Ducts located entirely in conditioned space"
    Status = "New"
-   IsVerified = 0
    DefaultSystem = 1
-   DuctLeakage = "Sealed and tested"
-   DuctLeakageVal = 5
    HasBypassDuct = 0
-   DuctInsRvalOpt = "4.2"
-   exDuctInsRvalOpt = "2.1"
-   DuctDesign = 0
-   LowLkgAH = 0
    IsLessThanFortyFt = 0
    ..
 
 HVACDist   "AirDistributionSystem"  
    Type = "Ducts located entirely in conditioned space"
    Status = "New"
-   IsVerified = 0
    DefaultSystem = 1
-   DuctLeakage = "Sealed and tested"
-   DuctLeakageVal = 5
    HasBypassDuct = 0
-   DuctInsRvalOpt = "4.2"
-   exDuctInsRvalOpt = "2.1"
-   DuctDesign = 0
-   LowLkgAH = 0
    IsLessThanFortyFt = 0
    ..
 
@@ -4129,7 +3979,6 @@ DHWSys   "DHWGas"
    HeaterMult[3] = 0
    RecircPumpHP = 0.03
    RecircPumpEff = 1
-   UseDefaultLoops = 1
    LoopPipeInsulThk[1] = 1.5
    RecircPipeLoc[1] = "Conditioned"
    BranchLossModel = "Old Scheduled (independent of draws)"
@@ -4156,7 +4005,6 @@ DHWSys   "DHWHeatpump"
    HeaterMult[1] = 1
    RecircPumpHP = 0.5
    RecircPumpEff = 0.6
-   UseDefaultLoops = 1
    LoopPipeInsulThk[1] = 1.5
    RecircPipeLoc[1] = "Conditioned"
    LoopHeater = "LoopTank2"
@@ -4173,7 +4021,6 @@ DHWSys   "DHWElectric"
    UseMaxDurNumHtrs = 0
    DHWHeater[1] = "Electric"
    HeaterMult[1] = 1
-   UseDefaultLoops = 1
    LoopPipeInsulThk[1] = 1.5
    RecircPipeLoc[1] = "Conditioned"
    TotShowersServed = 1
