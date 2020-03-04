@@ -7,21 +7,19 @@ parameter "solfrac", :default=> 0.2
 
 %>
 
-
-
 ResDHWSys   "<%=name%>"
    CentralSys = <%=central%>
    DistType = "Demand Control (Standard Design for new construction)"
    SysStoryCnt = 9
    AnnualSolFrac = <%=solfrac%>
-   WtrHtrTankVol = 280
+   WtrHtrTankVol = 400
    ..
 
 ResWtrHtr   "Res Gas Water Heater"
   InpRating = 187000
   UEF = 0.57
-  TankVol = 200
+  TankVol = 266.67
   StdbyLossFrac = 0.02
   ThrmlEff = 0.8
-  Cnt = 4
+  Cnt = 3
   ..
