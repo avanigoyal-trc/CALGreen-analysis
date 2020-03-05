@@ -1,0 +1,27 @@
+<%#INTERFACE
+
+modelkit_version "~>0.8.0"
+
+parameter "name"
+parameter "count"
+parameter "heat_recovery"
+parameter "ctrl_priority" #can be LoadPriority or MasterThermostatPriority
+parameter "eer", :default => 10.4
+parameter "cop", :default => 3.2
+parameter "cooling_capacity"
+parameter "heating_capacity"
+parameter "equivalent_pipe_len"
+parameter "max_vertical_height"
+%>
+
+VRFSys   "<%=name%>"
+   Cnt = <%=count%>
+   HtRcvry = "<%=heat_recovery%>"
+   CtrlPriority = "<%=ctrl_priority%>"
+   ClgCapNetRtd = <%=cooling_capacity%>
+   EER = <%=eer%>
+   HtgCapNetRtd = <%=heating_capacity%>
+   COP = <%=cop%>
+   EquivalentPipeLen = <%=equivalent_pipe_len%>
+   MaxDeltaHgt = <%=max_vertical_height%>
+   ..
