@@ -2,10 +2,11 @@ RulesetFilename   "CA Res 2022.bin"
 
 Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Gas DHW"  
    Ruleset = "CA Residential 2022, Vers. 1.0 (CA Res 2022.bin)"
-   SoftwareVersion = "CBECC-Res 2022.0.2 RV (1117)"
-   BEMVersion = 7
+   SoftwareVersion = "CBECC-Res 2022.0.2 RV"
+   SoftwareVersionDetail = "CBECC-Res 2022.0.2 RV (1132)"
+   BEMVersion = 8
    CreateDate = 1579906005
-   ModDate = 1583281793
+   ModDate = 1583446746
    ProjFileName = "instance.ribd22"
    RunTitle = "TDSv30 V06R12 V06 R12 UGLASS15 NGAS PVSTD"
    AnalysisType = "Proposed and Standard"
@@ -1103,6 +1104,8 @@ OtherZone   "Corridor1"
    Bottom = 0.7
    NumStories = 1
    DryerFuel = "Gas"
+   IAQOption = "Default Minimum Balanced IAQ Fan"
+   IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
 IntWall   "Corridor1ToZone1IntWall"  
@@ -1141,6 +1144,8 @@ OtherZone   "BusinessCenter1"
    Bottom = 0.7
    NumStories = 1
    DryerFuel = "Gas"
+   IAQOption = "Default Minimum Balanced IAQ Fan"
+   IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
 IntWall   "BusinessCenter1ToCorridor1IntWall"  
@@ -1209,6 +1214,8 @@ OtherZone   "FitnessCenter1"
    Bottom = 0.7
    NumStories = 1
    DryerFuel = "Gas"
+   IAQOption = "Default Minimum Balanced IAQ Fan"
+   IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
 IntWall   "FitnessCenter1ToCorridor1IntWall"  
@@ -1277,6 +1284,8 @@ OtherZone   "Laundry1"
    Bottom = 0.7
    NumStories = 1
    DryerFuel = "Gas"
+   IAQOption = "Default Minimum Balanced IAQ Fan"
+   IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
 IntWall   "Laundry1ToCorridor1IntWall"  
@@ -1384,6 +1393,8 @@ OtherZone   "LeasingOffice1"
    Bottom = 0.7
    NumStories = 1
    DryerFuel = "Gas"
+   IAQOption = "Default Minimum Balanced IAQ Fan"
+   IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
 IntWall   "LeasingOffice1ToLobby1IntWall"  
@@ -1491,6 +1502,8 @@ OtherZone   "Lobby1"
    Bottom = 0.7
    NumStories = 1
    DryerFuel = "Gas"
+   IAQOption = "Default Minimum Balanced IAQ Fan"
+   IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
 IntWall   "Lobby1ToZone1IntWall"  
@@ -1596,6 +1609,8 @@ OtherZone   "MechanicalRoom1"
    Bottom = 0.7
    NumStories = 1
    DryerFuel = "Gas"
+   IAQOption = "Default Minimum Balanced IAQ Fan"
+   IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
 IntWall   "MechanicalRoom1ToZone1IntWall"  
@@ -1646,6 +1661,8 @@ OtherZone   "Stairs1"
    Bottom = 0.7
    NumStories = 1
    DryerFuel = "Gas"
+   IAQOption = "Default Minimum Balanced IAQ Fan"
+   IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
 IntWall   "Stairs1ToCorridor1IntWall"  
@@ -1716,6 +1733,8 @@ OtherZone   "Corridor2"
    Bottom = 9.7
    NumStories = 1
    DryerFuel = "Gas"
+   IAQOption = "Default Minimum Balanced IAQ Fan"
+   IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
 InteriorFloor   "Corridor2ToCorridor1InteriorFloor"  
@@ -1782,6 +1801,8 @@ OtherZone   "Corridor3"
    Bottom = 18.7
    NumStories = 1
    DryerFuel = "Gas"
+   IAQOption = "Default Minimum Balanced IAQ Fan"
+   IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
 InteriorFloor   "Corridor3ToCorridor2InteriorFloor"  
@@ -1856,6 +1877,8 @@ OtherZone   "Stairs2"
    Bottom = 9.7
    NumStories = 1
    DryerFuel = "Gas"
+   IAQOption = "Default Minimum Balanced IAQ Fan"
+   IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
 IntWall   "Stairs2ToCorridor2IntWall"  
@@ -1924,6 +1947,8 @@ OtherZone   "Stairs3"
    Bottom = 18.7
    NumStories = 1
    DryerFuel = "Gas"
+   IAQOption = "Default Minimum Balanced IAQ Fan"
+   IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
 IntWall   "Stairs3ToCorridor3IntWall"  
@@ -1985,16 +2010,6 @@ IntWall   "Stairs3ToZone3IntWall-2"
    IsPartySurface = 1
    OtherSideModeled = 1
    Outside = "Zone3"
-   ..
-
-Attic   "Attic"  
-   Type = "Ventilated"
-   Status = "New"
-   IsVerified = 0
-   RoofRise = 0
-   Construction = "Attic Roof Cons"
-   RoofSolReflect = 0.1
-   RoofEmiss = 0.85
    ..
 
 EUseSummary   "EUSummary"  
@@ -2528,6 +2543,16 @@ EUseSummary   "EUSummary"
    HideCompSummary = 0
    HideEDRs = 0
    HideC02Emissions = 0
+   ..
+
+Attic   "Attic"  
+   Type = "Ventilated"
+   Status = "New"
+   IsVerified = 0
+   RoofRise = 0
+   Construction = "Attic Roof Cons"
+   RoofSolReflect = 0.1
+   RoofEmiss = 0.85
    ..
 
 SchDay   "CARes2013 InsLighting Hrly"  
@@ -4085,36 +4110,40 @@ IAQFan   "TwoBedroomIAQFan"
    IAQCFM = 54.14
    WperCFMIAQ = 0.25
    IAQFanType = "Balanced"
-   IAQRecovEffect = 0
+   IncludesRecov = 0
    SensRecovEff = 0
    AdjSensRecovEff = 0
+   SetPerfByHVIInterp = 0
    ..
 
 IAQFan   "OneBedroomIAQFan"  
    IAQCFM = 36.6
    WperCFMIAQ = 0.25
    IAQFanType = "Balanced"
-   IAQRecovEffect = 0
+   IncludesRecov = 0
    SensRecovEff = 0
    AdjSensRecovEff = 0
+   SetPerfByHVIInterp = 0
    ..
 
 IAQFan   "ThreeBedroomIAQFan"  
    IAQCFM = 72.3
    WperCFMIAQ = 0.25
    IAQFanType = "Balanced"
-   IAQRecovEffect = 0
+   IncludesRecov = 0
    SensRecovEff = 0
    AdjSensRecovEff = 0
+   SetPerfByHVIInterp = 0
    ..
 
 IAQFan   "StudioIAQFan"  
    IAQCFM = 31.2
    WperCFMIAQ = 0.25
    IAQFanType = "Balanced"
-   IAQRecovEffect = 0
+   IncludesRecov = 0
    SensRecovEff = 0
    AdjSensRecovEff = 0
+   SetPerfByHVIInterp = 0
    ..
 
 DHWSys   "DHWGas"  
@@ -4127,6 +4156,7 @@ DHWSys   "DHWGas"
    HeaterMult[1] = 2
    HeaterMult[2] = 0
    HeaterMult[3] = 0
+   RecircPumpPwr = 22
    RecircPumpHP = 0.03
    RecircPumpEff = 1
    UseDefaultLoops = 1
@@ -4145,7 +4175,6 @@ DHWSys   "DHWHeatpump"
    MFamDistType = "Multi-family: Recirculating with no control (continuous pumping)"
    CentralDHW = 1
    CentralDHWType = "HPWH"
-   NewCentralElecModel = 1
    UseMaxDurNumHtrs = 0
    CHPWHCompType = "Sanden"
    CHPWHLoopTankVol = 300
@@ -4154,6 +4183,7 @@ DHWSys   "DHWHeatpump"
    CHPWHPrimTankVol = 80
    DHWHeater[1] = "Heatpump"
    HeaterMult[1] = 1
+   RecircPumpPwr = 4
    RecircPumpHP = 0.5
    RecircPumpEff = 0.6
    UseDefaultLoops = 1

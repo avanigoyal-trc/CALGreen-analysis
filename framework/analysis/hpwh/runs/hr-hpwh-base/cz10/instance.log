@@ -63,3 +63,51 @@
 2020-03-05 13:21:08 - Error:  ConsAssmUFactor Error:  Error retrieving or invalid CodeCat for Mat '' (ConsAssm 'ResMetalFramedWall', mat #2). evaluating rule: Set DEFAULT ConsAssm:UFactor  (19:'ConstructAssembly.rule' line 1252)
 2020-03-05 13:21:08 - Error:  ConsAssmUFactor Error:  Error retrieving or invalid CodeCat for Mat '' (ConsAssm 'ResMetalFramedWall', mat #2). evaluating rule: Set DEFAULT ConsAssm:UFactor  (19:'ConstructAssembly.rule' line 1252)
 2020-03-05 13:21:11 - Project Saved
+2020-03-06 11:00:46 - -----------------------------------------------------------------------------
+2020-03-06 11:00:46 - Opening Project 'cz10\instance.cibd22'...
+2020-03-06 11:00:46 -    Model load successful into CBECC-Com 2022.0.1 RV (1113)
+2020-03-06 11:00:47 - Performing Building Database check...
+2020-03-06 11:00:47 - Building Database check completed, no problems found.
+2020-03-06 11:00:52 -   PerfAnal_NRes - starting, w/ arguments:
+2020-03-06 11:00:52 -        BEMBasePathFile    = (null)
+2020-03-06 11:00:52 -        RulesetPathFile    = (null)
+2020-03-06 11:00:52 -        SimWeatherPath     = C:\Users\ndperry\Documents\CBECC-Com 2022 Data\EPW\
+2020-03-06 11:00:52 -        CompMgrDLLPath     = (null)
+2020-03-06 11:00:52 -        DHWWeatherPath     = (null)
+2020-03-06 11:00:52 -        ProcessingPath     = C:\Users\ndperry\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hpwh\runs\hr-hpwh-base\cz10\instance - run\
+2020-03-06 11:00:52 -        ModelPathFile      = C:\Users\ndperry\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hpwh\runs\hr-hpwh-base\cz10\instance.cibd22
+2020-03-06 11:00:52 -        LogPathFile        = (null)
+2020-03-06 11:00:52 -        UIVersionString    = CBECC-Com 2022.0.1 RV (1113)
+2020-03-06 11:00:52 -        LoadModelFile      = false
+2020-03-06 11:00:52 -        OptionsCSV         = AllowAnalysisAbort,0,StoreBEMDetails,1,AnalysisThruStep,8,ModelRpt_ALL,1,ExportHourlyResults_All,1,PromptUserUMLHWarning,1,PreAnalysisCheckPromptOption,3,CompReportWarningOption,5,
+2020-03-06 11:00:52 -        ErrorMsg           = (assumed to be initialized)
+2020-03-06 11:00:52 -        ErrorMsgLen        = 2056
+2020-03-06 11:00:52 -        DisplayProgress    = true
+2020-03-06 11:00:52 -        ResultsSummary     = (empty)
+2020-03-06 11:00:52 -        ResultsSummaryLen  = 3200
+2020-03-06 11:00:52 -        pProgCallbackFunc  = (null)
+2020-03-06 11:00:53 - Performing Building Database check...
+2020-03-06 11:00:53 - Building Database check completed, no problems found.
+2020-03-06 11:00:53 - Warning:  The following developer options must be defaulted (not specified by the user) in order to perform a valid compliance analysis:
+          Proj 'High-Rise Mixed-Use (10-story)' DefaultDayltgCtrls
+          Proj 'High-Rise Mixed-Use (10-story)' AutoHardSize
+          Proj 'High-Rise Mixed-Use (10-story)' AutoEffInput
+2020-03-06 11:00:53 -    1 file hash check(s) failed on executable and/or analysis support files (analysis continuing w/ report signature disabled)
+2020-03-06 11:00:57 - Performing Building Database check...
+2020-03-06 11:00:57 - Building Database check completed, no problems found.
+2020-03-06 11:00:57 - Warning:  The spaces assigned to thermal zone 'Thermal Zone: F1 Lounge' have cooling unmet load hour limits ranging from 150 to 8760. All spaces in the zone will be held to the minimum UMLH limit. evaluating rule: Set CHECKCODE ThrmlZn:ClgUMLHLimit  (60:'ThermalZone-General.rule' line 1738)
+2020-03-06 11:00:57 - Warning:  The spaces assigned to thermal zone 'Thermal Zone: F1 Lounge' have heating unmet load hour limits ranging from 150 to 8760. All spaces in the zone will be held to the minimum UMLH limit. evaluating rule: Set CHECKCODE ThrmlZn:HtgUMLHLimit  (60:'ThermalZone-General.rule' line 1765)
+2020-03-06 11:01:00 -   PerfAnal_NRes - Bypassing OpenStudio (and simulation) for zp model
+2020-03-06 11:34:13 -   PerfSim_E+ - Final Result: FAIL  -- compliance margin: -3.82 (-4.67%)
+2020-03-06 11:34:16 - Analysis result:  FAIL  (TDV margin: -3.82)  Processing time:  Overall 33:23 / SDD2IDF x4 avg 0:10 / SizSim x2 avg 1:20 / AnnSim x2 avg 14:40 / ReportGen x0 0:00 / Other 0:35
+2020-03-06 11:34:16 -       ResultsSummary population:  bAbort = (false) / RuleProcAbort = (false) / iRetVal = 0 / pszResultsSummary = (empty) / iResultsSummaryLen = 3200
+2020-03-06 11:34:16 -       ResultsSummary components1:  2020-03-06 11:34:16 / instance / High-Rise Mixed-Use (10-story) / CTZ10S22A / Title24Compliance / 33:23 / FAIL / -3.82
+2020-03-06 11:34:16 -       ResultsSummary components2:  CBECC-Com 2022.0.1 RV (1113) / BEMCmpMgr 2022.0.1 RV (6107) / CA 2022 Nonresidential, Vers. 1.0 Alpha / 1.11.3.f52686d8e1 / 9.0.1-bb7ca4f0da / CSE19 0.865.0+dhwloop.68861ec.94 EXE / C:\Users\ndperry\Documents\CBECC-Com 2022 Data\EPW\ / C:\Users\ndperry\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hpwh\runs\hr-hpwh-base\cz10\
+2020-03-06 11:34:16 -       ResultsSummary:  2020-03-06 11:34:16,"instance","High-Rise Mixed-Use (10-story)","CTZ10S22A","Pol  0% RetAdd NoLeak",125400,150480,"Title24Compliance",33:23,FAIL,-3.82,"--","--","Successful (200 warnings)",3.75135,133117,73218.2,205.921,5402.74,11043.7,52229.1,275220,231906,0,181711,6890.07,0,0,695727,2167.2,0,0,0,0,7565.11,0,9732.31,754.553,0,0,0,10486.9,0,0,0,0,0,0,0,0,0,0,0,0,0,4.67855,34.6388,16.7785,0.0703855,1.19044,17.0154,11.2788,85.6507,54.0122,0,41.9499,1.52519,0,0,183.138,162.396,20.7418,0,0,,0,4.5,"Thermal Zone: F10 2-Bed NE",0,"--","--","Successful (204 warnings)",12.0754,64581.2,83419.6,12768.4,34842.7,7476.53,52229.1,255330,231906,0,181711,6890.07,0,0,675836,2125.36,0,0,0,0,7769.98,0,9895.33,754.553,0,0,0,10649.9,0,0,0,0,0,0,0,0,0,0,0,0,0,4.58216,18.1345,19.7615,3.62414,7.82882,16.6422,11.2788,81.852,54.0122,0,41.9499,1.52519,0,0,179.339,158.303,21.0363,0,0,,0,0,,0,5.74556e-06,40.1437,12.1823,0.0860372,1.28188,1.71585,9.0273,64.4371,40.0913,0,31.5421,0.786538,0,0,136.857,3.92878e-06,22.2986,16.2168,5.64781,6.30715,1.17177,9.0273,60.6695,40.0913,0,31.5421,0.786538,0,0,133.089,"CBECC-Com 2022.0.1 RV (1113)","BEMCmpMgr 2022.0.1 RV (6107)","CA 2022 Nonresidential, Vers. 1.0 Alpha","1.11.3.f52686d8e1","9.0.1-bb7ca4f0da","CSE19 0.865.0+dhwloop.68861ec.94 EXE","C:\Users\ndperry\Documents\CBECC-Com 2022 Data\EPW\","C:\Users\ndperry\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hpwh\runs\hr-hpwh-base\cz10\",0.000765394,14.3474,10.6184,0.0194198,0.553235,1.39449,5.7406,32.67,35.9296,0,31.4601,1.13389,0,0,101.19,1.03914,0,0,0,0,3.62737,0,4.67,0.361798,0,0,0,5.03,0.00276433,6.79382,11.5889,1.48864,4.64012,0.974907,5.7406,31.22,35.9296,0,31.4601,1.13389,0,0,99.74,1.01908,0,0,0,0,3.7256,0,4.75,0.361798,0,0,0,5.11,1.58703,2.15529,1.5951,0.00291729,0.0831071,5.74898,0.862355,12.0348,5.94987,0,4.72593,0.170333,0,0,22.8809,1.55669,1.02058,1.7409,0.223625,0.697039,5.83595,0.862355,11.9371,5.94987,0,4.72593,0.170333,0,0,22.7833,
+
+2020-03-06 11:34:21 - -----------------------------------------------------------------------------
+2020-03-06 11:34:21 - Opening Project 'cz10\instance.cibd22'...
+2020-03-06 11:34:22 -    Model load successful into CBECC-Com 2022.0.1 RV (1113)
+2020-03-06 11:34:22 - Performing Building Database check...
+2020-03-06 11:34:22 - Building Database check completed, no problems found.
+2020-03-06 11:34:26 - Project Saved
