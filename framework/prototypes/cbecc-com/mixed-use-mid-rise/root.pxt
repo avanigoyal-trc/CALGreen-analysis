@@ -10,7 +10,11 @@ parameter "weather_station", :default=>"OAKLAND_724930"
 parameter "prototype"
 parameter "software"
 parameter "autosizing", :default=> "No"
+
+#parameters for hvac system
+## Note: VRF system changes thermal zones. These are changed by if statements in the root.pxt file, and not in the template files.
 parameter "hvac_type", :default=> "SZAC"
+parameter "vrf_cu_model", :default=> nil
 
 #parameters for residential DHW
 
@@ -71,6 +75,8 @@ Proj   "Mid-Rise Mixed-Use (5-story)"
    Ruleset = "CA 2022 Nonresidential, Vers. 1.0 Alpha (T24N_2022.bin)"
    <%if proposed_only == "Yes"%>
    AnalysisType = "Title24ProposedOnly"
+   <%elsif proposed_only == "No"%>
+   AnalysisType = "Title24Compliance"
    <%end%>
    BldgEngyModelVersion = 14
    CreateDate = 1567115615
@@ -5390,7 +5396,11 @@ ResSpcDHWFeatures   "F2 1-Bed Core SW rsd1"
 
 Spc   "F2-4 1-Bed N"
    TreeState = 254
+   <%if hvac_type == "VRF"%>
+   ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North CU-2"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North"
+   <%end%>
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -5585,7 +5595,11 @@ ResSpcDHWFeatures   "F2 1-Bed N rsd1"
 
 Spc   "F2-4 1-Bed NE Core"
    TreeState = 254
+   <%if hvac_type == "VRF"%>
+   ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North CU-2"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North"
+   <%end%>
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -5756,7 +5770,11 @@ ResSpcDHWFeatures   "F2 1-Bed NE Core rsd1"
 
 Spc   "F2-4 1-Bed NE Outer"
    TreeState = 254
+   <%if hvac_type == "VRF"%>
+   ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North CU-2"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North"
+   <%end%>
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -5927,7 +5945,11 @@ ResSpcDHWFeatures   "F2 1-Bed NE Outer rsd1"
 
 Spc   "F2-4 1-Bed NW Core"
    TreeState = 254
+   <%if hvac_type == "VRF"%>
+   ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North CU-1"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North"
+   <%end%>
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -6098,7 +6120,11 @@ ResSpcDHWFeatures   "F2 1-Bed NW Core rsd1"
 
 Spc   "F2-4 1-Bed NW Outer"
    TreeState = 254
+   <%if hvac_type == "VRF"%>
+   ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North CU-1"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North"
+   <%end%>
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -6269,7 +6295,11 @@ ResSpcDHWFeatures   "F2 1-Bed NW Outer rsd1"
 
 Spc   "F2-4 2-Bed Core NE"
    TreeState = 254
+   <%if hvac_type == "VRF"%>
+   ThrmlZnRef = "Thermal Zone: F2-4 2-Bed Core NE"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F2-4 2-Bed Core NE-NW"
+   <%end%>
    Vol = 10800
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[3] = 1
@@ -6567,7 +6597,11 @@ ResSpcDHWFeatures   "F2 2-Bed Core NE rsd2"
 
 Spc   "F2-4 2-Bed Core NW"
    TreeState = 254
+   <%if hvac_type == "VRF"%>
+   ThrmlZnRef = "Thermal Zone: F2-4 2-Bed Core NW"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F2-4 2-Bed Core NE-NW"
+   <%end%>
    Vol = 10800
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[3] = 1
@@ -11045,7 +11079,11 @@ ResSpcDHWFeatures   "F5 1-Bed Core SW rsd1"
 
 Spc   "F5 1-Bed N"
    TreeState = 254
+   <%if hvac_type == "VRF"%>
+   ThrmlZnRef = "Thermal Zone: F5 1-Bed North CU-2"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F5 1-Bed North"
+   <%end%>
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -11240,7 +11278,11 @@ ResSpcDHWFeatures   "F5 1-Bed N rsd1"
 
 Spc   "F5 1-Bed NE Core"
    TreeState = 254
+   <%if hvac_type == "VRF"%>
+   ThrmlZnRef = "Thermal Zone: F5 1-Bed North CU-2"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F5 1-Bed North"
+   <%end%>
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -11411,7 +11453,11 @@ ResSpcDHWFeatures   "F5 1-Bed NE Core rsd1"
 
 Spc   "F5 1-Bed NE Outer"
    TreeState = 254
+   <%if hvac_type == "VRF"%>
+   ThrmlZnRef = "Thermal Zone: F5 1-Bed North CU-2"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F5 1-Bed North"
+   <%end%>
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -11582,7 +11628,11 @@ ResSpcDHWFeatures   "F5 1-Bed NE Outer rsd1"
 
 Spc   "F5 1-Bed NW Core"
    TreeState = 254
+   <%if hvac_type == "VRF"%>
+   ThrmlZnRef = "Thermal Zone: F5 1-Bed North CU-1"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F5 1-Bed North"
+   <%end%>
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -11753,7 +11803,11 @@ ResSpcDHWFeatures   "F5 1-Bed NW Core rsd1"
 
 Spc   "F5 1-Bed NW Outer"
    TreeState = 254
+   <%if hvac_type == "VRF"%>
+   ThrmlZnRef = "Thermal Zone: F5 1-Bed North CU-1"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F5 1-Bed North"
+   <%end%>
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -11924,7 +11978,11 @@ ResSpcDHWFeatures   "F5 1-Bed NW Outer rsd1"
 
 Spc   "F5 2-Bed Core NE"
    TreeState = 254
+   <%if hvac_type == "VRF"%>
+   ThrmlZnRef = "Thermal Zone: F5 2-Bed Core NE"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F5 2-Bed Core NE-NW"
+   <%end%>
    Vol = 10800
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[3] = 1
@@ -12192,7 +12250,11 @@ ResSpcDHWFeatures   "F5 2-Bed Core NE rsd2"
 
 Spc   "F5 2-Bed Core NW"
    TreeState = 254
+   <%if hvac_type == "VRF"%>
+   ThrmlZnRef = "Thermal Zone: F5 2-Bed Core NW"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F5 2-Bed Core NE-NW"
+   <%end%>
    Vol = 10800
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[3] = 1
@@ -15521,6 +15583,72 @@ ThrmlZn   "Thermal Zone: F2-4 1-Bed Core East"
    ExhSrc = "VentilationSystem"
    ..
 
+<% if hvac_type == "VRF" %>
+ThrmlZn   "Thermal Zone: F2-4 1-Bed North CU-1"
+   Type = "Conditioned"
+   HVACZnCnt = 2
+   PriAirCondgSysRef[1] = "ZnSys F2-4 1-Bed North CU-1"
+   VentSysRef = "Bal F2 1-Bed North CU-1"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F2-4 1-Bed North CU-2"
+  Type = "Conditioned"
+  HVACZnCnt = 3
+  PriAirCondgSysRef[1] = "ZnSys F2-4 1-Bed North CU-2"
+  VentSysRef = "Bal F2 1-Bed North CU-2"
+  ExhSrc = "VentilationSystem"
+  ..
+
+ThrmlZn   "Thermal Zone: F2-4 2-Bed Core NE"
+   Type = "Conditioned"
+   HVACZnCnt = 1
+   PriAirCondgSysRef[1] = "ZnSys F2-4 2-Bed Core NE"
+   VentSysRef = "Bal F2 2-Bed Core NE"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F2-4 2-Bed Core NW"
+  Type = "Conditioned"
+  HVACZnCnt = 1
+  PriAirCondgSysRef[1] = "ZnSys F2-4 2-Bed Core NW"
+  VentSysRef = "Bal F2 2-Bed Core NW"
+  ExhSrc = "VentilationSystem"
+  ..
+
+ThrmlZn   "Thermal Zone: F5 1-Bed North CU-2"
+   Type = "Conditioned"
+   HVACZnCnt = 3
+   PriAirCondgSysRef[1] = "ZnSys F5 1-Bed North CU-2"
+   VentSysRef = "Bal F5 1-Bed North CU-2"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F5 2-Bed Core NW"
+   Type = "Conditioned"
+   HVACZnCnt = 1
+   PriAirCondgSysRef[1] = "ZnSys F5 2-Bed Core NW"
+   VentSysRef = "Bal F5 2-Bed Core NW"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F5 1-Bed North CU-1"
+  Type = "Conditioned"
+  HVACZnCnt = 2
+  PriAirCondgSysRef[1] = "ZnSys F5 1-Bed North CU-1"
+  VentSysRef = "Bal F5 1-Bed North CU-1"
+  ExhSrc = "VentilationSystem"
+  ..
+
+ThrmlZn   "Thermal Zone: F5 2-Bed Core NE"
+  Type = "Conditioned"
+  HVACZnCnt = 1
+  PriAirCondgSysRef[1] = "ZnSys F5 2-Bed Core NE"
+  VentSysRef = "Bal F5 2-Bed Core NE"
+  ExhSrc = "VentilationSystem"
+  ..
+
+<% else %>
 ThrmlZn   "Thermal Zone: F2-4 1-Bed North"
    Type = "Conditioned"
    HVACZnCnt = 5
@@ -15536,6 +15664,24 @@ ThrmlZn   "Thermal Zone: F2-4 2-Bed Core NE-NW"
    VentSysRef = "Bal F2 2-Bed Core NE-NW"
    ExhSrc = "VentilationSystem"
    ..
+
+ThrmlZn   "Thermal Zone: F5 1-Bed North"
+  Type = "Conditioned"
+  HVACZnCnt = 5
+  PriAirCondgSysRef[1] = "ZnSys F5 1-Bed North"
+  VentSysRef = "Bal F5 1-Bed North"
+  ExhSrc = "VentilationSystem"
+  ..
+
+ThrmlZn   "Thermal Zone: F5 2-Bed Core NE-NW"
+  Type = "Conditioned"
+  HVACZnCnt = 2
+  PriAirCondgSysRef[1] = "ZnSys F5 2-Bed Core NE-NW"
+  VentSysRef = "Bal F5 2-Bed Core NE-NW"
+  ExhSrc = "VentilationSystem"
+  ..
+
+<% end %>
 
 ThrmlZn   "Thermal Zone: F2-4 2-Bed East"
    Type = "Conditioned"
@@ -15609,21 +15755,6 @@ ThrmlZn   "Thermal Zone: F5 1-Bed Core East"
    ExhSrc = "VentilationSystem"
    ..
 
-ThrmlZn   "Thermal Zone: F5 1-Bed North"
-   Type = "Conditioned"
-   HVACZnCnt = 5
-   PriAirCondgSysRef[1] = "ZnSys F5 1-Bed North"
-   VentSysRef = "Bal F5 1-Bed North"
-   ExhSrc = "VentilationSystem"
-   ..
-
-ThrmlZn   "Thermal Zone: F5 2-Bed Core NE-NW"
-   Type = "Conditioned"
-   HVACZnCnt = 2
-   PriAirCondgSysRef[1] = "ZnSys F5 2-Bed Core NE-NW"
-   VentSysRef = "Bal F5 2-Bed Core NE-NW"
-   ExhSrc = "VentilationSystem"
-   ..
 
 ThrmlZn   "Thermal Zone: F5 2-Bed East"
    Type = "Conditioned"
@@ -15685,12 +15816,38 @@ ThrmlZn   "Thermal Zone: Parking Garage"
 
 
 <%
+#insert VRF Compressor Units if needed
+
+if (hvac_type == "VRF")
+vrf_cu_names = ["VRF F2-4 CU-1", "VRF F2-4 CU-2", "VRF F5 CU-1", "VRF F5 CU-2"]
+count = [3, 3, 1, 1]
+rated_cooling_cap = 135000
+rated_heating_cap = 150000
+pipe_length = 145
+max_height = -25
+ctrl_priority = "LoadPriority"
+
+cu_counts = vrf_cu_names.length() -1 #Subtract 1 since indexing at 0
+
+for a in 0..cu_counts do
+  insert 'vrf_cu.pxt',
+    :name => vrf_cu_names[a],
+    :count => count[a],
+    :heat_recovery => "Yes",
+    :cooling_capacity => rated_cooling_cap,
+    :heating_capacity => rated_heating_cap,
+    :equivalent_pipe_len => pipe_length,
+    :max_vertical_height => max_height,
+    :ctrl_priority   => ctrl_priority
+
+end
+end
 
 #Using csv guides from https://www.rubyguides.com/2018/10/parse-csv-ruby/
 
 require 'csv'
 
-file_zones = Dir.pwd + "/prototypes/" + software + "/" + prototype + "/" + "ZnSys_Parameters.csv"
+file_zones = Dir.pwd + "/prototypes/" + software + "/" + prototype + "/" + hvac_type +  "/ZnSys_Parameters.csv"
 table_zones = CSV.parse(File.read(file_zones), headers: true)
 
 #Get list of all zone names and counts
@@ -15706,22 +15863,37 @@ if (hvac_type == "SZHP")
   template_name = 'szhp.pxt'
 elsif (hvac_type == "SZAC")
   template_name = 'szac.pxt'
+elsif (hvac_type == "VRF")
+  template_name = 'vrf_fcu.pxt'
 end
 
 
 if (autosizing == "No")
 
-for a in 0..num_zones do
-  insert template_name,
-    :zone_name => zones[a],
-    :count => counts_original[a],
-    :index => index[a]
+if (hvac_type == "SZHP" or hvac_type == "SZAC")
+    for a in 0..num_zones do
+      insert template_name,
+        :zone_name => zones[a],
+        :count => counts_original[a],
+        :index => index[a]
+    end
+elsif (hvac_type == "VRF")
+  cu_names = table_zones.by_col[4]
+
+    for a in 0..num_zones do
+      insert template_name,
+        :vrf_cu_name => cu_names[a],
+        :zone_name => zones[a],
+        :count => counts_original[a],
+        :index => index[a]
+    end
 end
+
 
 
 elsif (autosizing == "Yes")
 
-file_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + cz + "/instance - ab - HVACSecondary.csv"
+file_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + hvac_type +"/" + cz + "/instance - ab - HVACSecondary.csv"
 
 # https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
 table_capacities = CSV.parse(File.readlines(file_capacities).drop(13).join, headers: true)
@@ -15736,7 +15908,7 @@ counts = table_capacities.by_col[2][0..num_zones]
 #Implement check to see if original counts is the same as counts in baseline model
 check = counts <=> counts_original
 if check != 0
-  warn("Order of SZHP zones in HVACSecondary CSV file may not match original cibd file.")
+  warn("Order of HVAC zones in HVACSecondary CSV file may not match original cibd file.")
   puts "Original:"
   puts counts_original
   puts "HVACSecondary"
@@ -15757,6 +15929,7 @@ for a in 0..num_zones do
     puts string
   end
 
+  if (hvac_type == "SZHP" or hvac_type == "SZAC")
   insert template_name,
     :cooling_capacity => capacity_cooling[a],
     :heating_capacity => capacity_heating[a],
@@ -15764,6 +15937,19 @@ for a in 0..num_zones do
     :zone_name => zones[a],
     :count => counts[a],
     :index => index[a]
+  elsif (hvac_type == "VRF")
+  cu_names = table_zones.by_col[4]
+  insert template_name,
+    :vrf_cu_name => cu_names[a],
+    :cooling_capacity => capacity_cooling[a],
+    :heating_capacity => capacity_heating[a],
+    :supply_fan_cfm => supply_cfm[a],
+    :zone_name => zones[a],
+    :count => counts[a],
+    :index => index[a]
+  end
+
+
 end
 
 end
@@ -15772,43 +15958,15 @@ end
 
 # Ventilation Systems
 
-if (autosizing == "No")
-  for a in 0..num_zones do
-    insert 'znsys_ventilation.pxt',
-      :name => vent_zones[a],
-      :count => counts_original[a]
 
-  end
-
-elsif (autosizing == "Yes")
-
-  file_capacities_vent = Dir.pwd + "/autosizing/" + prototype + "/" + cz + "/instance - ap - FanPowerAdjustment.csv"
-
-  # https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
-  table_capacities_vent = CSV.parse(File.readlines(file_capacities_vent).drop(11).join, headers: true)
-
-  vent_capacities = table_capacities_vent.by_col[5][num_zones+1..num_zones+num_zones+1] #skip thermal zones
-  vent_names = table_capacities_vent.by_col[0][num_zones+1..num_zones+num_zones+1]
-
-  #Implement check to see if original names is same as ventilation names from individual csv files.
-  check = vent_names <=> vent_zones
-  if check != 0
-    warn("FanPowerAdjustment.csv is not matching original ventilation zones")
-    puts "Original:"
-    puts vent_zones
-    puts "FanPowerAdjustment:"
-    puts vent_names
-  end
-
-  for a in 0..num_zones do
-    insert 'znsys_ventilation.pxt',
-      :name => vent_zones[a],
-      :count => counts_original[a],
-      :capacity => vent_capacities[a],
-      :efficacy => fan_efficacy
-  end
+for a in 0..num_zones do
+  insert 'znsys_ventilation.pxt',
+    :name => vent_zones[a],
+    :count => counts_original[a]
 
 end
+
+
 %>
 
 
