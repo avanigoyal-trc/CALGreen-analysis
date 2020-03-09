@@ -1,0 +1,1264 @@
+// INSERT TEMPLATE 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cse/high-rise-hpwhp/root.pxt'
+// Path resolves to 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cse/high-rise-hpwhp/root.pxt'
+// PARAMETER ERROR:  Undefined parameter specified (prototype); parameter ignored.
+// PARAMETER ERROR:  Undefined parameter specified (software); parameter ignored.
+//   climate_zone = "ClimateZone12"
+// * weather_station = "CTZ12S22A.epw" (:default => nil)
+
+
+
+ #define  ISSEASONCOOLING  (@weather.taDbAvg07 > SEASONCHANGESETPT)
+ #define  FANVENTAVAIL  (@weather.taDbAvg07 > FANVENTLOCKOUTTEMP)
+ #define  HWUSEF_WD  hourval( 0.014, 0.008, 0.009, 0.011, 0.020, 0.044, 0.089, 0.107, 0.089, 0.066, 0.052, 0.038, 0.036, 0.033, 0.032, 0.026, 0.042, 0.048, 0.052, 0.047, 0.042, 0.039, 0.036, 0.022 )
+ #define  HWUSEF_WE  hourval( 0.018, 0.010, 0.009, 0.008, 0.015, 0.023, 0.026, 0.047, 0.077, 0.083, 0.074, 0.061, 0.051, 0.043, 0.039, 0.039, 0.052, 0.058, 0.056, 0.052, 0.047, 0.044, 0.040, 0.028 )
+ #define  ShwrFLOWF  1
+ #define  ShwrDRAINHREFF  0
+ #define  CwshHOTF  0.22
+ #define  CwshUSEF  2.03
+ #define  FaucHOTF  0.5
+ #define  FaucFlowF  1
+ #define  BathFLOWF  1
+ #define  BathDRAINHREFF  0
+ #define  DwshFLOWF  1
+
+#include "DHWDU.txt"
+
+   repHdrL = "High-Rise Mixed-Use (10-story)"
+   wfName = "CTZ12S22A.epw"
+   ebTolHour = 0.001
+   ebTolDay = 0.001
+   ebTolMon = 0.001
+   ebTolSubHr = 0.001
+   jan1DOW = "THU"
+   skyModel = "anisotropic"
+   dt = "YES"
+   nSubSteps = 20
+   wuDays = 30
+   awTrigSlr = 0.1
+   anTolAbs = 0.005
+   anTolRel = 0.0005
+   auszTol = 0.01
+   awTrigT = 3
+   awTrigH = 0.3
+
+ DELETE Report "eb"    // move from end of CSE file
+
+METER   "MtrElec"
+
+METER   "MtrNatGas"
+
+DHWMETER   "DHWMtrFXMix"
+
+DHWMETER   "DHWMtrWH"
+
+DHWSYS   "dhwsys-Residential DHW System"
+      wsTUse = 125                         // Water use temperature (at the point of use), �F
+      wsTSetpoint = 135                    // Setpoint temperature for heat pump water heaters (whHeatSrc = ASHPX), �F
+      wsTSetPointLH = 136                  // Setpoint temperature for loop heater, �F
+      wsBranchModel = "DayWaste"           // Model used to simulate DHW branch losses
+      wsShowerDayWasteF = 3                // used to determine ratio of Shower/Faucet water waste
+      wsFaucetDayWasteF = 1                // used to determine ratio of Shower/Faucet water waste
+      wsDayWasteBranchVolF = 1.4 * 19.84 * exp( -0.554 * 3/2)    // Number of branch volumes discarded per day (wsBranchModel = DayWaste) (expression)
+      wsSSF = 0                            // Solar savings fraction, frac
+      wsElecMtr = "MtrElec"                // Electric use meter
+      wsFuelMtr = "MtrNatGas"              // Fuel use meter
+      wsFXHwMtr = "DHWMtrFXMix"
+      wsWHHwMtr = "DHWMtrWH"
+      wsCalcMode = "Simulate"              // specifies PreRun vs. Simulate
+
+
+  DHWLOOPHEATER   "dhwlphtr-t24-LpTankHtr-2"
+     whType = "SmallStorage"           // Type of water heater
+     whHeatSrc = "ResistanceX"         // Fuel source for water heater
+     whMult = 1                        // Water heater multiplier
+     whXBUEndUse = "User2"             // enduse to accumulate ASHPX backup heat elec use
+     whEF = 0.97                       // Water heater energy factor (for small storage & instantaneous)
+     whResHtPwr = 11600                // Water heater resistance heat power (watts), W
+     whVol = 500                       // Water heater tank volume (must be 0 or undefined for instantaneous), gal
+     whTEx = ($tDbO + 70) / 2          // Temperature surrounding tank (currently active only for ASHPX model, when no whZone specified), �F
+
+ DHWHEATER   "dhwhtr1-t24-CHPWH-2"
+    whType = "SmallStorage"           // Type of water heater
+    whHeatSrc = "ASHPX"               // Fuel source for water heater
+    whASHPType = "Sanden80"           // ASHP type (for new HPWH model)
+    whMult = 27                      // Water heater multiplier
+    whXBUEndUse = "User2"             // enduse to accumulate ASHPX backup heat elec use
+    whVol = 80                   // Water heater tank volume (must be 0 or undefined for instantaneous), gal
+    whTEx = ($tDbO + 70) / 2          // Temperature surrounding tank (currently active only for ASHPX model, when no whZone specified), �F
+    whASHPSrcT = $tDbO                // Temperature source for compressor (currently active only for ASHPX model, when no whASHPSrcZn specified), �F
+
+   DHWLOOP   "dhwlp-DHWHeatpump"
+        wlMult = 1                        // DHW loop multiplier
+        wlFlow = 6.12                     // DHW loop flow (gpm), gpm
+        wlRunF = 0.2                      // Hourly fraction that recirc is assumed to operate in the DHW loop, frac
+        wlFUA = 2                         // DHW loop imperfect insulation correction factor
+
+      DHWLOOPPUMP   "dhwlppmp-Residential DHW System"
+         wlpPwr = 621.666667            // W
+         wlpElecMtr = "MtrElec"
+
+      DHWLOOPSEG   "dhwlpseg1-Residential DHW System"
+         wgTy = "Supply"
+         wgSize = 4                     // in
+         wgLength = 53                  // ft
+         wgInsulThk = 1.5               // in
+         wgInsulK = 0.02167             // Btuh-ft/ft2-�F
+         wgFNoDraw = 0.2                // frac
+         wgExT = 70                     // �F
+         wgExH = 1.5                    // Btuh/ft2-�F
+
+      DHWLOOPSEG   "dhwlpseg2-Residential DHW System"
+         wgTy = "Supply"
+         wgSize = 4                     // in
+         wgLength = 95.222947           // ft
+         wgInsulThk = 1.5               // in
+         wgInsulK = 0.02167             // Btuh-ft/ft2-�F
+         wgFNoDraw = 0.4                // frac
+         wgExT = 70                     // �F
+         wgExH = 1.5                    // Btuh/ft2-�F
+
+         DHWLOOPBRANCH   "dhwlpbr2-Residential DHW System"
+            wbMult = 13
+            wbSize = 1.5                // in
+            wbLength = 49               // ft
+            wbFlow = 2                  // gpm
+            wbInsulThk = 1.5            // in
+            wbInsulK = 0.02167          // Btuh-ft/ft2-�F
+            wbExH = 1.5                 // Btuh/ft2-�F
+            wbExT = 70                  // �F
+            wbFWaste = 1.4 * 19.84 * exp( -0.544 * 4.5 ) * hourval( 0.01, 0.02, 0.05, 0.22, 0.25, 0.22, 0.06, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01)    // vol/hr
+
+      DHWLOOPSEG   "dhwlpseg3-Residential DHW System"
+         wgTy = "Supply"
+         wgSize = 3                     // in
+         wgLength = 95.222947           // ft
+         wgInsulThk = 1.5               // in
+         wgInsulK = 0.02167             // Btuh-ft/ft2-�F
+         wgFNoDraw = 0.6                // frac
+         wgExT = 70                     // �F
+         wgExH = 1.5                    // Btuh/ft2-�F
+
+         DHWLOOPBRANCH   "dhwlpbr3-Residential DHW System"
+            wbMult = 13
+            wbSize = 1.5                // in
+            wbLength = 49               // ft
+            wbFlow = 2                  // gpm
+            wbInsulThk = 1.5            // in
+            wbInsulK = 0.02167          // Btuh-ft/ft2-�F
+            wbExH = 1.5                 // Btuh/ft2-�F
+            wbExT = 70                  // �F
+            wbFWaste = 1.4 * 19.84 * exp( -0.544 * 4.5 ) * hourval( 0.01, 0.02, 0.05, 0.22, 0.25, 0.22, 0.06, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01)    // vol/hr
+
+      DHWLOOPSEG   "dhwlpseg4-Residential DHW System"
+         wgTy = "Return"
+         wgSize = 1                     // in
+         wgLength = 95.222947           // ft
+         wgInsulThk = 1.5               // in
+         wgInsulK = 0.02167             // Btuh-ft/ft2-�F
+         wgFNoDraw = 1                  // frac
+         wgExT = 70                     // �F
+         wgExH = 1.5                    // Btuh/ft2-�F
+
+      DHWLOOPSEG   "dhwlpseg5-Residential DHW System"
+         wgTy = "Return"
+         wgSize = 1                     // in
+         wgLength = 95.222947           // ft
+         wgInsulThk = 1.5               // in
+         wgInsulK = 0.02167             // Btuh-ft/ft2-�F
+         wgFNoDraw = 1                  // frac
+         wgExT = 70                     // �F
+         wgExH = 1.5                    // Btuh/ft2-�F
+
+      DHWLOOPSEG   "dhwlpseg6-Residential DHW System"
+         wgTy = "Return"
+         wgSize = 1                     // in
+         wgLength = 53                  // ft
+         wgInsulThk = 1.5               // in
+         wgInsulK = 0.02167             // Btuh-ft/ft2-�F
+         wgFNoDraw = 1                  // frac
+         wgExT = 70                     // �F
+         wgExH = 1.5                    // Btuh/ft2-�F
+
+DHWSYS   "dhwsys-F2-9 Studio NE DU0"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRa
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 Studio NE DU0 2"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRb
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 Studio NE DU0 3"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRc
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 Studio NE DU0 4"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRd
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 Studio NE DU0 5"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRe
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 Studio NE DU0 6"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRf
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 Studio NE DU0 7"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRg
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 Studio NE DU0 8"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRh
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 Studio NW DU0"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRi
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 Studio NW DU0 10"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRj
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 Studio NW DU0 11"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRa
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 Studio NW DU0 12"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRb
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 Studio NW DU0 13"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRc
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 Studio NW DU0 14"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRd
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 Studio NW DU0 15"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRe
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 Studio NW DU0 16"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRf
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F10 Studio NE DU0"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRg
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F10 Studio NW DU0"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW0BRh
+   wsWF = 1                             // frac
+   wsSDLM = 1.097587
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed NE DU1"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRa
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed NE DU1 20"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRb
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed NE DU1 21"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRc
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed NE DU1 22"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRd
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed NE DU1 23"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRe
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed NE DU1 24"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRf
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed NE DU1 25"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRg
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed NE DU1 26"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRh
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed NW DU1"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRi
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed NW DU1 28"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRj
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed NW DU1 29"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRa
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed NW DU1 30"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRb
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed NW DU1 31"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRc
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed NW DU1 32"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRd
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed NW DU1 33"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRe
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed NW DU1 34"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRf
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SE Inner DU1"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRg
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SE Inner DU1 36"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRh
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SE Inner DU1 37"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRi
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SE Inner DU1 38"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRj
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SE Inner DU1 39"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRa
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SE Inner DU1 40"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRb
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SE Inner DU1 41"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRc
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SE Inner DU1 42"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRd
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SE Outer DU1"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRe
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SE Outer DU1 44"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRf
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SE Outer DU1 45"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRg
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SE Outer DU1 46"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRh
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SE Outer DU1 47"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRi
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SE Outer DU1 48"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRj
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SE Outer DU1 49"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRa
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SE Outer DU1 50"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRb
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SW Inner DU1"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRc
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SW Inner DU1 52"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRd
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SW Inner DU1 53"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRe
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SW Inner DU1 54"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRf
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SW Inner DU1 55"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRg
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SW Inner DU1 56"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRh
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SW Inner DU1 57"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRi
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SW Inner DU1 58"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRj
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SW Outer DU1"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRa
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SW Outer DU1 60"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRb
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SW Outer DU1 61"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRc
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SW Outer DU1 62"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRd
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SW Outer DU1 63"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRe
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SW Outer DU1 64"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRf
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SW Outer DU1 65"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRg
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 1-Bed SW Outer DU1 66"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRh
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F10 1-Bed NE DU1"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRi
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F10 1-Bed NW DU1"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRj
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F10 1-Bed SE Inner DU1"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRa
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F10 1-Bed SE Outer DU1"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRb
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F10 1-Bed SW Inner DU1"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRc
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F10 1-Bed SW Outer DU1"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW1BRd
+   wsWF = 1                             // frac
+   wsSDLM = 1.135511
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed N Core DU2"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRa
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed N Core DU2 74"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRb
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed N Core DU2 75"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRc
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed N Core DU2 76"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRd
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed N Core DU2 77"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRe
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed N Core DU2 78"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRf
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed N Core DU2 79"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRg
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed N Core DU2 80"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRh
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed NE DU2"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRi
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed NE DU2 82"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRj
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed NE DU2 83"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRa
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed NE DU2 84"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRb
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed NE DU2 85"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRc
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed NE DU2 86"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRd
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed NE DU2 87"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRe
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed NE DU2 88"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRf
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed NW DU2"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRg
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed NW DU2 90"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRh
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed NW DU2 91"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRi
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed NW DU2 92"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRj
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed NW DU2 93"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRa
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed NW DU2 94"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRb
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed NW DU2 95"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRc
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed NW DU2 96"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRd
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed SE DU2"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRe
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed SE DU2 98"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRf
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed SE DU2 99"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRg
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed SE DU2 100"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRh
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed SE DU2 101"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRi
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed SE DU2 102"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRj
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed SE DU2 103"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRa
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed SE DU2 104"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRb
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed SW DU2"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRc
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed SW DU2 106"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRd
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed SW DU2 107"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRe
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed SW DU2 108"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRf
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed SW DU2 109"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRg
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed SW DU2 110"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRh
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed SW DU2 111"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRi
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F2-9 2-Bed SW DU2 112"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRj
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F10 2-Bed N Core DU2"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRa
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F10 2-Bed NE DU2"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRb
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F10 2-Bed NW DU2"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRc
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F10 2-Bed SE DU2"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRd
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+DHWSYS   "dhwsys-F10 2-Bed SW DU2"
+   wsCentralDHWSYS = "dhwsys-Residential DHW System"
+   wsDayUse = DHW2BRe
+   wsWF = 1                             // frac
+   wsSDLM = 1.179434
+   wsDSM = 1
+   wsShowerCount = 1
+   wsBathCount = 1
+
+EXPORT   "ExportElec"
+   exType = "MTR"
+   exFreq = "HOUR"
+   exMeter = "MtrElec"
+   exBtuSf = 1000
+   exDayBeg = Jan 1
+   exDayEnd = Dec 31
+
+EXPORT   "ExportNatGas"
+   exType = "MTR"
+   exFreq = "HOUR"
+   exMeter = "MtrNatGas"
+   exBtuSf = 1000
+   exDayBeg = Jan 1
+   exDayEnd = Dec 31
+
+
+   EXPORTFILE   "instance-annual"
+      xfFileName = "instance-annual.csv"
+
+   EXPORT   "elec mtr expt"
+      exType = MTR  exMeter="MtrElec"  exFreq=Year  exBtuSf=1000  exExportfile="instance-annual"
+
+   EXPORT   "natgas mtr expt"
+      exType = MTR  exMeter="MtrNatGas"  exFreq=Year  exBtuSf=1000  exExportfile="instance-annual"
+
+
+ RUN
+ $EOF
+// END TEMPLATE 'C:/Users/agoyal/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cse/high-rise-hpwhp/root.pxt'
