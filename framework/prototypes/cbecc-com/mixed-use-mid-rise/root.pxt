@@ -75,6 +75,8 @@ Proj   "Mid-Rise Mixed-Use (5-story)"
    Ruleset = "CA 2022 Nonresidential, Vers. 1.0 Alpha (T24N_2022.bin)"
    <%if proposed_only == "Yes"%>
    AnalysisType = "Title24ProposedOnly"
+   <%elsif proposed_only == "No"%>
+   AnalysisType = "Title24Compliance"
    <%end%>
    BldgEngyModelVersion = 14
    CreateDate = 1567115615
@@ -15891,7 +15893,7 @@ end
 
 elsif (autosizing == "Yes")
 
-file_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + cz + "/instance - ab - HVACSecondary.csv"
+file_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + hvac_type +"/" + cz + "/instance - ab - HVACSecondary.csv"
 
 # https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
 table_capacities = CSV.parse(File.readlines(file_capacities).drop(13).join, headers: true)
@@ -15906,7 +15908,7 @@ counts = table_capacities.by_col[2][0..num_zones]
 #Implement check to see if original counts is the same as counts in baseline model
 check = counts <=> counts_original
 if check != 0
-  warn("Order of SZHP zones in HVACSecondary CSV file may not match original cibd file.")
+  warn("Order of HVAC zones in HVACSecondary CSV file may not match original cibd file.")
   puts "Original:"
   puts counts_original
   puts "HVACSecondary"
@@ -15927,6 +15929,7 @@ for a in 0..num_zones do
     puts string
   end
 
+  if (hvac_type == "SZHP" or hvac_type == "SZAC")
   insert template_name,
     :cooling_capacity => capacity_cooling[a],
     :heating_capacity => capacity_heating[a],
@@ -15934,6 +15937,19 @@ for a in 0..num_zones do
     :zone_name => zones[a],
     :count => counts[a],
     :index => index[a]
+  elsif (hvac_type == "VRF")
+  cu_names = table_zones.by_col[4]
+  insert template_name,
+    :vrf_cu_name => cu_names[a],
+    :cooling_capacity => capacity_cooling[a],
+    :heating_capacity => capacity_heating[a],
+    :supply_fan_cfm => supply_cfm[a],
+    :zone_name => zones[a],
+    :count => counts[a],
+    :index => index[a]
+  end
+
+
 end
 
 end
@@ -15942,43 +15958,15 @@ end
 
 # Ventilation Systems
 
-if (autosizing == "No")
-  for a in 0..num_zones do
-    insert 'znsys_ventilation.pxt',
-      :name => vent_zones[a],
-      :count => counts_original[a]
 
-  end
-
-elsif (autosizing == "Yes")
-
-  file_capacities_vent = Dir.pwd + "/autosizing/" + prototype + "/" + cz + "/instance - ap - FanPowerAdjustment.csv"
-
-  # https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
-  table_capacities_vent = CSV.parse(File.readlines(file_capacities_vent).drop(11).join, headers: true)
-
-  vent_capacities = table_capacities_vent.by_col[5][num_zones+1..num_zones+num_zones+1] #skip thermal zones
-  vent_names = table_capacities_vent.by_col[0][num_zones+1..num_zones+num_zones+1]
-
-  #Implement check to see if original names is same as ventilation names from individual csv files.
-  check = vent_names <=> vent_zones
-  if check != 0
-    warn("FanPowerAdjustment.csv is not matching original ventilation zones")
-    puts "Original:"
-    puts vent_zones
-    puts "FanPowerAdjustment:"
-    puts vent_names
-  end
-
-  for a in 0..num_zones do
-    insert 'znsys_ventilation.pxt',
-      :name => vent_zones[a],
-      :count => counts_original[a],
-      :capacity => vent_capacities[a],
-      :efficacy => fan_efficacy
-  end
+for a in 0..num_zones do
+  insert 'znsys_ventilation.pxt',
+    :name => vent_zones[a],
+    :count => counts_original[a]
 
 end
+
+
 %>
 
 
