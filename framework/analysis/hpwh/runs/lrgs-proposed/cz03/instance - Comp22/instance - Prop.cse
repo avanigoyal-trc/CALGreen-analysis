@@ -1,4 +1,4 @@
- #define  RunDateFmt  19:25, Tue, Mar 03, 2020
+ #define  RunDateFmt  16:08, Mon, Mar 09, 2020
  #define  RunID                7   // Proposed
  #define  AnalysisType        12   // Proposed Only
  #define  CompCodeBase      2022   // CA2022
@@ -744,7 +744,7 @@ DHWSYS   "dhwsys-DHWHeatpump"
    wsShowerDayWasteF = 3                // used to determine ratio of Shower/Faucet water waste
    wsFaucetDayWasteF = 1                // used to determine ratio of Shower/Faucet water waste
    wsDayWasteBranchVolF = 1.4 * 19.84 * exp( -0.554 * 2/2)    // Number of branch volumes discarded per day (wsBranchModel = DayWaste) (expression)
-   wsSSF = 0.2                          // Solar savings fraction, frac
+   wsSSF = 0                            // Solar savings fraction, frac
    wsElecMtr = "MtrElec"                // Electric use meter
    wsFuelMtr = "MtrNatGas"              // Fuel use meter
    wsFXHwMtr = "DHWMtrFXMix"
@@ -774,7 +774,7 @@ DHWSYS   "dhwsys-DHWHeatpump"
    DHWLOOP   "dhwlp-DHWHeatpump"  
       wlMult = 1                        // DHW loop multiplier
       wlFlow = 1.36                     // DHW loop flow (gpm), gpm
-      wlRunF = 1                        // Hourly fraction that recirc is assumed to operate in the DHW loop, frac
+      wlRunF = 0.2                      // Hourly fraction that recirc is assumed to operate in the DHW loop, frac
       wlFUA = 2                         // DHW loop imperfect insulation correction factor
 
       DHWLOOPPUMP   "dhwlppmp-DHWHeatpump"  
