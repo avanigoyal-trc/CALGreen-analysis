@@ -4,8 +4,8 @@ Proj   "Mid-Rise Mixed-Use (5-story)"
    Ruleset = "CA 2022 Nonresidential, Vers. 1.0 Alpha (T24N_2022.bin)"
    BldgEngyModelVersion = 14
    CreateDate = 1567115615
-   ModDate = 1583786609
-   RunDate = 1583786610
+   ModDate = 1583797574
+   RunDate = 1583797575
    GasType = "NaturalGas"
    CliZn = "ClimateZone7"
    WeatherStation = "CTZ07S22A"
@@ -16599,6 +16599,16 @@ CoilClg   "DOAS1 CoilClg"
    CapTotNetRtd = 61761.2
    ..
 
+CoilHtg   "DOAS1 CoilHtg"  
+   Type = "HeatPump"
+   CapTotNetRtd = 22618.4
+   HtPumpSuppCoilHtgRef = "DOAS1 SuppCoilHtg"
+   ..
+
+CoilHtg   "DOAS1 SuppCoilHtg"  
+   Type = "Resistance"
+   ..
+
 Fan   "DOAS1 Supply Fan"  
    FlowCap = 1611
    ..
@@ -17167,25 +17177,25 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Title3[22] = "Emis. (tonne)"
    Title3[23] = "Margin (tonne)"
    Enduse1[1] = "Space Heating"
-   Enduse1[2] = "0.8"
+   Enduse1[2] = "0.9"
    Enduse1[3] = "66.8"
-   Enduse1[4] = "1.78"
+   Enduse1[4] = "1.81"
    Enduse1[5] = "0.0"
    Enduse1[6] = "110.4"
    Enduse1[7] = "2.60"
-   Enduse1[8] = "0.82"
+   Enduse1[8] = "0.79"
    Enduse1[9] = "--"
    Enduse1[10] = "--"
-   Enduse1[11] = "0.57"
+   Enduse1[11] = "0.58"
    Enduse1[12] = "0.90"
-   Enduse1[13] = "0.33"
-   Enduse1[17] = "0.19"
+   Enduse1[13] = "0.32"
+   Enduse1[17] = "0.21"
    Enduse1[18] = "0.32"
-   Enduse1[19] = "0.51"
+   Enduse1[19] = "0.53"
    Enduse1[20] = "0.00"
    Enduse1[21] = "0.53"
    Enduse1[22] = "0.53"
-   Enduse1[23] = "0.02"
+   Enduse1[23] = "0.00"
    Enduse2[1] = "Space Cooling"
    Enduse2[2] = "113.9"
    Enduse2[3] = "--"
@@ -17199,11 +17209,11 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Enduse2[11] = "2.23"
    Enduse2[12] = "1.78"
    Enduse2[13] = "-0.45"
-   Enduse2[17] = "13.40"
-   Enduse2[19] = "13.40"
+   Enduse2[17] = "13.41"
+   Enduse2[19] = "13.41"
    Enduse2[20] = "10.68"
    Enduse2[22] = "10.68"
-   Enduse2[23] = "-2.72"
+   Enduse2[23] = "-2.73"
    Enduse3[1] = "Indoor Fans"
    Enduse3[2] = "52.3"
    Enduse3[3] = "--"
@@ -17293,25 +17303,25 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Enduse7[22] = "9.02"
    Enduse7[23] = "0.00"
    Enduse8[1] = "Compliance Total"
-   Enduse8[2] = "261.8"
+   Enduse8[2] = "261.9"
    Enduse8[3] = "1,031.6"
-   Enduse8[4] = "88.82"
+   Enduse8[4] = "88.85"
    Enduse8[5] = "244.3"
    Enduse8[6] = "1,075.2"
    Enduse8[7] = "85.02"
-   Enduse8[8] = "-3.80"
+   Enduse8[8] = "-3.83"
    Enduse8[9] = "59.6"
    Enduse8[10] = "55.5"
-   Enduse8[11] = "13.66"
+   Enduse8[11] = "13.67"
    Enduse8[12] = "13.48"
-   Enduse8[13] = "-0.18"
-   Enduse8[17] = "31.74"
+   Enduse8[13] = "-0.19"
+   Enduse8[17] = "31.77"
    Enduse8[18] = "4.95"
-   Enduse8[19] = "36.69"
+   Enduse8[19] = "36.72"
    Enduse8[20] = "28.53"
    Enduse8[21] = "5.16"
    Enduse8[22] = "33.69"
-   Enduse8[23] = "-3.00"
+   Enduse8[23] = "-3.03"
    Enduse9[1] = "Receptacle"
    Enduse9[2] = "217.4"
    Enduse9[3] = "58.7"
@@ -17411,25 +17421,25 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Enduse14[13] = "--"
    Enduse14[23] = "0.00"
    Enduse15[1] = "TOTAL"
-   Enduse15[2] = "662.9"
+   Enduse15[2] = "663.0"
    Enduse15[3] = "1,090.3"
-   Enduse15[4] = "192.93"
+   Enduse15[4] = "192.96"
    Enduse15[5] = "645.4"
    Enduse15[6] = "1,133.9"
    Enduse15[7] = "189.13"
-   Enduse15[8] = "-3.80"
+   Enduse15[8] = "-3.83"
    Enduse15[9] = "127.6"
    Enduse15[10] = "123.5"
-   Enduse15[11] = "24.70"
+   Enduse15[11] = "24.71"
    Enduse15[12] = "24.52"
-   Enduse15[13] = "-0.18"
-   Enduse15[17] = "95.17"
+   Enduse15[13] = "-0.19"
+   Enduse15[17] = "95.20"
    Enduse15[18] = "5.23"
-   Enduse15[19] = "100.40"
+   Enduse15[19] = "100.43"
    Enduse15[20] = "91.96"
    Enduse15[21] = "5.44"
    Enduse15[22] = "97.40"
-   Enduse15[23] = "-3.00"
+   Enduse15[23] = "-3.03"
    ZoneUMLHsLoaded = ( 1, 1 )
    ZoneUMLHs = ( 
                  "clg: 0  htg: 0  'Thermal Zone: F1 Business Center'
@@ -17459,7 +17469,7 @@ clg: 0  htg: 0  'Thermal Zone: F2-4 3-Bed NE'
 clg: 0  htg: 0  'Thermal Zone: F2-4 3-Bed NW'
 clg: 0  htg: 0  'Thermal Zone: F2-4 Studio SE'
 clg: 0  htg: 0  'Thermal Zone: F2-4 Studio SW'
-clg: 3770  htg: 82  'Thermal Zone: F2-4 Corridor'
+clg: 3776  htg: 68  'Thermal Zone: F2-4 Corridor'
 clg: 0  htg: 0  'Thermal Zone: F5 1-Bed Core N'
 clg: 0  htg: 0  'Thermal Zone: F5 1-Bed Core West'
 clg: 0  htg: 0  'Thermal Zone: F5 1-Bed Core East'
@@ -17467,9 +17477,9 @@ clg: 0  htg: 2  'Thermal Zone: F5 2-Bed East'
 clg: 0  htg: 2  'Thermal Zone: F5 2-Bed West'
 clg: 0  htg: 2  'Thermal Zone: F5 3-Bed NE'
 clg: 0  htg: 2  'Thermal Zone: F5 3-Bed NW'
-clg: 0  htg: 0  'Thermal Zone: F5 Studio SE'
-clg: 0  htg: 1  'Thermal Zone: F5 Studio SW'
-clg: 3400  htg: 372  'Thermal Zone: F5 Corridor'
+clg: 0  htg: 1  'Thermal Zone: F5 Studio SE'
+clg: 0  htg: 0  'Thermal Zone: F5 Studio SW'
+clg: 3404  htg: 364  'Thermal Zone: F5 Corridor'
 clg: 0  htg: 0  'Thermal Zone: Parking Garage'", 
                  "clg: 0  htg: 0  'Thermal Zone: F1 Business Center'
 clg: 0  htg: 0  'Thermal Zone: F1 Corridor'
@@ -17510,17 +17520,17 @@ clg: 0  htg: 5  'Thermal Zone: F5 Studio SE'
 clg: 0  htg: 5  'Thermal Zone: F5 Studio SW'
 clg: 0  htg: 0  'Thermal Zone: F5 Corridor'
 clg: 0  htg: 0  'Thermal Zone: Parking Garage'" )
-   SimSummary[1] = "Successful (363 warnings)"
+   SimSummary[1] = "Successful (16 severe errors, 366 warnings)"
    SimSummary[3] = "Successful (231 warnings)"
    PassFail = "FAIL"
-   PctSavingsTDV = -2.0092
-   PctSavingsCmpTDV = -4.46954
+   PctSavingsTDV = -2.02506
+   PctSavingsCmpTDV = -4.50482
    PctSavTDVLbl = "-2.0"
    PctSavCmpTDVLbl = "-4.5"
-   PctSavingsSrc = -0.734095
-   PctSavingsCmpSrc = -1.33531
-   PctSavSrcLbl = "-0.7"
-   PctSavCmpSrcLbl = "-1.3"
+   PctSavingsSrc = -0.774878
+   PctSavingsCmpSrc = -1.4095
+   PctSavSrcLbl = "-0.8"
+   PctSavCmpSrcLbl = "-1.4"
    MarginkW = -4.1
    PVBattResultsValid = 0
    ..
