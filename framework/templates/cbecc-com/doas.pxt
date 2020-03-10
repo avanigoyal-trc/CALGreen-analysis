@@ -45,7 +45,7 @@ CoilHtg   "<%=name%> CoilHtg"
    ..
 <%end%>
 
-<%if hvac_type == "SZHP" %>
+<%if hvac_type == "SZHP" or hvac_type == "VRF" %>
 CoilHtg   "<%=name%> CoilHtg"
    Type = "HeatPump"
    CapTotNetRtd = <%=heating_capacity%>
