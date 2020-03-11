@@ -15711,7 +15711,7 @@ end
 
 elsif (autosizing == "Yes")
 
-file_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + cz + "/instance - ab - HVACSecondary.csv"
+file_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + hvac_type + "/" + cz + "/instance - ab - HVACSecondary.csv"
 
 # https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
 table_capacities = CSV.parse(File.readlines(file_capacities).drop(13).join, headers: true)
