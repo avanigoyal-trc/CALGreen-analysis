@@ -64,8 +64,8 @@ RulesetFilename   "CA Res 2022.bin"
 Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Heat Pump DHW"
    <%if proposed_only == "Yes"%>
    AnalysisType = "Title24ProposedOnly"
-   <%elsif%>
-   AnalysisType = "Title24Compliance"
+   <%elsif proposed_only == "No"%>
+   AnalysisType = "Proposed and Standard"
    <%end%>
    SoftwareVersion = "CBECC-Res 2022.0.2 RV"
    SoftwareVersionDetail = "CBECC-Res 2022.0.2 RV (1133)"
