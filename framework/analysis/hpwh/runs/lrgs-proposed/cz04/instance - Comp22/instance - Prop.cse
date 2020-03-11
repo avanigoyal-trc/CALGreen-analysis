@@ -1,19 +1,19 @@
- #define  RunDateFmt  16:08, Mon, Mar 09, 2020
+ #define  RunDateFmt  20:06, Tue, Mar 10, 2020
  #define  RunID                7   // Proposed
- #define  AnalysisType        12   // Proposed Only
+ #define  AnalysisType        13   // Proposed and Standard
  #define  CompCodeBase      2022   // CA2022
  #define  StdDesignBase     2022   // CA2022
  #define  StandardsVersion  2023   // Compliance 2023
  #define  DesignRatingBase  2014   // RESNET2014
  #define  ClimateZone          4   // CZ4  (San Jose)
- #define  DD1  Jul 31
- #define  CD1  Sep 02
- #define  HD1  Nov 29
+ #define  DD1  Aug 02
+ #define  CD1  Aug 28
+ #define  HD1  Dec 20
  #define  SEASONCHANGESETPT  60
  #define  FANVENTLOCKOUTTEMP  68
  #define  ISSEASONCOOLING  (@weather.taDbAvg07 > SEASONCHANGESETPT)
  #define  FANVENTAVAIL  (@weather.taDbAvg07 > FANVENTLOCKOUTTEMP)
- #define  WINDOWVENTAVAIL  ($hour < 24 && ($hour > 12 || $radDiff > 1))
+ #define  WINDOWVENTAVAIL  ($hour < 24 && ($hour > 12 || $radDiff+$radbeam > .01))
  #define  HWUSEF_WD  hourval( 0.014, 0.008, 0.009, 0.011, 0.020, 0.044, 0.089, 0.107, 0.089, 0.066, 0.052, 0.038, 0.036, 0.033, 0.032, 0.026, 0.042, 0.048, 0.052, 0.047, 0.042, 0.039, 0.036, 0.022 )
  #define  HWUSEF_WE  hourval( 0.018, 0.010, 0.009, 0.008, 0.015, 0.023, 0.026, 0.047, 0.077, 0.083, 0.074, 0.061, 0.051, 0.043, 0.039, 0.039, 0.052, 0.058, 0.056, 0.052, 0.047, 0.044, 0.040, 0.028 )
  #define  ShwrFLOWF  1
@@ -51,11 +51,12 @@
  #define  FVCHPC  0.95		// VCHP cooling input energy factor
  #define  FVCHPH  0.88		// VCHP heating input energy factor
  #define  NumCntrlWHtrs( s)  tofloat( 1+fix(@DHWSYS[ s].loadMax / (15400. * @DHWSYS[ s].loadMaxDur)))
+ #define  RunFileName  instance - Prop
 
 #include "DHWDU.txt"
 
    repHdrL = "TDSv30 V19R12 V19 R12 UGLASS15 ELEC PVSTD"
-   wfName = "CTZ04S13b.CSW"
+   wfName = "CA_SAN-JOSE-REID-HILLV_724946S_STYP20.epw"
    ebTolHour = 0.001
    ebTolDay = 0.001
    ebTolMon = 0.001
@@ -64,7 +65,7 @@
    skyModel = "anisotropic"
    bldgAzm = 0
    dt = "YES"
-   heatDsTDbO = 36                      // °F
+   heatDsTDbO = 35.2                    // °F
    coolDsDay = DD1                      // coolDsDay
    nSubSteps = 20
    wuDays = 30
@@ -653,6 +654,11 @@ MATERIAL   "m-3 Coat Stucco"
    matSpHt = 0.2                        // Specific heat of material, Btu/lb-°F
    matCond = 0.4167                     // Conductivity (always per foot of thickness), Btuh-ft/ft2-°F
 
+MATERIAL   "m-Light Roof"  
+   matDens = 120                        // Density, lb/ft3
+   matSpHt = 0.2                        // Specific heat of material, Btu/lb-°F
+   matCond = 1                          // Conductivity (always per foot of thickness), Btuh-ft/ft2-°F
+
 MATERIAL   "m-Ins-R21-D1.5-SH0.2-C0.02183"  
    matDens = 1.5                        // Density, lb/ft3
    matSpHt = 0.2                        // Specific heat of material, Btu/lb-°F
@@ -744,14 +750,13 @@ DHWSYS   "dhwsys-DHWHeatpump"
    wsShowerDayWasteF = 3                // used to determine ratio of Shower/Faucet water waste
    wsFaucetDayWasteF = 1                // used to determine ratio of Shower/Faucet water waste
    wsDayWasteBranchVolF = 1.4 * 19.84 * exp( -0.554 * 2/2)    // Number of branch volumes discarded per day (wsBranchModel = DayWaste) (expression)
-   wsSSF = 0                            // Solar savings fraction, frac
    wsElecMtr = "MtrElec"                // Electric use meter
    wsFuelMtr = "MtrNatGas"              // Fuel use meter
    wsFXHwMtr = "DHWMtrFXMix"
    wsWHHwMtr = "DHWMtrWH"
    wsCalcMode = "Simulate"              // specifies PreRun vs. Simulate
 
-   DHWLOOPHEATER   "dhwlphtr-t24-LpTankHtr"  
+   DHWLOOPHEATER   "dhwlphtr-t24-LpTankHtr-2"  
       whType = "SmallStorage"           // Type of water heater
       whHeatSrc = "ResistanceX"         // Fuel source for water heater
       whMult = 1                        // Water heater multiplier
@@ -761,7 +766,7 @@ DHWSYS   "dhwsys-DHWHeatpump"
       whVol = 80                        // Water heater tank volume (must be 0 or undefined for instantaneous), gal
       whTEx = ($tDbO + 70) / 2          // Temperature surrounding tank (currently active only for ASHPX model, when no whZone specified), °F
 
-   DHWHEATER   "dhwhtr1-t24-CHPWH"  
+   DHWHEATER   "dhwhtr1-t24-CHPWH-2"  
       whType = "SmallStorage"           // Type of water heater
       whHeatSrc = "ASHPX"               // Fuel source for water heater
       whASHPType = "Sanden80"           // ASHP type (for new HPWH model)
@@ -1053,7 +1058,7 @@ IZXFER   "Zone1-IAQHRV"
    izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
    izZn1 = "Zone1-zn"                   // Name of primary zone (flow rates > 0 are into the primary zone)
    izFanVfDs = 184.8                    // Fan design or rated flow at rated pressure, cfm
-   izFanElecPwr = 0.25                  // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
    izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
    izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
 
@@ -1169,7 +1174,7 @@ IZXFER   "Zone2-IAQHRV"
    izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
    izZn1 = "Zone2-zn"                   // Name of primary zone (flow rates > 0 are into the primary zone)
    izFanVfDs = 184.8                    // Fan design or rated flow at rated pressure, cfm
-   izFanElecPwr = 0.25                  // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
    izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
    izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
 
@@ -2385,7 +2390,7 @@ RSYS   "rsys-Zone2 HVACSys"
       dsExCnd = "AMBIENT"               // Conditions surrounding duct segment
 
 PVARRAY   "pvarray 1"  
-   pvDCSysSize = 1                      // Rated array output, kW
+   pvDCSysSize = 14.582197              // Rated array output, kW
    pvModuleType = "Standard"
    pvArrayType = "FixedOpenRack"
    pvTilt = 22.619884                   // Array tilt (0=H, 90=V), deg
@@ -2396,6 +2401,7 @@ PVARRAY   "pvarray 1"
    pvElecMtr = "MtrElec"                // Electric meter to report results to
 
 EXPORT   "ExportElec"  
+   exExportfile = "Primary"             // Name of EXPORTFILE to write simulation results to
    exType = "MTR"                       // Export type
    exFreq = "HOUR"                      // Time interval for generating rows of export data
    exMeter = "MtrElec"                  // Meter to report
@@ -2404,6 +2410,7 @@ EXPORT   "ExportElec"
    exDayEnd = Dec 31
 
 EXPORT   "ExportNatGas"  
+   exExportfile = "Primary"             // Name of EXPORTFILE to write simulation results to
    exType = "MTR"                       // Export type
    exFreq = "HOUR"                      // Time interval for generating rows of export data
    exMeter = "MtrNatGas"                // Meter to report

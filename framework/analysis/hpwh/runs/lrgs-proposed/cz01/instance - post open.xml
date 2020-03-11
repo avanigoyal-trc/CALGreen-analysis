@@ -3,19 +3,20 @@
   <RulesetFilename file="CA Res 2022.bin"/>
   <Proj>
     <Name>2019 Prototype 7320ft2 Prop Elec</Name>
-    <Ruleset>CA Residential 2022, Vers. 1.0 (CA Res 2022.bin)</Ruleset>
+    <Ruleset>CA Residential 2022, Vers. 2 Pol-0%RA-NoCH4leak (CA Res 2022.bin)</Ruleset>
     <RuleFile>CA Res 2022.bin</RuleFile>
     <DevMode>1</DevMode>
     <EnergyCodeYearNum>2022</EnergyCodeYearNum>
     <EnergyCodeYear>2022</EnergyCodeYear>
     <AnalysisVersion>220001</AnalysisVersion>
-    <CompMgrVersion>BEMCmpMgr 2022.0.1 (1633)</CompMgrVersion>
-    <SoftwareVersion>CBECC-Res 2022.0.2 RV (1117)</SoftwareVersion>
-    <BEMVersion>7</BEMVersion>
-    <RuleRepoRev>1633</RuleRepoRev>
+    <CompMgrVersion>BEMCmpMgr 2022.0.2-Pol-0%RA-NoCH4lk (1715)</CompMgrVersion>
+    <SoftwareVersion>CBECC-Res 2022.0.2 RV</SoftwareVersion>
+    <SoftwareVersionDetail>CBECC-Res 2022.0.2 RV (1133)</SoftwareVersionDetail>
+    <BEMVersion>8</BEMVersion>
+    <RuleRepoRev>1715</RuleRepoRev>
     <CreateDate>1582925619</CreateDate>
-    <ModDate>1583292331</ModDate>
-    <ProjFileName>instance.ribd22</ProjFileName>
+    <ModDate>1583895540</ModDate>
+    <ProjFileName>instance_hpwh.ribd22</ProjFileName>
     <CSEName>CSE19</CSEName>
     <CSEinclDHWMFL_EU>1</CSEinclDHWMFL_EU>
     <ExEDR_Defaults>0</ExEDR_Defaults>
@@ -24,10 +25,10 @@
     <RunIDProcFile> - User</RunIDProcFile>
     <RunAbbrev>u</RunAbbrev>
     <RunTitle>TDSv30 V19R12 V19 R12 UGLASS15 ELEC PVSTD</RunTitle>
-    <EnableResearchMode>1</EnableResearchMode>
+    <EnableResearchMode>0</EnableResearchMode>
     <AllowNegativeDesignRatings>0</AllowNegativeDesignRatings>
     <CalcCO2DesignRatings>0</CalcCO2DesignRatings>
-    <AnalysisType>Proposed Only</AnalysisType>
+    <AnalysisType>Proposed and Standard</AnalysisType>
     <CALGreen>0</CALGreen>
     <TDVType>TDV</TDVType>
     <BypassRuleLimits>0</BypassRuleLimits>
@@ -36,7 +37,7 @@
     <CO2ElecTableMult>1</CO2ElecTableMult>
     <CO2FuelTableMult>0.01</CO2FuelTableMult>
     <AnalysisReport>Building Summary (csv)</AnalysisReport>
-    <ComplianceReportPDF>0</ComplianceReportPDF>
+    <ComplianceReportPDF>1</ComplianceReportPDF>
     <ComplianceReportXML>0</ComplianceReportXML>
     <SeasonChangeSetpt>60</SeasonChangeSetpt>
     <FanVentLockoutTemp>68</FanVentLockoutTemp>
@@ -170,20 +171,21 @@
     <BattGridHarmCredit>0</BattGridHarmCredit>
     <TDVSummerPkFirstHr>19</TDVSummerPkFirstHr>
     <AdvBattTDVPkDayVal>34.13</AdvBattTDVPkDayVal>
+    <BattDRNumRankedDays>20</BattDRNumRankedDays>
     <BattMaxChgPwrRpt>n/a</BattMaxChgPwrRpt>
     <BattMaxDschgPwrRpt>n/a</BattMaxDschgPwrRpt>
     <SimSpeedOption>Compliance</SimSpeedOption>
     <DefaultDuctAtticRef>Attic</DefaultDuctAtticRef>
     <MaxDuctFracArea>0.45</MaxDuctFracArea>
     <DuctInsRValPerInch>3</DuctInsRValPerInch>
-    <ReportInclPropOnly>1</ReportInclPropOnly>
+    <ReportInclPropOnly>0</ReportInclPropOnly>
     <EnableEDR>0</EnableEDR>
     <AllowDesignRating>1</AllowDesignRating>
     <DesignRatingCalcs>1</DesignRatingCalcs>
     <DesignRatingBase>RESNET2014</DesignRatingBase>
     <DRtgRefRunID>0</DRtgRefRunID>
     <StdDesignBase>CA2022</StdDesignBase>
-    <EDR2Metric>2 (2022 TDV w/ LR emissions)</EDR2Metric>
+    <EDR2Metric>2 (2022 TDV)</EDR2Metric>
     <TDVTableName>TDVM02Table</TDVTableName>
     <EDR1TableName>T24SrcEnergyTable</EDR1TableName>
     <TDVMult_Elec>0.292997</TDVMult_Elec>
@@ -196,15 +198,15 @@
     <SrcSecMult_Fuel>0.01</SrcSecMult_Fuel>
     <TrackSrcEnergy>1</TrackSrcEnergy>
     <TDVEDRFuelMultMetric>-</TDVEDRFuelMultMetric>
-    <SrcEDRFuelMultMetric>Src_5</SrcEDRFuelMultMetric>
+    <SrcEDRFuelMultMetric>-</SrcEDRFuelMultMetric>
     <CompCodeBase>CA2022</CompCodeBase>
     <DRtgLtgCredit>0</DRtgLtgCredit>
     <DRtgLtgReduction>0</DRtgLtgReduction>
     <PropFlexRunReqd>0</PropFlexRunReqd>
     <IsPropFlexRun>0</IsPropFlexRun>
     <PropFlexFrac>0.3</PropFlexFrac>
-    <StdMixedFuelRunReqd>0</StdMixedFuelRunReqd>
-    <PrelimPropRunReqd>0</PrelimPropRunReqd>
+    <StdMixedFuelRunReqd>1</StdMixedFuelRunReqd>
+    <PrelimPropRunReqd>1</PrelimPropRunReqd>
     <SpecifyTargetDRtg>0</SpecifyTargetDRtg>
     <TargetDRtgMaxIter>4</TargetDRtgMaxIter>
     <TargetDRtgIterNum>0</TargetDRtgIterNum>
@@ -227,7 +229,7 @@
     <City>CTZ01S22A</City>
     <SpecifyWeatherFN>0</SpecifyWeatherFN>
     <WeatherFileSet>(default)</WeatherFileSet>
-    <WeatherFileName>CTZ01S13b.CSW</WeatherFileName>
+    <WeatherFileName>STYP20\CA_ARCATA-AP_725945S_STYP20.epw</WeatherFileName>
     <BuildingTypeRpt>Multifamily</BuildingTypeRpt>
     <IsMultiFamily>1</IsMultiFamily>
     <MultiFamilyType>Other</MultiFamilyType>
@@ -299,6 +301,7 @@
     <PeoplePerUnit index="0">2.35</PeoplePerUnit>
     <UnitPeopleGain index="0">15994.8</UnitPeopleGain>
     <OtherZnOccFrac>0.5</OtherZnOccFrac>
+    <DefaultIAQFanPwr>0.6</DefaultIAQFanPwr>
     <DisableIAQ>0</DisableIAQ>
     <IAQDisabled>0</IAQDisabled>
     <UnitIAQOption index="0">Default Minimum IAQ Fan</UnitIAQOption>
@@ -317,6 +320,10 @@
     <UnitIAQOption index="13">Default Minimum IAQ Fan</UnitIAQOption>
     <UnitIAQOption index="14">Default Minimum IAQ Fan</UnitIAQOption>
     <UnitIAQOption index="15">Default Minimum IAQ Fan</UnitIAQOption>
+    <MostDUIAQ_Balanced>1</MostDUIAQ_Balanced>
+    <MostDUIAQ_Exhaust>0</MostDUIAQ_Exhaust>
+    <MostDUIAQ_Supply>0</MostDUIAQ_Supply>
+    <MostDUIAQ_Type>Balanced</MostDUIAQ_Type>
     <EnableClVent>0</EnableClVent>
     <LimitedClVent>0</LimitedClVent>
     <ClVentUI>0</ClVentUI>
@@ -468,6 +475,7 @@
     <EnableVarFlowOAV>1</EnableVarFlowOAV>
     <EnableFixedFlowOAV>1</EnableFixedFlowOAV>
     <EnableHPAutosize>1</EnableHPAutosize>
+    <ResultsCurrentMsg>(not current)</ResultsCurrentMsg>
     <ModelPath>C:\Users\agoyal\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hpwh\runs\lrgs-proposed\cz01\</ModelPath>
     <ModelFile>instance</ModelFile>
     <NumSCSysEquipUnits>0</NumSCSysEquipUnits>
@@ -509,6 +517,7 @@
     <CSERpt_Mtr_NGas_HD>0</CSERpt_Mtr_NGas_HD>
     <CSERpt_Mtr_Othr_HD>0</CSERpt_Mtr_Othr_HD>
     <NumUIDialogTabs>12</NumUIDialogTabs>
+    <DefaultingRounds>3</DefaultingRounds>
     <Zone>
       <Name>Zone1</Name>
       <Type>Conditioned</Type>
@@ -1082,11 +1091,12 @@
         <IAQCFM_Supply>0</IAQCFM_Supply>
         <IAQPwr_Supply>0</IAQPwr_Supply>
         <IAQHRVCFM>75</IAQHRVCFM>
-        <IAQHRVPwr>18.75</IAQHRVPwr>
+        <IAQHRVPwr>45</IAQHRVPwr>
         <IAQHRVCFMxRcvEff>0</IAQHRVCFMxRcvEff>
         <IAQHRVCFMxSRE>0</IAQHRVCFMxSRE>
         <IAQHRVCFMxASRE>0</IAQHRVCFMxASRE>
         <IAQCFMIsBalanced>1</IAQCFMIsBalanced>
+        <IAQCFM_Balanced>75</IAQCFM_Balanced>
         <StdDesignIAQCFM>75</StdDesignIAQCFM>
         <MaxStdDesignIAQPower>90</MaxStdDesignIAQPower>
         <TopZEstimate>8.7</TopZEstimate>
@@ -1139,11 +1149,12 @@
         <IAQCFM_Supply>0</IAQCFM_Supply>
         <IAQPwr_Supply>0</IAQPwr_Supply>
         <IAQHRVCFM>109.8</IAQHRVCFM>
-        <IAQHRVPwr>27.45</IAQHRVPwr>
+        <IAQHRVPwr>65.88</IAQHRVPwr>
         <IAQHRVCFMxRcvEff>0</IAQHRVCFMxRcvEff>
         <IAQHRVCFMxSRE>0</IAQHRVCFMxSRE>
         <IAQHRVCFMxASRE>0</IAQHRVCFMxASRE>
         <IAQCFMIsBalanced>1</IAQCFMIsBalanced>
+        <IAQCFM_Balanced>109.8</IAQCFM_Balanced>
         <StdDesignIAQCFM>109.8</StdDesignIAQCFM>
         <MaxStdDesignIAQPower>131.76</MaxStdDesignIAQPower>
         <TopZEstimate>8.7</TopZEstimate>
@@ -1768,11 +1779,12 @@
         <IAQCFM_Supply>0</IAQCFM_Supply>
         <IAQPwr_Supply>0</IAQPwr_Supply>
         <IAQHRVCFM>75</IAQHRVCFM>
-        <IAQHRVPwr>18.75</IAQHRVPwr>
+        <IAQHRVPwr>45</IAQHRVPwr>
         <IAQHRVCFMxRcvEff>0</IAQHRVCFMxRcvEff>
         <IAQHRVCFMxSRE>0</IAQHRVCFMxSRE>
         <IAQHRVCFMxASRE>0</IAQHRVCFMxASRE>
         <IAQCFMIsBalanced>1</IAQCFMIsBalanced>
+        <IAQCFM_Balanced>75</IAQCFM_Balanced>
         <StdDesignIAQCFM>75</StdDesignIAQCFM>
         <MaxStdDesignIAQPower>90</MaxStdDesignIAQPower>
         <TopZEstimate>17.7</TopZEstimate>
@@ -1825,11 +1837,12 @@
         <IAQCFM_Supply>0</IAQCFM_Supply>
         <IAQPwr_Supply>0</IAQPwr_Supply>
         <IAQHRVCFM>109.8</IAQHRVCFM>
-        <IAQHRVPwr>27.45</IAQHRVPwr>
+        <IAQHRVPwr>65.88</IAQHRVPwr>
         <IAQHRVCFMxRcvEff>0</IAQHRVCFMxRcvEff>
         <IAQHRVCFMxSRE>0</IAQHRVCFMxSRE>
         <IAQHRVCFMxASRE>0</IAQHRVCFMxASRE>
         <IAQCFMIsBalanced>1</IAQCFMIsBalanced>
+        <IAQCFM_Balanced>109.8</IAQCFM_Balanced>
         <StdDesignIAQCFM>109.8</StdDesignIAQCFM>
         <MaxStdDesignIAQPower>131.76</MaxStdDesignIAQPower>
         <TopZEstimate>17.7</TopZEstimate>
@@ -1839,86 +1852,533 @@
     <EUseSummary>
       <Name>EUSummary</Name>
       <Title1 index="1">Proposed Design:</Title1>
+      <Title1 index="4">Standard Design:</Title1>
+      <Title1 index="7">Compliance Margins:</Title1>
       <Title1 index="9">Proposed</Title1>
+      <Title1 index="10">Standard</Title1>
+      <Title1 index="11">Reference Design:</Title1>
+      <Title1 index="14">Design Rating Margins:</Title1>
+      <Title1 index="15">Reference</Title1>
+      <Title1 index="16">Proposed Design:</Title1>
+      <Title1 index="22">Prop Design</Title1>
+      <Title1 index="23">Prop Design</Title1>
+      <Title1 index="24">Prop Design</Title1>
+      <Title1 index="26">Std Design</Title1>
+      <Title1 index="27">Std Design</Title1>
+      <Title1 index="28">Std Design</Title1>
+      <Title1 index="29">CO2</Title1>
       <Title2 index="1">Site</Title2>
       <Title2 index="2">Site</Title2>
       <Title2 index="3">EDR2</Title2>
+      <Title2 index="4">Site</Title2>
+      <Title2 index="5">Site</Title2>
+      <Title2 index="6">EDR2</Title2>
+      <Title2 index="7">EDR2    </Title2>
       <Title2 index="9">Design</Title2>
+      <Title2 index="10">Design</Title2>
+      <Title2 index="11">Site</Title2>
+      <Title2 index="12">Site</Title2>
+      <Title2 index="13">EDR2</Title2>
+      <Title2 index="14">EDR2</Title2>
+      <Title2 index="15">Design</Title2>
+      <Title2 index="16">Site</Title2>
+      <Title2 index="17">Site</Title2>
+      <Title2 index="18">EDR2</Title2>
+      <Title2 index="22">Electric CO2</Title2>
+      <Title2 index="23">Fuel CO2</Title2>
+      <Title2 index="24">Total CO2</Title2>
+      <Title2 index="26">Electric CO2</Title2>
+      <Title2 index="27">Fuel CO2</Title2>
+      <Title2 index="28">Total CO2</Title2>
+      <Title2 index="29">Emissions</Title2>
+      <Title2 index="30">EDR1</Title2>
+      <Title2 index="31">EDR1</Title2>
+      <Title2 index="32">EDR1    </Title2>
+      <Title2 index="33">EDR1</Title2>
+      <Title2 index="34">EDR1</Title2>
+      <Title2 index="35">EDR1</Title2>
       <Title3 index="0">End Use</Title3>
       <Title3 index="1">(kWh)</Title3>
       <Title3 index="2">(therms)</Title3>
       <Title3 index="3">(kTDV/ft²-yr)</Title3>
+      <Title3 index="4">(kWh)</Title3>
+      <Title3 index="5">(therms)</Title3>
+      <Title3 index="6">(kTDV/ft²-yr)</Title3>
+      <Title3 index="7">(kTDV/ft²-yr)</Title3>
       <Title3 index="9">(kW)</Title3>
+      <Title3 index="10">(kW)</Title3>
+      <Title3 index="11">(kWh)</Title3>
+      <Title3 index="12">(therms)</Title3>
+      <Title3 index="13">(kTDV/ft²-yr)</Title3>
+      <Title3 index="14">(kTDV/ft²-yr)</Title3>
+      <Title3 index="15">(kW)</Title3>
+      <Title3 index="16">(kWh)</Title3>
+      <Title3 index="17">(therms)</Title3>
+      <Title3 index="18">(kTDV/ft²-yr)</Title3>
+      <Title3 index="22">Emis. (kg)</Title3>
+      <Title3 index="23">Emis. (kg)</Title3>
+      <Title3 index="24">Emis. (kg)</Title3>
+      <Title3 index="26">Emis. (kg)</Title3>
+      <Title3 index="27">Emis. (kg)</Title3>
+      <Title3 index="28">Emis. (kg)</Title3>
+      <Title3 index="29">Margin (kg)</Title3>
+      <Title3 index="30">(kBtu/ft²-yr)</Title3>
+      <Title3 index="31">(kBtu/ft²-yr)</Title3>
+      <Title3 index="32">(kBtu/ft²-yr)</Title3>
+      <Title3 index="33">(kBtu/ft²-yr)</Title3>
+      <Title3 index="34">(kBtu/ft²-yr)</Title3>
+      <Title3 index="35">(kBtu/ft²-yr)</Title3>
       <Enduse1 index="0">Space Heating</Enduse1>
-      <Enduse1 index="1">654</Enduse1>
-      <Enduse1 index="2">964.7</Enduse1>
-      <Enduse1 index="3">46.59</Enduse1>
+      <Enduse1 index="1">599</Enduse1>
+      <Enduse1 index="2">884.2</Enduse1>
+      <Enduse1 index="3">42.85</Enduse1>
+      <Enduse1 index="4">508</Enduse1>
+      <Enduse1 index="5">750.5</Enduse1>
+      <Enduse1 index="6">36.79</Enduse1>
+      <Enduse1 index="7">-6.06</Enduse1>
       <Enduse1 index="9">0.00</Enduse1>
+      <Enduse1 index="10">0.00</Enduse1>
+      <Enduse1 index="11">1,200</Enduse1>
+      <Enduse1 index="12">998.8</Enduse1>
+      <Enduse1 index="13">51.37</Enduse1>
+      <Enduse1 index="14">8.52</Enduse1>
+      <Enduse1 index="15">0.00</Enduse1>
+      <Enduse1 index="16">599</Enduse1>
+      <Enduse1 index="17">884.2</Enduse1>
+      <Enduse1 index="18">42.85</Enduse1>
+      <Enduse1 index="22">78</Enduse1>
+      <Enduse1 index="23">3,987</Enduse1>
+      <Enduse1 index="24">4,065</Enduse1>
+      <Enduse1 index="26">71</Enduse1>
+      <Enduse1 index="27">3,384</Enduse1>
+      <Enduse1 index="28">3,455</Enduse1>
+      <Enduse1 index="29">-610</Enduse1>
+      <Enduse1 index="30">10.78</Enduse1>
+      <Enduse1 index="31">9.16</Enduse1>
+      <Enduse1 index="32">-1.62</Enduse1>
+      <Enduse1 index="33">10.78</Enduse1>
+      <Enduse1 index="34">12.48</Enduse1>
+      <Enduse1 index="35">1.70</Enduse1>
       <Enduse2 index="0">Space Cooling</Enduse2>
       <Enduse2 index="3">0.00</Enduse2>
+      <Enduse2 index="6">0.00</Enduse2>
+      <Enduse2 index="7">0.00</Enduse2>
       <Enduse2 index="9">0.00</Enduse2>
+      <Enduse2 index="10">0.00</Enduse2>
+      <Enduse2 index="13">0.00</Enduse2>
+      <Enduse2 index="14">0.00</Enduse2>
+      <Enduse2 index="15">0.00</Enduse2>
+      <Enduse2 index="18">0.00</Enduse2>
+      <Enduse2 index="24">0</Enduse2>
+      <Enduse2 index="28">0</Enduse2>
+      <Enduse2 index="29">0</Enduse2>
+      <Enduse2 index="30">0.00</Enduse2>
+      <Enduse2 index="31">0.00</Enduse2>
+      <Enduse2 index="32">0.00</Enduse2>
+      <Enduse2 index="33">0.00</Enduse2>
+      <Enduse2 index="34">0.00</Enduse2>
+      <Enduse2 index="35">0.00</Enduse2>
       <Enduse3 index="0">IAQ Ventilation</Enduse3>
-      <Enduse3 index="1">809</Enduse3>
-      <Enduse3 index="3">2.99</Enduse3>
-      <Enduse3 index="9">0.09</Enduse3>
+      <Enduse3 index="1">1,943</Enduse3>
+      <Enduse3 index="3">7.17</Enduse3>
+      <Enduse3 index="4">1,943</Enduse3>
+      <Enduse3 index="6">7.17</Enduse3>
+      <Enduse3 index="7">0.00</Enduse3>
+      <Enduse3 index="9">0.22</Enduse3>
+      <Enduse3 index="10">0.22</Enduse3>
+      <Enduse3 index="11">1,943</Enduse3>
+      <Enduse3 index="13">7.17</Enduse3>
+      <Enduse3 index="14">0.00</Enduse3>
+      <Enduse3 index="15">0.22</Enduse3>
+      <Enduse3 index="16">1,943</Enduse3>
+      <Enduse3 index="18">7.17</Enduse3>
+      <Enduse3 index="22">260</Enduse3>
+      <Enduse3 index="24">260</Enduse3>
+      <Enduse3 index="26">260</Enduse3>
+      <Enduse3 index="28">260</Enduse3>
+      <Enduse3 index="29">0</Enduse3>
+      <Enduse3 index="30">0.67</Enduse3>
+      <Enduse3 index="31">0.67</Enduse3>
+      <Enduse3 index="32">0.00</Enduse3>
+      <Enduse3 index="33">0.67</Enduse3>
+      <Enduse3 index="34">0.67</Enduse3>
+      <Enduse3 index="35">0.00</Enduse3>
       <Enduse4 index="0">Other HVAC</Enduse4>
       <Enduse4 index="3">0.00</Enduse4>
+      <Enduse4 index="6">0.00</Enduse4>
+      <Enduse4 index="7">0.00</Enduse4>
       <Enduse4 index="9">0.00</Enduse4>
+      <Enduse4 index="10">0.00</Enduse4>
+      <Enduse4 index="13">0.00</Enduse4>
+      <Enduse4 index="14">0.00</Enduse4>
+      <Enduse4 index="15">0.00</Enduse4>
+      <Enduse4 index="18">0.00</Enduse4>
+      <Enduse4 index="24">0</Enduse4>
+      <Enduse4 index="28">0</Enduse4>
+      <Enduse4 index="30">0.00</Enduse4>
+      <Enduse4 index="31">0.00</Enduse4>
+      <Enduse4 index="32">0.00</Enduse4>
+      <Enduse4 index="33">0.00</Enduse4>
+      <Enduse4 index="34">0.00</Enduse4>
+      <Enduse4 index="35">0.00</Enduse4>
       <Enduse5 index="0">Water Heating</Enduse5>
-      <Enduse5 index="1">7,000</Enduse5>
-      <Enduse5 index="3">25.46</Enduse5>
-      <Enduse5 index="9">0.87</Enduse5>
+      <Enduse5 index="1">7,095</Enduse5>
+      <Enduse5 index="3">25.86</Enduse5>
+      <Enduse5 index="4">132</Enduse5>
+      <Enduse5 index="5">1,142.2</Enduse5>
+      <Enduse5 index="6">51.67</Enduse5>
+      <Enduse5 index="7">25.81</Enduse5>
+      <Enduse5 index="9">0.55</Enduse5>
+      <Enduse5 index="10">0.01</Enduse5>
+      <Enduse5 index="11">24,107</Enduse5>
+      <Enduse5 index="13">87.52</Enduse5>
+      <Enduse5 index="14">61.66</Enduse5>
+      <Enduse5 index="15">2.73</Enduse5>
+      <Enduse5 index="16">7,095</Enduse5>
+      <Enduse5 index="18">25.86</Enduse5>
+      <Enduse5 index="22">876</Enduse5>
+      <Enduse5 index="24">876</Enduse5>
+      <Enduse5 index="26">14</Enduse5>
+      <Enduse5 index="27">5,150</Enduse5>
+      <Enduse5 index="28">5,164</Enduse5>
+      <Enduse5 index="29">4,288</Enduse5>
+      <Enduse5 index="30">2.25</Enduse5>
+      <Enduse5 index="31">13.70</Enduse5>
+      <Enduse5 index="32">11.45</Enduse5>
+      <Enduse5 index="33">2.25</Enduse5>
+      <Enduse5 index="34">7.19</Enduse5>
+      <Enduse5 index="35">4.94</Enduse5>
       <Enduse6 index="0">Inside Lighting</Enduse6>
       <Enduse6 index="1">2,098</Enduse6>
       <Enduse6 index="3">9.21</Enduse6>
+      <Enduse6 index="4">2,098</Enduse6>
+      <Enduse6 index="6">9.21</Enduse6>
+      <Enduse6 index="7">0.00</Enduse6>
       <Enduse6 index="9">0.56</Enduse6>
+      <Enduse6 index="10">0.56</Enduse6>
+      <Enduse6 index="11">6,111</Enduse6>
+      <Enduse6 index="13">26.01</Enduse6>
+      <Enduse6 index="14">16.80</Enduse6>
+      <Enduse6 index="15">1.78</Enduse6>
+      <Enduse6 index="16">2,098</Enduse6>
+      <Enduse6 index="18">9.21</Enduse6>
+      <Enduse6 index="22">344</Enduse6>
+      <Enduse6 index="24">344</Enduse6>
+      <Enduse6 index="26">344</Enduse6>
+      <Enduse6 index="28">344</Enduse6>
+      <Enduse6 index="29">0</Enduse6>
+      <Enduse6 index="30">0.88</Enduse6>
+      <Enduse6 index="31">0.88</Enduse6>
+      <Enduse6 index="32">0.00</Enduse6>
+      <Enduse6 index="33">0.88</Enduse6>
+      <Enduse6 index="34">2.48</Enduse6>
+      <Enduse6 index="35">1.60</Enduse6>
       <Enduse7 index="0">Appl. &amp; Cooking</Enduse7>
-      <Enduse7 index="1">5,242</Enduse7>
+      <Enduse7 index="1">5,247</Enduse7>
       <Enduse7 index="2">293.9</Enduse7>
-      <Enduse7 index="3">32.36</Enduse7>
+      <Enduse7 index="3">32.38</Enduse7>
+      <Enduse7 index="4">5,273</Enduse7>
+      <Enduse7 index="5">293.9</Enduse7>
+      <Enduse7 index="6">32.47</Enduse7>
+      <Enduse7 index="7">0.09</Enduse7>
       <Enduse7 index="9">0.66</Enduse7>
+      <Enduse7 index="10">0.67</Enduse7>
+      <Enduse7 index="11">6,587</Enduse7>
+      <Enduse7 index="12">295.8</Enduse7>
+      <Enduse7 index="13">37.75</Enduse7>
+      <Enduse7 index="14">5.37</Enduse7>
+      <Enduse7 index="15">0.82</Enduse7>
+      <Enduse7 index="16">5,247</Enduse7>
+      <Enduse7 index="17">293.9</Enduse7>
+      <Enduse7 index="18">32.38</Enduse7>
+      <Enduse7 index="22">654</Enduse7>
+      <Enduse7 index="23">1,325</Enduse7>
+      <Enduse7 index="24">1,979</Enduse7>
+      <Enduse7 index="26">658</Enduse7>
+      <Enduse7 index="27">1,325</Enduse7>
+      <Enduse7 index="28">1,983</Enduse7>
+      <Enduse7 index="29">4</Enduse7>
+      <Enduse7 index="30">5.20</Enduse7>
+      <Enduse7 index="31">5.21</Enduse7>
+      <Enduse7 index="32">0.01</Enduse7>
+      <Enduse7 index="33">5.20</Enduse7>
+      <Enduse7 index="34">5.84</Enduse7>
+      <Enduse7 index="35">0.64</Enduse7>
       <Enduse8 index="0">Plug Loads</Enduse8>
       <Enduse8 index="1">12,062</Enduse8>
       <Enduse8 index="3">46.86</Enduse8>
+      <Enduse8 index="4">12,062</Enduse8>
+      <Enduse8 index="6">46.86</Enduse8>
+      <Enduse8 index="7">0.00</Enduse8>
       <Enduse8 index="9">1.82</Enduse8>
+      <Enduse8 index="10">1.82</Enduse8>
+      <Enduse8 index="11">10,952</Enduse8>
+      <Enduse8 index="13">42.34</Enduse8>
+      <Enduse8 index="14">-4.52</Enduse8>
+      <Enduse8 index="15">1.79</Enduse8>
+      <Enduse8 index="16">12,062</Enduse8>
+      <Enduse8 index="18">46.86</Enduse8>
+      <Enduse8 index="22">1,723</Enduse8>
+      <Enduse8 index="24">1,723</Enduse8>
+      <Enduse8 index="26">1,723</Enduse8>
+      <Enduse8 index="28">1,723</Enduse8>
+      <Enduse8 index="29">0</Enduse8>
+      <Enduse8 index="30">4.43</Enduse8>
+      <Enduse8 index="31">4.43</Enduse8>
+      <Enduse8 index="32">0.00</Enduse8>
+      <Enduse8 index="33">4.43</Enduse8>
+      <Enduse8 index="34">4.03</Enduse8>
+      <Enduse8 index="35">-0.40</Enduse8>
       <Enduse9 index="0">Exterior</Enduse9>
       <Enduse9 index="1">453</Enduse9>
       <Enduse9 index="3">1.90</Enduse9>
+      <Enduse9 index="4">453</Enduse9>
+      <Enduse9 index="6">1.90</Enduse9>
+      <Enduse9 index="7">0.00</Enduse9>
       <Enduse9 index="9">0.08</Enduse9>
+      <Enduse9 index="10">0.08</Enduse9>
+      <Enduse9 index="11">559</Enduse9>
+      <Enduse9 index="13">2.56</Enduse9>
+      <Enduse9 index="14">0.66</Enduse9>
+      <Enduse9 index="15">0.12</Enduse9>
+      <Enduse9 index="16">453</Enduse9>
+      <Enduse9 index="18">1.90</Enduse9>
+      <Enduse9 index="22">78</Enduse9>
+      <Enduse9 index="24">78</Enduse9>
+      <Enduse9 index="26">78</Enduse9>
+      <Enduse9 index="28">78</Enduse9>
+      <Enduse9 index="29">0</Enduse9>
+      <Enduse9 index="30">0.20</Enduse9>
+      <Enduse9 index="31">0.20</Enduse9>
+      <Enduse9 index="32">0.00</Enduse9>
+      <Enduse9 index="33">0.20</Enduse9>
+      <Enduse9 index="34">0.29</Enduse9>
+      <Enduse9 index="35">0.09</Enduse9>
       <Enduse10 index="0">TOTAL</Enduse10>
-      <Enduse10 index="1">26,980</Enduse10>
-      <Enduse10 index="2">1,258.6</Enduse10>
-      <Enduse10 index="3">161.65</Enduse10>
-      <Enduse10 index="9">4.05</Enduse10>
+      <Enduse10 index="1">7,027</Enduse10>
+      <Enduse10 index="2">1,178.1</Enduse10>
+      <Enduse10 index="3">109.86</Enduse10>
+      <Enduse10 index="4">0</Enduse10>
+      <Enduse10 index="5">2,186.6</Enduse10>
+      <Enduse10 index="6">130.78</Enduse10>
+      <Enduse10 index="7">20.92</Enduse10>
+      <Enduse10 index="9">3.53</Enduse10>
+      <Enduse10 index="10">3.00</Enduse10>
+      <Enduse10 index="11">51,458</Enduse10>
+      <Enduse10 index="12">1,294.7</Enduse10>
+      <Enduse10 index="13">254.72</Enduse10>
+      <Enduse10 index="14">144.86</Enduse10>
+      <Enduse10 index="15">7.46</Enduse10>
+      <Enduse10 index="16">7,027</Enduse10>
+      <Enduse10 index="17">1,178.1</Enduse10>
+      <Enduse10 index="18">109.86</Enduse10>
+      <Enduse10 index="22">3,387</Enduse10>
+      <Enduse10 index="23">5,312</Enduse10>
+      <Enduse10 index="24">8,699</Enduse10>
+      <Enduse10 index="26">2,522</Enduse10>
+      <Enduse10 index="27">9,859</Enduse10>
+      <Enduse10 index="28">12,381</Enduse10>
+      <Enduse10 index="29">3,682</Enduse10>
+      <Enduse10 index="30">22.80</Enduse10>
+      <Enduse10 index="31">32.64</Enduse10>
+      <Enduse10 index="32">9.84</Enduse10>
+      <Enduse10 index="33">22.80</Enduse10>
+      <Enduse10 index="34">32.98</Enduse10>
+      <Enduse10 index="35">10.18</Enduse10>
       <Enduse11 index="0">Compliance Total</Enduse11>
-      <Enduse11 index="1">8,463</Enduse11>
-      <Enduse11 index="2">964.7</Enduse11>
-      <Enduse11 index="3">75.04</Enduse11>
-      <Enduse11 index="9">0.97</Enduse11>
+      <Enduse11 index="1">9,637</Enduse11>
+      <Enduse11 index="2">884.2</Enduse11>
+      <Enduse11 index="3">75.88</Enduse11>
+      <Enduse11 index="4">2,583</Enduse11>
+      <Enduse11 index="5">1,892.7</Enduse11>
+      <Enduse11 index="6">95.63</Enduse11>
+      <Enduse11 index="7">19.75</Enduse11>
+      <Enduse11 index="9">0.78</Enduse11>
+      <Enduse11 index="10">0.23</Enduse11>
+      <Enduse11 index="11">27,250</Enduse11>
+      <Enduse11 index="12">998.8</Enduse11>
+      <Enduse11 index="13">146.06</Enduse11>
+      <Enduse11 index="14">70.18</Enduse11>
+      <Enduse11 index="15">2.95</Enduse11>
+      <Enduse11 index="16">9,637</Enduse11>
+      <Enduse11 index="17">1,178.1</Enduse11>
+      <Enduse11 index="18">75.88</Enduse11>
+      <Enduse11 index="22">1,214</Enduse11>
+      <Enduse11 index="23">3,987</Enduse11>
+      <Enduse11 index="24">5,201</Enduse11>
+      <Enduse11 index="26">345</Enduse11>
+      <Enduse11 index="27">8,534</Enduse11>
+      <Enduse11 index="28">8,879</Enduse11>
+      <Enduse11 index="29">3,678</Enduse11>
+      <Enduse11 index="30">13.70</Enduse11>
+      <Enduse11 index="31">23.53</Enduse11>
+      <Enduse11 index="32">9.83</Enduse11>
+      <Enduse11 index="33">13.70</Enduse11>
+      <Enduse11 index="34">20.34</Enduse11>
+      <Enduse11 index="35">6.64</Enduse11>
       <Enduse13 index="0">Photovoltaics</Enduse13>
-      <Enduse13 index="1">-1,338</Enduse13>
-      <Enduse13 index="3">-3.72</Enduse13>
-      <Enduse13 index="9">-0.04</Enduse13>
+      <Enduse13 index="1">-22,469</Enduse13>
+      <Enduse13 index="3">-56.37</Enduse13>
+      <Enduse13 index="4">-22,469</Enduse13>
+      <Enduse13 index="6">-55.29</Enduse13>
+      <Enduse13 index="7">1.08</Enduse13>
+      <Enduse13 index="9">-0.36</Enduse13>
+      <Enduse13 index="13"> </Enduse13>
+      <Enduse13 index="14">56.37</Enduse13>
+      <Enduse13 index="16">-22,469</Enduse13>
+      <Enduse13 index="18">-56.37</Enduse13>
+      <Enduse13 index="22">-626</Enduse13>
+      <Enduse13 index="24">-626</Enduse13>
+      <Enduse13 index="26">-626</Enduse13>
+      <Enduse13 index="28">-626</Enduse13>
+      <Enduse13 index="29">0</Enduse13>
+      <Enduse13 index="30">-1.61</Enduse13>
+      <Enduse13 index="31">-1.61</Enduse13>
+      <Enduse13 index="32">0.00</Enduse13>
+      <Enduse13 index="33">-1.61</Enduse13>
+      <Enduse13 index="34"> </Enduse13>
+      <Enduse13 index="35">1.61</Enduse13>
       <Enduse14 index="0">Battery</Enduse14>
       <Enduse14 index="3">0.00</Enduse14>
+      <Enduse14 index="6"> </Enduse14>
+      <Enduse14 index="7">0.00</Enduse14>
       <Enduse14 index="9">0.00</Enduse14>
+      <Enduse14 index="10">0.00</Enduse14>
+      <Enduse14 index="13"> </Enduse14>
+      <Enduse14 index="14">0.00</Enduse14>
+      <Enduse14 index="15">0.00</Enduse14>
+      <Enduse14 index="18">0.00</Enduse14>
+      <Enduse14 index="24">0</Enduse14>
+      <Enduse14 index="28">0</Enduse14>
+      <Enduse14 index="29">0</Enduse14>
+      <Enduse14 index="30">0.00</Enduse14>
+      <Enduse14 index="31"> </Enduse14>
+      <Enduse14 index="32">0.00</Enduse14>
+      <Enduse14 index="33">0.00</Enduse14>
+      <Enduse14 index="34"> </Enduse14>
+      <Enduse14 index="35">0.00</Enduse14>
       <Enduse98 index="0">Flexibility</Enduse98>
+      <Enduse98 index="14">0.00</Enduse98>
       <Enduse99 index="0">Self Utilization Credit</Enduse99>
+      <Enduse99 index="3">0.00</Enduse99>
+      <Enduse99 index="7">0.00</Enduse99>
+      <Enduse99 index="14">0.00</Enduse99>
+      <Enduse99 index="18">0.00</Enduse99>
+      <Enduse99 index="24">0</Enduse99>
+      <Enduse99 index="28">0</Enduse99>
+      <Enduse99 index="29">0</Enduse99>
+      <PassFail>PASS</PassFail>
+      <ComplyMessage>COMPLIES</ComplyMessage>
+      <SummaryCol1 index="3">Standard Design</SummaryCol1>
+      <SummaryCol1 index="4">Proposed Design</SummaryCol1>
+      <SummaryCol2 index="0">Compliance</SummaryCol2>
+      <SummaryCol2 index="1">Energy Use</SummaryCol2>
+      <SummaryCol2 index="2">(kTDV/ft²-yr)</SummaryCol2>
+      <SummaryCol2 index="3">95.63</SummaryCol2>
+      <SummaryCol2 index="4">75.88</SummaryCol2>
+      <SummaryColNPVMarg index="1">Efficiency¹</SummaryColNPVMarg>
+      <SummaryColNPVMarg index="2">(EDR2)</SummaryColNPVMarg>
+      <SummaryColNPVMarg index="4">7.7</SummaryColNPVMarg>
+      <SummaryColFinMarg index="1">Total²</SummaryColFinMarg>
+      <SummaryColFinMarg index="2">(EDR2)</SummaryColFinMarg>
+      <SummaryColFinMarg index="4">8.2</SummaryColFinMarg>
+      <SummaryColNoPVDR index="1">Efficiency¹</SummaryColNoPVDR>
+      <SummaryColNoPVDR index="2">(EDR2)</SummaryColNoPVDR>
+      <SummaryColNoPVDR index="3">73.0</SummaryColNoPVDR>
+      <SummaryColNoPVDR index="4">65.3</SummaryColNoPVDR>
+      <SummaryColPVOnlyDR index="1">Flexibility</SummaryColPVOnlyDR>
+      <SummaryColPVOnlyDR index="2">(EDR2)</SummaryColPVOnlyDR>
+      <SummaryColPVOnlyDR index="3">21.7</SummaryColPVOnlyDR>
+      <SummaryColPVOnlyDR index="4">22.2</SummaryColPVOnlyDR>
+      <SummaryColFinDR index="1">Total²</SummaryColFinDR>
+      <SummaryColFinDR index="2">(EDR2)</SummaryColFinDR>
+      <SummaryColFinDR index="3">51.3</SummaryColFinDR>
+      <SummaryColFinDR index="4">43.1</SummaryColFinDR>
+      <SummaryColEDR1Marg index="1">Source</SummaryColEDR1Marg>
+      <SummaryColEDR1Marg index="2">(EDR1)</SummaryColEDR1Marg>
+      <SummaryColEDR1Marg index="4">29.9</SummaryColEDR1Marg>
+      <SummaryColEDR1 index="1">Source</SummaryColEDR1>
+      <SummaryColEDR1 index="2">(EDR1)</SummaryColEDR1>
+      <SummaryColEDR1 index="3">99.0</SummaryColEDR1>
+      <SummaryColEDR1 index="4">69.1</SummaryColEDR1>
+      <MarginkW index="0">-0.53</MarginkW>
+      <MarginkW index="1">3.93</MarginkW>
+      <MarginkWh>-7027.5</MarginkWh>
+      <MarginTherms>1008.48</MarginTherms>
+      <PctSavingskW>-17.8</PctSavingskW>
+      <PctSavingsTherms>46.1</PctSavingsTherms>
+      <PctSavingsTDV>16</PctSavingsTDV>
+      <PctSavingsCmpTDV>20.7</PctSavingsCmpTDV>
+      <PctSavkWLbl>-17.8</PctSavkWLbl>
+      <PctSavkWhLbl>-</PctSavkWhLbl>
+      <PctSavThermsLbl>46.1</PctSavThermsLbl>
+      <PctSavTDVLbl>16.0</PctSavTDVLbl>
+      <PctSavCmpTDVLbl>20.7</PctSavCmpTDVLbl>
+      <PropElecDemand index="0">3.52989</PropElecDemand>
+      <PropElecDemand index="1">3.52989</PropElecDemand>
+      <StdElecDemand>2.99589</StdElecDemand>
+      <DRtgElecDemand>7.46276</DRtgElecDemand>
+      <StdMixedFuelkWh>22475.7</StdMixedFuelkWh>
+      <StdMixedFuelPV>-1310.59</StdMixedFuelPV>
       <PropDesignPVInp index="0">1</PropDesignPVInp>
       <PropDesignPVInp index="5">1</PropDesignPVInp>
-      <UnscaledPropPVRatio>0.0472461</UnscaledPropPVRatio>
-      <PropElecCarbon index="0">3.80597</PropElecCarbon>
-      <PropFuelCarbon index="0">5.67502</PropFuelCarbon>
-      <PropFinalCarbon index="0">9.48099</PropFinalCarbon>
-      <PropExclExpCarbon index="0">9.48099</PropExclExpCarbon>
-      <PropExportCarbon index="0">0</PropExportCarbon>
-      <PropSelfConsCarbon index="0">0.0411855</PropSelfConsCarbon>
-      <PropNoSolFlxCarbon index="0">9.52218</PropNoSolFlxCarbon>
-      <HideCompSummary>4</HideCompSummary>
-      <HideEDRs>4</HideEDRs>
+      <PropDesignPVSize index="0">17.1493</PropDesignPVSize>
+      <StdDesignPVSize>17.1493</StdDesignPVSize>
+      <StdMixedFuelPVTDV>-55.29</StdMixedFuelPVTDV>
+      <StdMixedFuelPVMlt>17.1493</StdMixedFuelPVMlt>
+      <PrelimPropkWh>29505.2</PrelimPropkWh>
+      <PrelimPropCompTDV>75.8837</PrelimPropCompTDV>
+      <PrelimPropPV>-1310.59</PrelimPropPV>
+      <UnscaledPropPVRatio>0.761753</UnscaledPropPVRatio>
+      <StdDHW_SSF>0.2</StdDHW_SSF>
+      <ResultsNotes index="0">PV System resized to 17.15 kWdc (a factor of 17.149) to achieve 'Standard Design PV' PV scaling</ResultsNotes>
+      <ResultsNotes index="3">PV System resized to 17.15 kWdc (a factor of 17.149) to achieve 'Standard Design PV' PV scaling</ResultsNotes>
+      <ResultsNotes index="4">Standard Design PV Capacity: 17.15 kWdc</ResultsNotes>
+      <HaveResultsNotesPV index="0">1</HaveResultsNotesPV>
+      <HaveResultsNotesPV index="3">1</HaveResultsNotesPV>
+      <HaveResultsNotesPV index="4">1</HaveResultsNotesPV>
+      <DesignRating>43.1</DesignRating>
+      <DesignRatingNoPV>65.3</DesignRatingNoPV>
+      <ShowDesignRtgNoPV>1</ShowDesignRtgNoPV>
+      <DesignRatingPVOnly>22.2</DesignRatingPVOnly>
+      <DesignRatingStd>51.3</DesignRatingStd>
+      <DesignRatingStdNoPV>73</DesignRatingStdNoPV>
+      <DesignRatingStdPVOnly>21.7</DesignRatingStdPVOnly>
+      <MarginEfficEDR>7.7</MarginEfficEDR>
+      <MarginFinalEDR>8.2</MarginFinalEDR>
+      <EDR1DesignRating>69.1</EDR1DesignRating>
+      <EDR1DesignRatingStd>99</EDR1DesignRatingStd>
+      <EDR1Margin>29.9</EDR1Margin>
+      <CO2FuelUnitLabel>kg</CO2FuelUnitLabel>
+      <CO2TotalUnitLabel>kg</CO2TotalUnitLabel>
+      <GHCEnergyEffCap>0</GHCEnergyEffCap>
+      <GHCEnergyEffBattFrac>0</GHCEnergyEffBattFrac>
+      <GHCEnergyEffTDV>0</GHCEnergyEffTDV>
+      <GHCEnergyEffElec>0</GHCEnergyEffElec>
+      <GHCEnergyEffCO2>0</GHCEnergyEffCO2>
+      <MeetsTier1>1</MeetsTier1>
+      <MeetsTier2>0</MeetsTier2>
+      <MeetsZNETier>0</MeetsZNETier>
+      <PropElecCarbon index="0">3.38704</PropElecCarbon>
+      <PropFuelCarbon index="0">5.31219</PropFuelCarbon>
+      <PropFinalCarbon index="0">8.7</PropFinalCarbon>
+      <PropExclExpCarbon index="0">8.91</PropExclExpCarbon>
+      <PropExportCarbon index="0">0.21</PropExportCarbon>
+      <PropSelfConsCarbon index="0">0.42</PropSelfConsCarbon>
+      <PropNoSolFlxCarbon index="0">9.33</PropNoSolFlxCarbon>
+      <StdFinalCarbon>12.38</StdFinalCarbon>
+      <StdExclExpCarbon>12.65</StdExclExpCarbon>
+      <StdExportCarbon>0.27</StdExportCarbon>
+      <StdSelfConsCarbon>0.36</StdSelfConsCarbon>
+      <StdNoSolFlxCarbon>13.01</StdNoSolFlxCarbon>
+      <DRtgFinalCarbon>12.6334</DRtgFinalCarbon>
+      <DRtgExclExpCarbon>12.6334</DRtgExclExpCarbon>
+      <DRtgExportCarbon>0</DRtgExportCarbon>
+      <DRtgSelfConsCarbon>0</DRtgSelfConsCarbon>
+      <DRtgNoSolFlxCarbon>12.6334</DRtgNoSolFlxCarbon>
+      <HideCompSummary>0</HideCompSummary>
+      <HideEDRs>0</HideEDRs>
       <HideC02Emissions>0</HideC02Emissions>
-      <CompSummaryMsg>Compliance Summary not available for analysis type 'Proposed Only'</CompSummaryMsg>
-      <EDRMsg>Energy Design Ratings not available for analysis type 'Proposed Only'</EDRMsg>
     </EUseSummary>
     <Attic>
       <Name>Attic</Name>
@@ -4318,10 +4778,11 @@
     <IAQCFM_Supply>0</IAQCFM_Supply>
     <IAQPwr_Supply>0</IAQPwr_Supply>
     <IAQHRVCFM>37.5</IAQHRVCFM>
-    <IAQHRVPwr>9.375</IAQHRVPwr>
+    <IAQHRVPwr>22.5</IAQHRVPwr>
     <IAQHRVCFMxRcvEff>0</IAQHRVCFMxRcvEff>
     <IAQHRVCFMxSRE>0</IAQHRVCFMxSRE>
     <IAQHRVCFMxASRE>0</IAQHRVCFMxASRE>
+    <IAQCFMFracHRVCompat>1</IAQCFMFracHRVCompat>
     <HVACSysType>Other Heating and Cooling System</HVACSysType>
     <HVACSysTypeAbbrev>Other Heat/Cool</HVACSysTypeAbbrev>
     <HVACSysTypeAbbrevStr>Other Heat/Cool</HVACSysTypeAbbrevStr>
@@ -4346,7 +4807,9 @@
     <CoolEquipCount index="3">0</CoolEquipCount>
     <CoolEquipCount index="4">0</CoolEquipCount>
     <NumCoolEqpUnits>1</NumCoolEqpUnits>
+    <CoolEqpType>SplitAirCond - Split air conditioning system</CoolEqpType>
     <CoolEqpTypeAbbrev>SplitAirCond</CoolEqpTypeAbbrev>
+    <PrevCoolEqpType>SplitAirCond - Split air conditioning system</PrevCoolEqpType>
     <CoolEqpTypeSetup>1</CoolEqpTypeSetup>
     <ClEqpSEER>14</ClEqpSEER>
     <ClEqpEER>11.7</ClEqpEER>
@@ -4520,10 +4983,11 @@
     <IAQCFM_Supply>0</IAQCFM_Supply>
     <IAQPwr_Supply>0</IAQPwr_Supply>
     <IAQHRVCFM>54.9</IAQHRVCFM>
-    <IAQHRVPwr>13.725</IAQHRVPwr>
+    <IAQHRVPwr>32.94</IAQHRVPwr>
     <IAQHRVCFMxRcvEff>0</IAQHRVCFMxRcvEff>
     <IAQHRVCFMxSRE>0</IAQHRVCFMxSRE>
     <IAQHRVCFMxASRE>0</IAQHRVCFMxASRE>
+    <IAQCFMFracHRVCompat>1</IAQCFMFracHRVCompat>
     <HVACSysType>Other Heating and Cooling System</HVACSysType>
     <HVACSysTypeAbbrev>Other Heat/Cool</HVACSysTypeAbbrev>
     <HVACSysTypeAbbrevStr>Other Heat/Cool</HVACSysTypeAbbrevStr>
@@ -4548,7 +5012,9 @@
     <CoolEquipCount index="3">0</CoolEquipCount>
     <CoolEquipCount index="4">0</CoolEquipCount>
     <NumCoolEqpUnits>1</NumCoolEqpUnits>
+    <CoolEqpType>SplitAirCond - Split air conditioning system</CoolEqpType>
     <CoolEqpTypeAbbrev>SplitAirCond</CoolEqpTypeAbbrev>
+    <PrevCoolEqpType>SplitAirCond - Split air conditioning system</PrevCoolEqpType>
     <CoolEqpTypeSetup>1</CoolEqpTypeSetup>
     <ClEqpSEER>14</ClEqpSEER>
     <ClEqpEER>11.7</ClEqpEER>
@@ -5342,7 +5808,7 @@
     <DuctLeakage>Sealed and tested</DuctLeakage>
     <DuctLeakageVal>5</DuctLeakageVal>
     <DuctLeakageValUse>7</DuctLeakageValUse>
-    <DuctLeakageValRpt>5</DuctLeakageValRpt>
+    <DuctLeakageValRpt>6</DuctLeakageValRpt>
     <HasBypassDuct>0</HasBypassDuct>
     <DuctLocation>Outside</DuctLocation>
     <DuctInsRvalOpt>4.2</DuctInsRvalOpt>
@@ -5432,18 +5898,30 @@
   <IAQFan>
     <Name>IAQFan1</Name>
     <IAQCFM>37.5</IAQCFM>
-    <WperCFMIAQ>0.25</WperCFMIAQ>
+    <WperCFMIAQ>0.6</WperCFMIAQ>
     <IAQFanType>Balanced</IAQFanType>
     <IAQRecovEffect>0</IAQRecovEffect>
+    <IncludesRecov>0</IncludesRecov>
+    <SetPerfByHVIInterp>0</SetPerfByHVIInterp>
+    <IAQErrID>0</IAQErrID>
+    <TreeDescrip>Balanced, 37.5 CFM</TreeDescrip>
     <IAQFanTypeStr>Balanced</IAQFanTypeStr>
+    <NumAssignments>1</NumAssignments>
+    <WperCFMIAQRpt>0.6</WperCFMIAQRpt>
   </IAQFan>
   <IAQFan>
     <Name>IAQFan2</Name>
     <IAQCFM>54.9</IAQCFM>
-    <WperCFMIAQ>0.25</WperCFMIAQ>
+    <WperCFMIAQ>0.6</WperCFMIAQ>
     <IAQFanType>Balanced</IAQFanType>
     <IAQRecovEffect>0</IAQRecovEffect>
+    <IncludesRecov>0</IncludesRecov>
+    <SetPerfByHVIInterp>0</SetPerfByHVIInterp>
+    <IAQErrID>0</IAQErrID>
+    <TreeDescrip>Balanced, 54.9 CFM</TreeDescrip>
     <IAQFanTypeStr>Balanced</IAQFanTypeStr>
+    <NumAssignments>1</NumAssignments>
+    <WperCFMIAQRpt>0.6</WperCFMIAQRpt>
   </IAQFan>
   <DHWSys>
     <Name>DHWGas</Name>
@@ -5456,7 +5934,7 @@
     <CentralDHWTypeVal>1</CentralDHWTypeVal>
     <IsRecircSystem>1</IsRecircSystem>
     <CentralElecDHW>0</CentralElecDHW>
-    <NewCentralElecModel>0</NewCentralElecModel>
+    <NewCentralElecModel>1</NewCentralElecModel>
     <UseMaxDurNumHtrs>0</UseMaxDurNumHtrs>
     <LoadMaxNumHrs>12</LoadMaxNumHrs>
     <DrawMaxNumHrs>4</DrawMaxNumHrs>
@@ -5468,8 +5946,9 @@
     <NumDHWHeaters>1</NumDHWHeaters>
     <TotNumDHWHeaters>1</TotNumDHWHeaters>
     <FirstDHWHtrIndex>1</FirstDHWHtrIndex>
-    <RecircPumpPwrUnits>bhp</RecircPumpPwrUnits>
-    <RecircPumpHP>0.05</RecircPumpHP>
+    <RecircPumpPwr>62.1667</RecircPumpPwr>
+    <RecircPumpPwrUnits>Watts</RecircPumpPwrUnits>
+    <RecircPumpHP>0.5</RecircPumpHP>
     <RecircPumpEff>0.6</RecircPumpEff>
     <UseDefaultLoops>1</UseDefaultLoops>
     <LoopPipeInsulThk index="0">1.5</LoopPipeInsulThk>
@@ -5496,9 +5975,7 @@
     <NumDWHRSysRefs>0</NumDWHRSysRefs>
     <NumDWHRSysDevices>0</NumDWHRSysDevices>
     <DHWSolarSysRef>DHW Solar System</DHWSolarSysRef>
-    <SolFracType>Annual</SolFracType>
-    <SolFracAnn>0.2</SolFracAnn>
-    <SolFracAnnRpt>0.2</SolFracAnnRpt>
+    <SolFracType>- none -</SolFracType>
     <TreeDescrip>not assigned</TreeDescrip>
     <IsNew>1</IsNew>
     <IsAltered>0</IsAltered>
@@ -5572,7 +6049,7 @@
     <SystemType>Standard</SystemType>
     <Status>New</Status>
     <IsVerified>0</IsVerified>
-    <MFamDistType>Multi-family: Recirculating with no control (continuous pumping)</MFamDistType>
+    <MFamDistType>Multi-family: Recirculation demand control</MFamDistType>
     <CentralDHW>1</CentralDHW>
     <CentralDHWType>HPWH</CentralDHWType>
     <CentralDHWTypeVal>2</CentralDHWTypeVal>
@@ -5586,7 +6063,9 @@
     <CHPWHLoopTankVol>80</CHPWHLoopTankVol>
     <CHPWHAutosize>0</CHPWHAutosize>
     <CHPWHNumComp>2</CHPWHNumComp>
+    <CHPWHNumCompFlt>2</CHPWHNumCompFlt>
     <CHPWHPrimTankVol>67.5</CHPWHPrimTankVol>
+    <ValidAnalysisCHPWH>1</ValidAnalysisCHPWH>
     <CmpctDistAllowed>0</CmpctDistAllowed>
     <CompactDistrib>not compact</CompactDistrib>
     <DHWHeater index="0">Heatpump</DHWHeater>
@@ -5626,9 +6105,7 @@
     <DWHRSysConfig index="5">- specify -</DWHRSysConfig>
     <NumDWHRSysRefs>0</NumDWHRSysRefs>
     <NumDWHRSysDevices>0</NumDWHRSysDevices>
-    <SolFracType>Annual</SolFracType>
-    <SolFracAnn>0.2</SolFracAnn>
-    <SolFracAnnRpt>0.2</SolFracAnnRpt>
+    <SolFracType>- none -</SolFracType>
     <TreeDescrip>7,320 SqFt assigned</TreeDescrip>
     <IsNew>1</IsNew>
     <IsAltered>0</IsAltered>
@@ -5828,6 +6305,7 @@
     <TankType>Residential-Duty Commercial Storage (UEF)</TankType>
     <HeaterType>14</HeaterType>
     <HPWH_NEEARated>0</HPWH_NEEARated>
+    <CentralHPWHCprsrType>- not central -</CentralHPWHCprsrType>
     <HPWHBrand>n/a</HPWHBrand>
     <HPWHModel>n/a</HPWHModel>
     <ASHPType>- select HPWH type -</ASHPType>
@@ -5878,6 +6356,7 @@
     <EFRangeChkID>0</EFRangeChkID>
     <IsDemandResponse>0</IsDemandResponse>
     <IsNEEAHtPumpWtrHtr>0</IsNEEAHtPumpWtrHtr>
+    <IsElecCentralHtr>1</IsElecCentralHtr>
     <NumAssignedDUFracs>0</NumAssignedDUFracs>
     <NumAssignedBRFracs>0</NumAssignedBRFracs>
     <UEFModelDrawVar>FHR</UEFModelDrawVar>
@@ -5905,6 +6384,7 @@
     <TankType>Small Storage</TankType>
     <HeaterType>6</HeaterType>
     <HPWH_NEEARated>1</HPWH_NEEARated>
+    <CentralHPWHCprsrType>- not central -</CentralHPWHCprsrType>
     <HPWHBrand>Sanden</HPWHBrand>
     <HPWHModel>GS3-45HPA-US &amp; SAN-83SSAQA  (83 gal)</HPWHModel>
     <ASHPType>Sanden 80</ASHPType>
@@ -5985,6 +6465,7 @@
     <TankType>Consumer Instantaneous (UEF)</TankType>
     <HeaterType>10</HeaterType>
     <HPWH_NEEARated>0</HPWH_NEEARated>
+    <CentralHPWHCprsrType>- not central -</CentralHPWHCprsrType>
     <HPWHBrand>n/a</HPWHBrand>
     <HPWHModel>n/a</HPWHModel>
     <ASHPType>- select HPWH type -</ASHPType>
@@ -6074,5 +6555,8 @@
     <ErrID>4</ErrID>
     <ErrMsg>Collector Manufacturer must be specified</ErrMsg>
     <FloorAreaServed>0</FloorAreaServed>
+    <DwellUnitsServed>0</DwellUnitsServed>
+    <BedroomsServed>0</BedroomsServed>
+    <DHWSysAssigned>0</DHWSysAssigned>
   </DHWSolarSys>
 </SDDXML>

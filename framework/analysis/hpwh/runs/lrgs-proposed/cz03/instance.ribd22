@@ -1,19 +1,19 @@
 RulesetFilename   "CA Res 2022.bin"  
 
 Proj   "2019 Prototype 7320ft2 Prop Elec"  
-   Ruleset = "CA Residential 2022, Vers. 1.0 (CA Res 2022.bin)"
-   SoftwareVersion = "CBECC-Res 2022.0.2 RV (1117)"
-   BEMVersion = 7
+   SoftwareVersion = "CBECC-Res 2022.0.2 RV"
+   SoftwareVersionDetail = "CBECC-Res 2022.0.2 RV (1133)"
+   BEMVersion = 8
    CreateDate = 1582925619
-   ModDate = 1583795316
+   ModDate = 1583896104
    ProjFileName = "instance.ribd22"
    RunTitle = "TDSv30 V19R12 V19 R12 UGLASS15 ELEC PVSTD"
-   AnalysisType = "Proposed Only"
+   AnalysisType = "Proposed and Standard"
    CALGreen = 0
    TDVType = "TDV"
    StandardsVersion = "Compliance 2023"
    AnalysisReport = "Building Summary (csv)"
-   ComplianceReportPDF = 0
+   ComplianceReportPDF = 1
    ComplianceReportXML = 0
    PVCompCredit = 0
    PVWInputs = "Simplified"
@@ -33,17 +33,12 @@ Proj   "2019 Prototype 7320ft2 Prop Elec"
                          "- specify relative position -", 
                          "- specify relative position -", 
                          "- specify relative position -" )
-   PVWAzm[1] = 170
-   PVWArrayTiltInput = ( "deg", "deg", "deg", "deg", "deg" )
-   PVWArrayTiltPitch[1] = 5
-   PVWArrayTiltDeg[1] = 22.6199
    PVWArrayType = ( "Fixed (open rack)", "Fixed (open rack)", 
                     "Fixed (open rack)", "Fixed (open rack)", 
                     "Fixed (open rack)" )
    PVWPwrElec = ( "- none -", "- none -", "- none -", "- none -", 
                   "- none -" )
    PVWSolarAccess[1] = 100
-   PVWInverterEff[1] = 96
    AllowExcessPVEDR = 0
    ReducedPVReq = 0
    ReducedPVReqExcept = "- select applicable required PV exception -"
@@ -51,8 +46,10 @@ Proj   "2019 Prototype 7320ft2 Prop Elec"
    BatteryControl = "Basic"
    BattGridHarmCredit = 0
    TDVSummerPkFirstHr = 19
+   BattDRNumRankedDays = 20
    SimSpeedOption = "Compliance"
    ReportIncludeFile = ""
+   ReportInclPropOnly = 0
    DRtgLtgCredit = 0
    DRtgLtgReduction = 0
    SpecifyTargetDRtg = 0
@@ -77,7 +74,6 @@ Proj   "2019 Prototype 7320ft2 Prop Elec"
    DfltMFamLaundryZn = "Zone1"
    ZonalControl = 0
    Description = "2019 CEC Prototype with tile roof"
-   ACH50 = 7
    Status = "New"
    IsVerified = 0
    IsAddAlone = 0
@@ -104,9 +100,9 @@ Proj   "2019 Prototype 7320ft2 Prop Elec"
    Appl_HaveDryer[1] = 1
    ApplCookFuel[1] = "Gas"
    ApplDryerFuel[1] = "Gas"
-   Appl_RefrigUsage[1] = 898
    ApplRefrigEffMethod[1] = "from # bedrooms/unit"
    ApplDishUsageMethod[1] = "from # bedrooms/unit"
+   ResultsCurrentMsg = "(not current)"
    CSERpt_ZnDataDump = 0
    CSERpt_HVACDescrip = 0
    CSERpt_ZnEnergy = 0
@@ -150,7 +146,6 @@ Zone   "Zone1"
 
 ExtWall   "Zone1WallFront"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Front"
    OrientationValue = 0
    Area = 1037
@@ -162,9 +157,7 @@ ExtWall   "Zone1WallFront"
 
 Win   "Zone1WinFront"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 10.98
@@ -172,7 +165,6 @@ Win   "Zone1WinFront"
    NFRCSHGC = 0.23
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 10.98
@@ -209,7 +201,6 @@ Win   "Zone1WinFront"
 
 Door   "Zone1DoorFront"  
    Status = "New"
-   IsVerified = 0
    Area = 80
    Ufactor = 0.2
    exUfactor = 0.2
@@ -217,7 +208,6 @@ Door   "Zone1DoorFront"
 
 ExtWall   "Zone1WallLeft"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Left"
    OrientationValue = 90
    Area = 255
@@ -229,9 +219,7 @@ ExtWall   "Zone1WallLeft"
 
 Win   "Zone1WinLeft"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 2.7
@@ -239,7 +227,6 @@ Win   "Zone1WinLeft"
    NFRCSHGC = 0.23
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 2.7
@@ -276,7 +263,6 @@ Win   "Zone1WinLeft"
 
 ExtWall   "Zone1WallBack"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Back"
    OrientationValue = 180
    Area = 1037
@@ -288,9 +274,7 @@ ExtWall   "Zone1WallBack"
 
 Win   "Zone1WinBack"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 10.98
@@ -298,7 +282,6 @@ Win   "Zone1WinBack"
    NFRCSHGC = 0.23
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 10.98
@@ -335,7 +318,6 @@ Win   "Zone1WinBack"
 
 ExtWall   "Zone1WallRight"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Right"
    OrientationValue = 270
    Area = 255
@@ -347,9 +329,7 @@ ExtWall   "Zone1WallRight"
 
 Win   "Zone1WinRight"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 2.7
@@ -357,7 +337,6 @@ Win   "Zone1WinRight"
    NFRCSHGC = 0.23
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 2.7
@@ -394,7 +373,6 @@ Win   "Zone1WinRight"
 
 SlabFloor   "Zone1Slab"  
    Status = "New"
-   IsVerified = 0
    Area = 3660
    Surface = "Default (80% carpeted/covered, 20% exposed)"
    Perimeter = 304
@@ -440,7 +418,6 @@ Zone   "Zone2"
 
 ExtWall   "Zone2WallFront"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Front"
    OrientationValue = 0
    Area = 1037
@@ -452,9 +429,7 @@ ExtWall   "Zone2WallFront"
 
 Win   "Zone2WinFront"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 10.98
@@ -462,7 +437,6 @@ Win   "Zone2WinFront"
    NFRCSHGC = 0.23
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 10.98
@@ -499,7 +473,6 @@ Win   "Zone2WinFront"
 
 Door   "Zone2DoorFront"  
    Status = "New"
-   IsVerified = 0
    Area = 80
    Ufactor = 0.2
    exUfactor = 0.2
@@ -507,7 +480,6 @@ Door   "Zone2DoorFront"
 
 ExtWall   "Zone2WallLeft"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Left"
    OrientationValue = 90
    Area = 255
@@ -519,9 +491,7 @@ ExtWall   "Zone2WallLeft"
 
 Win   "Zone2WinLeft"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 2.7
@@ -529,7 +499,6 @@ Win   "Zone2WinLeft"
    NFRCSHGC = 0.23
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 2.7
@@ -566,7 +535,6 @@ Win   "Zone2WinLeft"
 
 ExtWall   "Zone2WallBack"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Back"
    OrientationValue = 180
    Area = 1037
@@ -578,9 +546,7 @@ ExtWall   "Zone2WallBack"
 
 Win   "Zone2WinBack"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 10.98
@@ -588,7 +554,6 @@ Win   "Zone2WinBack"
    NFRCSHGC = 0.23
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 10.98
@@ -625,7 +590,6 @@ Win   "Zone2WinBack"
 
 ExtWall   "Zone2WallRight"  
    Status = "New"
-   IsVerified = 0
    Orientation = "Right"
    OrientationValue = 270
    Area = 255
@@ -637,9 +601,7 @@ ExtWall   "Zone2WallRight"
 
 Win   "Zone2WinRight"  
    Status = "New"
-   IsVerified = 0
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
-   Area = 15
    Height = 5
    Width = 3
    Multiplier = 2.7
@@ -647,7 +609,6 @@ Win   "Zone2WinRight"
    NFRCSHGC = 0.23
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
-   exArea = 15
    exHeight = 5
    exWidth = 3
    exMultiplier = 2.7
@@ -684,7 +645,6 @@ Win   "Zone2WinRight"
 
 CeilingBelowAttic   "Zone2ToAtticCeiling"  
    Status = "New"
-   IsVerified = 0
    Area = 3660
    Construction = "Ceiling Below Attic Cons"
    AtticZone = "Attic"
@@ -692,7 +652,6 @@ CeilingBelowAttic   "Zone2ToAtticCeiling"
 
 InteriorFloor   "Zone2ToZone1InteriorFloor"  
    Status = "New"
-   IsVerified = 0
    Area = 3660
    FloorZ = 9.7
    Construction = "Interior Floor"
@@ -720,7 +679,6 @@ DwellUnit   "TwoBedroomUpstairsZone1"
 Attic   "Attic"  
    Type = "Ventilated"
    Status = "New"
-   IsVerified = 0
    RoofRise = 5
    Construction = "Attic Roof Cons"
    RoofSolReflect = 0.2
@@ -729,86 +687,536 @@ Attic   "Attic"
 
 EUseSummary   "EUSummary"  
    Title1[2] = "Proposed Design:"
+   Title1[5] = "Standard Design:"
+   Title1[8] = "Compliance Margins:"
    Title1[10] = "Proposed"
+   Title1[11] = "Standard"
+   Title1[12] = "Reference Design:"
+   Title1[15] = "Design Rating Margins:"
+   Title1[16] = "Reference"
+   Title1[17] = "Proposed Design:"
+   Title1[23] = "Prop Design"
+   Title1[24] = "Prop Design"
+   Title1[25] = "Prop Design"
+   Title1[27] = "Std Design"
+   Title1[28] = "Std Design"
+   Title1[29] = "Std Design"
+   Title1[30] = "CO2"
    Title2[2] = "Site"
    Title2[3] = "Site"
    Title2[4] = "EDR2"
+   Title2[5] = "Site"
+   Title2[6] = "Site"
+   Title2[7] = "EDR2"
+   Title2[8] = "EDR2    "
    Title2[10] = "Design"
+   Title2[11] = "Design"
+   Title2[12] = "Site"
+   Title2[13] = "Site"
+   Title2[14] = "EDR2"
+   Title2[15] = "EDR2"
+   Title2[16] = "Design"
+   Title2[17] = "Site"
+   Title2[18] = "Site"
+   Title2[19] = "EDR2"
+   Title2[23] = "Electric CO2"
+   Title2[24] = "Fuel CO2"
+   Title2[25] = "Total CO2"
+   Title2[27] = "Electric CO2"
+   Title2[28] = "Fuel CO2"
+   Title2[29] = "Total CO2"
+   Title2[30] = "Emissions"
+   Title2[31] = "EDR1"
+   Title2[32] = "EDR1"
+   Title2[33] = "EDR1    "
+   Title2[34] = "EDR1"
+   Title2[35] = "EDR1"
+   Title2[36] = "EDR1"
    Title3[1] = "End Use"
    Title3[2] = "(kWh)"
    Title3[3] = "(therms)"
    Title3[4] = "(kTDV/ft²-yr)"
+   Title3[5] = "(kWh)"
+   Title3[6] = "(therms)"
+   Title3[7] = "(kTDV/ft²-yr)"
+   Title3[8] = "(kTDV/ft²-yr)"
    Title3[10] = "(kW)"
+   Title3[11] = "(kW)"
+   Title3[12] = "(kWh)"
+   Title3[13] = "(therms)"
+   Title3[14] = "(kTDV/ft²-yr)"
+   Title3[15] = "(kTDV/ft²-yr)"
+   Title3[16] = "(kW)"
+   Title3[17] = "(kWh)"
+   Title3[18] = "(therms)"
+   Title3[19] = "(kTDV/ft²-yr)"
+   Title3[23] = "Emis. (kg)"
+   Title3[24] = "Emis. (kg)"
+   Title3[25] = "Emis. (kg)"
+   Title3[27] = "Emis. (kg)"
+   Title3[28] = "Emis. (kg)"
+   Title3[29] = "Emis. (kg)"
+   Title3[30] = "Margin (kg)"
+   Title3[31] = "(kBtu/ft²-yr)"
+   Title3[32] = "(kBtu/ft²-yr)"
+   Title3[33] = "(kBtu/ft²-yr)"
+   Title3[34] = "(kBtu/ft²-yr)"
+   Title3[35] = "(kBtu/ft²-yr)"
+   Title3[36] = "(kBtu/ft²-yr)"
    Enduse1[1] = "Space Heating"
-   Enduse1[2] = "240"
-   Enduse1[3] = "353.5"
-   Enduse1[4] = "17.54"
+   Enduse1[2] = "157"
+   Enduse1[3] = "232.0"
+   Enduse1[4] = "11.63"
+   Enduse1[5] = "135"
+   Enduse1[6] = "199.0"
+   Enduse1[7] = "10.06"
+   Enduse1[8] = "-1.57"
    Enduse1[10] = "0.00"
+   Enduse1[11] = "0.00"
+   Enduse1[12] = "736"
+   Enduse1[13] = "613.0"
+   Enduse1[14] = "32.12"
+   Enduse1[15] = "20.49"
+   Enduse1[16] = "0.00"
+   Enduse1[17] = "157"
+   Enduse1[18] = "232.0"
+   Enduse1[19] = "11.63"
+   Enduse1[23] = "28"
+   Enduse1[24] = "1,046"
+   Enduse1[25] = "1,074"
+   Enduse1[27] = "26"
+   Enduse1[28] = "897"
+   Enduse1[29] = "923"
+   Enduse1[30] = "-151"
+   Enduse1[31] = "2.85"
+   Enduse1[32] = "2.45"
+   Enduse1[33] = "-0.40"
+   Enduse1[34] = "2.85"
+   Enduse1[35] = "7.72"
+   Enduse1[36] = "4.87"
    Enduse2[1] = "Space Cooling"
-   Enduse2[4] = "0.00"
+   Enduse2[2] = "2"
+   Enduse2[4] = "0.15"
+   Enduse2[5] = "68"
+   Enduse2[7] = "2.80"
+   Enduse2[8] = "2.65"
    Enduse2[10] = "0.00"
+   Enduse2[11] = "0.07"
+   Enduse2[12] = "123"
+   Enduse2[14] = "4.54"
+   Enduse2[15] = "4.39"
+   Enduse2[16] = "0.12"
+   Enduse2[17] = "2"
+   Enduse2[19] = "0.15"
+   Enduse2[23] = "0"
+   Enduse2[25] = "0"
+   Enduse2[27] = "13"
+   Enduse2[29] = "13"
+   Enduse2[30] = "13"
+   Enduse2[31] = "0.00"
+   Enduse2[32] = "0.03"
+   Enduse2[33] = "0.03"
+   Enduse2[34] = "0.00"
+   Enduse2[35] = "0.05"
+   Enduse2[36] = "0.05"
    Enduse3[1] = "IAQ Ventilation"
-   Enduse3[2] = "809"
-   Enduse3[4] = "2.98"
-   Enduse3[10] = "0.09"
+   Enduse3[2] = "1,943"
+   Enduse3[4] = "7.15"
+   Enduse3[5] = "1,943"
+   Enduse3[7] = "7.15"
+   Enduse3[8] = "0.00"
+   Enduse3[10] = "0.22"
+   Enduse3[11] = "0.22"
+   Enduse3[12] = "1,943"
+   Enduse3[14] = "7.15"
+   Enduse3[15] = "0.00"
+   Enduse3[16] = "0.22"
+   Enduse3[17] = "1,943"
+   Enduse3[19] = "7.15"
+   Enduse3[23] = "260"
+   Enduse3[25] = "260"
+   Enduse3[27] = "260"
+   Enduse3[29] = "260"
+   Enduse3[30] = "0"
+   Enduse3[31] = "0.67"
+   Enduse3[32] = "0.67"
+   Enduse3[33] = "0.00"
+   Enduse3[34] = "0.67"
+   Enduse3[35] = "0.67"
+   Enduse3[36] = "0.00"
    Enduse4[1] = "Other HVAC"
    Enduse4[4] = "0.00"
+   Enduse4[7] = "0.00"
+   Enduse4[8] = "0.00"
    Enduse4[10] = "0.00"
+   Enduse4[11] = "0.00"
+   Enduse4[14] = "0.00"
+   Enduse4[15] = "0.00"
+   Enduse4[16] = "0.00"
+   Enduse4[19] = "0.00"
+   Enduse4[25] = "0"
+   Enduse4[29] = "0"
+   Enduse4[31] = "0.00"
+   Enduse4[32] = "0.00"
+   Enduse4[33] = "0.00"
+   Enduse4[34] = "0.00"
+   Enduse4[35] = "0.00"
+   Enduse4[36] = "0.00"
    Enduse5[1] = "Water Heating"
-   Enduse5[2] = "6,643"
-   Enduse5[4] = "24.14"
-   Enduse5[10] = "0.59"
+   Enduse5[2] = "6,457"
+   Enduse5[4] = "23.32"
+   Enduse5[5] = "427"
+   Enduse5[6] = "182.0"
+   Enduse5[7] = "9.56"
+   Enduse5[8] = "-13.76"
+   Enduse5[10] = "0.63"
+   Enduse5[11] = "0.01"
+   Enduse5[12] = "22,147"
+   Enduse5[14] = "79.95"
+   Enduse5[15] = "56.63"
+   Enduse5[16] = "2.25"
+   Enduse5[17] = "6,457"
+   Enduse5[19] = "23.32"
+   Enduse5[23] = "810"
+   Enduse5[25] = "810"
+   Enduse5[27] = "23"
+   Enduse5[28] = "821"
+   Enduse5[29] = "844"
+   Enduse5[30] = "34"
+   Enduse5[31] = "2.08"
+   Enduse5[32] = "2.24"
+   Enduse5[33] = "0.16"
+   Enduse5[34] = "2.08"
+   Enduse5[35] = "6.68"
+   Enduse5[36] = "4.60"
    Enduse6[1] = "Inside Lighting"
    Enduse6[2] = "2,098"
    Enduse6[4] = "8.85"
+   Enduse6[5] = "2,098"
+   Enduse6[7] = "8.85"
+   Enduse6[8] = "0.00"
    Enduse6[10] = "0.56"
+   Enduse6[11] = "0.56"
+   Enduse6[12] = "6,111"
+   Enduse6[14] = "25.60"
+   Enduse6[15] = "16.75"
+   Enduse6[16] = "1.78"
+   Enduse6[17] = "2,098"
+   Enduse6[19] = "8.85"
+   Enduse6[23] = "344"
+   Enduse6[25] = "344"
+   Enduse6[27] = "344"
+   Enduse6[29] = "344"
+   Enduse6[30] = "0"
+   Enduse6[31] = "0.88"
+   Enduse6[32] = "0.88"
+   Enduse6[33] = "0.00"
+   Enduse6[34] = "0.88"
+   Enduse6[35] = "2.48"
+   Enduse6[36] = "1.60"
    Enduse7[1] = "Appl. & Cooking"
-   Enduse7[2] = "5,304"
+   Enduse7[2] = "5,338"
    Enduse7[3] = "293.9"
-   Enduse7[4] = "32.52"
-   Enduse7[10] = "0.68"
+   Enduse7[4] = "32.73"
+   Enduse7[5] = "5,384"
+   Enduse7[6] = "293.9"
+   Enduse7[7] = "32.91"
+   Enduse7[8] = "0.18"
+   Enduse7[10] = "0.67"
+   Enduse7[11] = "0.68"
+   Enduse7[12] = "6,587"
+   Enduse7[13] = "295.8"
+   Enduse7[14] = "37.67"
+   Enduse7[15] = "4.94"
+   Enduse7[16] = "0.82"
+   Enduse7[17] = "5,338"
+   Enduse7[18] = "293.9"
+   Enduse7[19] = "32.73"
+   Enduse7[23] = "666"
+   Enduse7[24] = "1,325"
+   Enduse7[25] = "1,992"
+   Enduse7[27] = "672"
+   Enduse7[28] = "1,325"
+   Enduse7[29] = "1,997"
+   Enduse7[30] = "5"
+   Enduse7[31] = "5.23"
+   Enduse7[32] = "5.25"
+   Enduse7[33] = "0.02"
+   Enduse7[34] = "5.23"
+   Enduse7[35] = "5.84"
+   Enduse7[36] = "0.61"
    Enduse8[1] = "Plug Loads"
    Enduse8[2] = "12,062"
    Enduse8[4] = "46.33"
+   Enduse8[5] = "12,062"
+   Enduse8[7] = "46.33"
+   Enduse8[8] = "0.00"
    Enduse8[10] = "1.82"
+   Enduse8[11] = "1.82"
+   Enduse8[12] = "10,952"
+   Enduse8[14] = "42.16"
+   Enduse8[15] = "-4.17"
+   Enduse8[16] = "1.79"
+   Enduse8[17] = "12,062"
+   Enduse8[19] = "46.33"
+   Enduse8[23] = "1,723"
+   Enduse8[25] = "1,723"
+   Enduse8[27] = "1,723"
+   Enduse8[29] = "1,723"
+   Enduse8[30] = "0"
+   Enduse8[31] = "4.43"
+   Enduse8[32] = "4.43"
+   Enduse8[33] = "0.00"
+   Enduse8[34] = "4.43"
+   Enduse8[35] = "4.03"
+   Enduse8[36] = "-0.40"
    Enduse9[1] = "Exterior"
    Enduse9[2] = "453"
    Enduse9[4] = "1.87"
+   Enduse9[5] = "453"
+   Enduse9[7] = "1.87"
+   Enduse9[8] = "0.00"
    Enduse9[10] = "0.08"
+   Enduse9[11] = "0.08"
+   Enduse9[12] = "559"
+   Enduse9[14] = "2.60"
+   Enduse9[15] = "0.73"
+   Enduse9[16] = "0.12"
+   Enduse9[17] = "453"
+   Enduse9[19] = "1.87"
+   Enduse9[23] = "78"
+   Enduse9[25] = "78"
+   Enduse9[27] = "78"
+   Enduse9[29] = "78"
+   Enduse9[30] = "0"
+   Enduse9[31] = "0.20"
+   Enduse9[32] = "0.20"
+   Enduse9[33] = "0.00"
+   Enduse9[34] = "0.20"
+   Enduse9[35] = "0.29"
+   Enduse9[36] = "0.09"
    Enduse10[1] = "TOTAL"
-   Enduse10[2] = "26,030"
-   Enduse10[3] = "647.4"
-   Enduse10[4] = "129.78"
-   Enduse10[10] = "3.79"
+   Enduse10[2] = "5,940"
+   Enduse10[3] = "525.9"
+   Enduse10[4] = "74.59"
+   Enduse10[5] = "0"
+   Enduse10[6] = "674.9"
+   Enduse10[7] = "62.99"
+   Enduse10[8] = "-11.60"
+   Enduse10[10] = "3.65"
+   Enduse10[11] = "3.11"
+   Enduse10[12] = "49,157"
+   Enduse10[13] = "908.9"
+   Enduse10[14] = "231.79"
+   Enduse10[15] = "157.20"
+   Enduse10[16] = "7.11"
+   Enduse10[17] = "5,940"
+   Enduse10[18] = "525.9"
+   Enduse10[19] = "74.59"
+   Enduse10[23] = "3,242"
+   Enduse10[24] = "2,371"
+   Enduse10[25] = "5,614"
+   Enduse10[27] = "2,472"
+   Enduse10[28] = "3,043"
+   Enduse10[29] = "5,515"
+   Enduse10[30] = "-99"
+   Enduse10[31] = "14.62"
+   Enduse10[32] = "14.43"
+   Enduse10[33] = "-0.19"
+   Enduse10[34] = "14.62"
+   Enduse10[35] = "27.76"
+   Enduse10[36] = "13.14"
    Enduse11[1] = "Compliance Total"
-   Enduse11[2] = "7,692"
-   Enduse11[3] = "353.5"
-   Enduse11[4] = "44.66"
-   Enduse11[10] = "0.68"
+   Enduse11[2] = "8,559"
+   Enduse11[3] = "232.0"
+   Enduse11[4] = "42.25"
+   Enduse11[5] = "2,572"
+   Enduse11[6] = "381.0"
+   Enduse11[7] = "29.57"
+   Enduse11[8] = "-12.68"
+   Enduse11[10] = "0.85"
+   Enduse11[11] = "0.30"
+   Enduse11[12] = "24,949"
+   Enduse11[13] = "613.0"
+   Enduse11[14] = "123.76"
+   Enduse11[15] = "81.51"
+   Enduse11[16] = "2.60"
+   Enduse11[17] = "8,559"
+   Enduse11[18] = "525.9"
+   Enduse11[19] = "42.25"
+   Enduse11[23] = "1,098"
+   Enduse11[24] = "1,046"
+   Enduse11[25] = "2,144"
+   Enduse11[27] = "322"
+   Enduse11[28] = "1,718"
+   Enduse11[29] = "2,040"
+   Enduse11[30] = "-104"
+   Enduse11[31] = "5.60"
+   Enduse11[32] = "5.39"
+   Enduse11[33] = "-0.21"
+   Enduse11[34] = "5.60"
+   Enduse11[35] = "15.12"
+   Enduse11[36] = "9.52"
    Enduse13[1] = "Photovoltaics"
-   Enduse13[2] = "-1,578"
-   Enduse13[4] = "-4.45"
-   Enduse13[10] = "-0.03"
+   Enduse13[2] = "-22,569"
+   Enduse13[4] = "-57.44"
+   Enduse13[5] = "-22,569"
+   Enduse13[7] = "-56.54"
+   Enduse13[8] = "0.90"
+   Enduse13[10] = "-0.33"
+   Enduse13[14] = " "
+   Enduse13[15] = "57.44"
+   Enduse13[17] = "-22,569"
+   Enduse13[19] = "-57.44"
+   Enduse13[23] = "-667"
+   Enduse13[25] = "-667"
+   Enduse13[27] = "-667"
+   Enduse13[29] = "-667"
+   Enduse13[30] = "0"
+   Enduse13[31] = "-1.72"
+   Enduse13[32] = "-1.72"
+   Enduse13[33] = "0.00"
+   Enduse13[34] = "-1.72"
+   Enduse13[35] = " "
+   Enduse13[36] = "1.72"
    Enduse14[1] = "Battery"
    Enduse14[4] = "0.00"
+   Enduse14[7] = " "
+   Enduse14[8] = "0.00"
    Enduse14[10] = "0.00"
+   Enduse14[11] = "0.00"
+   Enduse14[14] = " "
+   Enduse14[15] = "0.00"
+   Enduse14[16] = "0.00"
+   Enduse14[19] = "0.00"
+   Enduse14[25] = "0"
+   Enduse14[29] = "0"
+   Enduse14[30] = "0"
+   Enduse14[31] = "0.00"
+   Enduse14[32] = " "
+   Enduse14[33] = "0.00"
+   Enduse14[34] = "0.00"
+   Enduse14[35] = " "
+   Enduse14[36] = "0.00"
    Enduse98[1] = "Flexibility"
+   Enduse98[15] = "0.00"
    Enduse99[1] = "Self Utilization Credit"
+   Enduse99[4] = "0.00"
+   Enduse99[8] = "0.00"
+   Enduse99[15] = "0.00"
+   Enduse99[19] = "0.00"
+   Enduse99[25] = "0"
+   Enduse99[29] = "0"
+   Enduse99[30] = "0"
+   PassFail = "FAIL"
+   ComplyMessage = "DOES NOT COMPLY"
+   SummaryCol1[4] = "Standard Design"
+   SummaryCol1[5] = "Proposed Design"
+   SummaryCol2[1] = "Compliance"
+   SummaryCol2[2] = "Energy Use"
+   SummaryCol2[3] = "(kTDV/ft²-yr)"
+   SummaryCol2[4] = "29.57"
+   SummaryCol2[5] = "42.25"
+   SummaryColNPVMarg[2] = "Efficiency¹"
+   SummaryColNPVMarg[3] = "(EDR2)"
+   SummaryColNPVMarg[5] = "-5.4"
+   SummaryColFinMarg[2] = "Total²"
+   SummaryColFinMarg[3] = "(EDR2)"
+   SummaryColFinMarg[5] = "-5.0"
+   SummaryColNoPVDR[2] = "Efficiency¹"
+   SummaryColNoPVDR[3] = "(EDR2)"
+   SummaryColNoPVDR[4] = "51.6"
+   SummaryColNoPVDR[5] = "57.0"
+   SummaryColPVOnlyDR[2] = "Flexibility"
+   SummaryColPVOnlyDR[3] = "(EDR2)"
+   SummaryColPVOnlyDR[4] = "24.4"
+   SummaryColPVOnlyDR[5] = "24.8"
+   SummaryColFinDR[2] = "Total²"
+   SummaryColFinDR[3] = "(EDR2)"
+   SummaryColFinDR[4] = "27.2"
+   SummaryColFinDR[5] = "32.2"
+   SummaryColEDR1Marg[2] = "Source"
+   SummaryColEDR1Marg[3] = "(EDR1)"
+   SummaryColEDR1Marg[5] = "-0.7"
+   SummaryColEDR1[2] = "Source"
+   SummaryColEDR1[3] = "(EDR1)"
+   SummaryColEDR1[4] = "52.0"
+   SummaryColEDR1[5] = "52.7"
+   MarginkW = ( -0.54, 3.46 )
+   MarginkWh = -5940.3
+   MarginTherms = 149.03
+   PctSavingskW = -17.5
+   PctSavingsTherms = 22.1
+   PctSavingsTDV = -18.4
+   PctSavingsCmpTDV = -42.9
+   PctSavkWLbl = "-17.5"
+   PctSavkWhLbl = "-"
+   PctSavThermsLbl = "22.1"
+   PctSavTDVLbl = "-18.4"
+   PctSavCmpTDVLbl = "-42.9"
+   PropElecDemand = ( 3.65315, 3.65315 )
+   StdElecDemand = 3.11025
+   DRtgElecDemand = 7.11075
+   StdMixedFuelkWh = 22575.6
+   StdMixedFuelPV = -1596.11
    PropDesignPVInp[1] = 1
    PropDesignPVInp[6] = 1
-   UnscaledPropPVRatio = 0.0571593
-   PropElecCarbon[1] = 3.7276
-   PropFuelCarbon[1] = 2.91933
-   PropFinalCarbon[1] = 6.64693
-   PropExclExpCarbon[1] = 6.64693
-   PropExportCarbon[1] = 0
-   PropSelfConsCarbon[1] = 0.0494636
-   PropNoSolFlxCarbon[1] = 6.69639
-   HideCompSummary = 4
-   HideEDRs = 4
+   PropDesignPVSize[1] = 14.1441
+   StdDesignPVSize = 14.1441
+   StdMixedFuelPVTDV = -56.54
+   StdMixedFuelPVMlt = 14.1441
+   PrelimPropkWh = 28517.6
+   PrelimPropCompTDV = 42.2453
+   PrelimPropPV = -1596.11
+   UnscaledPropPVRatio = 0.791637
+   ResultsNotes[1] = "PV System resized to 14.14 kWdc (a factor of 14.144) to achieve 'Standard Design PV' PV scaling"
+   ResultsNotes[4] = "PV System resized to 14.14 kWdc (a factor of 14.144) to achieve 'Standard Design PV' PV scaling"
+   ResultsNotes[5] = "Standard Design PV Capacity: 14.14 kWdc"
+   HaveResultsNotesPV[1] = 1
+   HaveResultsNotesPV[4] = 1
+   HaveResultsNotesPV[5] = 1
+   DesignRating = 32.2
+   DesignRatingNoPV = 57
+   ShowDesignRtgNoPV = 1
+   DesignRatingPVOnly = 24.8
+   DesignRatingStd = 27.2
+   DesignRatingStdNoPV = 51.6
+   DesignRatingStdPVOnly = 24.4
+   MarginEfficEDR = -5.4
+   MarginFinalEDR = -5
+   EDR1DesignRating = 52.7
+   EDR1DesignRatingStd = 52
+   EDR1Margin = -0.7
+   CO2FuelUnitLabel = "kg"
+   CO2TotalUnitLabel = "kg"
+   GHCEnergyEffCap = 0
+   GHCEnergyEffBattFrac = 0
+   GHCEnergyEffTDV = 0
+   GHCEnergyEffElec = 0
+   GHCEnergyEffCO2 = 0
+   MeetsTier1 = 0
+   MeetsTier2 = 0
+   MeetsZNETier = 0
+   PropElecCarbon[1] = 3.24309
+   PropFuelCarbon[1] = 2.37117
+   PropFinalCarbon[1] = 5.61
+   PropExclExpCarbon[1] = 5.83
+   PropExportCarbon[1] = 0.22
+   PropSelfConsCarbon[1] = 0.45
+   PropNoSolFlxCarbon[1] = 6.28
+   StdFinalCarbon = 5.52
+   StdExclExpCarbon = 5.79
+   StdExportCarbon = 0.27
+   StdSelfConsCarbon = 0.39
+   StdNoSolFlxCarbon = 6.18
+   DRtgFinalCarbon = 10.6629
+   DRtgExclExpCarbon = 10.6629
+   DRtgExportCarbon = 0
+   DRtgSelfConsCarbon = 0
+   DRtgNoSolFlxCarbon = 10.6629
+   HideCompSummary = 0
+   HideEDRs = 0
    HideC02Emissions = 0
-   CompSummaryMsg = "Compliance Summary not available for analysis type 'Proposed Only'"
-   EDRMsg = "Energy Design Ratings not available for analysis type 'Proposed Only'"
    ..
 
 SchDay   "CARes2013 InsLighting Hrly"  
@@ -1381,13 +1789,13 @@ DwellUnitType   "OneBedroom"
    HVACSysType = "Other Heating and Cooling System"
    NumHeatEquipTypes = 1
    HVACHeatRef[1] = "HeatingComponent"
-   HeatEquipCount = ( 1, 0, 0, 0, 0 )
+   HeatEquipCount[1] = 1
    NumCoolEquipTypes = 1
    HVACCoolRef[1] = "CoolingComponent"
-   CoolEquipCount = ( 1, 0, 0, 0, 0 )
+   CoolEquipCount[1] = 1
    NumHtPumpEquipTypes = 1
    HVACHtPumpRef[1] = "HeatpumpSystem"
-   HtPumpEquipCount = ( 1, 0, 0, 0, 0 )
+   HtPumpEquipCount[1] = 1
    HVACFanRef = "HVACFan-Furnace"
    HVACDistRef = "AirDistributionSystem"
    NumDHWSysTypes = 1
@@ -1414,13 +1822,13 @@ DwellUnitType   "TwoBedroom"
    HVACSysType = "Other Heating and Cooling System"
    NumHeatEquipTypes = 1
    HVACHeatRef[1] = "HeatingComponent"
-   HeatEquipCount = ( 1, 0, 0, 0, 0 )
+   HeatEquipCount[1] = 1
    NumCoolEquipTypes = 1
    HVACCoolRef[1] = "CoolingComponent"
-   CoolEquipCount = ( 1, 0, 0, 0, 0 )
+   CoolEquipCount[1] = 1
    NumHtPumpEquipTypes = 1
    HVACHtPumpRef[1] = "HeatpumpSystem"
-   HtPumpEquipCount = ( 1, 0, 0, 0, 0 )
+   HtPumpEquipCount[1] = 1
    HVACFanRef = "HVACFan-Furnace"
    HVACDistRef = "AirDistributionSystem"
    NumDHWSysTypes = 1
@@ -1441,12 +1849,12 @@ HVACSys   "HVACGasElectric"
    CFIClVentFlow = 0
    CFIClVentPwr = 0
    NumHeatSystemTypes = 1
-   HeatSystemCount = ( 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+   HeatSystemCount[1] = 1
    HeatSystem[1] = "HeatingComponent"
    AutoSizeHeatInp = 1
    HeatDucted = 1
    NumCoolSystemTypes = 1
-   CoolSystemCount = ( 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+   CoolSystemCount[1] = 1
    CoolSystem[1] = "CoolingComponent"
    AutoSizeCoolInp = 1
    CoolDucted = 1
@@ -1474,7 +1882,7 @@ HVACSys   "HVACHeatpump"
    AutoSizeCoolInp = 1
    CoolDucted = 1
    NumHtPumpSystemTypes = 1
-   HtPumpSystemCount = ( 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+   HtPumpSystemCount[1] = 1
    HtPumpSystem[1] = "HeatpumpSystem"
    HtPumpDucted = 1
    ServesAsDHWHtr = 0
@@ -1525,15 +1933,8 @@ HVACHtPump   "HeatpumpSystem"
 HVACDist   "AirDistributionSystem"  
    Type = "Ducts located entirely in conditioned space"
    Status = "New"
-   IsVerified = 0
    DefaultSystem = 1
-   DuctLeakage = "Sealed and tested"
-   DuctLeakageVal = 5
    HasBypassDuct = 0
-   DuctInsRvalOpt = "4.2"
-   exDuctInsRvalOpt = "2.1"
-   DuctDesign = 0
-   LowLkgAH = 0
    IsLessThanFortyFt = 0
    ..
 
@@ -1551,16 +1952,18 @@ HVACFan   "HVACFan-HeatPump"
 
 IAQFan   "IAQFan1"  
    IAQCFM = 37.5
-   WperCFMIAQ = 0.25
+   WperCFMIAQ = 0.6
    IAQFanType = "Balanced"
-   IAQRecovEffect = 0
+   IncludesRecov = 0
+   SetPerfByHVIInterp = 0
    ..
 
 IAQFan   "IAQFan2"  
    IAQCFM = 54.9
-   WperCFMIAQ = 0.25
+   WperCFMIAQ = 0.6
    IAQFanType = "Balanced"
-   IAQRecovEffect = 0
+   IncludesRecov = 0
+   SetPerfByHVIInterp = 0
    ..
 
 DHWSys   "DHWGas"  
@@ -1571,9 +1974,7 @@ DHWSys   "DHWGas"
    UseMaxDurNumHtrs = 0
    DHWHeater[1] = "Gas"
    HeaterMult[1] = 1
-   RecircPumpHP = 0.05
-   RecircPumpEff = 0.6
-   UseDefaultLoops = 1
+   RecircPumpPwr = 62.1667
    LoopPipeInsulThk[1] = 1.5
    RecircPipeLoc[1] = "Semi-Conditioned"
    NRecircLoops = 1
@@ -1581,8 +1982,7 @@ DHWSys   "DHWGas"
    TotShowersServed = 1
    TotBathsServed = 1
    DHWSolarSysRef = "DHW Solar System"
-   SolFracType = "Annual"
-   SolFracAnn = 0.2
+   SolFracType = "- none -"
    ..
 
 DHWSys   "DHWHeatpump"  
@@ -1599,17 +1999,13 @@ DHWSys   "DHWHeatpump"
    DHWHeater[1] = "Heatpump"
    HeaterMult[1] = 2
    RecircPumpPwr = 10
-   RecircPumpHP = 0.5
-   RecircPumpEff = 0.6
-   UseDefaultLoops = 1
    LoopPipeInsulThk[1] = 2
    RecircPipeLoc[1] = "Semi-Conditioned"
    BranchLossModel = "Old Scheduled (independent of draws)"
    LoopHeater = "DHW Loop Tank Heater 1"
    TotShowersServed = 1
    TotBathsServed = 1
-   SolFracType = "Annual"
-   SolFracAnn = 0
+   SolFracType = "- none -"
    ..
 
 DHWSys   "DHWElectric"  
@@ -1619,7 +2015,6 @@ DHWSys   "DHWElectric"
    UseMaxDurNumHtrs = 0
    DHWHeater[1] = "Electric"
    HeaterMult[1] = 1
-   UseDefaultLoops = 1
    LoopPipeInsulThk[1] = 1.5
    RecircPipeLoc[1] = "Conditioned"
    TotShowersServed = 1
