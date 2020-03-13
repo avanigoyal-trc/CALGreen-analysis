@@ -11236,6 +11236,33 @@ TrmlUnit   "TU22 F10 Corridor"
 
    <%
 
+   #insert VRF Compressor Units if needed
+
+   if (hvac_type == "VRF")
+   vrf_cu_names = ["VRF F2-9 CU-1", "VRF F2-9 CU-2", "VRF F10 CU-1", "VRF F10 CU-2"]
+   count = [8, 8, 1, 1]
+   rated_cooling_cap = 135000
+   rated_heating_cap = 150000
+   pipe_length = 145
+   max_height = -25
+   ctrl_priority = "LoadPriority"
+
+   cu_counts = vrf_cu_names.length() -1 #Subtract 1 since indexing at 0
+
+   for a in 0..cu_counts do
+     insert 'vrf_cu.pxt',
+       :name => vrf_cu_names[a],
+       :count => count[a],
+       :heat_recovery => "Yes",
+       :cooling_capacity => rated_cooling_cap,
+       :heating_capacity => rated_heating_cap,
+       :equivalent_pipe_len => pipe_length,
+       :max_vertical_height => max_height,
+       :ctrl_priority   => ctrl_priority
+
+   end
+   end
+
    #Using csv guides from https://www.rubyguides.com/2018/10/parse-csv-ruby/
 
    require 'csv'
