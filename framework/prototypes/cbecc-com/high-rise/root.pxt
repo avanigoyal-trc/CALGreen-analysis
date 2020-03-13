@@ -194,7 +194,7 @@ Mat   "Compliance Insulation R4.00"
    ..
 
 
-   
+
  Mat   "Compliance Insulation R1.00"
     CodeCat = "Insulation Board"
     CodeItem = "Compliance Insulation R1.00"
@@ -3209,7 +3209,11 @@ Story   "Building Story Residential Floors 2-9"
 
 Spc   "F2-9 1-Bed NE"
    TreeState = 254
+   <% if hvac_type == "VRF" %>
+   ThrmlZnRef = "Thermal Zone: F2-9 1-Bed N CU-2"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F2-9 1-Bed N"
+   <%end%>
    Vol = 7800
    SpcFuncDefaultsRef = "Residential"
    DwellingUnitTypeCnt[2] = 1
@@ -3428,7 +3432,11 @@ ResSpcDHWFeatures   "F2-9 1-Bed NE rsd1"
 
 Spc   "F2-9 1-Bed NW"
    TreeState = 254
+   <% if hvac_type == "VRF"%>
+   ThrmlZnRef = "Thermal Zone: F2-9 1-Bed N CU-1"
+   <%else%>
    ThrmlZnRef = "Thermal Zone: F2-9 1-Bed N"
+   <%end%>
    Vol = 7800
    SpcFuncDefaultsRef = "Residential"
    DwellingUnitTypeCnt[2] = 1
@@ -7214,7 +7222,11 @@ Story   "Building Story Residential Floor 10"
 
 Spc   "F10 1-Bed NE"
    TreeState = 254
+   <% if hvac_type == "VRF" %>
+   ThrmlZnRef = "Thermal Zone: F10 1-Bed N CU-2"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F10 1-Bed N"
+   <%end %>
    Vol = 7800
    SpcFuncDefaultsRef = "Residential"
    DwellingUnitTypeCnt[2] = 1
@@ -7410,7 +7422,11 @@ ResSpcDHWFeatures   "F10 1-Bed NE rsd1"
 
 Spc   "F10 1-Bed NW"
    TreeState = 254
+   <% if hvac_type == "VRF"%>
+   ThrmlZnRef = "Thermal Zone: F10 1-Bed N CU-1"
+   <% else %>
    ThrmlZnRef = "Thermal Zone: F10 1-Bed N"
+   <% end %>
    Vol = 7800
    SpcFuncDefaultsRef = "Residential"
    DwellingUnitTypeCnt[2] = 1
@@ -10852,6 +10868,40 @@ ThrmlZn   "Thermal Zone: F1 Retail W Outer"
    HasUnknownHVAC = 0
    ..
 
+<% if hvac_type == "VRF" %>
+ThrmlZn   "Thermal Zone: F10 1-Bed N CU-1"
+   HVACZnCnt = 1
+   PriAirCondgSysRef[1] = "ZnSys F10 1-Bed N CU-1"
+   PriAirCondgSysPriority[1] = 2
+   VentSysRef = "Residential DOAS"
+   VentSysPriority = 1
+   ..
+
+ThrmlZn   "Thermal Zone: F2-9 1-Bed N CU-1"
+  HVACZnCnt = 1
+  PriAirCondgSysRef[1] = "ZnSys F2-9 1-Bed N CU-1"
+  PriAirCondgSysPriority[1] = 2
+  VentSysRef = "Residential DOAS"
+  VentSysPriority = 1
+  ..
+
+ThrmlZn   "Thermal Zone: F10 1-Bed N CU-2"
+   HVACZnCnt = 1
+   PriAirCondgSysRef[1] = "ZnSys F10 1-Bed N CU-2"
+   PriAirCondgSysPriority[1] = 2
+   VentSysRef = "Residential DOAS"
+   VentSysPriority = 1
+   ..
+
+ThrmlZn   "Thermal Zone: F2-9 1-Bed N CU-2"
+  HVACZnCnt = 1
+  PriAirCondgSysRef[1] = "ZnSys F2-9 1-Bed N CU-2"
+  PriAirCondgSysPriority[1] = 2
+  VentSysRef = "Residential DOAS"
+  VentSysPriority = 1
+  ..
+<% else %>
+
 ThrmlZn   "Thermal Zone: F10 1-Bed N"
    HVACZnCnt = 2
    PriAirCondgSysRef[1] = "ZnSys F10 1-Bed N"
@@ -10859,6 +10909,18 @@ ThrmlZn   "Thermal Zone: F10 1-Bed N"
    VentSysRef = "Residential DOAS"
    VentSysPriority = 1
    ..
+
+
+ThrmlZn   "Thermal Zone: F2-9 1-Bed N"
+  HVACZnCnt = 2
+  PriAirCondgSysRef[1] = "ZnSys F2-9 1-Bed N"
+  PriAirCondgSysPriority[1] = 2
+  VentSysRef = "Residential DOAS"
+  VentSysPriority = 1
+  ..
+<% end %>
+
+
 
 ThrmlZn   "Thermal Zone: F10 1-Bed SE"
    HVACZnCnt = 2
@@ -10933,13 +10995,6 @@ ThrmlZn   "Thermal Zone: F10 Studio N"
    VentSysPriority = 1
    ..
 
-ThrmlZn   "Thermal Zone: F2-9 1-Bed N"
-   HVACZnCnt = 2
-   PriAirCondgSysRef[1] = "ZnSys F2-9 1-Bed N"
-   PriAirCondgSysPriority[1] = 2
-   VentSysRef = "Residential DOAS"
-   VentSysPriority = 1
-   ..
 
 ThrmlZn   "Thermal Zone: F2-9 1-Bed SE"
    HVACZnCnt = 2
@@ -11044,10 +11099,40 @@ insert 'doas.pxt',
 
 %>
 
+<% if hvac_type == "VRF" %>
+
+TrmlUnit   "TU1 F10 1-Bed N CU-1"
+   Type = "Uncontrolled"
+   ZnServedRef = "Thermal Zone: F10 1-Bed N CU-1"
+   ..
+
+TrmlUnit   "TU10 F2-9 1-Bed N CU-1"
+  Type = "Uncontrolled"
+  ZnServedRef = "Thermal Zone: F2-9 1-Bed N CU-1"
+
+TrmlUnit   "TU23 F10 1-Bed N CU-2"
+   Type = "Uncontrolled"
+   ZnServedRef = "Thermal Zone: F10 1-Bed N CU-2"
+   ..
+
+TrmlUnit   "TU24 F2-9 1-Bed N CU-2"
+  Type = "Uncontrolled"
+  ZnServedRef = "Thermal Zone: F2-9 1-Bed N CU-2"
+
+
+<% else %>
 TrmlUnit   "TU1 F10 1-Bed N"
    Type = "Uncontrolled"
    ZnServedRef = "Thermal Zone: F10 1-Bed N"
    ..
+
+TrmlUnit   "TU10 F2-9 1-Bed N"
+  Type = "Uncontrolled"
+  ZnServedRef = "Thermal Zone: F2-9 1-Bed N"
+  ..
+<% end %>
+
+
 
 TrmlUnit   "TU2 F10 1-Bed SE"
    Type = "Uncontrolled"
@@ -11087,11 +11172,6 @@ TrmlUnit   "TU8 F10 2-Bed SW"
 TrmlUnit   "TU9 F10 Studio N"
    Type = "Uncontrolled"
    ZnServedRef = "Thermal Zone: F10 Studio N"
-   ..
-
-TrmlUnit   "TU10 F2-9 1-Bed N"
-   Type = "Uncontrolled"
-   ZnServedRef = "Thermal Zone: F2-9 1-Bed N"
    ..
 
 TrmlUnit   "TU11 F2-9 1-Bed SE"
