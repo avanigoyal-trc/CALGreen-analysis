@@ -1,7 +1,7 @@
 RulesetFilename   "CA Res 2022.bin"  
 
 Proj   User: "2019 Prototype 7320ft2 Prop Elec"  
-   Ruleset = UDef: "CA Residential 2022, Vers. 2 Pol-0%RA-NoCH4leak (CA Res 2022.bin)"  (0)
+   Ruleset = UDef: "CA Residential 2022, Vers. 2 Pol-0%RA-NoCH4leak (CA Res 2022.bin)"  (3)
    RuleFile = PDef: "CA Res 2022.bin"
    DevMode = RVal: 1
    EnergyCodeYearNum = RVal: 2022
@@ -13,11 +13,11 @@ Proj   User: "2019 Prototype 7320ft2 Prop Elec"
    BEMVersion = UVal: 8
    RuleRepoRev = RVal: 1715
    ShowNotRegWatermark = RVal: 1
-   CreateDate = UVal: 1583895957
-   ModDate = UVal: 1583895957
-   RunDate = UVal: 1583895921
-   RunDateFmt = UVal: "20:05, Tue, Mar 10, 2020"
-   RunDateISO = UVal: "2020-03-10T20:05:21-07:00"
+   CreateDate = UVal: 1582925619
+   ModDate = UVal: 1583965765
+   RunDate = UVal: 1583965733
+   RunDateFmt = UVal: "15:28, Wed, Mar 11, 2020"
+   RunDateISO = UVal: "2020-03-11T15:28:53-07:00"
    PrimSimEngingVer = UVal: "CSE19 0.868.0 EXE"
    RulesetVersion = UVal: "CA Residential 2022, Vers. 2 Pol-0%RA-NoCH4leak"
    ProjFileName = UVal: "instance.ribd22"
@@ -83,7 +83,7 @@ Proj   User: "2019 Prototype 7320ft2 Prop Elec"
    PVBaseTDV = RVal: 1.86455e+06
    PVGenCredit = RVal: 0
    PVCredit[1] = RVal: 0
-   PVCredit[2] = RVal: 57.04
+   PVCredit[2] = RVal: 56.37
    AllowPVWInputs = RVal: 1
    UsePVWattsDLL = RVal: 0
    AllowPVWModTypeCust = RVal: 0
@@ -168,9 +168,9 @@ Proj   User: "2019 Prototype 7320ft2 Prop Elec"
    MaxPropPVRatioInp = RVal: 1
    MaxPropPVRatio = UVal: 1
    MaxPropPVRatioMsg = RVal: "PV generation will be capped @ proposed design electric use (no battery)"
-   PVWDCSizeMultiplier[1] = RVal: 17.3657
+   PVWDCSizeMultiplier[1] = RVal: 17.1493
    PVWDCSizeMultiplier[2] = RVal: 1
-   PVWDCSysScldTotRnd = RVal: 17.37
+   PVWDCSysScldTotRnd = RVal: 17.15
    ReducedPVReq = UVal: 0
    ReducedPVReqExcept = UVal: "- select applicable required PV exception -"  (0)
    ReducedPVReqExcDesc = RVal: ""
@@ -479,7 +479,7 @@ Proj   User: "2019 Prototype 7320ft2 Prop Elec"
    CSE_DefineFloat[27] = RVal: 1
    CSE_DefineFloat[28] = RVal: 0
    CSE_DefineFloat[29] = RVal: 1
-   CSE_DefineString[1] = RVal: "20:05, Tue, Mar 10, 2020"
+   CSE_DefineString[1] = RVal: "15:28, Wed, Mar 11, 2020"
    CSE_DefineString[2] = RVal: "             13   // DesignRating"
    CSE_DefineString[3] = RVal: "      13   // Proposed and Standard"
    CSE_DefineString[4] = RVal: "    2022   // CA2022"
@@ -1085,7 +1085,7 @@ SCSysRpt   User: "OneBedroomDownstairsZone1 2/2 | CoolingComponent:HeatingCompon
    ..
 
 DHWSysRpt   User: "OneBedroomDownstairsZone1 1/2 | DHWHeatpump"  
-   DHWSysName = RVal: "DHWHeatpump - 1/2"
+   DHWSysName = RVal: "DHWHeatpump - 0/1"
    DwellingUnit = RVal: "OneBedroomDownstairsZone1"
    DwellUnitRptName = UVal: "OneBedroomDownstairsZone1-(1/2)"
    DwellUnitRef = RVal: "OneBedroomDownstairsZone1"
@@ -1097,9 +1097,8 @@ DHWSysRpt   User: "OneBedroomDownstairsZone1 1/2 | DHWHeatpump"
    DwellUnitDistType = RVal: "Standard"
    MFamDistType = RVal: "Multi-family: Recirculating with no control (continuous pumping)"
    IsCentralHPWH = RVal: 1
-   DHWHeaterRef = UVal: "Heatpump"
-   DHWHeaterIdx = UVal: 1
-   DHWHeaterCnt = UVal: 2
+   DHWHeaterIdx = UVal: 0
+   DHWHeaterCnt = UVal: 1
    HeaterElementType = RVal: "Heat Pump"
    TankType = RVal: "NA"
    InputRating = RVal: 12000
@@ -1136,7 +1135,7 @@ DHWSysRpt   User: "OneBedroomDownstairsZone1 1/2 | DHWHeatpump"
    ..
 
 DHWSysRpt   User: "OneBedroomDownstairsZone1 2/2 | DHWHeatpump"  
-   DHWSysName = RVal: "DHWHeatpump - 1/2"
+   DHWSysName = RVal: "DHWHeatpump - 0/1"
    DwellingUnit = RVal: "OneBedroomDownstairsZone1"
    DwellUnitRptName = UVal: "OneBedroomDownstairsZone1-(2/2)"
    DwellUnitRef = RVal: "OneBedroomDownstairsZone1"
@@ -1148,9 +1147,8 @@ DHWSysRpt   User: "OneBedroomDownstairsZone1 2/2 | DHWHeatpump"
    DwellUnitDistType = RVal: "Standard"
    MFamDistType = RVal: "Multi-family: Recirculating with no control (continuous pumping)"
    IsCentralHPWH = RVal: 1
-   DHWHeaterRef = UVal: "Heatpump"
-   DHWHeaterIdx = UVal: 1
-   DHWHeaterCnt = UVal: 2
+   DHWHeaterIdx = UVal: 0
+   DHWHeaterCnt = UVal: 1
    HeaterElementType = RVal: "Heat Pump"
    TankType = RVal: "NA"
    InputRating = RVal: 12000
@@ -1371,7 +1369,7 @@ SCSysRpt   User: "TwoBedroomDownstairsZone1 2/2 | CoolingComponent:HeatingCompon
    ..
 
 DHWSysRpt   User: "TwoBedroomDownstairsZone1 1/2 | DHWHeatpump"  
-   DHWSysName = RVal: "DHWHeatpump - 1/2"
+   DHWSysName = RVal: "DHWHeatpump - 0/1"
    DwellingUnit = RVal: "TwoBedroomDownstairsZone1"
    DwellUnitRptName = UVal: "TwoBedroomDownstairsZone1-(1/2)"
    DwellUnitRef = RVal: "TwoBedroomDownstairsZone1"
@@ -1383,9 +1381,8 @@ DHWSysRpt   User: "TwoBedroomDownstairsZone1 1/2 | DHWHeatpump"
    DwellUnitDistType = RVal: "Standard"
    MFamDistType = RVal: "Multi-family: Recirculating with no control (continuous pumping)"
    IsCentralHPWH = RVal: 1
-   DHWHeaterRef = UVal: "Heatpump"
-   DHWHeaterIdx = UVal: 1
-   DHWHeaterCnt = UVal: 2
+   DHWHeaterIdx = UVal: 0
+   DHWHeaterCnt = UVal: 1
    HeaterElementType = RVal: "Heat Pump"
    TankType = RVal: "NA"
    InputRating = RVal: 12000
@@ -1422,7 +1419,7 @@ DHWSysRpt   User: "TwoBedroomDownstairsZone1 1/2 | DHWHeatpump"
    ..
 
 DHWSysRpt   User: "TwoBedroomDownstairsZone1 2/2 | DHWHeatpump"  
-   DHWSysName = RVal: "DHWHeatpump - 1/2"
+   DHWSysName = RVal: "DHWHeatpump - 0/1"
    DwellingUnit = RVal: "TwoBedroomDownstairsZone1"
    DwellUnitRptName = UVal: "TwoBedroomDownstairsZone1-(2/2)"
    DwellUnitRef = RVal: "TwoBedroomDownstairsZone1"
@@ -1434,9 +1431,8 @@ DHWSysRpt   User: "TwoBedroomDownstairsZone1 2/2 | DHWHeatpump"
    DwellUnitDistType = RVal: "Standard"
    MFamDistType = RVal: "Multi-family: Recirculating with no control (continuous pumping)"
    IsCentralHPWH = RVal: 1
-   DHWHeaterRef = UVal: "Heatpump"
-   DHWHeaterIdx = UVal: 1
-   DHWHeaterCnt = UVal: 2
+   DHWHeaterIdx = UVal: 0
+   DHWHeaterCnt = UVal: 1
    HeaterElementType = RVal: "Heat Pump"
    TankType = RVal: "NA"
    InputRating = RVal: 12000
@@ -2423,7 +2419,7 @@ SCSysRpt   User: "OneBedroomUpstairsZone1 2/2 | CoolingComponent:HeatingComponen
    ..
 
 DHWSysRpt   User: "OneBedroomUpstairsZone1 1/2 | DHWHeatpump"  
-   DHWSysName = RVal: "DHWHeatpump - 1/2"
+   DHWSysName = RVal: "DHWHeatpump - 0/1"
    DwellingUnit = RVal: "OneBedroomUpstairsZone1"
    DwellUnitRptName = UVal: "OneBedroomUpstairsZone1-(1/2)"
    DwellUnitRef = RVal: "OneBedroomUpstairsZone1"
@@ -2435,9 +2431,8 @@ DHWSysRpt   User: "OneBedroomUpstairsZone1 1/2 | DHWHeatpump"
    DwellUnitDistType = RVal: "Standard"
    MFamDistType = RVal: "Multi-family: Recirculating with no control (continuous pumping)"
    IsCentralHPWH = RVal: 1
-   DHWHeaterRef = UVal: "Heatpump"
-   DHWHeaterIdx = UVal: 1
-   DHWHeaterCnt = UVal: 2
+   DHWHeaterIdx = UVal: 0
+   DHWHeaterCnt = UVal: 1
    HeaterElementType = RVal: "Heat Pump"
    TankType = RVal: "NA"
    InputRating = RVal: 12000
@@ -2474,7 +2469,7 @@ DHWSysRpt   User: "OneBedroomUpstairsZone1 1/2 | DHWHeatpump"
    ..
 
 DHWSysRpt   User: "OneBedroomUpstairsZone1 2/2 | DHWHeatpump"  
-   DHWSysName = RVal: "DHWHeatpump - 1/2"
+   DHWSysName = RVal: "DHWHeatpump - 0/1"
    DwellingUnit = RVal: "OneBedroomUpstairsZone1"
    DwellUnitRptName = UVal: "OneBedroomUpstairsZone1-(2/2)"
    DwellUnitRef = RVal: "OneBedroomUpstairsZone1"
@@ -2486,9 +2481,8 @@ DHWSysRpt   User: "OneBedroomUpstairsZone1 2/2 | DHWHeatpump"
    DwellUnitDistType = RVal: "Standard"
    MFamDistType = RVal: "Multi-family: Recirculating with no control (continuous pumping)"
    IsCentralHPWH = RVal: 1
-   DHWHeaterRef = UVal: "Heatpump"
-   DHWHeaterIdx = UVal: 1
-   DHWHeaterCnt = UVal: 2
+   DHWHeaterIdx = UVal: 0
+   DHWHeaterCnt = UVal: 1
    HeaterElementType = RVal: "Heat Pump"
    TankType = RVal: "NA"
    InputRating = RVal: 12000
@@ -2709,7 +2703,7 @@ SCSysRpt   User: "TwoBedroomUpstairsZone1 2/2 | CoolingComponent:HeatingComponen
    ..
 
 DHWSysRpt   User: "TwoBedroomUpstairsZone1 1/2 | DHWHeatpump"  
-   DHWSysName = RVal: "DHWHeatpump - 1/2"
+   DHWSysName = RVal: "DHWHeatpump - 0/1"
    DwellingUnit = RVal: "TwoBedroomUpstairsZone1"
    DwellUnitRptName = UVal: "TwoBedroomUpstairsZone1-(1/2)"
    DwellUnitRef = RVal: "TwoBedroomUpstairsZone1"
@@ -2721,9 +2715,8 @@ DHWSysRpt   User: "TwoBedroomUpstairsZone1 1/2 | DHWHeatpump"
    DwellUnitDistType = RVal: "Standard"
    MFamDistType = RVal: "Multi-family: Recirculating with no control (continuous pumping)"
    IsCentralHPWH = RVal: 1
-   DHWHeaterRef = UVal: "Heatpump"
-   DHWHeaterIdx = UVal: 1
-   DHWHeaterCnt = UVal: 2
+   DHWHeaterIdx = UVal: 0
+   DHWHeaterCnt = UVal: 1
    HeaterElementType = RVal: "Heat Pump"
    TankType = RVal: "NA"
    InputRating = RVal: 12000
@@ -2760,7 +2753,7 @@ DHWSysRpt   User: "TwoBedroomUpstairsZone1 1/2 | DHWHeatpump"
    ..
 
 DHWSysRpt   User: "TwoBedroomUpstairsZone1 2/2 | DHWHeatpump"  
-   DHWSysName = RVal: "DHWHeatpump - 1/2"
+   DHWSysName = RVal: "DHWHeatpump - 0/1"
    DwellingUnit = RVal: "TwoBedroomUpstairsZone1"
    DwellUnitRptName = UVal: "TwoBedroomUpstairsZone1-(2/2)"
    DwellUnitRef = RVal: "TwoBedroomUpstairsZone1"
@@ -2772,9 +2765,8 @@ DHWSysRpt   User: "TwoBedroomUpstairsZone1 2/2 | DHWHeatpump"
    DwellUnitDistType = RVal: "Standard"
    MFamDistType = RVal: "Multi-family: Recirculating with no control (continuous pumping)"
    IsCentralHPWH = RVal: 1
-   DHWHeaterRef = UVal: "Heatpump"
-   DHWHeaterIdx = UVal: 1
-   DHWHeaterCnt = UVal: 2
+   DHWHeaterIdx = UVal: 0
+   DHWHeaterCnt = UVal: 1
    HeaterElementType = RVal: "Heat Pump"
    TankType = RVal: "NA"
    InputRating = RVal: 12000
@@ -3656,10 +3648,10 @@ EUseSummary   User: "EUSummary"
    Enduse5[1] = UVal: "Water Heating"
    Enduse5[2] = UVal: "7,095"
    Enduse5[4] = UVal: "25.86"
-   Enduse5[5] = UVal: "416"
-   Enduse5[6] = UVal: "299.3"
-   Enduse5[7] = UVal: "15.01"
-   Enduse5[8] = UVal: "-10.85"
+   Enduse5[5] = UVal: "132"
+   Enduse5[6] = UVal: "1,142.2"
+   Enduse5[7] = UVal: "51.67"
+   Enduse5[8] = UVal: "25.81"
    Enduse5[10] = UVal: "0.55"
    Enduse5[11] = UVal: "0.01"
    Enduse5[12] = UVal: "24,107"
@@ -3670,13 +3662,13 @@ EUseSummary   User: "EUSummary"
    Enduse5[19] = UVal: "25.86"
    Enduse5[23] = UVal: "876"
    Enduse5[25] = UVal: "876"
-   Enduse5[27] = UVal: "22"
-   Enduse5[28] = UVal: "1,349"
-   Enduse5[29] = UVal: "1,372"
-   Enduse5[30] = UVal: "496"
+   Enduse5[27] = UVal: "14"
+   Enduse5[28] = UVal: "5,150"
+   Enduse5[29] = UVal: "5,164"
+   Enduse5[30] = UVal: "4,288"
    Enduse5[31] = UVal: "2.25"
-   Enduse5[32] = UVal: "3.64"
-   Enduse5[33] = UVal: "1.39"
+   Enduse5[32] = UVal: "13.70"
+   Enduse5[33] = UVal: "11.45"
    Enduse5[34] = UVal: "2.25"
    Enduse5[35] = UVal: "7.19"
    Enduse5[36] = UVal: "4.94"
@@ -3787,44 +3779,44 @@ EUseSummary   User: "EUSummary"
    Enduse9[35] = UVal: "0.29"
    Enduse9[36] = UVal: "0.09"
    Enduse10[1] = UVal: "TOTAL"
-   Enduse10[2] = UVal: "6,744"
+   Enduse10[2] = UVal: "7,027"
    Enduse10[3] = UVal: "1,178.1"
-   Enduse10[4] = UVal: "109.19"
+   Enduse10[4] = UVal: "109.86"
    Enduse10[5] = UVal: "0"
-   Enduse10[6] = UVal: "1,343.7"
-   Enduse10[7] = UVal: "93.34"
-   Enduse10[8] = UVal: "-15.85"
+   Enduse10[6] = UVal: "2,186.6"
+   Enduse10[7] = UVal: "130.78"
+   Enduse10[8] = UVal: "20.92"
    Enduse10[10] = UVal: "3.53"
-   Enduse10[11] = UVal: "2.99"
+   Enduse10[11] = UVal: "3.00"
    Enduse10[12] = UVal: "51,458"
    Enduse10[13] = UVal: "1,294.7"
    Enduse10[14] = UVal: "254.72"
-   Enduse10[15] = UVal: "145.53"
+   Enduse10[15] = UVal: "144.86"
    Enduse10[16] = UVal: "7.46"
-   Enduse10[17] = UVal: "6,744"
+   Enduse10[17] = UVal: "7,027"
    Enduse10[18] = UVal: "1,178.1"
-   Enduse10[19] = UVal: "109.19"
-   Enduse10[23] = UVal: "3,379"
+   Enduse10[19] = UVal: "109.86"
+   Enduse10[23] = UVal: "3,387"
    Enduse10[24] = UVal: "5,312"
-   Enduse10[25] = UVal: "8,691"
+   Enduse10[25] = UVal: "8,699"
    Enduse10[27] = UVal: "2,522"
-   Enduse10[28] = UVal: "6,058"
-   Enduse10[29] = UVal: "8,581"
-   Enduse10[30] = UVal: "-110"
-   Enduse10[31] = UVal: "22.78"
-   Enduse10[32] = UVal: "22.56"
-   Enduse10[33] = UVal: "-0.22"
-   Enduse10[34] = UVal: "22.78"
+   Enduse10[28] = UVal: "9,859"
+   Enduse10[29] = UVal: "12,381"
+   Enduse10[30] = UVal: "3,682"
+   Enduse10[31] = UVal: "22.80"
+   Enduse10[32] = UVal: "32.64"
+   Enduse10[33] = UVal: "9.84"
+   Enduse10[34] = UVal: "22.80"
    Enduse10[35] = UVal: "32.98"
-   Enduse10[36] = UVal: "10.20"
+   Enduse10[36] = UVal: "10.18"
    Enduse11[1] = UVal: "Compliance Total"
    Enduse11[2] = UVal: "9,637"
    Enduse11[3] = UVal: "884.2"
    Enduse11[4] = UVal: "75.88"
-   Enduse11[5] = UVal: "2,867"
-   Enduse11[6] = UVal: "1,049.8"
-   Enduse11[7] = UVal: "58.97"
-   Enduse11[8] = UVal: "-16.91"
+   Enduse11[5] = UVal: "2,583"
+   Enduse11[6] = UVal: "1,892.7"
+   Enduse11[7] = UVal: "95.63"
+   Enduse11[8] = UVal: "19.75"
    Enduse11[10] = UVal: "0.78"
    Enduse11[11] = UVal: "0.23"
    Enduse11[12] = UVal: "27,250"
@@ -3838,38 +3830,38 @@ EUseSummary   User: "EUSummary"
    Enduse11[23] = UVal: "1,214"
    Enduse11[24] = UVal: "3,987"
    Enduse11[25] = UVal: "5,201"
-   Enduse11[27] = UVal: "353"
-   Enduse11[28] = UVal: "4,733"
-   Enduse11[29] = UVal: "5,087"
-   Enduse11[30] = UVal: "-114"
+   Enduse11[27] = UVal: "345"
+   Enduse11[28] = UVal: "8,534"
+   Enduse11[29] = UVal: "8,879"
+   Enduse11[30] = UVal: "3,678"
    Enduse11[31] = UVal: "13.70"
-   Enduse11[32] = UVal: "13.47"
-   Enduse11[33] = UVal: "-0.23"
+   Enduse11[32] = UVal: "23.53"
+   Enduse11[33] = UVal: "9.83"
    Enduse11[34] = UVal: "13.70"
    Enduse11[35] = UVal: "20.34"
    Enduse11[36] = UVal: "6.64"
    Enduse13[1] = UVal: "Photovoltaics"
-   Enduse13[2] = UVal: "-22,753"
-   Enduse13[4] = UVal: "-57.04"
-   Enduse13[5] = UVal: "-22,753"
-   Enduse13[7] = UVal: "-56.07"
-   Enduse13[8] = UVal: "0.97"
-   Enduse13[10] = UVal: "-0.37"
+   Enduse13[2] = UVal: "-22,469"
+   Enduse13[4] = UVal: "-56.37"
+   Enduse13[5] = UVal: "-22,469"
+   Enduse13[7] = UVal: "-55.29"
+   Enduse13[8] = UVal: "1.08"
+   Enduse13[10] = UVal: "-0.36"
    Enduse13[14] = UVal: " "
-   Enduse13[15] = UVal: "57.04"
-   Enduse13[17] = UVal: "-22,753"
-   Enduse13[19] = UVal: "-57.04"
-   Enduse13[23] = UVal: "-634"
-   Enduse13[25] = UVal: "-634"
-   Enduse13[27] = UVal: "-634"
-   Enduse13[29] = UVal: "-634"
+   Enduse13[15] = UVal: "56.37"
+   Enduse13[17] = UVal: "-22,469"
+   Enduse13[19] = UVal: "-56.37"
+   Enduse13[23] = UVal: "-626"
+   Enduse13[25] = UVal: "-626"
+   Enduse13[27] = UVal: "-626"
+   Enduse13[29] = UVal: "-626"
    Enduse13[30] = UVal: "0"
-   Enduse13[31] = UVal: "-1.63"
-   Enduse13[32] = UVal: "-1.63"
+   Enduse13[31] = UVal: "-1.61"
+   Enduse13[32] = UVal: "-1.61"
    Enduse13[33] = UVal: "0.00"
-   Enduse13[34] = UVal: "-1.63"
+   Enduse13[34] = UVal: "-1.61"
    Enduse13[35] = UVal: " "
-   Enduse13[36] = UVal: "1.63"
+   Enduse13[36] = UVal: "1.61"
    Enduse14[1] = UVal: "Battery"
    Enduse14[4] = UVal: "0.00"
    Enduse14[7] = UVal: " "
@@ -3899,90 +3891,91 @@ EUseSummary   User: "EUSummary"
    Enduse99[25] = UVal: "0"
    Enduse99[29] = UVal: "0"
    Enduse99[30] = UVal: "0"
-   PassFail = UVal: "FAIL"
-   ComplyMessage = UVal: "DOES NOT COMPLY"
+   PassFail = UVal: "PASS"
+   ComplyMessage = UVal: "COMPLIES"
    SummaryCol1[4] = UVal: "Standard Design"
    SummaryCol1[5] = UVal: "Proposed Design"
    SummaryCol2[1] = UVal: "Compliance"
    SummaryCol2[2] = UVal: "Energy Use"
    SummaryCol2[3] = UVal: "(kTDV/ft²-yr)"
-   SummaryCol2[4] = UVal: "58.97"
+   SummaryCol2[4] = UVal: "95.63"
    SummaryCol2[5] = UVal: "75.88"
    SummaryColNPVMarg[2] = UVal: "Efficiency¹"
    SummaryColNPVMarg[3] = UVal: "(EDR2)"
-   SummaryColNPVMarg[5] = UVal: "-6.6"
+   SummaryColNPVMarg[5] = UVal: "7.7"
    SummaryColFinMarg[2] = UVal: "Total²"
    SummaryColFinMarg[3] = UVal: "(EDR2)"
-   SummaryColFinMarg[5] = UVal: "-6.3"
+   SummaryColFinMarg[5] = UVal: "8.2"
    SummaryColNoPVDR[2] = UVal: "Efficiency¹"
    SummaryColNoPVDR[3] = UVal: "(EDR2)"
-   SummaryColNoPVDR[4] = UVal: "58.7"
+   SummaryColNoPVDR[4] = UVal: "73.0"
    SummaryColNoPVDR[5] = UVal: "65.3"
    SummaryColPVOnlyDR[2] = UVal: "Flexibility"
    SummaryColPVOnlyDR[3] = UVal: "(EDR2)"
-   SummaryColPVOnlyDR[4] = UVal: "22.1"
-   SummaryColPVOnlyDR[5] = UVal: "22.4"
+   SummaryColPVOnlyDR[4] = UVal: "21.7"
+   SummaryColPVOnlyDR[5] = UVal: "22.2"
    SummaryColFinDR[2] = UVal: "Total²"
    SummaryColFinDR[3] = UVal: "(EDR2)"
-   SummaryColFinDR[4] = UVal: "36.6"
-   SummaryColFinDR[5] = UVal: "42.9"
+   SummaryColFinDR[4] = UVal: "51.3"
+   SummaryColFinDR[5] = UVal: "43.1"
    SummaryColEDR1Marg[2] = UVal: "Source"
    SummaryColEDR1Marg[3] = UVal: "(EDR1)"
-   SummaryColEDR1Marg[5] = UVal: "-0.7"
+   SummaryColEDR1Marg[5] = UVal: "29.9"
    SummaryColEDR1[2] = UVal: "Source"
    SummaryColEDR1[3] = UVal: "(EDR1)"
-   SummaryColEDR1[4] = UVal: "68.4"
+   SummaryColEDR1[4] = UVal: "99.0"
    SummaryColEDR1[5] = UVal: "69.1"
    MarginkW[1] = UVal: -0.53
-   MarginkW[2] = UVal: 3.94
-   MarginkWh = UVal: -6744
-   MarginTherms = UVal: 165.58
+   MarginkW[2] = UVal: 3.93
+   MarginkWh = UVal: -7027.5
+   MarginTherms = UVal: 1008.48
    PctSavingskW = UVal: -17.8
-   PctSavingsTherms = UVal: 12.3
-   PctSavingsTDV = UVal: -17
-   PctSavingsCmpTDV = UVal: -28.7
+   PctSavingsTherms = UVal: 46.1
+   PctSavingsTDV = UVal: 16
+   PctSavingsCmpTDV = UVal: 20.7
    PctSavkWLbl = UVal: "-17.8"
    PctSavkWhLbl = UVal: "-"
-   PctSavThermsLbl = UVal: "12.3"
-   PctSavTDVLbl = UVal: "-17.0"
-   PctSavCmpTDVLbl = UVal: "-28.7"
-   PropElecDemand[1] = UVal: 3.52529
-   PropElecDemand[2] = UVal: 3.52529
-   StdElecDemand = UVal: 2.99169
+   PctSavThermsLbl = UVal: "46.1"
+   PctSavTDVLbl = UVal: "16.0"
+   PctSavCmpTDVLbl = UVal: "20.7"
+   PropElecDemand[1] = UVal: 3.52989
+   PropElecDemand[2] = UVal: 3.52989
+   StdElecDemand = UVal: 2.99589
    DRtgElecDemand = UVal: 7.46276
-   StdMixedFuelkWh = UVal: 22759.2
+   StdMixedFuelkWh = UVal: 22475.7
    StdMixedFuelPV = UVal: -1310.59
    PropDesignPVInp[1] = UVal: 1
    PropDesignPVInp[6] = UVal: 1
-   PropDesignPVSize[1] = UVal: 17.3657
-   PropDesignPVTot = RVal: 17.3657
-   StdDesignPVSize = UVal: 17.3657
-   StdMixedFuelPVTDV = UVal: -56.07
-   StdMixedFuelPVMlt = UVal: 17.3657
+   PropDesignPVSize[1] = UVal: 17.1493
+   PropDesignPVTot = RVal: 17.1493
+   StdDesignPVSize = UVal: 17.1493
+   StdMixedFuelPVTDV = UVal: -55.29
+   StdMixedFuelPVMlt = UVal: 17.1493
    PrelimPropkWh = UVal: 29505.2
    PrelimPropCompTDV = UVal: 75.8837
    PrelimPropPV = UVal: -1310.59
-   PropInputPVMult = RVal: 17.3657
-   UserPVScalingMsg = RVal: "PV System resized to 17.37 kWdc (a factor of 17.366) to achieve 'Standard Design PV' PV scaling"
-   UnscaledPropPVRatio = UVal: 0.771363
-   ResultsNotes[1] = UVal: "PV System resized to 17.37 kWdc (a factor of 17.366) to achieve 'Standard Design PV' PV scaling"
-   ResultsNotes[4] = UVal: "PV System resized to 17.37 kWdc (a factor of 17.366) to achieve 'Standard Design PV' PV scaling"
-   ResultsNotes[5] = UVal: "Standard Design PV Capacity: 17.37 kWdc"
+   PropInputPVMult = RVal: 17.1493
+   UserPVScalingMsg = RVal: "PV System resized to 17.15 kWdc (a factor of 17.149) to achieve 'Standard Design PV' PV scaling"
+   UnscaledPropPVRatio = UVal: 0.761753
+   StdDHW_SSF = UVal: 0.2
+   ResultsNotes[1] = UVal: "PV System resized to 17.15 kWdc (a factor of 17.149) to achieve 'Standard Design PV' PV scaling"
+   ResultsNotes[4] = UVal: "PV System resized to 17.15 kWdc (a factor of 17.149) to achieve 'Standard Design PV' PV scaling"
+   ResultsNotes[5] = UVal: "Standard Design PV Capacity: 17.15 kWdc"
    HaveResultsNotesPV[1] = UVal: 1
    HaveResultsNotesPV[4] = UVal: 1
    HaveResultsNotesPV[5] = UVal: 1
-   DesignRating = UVal: 42.9
+   DesignRating = UVal: 43.1
    DesignRatingNoPV = UVal: 65.3
    ShowDesignRtgNoPV = UVal: 1
-   DesignRatingPVOnly = UVal: 22.4
-   DesignRatingStd = UVal: 36.6
-   DesignRatingStdNoPV = UVal: 58.7
-   DesignRatingStdPVOnly = UVal: 22.1
-   MarginEfficEDR = UVal: -6.6
-   MarginFinalEDR = UVal: -6.3
+   DesignRatingPVOnly = UVal: 22.2
+   DesignRatingStd = UVal: 51.3
+   DesignRatingStdNoPV = UVal: 73
+   DesignRatingStdPVOnly = UVal: 21.7
+   MarginEfficEDR = UVal: 7.7
+   MarginFinalEDR = UVal: 8.2
    EDR1DesignRating = UVal: 69.1
-   EDR1DesignRatingStd = UVal: 68.4
-   EDR1Margin = UVal: -0.7
+   EDR1DesignRatingStd = UVal: 99
+   EDR1Margin = UVal: 29.9
    CO2FuelUnitLabel = UVal: "kg"
    CO2TotalUnitLabel = UVal: "kg"
    GHCEnergyEffCap = UVal: 0
@@ -3990,21 +3983,21 @@ EUseSummary   User: "EUSummary"
    GHCEnergyEffTDV = UVal: 0
    GHCEnergyEffElec = UVal: 0
    GHCEnergyEffCO2 = UVal: 0
-   MeetsTier1 = UVal: 0
+   MeetsTier1 = UVal: 1
    MeetsTier2 = UVal: 0
    MeetsZNETier = UVal: 0
-   PropElecCarbon[1] = UVal: 3.37914
+   PropElecCarbon[1] = UVal: 3.38704
    PropFuelCarbon[1] = UVal: 5.31219
-   PropFinalCarbon[1] = UVal: 8.69
+   PropFinalCarbon[1] = UVal: 8.7
    PropExclExpCarbon[1] = UVal: 8.91
-   PropExportCarbon[1] = UVal: 0.22
+   PropExportCarbon[1] = UVal: 0.21
    PropSelfConsCarbon[1] = UVal: 0.42
    PropNoSolFlxCarbon[1] = UVal: 9.33
-   StdFinalCarbon = UVal: 8.58
-   StdExclExpCarbon = UVal: 8.84
+   StdFinalCarbon = UVal: 12.38
+   StdExclExpCarbon = UVal: 12.65
    StdExportCarbon = UVal: 0.27
-   StdSelfConsCarbon = UVal: 0.37
-   StdNoSolFlxCarbon = UVal: 9.21
+   StdSelfConsCarbon = UVal: 0.36
+   StdNoSolFlxCarbon = UVal: 13.01
    DRtgFinalCarbon = UVal: 12.6334
    DRtgExclExpCarbon = UVal: 12.6334
    DRtgExportCarbon = UVal: 0
@@ -4325,10 +4318,10 @@ EnergyUse   User: "EU-WtrHt"
    ProposedTDV[1] = RVal: 25.86
    ProposedTDV[2] = RVal: 25.86
    ProposedTDV[3] = RVal: 25.86
-   StandardTDV = RVal: 15.01
-   CompMarginTDV = RVal: -10.85
-   PctImproveTDV = RVal: -72.2851
-   DeltaDemand = RVal: -0.537623
+   StandardTDV = RVal: 51.67
+   CompMarginTDV = RVal: 25.81
+   PctImproveTDV = RVal: 49.9516
+   DeltaDemand = RVal: -0.538016
    DesignRatingTDV[1] = RVal: 87.52
    DesignRatingTDV[2] = RVal: 87.52
    DRtgPctSavTDV = RVal: 70.4525
@@ -4336,9 +4329,9 @@ EnergyUse   User: "EU-WtrHt"
    ProposedSrc[1] = RVal: 2.25
    ProposedSrc[2] = RVal: 2.25
    ProposedSrc[3] = RVal: 2.25
-   StandardSrc = RVal: 3.64
-   CompMarginSrc = RVal: 1.39
-   PctImproveSrc = RVal: 38.1868
+   StandardSrc = RVal: 13.7
+   CompMarginSrc = RVal: 11.45
+   PctImproveSrc = RVal: 83.5766
    DesignRatingSrc[1] = RVal: 7.19
    DesignRatingSrc[2] = RVal: 7.19
    DRtgPctSavSrc = RVal: 68.7065
@@ -4350,10 +4343,10 @@ EnergyUse   User: "EU-WtrHt"
    PropOtherEnergy[2] = RVal: 0
    PropTotalEnergy[1] = RVal: 3.30816
    PropTotalEnergy[2] = RVal: 3.30816
-   StdElecEnergy = UVal: 0.193922
-   StdNatGasEnergy = UVal: 4.08846
+   StdElecEnergy = UVal: 0.0617482
+   StdNatGasEnergy = UVal: 15.6034
    StdOtherEnergy = UVal: 0
-   StdTotalEnergy = UVal: 4.28239
+   StdTotalEnergy = UVal: 15.6652
    DRtgElecEnergy = RVal: 11.2403
    DRtgNatGasEnergy = RVal: 0
    DRtgOtherEnergy = RVal: 0
@@ -4362,8 +4355,8 @@ EnergyUse   User: "EU-WtrHt"
    PropElecTDV[2] = RVal: 25.86
    PropNatGasTDV = RVal: 0
    PropOtherTDV = RVal: 0
-   StdElecTDV = RVal: 1.24
-   StdNatGasTDV = RVal: 13.77
+   StdElecTDV = RVal: 0.45
+   StdNatGasTDV = RVal: 51.22
    StdOtherTDV = RVal: 0
    DRtgElecTDV = RVal: 87.52
    DRtgNatGasTDV = RVal: 0
@@ -4372,24 +4365,24 @@ EnergyUse   User: "EU-WtrHt"
    PropElecSrc[2] = RVal: 2.25
    PropNatGasSrc = RVal: 0
    PropOtherSrc = RVal: 0
-   StdElecSrc = RVal: 0.06
-   StdNatGasSrc = RVal: 3.58
+   StdElecSrc = RVal: 0.03
+   StdNatGasSrc = RVal: 13.67
    StdOtherSrc = RVal: 0
    DRtgElecSrc = RVal: 7.19
    DRtgNatGasSrc = RVal: 0
    DRtgOtherSrc = RVal: 0
    PropElecDemand[1] = RVal: 0.549693
    PropElecDemand[2] = RVal: 0.549693
-   StdElecDemand = RVal: 0.0120705
+   StdElecDemand = RVal: 0.0116776
    DRtgElecDemand = RVal: 2.7295
    PropElecCarbon[1] = UVal: 0.00011968
    PropNatGasCarbon[1] = UVal: 0
    PropOtherCarbon[1] = UVal: 0
    PropTotalCarbon[1] = UVal: 0.00011968
-   StdElecCarbon = UVal: 3.02489e-06
-   StdNatGasCarbon = UVal: 0.000184349
+   StdElecCarbon = UVal: 1.853e-06
+   StdNatGasCarbon = UVal: 0.000703559
    StdOtherCarbon = UVal: 0
-   StdTotalCarbon = UVal: 0.000187374
+   StdTotalCarbon = UVal: 0.000705412
    DRtgElecCarbon = UVal: 0.000381728
    DRtgNatGasCarbon = UVal: 0
    DRtgOtherCarbon = UVal: 0
@@ -4439,7 +4432,7 @@ EnergyUse   User: "EU-InsLtg"
    PropNatGasTDV = RVal: 0
    PropOtherTDV = RVal: 0
    PropPVCreditTDV[1] = RVal: 0
-   PropPVCreditTDV[2] = RVal: 57.04
+   PropPVCreditTDV[2] = RVal: 56.37
    StdElecTDV = RVal: 9.21
    StdNatGasTDV = RVal: 0
    StdOtherTDV = RVal: 0
@@ -4704,74 +4697,74 @@ EnergyUse   User: "EU-Ext"
 
 EnergyUse   User: "EU-Total"  
    EnduseName = RVal: "TOTAL"
-   ProposedTDV[1] = RVal: 109.19
-   ProposedTDV[2] = RVal: 109.19
-   ProposedTDV[3] = RVal: 109.19
-   StandardTDV = RVal: 93.34
-   CompMarginTDV = RVal: -15.85
-   PctImproveTDV = RVal: -16.9809
-   DeltaDemand = RVal: -0.533608
+   ProposedTDV[1] = RVal: 109.86
+   ProposedTDV[2] = RVal: 109.86
+   ProposedTDV[3] = RVal: 109.86
+   StandardTDV = RVal: 130.78
+   CompMarginTDV = RVal: 20.92
+   PctImproveTDV = RVal: 15.9963
+   DeltaDemand = RVal: -0.534
    DesignRatingTDV[1] = RVal: 254.72
    DesignRatingTDV[2] = RVal: 254.72
-   DRtgPctSavTDV = RVal: 57.1333
-   DRtgDeltaDemand = RVal: 3.93747
-   ProposedSrc[1] = RVal: 22.78
-   ProposedSrc[2] = RVal: 22.78
-   ProposedSrc[3] = RVal: 22.78
-   StandardSrc = RVal: 22.56
-   CompMarginSrc = RVal: -0.22
-   PctImproveSrc = RVal: -0.975177
+   DRtgPctSavTDV = RVal: 56.8703
+   DRtgDeltaDemand = RVal: 3.93288
+   ProposedSrc[1] = RVal: 22.8
+   ProposedSrc[2] = RVal: 22.8
+   ProposedSrc[3] = RVal: 22.8
+   StandardSrc = RVal: 32.64
+   CompMarginSrc = RVal: 9.84
+   PctImproveSrc = RVal: 30.1471
    DesignRatingSrc[1] = RVal: 32.98
    DesignRatingSrc[2] = RVal: 32.98
-   DRtgPctSavSrc = RVal: 30.9278
-   PropElecEnergy[1] = RVal: 3.14444
-   PropElecEnergy[2] = RVal: 3.14444
+   DRtgPctSavSrc = RVal: 30.8672
+   PropElecEnergy[1] = RVal: 3.27661
+   PropElecEnergy[2] = RVal: 3.27661
    PropNatGasEnergy[1] = RVal: 16.0947
    PropNatGasEnergy[2] = RVal: 16.0947
    PropOtherEnergy[1] = RVal: 0
    PropOtherEnergy[2] = RVal: 0
-   PropTotalEnergy[1] = RVal: 19.2391
-   PropTotalEnergy[2] = RVal: 19.2391
-   StdElecEnergy = UVal: -6.68823e-07
-   StdNatGasEnergy = UVal: 18.3568
+   PropTotalEnergy[1] = RVal: 19.3713
+   PropTotalEnergy[2] = RVal: 19.3713
+   StdElecEnergy = UVal: -2.65036e-07
+   StdNatGasEnergy = UVal: 29.8717
    StdOtherEnergy = UVal: 0
-   StdTotalEnergy = UVal: 18.3568
+   StdTotalEnergy = UVal: 29.8717
    DRtgElecEnergy = RVal: 23.9927
    DRtgNatGasEnergy = RVal: 17.6868
    DRtgOtherEnergy = RVal: 0
    DRtgTotalEnergy = RVal: 41.6795
-   PropElecTDV[1] = RVal: 55.48
-   PropElecTDV[2] = RVal: 55.48
+   PropElecTDV[1] = RVal: 56.15
+   PropElecTDV[2] = RVal: 56.15
    PropNatGasTDV = RVal: 53.71
    PropOtherTDV = RVal: 0
-   StdElecTDV = RVal: 31.64
-   StdNatGasTDV = RVal: 61.7
+   StdElecTDV = RVal: 31.63
+   StdNatGasTDV = RVal: 99.15
    StdOtherTDV = RVal: 0
    DRtgElecTDV = RVal: 194.96
    DRtgNatGasTDV = RVal: 59.76
    DRtgOtherTDV = RVal: 0
-   PropElecSrc[1] = RVal: 8.68
-   PropElecSrc[2] = RVal: 8.68
+   PropElecSrc[1] = RVal: 8.7
+   PropElecSrc[2] = RVal: 8.7
    PropNatGasSrc = RVal: 14.1
    PropOtherSrc = RVal: 0
-   StdElecSrc = RVal: 6.48
-   StdNatGasSrc = RVal: 16.08
+   StdElecSrc = RVal: 6.47
+   StdNatGasSrc = RVal: 26.17
    StdOtherSrc = RVal: 0
    DRtgElecSrc = RVal: 17.49
    DRtgNatGasSrc = RVal: 15.49
    DRtgOtherSrc = RVal: 0
-   PropElecDemand[1] = RVal: 3.52529
-   PropElecDemand[2] = RVal: 3.52529
-   StdElecDemand = RVal: 2.99169
+   PropElecDemand[1] = RVal: 3.52989
+   PropElecDemand[2] = RVal: 3.52989
+   StdElecDemand = RVal: 2.99589
    DRtgElecDemand = RVal: 7.46276
-   PropElecCarbon[1] = UVal: 0.000461631
+   PropElecCarbon[1] = UVal: 0.00046271
    PropNatGasCarbon[1] = UVal: 0.000725709
    PropOtherCarbon[1] = UVal: 0
-   PropTotalCarbon[1] = UVal: 0.00118734
-   StdElecCarbon = UVal: 0.000344531
-   StdNatGasCarbon = UVal: 0.000827706
+   PropTotalCarbon[1] = UVal: 0.00118842
+   StdElecCarbon = UVal: 0.000344438
+   StdNatGasCarbon = UVal: 0.00134692
    StdOtherCarbon = UVal: 0
-   StdTotalCarbon = UVal: 0.00117224
+   StdTotalCarbon = UVal: 0.00169135
    DRtgElecCarbon = UVal: 0.000928383
    DRtgNatGasCarbon = UVal: 0.000797496
    DRtgOtherCarbon = UVal: 0
@@ -4783,10 +4776,10 @@ EnergyUse   User: "EU-Compliance"
    ProposedTDV[1] = RVal: 75.88
    ProposedTDV[2] = RVal: 75.88
    ProposedTDV[3] = RVal: 75.88
-   StandardTDV = RVal: 58.97
-   CompMarginTDV = RVal: -16.91
-   PctImproveTDV = RVal: -28.6756
-   DeltaDemand = RVal: -0.542183
+   StandardTDV = RVal: 95.63
+   CompMarginTDV = RVal: 19.75
+   PctImproveTDV = RVal: 20.6525
+   DeltaDemand = RVal: -0.542576
    DesignRatingTDV[1] = RVal: 146.06
    DesignRatingTDV[2] = RVal: 146.06
    DRtgPctSavTDV = RVal: 48.0487
@@ -4794,9 +4787,9 @@ EnergyUse   User: "EU-Compliance"
    ProposedSrc[1] = RVal: 13.7
    ProposedSrc[2] = RVal: 13.7
    ProposedSrc[3] = RVal: 13.7
-   StandardSrc = RVal: 13.47
-   CompMarginSrc = RVal: -0.23
-   PctImproveSrc = RVal: -1.7075
+   StandardSrc = RVal: 23.53
+   CompMarginSrc = RVal: 9.83
+   PctImproveSrc = RVal: 41.7765
    DesignRatingSrc[1] = RVal: 20.34
    DesignRatingSrc[2] = RVal: 20.34
    DRtgPctSavSrc = RVal: 32.645
@@ -4808,10 +4801,10 @@ EnergyUse   User: "EU-Compliance"
    PropOtherEnergy[2] = RVal: 0
    PropTotalEnergy[1] = RVal: 16.5729
    PropTotalEnergy[2] = RVal: 16.5729
-   StdElecEnergy = UVal: 1.33674
-   StdNatGasEnergy = UVal: 14.3418
+   StdElecEnergy = UVal: 1.20457
+   StdNatGasEnergy = UVal: 25.8568
    StdOtherEnergy = UVal: 0
-   StdTotalEnergy = UVal: 15.6785
+   StdTotalEnergy = UVal: 27.0613
    DRtgElecEnergy = RVal: 12.7054
    DRtgNatGasEnergy = RVal: 13.6452
    DRtgOtherEnergy = RVal: 0
@@ -4820,8 +4813,8 @@ EnergyUse   User: "EU-Compliance"
    PropElecTDV[2] = RVal: 35.33
    PropNatGasTDV = RVal: 40.55
    PropOtherTDV = RVal: 0
-   StdElecTDV = RVal: 10.43
-   StdNatGasTDV = RVal: 48.54
+   StdElecTDV = RVal: 9.64
+   StdNatGasTDV = RVal: 85.99
    StdOtherTDV = RVal: 0
    DRtgElecTDV = RVal: 99.52
    DRtgNatGasTDV = RVal: 46.54
@@ -4830,24 +4823,24 @@ EnergyUse   User: "EU-Compliance"
    PropElecSrc[2] = RVal: 3.12
    PropNatGasSrc = RVal: 10.58
    PropOtherSrc = RVal: 0
-   StdElecSrc = RVal: 0.91
-   StdNatGasSrc = RVal: 12.56
+   StdElecSrc = RVal: 0.88
+   StdNatGasSrc = RVal: 22.65
    StdOtherSrc = RVal: 0
    DRtgElecSrc = RVal: 8.39
    DRtgNatGasSrc = RVal: 11.95
    DRtgOtherSrc = RVal: 0
    PropElecDemand[1] = RVal: 0.776083
    PropElecDemand[2] = RVal: 0.776083
-   StdElecDemand = RVal: 0.2339
+   StdElecDemand = RVal: 0.233507
    DRtgElecDemand = RVal: 2.95133
    PropElecCarbon[1] = UVal: 0.000165795
    PropNatGasCarbon[1] = UVal: 0.000544674
    PropOtherCarbon[1] = UVal: 0
    PropTotalCarbon[1] = UVal: 0.000710469
-   StdElecCarbon = UVal: 4.82022e-05
-   StdNatGasCarbon = UVal: 0.000646671
+   StdElecCarbon = UVal: 4.70303e-05
+   StdNatGasCarbon = UVal: 0.00116588
    StdOtherCarbon = UVal: 0
-   StdTotalCarbon = UVal: 0.000694873
+   StdTotalCarbon = UVal: 0.00121291
    DRtgElecCarbon = UVal: 0.00044526
    DRtgNatGasCarbon = UVal: 0.000615264
    DRtgOtherCarbon = UVal: 0
@@ -4856,74 +4849,74 @@ EnergyUse   User: "EU-Compliance"
 
 EnergyUse   User: "EU-PV"  
    EnduseName = RVal: "Photovoltaics"
-   ProposedTDV[1] = RVal: -57.04
-   ProposedTDV[2] = RVal: -57.04
-   ProposedTDV[3] = RVal: -57.04
-   StandardTDV = RVal: -56.07
-   CompMarginTDV = RVal: 0.97
-   PctImproveTDV = RVal: -1.72998
+   ProposedTDV[1] = RVal: -56.37
+   ProposedTDV[2] = RVal: -56.37
+   ProposedTDV[3] = RVal: -56.37
+   StandardTDV = RVal: -55.29
+   CompMarginTDV = RVal: 1.08
+   PctImproveTDV = RVal: -1.95334
    DeltaDemand = RVal: 0
    DesignRatingTDV[1] = RVal: 0
    DesignRatingTDV[2] = RVal: 0
    DRtgPctSavTDV = RVal: 0
-   DRtgDeltaDemand = RVal: 0.368856
-   ProposedSrc[1] = RVal: -1.63
-   ProposedSrc[2] = RVal: -1.63
-   ProposedSrc[3] = RVal: -1.63
-   StandardSrc = RVal: -1.63
+   DRtgDeltaDemand = RVal: 0.36426
+   ProposedSrc[1] = RVal: -1.61
+   ProposedSrc[2] = RVal: -1.61
+   ProposedSrc[3] = RVal: -1.61
+   StandardSrc = RVal: -1.61
    CompMarginSrc = RVal: 0
    PctImproveSrc = RVal: 0
    DesignRatingSrc[1] = RVal: 0
    DesignRatingSrc[2] = RVal: 0
    DRtgPctSavSrc = RVal: 0
-   PropElecEnergy[1] = RVal: -10.6085
-   PropElecEnergy[2] = RVal: -10.6085
+   PropElecEnergy[1] = RVal: -10.4764
+   PropElecEnergy[2] = RVal: -10.4764
    PropNatGasEnergy[1] = RVal: 0
    PropNatGasEnergy[2] = RVal: 0
    PropOtherEnergy[1] = RVal: 0
    PropOtherEnergy[2] = RVal: 0
-   PropTotalEnergy[1] = RVal: -10.6085
-   PropTotalEnergy[2] = RVal: -10.6085
-   StdElecEnergy = UVal: -10.6085
+   PropTotalEnergy[1] = RVal: -10.4764
+   PropTotalEnergy[2] = RVal: -10.4764
+   StdElecEnergy = UVal: -10.4764
    StdNatGasEnergy = UVal: 0
    StdOtherEnergy = UVal: 0
-   StdTotalEnergy = UVal: -10.6085
+   StdTotalEnergy = UVal: -10.4764
    DRtgElecEnergy = RVal: 0
    DRtgNatGasEnergy = RVal: 0
    DRtgOtherEnergy = RVal: 0
    DRtgTotalEnergy = RVal: 0
-   PropElecTDV[1] = RVal: -57.04
-   PropElecTDV[2] = RVal: -57.04
+   PropElecTDV[1] = RVal: -56.37
+   PropElecTDV[2] = RVal: -56.37
    PropNatGasTDV = RVal: 0
    PropOtherTDV = RVal: 0
-   StdElecTDV = RVal: -56.07
+   StdElecTDV = RVal: -55.29
    StdNatGasTDV = RVal: 0
    StdOtherTDV = RVal: 0
    DRtgElecTDV = RVal: 0
    DRtgNatGasTDV = RVal: 0
    DRtgOtherTDV = RVal: 0
-   PropElecSrc[1] = RVal: -1.63
-   PropElecSrc[2] = RVal: -1.63
+   PropElecSrc[1] = RVal: -1.61
+   PropElecSrc[2] = RVal: -1.61
    PropNatGasSrc = RVal: 0
    PropOtherSrc = RVal: 0
-   StdElecSrc = RVal: -1.63
+   StdElecSrc = RVal: -1.61
    StdNatGasSrc = RVal: 0
    StdOtherSrc = RVal: 0
    DRtgElecSrc = RVal: 0
    DRtgNatGasSrc = RVal: 0
    DRtgOtherSrc = RVal: 0
-   PropElecDemand[1] = RVal: -0.368856
-   PropElecDemand[2] = RVal: -0.368856
-   StdElecDemand = RVal: -0.368856
+   PropElecDemand[1] = RVal: -0.36426
+   PropElecDemand[2] = RVal: -0.36426
+   StdElecDemand = RVal: -0.36426
    DRtgElecDemand = RVal: 0
-   PropElecCarbon[1] = UVal: -8.6614e-05
+   PropElecCarbon[1] = UVal: -8.55348e-05
    PropNatGasCarbon[1] = UVal: 0
    PropOtherCarbon[1] = UVal: 0
-   PropTotalCarbon[1] = UVal: -8.6614e-05
-   StdElecCarbon = UVal: -8.6614e-05
+   PropTotalCarbon[1] = UVal: -8.55348e-05
+   StdElecCarbon = UVal: -8.55348e-05
    StdNatGasCarbon = UVal: 0
    StdOtherCarbon = UVal: 0
-   StdTotalCarbon = UVal: -8.6614e-05
+   StdTotalCarbon = UVal: -8.55348e-05
    DRtgElecCarbon = UVal: 0
    DRtgNatGasCarbon = UVal: 0
    DRtgOtherCarbon = UVal: 0
@@ -10091,8 +10084,8 @@ SpeclFtr   User: "2019 Prototype 7320ft2 Prop Elec-specl-featrs"
    BatterySystem = RVal: 0
    SelfUtilCredit = RVal: 0
    ZonalControlMsg = RVal: " "  (0)
-   PVSysCreditMsg = UVal: "PV System: 17.37 kWdc"
-   PVSysCreditVal = UVal: 17.37
+   PVSysCreditMsg = UVal: "PV System: 17.15 kWdc"
+   PVSysCreditVal = UVal: 17.15
    CoolVent = RVal: 0
    CoolVentRptMsg = RVal: " n/a "  (0)
    VarCFIClVent = RVal: 0
@@ -10293,7 +10286,7 @@ cf1rPayload   User: "CF1RPayload"
    attrib_complianceDocumentSchemaVersion = RVal: "complianceDocumentSchemaVersion1"
    attrib_displayTag = RVal: "CF1R-PRF-01-E"
    attrib_payloadDocument = RVal: "CF1RPRF01E"
-   attrib_processedDate = RVal: "2020-03-10T20:05:21-07:00"
+   attrib_processedDate = RVal: "2020-03-11T15:28:53-07:00"
    attrib_reportRequestor = RVal: "reportRequestor1"
    attrib_reportRequestorIP_Address = RVal: "reportRequestorIP_Address1"
    attrib_revision = RVal: "revision3"
@@ -10307,7 +10300,7 @@ cf1rDocumentData   User: "CF1RDocData"
 
 cf1rHeader   User: "CF1RHeader"  
    comp_header01_ProjectName = RVal: "2019 Prototype 7320ft2 Prop Elec"
-   comp_header02_RunDateTime = RVal: "2020-03-10T20:05:21-07:00"
+   comp_header02_RunDateTime = RVal: "2020-03-11T15:28:53-07:00"
    comp_header03_RunDescription = RVal: "TDSv30 V19R12 V19 R12 UGLASS15 ELEC PVSTD"
    comp_header04_InputFilename = RVal: "instance.ribd22"
    ..
@@ -10348,7 +10341,7 @@ cf1rSection_A   User: "CF1R SecA"
    ..
 
 cf1rSection_C   User: "CF1R SecC"  
-   C01_ResidentialPerformanceComplianceResult = RVal: "false"
+   C01_ResidentialPerformanceComplianceResult = RVal: "true"
    C02_ResidentialPerformanceHERS_VerificationRequired = RVal: "true"
    C03_ResidentialPerformanceSpecialFeatures = RVal: "true"
    ..
@@ -10359,24 +10352,24 @@ cf1rSection_EnergyDesignRatings   User: "Section_EnergyDesignRatings"
 cf1rEDRSingleOrientation   User: "SingleOrientation 1"  
    EdrColumn0203Label = RVal: "Energy Design Ratings"
    EdrColumn0405Label = RVal: "Compliance Margins"
-   afterchildren_EdrResults_DoesEnergyDesignRatingComply = RVal: "false"
-   afterchildren_EdrResultNotes_EDR_ComplianceNotes[1] = RVal: "Standard Design PV Capacity: 17.37 kWdc"
-   afterchildren_EdrResultNotes_EDR_ComplianceNotes[3] = RVal: "PV System resized to 17.37 kWdc (a factor of 17.366) to achieve 'Standard Design PV' PV scaling"
+   afterchildren_EdrResults_DoesEnergyDesignRatingComply = RVal: "true"
+   afterchildren_EdrResultNotes_EDR_ComplianceNotes[1] = RVal: "Standard Design PV Capacity: 17.15 kWdc"
+   afterchildren_EdrResultNotes_EDR_ComplianceNotes[3] = RVal: "PV System resized to 17.15 kWdc (a factor of 17.149) to achieve 'Standard Design PV' PV scaling"
    afterchildren_EdrFootnote1 = RVal: "1: Efficiency EDR includes improvements to the building envelope and more efficient equipment"
    afterchildren_EdrFootnote2 = RVal: "2: Total EDR includes efficiency and demand response measures such as photovoltaic (PV) systems and batteries"
    afterchildren_EdrFootnote3 = RVal: "3: Building complies when efficiency and total compliance margins are greater than or equal to zero"
    ..
 
 cf1rStandardDesign   User: "StandardDesign"  
-   Edr02_EDR_StandardEfficiency = RVal: 58.7
-   Edr03_EDR_StandardTotal = RVal: 36.6
+   Edr02_EDR_StandardEfficiency = RVal: 73
+   Edr03_EDR_StandardTotal = RVal: 51.3
    ..
 
 cf1rProposedDesign   User: "ProposedDesign"  
    Edr02_EDR_ProposedEfficiency = RVal: 65.3
-   Edr03_EDR_ProposedTotal = RVal: 42.9
-   Edr04_EDR_MarginProposedEfficiency = RVal: -6.6
-   Edr05_EDR_MarginProposedTotal = RVal: -6.3
+   Edr03_EDR_ProposedTotal = RVal: 43.1
+   Edr04_EDR_MarginProposedEfficiency = RVal: 7.7
+   Edr05_EDR_MarginProposedTotal = RVal: 8.2
    ..
 
 cf1rSection_EnergyUseSummary   User: "Section_EnergyUseSummary"  
@@ -10410,10 +10403,10 @@ cf1rVentilation   User: "Ventilation"
 
 cf1rWaterHeating   User: "WaterHeating"  
    Eus01Row01Label = RVal: "Water Heating"
-   Eus02_EnergyUseStandardWaterHeating = RVal: 15.01
+   Eus02_EnergyUseStandardWaterHeating = RVal: 51.67
    Eus03_EnergyUseProposedWaterHeating = RVal: 25.86
-   Eus04_EnergyUseMarginWaterHeating = RVal: -10.85
-   Eus05_EnergyUseImprovementWaterHeating = RVal: -72.3
+   Eus04_EnergyUseMarginWaterHeating = RVal: 25.81
+   Eus05_EnergyUseImprovementWaterHeating = RVal: 50
    ..
 
 cf1rSelfUtilCredit   User: "SelfUtilCredit"  
@@ -10426,10 +10419,10 @@ cf1rSelfUtilCredit   User: "SelfUtilCredit"
 
 cf1rTotals   User: "Totals"  
    Eus01Row01Label = RVal: "Compliance Energy Total"
-   Eus02_EnergyUseStandardTotal = RVal: 58.97
+   Eus02_EnergyUseStandardTotal = RVal: 95.63
    Eus03_EnergyUseProposedTotal = RVal: 75.88
-   Eus04_EnergyUseMarginTotal = RVal: -16.91
-   Eus05_EnergyUseImprovementTotal = RVal: -28.7
+   Eus04_EnergyUseMarginTotal = RVal: 19.75
+   Eus05_EnergyUseImprovementTotal = RVal: 20.7
    ..
 
 cf1rSection_Da   User: "Section_Da"  
@@ -10439,7 +10432,7 @@ cf1rTableEDR_PV   User: "EDR_PV"
    ..
 
 cf1rtblRowEDR_PV   User: "2019 Prototype 7320ft2 Prop ElecEDR_PVRow1"  
-   Da01_PV_SystemTotalRatedPowerDC = RVal: 17.37
+   Da01_PV_SystemTotalRatedPowerDC = RVal: 17.15
    Da02_PhotoVoltaicExceptionRes = RVal: "NoExceptionsNA"
    Da03_ArrayModuleType = RVal: "Standard"
    Da04_ArrayType = RVal: "FixedArray"
@@ -10459,8 +10452,8 @@ cf1rSection_E   User: "CF1R SecE"
 
 cf1rSpecialFeature   User: "CF1R SecE SclFtr"  
    E01_SpecialFeatureCategory = RVal: "PV2kWSystem"
-   E01b_SpecialFeatureCategoryString = RVal: "PV System: 17.37 kWdc"
-   E01c_SpecialFeatureCategoryData[1] = RVal: "17.37"
+   E01b_SpecialFeatureCategoryString = RVal: "PV System: 17.15 kWdc"
+   E01c_SpecialFeatureCategoryData[1] = RVal: "17.15"
    ..
 
 cf1rSpecialFeature   User: "CF1R SecE SclFtr 2"  
@@ -11127,7 +11120,7 @@ cf1rtblRowWaterHeaters   User: "HeatpumpWaterHeaterRow"
    T01_WaterHeaterName = RVal: "Heatpump"
    T02_WaterHeaterFuelSource = RVal: "HeatPumpWaterHeater"
    T03_NotApplicableMessage = RVal: "n/a"
-   T04_WaterHeaterCount = RVal: 16
+   T04_WaterHeaterCount = RVal: 0
    T05_StorageCapacity = RVal: 83
    T06a_EfficiencyType = RVal: "NEEA"
    T07_WaterHeaterRatedInputString = RVal: "<= 12 kW"

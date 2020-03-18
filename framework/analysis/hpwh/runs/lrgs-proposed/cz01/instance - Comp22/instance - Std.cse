@@ -1,4 +1,4 @@
- #define  RunDateFmt  20:05, Tue, Mar 10, 2020
+ #define  RunDateFmt  15:28, Wed, Mar 11, 2020
  #define  RunID               12   // Standard
  #define  AnalysisType        13   // Proposed and Standard
  #define  CompCodeBase      2022   // CA2022
@@ -920,13 +920,12 @@ DHWMETER   "DHWMtrWH"
 
 DHWSOLARSYS   "dhwss-t24-Std SolarSys"  
    swElecMtr = "MtrElec"                // electric use meter
-   swTankVol = 613                      // tank volume, gal
    swTankInsulR = 12                    // tank insulation R value, °F-ft2-h/Btu
    swTankTEx = ($tDbO + 70) / 2         // temperature surrounding tank, °F
 
    DHWSOLARCOLLECTOR   "dhwsc-t24-Std SolarSys"  
       scArea = 40.859764                // area, ft2
-      scMult = 10                       // solar collector multiplier
+      scMult = 1.122664                 // solar collector multiplier
       scTilt = 40                       // solar collector tilt (0=H, 90=V), deg
       scAzm = 180                       // solar collector azimuth (0=N, 90=E, ...), deg
       scFRUL = -4.125 * 0.17611         // heat removal curve slope
@@ -1127,7 +1126,7 @@ DHWSYS   "dhwsys-TwoBedroomUpstairsZone1 DU 8"
    wsBathCount = 1                      // Total number of bathtubs served by this DHWSYS
 
  verbose = -1          // suppress progress messages
- RUN                   // perform DHW pre-run calcs
+ RUN                   // perform DHW (or DHWSolar) pre-run calcs
  UNSET verbose         // re-enable progress messages
 
 IZXFER   "Zone2ToAtticCeiling-BypassxA"  
@@ -2610,7 +2609,7 @@ RSYS   "rsys-Zone2 HVACSys"
       dsExCnd = "AMBIENT"               // Conditions surrounding duct segment
 
 PVARRAY   "pvarray 1"  
-   pvDCSysSize = 17.365682              // Rated array output, kW
+   pvDCSysSize = 17.149319              // Rated array output, kW
    pvModuleType = "Standard"
    pvArrayType = "FixedOpenRack"
    pvTilt = 22.619884                   // Array tilt (0=H, 90=V), deg
@@ -2622,6 +2621,7 @@ PVARRAY   "pvarray 1"
 
 EXPORTFILE   "xf-dhwSolarSys-SSF"  
    xfFileName = "instance - Std-SSF.csv"    // Name of file to write simulation results to
+   endEXPORTFILE
 
 EXPORT   "ExportElec"  
    exExportfile = "Primary"             // Name of EXPORTFILE to write simulation results to
