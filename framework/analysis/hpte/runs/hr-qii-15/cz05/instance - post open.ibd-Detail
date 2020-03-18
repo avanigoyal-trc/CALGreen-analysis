@@ -23,15 +23,15 @@ Proj   User: "High-Rise Mixed-Use (10-story)"
    ClgUnmetLdHrTol = RVal: 1
    HtgUnmetLdHrTol = RVal: 1
    CliZnCounty = PDef: "Alameda"  (0)
-   CliZnNum = RVal: 1
-   CliZn = UVal: "ClimateZone1"  (1)
-   Lat = RVal: 40.98
-   Long = RVal: -124.11
-   Elevation = RVal: 210
+   CliZnNum = RVal: 5
+   CliZn = UVal: "ClimateZone5"  (5)
+   Lat = RVal: 34.9
+   Long = RVal: -120.45
+   Elevation = RVal: 236
    BldgTerrain = PDef: "Suburbs"  (2)
-   DsgnDBT = RVal: 70.7
-   MCWBT = RVal: 59
-   DsgnWBT = RVal: 62.4
+   DsgnDBT = RVal: 84.2
+   MCWBT = RVal: 61.9
+   DsgnWBT = RVal: 66
    StAddress = RVal: " - specify - "
    City = RVal: " - specify - "
    State = RVal: "CA"
@@ -83,8 +83,8 @@ Proj   User: "High-Rise Mixed-Use (10-story)"
    MechDsgnrZipCode = RVal: " - specify - "
    MechDsgnrPhone = RVal: " - specify - "
    MechDsgnrType = RVal: "- specify -"  (1)
-   WeatherStationNum = RVal: 725945
-   WeatherStation = UVal: "CTZ01S22A"  (1)
+   WeatherStationNum = RVal: 723940
+   WeatherStation = UVal: "CTZ05S22A"  (5)
    HVACAutoSizing = UVal: 0
    SimDsgnDays = RVal: 0
    SimFlag = RVal: 1
@@ -201,7 +201,7 @@ Proj   User: "High-Rise Mixed-Use (10-story)"
    SoftwareVersion = UVal: "CBECC-Com 2022.0.1 RV (1113)"
    CompReportNum = RVal: 0
    ResultsCurrentMessage = UVal: "(not current)"
-   ModelPath = PDef: "C:\Users\mnakajima\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hpte\runs\hr-qii-15\cz01\"
+   ModelPath = PDef: "C:\Users\mnakajima\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hpte\runs\hr-qii-15\cz05\"
    ModelFile = PDef: "instance"
    PropHasUnknownHVACZns = RVal: 0
    WtrHtrCnt = RVal: 4
@@ -334,8 +334,8 @@ Proj   User: "High-Rise Mixed-Use (10-story)"
    SpandrelWallUA[4] = RVal: 0
    SpandrelWallUA[5] = RVal: 0
    SpandrelWallUA[6] = RVal: 0
-   WoodFrmAndOtherRoofUA[1] = RVal: 0
-   WoodFrmAndOtherRoofUA[2] = RVal: 0
+   WoodFrmAndOtherRoofUA[1] = RVal: 51.8316
+   WoodFrmAndOtherRoofUA[2] = RVal: 419.16
    WoodFrmAndOtherRoofUA[3] = RVal: 0
    WoodFrmAndOtherRoofUA[4] = RVal: 0
    WoodFrmAndOtherRoofUA[5] = RVal: 0
@@ -446,9 +446,9 @@ Proj   User: "High-Rise Mixed-Use (10-story)"
    WoodFrmAndOtherWallUFac[1] = RVal: 0.0754517
    WoodFrmAndOtherWallUFac[2] = RVal: 0.0754517
    WoodFrmAndOtherWallUFac[7] = RVal: 0.0754517
-   WoodFrmAndOtherRoofUFac[1] = RVal: 0
-   WoodFrmAndOtherRoofUFac[2] = RVal: 0
-   WoodFrmAndOtherRoofUFac[7] = RVal: 0
+   WoodFrmAndOtherRoofUFac[1] = RVal: 0.0375591
+   WoodFrmAndOtherRoofUFac[2] = RVal: 0.0375591
+   WoodFrmAndOtherRoofUFac[7] = RVal: 0.0375591
    CSE_DHWUseMthd = RVal: "New (via wsDayUse)"  (2)
    CSE_DHWUseIncFile = RVal: "DHWDU.txt"
    DefaultOptionInp = PDef: "Entire Model"  (3)
@@ -1116,7 +1116,7 @@ Mat   User: "Compliance Insulation R0.20"
    IsWoodFrameLayer = RVal: 0
    IsMetalRoof = RVal: 0
    IsWoodFrameRoof = RVal: 0
-   RefCnt = RVal: 3
+   RefCnt = RVal: 2
    SimpleCompositeR = RVal: 0
    HeatCap = RVal: 0.0007182
    InsCheck = RVal: 0.2
@@ -1215,7 +1215,7 @@ Mat   User: "Compliance Insulation R1.00"
    IsWoodFrameLayer = RVal: 0
    IsMetalRoof = RVal: 0
    IsWoodFrameRoof = RVal: 0
-   RefCnt = RVal: 1
+   RefCnt = RVal: 0
    SimpleCompositeR = RVal: 0
    HeatCap = RVal: 0.003591
    InsCheck = RVal: 1
@@ -1413,7 +1413,7 @@ Mat   User: "WoodRoof16OCCavInsR32"
    IsWoodFrameLayer = RVal: 1
    IsMetalRoof = RVal: 0
    IsWoodFrameRoof = RVal: 0
-   RefCnt = RVal: 1
+   RefCnt = RVal: 0
    SimpleCompositeR = RVal: 23.777
    HeatCap = RVal: 0
    InsCheck = RVal: 0
@@ -1446,7 +1446,7 @@ Mat   User: "WoodRoof16OCCavInsR31"
    IsWoodFrameLayer = RVal: 1
    IsMetalRoof = RVal: 0
    IsWoodFrameRoof = RVal: 0
-   RefCnt = RVal: 0
+   RefCnt = RVal: 1
    SimpleCompositeR = RVal: 23.2749
    HeatCap = RVal: 0
    InsCheck = RVal: 0
@@ -2057,6 +2057,7 @@ ConsAssm   User: "MetalFrameWallInterior"
 ConsAssm   User: "FlatResWoodFramingAndOtherRoof"  
    CompatibleSurfType = UVal: "Roof"  (2)
    SpecMthd = RVal: "Layers"  (1)
+   UFactor = RVal: 0.0375591
    AssignedSurfType = RVal: 2
    Status = RVal: "New"  (1)
    ExtRoughness = RVal: "MediumRough"  (3)
@@ -2075,16 +2076,12 @@ ConsAssm   User: "FlatResWoodFramingAndOtherRoof"
    CRRCInitialEmit = RVal: 0.75
    CRRCAgedEmit = RVal: 0.75
    HasCRRCProdID = RVal: 0
-   WtPerArea = RVal: 2.86306
+   WtPerArea = RVal: 2.80867
    MatRef[1] = UVal: "Roofing felt - 1/8 in."
    MatRef[2] = UVal: "Building Paper - 1/16 in."
    MatRef[3] = UVal: "Fiberboard sheathing - 1/2 in."
-   MatRef[4] = UVal: "Compliance Insulation R1.54"
-   MatRef[5] = UVal: "Compliance Insulation R1.35"
-   MatRef[6] = UVal: "Compliance Insulation R0.20"
-   MatRef[7] = UVal: "Compliance Insulation R1.00"
-   MatRef[8] = UVal: "Gypsum Board - 1/2 in."
-   MatRef[9] = UVal: "WoodRoof16OCCavInsR32"
+   MatRef[4] = UVal: "Gypsum Board - 1/2 in."
+   MatRef[5] = UVal: "WoodRoof16OCCavInsR31"
    AreaNew = RVal: 12540
    AreaAltered = RVal: 0
    AreaExisting = RVal: 0
@@ -2095,14 +2092,14 @@ ConsAssm   User: "FlatResWoodFramingAndOtherRoof"
    AreaAltResCond = RVal: 0
    AreaAltRelocCond = RVal: 0
    FrmMat = RVal: "Wood"  (2)
-   CavityInsVal = RVal: 32
-   PerfFacRpt = RVal: "NA"
-   InsCheckSum = RVal: 4.09
+   CavityInsVal = RVal: 31
+   PerfFacRpt = RVal: "U-Factor: 0.038"
+   InsCheckSum = RVal: 0
    RoofDens = RDef: 0
    BuiltUpRoof = RDef: 0
    BallastedRoof = RDef: 0
-   NumMats = RVal: 9
-   SumMatHeatCap = RVal: 0.817687
+   NumMats = RVal: 5
+   SumMatHeatCap = RVal: 0.803
    IsSpandrel = RVal: "false"  (2)
    ContainsMetalWallMaterial = RVal: "false"  (2)
    ContainsMetalFrameMaterial = RVal: "false"  (2)
@@ -2115,6 +2112,8 @@ ConsAssm   User: "FlatResWoodFramingAndOtherRoof"
    AlteredConsCnt = RVal: 0
    ExistingConsCnt = RVal: 0
    ConsType = RVal: "WoodFramingAndOtherRoof"  (8)
+   UAValueNewNonRes = RVal: 51.8316
+   UAValueNewRes = RVal: 419.16
    ..
 
 ConsAssm   User: "OtherFloor"  
@@ -2468,8 +2467,8 @@ Bldg   User: "Building 1"
    TotFlrAreaNew = RVal: 0
    PlantClgCap = RDef: 376200
    PlantHtgCap = RDef: 283053
-   CoilClgCap = RDef: 1.74706e+06
-   CoilHtgCap = RDef: 1.57587e+06
+   CoilClgCap = RDef: 2.0487e+06
+   CoilHtgCap = RDef: 1.54039e+06
    CoilClgCapHydronic = RDef: 376200
    CoilHtgCapHydronic = RDef: 283053
    CondExtWallArea = RVal: 51200
@@ -2649,8 +2648,8 @@ Bldg   User: "Building 1"
    ResFlrAreaExisting = RVal: 0
    TotCondFlrAreaExisting = RVal: 0
    TotCondVolExisting = RVal: 0
-   CoilClgCapNonHydronicNew = RVal: 1.74706e+06
-   CoilHtgCapNonHydronicNew = RVal: 1.57587e+06
+   CoilClgCapNonHydronicNew = RVal: 2.0487e+06
+   CoilHtgCapNonHydronicNew = RVal: 1.54039e+06
    CoilClgCapHydronicNew = RVal: 376200
    CoilHtgCapHydronicNew = RVal: 283053
    CoilClgCapHydronicExisting = RVal: 0
@@ -2661,8 +2660,8 @@ Bldg   User: "Building 1"
    CoilHtgCapNonHydronicExisting = RVal: 0
    PlantClgCapExisting = RVal: 0
    PlantHtgCapExisting = RVal: 0.88
-   TotClgCap = RVal: 2.12326e+06
-   TotHtgCap = RVal: 1.85892e+06
+   TotClgCap = RVal: 2.4249e+06
+   TotHtgCap = RVal: 1.82344e+06
    DeltaClgCapBldgRat = RVal: 1
    DeltaHtgCapBldgRat = RVal: 1
    DeltaClgCapAltAddRat = RVal: 1
@@ -52282,6 +52281,7 @@ Roof   User: "Surface 1339"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 780
    AreaNewResCond = RVal: 780
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 780 ft2, 0 deg tilt, New"
@@ -53780,6 +53780,7 @@ Roof   User: "Surface 1443"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 780
    AreaNewResCond = RVal: 780
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 780 ft2, 0 deg tilt, New"
@@ -55637,6 +55638,7 @@ Roof   User: "Surface 1335"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 780
    AreaNewResCond = RVal: 780
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 780 ft2, 0 deg tilt, New"
@@ -56732,6 +56734,7 @@ Roof   User: "Surface 1396"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 780
    AreaNewResCond = RVal: 780
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 780 ft2, 0 deg tilt, New"
@@ -58438,6 +58441,7 @@ Roof   User: "Surface 1430"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 780
    AreaNewResCond = RVal: 780
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 780 ft2, 0 deg tilt, New"
@@ -59935,6 +59939,7 @@ Roof   User: "Surface 1450"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 780
    AreaNewResCond = RVal: 780
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 780 ft2, 0 deg tilt, New"
@@ -60864,6 +60869,7 @@ Roof   User: "Surface 1406"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 1,080 ft2, 0 deg tilt, New"
@@ -62569,6 +62575,7 @@ Roof   User: "Surface 1377"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 1,080 ft2, 0 deg tilt, New"
@@ -63886,6 +63893,7 @@ Roof   User: "Surface 1401"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 1,080 ft2, 0 deg tilt, New"
@@ -65328,6 +65336,7 @@ Roof   User: "Surface 1460"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 1,080 ft2, 0 deg tilt, New"
@@ -66715,6 +66724,7 @@ Roof   User: "Surface 1412"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 1,080 ft2, 0 deg tilt, New"
@@ -68963,6 +68973,7 @@ Roof   User: "Surface 1363"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "NonResidential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 920
    AreaNewNonResCond = RVal: 920
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 920 ft2, 0 deg tilt, New"
@@ -70132,6 +70143,7 @@ Roof   User: "Surface 1386"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "NonResidential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 25
    AreaNewNonResCond = RVal: 25
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 25 ft2, 0 deg tilt, New"
@@ -71087,6 +71099,7 @@ Roof   User: "Surface 1471"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "NonResidential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 25
    AreaNewNonResCond = RVal: 25
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 25 ft2, 0 deg tilt, New"
@@ -71959,6 +71972,7 @@ Roof   User: "Surface 1369"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "NonResidential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 25
    AreaNewNonResCond = RVal: 25
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 25 ft2, 0 deg tilt, New"
@@ -72997,6 +73011,7 @@ Roof   User: "Surface 1436"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "NonResidential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 25
    AreaNewNonResCond = RVal: 25
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 25 ft2, 0 deg tilt, New"
@@ -73885,6 +73900,7 @@ Roof   User: "Surface 1324"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "NonResidential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 180
    AreaNewNonResCond = RVal: 180
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 180 ft2, 0 deg tilt, New"
@@ -75299,6 +75315,7 @@ Roof   User: "Surface 1458"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "NonResidential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 180
    AreaNewNonResCond = RVal: 180
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 180 ft2, 0 deg tilt, New"
@@ -76509,6 +76526,7 @@ Roof   User: "Surface 1391"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 540
    AreaNewResCond = RVal: 540
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 540 ft2, 0 deg tilt, New"
@@ -77659,6 +77677,7 @@ Roof   User: "Surface 1424"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
+   OverallUFactor = RVal: 0.0375591
    AreaNew = RVal: 540
    AreaNewResCond = RVal: 540
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 540 ft2, 0 deg tilt, New"
@@ -84438,7 +84457,7 @@ AirSys   User: "Residential DOAS"
    HtgFixedSupTemp = UVal: 55
    ClRstSupHi = UVal: 75
    ClRstSupLow = UVal: 55
-   ClgCap = RVal: 54986.5
+   ClgCap = RVal: 235050
    HtgCap = RVal: 177137
    SupFanCap = RVal: 6834
    SupFanPwr = RVal: 5.22323
@@ -84611,9 +84630,9 @@ AirSys   User: "Residential DOAS"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 2381.5
+   FanHtRtd = RVal: 10180.2
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 54986.5
+   CoilClgCapNonHydronic = RVal: 235050
    HtgFuelSrc = RVal: 1
    DDCIsRequired = RVal: 0
    IsWarmestCtrl = RVal: 0
@@ -84639,8 +84658,8 @@ AirSys   User: "Residential DOAS"
    ExhSysFanPwrIdx = RVal: 1.5286
    TrmlFanCap = RVal: 0
    TrmlCoilHtgCap = RVal: 0
-   ClgCapPerArea = RVal: 0.48721
-   SupFlowPerTon = RVal: 1491.42
+   ClgCapPerArea = RVal: 2.08267
+   SupFlowPerTon = RVal: 348.896
    HtgCapPerArea = RVal: 1.56953
    SupFlowPerArea = RVal: 0.0605529
    OAFlowPerArea = RVal: 0.0605529
@@ -84660,8 +84679,8 @@ AirSeg   User: "Residential DOAS SupAirSeg"
    Path = RDef: "Ducted"  (3)
    CoilClgRef = RVal: "Residential DOAS CoilClg"
    CoilHtgRef = RVal: "Residential DOAS CoilHtg"
-   DXCap = RVal: 54986.5
-   ClgCap = RVal: 54986.5
+   DXCap = RVal: 235050
+   ClgCap = RVal: 235050
    ElecResHtgCap = RVal: 0
    HtPumpCap = RVal: 0
    NonElecHtgCap = RVal: 177137
@@ -84688,13 +84707,13 @@ CoilClg   User: "Residential DOAS CoilClg"
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 1
    NumClgStages = RDef: 1
-   CapTotGrossRtd = RVal: 57368
-   CapTotGrossRtdSim = RVal: 57368
-   CapTotNetRtd = UVal: 54986.5
+   CapTotGrossRtd = RVal: 245230
+   CapTotGrossRtdSim = RVal: 245230
+   CapTotNetRtd = UVal: 235050
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
-   DXSEER = RVal: 13
-   DXEER = RVal: 10.8446
-   DXEERAdj = RVal: 13.1204
+   DXEER = RVal: 10.8
+   DXIEER = RVal: 12.2
+   DXEERAdj = RVal: 13.0579
    BypassMinEffCheck = RDef: 0
    CndsrType = RDef: "Air"  (1)
    CoilClgIdx = RVal: 1
@@ -84702,22 +84721,23 @@ CoilClg   User: "Residential DOAS CoilClg"
    SysType = RVal: "DOASCV"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 54986.5
+   SysClgCap = RVal: 235050
    ParentAirSysRef = RVal: "Residential DOAS"
    CondHVACZnCntWithMult = RVal: 135
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 2381.5
+   FanHtRtd = RVal: 10180.2
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 54986.5
+   CapTotNetRtdSim = RVal: 235050
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 54986.5
+   CapNonHydronic = RVal: 235050
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
-   CodeMinSEER = RVal: 13
+   CodeMinEER = RVal: 10.8
+   CodeMinIEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 55 MBH, SEER-13.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 235 MBH, EER-10.8"
    ..
 
 CoilHtg   User: "Residential DOAS CoilHtg"  
@@ -84739,7 +84759,7 @@ CoilHtg   User: "Residential DOAS CoilHtg"
    SysType = RVal: "DOASCV"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 54986.5
+   SysClgCap = RVal: 235050
    ParentAirSysRef = RVal: "Residential DOAS"
    CondHVACZnCntWithMult = RVal: 135
    IsNew = RVal: 1
@@ -85646,10 +85666,10 @@ ZnSys   User: "ZnSys F10 1-Bed N"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 6980.77
-   HtgCap = RVal: 11219.9
-   SupFanCap = RVal: 288.5
-   SupFanPwr = RVal: 0.100975
+   ClgCap = RVal: 8399.84
+   HtgCap = RVal: 11238.3
+   SupFanCap = RVal: 289.25
+   SupFanPwr = RVal: 0.101237
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -85768,9 +85788,9 @@ ZnSys   User: "ZnSys F10 1-Bed N"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 6980.77
+   DXCap = RVal: 8399.84
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 11219.9
+   NonElecHtgCap = RVal: 11238.3
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -85820,9 +85840,9 @@ ZnSys   User: "ZnSys F10 1-Bed N"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 302.341
+   FanHtRtd = RVal: 363.802
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 13961.5
+   CoilClgCapNonHydronic = RVal: 16799.7
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -85830,18 +85850,18 @@ ZnSys   User: "ZnSys F10 1-Bed N"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 22439.8
-   FanPwr = RVal: 0.100975
+   CoilHtgCapNonHydronic = RVal: 22476.6
+   FanPwr = RVal: 0.101237
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 8.94971
-   SupFlowPerTon = RVal: 495.934
-   HtgCapPerArea = RVal: 14.3845
-   SupFlowPerArea = RVal: 0.369872
+   ClgCapPerArea = RVal: 10.769
+   SupFlowPerTon = RVal: 413.222
+   HtgCapPerArea = RVal: 14.4081
+   SupFlowPerArea = RVal: 0.370833
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -85857,9 +85877,9 @@ CoilClg   User: "CoilCooling 1"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 2
-   CapTotGrossRtd = RVal: 7283.11
-   CapTotGrossRtdSim = RVal: 14566.2
-   CapTotNetRtd = UVal: 6980.77
+   CapTotGrossRtd = RVal: 8763.64
+   CapTotGrossRtdSim = RVal: 17527.3
+   CapTotNetRtd = UVal: 8399.84
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -85871,23 +85891,23 @@ CoilClg   User: "CoilCooling 1"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 6980.77
+   SysClgCap = RVal: 8399.84
    ParentZnSysRef = RVal: "ZnSys F10 1-Bed N"
    CondHVACZnCntWithMult = RVal: 2
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 302.341
+   FanHtRtd = RVal: 363.802
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 13961.5
+   CapTotNetRtdSim = RVal: 16799.7
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 13961.5
+   CapNonHydronic = RVal: 16799.7
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    CodeMinEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 7 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 8 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 1"  
@@ -85896,9 +85916,9 @@ CoilHtg   User: "CoilHtg 1"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 2
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 11219.9
-   CapTotGrossRtdSim = RVal: 22439.8
-   CapTotNetRtd = UVal: 11219.9
+   CapTotGrossRtd = RVal: 11238.3
+   CapTotGrossRtdSim = RVal: 22476.6
+   CapTotNetRtd = UVal: 11238.3
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -85908,7 +85928,7 @@ CoilHtg   User: "CoilHtg 1"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 6980.77
+   SysClgCap = RVal: 8399.84
    ParentZnSysRef = RVal: "ZnSys F10 1-Bed N"
    CondHVACZnCntWithMult = RVal: 2
    IsNew = RVal: 1
@@ -85916,15 +85936,15 @@ CoilHtg   User: "CoilHtg 1"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 22439.8
+   CapTotNetRtdSim = RVal: 22476.6
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 22439.8
+   CapNonHydronic = RVal: 22476.6
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 13846.3
+   CapTotInpRtd = RVal: 13869
    CodeMinAFUE = RVal: 0.8
    TreeDescrip = RVal: "Furnace, Gross = 11 MBH, AFUE-80.0%"
    ..
@@ -85938,15 +85958,15 @@ Fan   User: "Fan 1"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 2
    IsDummy = RVal: 0
-   FlowCap = UVal: 288.5
-   FlowCapSim = RVal: 577
+   FlowCap = UVal: 289.25
+   FlowCapSim = RVal: 578.5
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.115791
+   MtrBHP = RVal: 0.116092
    MtrHP = RVal: 0.125
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
@@ -85958,14 +85978,14 @@ Fan   User: "Fan 1"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.115791
+   AutoEffInputMtrBHP = RVal: 0.116092
    MtrHPIdx_i = RVal: 2
    MtrHPIdx_iminus1 = RVal: 1
    MinMtrBHP = RVal: 0.07885
    MtrBHPIdx = RVal: 0.401355
    MtrPerfIdx = RVal: 2
-   Pwr = RVal: 0.100975
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 288 cfm"
+   Pwr = RVal: 0.101237
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 289 cfm"
    ..
 
 ZnSys   User: "ZnSys F10 1-Bed SE"  
@@ -85986,10 +86006,10 @@ ZnSys   User: "ZnSys F10 1-Bed SE"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 13643.9
-   HtgCap = RVal: 10435
-   SupFanCap = RVal: 443.575
-   SupFanPwr = RVal: 0.155251
+   ClgCap = RVal: 14851.7
+   HtgCap = RVal: 10445.3
+   SupFanCap = RVal: 484.56
+   SupFanPwr = RVal: 0.169596
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -86108,9 +86128,9 @@ ZnSys   User: "ZnSys F10 1-Bed SE"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 13643.9
+   DXCap = RVal: 14851.7
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 10435
+   NonElecHtgCap = RVal: 10445.3
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -86160,9 +86180,9 @@ ZnSys   User: "ZnSys F10 1-Bed SE"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 590.926
+   FanHtRtd = RVal: 643.236
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 27287.8
+   CoilClgCapNonHydronic = RVal: 29703.4
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -86170,18 +86190,18 @@ ZnSys   User: "ZnSys F10 1-Bed SE"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 20870
-   FanPwr = RVal: 0.155251
+   CoilHtgCapNonHydronic = RVal: 20890.6
+   FanPwr = RVal: 0.169596
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 17.4922
-   SupFlowPerTon = RVal: 390.13
-   HtgCapPerArea = RVal: 13.3782
-   SupFlowPerArea = RVal: 0.568686
+   ClgCapPerArea = RVal: 19.0406
+   SupFlowPerTon = RVal: 391.519
+   HtgCapPerArea = RVal: 13.3914
+   SupFlowPerArea = RVal: 0.621231
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -86197,9 +86217,9 @@ CoilClg   User: "CoilCooling 2"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 2
-   CapTotGrossRtd = RVal: 14234.8
-   CapTotGrossRtdSim = RVal: 28469.7
-   CapTotNetRtd = UVal: 13643.9
+   CapTotGrossRtd = RVal: 15494.9
+   CapTotGrossRtdSim = RVal: 30989.9
+   CapTotNetRtd = UVal: 14851.7
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -86211,23 +86231,23 @@ CoilClg   User: "CoilCooling 2"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 13643.9
+   SysClgCap = RVal: 14851.7
    ParentZnSysRef = RVal: "ZnSys F10 1-Bed SE"
    CondHVACZnCntWithMult = RVal: 2
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 590.926
+   FanHtRtd = RVal: 643.236
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 27287.8
+   CapTotNetRtdSim = RVal: 29703.4
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 27287.8
+   CapNonHydronic = RVal: 29703.4
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    CodeMinEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 14 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 15 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 2"  
@@ -86236,9 +86256,9 @@ CoilHtg   User: "CoilHtg 2"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 2
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 10435
-   CapTotGrossRtdSim = RVal: 20870
-   CapTotNetRtd = UVal: 10435
+   CapTotGrossRtd = RVal: 10445.3
+   CapTotGrossRtdSim = RVal: 20890.6
+   CapTotNetRtd = UVal: 10445.3
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -86248,7 +86268,7 @@ CoilHtg   User: "CoilHtg 2"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 13643.9
+   SysClgCap = RVal: 14851.7
    ParentZnSysRef = RVal: "ZnSys F10 1-Bed SE"
    CondHVACZnCntWithMult = RVal: 2
    IsNew = RVal: 1
@@ -86256,15 +86276,15 @@ CoilHtg   User: "CoilHtg 2"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 20870
+   CapTotNetRtdSim = RVal: 20890.6
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 20870
+   CapNonHydronic = RVal: 20890.6
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 12877.7
+   CapTotInpRtd = RVal: 12890.4
    CodeMinAFUE = RVal: 0.8
    TreeDescrip = RVal: "Furnace, Gross = 10 MBH, AFUE-80.0%"
    ..
@@ -86278,15 +86298,15 @@ Fan   User: "Fan 2"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 2
    IsDummy = RVal: 0
-   FlowCap = UVal: 443.575
-   FlowCapSim = RVal: 887.15
+   FlowCap = UVal: 484.56
+   FlowCapSim = RVal: 969.12
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.178031
+   MtrBHP = RVal: 0.19448
    MtrHP = RVal: 0.25
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
@@ -86298,14 +86318,14 @@ Fan   User: "Fan 2"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.178031
+   AutoEffInputMtrBHP = RVal: 0.19448
    MtrHPIdx_i = RVal: 3
    MtrHPIdx_iminus1 = RVal: 2
    MinMtrBHP = RVal: 0.11875
    MtrBHPIdx = RVal: 0.401355
    MtrPerfIdx = RVal: 3
-   Pwr = RVal: 0.155251
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 444 cfm"
+   Pwr = RVal: 0.169596
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 485 cfm"
    ..
 
 ZnSys   User: "ZnSys F10 1-Bed SW"  
@@ -86326,10 +86346,10 @@ ZnSys   User: "ZnSys F10 1-Bed SW"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 13517.3
-   HtgCap = RVal: 10407.2
-   SupFanCap = RVal: 439.345
-   SupFanPwr = RVal: 0.153771
+   ClgCap = RVal: 14723.7
+   HtgCap = RVal: 10423
+   SupFanCap = RVal: 480.285
+   SupFanPwr = RVal: 0.1681
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -86448,9 +86468,9 @@ ZnSys   User: "ZnSys F10 1-Bed SW"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 13517.3
+   DXCap = RVal: 14723.7
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 10407.2
+   NonElecHtgCap = RVal: 10423
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -86500,9 +86520,9 @@ ZnSys   User: "ZnSys F10 1-Bed SW"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 585.442
+   FanHtRtd = RVal: 637.692
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 27034.6
+   CoilClgCapNonHydronic = RVal: 29447.4
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -86510,18 +86530,18 @@ ZnSys   User: "ZnSys F10 1-Bed SW"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 20814.4
-   FanPwr = RVal: 0.153771
+   CoilHtgCapNonHydronic = RVal: 20846
+   FanPwr = RVal: 0.1681
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 17.3299
-   SupFlowPerTon = RVal: 390.029
-   HtgCapPerArea = RVal: 13.3426
-   SupFlowPerArea = RVal: 0.563263
+   ClgCapPerArea = RVal: 18.8765
+   SupFlowPerTon = RVal: 391.438
+   HtgCapPerArea = RVal: 13.3628
+   SupFlowPerArea = RVal: 0.61575
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -86537,9 +86557,9 @@ CoilClg   User: "CoilCooling 3"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 2
-   CapTotGrossRtd = RVal: 14102.7
-   CapTotGrossRtdSim = RVal: 28205.5
-   CapTotNetRtd = UVal: 13517.3
+   CapTotGrossRtd = RVal: 15361.4
+   CapTotGrossRtdSim = RVal: 30722.8
+   CapTotNetRtd = UVal: 14723.7
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -86551,23 +86571,23 @@ CoilClg   User: "CoilCooling 3"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 13517.3
+   SysClgCap = RVal: 14723.7
    ParentZnSysRef = RVal: "ZnSys F10 1-Bed SW"
    CondHVACZnCntWithMult = RVal: 2
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 585.442
+   FanHtRtd = RVal: 637.692
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 27034.6
+   CapTotNetRtdSim = RVal: 29447.4
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 27034.6
+   CapNonHydronic = RVal: 29447.4
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    CodeMinEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 14 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 15 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 3"  
@@ -86576,9 +86596,9 @@ CoilHtg   User: "CoilHtg 3"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 2
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 10407.2
-   CapTotGrossRtdSim = RVal: 20814.4
-   CapTotNetRtd = UVal: 10407.2
+   CapTotGrossRtd = RVal: 10423
+   CapTotGrossRtdSim = RVal: 20846
+   CapTotNetRtd = UVal: 10423
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -86588,7 +86608,7 @@ CoilHtg   User: "CoilHtg 3"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 13517.3
+   SysClgCap = RVal: 14723.7
    ParentZnSysRef = RVal: "ZnSys F10 1-Bed SW"
    CondHVACZnCntWithMult = RVal: 2
    IsNew = RVal: 1
@@ -86596,15 +86616,15 @@ CoilHtg   User: "CoilHtg 3"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 20814.4
+   CapTotNetRtdSim = RVal: 20846
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 20814.4
+   CapNonHydronic = RVal: 20846
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 12843.4
+   CapTotInpRtd = RVal: 12862.9
    CodeMinAFUE = RVal: 0.8
    TreeDescrip = RVal: "Furnace, Gross = 10 MBH, AFUE-80.0%"
    ..
@@ -86618,15 +86638,15 @@ Fan   User: "Fan 3"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 2
    IsDummy = RVal: 0
-   FlowCap = UVal: 439.345
-   FlowCapSim = RVal: 878.69
+   FlowCap = UVal: 480.285
+   FlowCapSim = RVal: 960.57
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.176333
+   MtrBHP = RVal: 0.192765
    MtrHP = RVal: 0.25
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
@@ -86638,14 +86658,14 @@ Fan   User: "Fan 3"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.176333
+   AutoEffInputMtrBHP = RVal: 0.192765
    MtrHPIdx_i = RVal: 3
    MtrHPIdx_iminus1 = RVal: 2
    MinMtrBHP = RVal: 0.11875
    MtrBHPIdx = RVal: 0.401355
    MtrPerfIdx = RVal: 3
-   Pwr = RVal: 0.153771
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 439 cfm"
+   Pwr = RVal: 0.1681
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 480 cfm"
    ..
 
 ZnSys   User: "ZnSys F10 2-Bed N Core"  
@@ -86666,10 +86686,10 @@ ZnSys   User: "ZnSys F10 2-Bed N Core"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 9520.99
-   HtgCap = RVal: 14709.3
-   SupFanCap = RVal: 378.23
-   SupFanPwr = RVal: 0.132381
+   ClgCap = RVal: 11435.2
+   HtgCap = RVal: 14743
+   SupFanCap = RVal: 379.45
+   SupFanPwr = RVal: 0.132807
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -86788,9 +86808,9 @@ ZnSys   User: "ZnSys F10 2-Bed N Core"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 9520.99
+   DXCap = RVal: 11435.2
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 14709.3
+   NonElecHtgCap = RVal: 14743
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -86840,9 +86860,9 @@ ZnSys   User: "ZnSys F10 2-Bed N Core"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 412.36
+   FanHtRtd = RVal: 495.265
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 9520.99
+   CoilClgCapNonHydronic = RVal: 11435.2
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -86850,18 +86870,18 @@ ZnSys   User: "ZnSys F10 2-Bed N Core"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 14709.3
-   FanPwr = RVal: 0.132381
+   CoilHtgCapNonHydronic = RVal: 14743
+   FanPwr = RVal: 0.132807
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 8.81573
-   SupFlowPerTon = RVal: 476.711
-   HtgCapPerArea = RVal: 13.6197
-   SupFlowPerArea = RVal: 0.350213
+   ClgCapPerArea = RVal: 10.5881
+   SupFlowPerTon = RVal: 398.192
+   HtgCapPerArea = RVal: 13.6509
+   SupFlowPerArea = RVal: 0.351343
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -86877,9 +86897,9 @@ CoilClg   User: "CoilCooling 4"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 1
-   CapTotGrossRtd = RVal: 9933.35
-   CapTotGrossRtdSim = RVal: 9933.35
-   CapTotNetRtd = UVal: 9520.99
+   CapTotGrossRtd = RVal: 11930.5
+   CapTotGrossRtdSim = RVal: 11930.5
+   CapTotNetRtd = UVal: 11435.2
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -86891,23 +86911,23 @@ CoilClg   User: "CoilCooling 4"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 9520.99
+   SysClgCap = RVal: 11435.2
    ParentZnSysRef = RVal: "ZnSys F10 2-Bed N Core"
    CondHVACZnCntWithMult = RVal: 1
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 412.36
+   FanHtRtd = RVal: 495.265
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 9520.99
+   CapTotNetRtdSim = RVal: 11435.2
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 9520.99
+   CapNonHydronic = RVal: 11435.2
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    CodeMinEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 10 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 11 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 4"  
@@ -86916,9 +86936,9 @@ CoilHtg   User: "CoilHtg 4"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 1
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 14709.3
-   CapTotGrossRtdSim = RVal: 14709.3
-   CapTotNetRtd = UVal: 14709.3
+   CapTotGrossRtd = RVal: 14743
+   CapTotGrossRtdSim = RVal: 14743
+   CapTotNetRtd = UVal: 14743
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -86928,7 +86948,7 @@ CoilHtg   User: "CoilHtg 4"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 9520.99
+   SysClgCap = RVal: 11435.2
    ParentZnSysRef = RVal: "ZnSys F10 2-Bed N Core"
    CondHVACZnCntWithMult = RVal: 1
    IsNew = RVal: 1
@@ -86936,15 +86956,15 @@ CoilHtg   User: "CoilHtg 4"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 14709.3
+   CapTotNetRtdSim = RVal: 14743
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 14709.3
+   CapNonHydronic = RVal: 14743
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 18152.5
+   CapTotInpRtd = RVal: 18194.1
    CodeMinAFUE = RVal: 0.8
    TreeDescrip = RVal: "Furnace, Gross = 15 MBH, AFUE-80.0%"
    ..
@@ -86958,15 +86978,15 @@ Fan   User: "Fan 4"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 1
    IsDummy = RVal: 0
-   FlowCap = UVal: 378.23
-   FlowCapSim = RVal: 378.23
+   FlowCap = UVal: 379.45
+   FlowCapSim = RVal: 379.45
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.151804
+   MtrBHP = RVal: 0.152294
    MtrHP = RVal: 0.25
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
@@ -86978,14 +86998,14 @@ Fan   User: "Fan 4"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.151804
+   AutoEffInputMtrBHP = RVal: 0.152294
    MtrHPIdx_i = RVal: 3
    MtrHPIdx_iminus1 = RVal: 2
    MinMtrBHP = RVal: 0.11875
    MtrBHPIdx = RVal: 0.401355
    MtrPerfIdx = RVal: 3
-   Pwr = RVal: 0.132381
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 378 cfm"
+   Pwr = RVal: 0.132807
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 379 cfm"
    ..
 
 ZnSys   User: "ZnSys F10 2-Bed NE"  
@@ -87006,10 +87026,10 @@ ZnSys   User: "ZnSys F10 2-Bed NE"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 14099.5
-   HtgCap = RVal: 17743.9
-   SupFanCap = RVal: 456.26
-   SupFanPwr = RVal: 0.159691
+   ClgCap = RVal: 16118.8
+   HtgCap = RVal: 17574.3
+   SupFanCap = RVal: 520.72
+   SupFanPwr = RVal: 0.182252
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -87128,9 +87148,9 @@ ZnSys   User: "ZnSys F10 2-Bed NE"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 14099.5
+   DXCap = RVal: 16118.8
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 17743.9
+   NonElecHtgCap = RVal: 17574.3
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -87180,9 +87200,9 @@ ZnSys   User: "ZnSys F10 2-Bed NE"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 610.658
+   FanHtRtd = RVal: 698.115
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 14099.5
+   CoilClgCapNonHydronic = RVal: 16118.8
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -87190,18 +87210,18 @@ ZnSys   User: "ZnSys F10 2-Bed NE"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 17743.9
-   FanPwr = RVal: 0.159691
+   CoilHtgCapNonHydronic = RVal: 17574.3
+   FanPwr = RVal: 0.182252
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 13.0551
-   SupFlowPerTon = RVal: 388.32
-   HtgCapPerArea = RVal: 16.4295
-   SupFlowPerArea = RVal: 0.422463
+   ClgCapPerArea = RVal: 14.9248
+   SupFlowPerTon = RVal: 387.662
+   HtgCapPerArea = RVal: 16.2725
+   SupFlowPerArea = RVal: 0.482148
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -87217,9 +87237,9 @@ CoilClg   User: "CoilCooling 5"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 1
-   CapTotGrossRtd = RVal: 14710.2
-   CapTotGrossRtdSim = RVal: 14710.2
-   CapTotNetRtd = UVal: 14099.5
+   CapTotGrossRtd = RVal: 16816.9
+   CapTotGrossRtdSim = RVal: 16816.9
+   CapTotNetRtd = UVal: 16118.8
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -87231,23 +87251,23 @@ CoilClg   User: "CoilCooling 5"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 14099.5
+   SysClgCap = RVal: 16118.8
    ParentZnSysRef = RVal: "ZnSys F10 2-Bed NE"
    CondHVACZnCntWithMult = RVal: 1
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 610.658
+   FanHtRtd = RVal: 698.115
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 14099.5
+   CapTotNetRtdSim = RVal: 16118.8
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 14099.5
+   CapNonHydronic = RVal: 16118.8
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    CodeMinEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 14 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 16 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 5"  
@@ -87256,9 +87276,9 @@ CoilHtg   User: "CoilHtg 5"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 1
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 17743.9
-   CapTotGrossRtdSim = RVal: 17743.9
-   CapTotNetRtd = UVal: 17743.9
+   CapTotGrossRtd = RVal: 17574.3
+   CapTotGrossRtdSim = RVal: 17574.3
+   CapTotNetRtd = UVal: 17574.3
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -87268,7 +87288,7 @@ CoilHtg   User: "CoilHtg 5"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 14099.5
+   SysClgCap = RVal: 16118.8
    ParentZnSysRef = RVal: "ZnSys F10 2-Bed NE"
    CondHVACZnCntWithMult = RVal: 1
    IsNew = RVal: 1
@@ -87276,15 +87296,15 @@ CoilHtg   User: "CoilHtg 5"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 17743.9
+   CapTotNetRtdSim = RVal: 17574.3
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 17743.9
+   CapNonHydronic = RVal: 17574.3
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 21897.5
+   CapTotInpRtd = RVal: 21688.2
    CodeMinAFUE = RVal: 0.8
    TreeDescrip = RVal: "Furnace, Gross = 18 MBH, AFUE-80.0%"
    ..
@@ -87298,15 +87318,15 @@ Fan   User: "Fan 5"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 1
    IsDummy = RVal: 0
-   FlowCap = UVal: 456.26
-   FlowCapSim = RVal: 456.26
+   FlowCap = UVal: 520.72
+   FlowCapSim = RVal: 520.72
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.183122
+   MtrBHP = RVal: 0.208993
    MtrHP = RVal: 0.25
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
@@ -87318,14 +87338,14 @@ Fan   User: "Fan 5"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.183122
+   AutoEffInputMtrBHP = RVal: 0.208993
    MtrHPIdx_i = RVal: 3
    MtrHPIdx_iminus1 = RVal: 2
    MinMtrBHP = RVal: 0.11875
    MtrBHPIdx = RVal: 0.401355
    MtrPerfIdx = RVal: 3
-   Pwr = RVal: 0.159691
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 456 cfm"
+   Pwr = RVal: 0.182252
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 521 cfm"
    ..
 
 ZnSys   User: "ZnSys F10 2-Bed NW"  
@@ -87346,10 +87366,10 @@ ZnSys   User: "ZnSys F10 2-Bed NW"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 18366.6
-   HtgCap = RVal: 17745.1
-   SupFanCap = RVal: 594.01
-   SupFanPwr = RVal: 0.207903
+   ClgCap = RVal: 20873.9
+   HtgCap = RVal: 17577.7
+   SupFanCap = RVal: 679.64
+   SupFanPwr = RVal: 0.237874
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -87468,9 +87488,9 @@ ZnSys   User: "ZnSys F10 2-Bed NW"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 18366.6
+   DXCap = RVal: 20873.9
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 17745.1
+   NonElecHtgCap = RVal: 17577.7
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -87520,9 +87540,9 @@ ZnSys   User: "ZnSys F10 2-Bed NW"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 795.469
+   FanHtRtd = RVal: 904.061
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 18366.6
+   CoilClgCapNonHydronic = RVal: 20873.9
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -87530,18 +87550,18 @@ ZnSys   User: "ZnSys F10 2-Bed NW"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 17745.1
-   FanPwr = RVal: 0.207903
+   CoilHtgCapNonHydronic = RVal: 17577.7
+   FanPwr = RVal: 0.237874
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 17.0061
-   SupFlowPerTon = RVal: 388.102
-   HtgCapPerArea = RVal: 16.4306
-   SupFlowPerArea = RVal: 0.550009
+   ClgCapPerArea = RVal: 19.3277
+   SupFlowPerTon = RVal: 390.712
+   HtgCapPerArea = RVal: 16.2756
+   SupFlowPerArea = RVal: 0.629296
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -87557,9 +87577,9 @@ CoilClg   User: "CoilCooling 6"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 1
-   CapTotGrossRtd = RVal: 19162.1
-   CapTotGrossRtdSim = RVal: 19162.1
-   CapTotNetRtd = UVal: 18366.6
+   CapTotGrossRtd = RVal: 21778
+   CapTotGrossRtdSim = RVal: 21778
+   CapTotNetRtd = UVal: 20873.9
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -87571,23 +87591,23 @@ CoilClg   User: "CoilCooling 6"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 18366.6
+   SysClgCap = RVal: 20873.9
    ParentZnSysRef = RVal: "ZnSys F10 2-Bed NW"
    CondHVACZnCntWithMult = RVal: 1
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 795.469
+   FanHtRtd = RVal: 904.061
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 18366.6
+   CapTotNetRtdSim = RVal: 20873.9
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 18366.6
+   CapNonHydronic = RVal: 20873.9
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    CodeMinEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 18 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 21 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 6"  
@@ -87596,9 +87616,9 @@ CoilHtg   User: "CoilHtg 6"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 1
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 17745.1
-   CapTotGrossRtdSim = RVal: 17745.1
-   CapTotNetRtd = UVal: 17745.1
+   CapTotGrossRtd = RVal: 17577.7
+   CapTotGrossRtdSim = RVal: 17577.7
+   CapTotNetRtd = UVal: 17577.7
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -87608,7 +87628,7 @@ CoilHtg   User: "CoilHtg 6"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 18366.6
+   SysClgCap = RVal: 20873.9
    ParentZnSysRef = RVal: "ZnSys F10 2-Bed NW"
    CondHVACZnCntWithMult = RVal: 1
    IsNew = RVal: 1
@@ -87616,15 +87636,15 @@ CoilHtg   User: "CoilHtg 6"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 17745.1
+   CapTotNetRtdSim = RVal: 17577.7
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 17745.1
+   CapNonHydronic = RVal: 17577.7
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 21899
+   CapTotInpRtd = RVal: 21692.4
    CodeMinAFUE = RVal: 0.8
    TreeDescrip = RVal: "Furnace, Gross = 18 MBH, AFUE-80.0%"
    ..
@@ -87638,16 +87658,16 @@ Fan   User: "Fan 6"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 1
    IsDummy = RVal: 0
-   FlowCap = UVal: 594.01
-   FlowCapSim = RVal: 594.01
+   FlowCap = UVal: 679.64
+   FlowCapSim = RVal: 679.64
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.238409
-   MtrHP = RVal: 0.25
+   MtrBHP = RVal: 0.272777
+   MtrHP = RVal: 0.5
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
    MtrEff = RVal: 0.855
@@ -87658,14 +87678,14 @@ Fan   User: "Fan 6"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.238409
-   MtrHPIdx_i = RVal: 3
-   MtrHPIdx_iminus1 = RVal: 2
-   MinMtrBHP = RVal: 0.11875
+   AutoEffInputMtrBHP = RVal: 0.272777
+   MtrHPIdx_i = RVal: 4
+   MtrHPIdx_iminus1 = RVal: 3
+   MinMtrBHP = RVal: 0.2375
    MtrBHPIdx = RVal: 0.401355
-   MtrPerfIdx = RVal: 3
-   Pwr = RVal: 0.207903
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 594 cfm"
+   MtrPerfIdx = RVal: 4
+   Pwr = RVal: 0.237874
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 680 cfm"
    ..
 
 ZnSys   User: "ZnSys F10 2-Bed SE"  
@@ -87686,10 +87706,10 @@ ZnSys   User: "ZnSys F10 2-Bed SE"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 19174.5
-   HtgCap = RVal: 17735.2
-   SupFanCap = RVal: 622.81
-   SupFanPwr = RVal: 0.217983
+   ClgCap = RVal: 21403.1
+   HtgCap = RVal: 17564.7
+   SupFanCap = RVal: 698.34
+   SupFanPwr = RVal: 0.244419
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -87808,9 +87828,9 @@ ZnSys   User: "ZnSys F10 2-Bed SE"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 19174.5
+   DXCap = RVal: 21403.1
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 17735.2
+   NonElecHtgCap = RVal: 17564.7
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -87860,9 +87880,9 @@ ZnSys   User: "ZnSys F10 2-Bed SE"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 830.459
+   FanHtRtd = RVal: 926.981
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 19174.5
+   CoilClgCapNonHydronic = RVal: 21403.1
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -87870,18 +87890,18 @@ ZnSys   User: "ZnSys F10 2-Bed SE"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 17735.2
-   FanPwr = RVal: 0.217983
+   CoilHtgCapNonHydronic = RVal: 17564.7
+   FanPwr = RVal: 0.244419
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 17.7542
-   SupFlowPerTon = RVal: 389.774
-   HtgCapPerArea = RVal: 16.4215
-   SupFlowPerArea = RVal: 0.576676
+   ClgCapPerArea = RVal: 19.8177
+   SupFlowPerTon = RVal: 391.536
+   HtgCapPerArea = RVal: 16.2636
+   SupFlowPerArea = RVal: 0.646611
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -87897,9 +87917,9 @@ CoilClg   User: "CoilCooling 7"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 1
-   CapTotGrossRtd = RVal: 20005
-   CapTotGrossRtdSim = RVal: 20005
-   CapTotNetRtd = UVal: 19174.5
+   CapTotGrossRtd = RVal: 22330.1
+   CapTotGrossRtdSim = RVal: 22330.1
+   CapTotNetRtd = UVal: 21403.1
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -87911,23 +87931,23 @@ CoilClg   User: "CoilCooling 7"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 19174.5
+   SysClgCap = RVal: 21403.1
    ParentZnSysRef = RVal: "ZnSys F10 2-Bed SE"
    CondHVACZnCntWithMult = RVal: 1
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 830.459
+   FanHtRtd = RVal: 926.981
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 19174.5
+   CapTotNetRtdSim = RVal: 21403.1
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 19174.5
+   CapNonHydronic = RVal: 21403.1
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    CodeMinEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 19 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 21 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 7"  
@@ -87936,9 +87956,9 @@ CoilHtg   User: "CoilHtg 7"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 1
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 17735.2
-   CapTotGrossRtdSim = RVal: 17735.2
-   CapTotNetRtd = UVal: 17735.2
+   CapTotGrossRtd = RVal: 17564.7
+   CapTotGrossRtdSim = RVal: 17564.7
+   CapTotNetRtd = UVal: 17564.7
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -87948,7 +87968,7 @@ CoilHtg   User: "CoilHtg 7"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 19174.5
+   SysClgCap = RVal: 21403.1
    ParentZnSysRef = RVal: "ZnSys F10 2-Bed SE"
    CondHVACZnCntWithMult = RVal: 1
    IsNew = RVal: 1
@@ -87956,15 +87976,15 @@ CoilHtg   User: "CoilHtg 7"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 17735.2
+   CapTotNetRtdSim = RVal: 17564.7
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 17735.2
+   CapNonHydronic = RVal: 17564.7
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 21886.8
+   CapTotInpRtd = RVal: 21676.4
    CodeMinAFUE = RVal: 0.8
    TreeDescrip = RVal: "Furnace, Gross = 18 MBH, AFUE-80.0%"
    ..
@@ -87978,16 +87998,16 @@ Fan   User: "Fan 7"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 1
    IsDummy = RVal: 0
-   FlowCap = UVal: 622.81
-   FlowCapSim = RVal: 622.81
+   FlowCap = UVal: 698.34
+   FlowCapSim = RVal: 698.34
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.249968
-   MtrHP = RVal: 0.25
+   MtrBHP = RVal: 0.280282
+   MtrHP = RVal: 0.5
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
    MtrEff = RVal: 0.855
@@ -87998,14 +88018,14 @@ Fan   User: "Fan 7"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.249968
-   MtrHPIdx_i = RVal: 3
-   MtrHPIdx_iminus1 = RVal: 2
-   MinMtrBHP = RVal: 0.11875
+   AutoEffInputMtrBHP = RVal: 0.280282
+   MtrHPIdx_i = RVal: 4
+   MtrHPIdx_iminus1 = RVal: 3
+   MinMtrBHP = RVal: 0.2375
    MtrBHPIdx = RVal: 0.401355
-   MtrPerfIdx = RVal: 3
-   Pwr = RVal: 0.217983
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 623 cfm"
+   MtrPerfIdx = RVal: 4
+   Pwr = RVal: 0.244419
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 698 cfm"
    ..
 
 ZnSys   User: "ZnSys F10 2-Bed SW"  
@@ -88026,10 +88046,10 @@ ZnSys   User: "ZnSys F10 2-Bed SW"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 22751.7
-   HtgCap = RVal: 17727
-   SupFanCap = RVal: 742.14
-   SupFanPwr = RVal: 0.259749
+   ClgCap = RVal: 25237.5
+   HtgCap = RVal: 17558.8
+   SupFanCap = RVal: 826.37
+   SupFanPwr = RVal: 0.28923
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -88148,9 +88168,9 @@ ZnSys   User: "ZnSys F10 2-Bed SW"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 22751.7
+   DXCap = RVal: 25237.5
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 17727
+   NonElecHtgCap = RVal: 17558.8
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -88200,9 +88220,9 @@ ZnSys   User: "ZnSys F10 2-Bed SW"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 985.39
+   FanHtRtd = RVal: 1093.05
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 22751.7
+   CoilClgCapNonHydronic = RVal: 25237.5
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -88210,18 +88230,18 @@ ZnSys   User: "ZnSys F10 2-Bed SW"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 17727
-   FanPwr = RVal: 0.259749
+   CoilHtgCapNonHydronic = RVal: 17558.8
+   FanPwr = RVal: 0.28923
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 21.0664
-   SupFlowPerTon = RVal: 391.429
-   HtgCapPerArea = RVal: 16.4139
-   SupFlowPerArea = RVal: 0.687167
+   ClgCapPerArea = RVal: 23.3681
+   SupFlowPerTon = RVal: 392.925
+   HtgCapPerArea = RVal: 16.2581
+   SupFlowPerArea = RVal: 0.765157
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -88237,9 +88257,9 @@ CoilClg   User: "CoilCooling 8"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 1
-   CapTotGrossRtd = RVal: 23737.1
-   CapTotGrossRtdSim = RVal: 23737.1
-   CapTotNetRtd = UVal: 22751.7
+   CapTotGrossRtd = RVal: 26330.6
+   CapTotGrossRtdSim = RVal: 26330.6
+   CapTotNetRtd = UVal: 25237.5
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -88251,23 +88271,23 @@ CoilClg   User: "CoilCooling 8"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 22751.7
+   SysClgCap = RVal: 25237.5
    ParentZnSysRef = RVal: "ZnSys F10 2-Bed SW"
    CondHVACZnCntWithMult = RVal: 1
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 985.39
+   FanHtRtd = RVal: 1093.05
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 22751.7
+   CapTotNetRtdSim = RVal: 25237.5
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 22751.7
+   CapNonHydronic = RVal: 25237.5
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    CodeMinEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 23 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 25 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 8"  
@@ -88276,9 +88296,9 @@ CoilHtg   User: "CoilHtg 8"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 1
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 17727
-   CapTotGrossRtdSim = RVal: 17727
-   CapTotNetRtd = UVal: 17727
+   CapTotGrossRtd = RVal: 17558.8
+   CapTotGrossRtdSim = RVal: 17558.8
+   CapTotNetRtd = UVal: 17558.8
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -88288,7 +88308,7 @@ CoilHtg   User: "CoilHtg 8"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 22751.7
+   SysClgCap = RVal: 25237.5
    ParentZnSysRef = RVal: "ZnSys F10 2-Bed SW"
    CondHVACZnCntWithMult = RVal: 1
    IsNew = RVal: 1
@@ -88296,15 +88316,15 @@ CoilHtg   User: "CoilHtg 8"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 17727
+   CapTotNetRtdSim = RVal: 17558.8
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 17727
+   CapNonHydronic = RVal: 17558.8
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 21876.7
+   CapTotInpRtd = RVal: 21669.1
    CodeMinAFUE = RVal: 0.8
    TreeDescrip = RVal: "Furnace, Gross = 18 MBH, AFUE-80.0%"
    ..
@@ -88318,15 +88338,15 @@ Fan   User: "Fan 8"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 1
    IsDummy = RVal: 0
-   FlowCap = UVal: 742.14
-   FlowCapSim = RVal: 742.14
+   FlowCap = UVal: 826.37
+   FlowCapSim = RVal: 826.37
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.297861
+   MtrBHP = RVal: 0.331667
    MtrHP = RVal: 0.5
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
@@ -88338,14 +88358,14 @@ Fan   User: "Fan 8"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.297861
+   AutoEffInputMtrBHP = RVal: 0.331667
    MtrHPIdx_i = RVal: 4
    MtrHPIdx_iminus1 = RVal: 3
    MinMtrBHP = RVal: 0.2375
    MtrBHPIdx = RVal: 0.401355
    MtrPerfIdx = RVal: 4
-   Pwr = RVal: 0.259749
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 742 cfm"
+   Pwr = RVal: 0.28923
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 826 cfm"
    ..
 
 ZnSys   User: "ZnSys F10 Studio N"  
@@ -88366,10 +88386,10 @@ ZnSys   User: "ZnSys F10 Studio N"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 5062.91
-   HtgCap = RVal: 7760.63
-   SupFanCap = RVal: 199.55
-   SupFanPwr = RVal: 0.0698425
+   ClgCap = RVal: 6030.52
+   HtgCap = RVal: 7781.06
+   SupFanCap = RVal: 200.265
+   SupFanPwr = RVal: 0.0700927
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -88488,9 +88508,9 @@ ZnSys   User: "ZnSys F10 Studio N"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 5062.91
+   DXCap = RVal: 6030.52
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 7760.63
+   NonElecHtgCap = RVal: 7781.06
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -88540,9 +88560,9 @@ ZnSys   User: "ZnSys F10 Studio N"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 219.278
+   FanHtRtd = RVal: 261.185
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 10125.8
+   CoilClgCapNonHydronic = RVal: 12061
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -88550,18 +88570,18 @@ ZnSys   User: "ZnSys F10 Studio N"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 15521.3
-   FanPwr = RVal: 0.0698425
+   CoilHtgCapNonHydronic = RVal: 15562.1
+   FanPwr = RVal: 0.0700927
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 9.37576
-   SupFlowPerTon = RVal: 472.969
-   HtgCapPerArea = RVal: 14.3715
-   SupFlowPerArea = RVal: 0.369537
+   ClgCapPerArea = RVal: 11.1676
+   SupFlowPerTon = RVal: 398.503
+   HtgCapPerArea = RVal: 14.4094
+   SupFlowPerArea = RVal: 0.370861
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -88577,9 +88597,9 @@ CoilClg   User: "CoilCooling 9"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 2
-   CapTotGrossRtd = RVal: 5282.19
-   CapTotGrossRtdSim = RVal: 10564.4
-   CapTotNetRtd = UVal: 5062.91
+   CapTotGrossRtd = RVal: 6291.71
+   CapTotGrossRtdSim = RVal: 12583.4
+   CapTotNetRtd = UVal: 6030.52
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -88591,23 +88611,23 @@ CoilClg   User: "CoilCooling 9"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 5062.91
+   SysClgCap = RVal: 6030.52
    ParentZnSysRef = RVal: "ZnSys F10 Studio N"
    CondHVACZnCntWithMult = RVal: 2
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 219.278
+   FanHtRtd = RVal: 261.185
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 10125.8
+   CapTotNetRtdSim = RVal: 12061
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 10125.8
+   CapNonHydronic = RVal: 12061
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    CodeMinEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 5 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 6 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 9"  
@@ -88616,9 +88636,9 @@ CoilHtg   User: "CoilHtg 9"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 2
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 7760.63
-   CapTotGrossRtdSim = RVal: 15521.3
-   CapTotNetRtd = UVal: 7760.63
+   CapTotGrossRtd = RVal: 7781.06
+   CapTotGrossRtdSim = RVal: 15562.1
+   CapTotNetRtd = UVal: 7781.06
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -88628,7 +88648,7 @@ CoilHtg   User: "CoilHtg 9"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 5062.91
+   SysClgCap = RVal: 6030.52
    ParentZnSysRef = RVal: "ZnSys F10 Studio N"
    CondHVACZnCntWithMult = RVal: 2
    IsNew = RVal: 1
@@ -88636,15 +88656,15 @@ CoilHtg   User: "CoilHtg 9"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 15521.3
+   CapTotNetRtdSim = RVal: 15562.1
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 15521.3
+   CapNonHydronic = RVal: 15562.1
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 9577.29
+   CapTotInpRtd = RVal: 9602.5
    CodeMinAFUE = RVal: 0.8
    TreeDescrip = RVal: "Furnace, Gross = 8 MBH, AFUE-80.0%"
    ..
@@ -88658,15 +88678,15 @@ Fan   User: "Fan 9"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 2
    IsDummy = RVal: 0
-   FlowCap = UVal: 199.55
-   FlowCapSim = RVal: 399.1
+   FlowCap = UVal: 200.265
+   FlowCapSim = RVal: 400.53
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.0800903
+   MtrBHP = RVal: 0.0803773
    MtrHP = RVal: 0.083
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
@@ -88678,13 +88698,13 @@ Fan   User: "Fan 9"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.0800903
+   AutoEffInputMtrBHP = RVal: 0.0803773
    MtrHPIdx_i = RVal: 1
    MtrHPIdx_iminus1 = RVal: 1
    MinMtrBHP = RVal: 0.07885
    MtrBHPIdx = RVal: 0.401355
    MtrPerfIdx = RVal: 1
-   Pwr = RVal: 0.0698425
+   Pwr = RVal: 0.0700927
    TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 200 cfm"
    ..
 
@@ -88706,10 +88726,10 @@ ZnSys   User: "ZnSys F2-9 1-Bed N"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 5351.56
-   HtgCap = RVal: 8030.28
-   SupFanCap = RVal: 206.484
-   SupFanPwr = RVal: 0.0722694
+   ClgCap = RVal: 6124.05
+   HtgCap = RVal: 7771.24
+   SupFanCap = RVal: 200.013
+   SupFanPwr = RVal: 0.0700045
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -88828,9 +88848,9 @@ ZnSys   User: "ZnSys F2-9 1-Bed N"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 5351.56
+   DXCap = RVal: 6124.05
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 8030.28
+   NonElecHtgCap = RVal: 7771.24
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -88880,9 +88900,9 @@ ZnSys   User: "ZnSys F2-9 1-Bed N"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 231.779
+   FanHtRtd = RVal: 265.236
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 85625
+   CoilClgCapNonHydronic = RVal: 97984.8
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -88890,18 +88910,18 @@ ZnSys   User: "ZnSys F2-9 1-Bed N"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 128484
-   FanPwr = RVal: 0.0722694
+   CoilHtgCapNonHydronic = RVal: 124340
+   FanPwr = RVal: 0.0700045
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 6.86097
-   SupFlowPerTon = RVal: 463.007
-   HtgCapPerArea = RVal: 10.2952
-   SupFlowPerArea = RVal: 0.264723
+   ClgCapPerArea = RVal: 7.85135
+   SupFlowPerTon = RVal: 391.923
+   HtgCapPerArea = RVal: 9.96313
+   SupFlowPerArea = RVal: 0.256427
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -88917,9 +88937,9 @@ CoilClg   User: "CoilCooling 10"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 16
-   CapTotGrossRtd = RVal: 5583.34
-   CapTotGrossRtdSim = RVal: 89333.4
-   CapTotNetRtd = UVal: 5351.56
+   CapTotGrossRtd = RVal: 6389.29
+   CapTotGrossRtdSim = RVal: 102229
+   CapTotNetRtd = UVal: 6124.05
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -88931,23 +88951,23 @@ CoilClg   User: "CoilCooling 10"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 5351.56
+   SysClgCap = RVal: 6124.05
    ParentZnSysRef = RVal: "ZnSys F2-9 1-Bed N"
    CondHVACZnCntWithMult = RVal: 16
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 231.779
+   FanHtRtd = RVal: 265.236
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 85625
+   CapTotNetRtdSim = RVal: 97984.8
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 85625
+   CapNonHydronic = RVal: 97984.8
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    CodeMinEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 5 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 6 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 10"  
@@ -88956,9 +88976,9 @@ CoilHtg   User: "CoilHtg 10"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 16
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 8030.28
-   CapTotGrossRtdSim = RVal: 128484
-   CapTotNetRtd = UVal: 8030.28
+   CapTotGrossRtd = RVal: 7771.24
+   CapTotGrossRtdSim = RVal: 124340
+   CapTotNetRtd = UVal: 7771.24
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -88968,7 +88988,7 @@ CoilHtg   User: "CoilHtg 10"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 5351.56
+   SysClgCap = RVal: 6124.05
    ParentZnSysRef = RVal: "ZnSys F2-9 1-Bed N"
    CondHVACZnCntWithMult = RVal: 16
    IsNew = RVal: 1
@@ -88976,15 +88996,15 @@ CoilHtg   User: "CoilHtg 10"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 128484
+   CapTotNetRtdSim = RVal: 124340
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 128484
+   CapNonHydronic = RVal: 124340
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 9910.06
+   CapTotInpRtd = RVal: 9590.38
    CodeMinAFUE = RVal: 0.8
    TreeDescrip = RVal: "Furnace, Gross = 8 MBH, AFUE-80.0%"
    ..
@@ -88998,15 +89018,15 @@ Fan   User: "Fan 10"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 16
    IsDummy = RVal: 0
-   FlowCap = UVal: 206.484
-   FlowCapSim = RVal: 3303.74
+   FlowCap = UVal: 200.013
+   FlowCapSim = RVal: 3200.21
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.0828733
+   MtrBHP = RVal: 0.0802761
    MtrHP = RVal: 0.083
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
@@ -89018,14 +89038,14 @@ Fan   User: "Fan 10"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.0828733
+   AutoEffInputMtrBHP = RVal: 0.0802761
    MtrHPIdx_i = RVal: 1
    MtrHPIdx_iminus1 = RVal: 1
    MinMtrBHP = RVal: 0.07885
    MtrBHPIdx = RVal: 0.401355
    MtrPerfIdx = RVal: 1
-   Pwr = RVal: 0.0722694
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 206 cfm"
+   Pwr = RVal: 0.0700045
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 200 cfm"
    ..
 
 ZnSys   User: "ZnSys F2-9 1-Bed SE"  
@@ -89046,10 +89066,10 @@ ZnSys   User: "ZnSys F2-9 1-Bed SE"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 12590.3
-   HtgCap = RVal: 7219.8
-   SupFanCap = RVal: 408.166
-   SupFanPwr = RVal: 0.142858
+   ClgCap = RVal: 13341.6
+   HtgCap = RVal: 6955.99
+   SupFanCap = RVal: 433.799
+   SupFanPwr = RVal: 0.15183
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -89168,9 +89188,9 @@ ZnSys   User: "ZnSys F2-9 1-Bed SE"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 12590.3
+   DXCap = RVal: 13341.6
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 7219.8
+   NonElecHtgCap = RVal: 6955.99
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -89220,9 +89240,9 @@ ZnSys   User: "ZnSys F2-9 1-Bed SE"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 545.294
+   FanHtRtd = RVal: 577.833
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 201445
+   CoilClgCapNonHydronic = RVal: 213466
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -89230,18 +89250,18 @@ ZnSys   User: "ZnSys F2-9 1-Bed SE"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 115517
-   FanPwr = RVal: 0.142858
+   CoilHtgCapNonHydronic = RVal: 111296
+   FanPwr = RVal: 0.15183
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 16.1414
-   SupFlowPerTon = RVal: 389.029
-   HtgCapPerArea = RVal: 9.25615
-   SupFlowPerArea = RVal: 0.52329
+   ClgCapPerArea = RVal: 17.1046
+   SupFlowPerTon = RVal: 390.177
+   HtgCapPerArea = RVal: 8.91794
+   SupFlowPerArea = RVal: 0.556153
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -89257,9 +89277,9 @@ CoilClg   User: "CoilCooling 11"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 16
-   CapTotGrossRtd = RVal: 13135.6
-   CapTotGrossRtdSim = RVal: 210169
-   CapTotNetRtd = UVal: 12590.3
+   CapTotGrossRtd = RVal: 13919.4
+   CapTotGrossRtdSim = RVal: 222711
+   CapTotNetRtd = UVal: 13341.6
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -89271,17 +89291,17 @@ CoilClg   User: "CoilCooling 11"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 12590.3
+   SysClgCap = RVal: 13341.6
    ParentZnSysRef = RVal: "ZnSys F2-9 1-Bed SE"
    CondHVACZnCntWithMult = RVal: 16
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 545.294
+   FanHtRtd = RVal: 577.833
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 201445
+   CapTotNetRtdSim = RVal: 213466
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 201445
+   CapNonHydronic = RVal: 213466
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
@@ -89296,9 +89316,9 @@ CoilHtg   User: "CoilHtg 11"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 16
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 7219.8
-   CapTotGrossRtdSim = RVal: 115517
-   CapTotNetRtd = UVal: 7219.8
+   CapTotGrossRtd = RVal: 6955.99
+   CapTotGrossRtdSim = RVal: 111296
+   CapTotNetRtd = UVal: 6955.99
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -89308,7 +89328,7 @@ CoilHtg   User: "CoilHtg 11"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 12590.3
+   SysClgCap = RVal: 13341.6
    ParentZnSysRef = RVal: "ZnSys F2-9 1-Bed SE"
    CondHVACZnCntWithMult = RVal: 16
    IsNew = RVal: 1
@@ -89316,15 +89336,15 @@ CoilHtg   User: "CoilHtg 11"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 115517
+   CapTotNetRtdSim = RVal: 111296
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 115517
+   CapNonHydronic = RVal: 111296
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 8909.86
+   CapTotInpRtd = RVal: 8584.29
    CodeMinAFUE = RVal: 0.8
    TreeDescrip = RVal: "Furnace, Gross = 7 MBH, AFUE-80.0%"
    ..
@@ -89338,15 +89358,15 @@ Fan   User: "Fan 11"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 16
    IsDummy = RVal: 0
-   FlowCap = UVal: 408.166
-   FlowCapSim = RVal: 6530.66
+   FlowCap = UVal: 433.799
+   FlowCapSim = RVal: 6940.78
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.163819
+   MtrBHP = RVal: 0.174107
    MtrHP = RVal: 0.25
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
@@ -89358,14 +89378,14 @@ Fan   User: "Fan 11"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.163819
+   AutoEffInputMtrBHP = RVal: 0.174107
    MtrHPIdx_i = RVal: 3
    MtrHPIdx_iminus1 = RVal: 2
    MinMtrBHP = RVal: 0.11875
    MtrBHPIdx = RVal: 0.401355
    MtrPerfIdx = RVal: 3
-   Pwr = RVal: 0.142858
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 408 cfm"
+   Pwr = RVal: 0.15183
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 434 cfm"
    ..
 
 ZnSys   User: "ZnSys F2-9 1-Bed SW"  
@@ -89386,10 +89406,10 @@ ZnSys   User: "ZnSys F2-9 1-Bed SW"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 12454.7
-   HtgCap = RVal: 7199.17
-   SupFanCap = RVal: 403.634
-   SupFanPwr = RVal: 0.141272
+   ClgCap = RVal: 13198
+   HtgCap = RVal: 6924.09
+   SupFanCap = RVal: 429.001
+   SupFanPwr = RVal: 0.15015
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -89508,9 +89528,9 @@ ZnSys   User: "ZnSys F2-9 1-Bed SW"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 12454.7
+   DXCap = RVal: 13198
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 7199.17
+   NonElecHtgCap = RVal: 6924.09
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -89560,9 +89580,9 @@ ZnSys   User: "ZnSys F2-9 1-Bed SW"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 539.421
+   FanHtRtd = RVal: 571.613
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 199275
+   CoilClgCapNonHydronic = RVal: 211168
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -89570,18 +89590,18 @@ ZnSys   User: "ZnSys F2-9 1-Bed SW"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 115187
-   FanPwr = RVal: 0.141272
+   CoilHtgCapNonHydronic = RVal: 110785
+   FanPwr = RVal: 0.15015
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 15.9676
-   SupFlowPerTon = RVal: 388.898
-   HtgCapPerArea = RVal: 9.22971
-   SupFlowPerArea = RVal: 0.517479
+   ClgCapPerArea = RVal: 16.9205
+   SupFlowPerTon = RVal: 390.06
+   HtgCapPerArea = RVal: 8.87704
+   SupFlowPerArea = RVal: 0.550001
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -89597,9 +89617,9 @@ CoilClg   User: "CoilCooling 12"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 16
-   CapTotGrossRtd = RVal: 12994.1
-   CapTotGrossRtdSim = RVal: 207906
-   CapTotNetRtd = UVal: 12454.7
+   CapTotGrossRtd = RVal: 13769.6
+   CapTotGrossRtdSim = RVal: 220314
+   CapTotNetRtd = UVal: 13198
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -89611,23 +89631,23 @@ CoilClg   User: "CoilCooling 12"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 12454.7
+   SysClgCap = RVal: 13198
    ParentZnSysRef = RVal: "ZnSys F2-9 1-Bed SW"
    CondHVACZnCntWithMult = RVal: 16
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 539.421
+   FanHtRtd = RVal: 571.613
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 199275
+   CapTotNetRtdSim = RVal: 211168
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 199275
+   CapNonHydronic = RVal: 211168
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    CodeMinEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 12 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 13 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 12"  
@@ -89636,9 +89656,9 @@ CoilHtg   User: "CoilHtg 12"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 16
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 7199.17
-   CapTotGrossRtdSim = RVal: 115187
-   CapTotNetRtd = UVal: 7199.17
+   CapTotGrossRtd = RVal: 6924.09
+   CapTotGrossRtdSim = RVal: 110785
+   CapTotNetRtd = UVal: 6924.09
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -89648,7 +89668,7 @@ CoilHtg   User: "CoilHtg 12"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 12454.7
+   SysClgCap = RVal: 13198
    ParentZnSysRef = RVal: "ZnSys F2-9 1-Bed SW"
    CondHVACZnCntWithMult = RVal: 16
    IsNew = RVal: 1
@@ -89656,15 +89676,15 @@ CoilHtg   User: "CoilHtg 12"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 115187
+   CapTotNetRtdSim = RVal: 110785
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 115187
+   CapNonHydronic = RVal: 110785
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 8884.4
+   CapTotInpRtd = RVal: 8544.93
    CodeMinAFUE = RVal: 0.8
    TreeDescrip = RVal: "Furnace, Gross = 7 MBH, AFUE-80.0%"
    ..
@@ -89678,15 +89698,15 @@ Fan   User: "Fan 12"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 16
    IsDummy = RVal: 0
-   FlowCap = UVal: 403.634
-   FlowCapSim = RVal: 6458.14
+   FlowCap = UVal: 429.001
+   FlowCapSim = RVal: 6864.02
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.162
+   MtrBHP = RVal: 0.172182
    MtrHP = RVal: 0.25
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
@@ -89698,14 +89718,14 @@ Fan   User: "Fan 12"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.162
+   AutoEffInputMtrBHP = RVal: 0.172182
    MtrHPIdx_i = RVal: 3
    MtrHPIdx_iminus1 = RVal: 2
    MinMtrBHP = RVal: 0.11875
    MtrBHPIdx = RVal: 0.401355
    MtrPerfIdx = RVal: 3
-   Pwr = RVal: 0.141272
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 404 cfm"
+   Pwr = RVal: 0.15015
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 429 cfm"
    ..
 
 ZnSys   User: "ZnSys F2-9 2-Bed N Core"  
@@ -89726,10 +89746,10 @@ ZnSys   User: "ZnSys F2-9 2-Bed N Core"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 7207.09
-   HtgCap = RVal: 10132.1
-   SupFanCap = RVal: 260.526
-   SupFanPwr = RVal: 0.0911841
+   ClgCap = RVal: 8170.47
+   HtgCap = RVal: 9737.22
+   SupFanCap = RVal: 255.252
+   SupFanPwr = RVal: 0.0893382
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -89848,9 +89868,9 @@ ZnSys   User: "ZnSys F2-9 2-Bed N Core"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 7207.09
+   DXCap = RVal: 8170.47
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 10132.1
+   NonElecHtgCap = RVal: 9737.22
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -89900,9 +89920,9 @@ ZnSys   User: "ZnSys F2-9 2-Bed N Core"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 312.143
+   FanHtRtd = RVal: 353.868
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 57656.7
+   CoilClgCapNonHydronic = RVal: 65363.8
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -89910,18 +89930,18 @@ ZnSys   User: "ZnSys F2-9 2-Bed N Core"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 81056.8
-   FanPwr = RVal: 0.0911841
+   CoilHtgCapNonHydronic = RVal: 77897.8
+   FanPwr = RVal: 0.0893382
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 6.67323
-   SupFlowPerTon = RVal: 433.783
-   HtgCapPerArea = RVal: 9.38157
-   SupFlowPerArea = RVal: 0.241228
+   ClgCapPerArea = RVal: 7.56525
+   SupFlowPerTon = RVal: 374.89
+   HtgCapPerArea = RVal: 9.01594
+   SupFlowPerArea = RVal: 0.236344
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -89937,9 +89957,9 @@ CoilClg   User: "CoilCooling 13"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 8
-   CapTotGrossRtd = RVal: 7519.23
-   CapTotGrossRtdSim = RVal: 60153.9
-   CapTotNetRtd = UVal: 7207.09
+   CapTotGrossRtd = RVal: 8524.34
+   CapTotGrossRtdSim = RVal: 68194.7
+   CapTotNetRtd = UVal: 8170.47
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -89951,23 +89971,23 @@ CoilClg   User: "CoilCooling 13"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 7207.09
+   SysClgCap = RVal: 8170.47
    ParentZnSysRef = RVal: "ZnSys F2-9 2-Bed N Core"
    CondHVACZnCntWithMult = RVal: 8
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 312.143
+   FanHtRtd = RVal: 353.868
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 57656.7
+   CapTotNetRtdSim = RVal: 65363.8
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 57656.7
+   CapNonHydronic = RVal: 65363.8
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    CodeMinEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 7 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 8 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 13"  
@@ -89976,9 +89996,9 @@ CoilHtg   User: "CoilHtg 13"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 8
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 10132.1
-   CapTotGrossRtdSim = RVal: 81056.8
-   CapTotNetRtd = UVal: 10132.1
+   CapTotGrossRtd = RVal: 9737.22
+   CapTotGrossRtdSim = RVal: 77897.8
+   CapTotNetRtd = UVal: 9737.22
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -89988,7 +90008,7 @@ CoilHtg   User: "CoilHtg 13"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 7207.09
+   SysClgCap = RVal: 8170.47
    ParentZnSysRef = RVal: "ZnSys F2-9 2-Bed N Core"
    CondHVACZnCntWithMult = RVal: 8
    IsNew = RVal: 1
@@ -89996,15 +90016,15 @@ CoilHtg   User: "CoilHtg 13"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 81056.8
+   CapTotNetRtdSim = RVal: 77897.8
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 81056.8
+   CapNonHydronic = RVal: 77897.8
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 12503.9
+   CapTotInpRtd = RVal: 12016.6
    CodeMinAFUE = RVal: 0.8
    TreeDescrip = RVal: "Furnace, Gross = 10 MBH, AFUE-80.0%"
    ..
@@ -90018,15 +90038,15 @@ Fan   User: "Fan 13"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 8
    IsDummy = RVal: 0
-   FlowCap = UVal: 260.526
-   FlowCapSim = RVal: 2084.21
+   FlowCap = UVal: 255.252
+   FlowCapSim = RVal: 2042.02
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.104563
+   MtrBHP = RVal: 0.102447
    MtrHP = RVal: 0.125
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
@@ -90038,14 +90058,14 @@ Fan   User: "Fan 13"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.104563
+   AutoEffInputMtrBHP = RVal: 0.102447
    MtrHPIdx_i = RVal: 2
    MtrHPIdx_iminus1 = RVal: 1
    MinMtrBHP = RVal: 0.07885
    MtrBHPIdx = RVal: 0.401355
    MtrPerfIdx = RVal: 2
-   Pwr = RVal: 0.0911841
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 261 cfm"
+   Pwr = RVal: 0.0893382
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 255 cfm"
    ..
 
 ZnSys   User: "ZnSys F2-9 2-Bed NE"  
@@ -90066,10 +90086,10 @@ ZnSys   User: "ZnSys F2-9 2-Bed NE"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 13386.7
-   HtgCap = RVal: 13594.9
-   SupFanCap = RVal: 427.887
-   SupFanPwr = RVal: 0.14976
+   ClgCap = RVal: 14744.5
+   HtgCap = RVal: 13133.7
+   SupFanCap = RVal: 474.428
+   SupFanPwr = RVal: 0.16605
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -90188,9 +90208,9 @@ ZnSys   User: "ZnSys F2-9 2-Bed NE"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 13386.7
+   DXCap = RVal: 14744.5
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 13594.9
+   NonElecHtgCap = RVal: 13133.7
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -90240,9 +90260,9 @@ ZnSys   User: "ZnSys F2-9 2-Bed NE"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 579.786
+   FanHtRtd = RVal: 638.593
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 107094
+   CoilClgCapNonHydronic = RVal: 117956
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -90250,18 +90270,18 @@ ZnSys   User: "ZnSys F2-9 2-Bed NE"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 108759
-   FanPwr = RVal: 0.14976
+   CoilHtgCapNonHydronic = RVal: 105070
+   FanPwr = RVal: 0.16605
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 12.3951
-   SupFlowPerTon = RVal: 383.563
-   HtgCapPerArea = RVal: 12.5879
-   SupFlowPerArea = RVal: 0.396192
+   ClgCapPerArea = RVal: 13.6523
+   SupFlowPerTon = RVal: 386.119
+   HtgCapPerArea = RVal: 12.1608
+   SupFlowPerArea = RVal: 0.439285
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -90277,9 +90297,9 @@ CoilClg   User: "CoilCooling 14"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 8
-   CapTotGrossRtd = RVal: 13966.5
-   CapTotGrossRtdSim = RVal: 111732
-   CapTotNetRtd = UVal: 13386.7
+   CapTotGrossRtd = RVal: 15383.1
+   CapTotGrossRtdSim = RVal: 123065
+   CapTotNetRtd = UVal: 14744.5
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -90291,23 +90311,23 @@ CoilClg   User: "CoilCooling 14"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 13386.7
+   SysClgCap = RVal: 14744.5
    ParentZnSysRef = RVal: "ZnSys F2-9 2-Bed NE"
    CondHVACZnCntWithMult = RVal: 8
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 579.786
+   FanHtRtd = RVal: 638.593
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 107094
+   CapTotNetRtdSim = RVal: 117956
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 107094
+   CapNonHydronic = RVal: 117956
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    CodeMinEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 13 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 15 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 14"  
@@ -90316,9 +90336,9 @@ CoilHtg   User: "CoilHtg 14"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 8
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 13594.9
-   CapTotGrossRtdSim = RVal: 108759
-   CapTotNetRtd = UVal: 13594.9
+   CapTotGrossRtd = RVal: 13133.7
+   CapTotGrossRtdSim = RVal: 105070
+   CapTotNetRtd = UVal: 13133.7
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -90328,7 +90348,7 @@ CoilHtg   User: "CoilHtg 14"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 13386.7
+   SysClgCap = RVal: 14744.5
    ParentZnSysRef = RVal: "ZnSys F2-9 2-Bed NE"
    CondHVACZnCntWithMult = RVal: 8
    IsNew = RVal: 1
@@ -90336,17 +90356,17 @@ CoilHtg   User: "CoilHtg 14"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 108759
+   CapTotNetRtdSim = RVal: 105070
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 108759
+   CapNonHydronic = RVal: 105070
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 16777.3
+   CapTotInpRtd = RVal: 16208.1
    CodeMinAFUE = RVal: 0.8
-   TreeDescrip = RVal: "Furnace, Gross = 14 MBH, AFUE-80.0%"
+   TreeDescrip = RVal: "Furnace, Gross = 13 MBH, AFUE-80.0%"
    ..
 
 Fan   User: "Fan 14"  
@@ -90358,15 +90378,15 @@ Fan   User: "Fan 14"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 8
    IsDummy = RVal: 0
-   FlowCap = UVal: 427.887
-   FlowCapSim = RVal: 3423.1
+   FlowCap = UVal: 474.428
+   FlowCapSim = RVal: 3795.42
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.171734
+   MtrBHP = RVal: 0.190414
    MtrHP = RVal: 0.25
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
@@ -90378,14 +90398,14 @@ Fan   User: "Fan 14"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.171734
+   AutoEffInputMtrBHP = RVal: 0.190414
    MtrHPIdx_i = RVal: 3
    MtrHPIdx_iminus1 = RVal: 2
    MinMtrBHP = RVal: 0.11875
    MtrBHPIdx = RVal: 0.401355
    MtrPerfIdx = RVal: 3
-   Pwr = RVal: 0.14976
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 428 cfm"
+   Pwr = RVal: 0.16605
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 474 cfm"
    ..
 
 ZnSys   User: "ZnSys F2-9 2-Bed NW"  
@@ -90406,10 +90426,10 @@ ZnSys   User: "ZnSys F2-9 2-Bed NW"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 16493.2
-   HtgCap = RVal: 13622.5
-   SupFanCap = RVal: 531.585
-   SupFanPwr = RVal: 0.186055
+   ClgCap = RVal: 18433.1
+   HtgCap = RVal: 13159.8
+   SupFanCap = RVal: 597.645
+   SupFanPwr = RVal: 0.209176
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -90528,9 +90548,9 @@ ZnSys   User: "ZnSys F2-9 2-Bed NW"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 16493.2
+   DXCap = RVal: 18433.1
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 13622.5
+   NonElecHtgCap = RVal: 13159.8
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -90580,9 +90600,9 @@ ZnSys   User: "ZnSys F2-9 2-Bed NW"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 714.33
+   FanHtRtd = RVal: 798.349
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 131946
+   CoilClgCapNonHydronic = RVal: 147465
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -90590,18 +90610,18 @@ ZnSys   User: "ZnSys F2-9 2-Bed NW"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 108980
-   FanPwr = RVal: 0.186055
+   CoilHtgCapNonHydronic = RVal: 105278
+   FanPwr = RVal: 0.209176
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 15.2715
-   SupFlowPerTon = RVal: 386.767
-   HtgCapPerArea = RVal: 12.6134
-   SupFlowPerArea = RVal: 0.492208
+   ClgCapPerArea = RVal: 17.0677
+   SupFlowPerTon = RVal: 389.069
+   HtgCapPerArea = RVal: 12.185
+   SupFlowPerArea = RVal: 0.553375
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -90617,9 +90637,9 @@ CoilClg   User: "CoilCooling 15"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 8
-   CapTotGrossRtd = RVal: 17207.5
-   CapTotGrossRtdSim = RVal: 137660
-   CapTotNetRtd = UVal: 16493.2
+   CapTotGrossRtd = RVal: 19231.4
+   CapTotGrossRtdSim = RVal: 153852
+   CapTotNetRtd = UVal: 18433.1
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -90631,23 +90651,23 @@ CoilClg   User: "CoilCooling 15"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 16493.2
+   SysClgCap = RVal: 18433.1
    ParentZnSysRef = RVal: "ZnSys F2-9 2-Bed NW"
    CondHVACZnCntWithMult = RVal: 8
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 714.33
+   FanHtRtd = RVal: 798.349
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 131946
+   CapTotNetRtdSim = RVal: 147465
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 131946
+   CapNonHydronic = RVal: 147465
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    CodeMinEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 16 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 18 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 15"  
@@ -90656,9 +90676,9 @@ CoilHtg   User: "CoilHtg 15"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 8
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 13622.5
-   CapTotGrossRtdSim = RVal: 108980
-   CapTotNetRtd = UVal: 13622.5
+   CapTotGrossRtd = RVal: 13159.8
+   CapTotGrossRtdSim = RVal: 105278
+   CapTotNetRtd = UVal: 13159.8
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -90668,7 +90688,7 @@ CoilHtg   User: "CoilHtg 15"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 16493.2
+   SysClgCap = RVal: 18433.1
    ParentZnSysRef = RVal: "ZnSys F2-9 2-Bed NW"
    CondHVACZnCntWithMult = RVal: 8
    IsNew = RVal: 1
@@ -90676,17 +90696,17 @@ CoilHtg   User: "CoilHtg 15"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 108980
+   CapTotNetRtdSim = RVal: 105278
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 108980
+   CapNonHydronic = RVal: 105278
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 16811.3
+   CapTotInpRtd = RVal: 16240.3
    CodeMinAFUE = RVal: 0.8
-   TreeDescrip = RVal: "Furnace, Gross = 14 MBH, AFUE-80.0%"
+   TreeDescrip = RVal: "Furnace, Gross = 13 MBH, AFUE-80.0%"
    ..
 
 Fan   User: "Fan 15"  
@@ -90698,15 +90718,15 @@ Fan   User: "Fan 15"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 8
    IsDummy = RVal: 0
-   FlowCap = UVal: 531.585
-   FlowCapSim = RVal: 4252.68
+   FlowCap = UVal: 597.645
+   FlowCapSim = RVal: 4781.16
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.213354
+   MtrBHP = RVal: 0.239868
    MtrHP = RVal: 0.25
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
@@ -90718,14 +90738,14 @@ Fan   User: "Fan 15"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.213354
+   AutoEffInputMtrBHP = RVal: 0.239868
    MtrHPIdx_i = RVal: 3
    MtrHPIdx_iminus1 = RVal: 2
    MinMtrBHP = RVal: 0.11875
    MtrBHPIdx = RVal: 0.401355
    MtrPerfIdx = RVal: 3
-   Pwr = RVal: 0.186055
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 532 cfm"
+   Pwr = RVal: 0.209176
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 598 cfm"
    ..
 
 ZnSys   User: "ZnSys F2-9 2-Bed SE"  
@@ -90746,10 +90766,10 @@ ZnSys   User: "ZnSys F2-9 2-Bed SE"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 17952.9
-   HtgCap = RVal: 13583.8
-   SupFanCap = RVal: 581.5
-   SupFanPwr = RVal: 0.203525
+   ClgCap = RVal: 19181
+   HtgCap = RVal: 13114
+   SupFanCap = RVal: 623.374
+   SupFanPwr = RVal: 0.218181
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -90868,9 +90888,9 @@ ZnSys   User: "ZnSys F2-9 2-Bed SE"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 17952.9
+   DXCap = RVal: 19181
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 13583.8
+   NonElecHtgCap = RVal: 13114
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -90920,9 +90940,9 @@ ZnSys   User: "ZnSys F2-9 2-Bed SE"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 777.551
+   FanHtRtd = RVal: 830.741
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 143623
+   CoilClgCapNonHydronic = RVal: 153448
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -90930,18 +90950,18 @@ ZnSys   User: "ZnSys F2-9 2-Bed SE"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 108670
-   FanPwr = RVal: 0.203525
+   CoilHtgCapNonHydronic = RVal: 104912
+   FanPwr = RVal: 0.218181
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 16.6231
-   SupFlowPerTon = RVal: 388.684
-   HtgCapPerArea = RVal: 12.5776
-   SupFlowPerArea = RVal: 0.538426
+   ClgCapPerArea = RVal: 17.7602
+   SupFlowPerTon = RVal: 389.995
+   HtgCapPerArea = RVal: 12.1426
+   SupFlowPerArea = RVal: 0.577198
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -90957,9 +90977,9 @@ CoilClg   User: "CoilCooling 16"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 8
-   CapTotGrossRtd = RVal: 18730.5
-   CapTotGrossRtdSim = RVal: 149844
-   CapTotNetRtd = UVal: 17952.9
+   CapTotGrossRtd = RVal: 20011.7
+   CapTotGrossRtdSim = RVal: 160094
+   CapTotNetRtd = UVal: 19181
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -90971,23 +90991,23 @@ CoilClg   User: "CoilCooling 16"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 17952.9
+   SysClgCap = RVal: 19181
    ParentZnSysRef = RVal: "ZnSys F2-9 2-Bed SE"
    CondHVACZnCntWithMult = RVal: 8
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 777.551
+   FanHtRtd = RVal: 830.741
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 143623
+   CapTotNetRtdSim = RVal: 153448
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 143623
+   CapNonHydronic = RVal: 153448
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    CodeMinEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 18 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 19 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 16"  
@@ -90996,9 +91016,9 @@ CoilHtg   User: "CoilHtg 16"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 8
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 13583.8
-   CapTotGrossRtdSim = RVal: 108670
-   CapTotNetRtd = UVal: 13583.8
+   CapTotGrossRtd = RVal: 13114
+   CapTotGrossRtdSim = RVal: 104912
+   CapTotNetRtd = UVal: 13114
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -91008,7 +91028,7 @@ CoilHtg   User: "CoilHtg 16"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 17952.9
+   SysClgCap = RVal: 19181
    ParentZnSysRef = RVal: "ZnSys F2-9 2-Bed SE"
    CondHVACZnCntWithMult = RVal: 8
    IsNew = RVal: 1
@@ -91016,17 +91036,17 @@ CoilHtg   User: "CoilHtg 16"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 108670
+   CapTotNetRtdSim = RVal: 104912
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 108670
+   CapNonHydronic = RVal: 104912
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 16763.6
+   CapTotInpRtd = RVal: 16183.8
    CodeMinAFUE = RVal: 0.8
-   TreeDescrip = RVal: "Furnace, Gross = 14 MBH, AFUE-80.0%"
+   TreeDescrip = RVal: "Furnace, Gross = 13 MBH, AFUE-80.0%"
    ..
 
 Fan   User: "Fan 16"  
@@ -91038,16 +91058,16 @@ Fan   User: "Fan 16"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 8
    IsDummy = RVal: 0
-   FlowCap = UVal: 581.5
-   FlowCapSim = RVal: 4652
+   FlowCap = UVal: 623.374
+   FlowCapSim = RVal: 4986.99
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.233388
-   MtrHP = RVal: 0.25
+   MtrBHP = RVal: 0.250194
+   MtrHP = RVal: 0.5
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
    MtrEff = RVal: 0.855
@@ -91058,14 +91078,14 @@ Fan   User: "Fan 16"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.233388
-   MtrHPIdx_i = RVal: 3
-   MtrHPIdx_iminus1 = RVal: 2
-   MinMtrBHP = RVal: 0.11875
+   AutoEffInputMtrBHP = RVal: 0.250194
+   MtrHPIdx_i = RVal: 4
+   MtrHPIdx_iminus1 = RVal: 3
+   MinMtrBHP = RVal: 0.2375
    MtrBHPIdx = RVal: 0.401355
-   MtrPerfIdx = RVal: 3
-   Pwr = RVal: 0.203525
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 582 cfm"
+   MtrPerfIdx = RVal: 4
+   Pwr = RVal: 0.218181
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 623 cfm"
    ..
 
 ZnSys   User: "ZnSys F2-9 2-Bed SW"  
@@ -91086,10 +91106,10 @@ ZnSys   User: "ZnSys F2-9 2-Bed SW"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 21022.2
-   HtgCap = RVal: 13553.3
-   SupFanCap = RVal: 683.981
-   SupFanPwr = RVal: 0.239393
+   ClgCap = RVal: 22626.5
+   HtgCap = RVal: 13084.4
+   SupFanCap = RVal: 738.617
+   SupFanPwr = RVal: 0.258516
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -91208,9 +91228,9 @@ ZnSys   User: "ZnSys F2-9 2-Bed SW"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 21022.2
+   DXCap = RVal: 22626.5
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 13553.3
+   NonElecHtgCap = RVal: 13084.4
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -91260,9 +91280,9 @@ ZnSys   User: "ZnSys F2-9 2-Bed SW"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 910.484
+   FanHtRtd = RVal: 979.967
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 168178
+   CoilClgCapNonHydronic = RVal: 181012
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -91270,18 +91290,18 @@ ZnSys   User: "ZnSys F2-9 2-Bed SW"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 108426
-   FanPwr = RVal: 0.239393
+   CoilHtgCapNonHydronic = RVal: 104675
+   FanPwr = RVal: 0.258516
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 19.465
-   SupFlowPerTon = RVal: 390.434
-   HtgCapPerArea = RVal: 12.5494
-   SupFlowPerArea = RVal: 0.633316
+   ClgCapPerArea = RVal: 20.9505
+   SupFlowPerTon = RVal: 391.727
+   HtgCapPerArea = RVal: 12.1152
+   SupFlowPerArea = RVal: 0.683905
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -91297,9 +91317,9 @@ CoilClg   User: "CoilCooling 17"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 8
-   CapTotGrossRtd = RVal: 21932.7
-   CapTotGrossRtdSim = RVal: 175461
-   CapTotNetRtd = UVal: 21022.2
+   CapTotGrossRtd = RVal: 23606.5
+   CapTotGrossRtdSim = RVal: 188852
+   CapTotNetRtd = UVal: 22626.5
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -91311,23 +91331,23 @@ CoilClg   User: "CoilCooling 17"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 21022.2
+   SysClgCap = RVal: 22626.5
    ParentZnSysRef = RVal: "ZnSys F2-9 2-Bed SW"
    CondHVACZnCntWithMult = RVal: 8
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 910.484
+   FanHtRtd = RVal: 979.967
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 168178
+   CapTotNetRtdSim = RVal: 181012
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 168178
+   CapNonHydronic = RVal: 181012
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
    CodeMinEER = RVal: 12.2
    HtRejLdSim = RVal: 0
-   TreeDescrip = RVal: "DirectExpansion, Net = 21 MBH, SEER-14.0"
+   TreeDescrip = RVal: "DirectExpansion, Net = 23 MBH, SEER-14.0"
    ..
 
 CoilHtg   User: "CoilHtg 17"  
@@ -91336,9 +91356,9 @@ CoilHtg   User: "CoilHtg 17"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 8
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 13553.3
-   CapTotGrossRtdSim = RVal: 108426
-   CapTotNetRtd = UVal: 13553.3
+   CapTotGrossRtd = RVal: 13084.4
+   CapTotGrossRtdSim = RVal: 104675
+   CapTotNetRtd = UVal: 13084.4
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -91348,7 +91368,7 @@ CoilHtg   User: "CoilHtg 17"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 21022.2
+   SysClgCap = RVal: 22626.5
    ParentZnSysRef = RVal: "ZnSys F2-9 2-Bed SW"
    CondHVACZnCntWithMult = RVal: 8
    IsNew = RVal: 1
@@ -91356,17 +91376,17 @@ CoilHtg   User: "CoilHtg 17"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 108426
+   CapTotNetRtdSim = RVal: 104675
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 108426
+   CapNonHydronic = RVal: 104675
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 16725.9
+   CapTotInpRtd = RVal: 16147.3
    CodeMinAFUE = RVal: 0.8
-   TreeDescrip = RVal: "Furnace, Gross = 14 MBH, AFUE-80.0%"
+   TreeDescrip = RVal: "Furnace, Gross = 13 MBH, AFUE-80.0%"
    ..
 
 Fan   User: "Fan 17"  
@@ -91378,15 +91398,15 @@ Fan   User: "Fan 17"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 8
    IsDummy = RVal: 0
-   FlowCap = UVal: 683.981
-   FlowCapSim = RVal: 5471.85
+   FlowCap = UVal: 738.617
+   FlowCapSim = RVal: 5908.94
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.274519
+   MtrBHP = RVal: 0.296447
    MtrHP = RVal: 0.5
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
@@ -91398,14 +91418,14 @@ Fan   User: "Fan 17"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.274519
+   AutoEffInputMtrBHP = RVal: 0.296447
    MtrHPIdx_i = RVal: 4
    MtrHPIdx_iminus1 = RVal: 3
    MinMtrBHP = RVal: 0.2375
    MtrBHPIdx = RVal: 0.401355
    MtrPerfIdx = RVal: 4
-   Pwr = RVal: 0.239393
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 684 cfm"
+   Pwr = RVal: 0.258516
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 739 cfm"
    ..
 
 ZnSys   User: "ZnSys F2-9 Studio N"  
@@ -91426,10 +91446,10 @@ ZnSys   User: "ZnSys F2-9 Studio N"
    HtgDsgnSupAirTemp = RDef: 95
    ClgSizingRat = RVal: 1.15
    HtgSizingRat = RVal: 1.25
-   ClgCap = RVal: 3894.37
-   HtgCap = RVal: 5405.74
-   SupFanCap = RVal: 138.998
-   SupFanPwr = RVal: 0.0486493
+   ClgCap = RVal: 4381.42
+   HtgCap = RVal: 5146.88
+   SupFanCap = RVal: 134.534
+   SupFanPwr = RVal: 0.0470869
    SysVentFlow = RVal: 0
    VentAirDistEff = RVal: 1
    VentSysEff = RVal: 1
@@ -91548,9 +91568,9 @@ ZnSys   User: "ZnSys F2-9 Studio N"
    SysVentFlowUncorrected = RVal: 0
    SysCodeVentFlow = RVal: 0
    HtPumpCap = RVal: 0
-   DXCap = RVal: 3894.37
+   DXCap = RVal: 4381.42
    VRFNetClgCap = RVal: 0
-   NonElecHtgCap = RVal: 5405.74
+   NonElecHtgCap = RVal: 5146.88
    VRFNetHtgCap = RVal: 0
    UnitaryCat = RVal: "AC"  (1)
    EERDeduction = RVal: 0.2
@@ -91600,9 +91620,9 @@ ZnSys   User: "ZnSys F2-9 Studio N"
    TotNonExhSysFanPwrAdj = RVal: 0
    TotSysFanPwrAdj = RVal: 0
    PropExhSysTotFanMtrHP = RVal: 0
-   FanHtRtd = RVal: 168.668
+   FanHtRtd = RVal: 189.762
    PumpPwrRtd = RVal: 0
-   CoilClgCapNonHydronic = RVal: 62309.9
+   CoilClgCapNonHydronic = RVal: 70102.7
    HtgFuelSrc = RVal: 1
    LabExhSysMinVentFlow = RVal: 0
    LabExhSysMinVentACH = RVal: 0
@@ -91610,18 +91630,18 @@ ZnSys   User: "ZnSys F2-9 Studio N"
    LabExhSysMinExhACH = RVal: 0
    LabFumeHoodIntensiveDens = RVal: 0
    SysOARat = RVal: 0
-   CoilHtgCapNonHydronic = RVal: 86491.8
-   FanPwr = RVal: 0.0486493
+   CoilHtgCapNonHydronic = RVal: 82350.1
+   FanPwr = RVal: 0.0470869
    SupFanPwrIdx = RVal: 0.35
    RetFanPwr = RVal: 0
    ReliefFanPwr = RVal: 0
    SysExhFlow = RVal: 0
    SysCodeExhFlow = RVal: 0
    ExhSysFanPwrIdx = RVal: 0
-   ClgCapPerArea = RVal: 7.2118
-   SupFlowPerTon = RVal: 428.304
-   HtgCapPerArea = RVal: 10.0106
-   SupFlowPerArea = RVal: 0.257404
+   ClgCapPerArea = RVal: 8.11374
+   SupFlowPerTon = RVal: 368.467
+   HtgCapPerArea = RVal: 9.53126
+   SupFlowPerArea = RVal: 0.249137
    OAFlowPerArea = RVal: 0
    HERSDuctReqTested = RVal: 0
    HERSDuctTestedOnly = RVal: 0
@@ -91637,9 +91657,9 @@ CoilClg   User: "CoilCooling 18"
    Type = UVal: "DirectExpansion"  (2)
    FuelSrc = RVal: "Electric"  (1)
    SysCnt = RVal: 16
-   CapTotGrossRtd = RVal: 4063.04
-   CapTotGrossRtdSim = RVal: 65008.6
-   CapTotNetRtd = UVal: 3894.37
+   CapTotGrossRtd = RVal: 4571.18
+   CapTotGrossRtdSim = RVal: 73138.9
+   CapTotNetRtd = UVal: 4381.42
    LatModelingMthd = RVal: "NTUEffectiveness"  (1)
    DXSEER = UVal: 14
    DXEER = UVal: 12.2
@@ -91651,17 +91671,17 @@ CoilClg   User: "CoilCooling 18"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 3894.37
+   SysClgCap = RVal: 4381.42
    ParentZnSysRef = RVal: "ZnSys F2-9 Studio N"
    CondHVACZnCntWithMult = RVal: 16
    IsNew = RVal: 1
    IsExisting = RVal: 0
    IsHlthCare = RVal: 0
-   FanHtRtd = RVal: 168.668
+   FanHtRtd = RVal: 189.762
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 62309.9
+   CapTotNetRtdSim = RVal: 70102.7
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 62309.9
+   CapNonHydronic = RVal: 70102.7
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    CodeMinSEER = RVal: 14
@@ -91676,9 +91696,9 @@ CoilHtg   User: "CoilHtg 18"
    FuelSrc = RDef: "Gas"  (2)
    SysCnt = RVal: 16
    IsDummy = RVal: 0
-   CapTotGrossRtd = RVal: 5405.74
-   CapTotGrossRtdSim = RVal: 86491.8
-   CapTotNetRtd = UVal: 5405.74
+   CapTotGrossRtd = RVal: 5146.88
+   CapTotGrossRtdSim = RVal: 82350.1
+   CapTotNetRtd = UVal: 5146.88
    FurnAFUE = UVal: 0.8
    FurnIgnType = RDef: "IntermittentIgnitionDevice"  (1)
    BypassMinEffCheck = RDef: 0
@@ -91688,7 +91708,7 @@ CoilHtg   User: "CoilHtg 18"
    SysType = RVal: "SZAC"
    BypassCheckCode = RVal: 0
    BypassCheckSim = RVal: 0
-   SysClgCap = RVal: 3894.37
+   SysClgCap = RVal: 4381.42
    ParentZnSysRef = RVal: "ZnSys F2-9 Studio N"
    CondHVACZnCntWithMult = RVal: 16
    IsNew = RVal: 1
@@ -91696,15 +91716,15 @@ CoilHtg   User: "CoilHtg 18"
    IsHlthCare = RVal: 0
    FanHtRtd = RVal: 0
    PumpPwrRtd = RVal: 0
-   CapTotNetRtdSim = RVal: 86491.8
+   CapTotNetRtdSim = RVal: 82350.1
    IsLessThanMinEff = RVal: 0
-   CapNonHydronic = RVal: 86491.8
+   CapNonHydronic = RVal: 82350.1
    CapHydronic = RVal: 0
    CapWSHP = RVal: 0
    HtgFuelSrc = RVal: 1
    SuppHtgCap = RVal: 0
    HtExtractionLdSim = RVal: 0
-   CapTotInpRtd = RVal: 6671.15
+   CapTotInpRtd = RVal: 6351.69
    CodeMinAFUE = RVal: 0.8
    TreeDescrip = RVal: "Furnace, Gross = 5 MBH, AFUE-80.0%"
    ..
@@ -91718,15 +91738,15 @@ Fan   User: "Fan 18"
    ModelingMthd = PDef: "BrakeHorsePower"  (2)
    SysCnt = RVal: 16
    IsDummy = RVal: 0
-   FlowCap = UVal: 138.998
-   FlowCapSim = RVal: 2223.97
+   FlowCap = UVal: 134.534
+   FlowCapSim = RVal: 2152.54
    FlowMinSim = RVal: 0
    Pos = RVal: "DrawThrough"  (1)
    FlowEff = RDef: 0.5
    TotEff = RVal: 0.4275
    PwrIdx = RDef: 0.35
    TotStaticPress = RVal: 1.2734
-   MtrBHP = RVal: 0.0557875
+   MtrBHP = RVal: 0.0539958
    MtrHP = RVal: 0.083
    MtrType = RDef: "Open"  (1)
    MtrPoleCnt = RDef: 4
@@ -91738,14 +91758,14 @@ Fan   User: "Fan 18"
    BypassCheckSim = RVal: 0
    IsNew = RVal: 1
    IsExisting = RVal: 0
-   AutoEffInputMtrBHP = RVal: 0.0557875
+   AutoEffInputMtrBHP = RVal: 0.0539958
    MtrHPIdx_i = RVal: 1
    MtrHPIdx_iminus1 = RVal: 1
    MinMtrBHP = RVal: 0.07885
    MtrBHPIdx = RVal: 0.401355
    MtrPerfIdx = RVal: 1
-   Pwr = RVal: 0.0486493
-   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 139 cfm"
+   Pwr = RVal: 0.0470869
+   TreeDescrip = RVal: "ConstantVolume, Centrifugal, FlowCap = 135 cfm"
    ..
 
 ZnSys   User: "ZnSys F2-9 Laundry"  
@@ -95047,11 +95067,11 @@ FluidSys   User: "Condenser Water System"
    TreeState = 253
    Status = RVal: "New"  (1)
    Type = UVal: "CondenserWater"  (2)
-   DsgnSupWtrTemp = RDef: 72.4
+   DsgnSupWtrTemp = RDef: 76
    DsgnSupWtrDelT = RDef: 10
    CtrlType = RDef: "Other"  (2)
    TempCtrl = RDef: "Fixed"  (1)
-   FixedSupTemp = RDef: 72.4
+   FixedSupTemp = RDef: 76
    ClgCap = RVal: 439315
    HtgCap = RVal: 0
    ClgSizingRat = RVal: 1.15
@@ -95211,8 +95231,8 @@ HtRej   User: "Tower"
    ModCtrl = UVal: "VariableSpeedDrive"  (4)
    FluidSegInRef = UVal: "CW Return"
    FluidSegOutRef = UVal: "CW Supply"
-   EntTempDsgn = RDef: 82.4
-   LvgTempDsgn = RDef: 72.4
+   EntTempDsgn = RDef: 86
+   LvgTempDsgn = RDef: 76
    CellCnt = RDef: 1
    CapRtd = RVal: 439315
    CapRtdSim = RVal: 439315
@@ -96067,6 +96087,72 @@ Mat   User: "Compliance Insulation R9.40"
    SimpleCompositeR = RVal: 0
    HeatCap = RVal: 0.0337554
    InsCheck = RVal: 9.4
+   ..
+
+Mat   User: "Compliance Insulation R1.54"  
+   CodeCat = UVal: "Insulation Board"  (100)
+   CodeItem = UVal: "Compliance Insulation R1.54"  (9084)
+   RVal = RVal: 1.54
+   ThrmlCndct = RVal: 0.0133
+   SpecHt = RVal: 0.27
+   Dens = RVal: 1
+   Thkns = RVal: 0.245784
+   FrmMat = PDef: "- specify -"  (0)
+   FrmConfig = PDef: "- specify -"  (0)
+   FrmDepth = PDef: "- specify -"  (0)
+   CavityIns = RVal: 0
+   FrmFacHeaders = RVal: 0
+   HeaderIns = RVal: 0
+   CMUWt = PDef: "- specify -"  (0)
+   CMUFill = PDef: "- specify -"  (0)
+   CavityInsVal = RVal: 0
+   FrmDepthVal = RVal: 0
+   IsSpandrel = RVal: 0
+   IsHollowCoreMasonry = RVal: 0
+   IsMetalWall = RVal: 0
+   IsMetalFrame = RVal: 0
+   IsWoodFrame = RVal: 0
+   IsMetalFrameLayer = RVal: 0
+   IsWoodFrameLayer = RVal: 0
+   IsMetalRoof = RVal: 0
+   IsWoodFrameRoof = RVal: 0
+   RefCnt = RVal: 0
+   SimpleCompositeR = RVal: 0
+   HeatCap = RVal: 0.00553014
+   InsCheck = RVal: 1.54
+   ..
+
+Mat   User: "Compliance Insulation R1.35"  
+   CodeCat = UVal: "Insulation Board"  (100)
+   CodeItem = UVal: "Compliance Insulation R1.35"  (9082)
+   RVal = RVal: 1.35
+   ThrmlCndct = RVal: 0.0133
+   SpecHt = RVal: 0.27
+   Dens = RVal: 1
+   Thkns = RVal: 0.21546
+   FrmMat = PDef: "- specify -"  (0)
+   FrmConfig = PDef: "- specify -"  (0)
+   FrmDepth = PDef: "- specify -"  (0)
+   CavityIns = RVal: 0
+   FrmFacHeaders = RVal: 0
+   HeaderIns = RVal: 0
+   CMUWt = PDef: "- specify -"  (0)
+   CMUFill = PDef: "- specify -"  (0)
+   CavityInsVal = RVal: 0
+   FrmDepthVal = RVal: 0
+   IsSpandrel = RVal: 0
+   IsHollowCoreMasonry = RVal: 0
+   IsMetalWall = RVal: 0
+   IsMetalFrame = RVal: 0
+   IsWoodFrame = RVal: 0
+   IsMetalFrameLayer = RVal: 0
+   IsWoodFrameLayer = RVal: 0
+   IsMetalRoof = RVal: 0
+   IsWoodFrameRoof = RVal: 0
+   RefCnt = RVal: 0
+   SimpleCompositeR = RVal: 0
+   HeatCap = RVal: 0.00484785
+   InsCheck = RVal: 1.35
    ..
 
 Mat   User: "Compliance Insulation R6.00"  
