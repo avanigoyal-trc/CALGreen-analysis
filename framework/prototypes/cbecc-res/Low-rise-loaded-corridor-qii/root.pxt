@@ -31,7 +31,7 @@ parameter "window_u", :default=>0.3
 parameter "window_shgc", :default=>0.23
 #parameter "heating_eff", :default=>0.8
 
-parameter "wall_exterior_sheathing"
+parameter "wall_exterior_sheathing", :default=> 0
 parameter "wall_cavity"
 parameter "ceiling_sheathing"
 parameter "ceiling_cavity"
@@ -2568,7 +2568,7 @@ Cons   "Exterior Wall Cons"
    FloorSurfaceLayer = "Carpeted"
    FlrConcreteFillLayer = "- no concrete fill -"
    FloorDeckLayer = "Wood Siding/sheathing/decking"
-   SheathInsul2Layer = "<%=wall_exterior_sheathing%>"
+   SheathInsul2Layer = "- no sheathing/insul. -"
    MassLayer = "- none -"
    MassThickness = "- none -"
    FurringInsul2Layer = "- no insulation -"
@@ -2578,7 +2578,9 @@ Cons   "Exterior Wall Cons"
    CavityLayer = "<%=wall_cavity%>"
    FrameLayer = "2x6 @ 16 in. O.C."
    SheathInsulLayer = "- specify R-value -"
-   SheathInsulLayerRVal = 4
+   <% if wall_exterior_sheathing != 0 %>
+   SheathInsulLayerRVal = <%=wall_exterior_sheathing%>
+   <%end%>
    WallExtFinishLayer = "Synthetic Stucco"
    OtherSideFinishLayer = "Gypsum Board"
    FlrExtFinishLayer = "- select finish -"
@@ -2599,7 +2601,7 @@ Cons   "Ceiling Below Attic Cons"
    FloorSurfaceLayer = "Carpeted"
    FlrConcreteFillLayer = "- no concrete fill -"
    FloorDeckLayer = "Wood Siding/sheathing/decking"
-   SheathInsul2Layer = "<%=ceiling_sheathing%>"
+   SheathInsul2Layer = "- no sheathing/insul. -"
    MassLayer = "- none -"
    MassThickness = "- none -"
    FurringInsul2Layer = "- no insulation -"
@@ -2608,7 +2610,7 @@ Cons   "Ceiling Below Attic Cons"
    FurringLayer = "- none -"
    CavityLayer = "<%=ceiling_cavity%>"
    FrameLayer = "2x4 Bottom Chord of Truss @ 24 in. O.C."
-   SheathInsulLayer = "- no sheathing/insul. -"
+   SheathInsulLayer = "<%=ceiling_sheathing%>"
    WallExtFinishLayer = "- select finish -"
    OtherSideFinishLayer = "Gypsum Board"
    FlrExtFinishLayer = "- select finish -"
