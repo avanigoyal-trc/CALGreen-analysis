@@ -176,7 +176,7 @@ Proj   User: "High-Rise Mixed-Use (10-story)"
    ResBaseSysChange = RVal: 0
    NumZnSys = RVal: 24
    RunTitle = UVal: "High-Rise Mixed-Use (10-story)"
-   AnalysisType = UVal: "Title24Compliance"  (1)
+   AnalysisType = UVal: "Title24ProposedOnly"  (2)
    CompType = RDef: "NewComplete"  (1)
    CompOptNew = RVal: 1
    CompOptExist = RVal: 0
@@ -201,6 +201,8 @@ Proj   User: "High-Rise Mixed-Use (10-story)"
    SoftwareVersion = UVal: "CBECC-Com 2022.0.1 RV (1113)"
    CompReportNum = RVal: 0
    ResultsCurrentMessage = UVal: "(not current)"
+   ModelPath = PDef: "C:\Users\mnakajima\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hpte\runs\hr-qii-30\cz02\"
+   ModelFile = PDef: "instance"
    PropHasUnknownHVACZns = RVal: 0
    WtrHtrCnt = RVal: 4
    CALGreenOutdrLtg = RVal: 0
@@ -332,8 +334,8 @@ Proj   User: "High-Rise Mixed-Use (10-story)"
    SpandrelWallUA[4] = RVal: 0
    SpandrelWallUA[5] = RVal: 0
    SpandrelWallUA[6] = RVal: 0
-   WoodFrmAndOtherRoofUA[1] = RVal: 215.625
-   WoodFrmAndOtherRoofUA[2] = RVal: 1743.75
+   WoodFrmAndOtherRoofUA[1] = RVal: 47.3495
+   WoodFrmAndOtherRoofUA[2] = RVal: 382.913
    WoodFrmAndOtherRoofUA[3] = RVal: 0
    WoodFrmAndOtherRoofUA[4] = RVal: 0
    WoodFrmAndOtherRoofUA[5] = RVal: 0
@@ -444,9 +446,9 @@ Proj   User: "High-Rise Mixed-Use (10-story)"
    WoodFrmAndOtherWallUFac[1] = RVal: 0.0838156
    WoodFrmAndOtherWallUFac[2] = RVal: 0.0838156
    WoodFrmAndOtherWallUFac[7] = RVal: 0.0838156
-   WoodFrmAndOtherRoofUFac[1] = RVal: 0.15625
-   WoodFrmAndOtherRoofUFac[2] = RVal: 0.15625
-   WoodFrmAndOtherRoofUFac[7] = RVal: 0.15625
+   WoodFrmAndOtherRoofUFac[1] = RVal: 0.0343112
+   WoodFrmAndOtherRoofUFac[2] = RVal: 0.0343112
+   WoodFrmAndOtherRoofUFac[7] = RVal: 0.0343112
    CSE_DHWUseMthd = RVal: "New (via wsDayUse)"  (2)
    CSE_DHWUseIncFile = RVal: "DHWDU.txt"
    DefaultOptionInp = PDef: "Entire Model"  (3)
@@ -519,7 +521,7 @@ Proj   User: "High-Rise Mixed-Use (10-story)"
    CO2EmissionsResultsDecPrec = RVal: 2
    ZipCodeMsg = RVal: "Enter zip code to default CZ and weather file"
    HasBaseHVAC = RVal: 0
-   ModelName = RVal: "NoName"
+   ModelName = RVal: "instance22"
    TblName = RVal: "NoName"
    AvgStateElecCostMsg = RVal: "Electricity cost is equal to the California state average cost"
    AvgStateOtherFuelCostMsg = RVal: " "
@@ -1483,6 +1485,39 @@ Mat   User: "WoodRoof16OCCavInsR29"
    InsCheck = RVal: 0
    ..
 
+Mat   User: "WoodRoof16OCCavInsR27"  
+   CodeCat = UVal: "Composite"  (40)
+   CodeItem = PDef: "- specify -"  (0)
+   RVal = RVal: 21.157
+   Dens = RVal: 0
+   Thkns = RVal: 0
+   FrmMat = UVal: "Wood"  (1)
+   FrmConfig = UVal: "Roof16inOC"  (7)
+   FrmDepth = UVal: "7_25In"  (13)
+   CavityIns = UVal: 27
+   FrmFacCav = RVal: 0.9
+   FrmFacMembers = RVal: 0.1
+   FrmFacHeaders = RVal: 0
+   HeaderIns = RVal: 0
+   CMUWt = PDef: "- specify -"  (0)
+   CMUFill = PDef: "- specify -"  (0)
+   CavityInsVal = RVal: 27
+   FrmDepthVal = RVal: 7.25
+   IsSpandrel = RVal: 0
+   IsHollowCoreMasonry = RVal: 0
+   IsMetalWall = RVal: 0
+   IsMetalFrame = RVal: 0
+   IsWoodFrame = RVal: 0
+   IsMetalFrameLayer = RVal: 0
+   IsWoodFrameLayer = RVal: 1
+   IsMetalRoof = RVal: 0
+   IsWoodFrameRoof = RVal: 0
+   RefCnt = RVal: 1
+   SimpleCompositeR = RVal: 21.157
+   HeatCap = RVal: 0
+   InsCheck = RVal: 0
+   ..
+
 Mat   User: "WoodRoof16OCCavInsR25"  
    CodeCat = UVal: "Composite"  (40)
    CodeItem = PDef: "- specify -"  (0)
@@ -1512,6 +1547,39 @@ Mat   User: "WoodRoof16OCCavInsR25"
    IsWoodFrameRoof = RVal: 0
    RefCnt = RVal: 0
    SimpleCompositeR = RVal: 20.0271
+   HeatCap = RVal: 0
+   InsCheck = RVal: 0
+   ..
+
+Mat   User: "WoodRoof16OCCavInsR20"  
+   CodeCat = UVal: "Composite"  (40)
+   CodeItem = PDef: "- specify -"  (0)
+   RVal = RVal: 16.9686
+   Dens = RVal: 0
+   Thkns = RVal: 0
+   FrmMat = UVal: "Wood"  (1)
+   FrmConfig = UVal: "Roof16inOC"  (7)
+   FrmDepth = UVal: "7_25In"  (13)
+   CavityIns = UVal: 20
+   FrmFacCav = RVal: 0.9
+   FrmFacMembers = RVal: 0.1
+   FrmFacHeaders = RVal: 0
+   HeaderIns = RVal: 0
+   CMUWt = PDef: "- specify -"  (0)
+   CMUFill = PDef: "- specify -"  (0)
+   CavityInsVal = RVal: 20
+   FrmDepthVal = RVal: 7.25
+   IsSpandrel = RVal: 0
+   IsHollowCoreMasonry = RVal: 0
+   IsMetalWall = RVal: 0
+   IsMetalFrame = RVal: 0
+   IsWoodFrame = RVal: 0
+   IsMetalFrameLayer = RVal: 0
+   IsWoodFrameLayer = RVal: 1
+   IsMetalRoof = RVal: 0
+   IsWoodFrameRoof = RVal: 0
+   RefCnt = RVal: 0
+   SimpleCompositeR = RVal: 16.9686
    HeatCap = RVal: 0
    InsCheck = RVal: 0
    ..
@@ -2055,7 +2123,7 @@ ConsAssm   User: "MetalFrameWallInterior"
 ConsAssm   User: "FlatResWoodFramingAndOtherRoof"  
    CompatibleSurfType = UVal: "Roof"  (2)
    SpecMthd = RVal: "Layers"  (1)
-   UFactor = RVal: 0.15625
+   UFactor = RVal: 0.0343112
    AssignedSurfType = RVal: 2
    Status = RVal: "New"  (1)
    ExtRoughness = RVal: "MediumRough"  (3)
@@ -2083,7 +2151,7 @@ ConsAssm   User: "FlatResWoodFramingAndOtherRoof"
    MatRef[6] = UVal: "Compliance Insulation R0.20"
    MatRef[7] = UVal: "Compliance Insulation R1.00"
    MatRef[8] = UVal: "Gypsum Board - 1/2 in."
-   MatRef[9] = UVal: "- none -"
+   MatRef[9] = UVal: "WoodRoof16OCCavInsR27"
    AreaNew = RVal: 12540
    AreaAltered = RVal: 0
    AreaExisting = RVal: 0
@@ -2093,14 +2161,14 @@ ConsAssm   User: "FlatResWoodFramingAndOtherRoof"
    AreaAltNonResCond = RVal: 0
    AreaAltResCond = RVal: 0
    AreaAltRelocCond = RVal: 0
-   FrmMat = RVal: "NA"  (1)
-   CavityInsVal = RVal: 0
-   PerfFacRpt = RVal: "U-Factor: 0.156"
+   FrmMat = RVal: "Wood"  (2)
+   CavityInsVal = RVal: 27
+   PerfFacRpt = RVal: "U-Factor: 0.034"
    InsCheckSum = RVal: 4.09
    RoofDens = RDef: 0
    BuiltUpRoof = RDef: 0
    BallastedRoof = RDef: 0
-   NumMats = RVal: 8
+   NumMats = RVal: 9
    SumMatHeatCap = RVal: 0.817687
    IsSpandrel = RVal: "false"  (2)
    ContainsMetalWallMaterial = RVal: "false"  (2)
@@ -2114,8 +2182,8 @@ ConsAssm   User: "FlatResWoodFramingAndOtherRoof"
    AlteredConsCnt = RVal: 0
    ExistingConsCnt = RVal: 0
    ConsType = RVal: "WoodFramingAndOtherRoof"  (8)
-   UAValueNewNonRes = RVal: 215.625
-   UAValueNewRes = RVal: 1743.75
+   UAValueNewNonRes = RVal: 47.3495
+   UAValueNewRes = RVal: 382.913
    ..
 
 ConsAssm   User: "OtherFloor"  
@@ -52283,7 +52351,7 @@ Roof   User: "Surface 1339"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 780
    AreaNewResCond = RVal: 780
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 780 ft2, 0 deg tilt, New"
@@ -53782,7 +53850,7 @@ Roof   User: "Surface 1443"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 780
    AreaNewResCond = RVal: 780
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 780 ft2, 0 deg tilt, New"
@@ -55640,7 +55708,7 @@ Roof   User: "Surface 1335"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 780
    AreaNewResCond = RVal: 780
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 780 ft2, 0 deg tilt, New"
@@ -56736,7 +56804,7 @@ Roof   User: "Surface 1396"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 780
    AreaNewResCond = RVal: 780
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 780 ft2, 0 deg tilt, New"
@@ -58443,7 +58511,7 @@ Roof   User: "Surface 1430"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 780
    AreaNewResCond = RVal: 780
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 780 ft2, 0 deg tilt, New"
@@ -59941,7 +60009,7 @@ Roof   User: "Surface 1450"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 780
    AreaNewResCond = RVal: 780
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 780 ft2, 0 deg tilt, New"
@@ -60871,7 +60939,7 @@ Roof   User: "Surface 1406"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 1,080 ft2, 0 deg tilt, New"
@@ -62577,7 +62645,7 @@ Roof   User: "Surface 1377"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 1,080 ft2, 0 deg tilt, New"
@@ -63895,7 +63963,7 @@ Roof   User: "Surface 1401"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 1,080 ft2, 0 deg tilt, New"
@@ -65338,7 +65406,7 @@ Roof   User: "Surface 1460"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 1,080 ft2, 0 deg tilt, New"
@@ -66726,7 +66794,7 @@ Roof   User: "Surface 1412"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 1,080 ft2, 0 deg tilt, New"
@@ -68975,7 +69043,7 @@ Roof   User: "Surface 1363"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "NonResidential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 920
    AreaNewNonResCond = RVal: 920
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 920 ft2, 0 deg tilt, New"
@@ -70145,7 +70213,7 @@ Roof   User: "Surface 1386"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "NonResidential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 25
    AreaNewNonResCond = RVal: 25
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 25 ft2, 0 deg tilt, New"
@@ -71101,7 +71169,7 @@ Roof   User: "Surface 1471"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "NonResidential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 25
    AreaNewNonResCond = RVal: 25
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 25 ft2, 0 deg tilt, New"
@@ -71974,7 +72042,7 @@ Roof   User: "Surface 1369"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "NonResidential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 25
    AreaNewNonResCond = RVal: 25
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 25 ft2, 0 deg tilt, New"
@@ -73013,7 +73081,7 @@ Roof   User: "Surface 1436"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "NonResidential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 25
    AreaNewNonResCond = RVal: 25
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 25 ft2, 0 deg tilt, New"
@@ -73902,7 +73970,7 @@ Roof   User: "Surface 1324"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "NonResidential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 180
    AreaNewNonResCond = RVal: 180
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 180 ft2, 0 deg tilt, New"
@@ -75317,7 +75385,7 @@ Roof   User: "Surface 1458"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "NonResidential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 180
    AreaNewNonResCond = RVal: 180
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 180 ft2, 0 deg tilt, New"
@@ -76528,7 +76596,7 @@ Roof   User: "Surface 1391"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 540
    AreaNewResCond = RVal: 540
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 540 ft2, 0 deg tilt, New"
@@ -77679,7 +77747,7 @@ Roof   User: "Surface 1424"
    ConsType = RVal: "WoodFramingAndOtherRoof"  (1)
    BldgTypeForRoof = RVal: "Residential"
    SlopeType = RVal: "Low"  (2)
-   OverallUFactor = RVal: 0.15625
+   OverallUFactor = RVal: 0.0343112
    AreaNew = RVal: 540
    AreaNewResCond = RVal: 540
    TreeDescrip = RVal: "FlatResWoodFramingAndOtherRoof, 540 ft2, 0 deg tilt, New"
