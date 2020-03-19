@@ -31,7 +31,7 @@ parameter "window_u", :default=>0.3
 parameter "window_shgc", :default=>0.23
 #parameter "heating_eff", :default=>0.8
 
-parameter "wall_sheathing"
+parameter "wall_exterior_sheathing"
 parameter "wall_cavity"
 parameter "ceiling_sheathing"
 parameter "ceiling_cavity"
@@ -2568,7 +2568,7 @@ Cons   "Exterior Wall Cons"
    FloorSurfaceLayer = "Carpeted"
    FlrConcreteFillLayer = "- no concrete fill -"
    FloorDeckLayer = "Wood Siding/sheathing/decking"
-   SheathInsul2Layer = "<%=wall_sheathing%>"
+   SheathInsul2Layer = "<%=wall_exterior_sheathing%>"
    MassLayer = "- none -"
    MassThickness = "- none -"
    FurringInsul2Layer = "- no insulation -"
