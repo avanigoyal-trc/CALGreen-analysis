@@ -5,10 +5,10 @@ Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Heat Pump DHW"
    SoftwareVersionDetail = "CBECC-Res 2022.0.2 RV (1133)"
    BEMVersion = 8
    CreateDate = 1579908925
-   ModDate = 1584770076
-   RunDate = 1584769925
-   RunDateFmt = "22:52, Fri, Mar 20, 2020"
-   RunDateISO = "2020-03-20T22:52:05-07:00"
+   ModDate = 1584771581
+   RunDate = 1584771279
+   RunDateFmt = "23:14, Fri, Mar 20, 2020"
+   RunDateISO = "2020-03-20T23:14:39-07:00"
    PrimSimEngingVer = "CSE19 0.868.0 EXE"
    RulesetVersion = "CA Residential 2022, Vers. 2 Pol-0%RA-NoCH4leak"
    ProjFileName = "instance.ribd22"
@@ -17,6 +17,7 @@ Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Heat Pump DHW"
    RunIDProcFile = " - Std"
    RunAbbrev = "s"
    RunTitle = "TDSv30 V06R12 V06 R12 UGLASS15 NGAS PVSTD"
+   EnableResearchMode = 1
    AnalysisType = "Proposed and Standard"
    CALGreen = 0
    TDVType = "TDV"
@@ -6082,7 +6083,7 @@ DHWSys   "DHWHeatpump"
    CHPWHNumComp = 4
    CHPWHPrimTankVol = 131.25
    DHWHeater[1] = "t24-CHPWH-2"
-   HeaterMult[1] = 4
+   HeaterMultFlt[1] = 4
    RecircPumpPwr = 22
    LoopPipeInsulThk[1] = 1.5
    RecircPipeLoc[1] = "Conditioned"
@@ -6101,6 +6102,7 @@ DHWSys   "DHWElectric"
    UseMaxDurNumHtrs = 0
    DHWHeater[1] = "Electric"
    HeaterMult[1] = 1
+   HeaterMultFlt[1] = 1
    LoopPipeInsulThk[1] = 1.5
    RecircPipeLoc[1] = "Conditioned"
    TotShowersServed = 1
