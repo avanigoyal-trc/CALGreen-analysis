@@ -7,11 +7,13 @@ parameter "proposed_only", :default=> "No"
 parameter "climate_zone", :default=>"ClimateZone1"
 parameter "weather_station", :default=>"CTZ01S22A"
 
-#parameters for autosizing
+
+#parameters for autosizing/HVAC systems
 parameter "prototype"
 parameter "software"
 parameter "autosizing", :default=> "No"
 parameter "hvac_type", :default=> "SZAC"
+parameter "vrf_cu_model", :default=> nil
 #Needed for Highrise prototype since baseline system is served with VAV for corridor/laundry
 parameter "corridor_cooling_capacity", :default => 36000
 parameter "corridor_heating_capacity", :default => 26266
@@ -65,6 +67,7 @@ climate_zone_table = {
 }
 
 cz = climate_zone_table[climate_zone]
+
 
 %>
 
@@ -194,7 +197,7 @@ Mat   "Compliance Insulation R4.00"
    ..
 
 
-   
+
  Mat   "Compliance Insulation R1.00"
     CodeCat = "Insulation Board"
     CodeItem = "Compliance Insulation R1.00"
@@ -219,7 +222,7 @@ Mat   "Compliance Insulation R10.06"
    CodeCat = "Insulation Board"
    CodeItem = "Compliance Insulation R10.06"
    ..
-   
+
  Mat   "Compliance Insulation R17.00"
    CodeCat = "Insulation Board"
    CodeItem = "Compliance Insulation R17.00"
@@ -11172,6 +11175,40 @@ TrmlUnit   "TU22 F10 Corridor"
 
    #Using csv guides from https://www.rubyguides.com/2018/10/parse-csv-ruby/
 
+   #insert VRF Compressor Units if needed
+
+   if (hvac_type == "VRF")
+   vrf_cu_names = ["VRF F2-9", "VRF F10"]
+   count = [8, 1]
+   pipe_length = [192,142]
+   max_height = [-55,-5]
+   ctrl_priority = "LoadPriority"
+
+   if (vrf_cu_model == "REYQ144TTJU")
+    rated_cooling_cap = 135000
+    rated_heating_cap = 150000
+   elsif (vrf_cu_model == "REYQ168TTJU")
+    rated_cooling_cap = 156000
+    rated_heating_cap = 176000
+   end
+
+   cu_counts = vrf_cu_names.length() -1 #Subtract 1 since indexing at 0
+
+   for a in 0..cu_counts do
+     insert 'vrf_cu.pxt',
+       :name => vrf_cu_names[a],
+       :count => count[a],
+       :heat_recovery => "Yes",
+       :cooling_capacity => rated_cooling_cap,
+       :heating_capacity => rated_heating_cap,
+       :equivalent_pipe_len => pipe_length[a],
+       :max_vertical_height => max_height[a],
+       :ctrl_priority   => ctrl_priority
+
+   end
+   end
+
+
    require 'csv'
 
    file_zones = Dir.pwd + "/prototypes/" + software + "/" + prototype + "/" + "ZnSys_Parameters.csv"
@@ -11190,22 +11227,37 @@ TrmlUnit   "TU22 F10 Corridor"
      template_name = 'szhp.pxt'
    elsif (hvac_type == "SZAC")
      template_name = 'szac.pxt'
+   elsif (hvac_type == "VRF")
+     template_name = 'vrf_fcu.pxt'
    end
+
 
 
    if (autosizing == "No")
 
-   for a in 0..num_zones do
-     insert template_name,
-       :zone_name => zones[a],
-       :count => counts_original[a],
-       :index => index[a]
+   if (hvac_type == "SZHP" or hvac_type == "SZAC")
+       for a in 0..num_zones do
+         insert template_name,
+           :zone_name => zones[a],
+           :count => counts_original[a],
+           :index => index[a]
+       end
+   elsif (hvac_type == "VRF")
+     cu_names = table_zones.by_col[4]
+
+       for a in 0..num_zones do
+         insert template_name,
+           :vrf_cu_name => cu_names[a],
+           :zone_name => zones[a],
+           :count => counts_original[a],
+           :index => index[a]
+       end
    end
 
 
    elsif (autosizing == "Yes")
 
-   file_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + cz + "/instance - ab - HVACSecondary.csv"
+   file_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + hvac_type + "/" + cz + "/instance - ab - HVACSecondary.csv"
 
    # https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
    table_capacities = CSV.parse(File.readlines(file_capacities).drop(13).join, headers: true)
@@ -11241,6 +11293,7 @@ TrmlUnit   "TU22 F10 Corridor"
        puts string
      end
 
+     if (hvac_type == "SZHP" or hvac_type == "SZAC")
      insert template_name,
        :cooling_capacity => capacity_cooling[a],
        :heating_capacity => capacity_heating[a],
@@ -11248,6 +11301,17 @@ TrmlUnit   "TU22 F10 Corridor"
        :zone_name => zones[a],
        :count => counts[a],
        :index => index[a]
+     elsif (hvac_type == "VRF")
+     cu_names = table_zones.by_col[4]
+     insert template_name,
+       :vrf_cu_name => cu_names[a],
+       :cooling_capacity => capacity_cooling[a],
+       :heating_capacity => capacity_heating[a],
+       :supply_fan_cfm => supply_cfm[a],
+       :zone_name => zones[a],
+       :count => counts[a],
+       :index => index[a]
+     end
    end
 
    end
@@ -11555,7 +11619,7 @@ FluidSeg   "DHW Makeup"
    Src = "MunicipalWater"
    ..
 
-WtrHtr   "Nonres Gas Water Heater"  
+WtrHtr   "Nonres Gas Water Heater"
    FluidSegOutRef = "DHW Supply"
    FluidSegMakeupRef = "DHW Makeup"
    FuelSrc = "Electricity"

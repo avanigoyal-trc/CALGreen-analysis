@@ -12,6 +12,7 @@ parameter "prototype"
 parameter "software"
 parameter "autosizing", :default=> "No"
 parameter "hvac_type", :default=> "SZAC"
+parameter "vrf_cu_model", :default=> nil
 #Needed for Highrise prototype since baseline system is served with VAV for corridor/laundry
 parameter "corridor_cooling_capacity", :default => 36000
 parameter "corridor_heating_capacity", :default => 26266
@@ -3248,11 +3249,7 @@ Story   "Building Story Residential Floors 2-9"
 
 Spc   "F2-9 1-Bed NE"
    TreeState = 254
-   <% if hvac_type == "VRF" %>
-   ThrmlZnRef = "Thermal Zone: F2-9 1-Bed N CU-2"
-   <% else %>
    ThrmlZnRef = "Thermal Zone: F2-9 1-Bed N"
-   <%end%>
    Vol = 7800
    SpcFuncDefaultsRef = "Residential"
    DwellingUnitTypeCnt[2] = 1
@@ -3471,11 +3468,7 @@ ResSpcDHWFeatures   "F2-9 1-Bed NE rsd1"
 
 Spc   "F2-9 1-Bed NW"
    TreeState = 254
-   <% if hvac_type == "VRF"%>
-   ThrmlZnRef = "Thermal Zone: F2-9 1-Bed N CU-1"
-   <%else%>
    ThrmlZnRef = "Thermal Zone: F2-9 1-Bed N"
-   <%end%>
    Vol = 7800
    SpcFuncDefaultsRef = "Residential"
    DwellingUnitTypeCnt[2] = 1
@@ -7261,11 +7254,7 @@ Story   "Building Story Residential Floor 10"
 
 Spc   "F10 1-Bed NE"
    TreeState = 254
-   <% if hvac_type == "VRF" %>
-   ThrmlZnRef = "Thermal Zone: F10 1-Bed N CU-2"
-   <% else %>
    ThrmlZnRef = "Thermal Zone: F10 1-Bed N"
-   <%end %>
    Vol = 7800
    SpcFuncDefaultsRef = "Residential"
    DwellingUnitTypeCnt[2] = 1
@@ -7461,11 +7450,7 @@ ResSpcDHWFeatures   "F10 1-Bed NE rsd1"
 
 Spc   "F10 1-Bed NW"
    TreeState = 254
-   <% if hvac_type == "VRF"%>
-   ThrmlZnRef = "Thermal Zone: F10 1-Bed N CU-1"
-   <% else %>
    ThrmlZnRef = "Thermal Zone: F10 1-Bed N"
-   <% end %>
    Vol = 7800
    SpcFuncDefaultsRef = "Residential"
    DwellingUnitTypeCnt[2] = 1
@@ -10907,39 +10892,7 @@ ThrmlZn   "Thermal Zone: F1 Retail W Outer"
    HasUnknownHVAC = 0
    ..
 
-<% if hvac_type == "VRF" %>
-ThrmlZn   "Thermal Zone: F10 1-Bed N CU-1"
-   HVACZnCnt = 1
-   PriAirCondgSysRef[1] = "ZnSys F10 1-Bed N CU-1"
-   PriAirCondgSysPriority[1] = 2
-   VentSysRef = "Residential DOAS"
-   VentSysPriority = 1
-   ..
 
-ThrmlZn   "Thermal Zone: F2-9 1-Bed N CU-1"
-  HVACZnCnt = 1
-  PriAirCondgSysRef[1] = "ZnSys F2-9 1-Bed N CU-1"
-  PriAirCondgSysPriority[1] = 2
-  VentSysRef = "Residential DOAS"
-  VentSysPriority = 1
-  ..
-
-ThrmlZn   "Thermal Zone: F10 1-Bed N CU-2"
-   HVACZnCnt = 1
-   PriAirCondgSysRef[1] = "ZnSys F10 1-Bed N CU-2"
-   PriAirCondgSysPriority[1] = 2
-   VentSysRef = "Residential DOAS"
-   VentSysPriority = 1
-   ..
-
-ThrmlZn   "Thermal Zone: F2-9 1-Bed N CU-2"
-  HVACZnCnt = 1
-  PriAirCondgSysRef[1] = "ZnSys F2-9 1-Bed N CU-2"
-  PriAirCondgSysPriority[1] = 2
-  VentSysRef = "Residential DOAS"
-  VentSysPriority = 1
-  ..
-<% else %>
 
 ThrmlZn   "Thermal Zone: F10 1-Bed N"
    HVACZnCnt = 2
@@ -10949,7 +10902,6 @@ ThrmlZn   "Thermal Zone: F10 1-Bed N"
    VentSysPriority = 1
    ..
 
-
 ThrmlZn   "Thermal Zone: F2-9 1-Bed N"
   HVACZnCnt = 2
   PriAirCondgSysRef[1] = "ZnSys F2-9 1-Bed N"
@@ -10957,9 +10909,6 @@ ThrmlZn   "Thermal Zone: F2-9 1-Bed N"
   VentSysRef = "Residential DOAS"
   VentSysPriority = 1
   ..
-<% end %>
-
-
 
 ThrmlZn   "Thermal Zone: F10 1-Bed SE"
    HVACZnCnt = 2
@@ -11138,28 +11087,7 @@ insert 'doas.pxt',
 
 %>
 
-<% if hvac_type == "VRF" %>
 
-TrmlUnit   "TU1 F10 1-Bed N CU-1"
-   Type = "Uncontrolled"
-   ZnServedRef = "Thermal Zone: F10 1-Bed N CU-1"
-   ..
-
-TrmlUnit   "TU10 F2-9 1-Bed N CU-1"
-  Type = "Uncontrolled"
-  ZnServedRef = "Thermal Zone: F2-9 1-Bed N CU-1"
-
-TrmlUnit   "TU23 F10 1-Bed N CU-2"
-   Type = "Uncontrolled"
-   ZnServedRef = "Thermal Zone: F10 1-Bed N CU-2"
-   ..
-
-TrmlUnit   "TU24 F2-9 1-Bed N CU-2"
-  Type = "Uncontrolled"
-  ZnServedRef = "Thermal Zone: F2-9 1-Bed N CU-2"
-
-
-<% else %>
 TrmlUnit   "TU1 F10 1-Bed N"
    Type = "Uncontrolled"
    ZnServedRef = "Thermal Zone: F10 1-Bed N"
@@ -11169,9 +11097,6 @@ TrmlUnit   "TU10 F2-9 1-Bed N"
   Type = "Uncontrolled"
   ZnServedRef = "Thermal Zone: F2-9 1-Bed N"
   ..
-<% end %>
-
-
 
 TrmlUnit   "TU2 F10 1-Bed SE"
    Type = "Uncontrolled"
@@ -11275,16 +11200,26 @@ TrmlUnit   "TU22 F10 Corridor"
 
    <%
 
+   #Using csv guides from https://www.rubyguides.com/2018/10/parse-csv-ruby/
+
    #insert VRF Compressor Units if needed
 
+   if (vrf_cu_model == "REYQ144TTJU")
+    rated_cooling_cap = 135000
+    rated_heating_cap = 150000
+   elsif (vrf_cu_model == "REYQ168TTJU")
+    rated_cooling_cap = 156000
+    rated_heating_cap = 176000
+   end
+
    if (hvac_type == "VRF")
-   vrf_cu_names = ["VRF F2-9 CU-1", "VRF F2-9 CU-2", "VRF F10 CU-1", "VRF F10 CU-2"]
-   count = [8, 8, 1, 1]
-   rated_cooling_cap = 135000
-   rated_heating_cap = 150000
-   pipe_length = 145
-   max_height = -25
+   vrf_cu_names = ["VRF F2-9", "VRF F10"]
+   count = [8, 1]
+   pipe_length = [192,142]
+   max_height = [-55,-5]
    ctrl_priority = "LoadPriority"
+
+
 
    cu_counts = vrf_cu_names.length() -1 #Subtract 1 since indexing at 0
 
@@ -11295,25 +11230,23 @@ TrmlUnit   "TU22 F10 Corridor"
        :heat_recovery => "Yes",
        :cooling_capacity => rated_cooling_cap,
        :heating_capacity => rated_heating_cap,
-       :equivalent_pipe_len => pipe_length,
-       :max_vertical_height => max_height,
+       :equivalent_pipe_len => pipe_length[a],
+       :max_vertical_height => max_height[a],
        :ctrl_priority   => ctrl_priority
 
    end
    end
 
-   #Using csv guides from https://www.rubyguides.com/2018/10/parse-csv-ruby/
 
    require 'csv'
 
-   file_zones = Dir.pwd + "/prototypes/" + software + "/" + prototype + "/" + "ZnSys_Parameters.csv"
+   file_zones = Dir.pwd + "/prototypes/" + software + "/" + prototype + "/" + hvac_type + "/" + "ZnSys_Parameters.csv"
    table_zones = CSV.parse(File.read(file_zones), headers: true)
 
    #Get list of all zone names and counts
    zones = table_zones.by_col[1]
    counts_original = table_zones.by_col[2]
    index = table_zones.by_col[0]
-   vent_zones = table_zones.by_col[3]
 
 
    num_zones = zones.length() -1 #Subtract 1 since indexing at 0
@@ -11322,22 +11255,36 @@ TrmlUnit   "TU22 F10 Corridor"
      template_name = 'szhp.pxt'
    elsif (hvac_type == "SZAC")
      template_name = 'szac.pxt'
+   elsif (hvac_type == "VRF")
+     template_name = 'vrf_fcu.pxt'
    end
+
 
 
    if (autosizing == "No")
 
-   for a in 0..num_zones do
-     insert template_name,
-       :zone_name => zones[a],
-       :count => counts_original[a],
-       :index => index[a]
+   if (hvac_type == "SZHP" or hvac_type == "SZAC")
+       for a in 0..num_zones do
+         insert template_name,
+           :zone_name => zones[a],
+           :count => counts_original[a],
+           :index => index[a]
+       end
+   elsif (hvac_type == "VRF")
+     cu_names = table_zones.by_col[4]
+       for a in 0..num_zones do
+         insert template_name,
+           :vrf_cu_name => cu_names[a],
+           :zone_name => zones[a],
+           :count => counts_original[a],
+           :index => index[a]
+       end
    end
 
 
    elsif (autosizing == "Yes")
 
-   file_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + cz + "/instance - ab - HVACSecondary.csv"
+   file_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + hvac_type + "/" + cz + "/instance - ab - HVACSecondary.csv"
 
    # https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
    table_capacities = CSV.parse(File.readlines(file_capacities).drop(13).join, headers: true)
@@ -11373,6 +11320,7 @@ TrmlUnit   "TU22 F10 Corridor"
        puts string
      end
 
+     if (hvac_type == "SZHP" or hvac_type == "SZAC")
      insert template_name,
        :cooling_capacity => capacity_cooling[a],
        :heating_capacity => capacity_heating[a],
@@ -11380,9 +11328,21 @@ TrmlUnit   "TU22 F10 Corridor"
        :zone_name => zones[a],
        :count => counts[a],
        :index => index[a]
+     elsif (hvac_type == "VRF")
+     cu_names = table_zones.by_col[4]
+     insert template_name,
+       :vrf_cu_name => cu_names[a],
+       :cooling_capacity => capacity_cooling[a],
+       :heating_capacity => capacity_heating[a],
+       :supply_fan_cfm => supply_cfm[a],
+       :zone_name => zones[a],
+       :count => counts[a],
+       :index => index[a]
+     end
    end
 
    end
+
 
  #Insert Laundry and Corridor HVAC Systems
  laundry_zones = ["ZnSys F2-9 Laundry",  "ZnSys F10 Laundry"]
@@ -11390,6 +11350,7 @@ TrmlUnit   "TU22 F10 Corridor"
  lc_counts = [8, 1]
  indices = [num_zones + 2, num_zones + 3, num_zones + 4, num_zones + 5]
 
+ if (hvac_type == "SZHP" or hvac_type == "SZAC")
  for a in 0..1 do
   insert template_name,
     :cooling_capacity => laundry_cooling_capacity,
@@ -11408,8 +11369,30 @@ TrmlUnit   "TU22 F10 Corridor"
      :count => lc_counts[a],
      :index => indices[a + 2]
 
+
+
   end
 
+   elsif (hvac_type == "VRF")
+   for a in 0..1 do
+    insert 'szhp.pxt',
+      :cooling_capacity => laundry_cooling_capacity,
+      :heating_capacity => laundry_heating_capacity,
+      :supply_fan_cfm => laundry_supply_cfm,
+      :zone_name => laundry_zones[a],
+      :count => lc_counts[a],
+      :index => indices[a]
+
+
+     insert 'szhp.pxt',
+       :cooling_capacity => corridor_cooling_capacity,
+       :heating_capacity => corridor_heating_capacity,
+       :supply_fan_cfm => corridor_supply_cfm,
+       :zone_name => corridor_zones[a],
+       :count => lc_counts[a],
+       :index => indices[a + 2]
+     end
+    end
 %>
 
 AirSys   "BaseAirSys6"
