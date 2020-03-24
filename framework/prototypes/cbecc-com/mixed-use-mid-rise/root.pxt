@@ -15836,8 +15836,8 @@ for a in 0..cu_counts do
     :heat_recovery => "Yes",
     :cooling_capacity => rated_cooling_cap,
     :heating_capacity => rated_heating_cap,
-    :equivalent_pipe_len => pipe_length,
-    :max_vertical_height => max_height,
+    :equivalent_pipe_len => pipe_length[a],
+    :max_vertical_height => max_height[a],
     :ctrl_priority   => ctrl_priority
 
 end
@@ -15856,7 +15856,7 @@ counts_original = table_zones.by_col[2]
 index = table_zones.by_col[0]
 vent_zones = table_zones.by_col[3]
 
-puts zones
+
 
 num_zones = zones.length() -1 #Subtract 1 since indexing at 0
 
