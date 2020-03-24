@@ -1,0 +1,57 @@
+2020-03-22 22:54:14 - -----------------------------------------------------------------------------
+2020-03-22 22:54:14 - Opening Project 'cz03\instance.cibd22'...
+2020-03-22 22:54:16 -    Model load successful into CBECC-Com 2022.0.1 RV (1113)
+2020-03-22 22:54:16 - Performing Building Database check...
+2020-03-22 22:54:16 - Building Database check completed, no problems found.
+2020-03-22 22:54:23 -   PerfAnal_NRes - starting, w/ arguments:
+2020-03-22 22:54:23 -        BEMBasePathFile    = (null)
+2020-03-22 22:54:23 -        RulesetPathFile    = (null)
+2020-03-22 22:54:23 -        SimWeatherPath     = C:\Users\mnakajima\Documents\CBECC-Com 2022 Data\EPW\
+2020-03-22 22:54:23 -        CompMgrDLLPath     = (null)
+2020-03-22 22:54:23 -        DHWWeatherPath     = (null)
+2020-03-22 22:54:23 -        ProcessingPath     = C:\Users\mnakajima\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\all-electric\runs\hr-VRF-pre-autosize\cz03\instance - run\
+2020-03-22 22:54:23 -        ModelPathFile      = C:\Users\mnakajima\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\all-electric\runs\hr-VRF-pre-autosize\cz03\instance.cibd22
+2020-03-22 22:54:23 -        LogPathFile        = (null)
+2020-03-22 22:54:23 -        UIVersionString    = CBECC-Com 2022.0.1 RV (1113)
+2020-03-22 22:54:23 -        LoadModelFile      = false
+2020-03-22 22:54:23 -        OptionsCSV         = AllowAnalysisAbort,0,StoreBEMDetails,1,AnalysisThruStep,8,ModelRpt_ALL,1,ExportHourlyResults_All,1,PromptUserUMLHWarning,1,PreAnalysisCheckPromptOption,3,CompReportWarningOption,5,
+2020-03-22 22:54:23 -        ErrorMsg           = (assumed to be initialized)
+2020-03-22 22:54:23 -        ErrorMsgLen        = 2056
+2020-03-22 22:54:23 -        DisplayProgress    = true
+2020-03-22 22:54:23 -        ResultsSummary     = (empty)
+2020-03-22 22:54:23 -        ResultsSummaryLen  = 3200
+2020-03-22 22:54:23 -        pProgCallbackFunc  = (null)
+2020-03-22 22:54:24 - Performing Building Database check...
+2020-03-22 22:54:24 - Building Database check completed, no problems found.
+2020-03-22 22:54:24 - Warning:  The following developer options must be defaulted (not specified by the user) in order to perform a valid compliance analysis:
+          Proj 'High-Rise Mixed-Use (10-story)' DefaultDayltgCtrls
+          Proj 'High-Rise Mixed-Use (10-story)' AutoHardSize
+          Proj 'High-Rise Mixed-Use (10-story)' AutoEffInput
+2020-03-22 22:54:24 -    1 file hash check(s) failed on executable and/or analysis support files (analysis continuing w/ report signature disabled)
+2020-03-22 22:54:27 - Performing Building Database check...
+2020-03-22 22:54:27 - Building Database check completed, no problems found.
+2020-03-22 22:54:28 - Warning:  For VRF System 'VRF F2-9', the total attached indoor unit cooling capacity is greater than 150% of the outdoor unit cooling capacity.  Increasing the outdoor unit cooling capacity is recommended. evaluating rule: Set CHECKSIM VRFSys:ClgCombRat  (69:'HVACSecondary-VRFSys.rule' line 404)
+2020-03-22 22:54:28 - Warning:  For VRF System 'VRF F10', the total attached indoor unit cooling capacity is greater than 150% of the outdoor unit cooling capacity.  Increasing the outdoor unit cooling capacity is recommended. evaluating rule: Set CHECKSIM VRFSys:ClgCombRat  (69:'HVACSecondary-VRFSys.rule' line 404)
+2020-03-22 22:54:28 - Warning:  For VRF System 'VRF F2-9', the total attached indoor unit heating capacity is greater than 150% of the outdoor unit heating capacity. Increasing the outdoor unit heating capacity is recommended. evaluating rule: Set CHECKSIM VRFSys:HtgCombRat  (69:'HVACSecondary-VRFSys.rule' line 431)
+2020-03-22 22:54:28 - Warning:  For VRF System 'VRF F10', the total attached indoor unit heating capacity is greater than 150% of the outdoor unit heating capacity. Increasing the outdoor unit heating capacity is recommended. evaluating rule: Set CHECKSIM VRFSys:HtgCombRat  (69:'HVACSecondary-VRFSys.rule' line 431)
+2020-03-22 22:54:28 - Warning:  AirSystem 'Residential DOAS' has a DX cooling coil and the rated supply flow per ton of (net) cooling capacity is 583 cfm/ton. The acceptable range for successful simulation of DX cooling coils in EnergyPlus is normally ~300 to ~450 cfm/ton. If the compliance simulation fails, check flow/cooling capacity inputs for consistency with the design. If simulation still fails, contact the CBECC support team for assistance. evaluating rule: Set CHECKSIM AirSys:SupFlowPerTon  (110:'HVACSecondary-Summary.rule' line 785)
+2020-03-22 22:54:28 - Warning:  The spaces assigned to thermal zone 'Thermal Zone: F1 Lounge' have cooling unmet load hour limits ranging from 150 to 8760. All spaces in the zone will be held to the minimum UMLH limit. evaluating rule: Set CHECKCODE ThrmlZn:ClgUMLHLimit  (60:'ThermalZone-General.rule' line 1738)
+2020-03-22 22:54:28 - Warning:  The spaces assigned to thermal zone 'Thermal Zone: F1 Lounge' have heating unmet load hour limits ranging from 150 to 8760. All spaces in the zone will be held to the minimum UMLH limit. evaluating rule: Set CHECKCODE ThrmlZn:HtgUMLHLimit  (60:'ThermalZone-General.rule' line 1765)
+2020-03-22 22:54:28 - Warning:  The net heating capacity for HeatPump coil 'CoilHtg 19' differs from the system's net cooling capacity by more than 20%. evaluating rule: Set CHECKCODE CoilHtg:CapTotNetRtd  (83:'HVACSecondary-CoilHeating-Capacity.rule' line 765)
+2020-03-22 22:54:28 - Warning:  The net heating capacity for HeatPump coil 'CoilHtg 21' differs from the system's net cooling capacity by more than 20%. evaluating rule: Set CHECKCODE CoilHtg:CapTotNetRtd  (83:'HVACSecondary-CoilHeating-Capacity.rule' line 765)
+2020-03-22 22:54:28 - Warning:  The net heating capacity for HeatPump coil 'CoilHtg 20' differs from the system's net cooling capacity by more than 20%. evaluating rule: Set CHECKCODE CoilHtg:CapTotNetRtd  (83:'HVACSecondary-CoilHeating-Capacity.rule' line 765)
+2020-03-22 22:54:28 - Warning:  The net heating capacity for HeatPump coil 'CoilHtg 22' differs from the system's net cooling capacity by more than 20%. evaluating rule: Set CHECKCODE CoilHtg:CapTotNetRtd  (83:'HVACSecondary-CoilHeating-Capacity.rule' line 765)
+2020-03-22 22:54:36 -   PerfAnal_NRes - Bypassing OpenStudio (and simulation) for zp model
+2020-03-22 23:06:19 -   PerfSim_E+ - Final Result: FAIL  -- compliance margin: -2.84 (-4.39%)
+2020-03-22 23:06:22 - Analysis result:  FAIL  (TDV margin: -2.84)  Processing time:  Overall 11:58 / SDD2IDF x4 avg 0:11 / SizSim x2 avg 0:51 / AnnSim x2 avg 4:17 / ReportGen x0 0:00 / Other 0:50
+2020-03-22 23:06:22 -       ResultsSummary population:  bAbort = (false) / RuleProcAbort = (false) / iRetVal = 0 / pszResultsSummary = (empty) / iResultsSummaryLen = 3200
+2020-03-22 23:06:22 -       ResultsSummary components1:  2020-03-22 23:06:22 / instance / High-Rise Mixed-Use (10-story) / CTZ03S22A / Title24Compliance / 11:58 / FAIL / -2.84
+2020-03-22 23:06:22 -       ResultsSummary components2:  CBECC-Com 2022.0.1 RV (1113) / BEMCmpMgr 2022.0.1 RV (6107) / CA 2022 Nonresidential, Vers. 1.0 Alpha / 1.11.3.f52686d8e1 / 9.0.1-bb7ca4f0da / CSE19 0.868.0 EXE / C:\Users\mnakajima\Documents\CBECC-Com 2022 Data\EPW\ / C:\Users\mnakajima\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\all-electric\runs\hr-VRF-pre-autosize\cz03\
+2020-03-22 23:06:22 -       ResultsSummary:  2020-03-22 23:06:22,"instance","High-Rise Mixed-Use (10-story)","CTZ03S22A","Pol  0% RetAdd NoLeak",125400,150480,"Title24Compliance",11:58,FAIL,-2.84,"--","--","Successful (276 warnings)",15844.1,58883.2,60449.2,66.2754,3813.05,1088.9,52113,192258,231906,0,181711,6890.07,0,0,612765,1049.33,0,0,0,0,9492.07,0,10541.4,754.553,0,0,0,11296,0,0,0,0,0,0,0,0,0,0,0,0,0,5.95106,17.4314,13.8057,0.0288825,0.890879,18.3852,11.0421,67.5352,55.0082,0,43.3554,1.5264,0,0,167.425,145.709,21.7159,0,0,,0,9.25,"Thermal Zone: F10 2-Bed NE",0,"--","--","Successful (199 warnings)",18.7777,17890,61318.2,2313.72,22027.7,7966.97,52113,163648,231906,0,181711,6890.07,0,0,584155,3351.45,0,0,0,0,9137.4,0,12488.8,754.553,0,0,0,13243.4,0,0,0,0,0,0,0,0,0,0,0,0,0,7.02158,6.58984,14.7924,1.0156,5.04923,19.1934,11.0421,64.7042,55.0082,0,43.3554,1.5264,0,0,164.594,138.673,25.9216,0,0,,0,0,,0,7.57992e-05,17.3407,8.86763,0.012693,1.14703,0.124303,8.9425,36.435,40.0913,0,31.5421,0.786538,0,0,108.855,7.49082e-05,5.55195,10.2442,0.578783,4.88578,1.28422,8.9425,31.4875,40.0913,0,31.5421,0.786538,0,0,103.907,"CBECC-Com 2022.0.1 RV (1113)","BEMCmpMgr 2022.0.1 RV (6107)","CA 2022 Nonresidential, Vers. 1.0 Alpha","1.11.3.f52686d8e1","9.0.1-bb7ca4f0da","CSE19 0.868.0 EXE","C:\Users\mnakajima\Documents\CBECC-Com 2022 Data\EPW\","C:\Users\mnakajima\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\all-electric\runs\hr-VRF-pre-autosize\cz03\",3.8542,6.00956,9.22061,0.00534125,0.355048,0.178109,5.74294,25.37,35.8106,0,31.324,1.127,0,0,93.63,0.503142,0,0,0,0,4.55132,0,5.05,0.361798,0,0,0,5.41,0.00390453,1.7909,9.08405,0.229415,2.58822,1.03407,5.74294,20.46,35.8106,0,31.324,1.127,0,0,88.72,1.60697,0,0,0,0,4.38126,0,5.99,0.361798,0,0,0,6.35,1.3583,0.902758,1.38512,0.000802358,0.0533355,7.07638,0.862706,11.6394,5.93987,0,4.70549,0.169298,0,0,22.4541,2.48966,0.269029,1.36461,0.0344626,0.388804,6.94156,0.862706,12.3508,5.93987,0,4.70549,0.169298,0,0,23.1655,
+
+2020-03-22 23:06:27 - -----------------------------------------------------------------------------
+2020-03-22 23:06:27 - Opening Project 'cz03\instance.cibd22'...
+2020-03-22 23:06:27 -    Model load successful into CBECC-Com 2022.0.1 RV (1113)
+2020-03-22 23:06:28 - Performing Building Database check...
+2020-03-22 23:06:28 - Building Database check completed, no problems found.
+2020-03-22 23:06:32 - Project Saved
