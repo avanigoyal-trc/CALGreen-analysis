@@ -37,6 +37,7 @@ parameter "wood_framing_roof", :default=>"Roofing felt - 1/8 in.;Building Paper 
 
 parameter "window_u", :default=>0.36
 parameter "window_shgc", :default=>0.25
+parameter "window_type", :default=>"FixedWindow"
 parameter "heating_eff", :default=>0.8
 
 
@@ -410,7 +411,7 @@ ConsAssm   "IntCeiling"
   ..
 
 FenCons   "Res Fixed Window"
-   FenProdType = "OperableWindow"
+   FenProdType = <%= window_type %>
    SHGC = <%= window_shgc %>
    UFactor = <%= window_u %>
    VT = 0.42
