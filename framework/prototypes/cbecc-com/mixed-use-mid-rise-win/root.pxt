@@ -33,6 +33,7 @@ parameter "nonres_fixed_window", :default=>"FixedWindow;0.25;0.36;0.42"
 
 parameter "window_u", :default=>0.36
 parameter "window_shgc", :default=>0.25
+parameter "window_type", :default=>"FixedWindow"
 
 parameter "heating_eff", :default=>0.8
 
@@ -229,7 +230,7 @@ ConsAssm   "BelowGradeWallC114"
    ..
 
 FenCons   "Res Fixed Window"
-   FenProdType = "OperableWindow"
+   FenProdType = <%= window_type %>
    SHGC = <%= window_shgc %>
    UFactor = <%= window_u %>
    VT = 0.42

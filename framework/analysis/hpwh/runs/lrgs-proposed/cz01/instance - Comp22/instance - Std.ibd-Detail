@@ -1,7 +1,7 @@
 RulesetFilename   "CA Res 2022.bin"  
 
 Proj   User: "2019 Prototype 7320ft2 Prop Elec"  
-   Ruleset = UDef: "CA Residential 2022, Vers. 2 Pol-0%RA-NoCH4leak (CA Res 2022.bin)"  (3)
+   Ruleset = UDef: "CA Residential 2022, Vers. 2 Pol-0%RA-NoCH4leak (CA Res 2022.bin)"  (0)
    RuleFile = PDef: "CA Res 2022.bin"
    DevMode = RVal: 1
    EnergyCodeYearNum = RVal: 2022
@@ -14,10 +14,10 @@ Proj   User: "2019 Prototype 7320ft2 Prop Elec"
    RuleRepoRev = RVal: 1715
    ShowNotRegWatermark = RVal: 1
    CreateDate = UVal: 1582925619
-   ModDate = UVal: 1583965759
-   RunDate = UVal: 1583965733
-   RunDateFmt = UVal: "15:28, Wed, Mar 11, 2020"
-   RunDateISO = UVal: "2020-03-11T15:28:53-07:00"
+   ModDate = UVal: 1584637607
+   RunDate = UVal: 1584637584
+   RunDateFmt = UVal: "10:06, Thu, Mar 19, 2020"
+   RunDateISO = UVal: "2020-03-19T10:06:24-07:00"
    PrimSimEngingVer = UVal: "CSE19 0.868.0 EXE"
    RulesetVersion = UVal: "CA Residential 2022, Vers. 2 Pol-0%RA-NoCH4leak"
    ProjFileName = UVal: "instance.ribd22"
@@ -94,7 +94,7 @@ Proj   User: "2019 Prototype 7320ft2 Prop Elec"
    PVSizeOption = UVal: "Standard Design PV"  (1)
    PVSizeMultMax = RVal: 999
    PVWLastRow = RVal: 1
-   PVWDCSysSize[1] = UVal: 17.1493
+   PVWDCSysSize[1] = UVal: 17.3657
    PVWDCSysSize[2] = RVal: 0
    PVWDCSysSize[3] = RVal: 0
    PVWDCSysSize[4] = RVal: 0
@@ -158,7 +158,7 @@ Proj   User: "2019 Prototype 7320ft2 Prop Elec"
    PVWInverterEff[1] = RVal: 96
    PVWSysLosses[1] = RVal: 14
    PVWShowCFILabels = RVal: 0
-   PVWDCSysTotal = RVal: 17.1493
+   PVWDCSysTotal = RVal: 17.3657
    EDRPVVerified = RVal: 1
    NetEnergyMeteringTDVAdj = RVal: 3.3618
    NetEnergyMeteringNSCAdj = RVal: 0
@@ -318,8 +318,6 @@ Proj   User: "2019 Prototype 7320ft2 Prop Elec"
    DHWCalcMethod = PDef: "CSE"  (1)
    CSEDHWUseMethod = RVal: "New (via wsDayUse)"  (2)
    CSE_DHWPreRunReqd = RVal: 1
-   CSE_DHWPreRunReqdSv = RVal: 1
-   CSE_DHWSolarPreRunReqd = RVal: 0
    CSE_HPWHSizingReqd = UVal: 0
    CSE_PropSSFExportFile = RVal: "xf-dhwSolarSys-SSF"
    CSE_PropSSFExport = RVal: "x-dhwSolarSys-SSF"
@@ -533,7 +531,7 @@ Proj   User: "2019 Prototype 7320ft2 Prop Elec"
    CSE_DefineFloat[27] = RVal: 1
    CSE_DefineFloat[28] = RVal: 0
    CSE_DefineFloat[29] = RVal: 1
-   CSE_DefineString[1] = RVal: "15:28, Wed, Mar 11, 2020"
+   CSE_DefineString[1] = RVal: "10:06, Thu, Mar 19, 2020"
    CSE_DefineString[2] = RVal: "             12   // Standard"
    CSE_DefineString[3] = RVal: "      13   // Proposed and Standard"
    CSE_DefineString[4] = RVal: "    2022   // CA2022"
@@ -812,15 +810,15 @@ Proj   User: "2019 Prototype 7320ft2 Prop Elec"
    ..
 
 EUseSummary   User: "EUSummary"  
-   StdMixedFuelkWh = UVal: 22475.7
+   StdMixedFuelkWh = UVal: 22759.2
    StdMixedFuelPV = UVal: -1310.59
-   StdMixedFuelPVTDV = UVal: -55.29
-   StdMixedFuelPVMlt = UVal: 17.1493
+   StdMixedFuelPVTDV = UVal: -56.07
+   StdMixedFuelPVMlt = UVal: 17.3657
    PrelimPropkWh = UVal: 29505.2
    PrelimPropCompTDV = UVal: 75.8837
    PrelimPropPV = UVal: -1310.59
-   PropInputPVMult = RVal: 17.1493
-   UserPVScalingMsg = RVal: "PV System resized to 17.15 kWdc (a factor of 17.149) to achieve 'Standard Design PV' PV scaling"
+   PropInputPVMult = RVal: 17.3657
+   UserPVScalingMsg = RVal: "PV System resized to 17.37 kWdc (a factor of 17.366) to achieve 'Standard Design PV' PV scaling"
    HideCompSummary = UVal: 0
    HideEDRs = UVal: 0
    HideC02Emissions = UVal: 0
@@ -1287,7 +1285,7 @@ SCSysRpt   User: "OneBedroomDownstairsZone1 2/2 | CoolingComponent:HeatingCompon
    ..
 
 DHWSysRpt   User: "OneBedroomDownstairsZone1 1/2 | DHWHeatpump"  
-   DHWSysName = RVal: "DHWHeatpump - 0/1"
+   DHWSysName = RVal: "DHWHeatpump - 1/2"
    DwellingUnit = RVal: "OneBedroomDownstairsZone1"
    DwellUnitRptName = UVal: "OneBedroomDownstairsZone1-(1/2)"
    DwellUnitRef = RVal: "OneBedroomDownstairsZone1"
@@ -1299,20 +1297,25 @@ DHWSysRpt   User: "OneBedroomDownstairsZone1 1/2 | DHWHeatpump"
    DwellUnitDistType = RVal: "Standard"
    MFamDistType = RVal: "Multi-family: Recirculating with no control (continuous pumping)"
    IsCentralHPWH = RVal: 0
-   DHWHeaterIdx = UVal: 0
-   DHWHeaterCnt = UVal: 1
-   HeaterElementType = RVal: "none"
-   TankType = RVal: "none"
-   InputRatingUnits = RVal: "  "
+   DHWHeaterRef = UVal: "Heatpump"
+   DHWHeaterIdx = UVal: 1
+   DHWHeaterCnt = UVal: 2
+   HeaterElementType = RVal: "Heat Pump"
+   TankType = RVal: "NA"
+   InputRating = RVal: 12000
+   InputRatingUnits = RVal: "watts"
    InputRatingRpt = RVal: "<= 12 kW"
-   EfficiencyUnits = RVal: " "
-   EfficiencyRpt = RVal: " "
-   TankVolumeRpt = RVal: " "
-   ExtInsulRpt = RVal: " "
-   StandbyLossRpt = RVal: " "
-   MakeAndModel = RVal: "NA"
-   SimulatedEquip = RVal: "NA"
-   TankLocation = RVal: "NA"
+   Efficiency = RVal: 0.59
+   EfficiencyUnits = RVal: "EF"
+   EfficiencyRpt = RVal: "NEEA Rated"
+   TankVolume = RVal: 50
+   TankVolumeRpt = RVal: "50"
+   ExtInsulRVal = RVal: 0
+   ExtInsulRpt = RVal: "NA"
+   StandbyLossRpt = RVal: "NA"
+   MakeAndModel = RVal: "Sanden / GS3-45HPA-US & SAN-83SSAQA  (83 gal)"
+   SimulatedEquip = RVal: "Sanden 80"
+   TankLocation = RVal: "Outside or Exterior closet"
    RecovEffRpt = RVal: "NA"
    FirstHourRatingRpt = RVal: "NA"
    RatedFlowRpt = RVal: "NA"
@@ -1335,7 +1338,7 @@ DHWSysRpt   User: "OneBedroomDownstairsZone1 1/2 | DHWHeatpump"
    ..
 
 DHWSysRpt   User: "OneBedroomDownstairsZone1 2/2 | DHWHeatpump"  
-   DHWSysName = RVal: "DHWHeatpump - 0/1"
+   DHWSysName = RVal: "DHWHeatpump - 1/2"
    DwellingUnit = RVal: "OneBedroomDownstairsZone1"
    DwellUnitRptName = UVal: "OneBedroomDownstairsZone1-(2/2)"
    DwellUnitRef = RVal: "OneBedroomDownstairsZone1"
@@ -1347,20 +1350,25 @@ DHWSysRpt   User: "OneBedroomDownstairsZone1 2/2 | DHWHeatpump"
    DwellUnitDistType = RVal: "Standard"
    MFamDistType = RVal: "Multi-family: Recirculating with no control (continuous pumping)"
    IsCentralHPWH = RVal: 0
-   DHWHeaterIdx = UVal: 0
-   DHWHeaterCnt = UVal: 1
-   HeaterElementType = RVal: "none"
-   TankType = RVal: "none"
-   InputRatingUnits = RVal: "  "
+   DHWHeaterRef = UVal: "Heatpump"
+   DHWHeaterIdx = UVal: 1
+   DHWHeaterCnt = UVal: 2
+   HeaterElementType = RVal: "Heat Pump"
+   TankType = RVal: "NA"
+   InputRating = RVal: 12000
+   InputRatingUnits = RVal: "watts"
    InputRatingRpt = RVal: "<= 12 kW"
-   EfficiencyUnits = RVal: " "
-   EfficiencyRpt = RVal: " "
-   TankVolumeRpt = RVal: " "
-   ExtInsulRpt = RVal: " "
-   StandbyLossRpt = RVal: " "
-   MakeAndModel = RVal: "NA"
-   SimulatedEquip = RVal: "NA"
-   TankLocation = RVal: "NA"
+   Efficiency = RVal: 0.59
+   EfficiencyUnits = RVal: "EF"
+   EfficiencyRpt = RVal: "NEEA Rated"
+   TankVolume = RVal: 50
+   TankVolumeRpt = RVal: "50"
+   ExtInsulRVal = RVal: 0
+   ExtInsulRpt = RVal: "NA"
+   StandbyLossRpt = RVal: "NA"
+   MakeAndModel = RVal: "Sanden / GS3-45HPA-US & SAN-83SSAQA  (83 gal)"
+   SimulatedEquip = RVal: "Sanden 80"
+   TankLocation = RVal: "Outside or Exterior closet"
    RecovEffRpt = RVal: "NA"
    FirstHourRatingRpt = RVal: "NA"
    RatedFlowRpt = RVal: "NA"
@@ -1577,7 +1585,7 @@ SCSysRpt   User: "TwoBedroomDownstairsZone1 2/2 | CoolingComponent:HeatingCompon
    ..
 
 DHWSysRpt   User: "TwoBedroomDownstairsZone1 1/2 | DHWHeatpump"  
-   DHWSysName = RVal: "DHWHeatpump - 0/1"
+   DHWSysName = RVal: "DHWHeatpump - 1/2"
    DwellingUnit = RVal: "TwoBedroomDownstairsZone1"
    DwellUnitRptName = UVal: "TwoBedroomDownstairsZone1-(1/2)"
    DwellUnitRef = RVal: "TwoBedroomDownstairsZone1"
@@ -1589,20 +1597,25 @@ DHWSysRpt   User: "TwoBedroomDownstairsZone1 1/2 | DHWHeatpump"
    DwellUnitDistType = RVal: "Standard"
    MFamDistType = RVal: "Multi-family: Recirculating with no control (continuous pumping)"
    IsCentralHPWH = RVal: 0
-   DHWHeaterIdx = UVal: 0
-   DHWHeaterCnt = UVal: 1
-   HeaterElementType = RVal: "none"
-   TankType = RVal: "none"
-   InputRatingUnits = RVal: "  "
+   DHWHeaterRef = UVal: "Heatpump"
+   DHWHeaterIdx = UVal: 1
+   DHWHeaterCnt = UVal: 2
+   HeaterElementType = RVal: "Heat Pump"
+   TankType = RVal: "NA"
+   InputRating = RVal: 12000
+   InputRatingUnits = RVal: "watts"
    InputRatingRpt = RVal: "<= 12 kW"
-   EfficiencyUnits = RVal: " "
-   EfficiencyRpt = RVal: " "
-   TankVolumeRpt = RVal: " "
-   ExtInsulRpt = RVal: " "
-   StandbyLossRpt = RVal: " "
-   MakeAndModel = RVal: "NA"
-   SimulatedEquip = RVal: "NA"
-   TankLocation = RVal: "NA"
+   Efficiency = RVal: 0.59
+   EfficiencyUnits = RVal: "EF"
+   EfficiencyRpt = RVal: "NEEA Rated"
+   TankVolume = RVal: 50
+   TankVolumeRpt = RVal: "50"
+   ExtInsulRVal = RVal: 0
+   ExtInsulRpt = RVal: "NA"
+   StandbyLossRpt = RVal: "NA"
+   MakeAndModel = RVal: "Sanden / GS3-45HPA-US & SAN-83SSAQA  (83 gal)"
+   SimulatedEquip = RVal: "Sanden 80"
+   TankLocation = RVal: "Outside or Exterior closet"
    RecovEffRpt = RVal: "NA"
    FirstHourRatingRpt = RVal: "NA"
    RatedFlowRpt = RVal: "NA"
@@ -1625,7 +1638,7 @@ DHWSysRpt   User: "TwoBedroomDownstairsZone1 1/2 | DHWHeatpump"
    ..
 
 DHWSysRpt   User: "TwoBedroomDownstairsZone1 2/2 | DHWHeatpump"  
-   DHWSysName = RVal: "DHWHeatpump - 0/1"
+   DHWSysName = RVal: "DHWHeatpump - 1/2"
    DwellingUnit = RVal: "TwoBedroomDownstairsZone1"
    DwellUnitRptName = UVal: "TwoBedroomDownstairsZone1-(2/2)"
    DwellUnitRef = RVal: "TwoBedroomDownstairsZone1"
@@ -1637,20 +1650,25 @@ DHWSysRpt   User: "TwoBedroomDownstairsZone1 2/2 | DHWHeatpump"
    DwellUnitDistType = RVal: "Standard"
    MFamDistType = RVal: "Multi-family: Recirculating with no control (continuous pumping)"
    IsCentralHPWH = RVal: 0
-   DHWHeaterIdx = UVal: 0
-   DHWHeaterCnt = UVal: 1
-   HeaterElementType = RVal: "none"
-   TankType = RVal: "none"
-   InputRatingUnits = RVal: "  "
+   DHWHeaterRef = UVal: "Heatpump"
+   DHWHeaterIdx = UVal: 1
+   DHWHeaterCnt = UVal: 2
+   HeaterElementType = RVal: "Heat Pump"
+   TankType = RVal: "NA"
+   InputRating = RVal: 12000
+   InputRatingUnits = RVal: "watts"
    InputRatingRpt = RVal: "<= 12 kW"
-   EfficiencyUnits = RVal: " "
-   EfficiencyRpt = RVal: " "
-   TankVolumeRpt = RVal: " "
-   ExtInsulRpt = RVal: " "
-   StandbyLossRpt = RVal: " "
-   MakeAndModel = RVal: "NA"
-   SimulatedEquip = RVal: "NA"
-   TankLocation = RVal: "NA"
+   Efficiency = RVal: 0.59
+   EfficiencyUnits = RVal: "EF"
+   EfficiencyRpt = RVal: "NEEA Rated"
+   TankVolume = RVal: 50
+   TankVolumeRpt = RVal: "50"
+   ExtInsulRVal = RVal: 0
+   ExtInsulRpt = RVal: "NA"
+   StandbyLossRpt = RVal: "NA"
+   MakeAndModel = RVal: "Sanden / GS3-45HPA-US & SAN-83SSAQA  (83 gal)"
+   SimulatedEquip = RVal: "Sanden 80"
+   TankLocation = RVal: "Outside or Exterior closet"
    RecovEffRpt = RVal: "NA"
    FirstHourRatingRpt = RVal: "NA"
    RatedFlowRpt = RVal: "NA"
@@ -2608,7 +2626,7 @@ SCSysRpt   User: "OneBedroomUpstairsZone1 2/2 | CoolingComponent:HeatingComponen
    ..
 
 DHWSysRpt   User: "OneBedroomUpstairsZone1 1/2 | DHWHeatpump"  
-   DHWSysName = RVal: "DHWHeatpump - 0/1"
+   DHWSysName = RVal: "DHWHeatpump - 1/2"
    DwellingUnit = RVal: "OneBedroomUpstairsZone1"
    DwellUnitRptName = UVal: "OneBedroomUpstairsZone1-(1/2)"
    DwellUnitRef = RVal: "OneBedroomUpstairsZone1"
@@ -2620,20 +2638,25 @@ DHWSysRpt   User: "OneBedroomUpstairsZone1 1/2 | DHWHeatpump"
    DwellUnitDistType = RVal: "Standard"
    MFamDistType = RVal: "Multi-family: Recirculating with no control (continuous pumping)"
    IsCentralHPWH = RVal: 0
-   DHWHeaterIdx = UVal: 0
-   DHWHeaterCnt = UVal: 1
-   HeaterElementType = RVal: "none"
-   TankType = RVal: "none"
-   InputRatingUnits = RVal: "  "
+   DHWHeaterRef = UVal: "Heatpump"
+   DHWHeaterIdx = UVal: 1
+   DHWHeaterCnt = UVal: 2
+   HeaterElementType = RVal: "Heat Pump"
+   TankType = RVal: "NA"
+   InputRating = RVal: 12000
+   InputRatingUnits = RVal: "watts"
    InputRatingRpt = RVal: "<= 12 kW"
-   EfficiencyUnits = RVal: " "
-   EfficiencyRpt = RVal: " "
-   TankVolumeRpt = RVal: " "
-   ExtInsulRpt = RVal: " "
-   StandbyLossRpt = RVal: " "
-   MakeAndModel = RVal: "NA"
-   SimulatedEquip = RVal: "NA"
-   TankLocation = RVal: "NA"
+   Efficiency = RVal: 0.59
+   EfficiencyUnits = RVal: "EF"
+   EfficiencyRpt = RVal: "NEEA Rated"
+   TankVolume = RVal: 50
+   TankVolumeRpt = RVal: "50"
+   ExtInsulRVal = RVal: 0
+   ExtInsulRpt = RVal: "NA"
+   StandbyLossRpt = RVal: "NA"
+   MakeAndModel = RVal: "Sanden / GS3-45HPA-US & SAN-83SSAQA  (83 gal)"
+   SimulatedEquip = RVal: "Sanden 80"
+   TankLocation = RVal: "Outside or Exterior closet"
    RecovEffRpt = RVal: "NA"
    FirstHourRatingRpt = RVal: "NA"
    RatedFlowRpt = RVal: "NA"
@@ -2656,7 +2679,7 @@ DHWSysRpt   User: "OneBedroomUpstairsZone1 1/2 | DHWHeatpump"
    ..
 
 DHWSysRpt   User: "OneBedroomUpstairsZone1 2/2 | DHWHeatpump"  
-   DHWSysName = RVal: "DHWHeatpump - 0/1"
+   DHWSysName = RVal: "DHWHeatpump - 1/2"
    DwellingUnit = RVal: "OneBedroomUpstairsZone1"
    DwellUnitRptName = UVal: "OneBedroomUpstairsZone1-(2/2)"
    DwellUnitRef = RVal: "OneBedroomUpstairsZone1"
@@ -2668,20 +2691,25 @@ DHWSysRpt   User: "OneBedroomUpstairsZone1 2/2 | DHWHeatpump"
    DwellUnitDistType = RVal: "Standard"
    MFamDistType = RVal: "Multi-family: Recirculating with no control (continuous pumping)"
    IsCentralHPWH = RVal: 0
-   DHWHeaterIdx = UVal: 0
-   DHWHeaterCnt = UVal: 1
-   HeaterElementType = RVal: "none"
-   TankType = RVal: "none"
-   InputRatingUnits = RVal: "  "
+   DHWHeaterRef = UVal: "Heatpump"
+   DHWHeaterIdx = UVal: 1
+   DHWHeaterCnt = UVal: 2
+   HeaterElementType = RVal: "Heat Pump"
+   TankType = RVal: "NA"
+   InputRating = RVal: 12000
+   InputRatingUnits = RVal: "watts"
    InputRatingRpt = RVal: "<= 12 kW"
-   EfficiencyUnits = RVal: " "
-   EfficiencyRpt = RVal: " "
-   TankVolumeRpt = RVal: " "
-   ExtInsulRpt = RVal: " "
-   StandbyLossRpt = RVal: " "
-   MakeAndModel = RVal: "NA"
-   SimulatedEquip = RVal: "NA"
-   TankLocation = RVal: "NA"
+   Efficiency = RVal: 0.59
+   EfficiencyUnits = RVal: "EF"
+   EfficiencyRpt = RVal: "NEEA Rated"
+   TankVolume = RVal: 50
+   TankVolumeRpt = RVal: "50"
+   ExtInsulRVal = RVal: 0
+   ExtInsulRpt = RVal: "NA"
+   StandbyLossRpt = RVal: "NA"
+   MakeAndModel = RVal: "Sanden / GS3-45HPA-US & SAN-83SSAQA  (83 gal)"
+   SimulatedEquip = RVal: "Sanden 80"
+   TankLocation = RVal: "Outside or Exterior closet"
    RecovEffRpt = RVal: "NA"
    FirstHourRatingRpt = RVal: "NA"
    RatedFlowRpt = RVal: "NA"
@@ -2898,7 +2926,7 @@ SCSysRpt   User: "TwoBedroomUpstairsZone1 2/2 | CoolingComponent:HeatingComponen
    ..
 
 DHWSysRpt   User: "TwoBedroomUpstairsZone1 1/2 | DHWHeatpump"  
-   DHWSysName = RVal: "DHWHeatpump - 0/1"
+   DHWSysName = RVal: "DHWHeatpump - 1/2"
    DwellingUnit = RVal: "TwoBedroomUpstairsZone1"
    DwellUnitRptName = UVal: "TwoBedroomUpstairsZone1-(1/2)"
    DwellUnitRef = RVal: "TwoBedroomUpstairsZone1"
@@ -2910,20 +2938,25 @@ DHWSysRpt   User: "TwoBedroomUpstairsZone1 1/2 | DHWHeatpump"
    DwellUnitDistType = RVal: "Standard"
    MFamDistType = RVal: "Multi-family: Recirculating with no control (continuous pumping)"
    IsCentralHPWH = RVal: 0
-   DHWHeaterIdx = UVal: 0
-   DHWHeaterCnt = UVal: 1
-   HeaterElementType = RVal: "none"
-   TankType = RVal: "none"
-   InputRatingUnits = RVal: "  "
+   DHWHeaterRef = UVal: "Heatpump"
+   DHWHeaterIdx = UVal: 1
+   DHWHeaterCnt = UVal: 2
+   HeaterElementType = RVal: "Heat Pump"
+   TankType = RVal: "NA"
+   InputRating = RVal: 12000
+   InputRatingUnits = RVal: "watts"
    InputRatingRpt = RVal: "<= 12 kW"
-   EfficiencyUnits = RVal: " "
-   EfficiencyRpt = RVal: " "
-   TankVolumeRpt = RVal: " "
-   ExtInsulRpt = RVal: " "
-   StandbyLossRpt = RVal: " "
-   MakeAndModel = RVal: "NA"
-   SimulatedEquip = RVal: "NA"
-   TankLocation = RVal: "NA"
+   Efficiency = RVal: 0.59
+   EfficiencyUnits = RVal: "EF"
+   EfficiencyRpt = RVal: "NEEA Rated"
+   TankVolume = RVal: 50
+   TankVolumeRpt = RVal: "50"
+   ExtInsulRVal = RVal: 0
+   ExtInsulRpt = RVal: "NA"
+   StandbyLossRpt = RVal: "NA"
+   MakeAndModel = RVal: "Sanden / GS3-45HPA-US & SAN-83SSAQA  (83 gal)"
+   SimulatedEquip = RVal: "Sanden 80"
+   TankLocation = RVal: "Outside or Exterior closet"
    RecovEffRpt = RVal: "NA"
    FirstHourRatingRpt = RVal: "NA"
    RatedFlowRpt = RVal: "NA"
@@ -2946,7 +2979,7 @@ DHWSysRpt   User: "TwoBedroomUpstairsZone1 1/2 | DHWHeatpump"
    ..
 
 DHWSysRpt   User: "TwoBedroomUpstairsZone1 2/2 | DHWHeatpump"  
-   DHWSysName = RVal: "DHWHeatpump - 0/1"
+   DHWSysName = RVal: "DHWHeatpump - 1/2"
    DwellingUnit = RVal: "TwoBedroomUpstairsZone1"
    DwellUnitRptName = UVal: "TwoBedroomUpstairsZone1-(2/2)"
    DwellUnitRef = RVal: "TwoBedroomUpstairsZone1"
@@ -2958,20 +2991,25 @@ DHWSysRpt   User: "TwoBedroomUpstairsZone1 2/2 | DHWHeatpump"
    DwellUnitDistType = RVal: "Standard"
    MFamDistType = RVal: "Multi-family: Recirculating with no control (continuous pumping)"
    IsCentralHPWH = RVal: 0
-   DHWHeaterIdx = UVal: 0
-   DHWHeaterCnt = UVal: 1
-   HeaterElementType = RVal: "none"
-   TankType = RVal: "none"
-   InputRatingUnits = RVal: "  "
+   DHWHeaterRef = UVal: "Heatpump"
+   DHWHeaterIdx = UVal: 1
+   DHWHeaterCnt = UVal: 2
+   HeaterElementType = RVal: "Heat Pump"
+   TankType = RVal: "NA"
+   InputRating = RVal: 12000
+   InputRatingUnits = RVal: "watts"
    InputRatingRpt = RVal: "<= 12 kW"
-   EfficiencyUnits = RVal: " "
-   EfficiencyRpt = RVal: " "
-   TankVolumeRpt = RVal: " "
-   ExtInsulRpt = RVal: " "
-   StandbyLossRpt = RVal: " "
-   MakeAndModel = RVal: "NA"
-   SimulatedEquip = RVal: "NA"
-   TankLocation = RVal: "NA"
+   Efficiency = RVal: 0.59
+   EfficiencyUnits = RVal: "EF"
+   EfficiencyRpt = RVal: "NEEA Rated"
+   TankVolume = RVal: 50
+   TankVolumeRpt = RVal: "50"
+   ExtInsulRVal = RVal: 0
+   ExtInsulRpt = RVal: "NA"
+   StandbyLossRpt = RVal: "NA"
+   MakeAndModel = RVal: "Sanden / GS3-45HPA-US & SAN-83SSAQA  (83 gal)"
+   SimulatedEquip = RVal: "Sanden 80"
+   TankLocation = RVal: "Outside or Exterior closet"
    RecovEffRpt = RVal: "NA"
    FirstHourRatingRpt = RVal: "NA"
    RatedFlowRpt = RVal: "NA"
@@ -8201,19 +8239,18 @@ cseDHWMETER   User: "DHWMtrWH"
 
 cseDHWSOLARSYS   User: "dhwss-t24-Std SolarSys"  
    swElecMtr = RVal: "MtrElec"
+   swTankVol = RVal: 613
    swTankInsulR = RVal: 12
    swTankTEx_x = RVal: "($tDbO + 70) / 2"
-   CSEPreRunRequired = RVal: 1
    ..
 
 cseDHWSOLARCOLLECTOR   User: "dhwsc-t24-Std SolarSys"  
    scArea = RVal: 40.8598
-   scMult = RVal: 1.12266
+   scMult = RVal: 10
    scTilt = RVal: 40
    scAzm = RVal: 180
    scFRUL_x = RVal: "-4.125 * 0.17611"
    scFRTA = RVal: 0.758
-   CSEPreRunRequired = RVal: 1
    ..
 
 cseDHWSYS   User: "dhwsys-DHWHeatpump"  
@@ -12608,7 +12645,7 @@ DHWSolarSys   User: "t24-Std SolarSys"
    Model = UVal: "EC-40-1.5"  (1000106)
    CertID = RVal: "2006024F/S-4579"
    Count = UVal: 10
-   CountFlt = RVal: 1.12266
+   CountFlt = RVal: 10
    Area = RVal: 40.8598
    EffCurveYInt = RVal: 0.758
    EffCurveSlope = RVal: -4.125
@@ -12625,9 +12662,6 @@ DHWSolarSys   User: "t24-Std SolarSys"
    CSESimValid = RVal: 1
    StdDsgnCntFloat[1] = UVal: 0.700378
    StdDsgnCntFloat[2] = UVal: 1.05057
-   StdDsgnSSFCalced[1] = UVal: 0.129849
-   StdDsgnSSFCalced[2] = UVal: 0.188023
-   RequiredSSF = RVal: 0.2
    IsStdSys = UVal: 1
    NumHPWHNeedingSizing = UVal: 0
    CSE_PropSSFExpCol[1] = RVal: "xc-dhwSolarSys-SSF-3"
@@ -12635,7 +12669,7 @@ DHWSolarSys   User: "t24-Std SolarSys"
    ..
 
 csePVARRAY   User: "pvarray 1"  
-   pvDCSysSize = RVal: 17.1493
+   pvDCSysSize = RVal: 17.3657
    pvModuleType = RVal: "Standard"  (1)
    pvArrayType = RVal: "FixedOpenRack"  (1)
    pvTilt = RVal: 22.6199
@@ -13095,7 +13129,7 @@ cf1rPayload   User: "CF1RPayload"
    attrib_complianceDocumentSchemaVersion = RVal: "complianceDocumentSchemaVersion1"
    attrib_displayTag = RVal: "CF1R-PRF-01-E"
    attrib_payloadDocument = RVal: "CF1RPRF01E"
-   attrib_processedDate = RVal: "2020-03-11T15:28:53-07:00"
+   attrib_processedDate = RVal: "2020-03-19T10:06:24-07:00"
    attrib_reportRequestor = RVal: "reportRequestor1"
    attrib_reportRequestorIP_Address = RVal: "reportRequestorIP_Address1"
    attrib_revision = RVal: "revision3"
@@ -13109,7 +13143,7 @@ cf1rDocumentData   User: "CF1RDocData"
 
 cf1rHeader   User: "CF1RHeader"  
    comp_header01_ProjectName = RVal: "2019 Prototype 7320ft2 Prop Elec"
-   comp_header02_RunDateTime = RVal: "2020-03-11T15:28:53-07:00"
+   comp_header02_RunDateTime = RVal: "2020-03-19T10:06:24-07:00"
    comp_header03_RunDescription = RVal: "TDSv30 V19R12 V19 R12 UGLASS15 ELEC PVSTD"
    comp_header04_InputFilename = RVal: "instance.ribd22"
    ..
@@ -13855,7 +13889,7 @@ cf1rtblRowWaterHeaters   User: "HeatpumpWaterHeaterRow"
    T01_WaterHeaterName = RVal: "Heatpump"
    T02_WaterHeaterFuelSource = RVal: "HeatPumpWaterHeater"
    T03_NotApplicableMessage = RVal: "n/a"
-   T04_WaterHeaterCount = RVal: 0
+   T04_WaterHeaterCount = RVal: 16
    T05_StorageCapacity = RVal: 83
    T06a_EfficiencyType = RVal: "NEEA"
    T07_WaterHeaterRatedInputString = RVal: "<= 12 kW"

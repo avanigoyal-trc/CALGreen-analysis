@@ -15823,8 +15823,8 @@ vrf_cu_names = ["VRF F2-4 CU-1", "VRF F2-4 CU-2", "VRF F5 CU-1", "VRF F5 CU-2"]
 count = [3, 3, 1, 1]
 rated_cooling_cap = 135000
 rated_heating_cap = 150000
-pipe_length = 145
-max_height = -25
+pipe_length = [145,145, 125,125]
+max_height = [-25, -25, -5, -5]
 ctrl_priority = "LoadPriority"
 
 cu_counts = vrf_cu_names.length() -1 #Subtract 1 since indexing at 0
@@ -15836,8 +15836,8 @@ for a in 0..cu_counts do
     :heat_recovery => "Yes",
     :cooling_capacity => rated_cooling_cap,
     :heating_capacity => rated_heating_cap,
-    :equivalent_pipe_len => pipe_length,
-    :max_vertical_height => max_height,
+    :equivalent_pipe_len => pipe_length[a],
+    :max_vertical_height => max_height[a],
     :ctrl_priority   => ctrl_priority
 
 end
@@ -15855,6 +15855,7 @@ zones = table_zones.by_col[1]
 counts_original = table_zones.by_col[2]
 index = table_zones.by_col[0]
 vent_zones = table_zones.by_col[3]
+
 
 
 num_zones = zones.length() -1 #Subtract 1 since indexing at 0
@@ -16285,6 +16286,47 @@ Mat   "WoodRoof16OCCavInsR38"
    FrmDepth = "7_25In"
    CavityIns = 38
    ..
+
+Mat   "WoodRoof16OCCavInsR36"
+  CodeCat = "Composite"
+  FrmMat = "Wood"
+  FrmConfig = "Roof16inOC"
+  FrmDepth = "7_25In"
+  CavityIns = 36
+  ..
+
+Mat   "WoodRoof16OCCavInsR32"
+  CodeCat = "Composite"
+  FrmMat = "Wood"
+  FrmConfig = "Roof16inOC"
+  FrmDepth = "7_25In"
+  CavityIns = 32
+  ..
+
+Mat   "WoodRoof16OCCavInsR31"
+  CodeCat = "Composite"
+  FrmMat = "Wood"
+  FrmConfig = "Roof16inOC"
+  FrmDepth = "7_25In"
+  CavityIns = 31
+  ..
+
+
+Mat   "WoodRoof16OCCavInsR29"
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "7_25In"
+   CavityIns = 29
+   ..
+
+Mat   "WoodRoof16OCCavInsR27"
+  CodeCat = "Composite"
+  FrmMat = "Wood"
+  FrmConfig = "Roof16inOC"
+  FrmDepth = "7_25In"
+  CavityIns = 27
+  ..
 
 Mat   "WoodRoof16OCCavInsR25"
    CodeCat = "Composite"

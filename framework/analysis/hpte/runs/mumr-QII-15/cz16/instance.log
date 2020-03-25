@@ -1,0 +1,99 @@
+2020-03-18 15:24:49 - -----------------------------------------------------------------------------
+2020-03-18 15:24:49 - Opening Project 'cz16\instance.cibd22'...
+2020-03-18 15:24:51 -    Model load successful into CBECC-Com 2022.0.1 RV (1113)
+2020-03-18 15:24:52 - Performing Building Database check...
+2020-03-18 15:24:52 - Building Database check completed, no problems found.
+2020-03-18 15:25:01 -   PerfAnal_NRes - starting, w/ arguments:
+2020-03-18 15:25:01 -        BEMBasePathFile    = (null)
+2020-03-18 15:25:01 -        RulesetPathFile    = (null)
+2020-03-18 15:25:01 -        SimWeatherPath     = C:\Users\agoyal\Documents\CBECC-Com 2022 Data\EPW\
+2020-03-18 15:25:01 -        CompMgrDLLPath     = (null)
+2020-03-18 15:25:01 -        DHWWeatherPath     = (null)
+2020-03-18 15:25:01 -        ProcessingPath     = C:\Users\agoyal\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hpte\runs\mumr-QII-15\cz16\instance - run\
+2020-03-18 15:25:01 -        ModelPathFile      = C:\Users\agoyal\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hpte\runs\mumr-QII-15\cz16\instance.cibd22
+2020-03-18 15:25:01 -        LogPathFile        = (null)
+2020-03-18 15:25:01 -        UIVersionString    = CBECC-Com 2022.0.1 RV (1113)
+2020-03-18 15:25:01 -        LoadModelFile      = false
+2020-03-18 15:25:01 -        OptionsCSV         = AllowAnalysisAbort,0,StoreBEMDetails,1,AnalysisThruStep,8,ModelRpt_ALL,1,ExportHourlyResults_All,1,PromptUserUMLHWarning,1,PreAnalysisCheckPromptOption,3,CompReportWarningOption,5,
+2020-03-18 15:25:01 -        ErrorMsg           = (assumed to be initialized)
+2020-03-18 15:25:01 -        ErrorMsgLen        = 2056
+2020-03-18 15:25:01 -        DisplayProgress    = true
+2020-03-18 15:25:01 -        ResultsSummary     = (empty)
+2020-03-18 15:25:01 -        ResultsSummaryLen  = 3200
+2020-03-18 15:25:01 -        pProgCallbackFunc  = (null)
+2020-03-18 15:25:03 - Performing Building Database check...
+2020-03-18 15:25:03 - Building Database check completed, no problems found.
+2020-03-18 15:25:03 - Warning:  The following developer options must be defaulted (not specified by the user) in order to perform a valid compliance analysis:
+          Proj 'Mid-Rise Mixed-Use (5-story)' AutoHardSize
+          Proj 'Mid-Rise Mixed-Use (5-story)' AutoEffInput
+2020-03-18 15:25:04 -    1 file hash check(s) failed on executable and/or analysis support files (analysis continuing w/ report signature disabled)
+2020-03-18 15:25:07 - Performing Building Database check...
+2020-03-18 15:25:07 - Building Database check completed, no problems found.
+2020-03-18 15:25:07 - Warning:  AirSystem 'DOAS1' has a DX cooling coil and the rated supply flow per ton of (net) cooling capacity is 848 cfm/ton. The acceptable range for successful simulation of DX cooling coils in EnergyPlus is normally ~300 to ~450 cfm/ton. If the compliance simulation fails, check flow/cooling capacity inputs for consistency with the design. If simulation still fails, contact the CBECC support team for assistance. evaluating rule: Set CHECKSIM AirSys:SupFlowPerTon  (110:'HVACSecondary-Summary.rule' line 785)
+2020-03-18 15:25:07 - Warning:  The AirSystem:Count for multi-zone system 'DOAS1' is not consistent with the maximum or minimum ThermalZone:Multiplier of the zones the system serves. This indicates the HVAC system serves more than 1 floor, or that Multipliers or system Count may be improperly defined. Check inputs for consistency. evaluating rule: Set CHECKCODE AirSys:Cnt  (68:'HVACSecondary-General.rule' line 1398)
+2020-03-18 15:25:17 -   PerfAnal_NRes - Bypassing OpenStudio (and simulation) for zp model
+2020-03-18 15:33:55 -   PerfSim_E+ - Final Result: PASS  -- compliance margin: 1.4 (1.50%)
+2020-03-18 15:33:59 - Analysis result:  PASS  (TDV margin: 1.40)  Processing time:  Overall 8:57 / SDD2IDF x4 avg 0:13 / SizSim x2 avg 0:34 / AnnSim x2 avg 3:02 / ReportGen x0 0:00 / Other 0:44
+2020-03-18 15:33:59 -       ResultsSummary population:  bAbort = (false) / RuleProcAbort = (false) / iRetVal = 0 / pszResultsSummary = (empty) / iResultsSummaryLen = 3200
+2020-03-18 15:33:59 -       ResultsSummary components1:  2020-03-18 15:33:59 / instance / Mid-Rise Mixed-Use (5-story) / CTZ16S22A / Title24Compliance / 8:57 / PASS / 1.40
+2020-03-18 15:33:59 -       ResultsSummary components2:  CBECC-Com 2022.0.1 RV (1113) / BEMCmpMgr 2022.0.1 RV (6107) / CA 2022 Nonresidential, Vers. 1.0 Alpha / 1.11.3.f52686d8e1 / 9.0.1-bb7ca4f0da / CSE19 0.865.0+dhwloop.68861ec.94 EXE / C:\Users\agoyal\Documents\CBECC-Com 2022 Data\EPW\ / C:\Users\agoyal\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hpte\runs\mumr-QII-15\cz16\
+2020-03-18 15:33:59 -       ResultsSummary:  2020-03-18 15:33:59,"instance","Mid-Rise Mixed-Use (5-story)","CTZ16S22A","Pol  0% RetAdd NoLeak",113100,141000,"Title24Compliance",8:57,PASS,1.40,"--","--","Successful (227 warnings)",21.9743,55821,60773.1,0,263.613,15028.9,82050.1,213959,217441,0,149101,34551.8,0,0,615053,8631.65,0,0,0,0,10214.5,0,18846.2,586.724,0,0,0,19432.9,0,0,0,0,0,0,0,0,0,0,0,0,0,20.0731,13.0656,14.9241,0,0.0721414,25.4719,18.486,92.0929,57.1015,0,40.9953,8.65104,0,0,198.841,155.657,43.1842,0,2186,"Thermal Zone: F2-4 Corridor",0,1936.5,"Thermal Zone: F5 Corridor",0,"--","--","Successful (231 warnings)",34.2618,57889,56556.2,0,187.593,15021.1,82050.1,211738,217441,0,149101,34551.8,0,0,612832,9559.65,0,0,0,0,10214.5,0,19774.2,586.724,0,0,0,20360.9,0,0,0,0,0,0,0,0,0,0,0,0,0,22.1538,13.3689,13.9463,0,0.0612477,25.4726,18.486,93.4889,57.1015,0,40.9953,8.65104,0,0,200.237,154.975,45.2615,0,0,,0,0,,0,1.14185e-05,23.9328,10.9293,0,0.00975637,2.40259,14.3582,51.6327,38.321,0,25.7371,3.94427,0,0,119.635,1.15615e-05,24.8714,10.0654,0,0.000588631,2.37718,14.3582,51.6728,38.321,0,25.7371,3.94427,0,0,119.675,"CBECC-Com 2022.0.1 RV (1113)","BEMCmpMgr 2022.0.1 RV (6107)","CA 2022 Nonresidential, Vers. 1.0 Alpha","1.11.3.f52686d8e1","9.0.1-bb7ca4f0da","CSE19 0.865.0+dhwloop.68861ec.94 EXE","C:\Users\agoyal\Documents\CBECC-Com 2022 Data\EPW\","C:\Users\agoyal\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hpte\runs\mumr-QII-15\cz16\",0.00348811,7.07764,8.83169,0,0.0390213,1.89823,9.05037,26.9,32.22,0,25.6908,5.68613,0,0,90.5,4.13876,0,0,0,0,4.89772,0,9.04,0.281326,0,0,0,9.32,0.00563909,6.96129,8.252,0,0.0355171,1.90261,9.05037,26.21,32.22,0,25.6908,5.68613,0,0,89.81,4.58372,0,0,0,0,4.89772,0,9.48,0.281326,0,0,0,9.76,7.00841,1.17883,1.47098,0,0.00649926,8.60908,1.50741,19.7812,5.84282,0,4.27899,0.947065,0,0,30.8501,7.76219,1.15945,1.37443,0,0.00591563,8.60981,1.50741,20.4192,5.84282,0,4.27899,0.947065,0,0,31.4881,
+
+2020-03-18 15:34:05 - -----------------------------------------------------------------------------
+2020-03-18 15:34:05 - Opening Project 'cz16\instance.cibd22'...
+2020-03-18 15:34:06 -    Model load successful into CBECC-Com 2022.0.1 RV (1113)
+2020-03-18 15:34:07 - Performing Building Database check...
+2020-03-18 15:34:07 - Building Database check completed, no problems found.
+2020-03-18 15:34:14 - Project Saved
+2020-03-18 17:37:15 - -----------------------------------------------------------------------------
+2020-03-18 17:37:15 - Opening Project 'cz16\instance.cibd22'...
+2020-03-18 17:37:16 -    Model load successful into CBECC-Com 2022.0.1 RV (1113)
+2020-03-18 17:37:16 - Performing Building Database check...
+2020-03-18 17:37:16 - Building Database check completed, no problems found.
+2020-03-18 17:53:47 - -----------------------------------------------------------------------------
+2020-03-18 17:53:47 - Opening Project 'cz16\instance.cibd22'...
+2020-03-18 17:53:48 -    Model load successful into CBECC-Com 2022.0.1 RV (1113)
+2020-03-18 17:53:49 - Performing Building Database check...
+2020-03-18 17:53:49 - Building Database check completed, no problems found.
+2020-03-18 17:53:54 -   PerfAnal_NRes - starting, w/ arguments:
+2020-03-18 17:53:54 -        BEMBasePathFile    = (null)
+2020-03-18 17:53:54 -        RulesetPathFile    = (null)
+2020-03-18 17:53:54 -        SimWeatherPath     = C:\Users\agoyal\Documents\CBECC-Com 2022 Data\EPW\
+2020-03-18 17:53:54 -        CompMgrDLLPath     = (null)
+2020-03-18 17:53:54 -        DHWWeatherPath     = (null)
+2020-03-18 17:53:54 -        ProcessingPath     = C:\Users\agoyal\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hpte\runs\mumr-QII-15\cz16\instance - run\
+2020-03-18 17:53:54 -        ModelPathFile      = C:\Users\agoyal\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hpte\runs\mumr-QII-15\cz16\instance.cibd22
+2020-03-18 17:53:54 -        LogPathFile        = (null)
+2020-03-18 17:53:54 -        UIVersionString    = CBECC-Com 2022.0.1 RV (1113)
+2020-03-18 17:53:54 -        LoadModelFile      = false
+2020-03-18 17:53:54 -        OptionsCSV         = AllowAnalysisAbort,0,StoreBEMDetails,1,AnalysisThruStep,8,ModelRpt_ALL,1,ExportHourlyResults_All,1,PromptUserUMLHWarning,1,PreAnalysisCheckPromptOption,3,CompReportWarningOption,5,
+2020-03-18 17:53:54 -        ErrorMsg           = (assumed to be initialized)
+2020-03-18 17:53:54 -        ErrorMsgLen        = 2056
+2020-03-18 17:53:54 -        DisplayProgress    = true
+2020-03-18 17:53:54 -        ResultsSummary     = (empty)
+2020-03-18 17:53:54 -        ResultsSummaryLen  = 3200
+2020-03-18 17:53:54 -        pProgCallbackFunc  = (null)
+2020-03-18 17:53:55 - Performing Building Database check...
+2020-03-18 17:53:55 - Building Database check completed, no problems found.
+2020-03-18 17:53:55 - Warning:  The following developer options must be defaulted (not specified by the user) in order to perform a valid compliance analysis:
+          Proj 'Mid-Rise Mixed-Use (5-story)' AutoHardSize
+          Proj 'Mid-Rise Mixed-Use (5-story)' AutoEffInput
+2020-03-18 17:53:56 -    1 file hash check(s) failed on executable and/or analysis support files (analysis continuing w/ report signature disabled)
+2020-03-18 17:53:58 - Performing Building Database check...
+2020-03-18 17:53:58 - Building Database check completed, no problems found.
+2020-03-18 17:53:59 - Warning:  AirSystem 'DOAS1' has a DX cooling coil and the rated supply flow per ton of (net) cooling capacity is 848 cfm/ton. The acceptable range for successful simulation of DX cooling coils in EnergyPlus is normally ~300 to ~450 cfm/ton. If the compliance simulation fails, check flow/cooling capacity inputs for consistency with the design. If simulation still fails, contact the CBECC support team for assistance. evaluating rule: Set CHECKSIM AirSys:SupFlowPerTon  (110:'HVACSecondary-Summary.rule' line 785)
+2020-03-18 17:53:59 - Warning:  The AirSystem:Count for multi-zone system 'DOAS1' is not consistent with the maximum or minimum ThermalZone:Multiplier of the zones the system serves. This indicates the HVAC system serves more than 1 floor, or that Multipliers or system Count may be improperly defined. Check inputs for consistency. evaluating rule: Set CHECKCODE AirSys:Cnt  (68:'HVACSecondary-General.rule' line 1398)
+2020-03-18 17:54:04 -   PerfAnal_NRes - Bypassing OpenStudio (and simulation) for zp model
+2020-03-18 18:00:56 -   PerfSim_E+ - Final Result: PASS  -- compliance margin: 0.98 (1.05%)
+2020-03-18 18:00:58 - Analysis result:  PASS  (TDV margin: 0.98)  Processing time:  Overall 7:03 / SDD2IDF x4 avg 0:12 / SizSim x2 avg 0:23 / AnnSim x2 avg 2:27 / ReportGen x0 0:00 / Other 0:30
+2020-03-18 18:00:58 -       ResultsSummary population:  bAbort = (false) / RuleProcAbort = (false) / iRetVal = 0 / pszResultsSummary = (empty) / iResultsSummaryLen = 3200
+2020-03-18 18:00:58 -       ResultsSummary components1:  2020-03-18 18:00:58 / instance / Mid-Rise Mixed-Use (5-story) / CTZ16S22A / Title24Compliance / 7:03 / PASS / 0.98
+2020-03-18 18:00:58 -       ResultsSummary components2:  CBECC-Com 2022.0.1 RV (1113) / BEMCmpMgr 2022.0.1 RV (6107) / CA 2022 Nonresidential, Vers. 1.0 Alpha / 1.11.3.f52686d8e1 / 9.0.1-bb7ca4f0da / CSE19 0.865.0+dhwloop.68861ec.94 EXE / C:\Users\agoyal\Documents\CBECC-Com 2022 Data\EPW\ / C:\Users\agoyal\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hpte\runs\mumr-QII-15\cz16\
+2020-03-18 18:00:58 -       ResultsSummary:  2020-03-18 18:00:58,"instance","Mid-Rise Mixed-Use (5-story)","CTZ16S22A","Pol  0% RetAdd NoLeak",113100,141000,"Title24Compliance",7:03,PASS,0.98,"--","--","Successful (227 warnings)",21.9744,55966.7,61004.4,0,263.694,15028.9,82050.1,214336,217441,0,149101,34551.8,0,0,615430,8768.8,0,0,0,0,10214.5,0,18983.3,586.724,0,0,0,19570,0,0,0,0,0,0,0,0,0,0,0,0,0,20.3933,13.0954,14.9903,0,0.0721649,25.4719,18.486,92.5092,57.1015,0,40.9953,8.65104,0,0,199.257,155.753,43.5044,0,2180.25,"Thermal Zone: F2-4 Corridor",0,1977,"Thermal Zone: F5 Corridor",0,"--","--","Successful (231 warnings)",34.2618,57889,56556.2,0,187.593,15021.1,82050.1,211738,217441,0,149101,34551.8,0,0,612832,9559.65,0,0,0,0,10214.5,0,19774.2,586.724,0,0,0,20360.9,0,0,0,0,0,0,0,0,0,0,0,0,0,22.1538,13.3689,13.9463,0,0.0612477,25.4726,18.486,93.4889,57.1015,0,40.9953,8.65104,0,0,200.237,154.975,45.2615,0,0,,0,0,,0,1.14184e-05,24.0501,10.953,0,0.00975637,2.40266,14.3582,51.7738,38.321,0,25.7371,3.94427,0,0,119.776,1.15615e-05,24.8714,10.0654,0,0.000588631,2.37718,14.3582,51.6728,38.321,0,25.7371,3.94427,0,0,119.675,"CBECC-Com 2022.0.1 RV (1113)","BEMCmpMgr 2022.0.1 RV (6107)","CA 2022 Nonresidential, Vers. 1.0 Alpha","1.11.3.f52686d8e1","9.0.1-bb7ca4f0da","CSE19 0.865.0+dhwloop.68861ec.94 EXE","C:\Users\agoyal\Documents\CBECC-Com 2022 Data\EPW\","C:\Users\agoyal\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\hpte\runs\mumr-QII-15\cz16\",0.00348806,7.08467,8.87446,0,0.039032,1.89824,9.05037,26.94,32.22,0,25.6908,5.68613,0,0,90.54,4.20452,0,0,0,0,4.89772,0,9.1,0.281326,0,0,0,9.38,0.00563909,6.96129,8.252,0,0.0355171,1.90261,9.05037,26.21,32.22,0,25.6908,5.68613,0,0,89.81,4.58372,0,0,0,0,4.89772,0,9.48,0.281326,0,0,0,9.76,7.11976,1.18,1.4781,0,0.00650104,8.60908,1.50741,19.9009,5.84282,0,4.27899,0.947065,0,0,30.9697,7.76219,1.15945,1.37443,0,0.00591563,8.60981,1.50741,20.4192,5.84282,0,4.27899,0.947065,0,0,31.4881,
+
+2020-03-18 18:01:00 - -----------------------------------------------------------------------------
+2020-03-18 18:01:00 - Opening Project 'cz16\instance.cibd22'...
+2020-03-18 18:01:01 -    Model load successful into CBECC-Com 2022.0.1 RV (1113)
+2020-03-18 18:01:01 - Performing Building Database check...
+2020-03-18 18:01:01 - Building Database check completed, no problems found.
+2020-03-18 18:01:04 - Project Saved
