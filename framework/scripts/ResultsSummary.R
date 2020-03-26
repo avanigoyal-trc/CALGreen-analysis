@@ -64,7 +64,7 @@ results_spreadsheet <- function(path){
   writeData(wb, "Results", end_use_therms, startRow = 31, startCol = 2)
   
   writeData(wb, "Results", "kTDV by End-Use per square foot", startRow = 47, startCol = 2)
-  writeData(wb, "Results", end_use_therms, startRow = 48, startCol = 2)
+  writeData(wb, "Results", end_use_tdv, startRow = 48, startCol = 2)
   
   
   saveWorkbook(wb, paste(path, "/Results_Reformatted.xlsx", sep = ""), overwrite = TRUE)

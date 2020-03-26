@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+ #define  RunDateFmt  23:29, Fri, Mar 20, 2020
+=======
  #define  RunDateFmt  19:17, Thu, Mar 19, 2020
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
  #define  RunID                1   // PrelimProp
  #define  AnalysisType        13   // Proposed and Standard
  #define  CompCodeBase      2022   // CA2022
@@ -6,14 +10,24 @@
  #define  StandardsVersion  2023   // Compliance 2023
  #define  DesignRatingBase  2014   // RESNET2014
  #define  ClimateZone         13   // CZ13  (Fresno)
+<<<<<<< HEAD
+ #define  DD1  Aug 12
+ #define  CD1  Jun 30
+ #define  HD1  Dec 23
+=======
  #define  DD1  Jul 15
  #define  CD1  Jul 10
  #define  HD1  Dec 04
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
  #define  SEASONCHANGESETPT  60
  #define  FANVENTLOCKOUTTEMP  68
  #define  ISSEASONCOOLING  (@weather.taDbAvg07 > SEASONCHANGESETPT)
  #define  FANVENTAVAIL  (@weather.taDbAvg07 > FANVENTLOCKOUTTEMP)
+<<<<<<< HEAD
+ #define  WINDOWVENTAVAIL  ($hour < 24 && ($hour > 12 || $radDiff+$radbeam > .01))
+=======
  #define  WINDOWVENTAVAIL  ($hour < 24 && ($hour > 12 || $radDiff > 1))
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
  #define  HWUSEF_WD  hourval( 0.014, 0.008, 0.009, 0.011, 0.020, 0.044, 0.089, 0.107, 0.089, 0.066, 0.052, 0.038, 0.036, 0.033, 0.032, 0.026, 0.042, 0.048, 0.052, 0.047, 0.042, 0.039, 0.036, 0.022 )
  #define  HWUSEF_WE  hourval( 0.018, 0.010, 0.009, 0.008, 0.015, 0.023, 0.026, 0.047, 0.077, 0.083, 0.074, 0.061, 0.051, 0.043, 0.039, 0.039, 0.052, 0.058, 0.056, 0.052, 0.047, 0.044, 0.040, 0.028 )
  #define  ShwrFLOWF  1
@@ -51,11 +65,19 @@
  #define  FVCHPC  0.95		// VCHP cooling input energy factor
  #define  FVCHPH  0.88		// VCHP heating input energy factor
  #define  NumCntrlWHtrs( s)  tofloat( 1+fix(@DHWSYS[ s].loadMax / (15400. * @DHWSYS[ s].loadMaxDur)))
+<<<<<<< HEAD
+ #define  RunFileName  instance - PreProp
+=======
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
 
 #include "DHWDU.txt"
 
    repHdrL = "TDSv30 V06R12 V06 R12 UGLASS15 NGAS PVSTD"
+<<<<<<< HEAD
+   wfName = "CA_FRESNO-YOSEMITE-IAP_723890S_STYP20.epw"
+=======
    wfName = "CTZ13S13b.CSW"
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    ebTolHour = 0.001
    ebTolDay = 0.001
    ebTolMon = 0.001
@@ -64,7 +86,11 @@
    skyModel = "anisotropic"
    bldgAzm = 0
    dt = "YES"
+<<<<<<< HEAD
+   heatDsTDbO = 31.8                    // °F
+=======
    heatDsTDbO = 30                      // °F
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    coolDsDay = DD1                      // coolDsDay
    nSubSteps = 20
    wuDays = 30
@@ -618,7 +644,11 @@ DHWMETER   "DHWMtrFXMix"
 DHWMETER   "DHWMtrWH"  
 
 DHWSYS   "dhwsys-DHWGas"  
+<<<<<<< HEAD
+   wsTUse = 125                         // Water use temperature (at the point of use), °F
+=======
    wsTUse = 115                         // Water use temperature (at the point of use), °F
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    wsTSetpoint = 125                    // Setpoint temperature for heat pump water heaters (whHeatSrc = ASHPX), °F
    wsBranchModel = "DayWaste"           // Model used to simulate DHW branch losses
    wsShowerDayWasteF = 3                // used to determine ratio of Shower/Faucet water waste
@@ -642,13 +672,21 @@ DHWSYS   "dhwsys-DHWGas"
 
    DHWLOOP   "dhwlp-DHWGas"  
       wlMult = 1                        // DHW loop multiplier
+<<<<<<< HEAD
+      wlFlow = 6.12                     // DHW loop flow (gpm), gpm
+=======
       wlFlow = 6                        // DHW loop flow (gpm), gpm
       wlTIn1 = 130                      // DHW loop first segment input temperature (°F), °F
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
       wlRunF = 1                        // Hourly fraction that recirc is assumed to operate in the DHW loop, frac
       wlFUA = 2                         // DHW loop imperfect insulation correction factor
 
       DHWLOOPPUMP   "dhwlppmp-DHWGas"  
+<<<<<<< HEAD
+         wlpPwr = 22.38                 // DHW loop pump power (W), W
+=======
          wlpPwr = 621.666667            // DHW loop pump power (W), W
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
          wlpElecMtr = "MtrElec"         // Electric use meter
 
       DHWLOOPSEG   "dhwlpseg1-DHWGas"  
@@ -1415,6 +1453,33 @@ IZXFER   "Zone3-IAQHRV"
    izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
    izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
 
+<<<<<<< HEAD
+IZXFER   "Corridor1-IAQHRV"  
+   izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
+   izZn1 = "Corridor1-zn"               // Name of primary zone (flow rates > 0 are into the primary zone)
+   izFanVfDs = 216.6                    // Fan design or rated flow at rated pressure, cfm
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
+   izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
+
+IZXFER   "BusinessCenter1-IAQHRV"  
+   izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
+   izZn1 = "BusinessCenter1-zn"         // Name of primary zone (flow rates > 0 are into the primary zone)
+   izFanVfDs = 162                      // Fan design or rated flow at rated pressure, cfm
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
+   izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
+
+IZXFER   "FitnessCenter1-IAQHRV"  
+   izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
+   izZn1 = "FitnessCenter1-zn"          // Name of primary zone (flow rates > 0 are into the primary zone)
+   izFanVfDs = 162                      // Fan design or rated flow at rated pressure, cfm
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
+   izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
+
+=======
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
 IZXFER   "Laundry1-InfLU"  
    izNVType = "AIRNETEXT"               // Choice determining interzone ventilation
    izZn1 = "Laundry1-zn"                // Name of primary zone (flow rates > 0 are into the primary zone)
@@ -1523,6 +1588,17 @@ IZXFER   "Laundry1-NVHD"
    izNVEff = 0.5                        // Vent discharge coefficient coefficient
    izCpr = -0.3                         // Wind pressure coefficient (for AIRNETEXT)
 
+<<<<<<< HEAD
+IZXFER   "Laundry1-IAQHRV"  
+   izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
+   izZn1 = "Laundry1-zn"                // Name of primary zone (flow rates > 0 are into the primary zone)
+   izFanVfDs = 16.2                     // Fan design or rated flow at rated pressure, cfm
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
+   izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
+
+=======
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
 IZXFER   "LeasingOffice1-InfLU"  
    izNVType = "AIRNETEXT"               // Choice determining interzone ventilation
    izZn1 = "LeasingOffice1-zn"          // Name of primary zone (flow rates > 0 are into the primary zone)
@@ -1631,6 +1707,17 @@ IZXFER   "LeasingOffice1-NVHD"
    izNVEff = 0.5                        // Vent discharge coefficient coefficient
    izCpr = -0.3                         // Wind pressure coefficient (for AIRNETEXT)
 
+<<<<<<< HEAD
+IZXFER   "LeasingOffice1-IAQHRV"  
+   izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
+   izZn1 = "LeasingOffice1-zn"          // Name of primary zone (flow rates > 0 are into the primary zone)
+   izFanVfDs = 32.4                     // Fan design or rated flow at rated pressure, cfm
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
+   izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
+
+=======
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
 IZXFER   "Lobby1-InfLU"  
    izNVType = "AIRNETEXT"               // Choice determining interzone ventilation
    izZn1 = "Lobby1-zn"                  // Name of primary zone (flow rates > 0 are into the primary zone)
@@ -1739,6 +1826,17 @@ IZXFER   "Lobby1-NVHD"
    izNVEff = 0.5                        // Vent discharge coefficient coefficient
    izCpr = -0.3                         // Wind pressure coefficient (for AIRNETEXT)
 
+<<<<<<< HEAD
+IZXFER   "Lobby1-IAQHRV"  
+   izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
+   izZn1 = "Lobby1-zn"                  // Name of primary zone (flow rates > 0 are into the primary zone)
+   izFanVfDs = 270                      // Fan design or rated flow at rated pressure, cfm
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
+   izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
+
+=======
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
 IZXFER   "MechanicalRoom1-InfLU"  
    izNVType = "AIRNETEXT"               // Choice determining interzone ventilation
    izZn1 = "MechanicalRoom1-zn"         // Name of primary zone (flow rates > 0 are into the primary zone)
@@ -1793,6 +1891,17 @@ IZXFER   "MechanicalRoom1-InfHD"
    izCpr = -0.3                         // Wind pressure coefficient (for AIRNETEXT)
    izExp = 0.65                         // Opening exponent
 
+<<<<<<< HEAD
+IZXFER   "MechanicalRoom1-IAQHRV"  
+   izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
+   izZn1 = "MechanicalRoom1-zn"         // Name of primary zone (flow rates > 0 are into the primary zone)
+   izFanVfDs = 16.2                     // Fan design or rated flow at rated pressure, cfm
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
+   izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
+
+=======
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
 IZXFER   "Stairs1-InfLU"  
    izNVType = "AIRNETEXT"               // Choice determining interzone ventilation
    izZn1 = "Stairs1-zn"                 // Name of primary zone (flow rates > 0 are into the primary zone)
@@ -1847,6 +1956,33 @@ IZXFER   "Stairs1-InfHD"
    izCpr = -0.3                         // Wind pressure coefficient (for AIRNETEXT)
    izExp = 0.65                         // Opening exponent
 
+<<<<<<< HEAD
+IZXFER   "Stairs1-IAQHRV"  
+   izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
+   izZn1 = "Stairs1-zn"                 // Name of primary zone (flow rates > 0 are into the primary zone)
+   izFanVfDs = 21.5                     // Fan design or rated flow at rated pressure, cfm
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
+   izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
+
+IZXFER   "Corridor2-IAQHRV"  
+   izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
+   izZn1 = "Corridor2-zn"               // Name of primary zone (flow rates > 0 are into the primary zone)
+   izFanVfDs = 216.6                    // Fan design or rated flow at rated pressure, cfm
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
+   izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
+
+IZXFER   "Corridor3-IAQHRV"  
+   izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
+   izZn1 = "Corridor3-zn"               // Name of primary zone (flow rates > 0 are into the primary zone)
+   izFanVfDs = 216.6                    // Fan design or rated flow at rated pressure, cfm
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
+   izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
+
+=======
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
 IZXFER   "Stairs2-InfLU"  
    izNVType = "AIRNETEXT"               // Choice determining interzone ventilation
    izZn1 = "Stairs2-zn"                 // Name of primary zone (flow rates > 0 are into the primary zone)
@@ -1901,6 +2037,17 @@ IZXFER   "Stairs2-InfHD"
    izCpr = -0.3                         // Wind pressure coefficient (for AIRNETEXT)
    izExp = 0.65                         // Opening exponent
 
+<<<<<<< HEAD
+IZXFER   "Stairs2-IAQHRV"  
+   izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
+   izZn1 = "Stairs2-zn"                 // Name of primary zone (flow rates > 0 are into the primary zone)
+   izFanVfDs = 21.5                     // Fan design or rated flow at rated pressure, cfm
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
+   izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
+
+=======
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
 IZXFER   "Stairs3-InfLU"  
    izNVType = "AIRNETEXT"               // Choice determining interzone ventilation
    izZn1 = "Stairs3-zn"                 // Name of primary zone (flow rates > 0 are into the primary zone)
@@ -1955,6 +2102,17 @@ IZXFER   "Stairs3-InfHD"
    izCpr = -0.3                         // Wind pressure coefficient (for AIRNETEXT)
    izExp = 0.65                         // Opening exponent
 
+<<<<<<< HEAD
+IZXFER   "Stairs3-IAQHRV"  
+   izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
+   izZn1 = "Stairs3-zn"                 // Name of primary zone (flow rates > 0 are into the primary zone)
+   izFanVfDs = 21.5                     // Fan design or rated flow at rated pressure, cfm
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
+   izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
+
+=======
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
 IZXFER   "Zone3ToAtticCeiling-xAttic"  
    izNVType = "AIRNETIZ"                // Choice determining interzone ventilation
    izZn1 = "Zone3-zn"                   // Name of primary zone (flow rates > 0 are into the primary zone)
@@ -4974,9 +5132,14 @@ ZONE   "Corridor1-zn"
    znFloorZ = 0.7                       // Nominal zone floor height relative to arbitrary 0 level, ft
    znCAir = 2888                        // Zone 'air' heat capacity: represents heat capacity of air, furniture, 'light' walls, and everything in zone except nonQUICK surfaces
    znSC = select( $radDiff >1., 0.5, default 0.8 )    // Expression representing zone shade closure
+<<<<<<< HEAD
+   znTH = select( $DOWH==1, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==8, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==7, hourval(60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60,60,60,60,60), default hourval(60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70) )    // Expression representing heating setpoint, °F
+   znTC = select( $DOWH==1, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==8, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==7, hourval(85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85,85,85,85,85), default hourval(85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75) )    // Expression representing cooling setpoint, °F
+=======
    znTH = select( $dsDay==1, 70, $dsDay==2, 60, ISSEASONCOOLING, 60, default 68)     // Expression representing heating setpoint, °F
    znTC = select( $dsDay==1, 83, $dsDay==2, 78, default hourval(78,78,78,78,78,78,78,83,83,83,83,83,83,82,81,80,79,78,78,78,78,78,78,78))    // Expression representing cooling setpoint, °F
    znTD = select( $dsDay==1, 77, $dsDay==2, 99, ISSEASONCOOLING, 68, default 77 )    // Expression representing desired setpoint, °F
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    infAC = 0                            // Zone infiltration air changes per hour, 1/hr
    infELA = 0                           // Zone effective leakage area (ELA), in2
    infShld = 4                          // Zone local shielding class, used in ELA model
@@ -5061,9 +5224,14 @@ ZONE   "BusinessCenter1-zn"
    znFloorZ = 0.7                       // Nominal zone floor height relative to arbitrary 0 level, ft
    znCAir = 648                         // Zone 'air' heat capacity: represents heat capacity of air, furniture, 'light' walls, and everything in zone except nonQUICK surfaces
    znSC = select( $radDiff >1., 0.5, default 0.8 )    // Expression representing zone shade closure
+<<<<<<< HEAD
+   znTH = select( $DOWH==1, hourval(60,60,60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60), $DOWH==8, hourval(60,60,60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60), $DOWH==7, hourval(60,60,60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60), default hourval(60,60,60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60) )    // Expression representing heating setpoint, °F
+   znTC = select( $DOWH==1, hourval(85,85,85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85), $DOWH==8, hourval(85,85,85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85), $DOWH==7, hourval(85,85,85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85), default hourval(85,85,85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85) )    // Expression representing cooling setpoint, °F
+=======
    znTH = select( $dsDay==1, 70, $dsDay==2, 60, ISSEASONCOOLING, 60, default 68)     // Expression representing heating setpoint, °F
    znTC = select( $dsDay==1, 83, $dsDay==2, 78, default hourval(78,78,78,78,78,78,78,83,83,83,83,83,83,82,81,80,79,78,78,78,78,78,78,78))    // Expression representing cooling setpoint, °F
    znTD = select( $dsDay==1, 77, $dsDay==2, 99, ISSEASONCOOLING, 68, default 77 )    // Expression representing desired setpoint, °F
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    infAC = 0                            // Zone infiltration air changes per hour, 1/hr
    infELA = 0                           // Zone effective leakage area (ELA), in2
    infShld = 4                          // Zone local shielding class, used in ELA model
@@ -5215,9 +5383,14 @@ ZONE   "FitnessCenter1-zn"
    znFloorZ = 0.7                       // Nominal zone floor height relative to arbitrary 0 level, ft
    znCAir = 648                         // Zone 'air' heat capacity: represents heat capacity of air, furniture, 'light' walls, and everything in zone except nonQUICK surfaces
    znSC = select( $radDiff >1., 0.5, default 0.8 )    // Expression representing zone shade closure
+<<<<<<< HEAD
+   znTH = select( $DOWH==1, hourval(60,60,60,60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,60,60,60,60,60), $DOWH==8, hourval(60,60,60,60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,60,60,60,60,60), $DOWH==7, hourval(60,60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60,60), default hourval(60,60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60,60,60) )    // Expression representing heating setpoint, °F
+   znTC = select( $DOWH==1, hourval(85,85,85,85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,85,85,85,85,85), $DOWH==8, hourval(85,85,85,85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,85,85,85,85,85), $DOWH==7, hourval(85,85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85,85), default hourval(85,85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85,85,85) )    // Expression representing cooling setpoint, °F
+=======
    znTH = select( $dsDay==1, 70, $dsDay==2, 60, ISSEASONCOOLING, 60, default 68)     // Expression representing heating setpoint, °F
    znTC = select( $dsDay==1, 83, $dsDay==2, 78, default hourval(78,78,78,78,78,78,78,83,83,83,83,83,83,82,81,80,79,78,78,78,78,78,78,78))    // Expression representing cooling setpoint, °F
    znTD = select( $dsDay==1, 77, $dsDay==2, 99, ISSEASONCOOLING, 68, default 77 )    // Expression representing desired setpoint, °F
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    infAC = 0                            // Zone infiltration air changes per hour, 1/hr
    infELA = 0                           // Zone effective leakage area (ELA), in2
    infShld = 4                          // Zone local shielding class, used in ELA model
@@ -5369,9 +5542,14 @@ ZONE   "Laundry1-zn"
    znFloorZ = 0.7                       // Nominal zone floor height relative to arbitrary 0 level, ft
    znCAir = 216                         // Zone 'air' heat capacity: represents heat capacity of air, furniture, 'light' walls, and everything in zone except nonQUICK surfaces
    znSC = select( $radDiff >1., 0.5, default 0.8 )    // Expression representing zone shade closure
+<<<<<<< HEAD
+   znTH = select( $DOWH==1, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==8, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==7, hourval(60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60,60,60,60,60), default hourval(60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70) )    // Expression representing heating setpoint, °F
+   znTC = select( $DOWH==1, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==8, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==7, hourval(85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85,85,85,85,85), default hourval(85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75) )    // Expression representing cooling setpoint, °F
+=======
    znTH = select( $dsDay==1, 70, $dsDay==2, 60, ISSEASONCOOLING, 60, default 68)     // Expression representing heating setpoint, °F
    znTC = select( $dsDay==1, 83, $dsDay==2, 78, default hourval(78,78,78,78,78,78,78,83,83,83,83,83,83,82,81,80,79,78,78,78,78,78,78,78))    // Expression representing cooling setpoint, °F
    znTD = select( $dsDay==1, 77, $dsDay==2, 99, ISSEASONCOOLING, 68, default 77 )    // Expression representing desired setpoint, °F
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    infAC = 0                            // Zone infiltration air changes per hour, 1/hr
    infELA = 0                           // Zone effective leakage area (ELA), in2
    infShld = 4                          // Zone local shielding class, used in ELA model
@@ -5542,9 +5720,14 @@ ZONE   "LeasingOffice1-zn"
    znFloorZ = 0.7                       // Nominal zone floor height relative to arbitrary 0 level, ft
    znCAir = 432                         // Zone 'air' heat capacity: represents heat capacity of air, furniture, 'light' walls, and everything in zone except nonQUICK surfaces
    znSC = select( $radDiff >1., 0.5, default 0.8 )    // Expression representing zone shade closure
+<<<<<<< HEAD
+   znTH = select( $DOWH==1, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==8, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==7, hourval(60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60,60,60,60,60), default hourval(60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70) )    // Expression representing heating setpoint, °F
+   znTC = select( $DOWH==1, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==8, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==7, hourval(85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85,85,85,85,85), default hourval(85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75) )    // Expression representing cooling setpoint, °F
+=======
    znTH = select( $dsDay==1, 70, $dsDay==2, 60, ISSEASONCOOLING, 60, default 68)     // Expression representing heating setpoint, °F
    znTC = select( $dsDay==1, 83, $dsDay==2, 78, default hourval(78,78,78,78,78,78,78,83,83,83,83,83,83,82,81,80,79,78,78,78,78,78,78,78))    // Expression representing cooling setpoint, °F
    znTD = select( $dsDay==1, 77, $dsDay==2, 99, ISSEASONCOOLING, 68, default 77 )    // Expression representing desired setpoint, °F
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    infAC = 0                            // Zone infiltration air changes per hour, 1/hr
    infELA = 0                           // Zone effective leakage area (ELA), in2
    infShld = 4                          // Zone local shielding class, used in ELA model
@@ -5715,9 +5898,14 @@ ZONE   "Lobby1-zn"
    znFloorZ = 0.7                       // Nominal zone floor height relative to arbitrary 0 level, ft
    znCAir = 1080                        // Zone 'air' heat capacity: represents heat capacity of air, furniture, 'light' walls, and everything in zone except nonQUICK surfaces
    znSC = select( $radDiff >1., 0.5, default 0.8 )    // Expression representing zone shade closure
+<<<<<<< HEAD
+   znTH = select( $DOWH==1, hourval(60,60,60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60), $DOWH==8, hourval(60,60,60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60), $DOWH==7, hourval(60,60,60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60), default hourval(60,60,60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60) )    // Expression representing heating setpoint, °F
+   znTC = select( $DOWH==1, hourval(85,85,85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85), $DOWH==8, hourval(85,85,85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85), $DOWH==7, hourval(85,85,85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85), default hourval(85,85,85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85) )    // Expression representing cooling setpoint, °F
+=======
    znTH = select( $dsDay==1, 70, $dsDay==2, 60, ISSEASONCOOLING, 60, default 68)     // Expression representing heating setpoint, °F
    znTC = select( $dsDay==1, 83, $dsDay==2, 78, default hourval(78,78,78,78,78,78,78,83,83,83,83,83,83,82,81,80,79,78,78,78,78,78,78,78))    // Expression representing cooling setpoint, °F
    znTD = select( $dsDay==1, 77, $dsDay==2, 99, ISSEASONCOOLING, 68, default 77 )    // Expression representing desired setpoint, °F
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    infAC = 0                            // Zone infiltration air changes per hour, 1/hr
    infELA = 0                           // Zone effective leakage area (ELA), in2
    infShld = 4                          // Zone local shielding class, used in ELA model
@@ -5873,9 +6061,14 @@ ZONE   "MechanicalRoom1-zn"
    znFloorZ = 0.7                       // Nominal zone floor height relative to arbitrary 0 level, ft
    znCAir = 216                         // Zone 'air' heat capacity: represents heat capacity of air, furniture, 'light' walls, and everything in zone except nonQUICK surfaces
    znSC = select( $radDiff >1., 0.5, default 0.8 )    // Expression representing zone shade closure
+<<<<<<< HEAD
+   znTH = select( $DOWH==1, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==8, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==7, hourval(60,60,60,60,60,60,60,70,70,70,70,70,70,70,70,70,60,60,60,60,60,60,60,60), default hourval(60,60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,60,60,60,60,60,60,60) )    // Expression representing heating setpoint, °F
+   znTC = select( $DOWH==1, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==8, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==7, hourval(85,85,85,85,85,85,85,75,75,75,75,75,75,75,75,75,85,85,85,85,85,85,85,85), default hourval(85,85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,85,85,85,85,85,85,85) )    // Expression representing cooling setpoint, °F
+=======
    znTH = select( $dsDay==1, 70, $dsDay==2, 60, ISSEASONCOOLING, 60, default hourval(65,65,65,65,65,65,66.5,68,68,68,68,68,68,68,68,68,68,68,68,68,68,68,68,65))     // Expression representing heating setpoint, °F
    znTC = select( $dsDay==1, 83, $dsDay==2, 78, default hourval(78,78,78,78,78,78,78,83,83,83,83,83,83,82,81,80,79,78,78,78,78,78,78,78))    // Expression representing cooling setpoint, °F
    znTD = select( $dsDay==1, 77, $dsDay==2, 99, ISSEASONCOOLING, 68, default 77 )    // Expression representing desired setpoint, °F
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    infAC = 0                            // Zone infiltration air changes per hour, 1/hr
    infELA = 0                           // Zone effective leakage area (ELA), in2
    infShld = 4                          // Zone local shielding class, used in ELA model
@@ -5997,9 +6190,14 @@ ZONE   "Stairs1-zn"
    znFloorZ = 0.7                       // Nominal zone floor height relative to arbitrary 0 level, ft
    znCAir = 288                         // Zone 'air' heat capacity: represents heat capacity of air, furniture, 'light' walls, and everything in zone except nonQUICK surfaces
    znSC = select( $radDiff >1., 0.5, default 0.8 )    // Expression representing zone shade closure
+<<<<<<< HEAD
+   znTH = select( $DOWH==1, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==8, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==7, hourval(60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60,60,60,60,60), default hourval(60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70) )    // Expression representing heating setpoint, °F
+   znTC = select( $DOWH==1, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==8, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==7, hourval(85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85,85,85,85,85), default hourval(85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75) )    // Expression representing cooling setpoint, °F
+=======
    znTH = select( $dsDay==1, 70, $dsDay==2, 60, ISSEASONCOOLING, 60, default 68)     // Expression representing heating setpoint, °F
    znTC = select( $dsDay==1, 83, $dsDay==2, 78, default hourval(78,78,78,78,78,78,78,83,83,83,83,83,83,82,81,80,79,78,78,78,78,78,78,78))    // Expression representing cooling setpoint, °F
    znTD = select( $dsDay==1, 77, $dsDay==2, 99, ISSEASONCOOLING, 68, default 77 )    // Expression representing desired setpoint, °F
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    infAC = 0                            // Zone infiltration air changes per hour, 1/hr
    infELA = 0                           // Zone effective leakage area (ELA), in2
    infShld = 4                          // Zone local shielding class, used in ELA model
@@ -6155,9 +6353,14 @@ ZONE   "Corridor2-zn"
    znFloorZ = 9.7                       // Nominal zone floor height relative to arbitrary 0 level, ft
    znCAir = 2888                        // Zone 'air' heat capacity: represents heat capacity of air, furniture, 'light' walls, and everything in zone except nonQUICK surfaces
    znSC = select( $radDiff >1., 0.5, default 0.8 )    // Expression representing zone shade closure
+<<<<<<< HEAD
+   znTH = select( $DOWH==1, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==8, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==7, hourval(60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60,60,60,60,60), default hourval(60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70) )    // Expression representing heating setpoint, °F
+   znTC = select( $DOWH==1, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==8, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==7, hourval(85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85,85,85,85,85), default hourval(85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75) )    // Expression representing cooling setpoint, °F
+=======
    znTH = select( $dsDay==1, 70, $dsDay==2, 60, ISSEASONCOOLING, 60, default 68)     // Expression representing heating setpoint, °F
    znTC = select( $dsDay==1, 83, $dsDay==2, 78, default hourval(78,78,78,78,78,78,78,83,83,83,83,83,83,82,81,80,79,78,78,78,78,78,78,78))    // Expression representing cooling setpoint, °F
    znTD = select( $dsDay==1, 77, $dsDay==2, 99, ISSEASONCOOLING, 68, default 77 )    // Expression representing desired setpoint, °F
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    infAC = 0                            // Zone infiltration air changes per hour, 1/hr
    infELA = 0                           // Zone effective leakage area (ELA), in2
    infShld = 4                          // Zone local shielding class, used in ELA model
@@ -6308,9 +6511,14 @@ ZONE   "Corridor3-zn"
    znFloorZ = 18.7                      // Nominal zone floor height relative to arbitrary 0 level, ft
    znCAir = 2888                        // Zone 'air' heat capacity: represents heat capacity of air, furniture, 'light' walls, and everything in zone except nonQUICK surfaces
    znSC = select( $radDiff >1., 0.5, default 0.8 )    // Expression representing zone shade closure
+<<<<<<< HEAD
+   znTH = select( $DOWH==1, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==8, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==7, hourval(60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60,60,60,60,60), default hourval(60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70) )    // Expression representing heating setpoint, °F
+   znTC = select( $DOWH==1, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==8, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==7, hourval(85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85,85,85,85,85), default hourval(85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75) )    // Expression representing cooling setpoint, °F
+=======
    znTH = select( $dsDay==1, 70, $dsDay==2, 60, ISSEASONCOOLING, 60, default 68)     // Expression representing heating setpoint, °F
    znTC = select( $dsDay==1, 83, $dsDay==2, 78, default hourval(78,78,78,78,78,78,78,83,83,83,83,83,83,82,81,80,79,78,78,78,78,78,78,78))    // Expression representing cooling setpoint, °F
    znTD = select( $dsDay==1, 77, $dsDay==2, 99, ISSEASONCOOLING, 68, default 77 )    // Expression representing desired setpoint, °F
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    infAC = 0                            // Zone infiltration air changes per hour, 1/hr
    infELA = 0                           // Zone effective leakage area (ELA), in2
    infShld = 4                          // Zone local shielding class, used in ELA model
@@ -6477,9 +6685,14 @@ ZONE   "Stairs2-zn"
    znFloorZ = 9.7                       // Nominal zone floor height relative to arbitrary 0 level, ft
    znCAir = 288                         // Zone 'air' heat capacity: represents heat capacity of air, furniture, 'light' walls, and everything in zone except nonQUICK surfaces
    znSC = select( $radDiff >1., 0.5, default 0.8 )    // Expression representing zone shade closure
+<<<<<<< HEAD
+   znTH = select( $DOWH==1, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==8, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==7, hourval(60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60,60,60,60,60), default hourval(60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70) )    // Expression representing heating setpoint, °F
+   znTC = select( $DOWH==1, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==8, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==7, hourval(85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85,85,85,85,85), default hourval(85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75) )    // Expression representing cooling setpoint, °F
+=======
    znTH = select( $dsDay==1, 70, $dsDay==2, 60, ISSEASONCOOLING, 60, default 68)     // Expression representing heating setpoint, °F
    znTC = select( $dsDay==1, 83, $dsDay==2, 78, default hourval(78,78,78,78,78,78,78,83,83,83,83,83,83,82,81,80,79,78,78,78,78,78,78,78))    // Expression representing cooling setpoint, °F
    znTD = select( $dsDay==1, 77, $dsDay==2, 99, ISSEASONCOOLING, 68, default 77 )    // Expression representing desired setpoint, °F
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    infAC = 0                            // Zone infiltration air changes per hour, 1/hr
    infELA = 0                           // Zone effective leakage area (ELA), in2
    infShld = 4                          // Zone local shielding class, used in ELA model
@@ -6628,9 +6841,14 @@ ZONE   "Stairs3-zn"
    znFloorZ = 18.7                      // Nominal zone floor height relative to arbitrary 0 level, ft
    znCAir = 288                         // Zone 'air' heat capacity: represents heat capacity of air, furniture, 'light' walls, and everything in zone except nonQUICK surfaces
    znSC = select( $radDiff >1., 0.5, default 0.8 )    // Expression representing zone shade closure
+<<<<<<< HEAD
+   znTH = select( $DOWH==1, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==8, hourval(60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60), $DOWH==7, hourval(60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,60,60,60,60,60), default hourval(60,60,60,60,60,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70,70) )    // Expression representing heating setpoint, °F
+   znTC = select( $DOWH==1, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==8, hourval(85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85,85), $DOWH==7, hourval(85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,85,85,85,85,85), default hourval(85,85,85,85,85,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75,75) )    // Expression representing cooling setpoint, °F
+=======
    znTH = select( $dsDay==1, 70, $dsDay==2, 60, ISSEASONCOOLING, 60, default 68)     // Expression representing heating setpoint, °F
    znTC = select( $dsDay==1, 83, $dsDay==2, 78, default hourval(78,78,78,78,78,78,78,83,83,83,83,83,83,82,81,80,79,78,78,78,78,78,78,78))    // Expression representing cooling setpoint, °F
    znTD = select( $dsDay==1, 77, $dsDay==2, 99, ISSEASONCOOLING, 68, default 77 )    // Expression representing desired setpoint, °F
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    infAC = 0                            // Zone infiltration air changes per hour, 1/hr
    infELA = 0                           // Zone effective leakage area (ELA), in2
    infShld = 4                          // Zone local shielding class, used in ELA model
@@ -7334,6 +7552,10 @@ PVARRAY   "pvarray 1"
    pvElecMtr = "MtrElec"                // Electric meter to report results to
 
 EXPORT   "ExportElec"  
+<<<<<<< HEAD
+   exExportfile = "Primary"             // Name of EXPORTFILE to write simulation results to
+=======
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    exType = "MTR"                       // Export type
    exFreq = "HOUR"                      // Time interval for generating rows of export data
    exMeter = "MtrElec"                  // Meter to report
@@ -7342,6 +7564,10 @@ EXPORT   "ExportElec"
    exDayEnd = Dec 31
 
 EXPORT   "ExportNatGas"  
+<<<<<<< HEAD
+   exExportfile = "Primary"             // Name of EXPORTFILE to write simulation results to
+=======
+>>>>>>> 10ad2510af88116d2a65a7c6704f25e3af30dc33
    exType = "MTR"                       // Export type
    exFreq = "HOUR"                      // Time interval for generating rows of export data
    exMeter = "MtrNatGas"                // Meter to report
