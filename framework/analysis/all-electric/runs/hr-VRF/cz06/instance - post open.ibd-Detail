@@ -201,6 +201,8 @@ Proj   User: "High-Rise Mixed-Use (10-story)"
    SoftwareVersion = UVal: "CBECC-Com 2022.0.1 RV (1113)"
    CompReportNum = RVal: 0
    ResultsCurrentMessage = UVal: "(not current)"
+   ModelPath = PDef: "C:\Users\mnakajima\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\all-electric\runs\hr-vrf\cz06\"
+   ModelFile = PDef: "instance"
    PropHasUnknownHVACZns = RVal: 0
    WtrHtrCnt = RVal: 4
    CALGreenOutdrLtg = RVal: 0
@@ -302,8 +304,8 @@ Proj   User: "High-Rise Mixed-Use (10-story)"
    MtlBldgWallUA[4] = RVal: 0
    MtlBldgWallUA[5] = RVal: 0
    MtlBldgWallUA[6] = RVal: 0
-   MtlFrmWallUA[1] = RVal: 352.374
-   MtlFrmWallUA[2] = RVal: 0
+   MtlFrmWallUA[1] = RVal: 476.83
+   MtlFrmWallUA[2] = RVal: 3061.61
    MtlFrmWallUA[3] = RVal: 0
    MtlFrmWallUA[4] = RVal: 0
    MtlFrmWallUA[5] = RVal: 0
@@ -362,8 +364,8 @@ Proj   User: "High-Rise Mixed-Use (10-story)"
    MtlBldgWallArea[4] = RVal: 0
    MtlBldgWallArea[5] = RVal: 0
    MtlBldgWallArea[6] = RVal: 0
-   MtlFrmWallArea[1] = RVal: 5120
-   MtlFrmWallArea[2] = RVal: 0
+   MtlFrmWallArea[1] = RVal: 6920
+   MtlFrmWallArea[2] = RVal: 44280
    MtlFrmWallArea[3] = RVal: 0
    MtlFrmWallArea[4] = RVal: 0
    MtlFrmWallArea[5] = RVal: 0
@@ -380,8 +382,8 @@ Proj   User: "High-Rise Mixed-Use (10-story)"
    MassHeavyWallArea[4] = RVal: 0
    MassHeavyWallArea[5] = RVal: 0
    MassHeavyWallArea[6] = RVal: 0
-   WoodFrmAndOtherWallArea[1] = RVal: 1800
-   WoodFrmAndOtherWallArea[2] = RVal: 44280
+   WoodFrmAndOtherWallArea[1] = RVal: 0
+   WoodFrmAndOtherWallArea[2] = RVal: 0
    WoodFrmAndOtherWallArea[3] = RVal: 0
    WoodFrmAndOtherWallArea[4] = RVal: 0
    WoodFrmAndOtherWallArea[5] = RVal: 0
@@ -439,11 +441,9 @@ Proj   User: "High-Rise Mixed-Use (10-story)"
    AltMassFlrMaxUFac[1] = RVal: 0.111
    AltMassFlrMaxUFac[2] = RVal: 9.999
    AltMassFlrMaxUFac[3] = RVal: 9.999
-   MtlFrmWallUFac[1] = RVal: 0.0688231
-   MtlFrmWallUFac[7] = RVal: 0.0688231
-   WoodFrmAndOtherWallUFac[1] = RVal: 0
-   WoodFrmAndOtherWallUFac[2] = RVal: 0
-   WoodFrmAndOtherWallUFac[7] = RVal: 0
+   MtlFrmWallUFac[1] = RVal: 0.0689061
+   MtlFrmWallUFac[2] = RVal: 0.0691419
+   MtlFrmWallUFac[7] = RVal: 0.0691101
    WoodFrmAndOtherRoofUFac[1] = RVal: 0.0340327
    WoodFrmAndOtherRoofUFac[2] = RVal: 0.0340327
    WoodFrmAndOtherRoofUFac[7] = RVal: 0.0340327
@@ -519,7 +519,7 @@ Proj   User: "High-Rise Mixed-Use (10-story)"
    CO2EmissionsResultsDecPrec = RVal: 2
    ZipCodeMsg = RVal: "Enter zip code to default CZ and weather file"
    HasBaseHVAC = RVal: 0
-   ModelName = RVal: "NoName"
+   ModelName = RVal: "instance22"
    TblName = RVal: "NoName"
    AvgStateElecCostMsg = RVal: "Electricity cost is equal to the California state average cost"
    AvgStateOtherFuelCostMsg = RVal: " "
@@ -2013,6 +2013,7 @@ ConsAssm   User: "SlabOnOrBelowGrade"
 ConsAssm   User: "ResMetalFramedWall"  
    CompatibleSurfType = RVal: "ExteriorWall"  (1)
    SpecMthd = UVal: "Layers"  (1)
+   UFactor = RVal: 0.0691419
    AssignedSurfType = RVal: 1
    Status = RVal: "New"  (1)
    ExtRoughness = UVal: "Smooth"  (5)
@@ -2034,7 +2035,7 @@ ConsAssm   User: "ResMetalFramedWall"
    MatRef[2] = UVal: "Compliance Insulation R3.63"
    MatRef[3] = UVal: "Gypsum Board - 5/8 in."
    MatRef[4] = UVal: "Gypsum Board - 5/8 in."
-   MatRef[5] = UVal: "- none -"
+   MatRef[5] = UVal: "MetalFrameWall16inOC R0.00"
    MatRef[6] = UVal: "Gypsum Board - 5/8 in."
    MatRef[7] = UVal: "Gypsum Board - 5/8 in."
    AreaNew = RVal: 46080
@@ -2046,9 +2047,9 @@ ConsAssm   User: "ResMetalFramedWall"
    AreaAltNonResCond = RVal: 0
    AreaAltResCond = RVal: 0
    AreaAltRelocCond = RVal: 0
-   FrmMat = RVal: "NA"  (1)
+   FrmMat = RVal: "Metal"  (3)
    CavityInsVal = RVal: 0
-   PerfFacRpt = RVal: "NA"
+   PerfFacRpt = RVal: "U-Factor: 0.069"
    InsCheckSum = RVal: 10.73
    RoofDens = RDef: 0
    BuiltUpRoof = RDef: 0
@@ -2057,7 +2058,7 @@ ConsAssm   User: "ResMetalFramedWall"
    SumMatHeatCap = RVal: 2.30653
    IsSpandrel = RVal: "false"  (2)
    ContainsMetalWallMaterial = RVal: "false"  (2)
-   ContainsMetalFrameMaterial = RVal: "false"  (2)
+   ContainsMetalFrameMaterial = RVal: "true"  (1)
    ContainsWoodFrameMaterial = RVal: "false"  (2)
    ContainsMetalRoofMaterial = RVal: "false"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: "false"  (2)
@@ -2067,7 +2068,9 @@ ConsAssm   User: "ResMetalFramedWall"
    AlteredConsCnt = RVal: 0
    ExistingConsCnt = RVal: 0
    HtCapCat = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (6)
+   ConsType = RVal: "MetalFrameWall"  (2)
+   UAValueNewNonRes = RVal: 124.456
+   UAValueNewRes = RVal: 3061.61
    ..
 
 ConsAssm   User: "MetalFrameWallInterior"  
@@ -25283,9 +25286,10 @@ ExtWall   User: "Surface 141"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 2080
    AreaNewResCond = RVal: 2080
    DrArea = RVal: 0
@@ -26953,9 +26957,10 @@ ExtWall   User: "Surface 236"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 2080
    AreaNewResCond = RVal: 2080
    DrArea = RVal: 0
@@ -28403,9 +28408,10 @@ ExtWall   User: "Surface 125"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 2080
    AreaNewResCond = RVal: 2080
    DrArea = RVal: 0
@@ -30058,9 +30064,10 @@ ExtWall   User: "Surface 194"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 2080
    AreaNewResCond = RVal: 2080
    DrArea = RVal: 0
@@ -31426,9 +31433,10 @@ ExtWall   User: "Surface 221"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 2080
    AreaNewResCond = RVal: 2080
    DrArea = RVal: 0
@@ -32958,9 +32966,10 @@ ExtWall   User: "Surface 241"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 2080
    AreaNewResCond = RVal: 2080
    DrArea = RVal: 0
@@ -34378,9 +34387,10 @@ ExtWall   User: "Surface 206"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 2880
    AreaNewResCond = RVal: 2880
    DrArea = RVal: 0
@@ -35496,9 +35506,10 @@ ExtWall   User: "Surface 176"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 2400
    AreaNewResCond = RVal: 2400
    DrArea = RVal: 0
@@ -35951,9 +35962,10 @@ ExtWall   User: "Surface 180"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 2880
    AreaNewResCond = RVal: 2880
    DrArea = RVal: 0
@@ -37303,9 +37315,10 @@ ExtWall   User: "Surface 198"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 2880
    AreaNewResCond = RVal: 2880
    DrArea = RVal: 0
@@ -37593,9 +37606,10 @@ ExtWall   User: "Surface 201"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 2400
    AreaNewResCond = RVal: 2400
    DrArea = RVal: 0
@@ -38779,9 +38793,10 @@ ExtWall   User: "Surface 253"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 2400
    AreaNewResCond = RVal: 2400
    DrArea = RVal: 0
@@ -39083,9 +39098,10 @@ ExtWall   User: "Surface 257"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 2880
    AreaNewResCond = RVal: 2880
    DrArea = RVal: 0
@@ -40283,9 +40299,10 @@ ExtWall   User: "Surface 210"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 2400
    AreaNewResCond = RVal: 2400
    DrArea = RVal: 0
@@ -40504,9 +40521,10 @@ ExtWall   User: "Surface 211"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 2880
    AreaNewResCond = RVal: 2880
    DrArea = RVal: 0
@@ -47552,9 +47570,10 @@ ExtWall   User: "Surface 119"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 800
    AreaNewNonResCond = RVal: 800
    DrArea = RVal: 0
@@ -48559,9 +48578,10 @@ ExtWall   User: "Surface 247"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 800
    AreaNewNonResCond = RVal: 800
    DrArea = RVal: 0
@@ -49735,9 +49755,10 @@ ExtWall   User: "Surface 136"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 1440
    AreaNewResCond = RVal: 1440
    DrArea = RVal: 0
@@ -51058,9 +51079,10 @@ ExtWall   User: "Surface 216"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 1440
    AreaNewResCond = RVal: 1440
    DrArea = RVal: 0
@@ -52521,9 +52543,10 @@ ExtWall   User: "Surface 1341"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 260
    AreaNewResCond = RVal: 260
    DrArea = RVal: 0
@@ -53935,9 +53958,10 @@ ExtWall   User: "Surface 1444"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 260
    AreaNewResCond = RVal: 260
    DrArea = RVal: 0
@@ -55385,9 +55409,10 @@ ExtWall   User: "Surface 1333"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 260
    AreaNewResCond = RVal: 260
    DrArea = RVal: 0
@@ -56970,9 +56995,10 @@ ExtWall   User: "Surface 1398"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 260
    AreaNewResCond = RVal: 260
    DrArea = RVal: 0
@@ -58269,9 +58295,10 @@ ExtWall   User: "Surface 1429"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 260
    AreaNewResCond = RVal: 260
    DrArea = RVal: 0
@@ -59766,9 +59793,10 @@ ExtWall   User: "Surface 1449"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 260
    AreaNewResCond = RVal: 260
    DrArea = RVal: 0
@@ -61185,9 +61213,10 @@ ExtWall   User: "Surface 1410"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 360
    AreaNewResCond = RVal: 360
    DrArea = RVal: 0
@@ -62234,9 +62263,10 @@ ExtWall   User: "Surface 1374"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 300
    AreaNewResCond = RVal: 300
    DrArea = RVal: 0
@@ -62723,9 +62753,10 @@ ExtWall   User: "Surface 1378"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 360
    AreaNewResCond = RVal: 360
    DrArea = RVal: 0
@@ -64040,9 +64071,10 @@ ExtWall   User: "Surface 1402"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 360
    AreaNewResCond = RVal: 360
    DrArea = RVal: 0
@@ -64330,9 +64362,10 @@ ExtWall   User: "Surface 1405"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 300
    AreaNewResCond = RVal: 300
    DrArea = RVal: 0
@@ -65481,9 +65514,10 @@ ExtWall   User: "Surface 1461"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 300
    AreaNewResCond = RVal: 300
    DrArea = RVal: 0
@@ -65785,9 +65819,10 @@ ExtWall   User: "Surface 1465"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 360
    AreaNewResCond = RVal: 360
    DrArea = RVal: 0
@@ -66950,9 +66985,10 @@ ExtWall   User: "Surface 1414"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 300
    AreaNewResCond = RVal: 300
    DrArea = RVal: 0
@@ -67171,9 +67207,10 @@ ExtWall   User: "Surface 1415"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 360
    AreaNewResCond = RVal: 360
    DrArea = RVal: 0
@@ -74124,9 +74161,10 @@ ExtWall   User: "Surface 1327"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 100
    AreaNewNonResCond = RVal: 100
    DrArea = RVal: 0
@@ -75131,9 +75169,10 @@ ExtWall   User: "Surface 1455"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 100
    AreaNewNonResCond = RVal: 100
    DrArea = RVal: 0
@@ -76258,9 +76297,10 @@ ExtWall   User: "Surface 1388"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 180
    AreaNewResCond = RVal: 180
    DrArea = RVal: 0
@@ -77491,9 +77531,10 @@ ExtWall   User: "Surface 1420"
    IsAltered = RVal: 0
    IsExisting = RVal: 0
    HeatCapCategory = RVal: "NotMass"  (3)
-   ConsType = RVal: "WoodFramingAndOtherWall"  (5)
+   ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0691419
    AreaNew = RVal: 180
    AreaNewResCond = RVal: 180
    DrArea = RVal: 0
@@ -96352,6 +96393,39 @@ Mat   User: "Compliance Insulation R9.40"
    InsCheck = RVal: 9.4
    ..
 
+Mat   User: "Compliance Insulation R7.10"  
+   CodeCat = UVal: "Insulation Board"  (100)
+   CodeItem = UVal: "Compliance Insulation R7.10"  (9101)
+   RVal = RVal: 7.1
+   ThrmlCndct = RVal: 0.0133
+   SpecHt = RVal: 0.27
+   Dens = RVal: 1
+   Thkns = RVal: 1.13316
+   FrmMat = PDef: "- specify -"  (0)
+   FrmConfig = PDef: "- specify -"  (0)
+   FrmDepth = PDef: "- specify -"  (0)
+   CavityIns = RVal: 0
+   FrmFacHeaders = RVal: 0
+   HeaderIns = RVal: 0
+   CMUWt = PDef: "- specify -"  (0)
+   CMUFill = PDef: "- specify -"  (0)
+   CavityInsVal = RVal: 0
+   FrmDepthVal = RVal: 0
+   IsSpandrel = RVal: 0
+   IsHollowCoreMasonry = RVal: 0
+   IsMetalWall = RVal: 0
+   IsMetalFrame = RVal: 0
+   IsWoodFrame = RVal: 0
+   IsMetalFrameLayer = RVal: 0
+   IsWoodFrameLayer = RVal: 0
+   IsMetalRoof = RVal: 0
+   IsWoodFrameRoof = RVal: 0
+   RefCnt = RVal: 1
+   SimpleCompositeR = RVal: 0
+   HeatCap = RVal: 0.0254961
+   InsCheck = RVal: 7.1
+   ..
+
 Mat   User: "Compliance Insulation R1.54"  
    CodeCat = UVal: "Insulation Board"  (100)
    CodeItem = UVal: "Compliance Insulation R1.54"  (9084)
@@ -96416,6 +96490,39 @@ Mat   User: "Compliance Insulation R1.35"
    SimpleCompositeR = RVal: 0
    HeatCap = RVal: 0.00484785
    InsCheck = RVal: 1.35
+   ..
+
+Mat   User: "Compliance Insulation R3.63"  
+   CodeCat = UVal: "Insulation Board"  (100)
+   CodeItem = UVal: "Compliance Insulation R3.63"  (9091)
+   RVal = RVal: 3.63
+   ThrmlCndct = RVal: 0.0133
+   SpecHt = RVal: 0.27
+   Dens = RVal: 1
+   Thkns = RVal: 0.579348
+   FrmMat = PDef: "- specify -"  (0)
+   FrmConfig = PDef: "- specify -"  (0)
+   FrmDepth = PDef: "- specify -"  (0)
+   CavityIns = RVal: 0
+   FrmFacHeaders = RVal: 0
+   HeaderIns = RVal: 0
+   CMUWt = PDef: "- specify -"  (0)
+   CMUFill = PDef: "- specify -"  (0)
+   CavityInsVal = RVal: 0
+   FrmDepthVal = RVal: 0
+   IsSpandrel = RVal: 0
+   IsHollowCoreMasonry = RVal: 0
+   IsMetalWall = RVal: 0
+   IsMetalFrame = RVal: 0
+   IsWoodFrame = RVal: 0
+   IsMetalFrameLayer = RVal: 0
+   IsWoodFrameLayer = RVal: 0
+   IsMetalRoof = RVal: 0
+   IsWoodFrameRoof = RVal: 0
+   RefCnt = RVal: 1
+   SimpleCompositeR = RVal: 0
+   HeatCap = RVal: 0.0130353
+   InsCheck = RVal: 3.63
    ..
 
 Mat   User: "Compliance Insulation R6.00"  
@@ -96515,6 +96622,39 @@ Mat   User: "Compliance Insulation R6.32"
    SimpleCompositeR = RVal: 0
    HeatCap = RVal: 0.0226951
    InsCheck = RVal: 6.32
+   ..
+
+Mat   User: "Compliance Insulation R3.00"  
+   CodeCat = UVal: "Insulation Board"  (100)
+   CodeItem = UVal: "Compliance Insulation R3.00"  (9090)
+   RVal = RVal: 3
+   ThrmlCndct = RVal: 0.0133
+   SpecHt = RVal: 0.27
+   Dens = RVal: 1
+   Thkns = RVal: 0.4788
+   FrmMat = PDef: "- specify -"  (0)
+   FrmConfig = PDef: "- specify -"  (0)
+   FrmDepth = PDef: "- specify -"  (0)
+   CavityIns = RVal: 0
+   FrmFacHeaders = RVal: 0
+   HeaderIns = RVal: 0
+   CMUWt = PDef: "- specify -"  (0)
+   CMUFill = PDef: "- specify -"  (0)
+   CavityInsVal = RVal: 0
+   FrmDepthVal = RVal: 0
+   IsSpandrel = RVal: 0
+   IsHollowCoreMasonry = RVal: 0
+   IsMetalWall = RVal: 0
+   IsMetalFrame = RVal: 0
+   IsWoodFrame = RVal: 0
+   IsMetalFrameLayer = RVal: 0
+   IsWoodFrameLayer = RVal: 0
+   IsMetalRoof = RVal: 0
+   IsWoodFrameRoof = RVal: 0
+   RefCnt = RVal: 0
+   SimpleCompositeR = RVal: 0
+   HeatCap = RVal: 0.010773
+   InsCheck = RVal: 3
    ..
 
 Mat   User: "Compliance Insulation R0.02"  
@@ -96779,6 +96919,40 @@ Mat   User: "MetalFrameWall16inOC R11.00"
    IsMetalRoof = RVal: 0
    IsWoodFrameRoof = RVal: 0
    RefCnt = RVal: 0
+   SimpleCompositeR = RVal: 0
+   HeatCap = RVal: 0
+   InsCheck = RVal: 0
+   ..
+
+Mat   User: "MetalFrameWall16inOC R0.00"  
+   CodeCat = UVal: "Composite"  (40)
+   CodeItem = UVal: "- specify -"  (0)
+   RVal = RVal: 0.643
+   Dens = RVal: 0
+   Thkns = RVal: 0
+   FrmMat = UVal: "Metal"  (2)
+   FrmConfig = UVal: "Wall16inOC"  (1)
+   FrmDepth = UVal: "3_5In"  (8)
+   CavityIns = UVal: 0
+   CavityInsOpt = UVal: "R-0"  (0)
+   FrmFacCav = RVal: 0.85
+   FrmFacMembers = RVal: 0.15
+   FrmFacHeaders = RVal: 0
+   HeaderIns = RVal: 0
+   CMUWt = PDef: "- specify -"  (0)
+   CMUFill = PDef: "- specify -"  (0)
+   CavityInsVal = RVal: 0
+   FrmDepthVal = RVal: 3.5
+   IsSpandrel = RVal: 0
+   IsHollowCoreMasonry = RVal: 0
+   IsMetalWall = RVal: 0
+   IsMetalFrame = RVal: 1
+   IsWoodFrame = RVal: 0
+   IsMetalFrameLayer = RVal: 1
+   IsWoodFrameLayer = RVal: 0
+   IsMetalRoof = RVal: 0
+   IsWoodFrameRoof = RVal: 0
+   RefCnt = RVal: 1
    SimpleCompositeR = RVal: 0
    HeatCap = RVal: 0
    InsCheck = RVal: 0
