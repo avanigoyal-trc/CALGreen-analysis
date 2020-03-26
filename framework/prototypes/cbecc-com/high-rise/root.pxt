@@ -29,6 +29,8 @@ parameter "sol_frac"
 parameter "doas_fan_type", :default => "Exhaust"
 parameter "supply_temp_control"
 
+parameter "fan_efficacy", :default=> 0.7
+
 #measure parameters
 parameter "res_metal_wall", :default=>"Stucco - 7/8 in.;Compliance Insulation R10.06;Compliance Insulation R2.00;Compliance Insulation R0.20;Compliance Insulation R0.10;Air - Metal Wall Framing - 16 or 24 in. OC;Gypsum Board - 1/2 in."
 parameter "other_floor", :default=>"Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R9.40;Compliance Insulation R6.00;Plywood - 5/8 in.;Carpet - 3/4 in."
@@ -39,8 +41,6 @@ parameter "window_u", :default=>0.36
 parameter "window_shgc", :default=>0.25
 parameter "window_type", :default=>"FixedWindow"
 parameter "heating_eff", :default=>0.8
-
-
 
 %>
 
@@ -216,6 +216,16 @@ Mat   "Compliance Insulation R8.07"
 Mat   "Compliance Insulation R10.06"
    CodeCat = "Insulation Board"
    CodeItem = "Compliance Insulation R10.06"
+   ..
+
+Mat   "Compliance Insulation R7.10"
+  CodeCat = "Insulation Board"
+  CodeItem = "Compliance Insulation R7.10"
+  ..
+
+Mat   "Compliance Insulation R3.63"
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R3.63"
    ..
 
 Mat   "WoodRoof16OCCavInsR38"
@@ -423,7 +433,7 @@ ConsAssm   "IntCeiling"
   ..
 
 FenCons   "Res Fixed Window"
-   FenProdType = <%= window_type %>
+   FenProdType = "<%= window_type %>"
    SHGC = <%= window_shgc %>
    UFactor = <%= window_u %>
    VT = 0.42
@@ -11802,6 +11812,17 @@ Mat   "MetalFrameWall16inOC R11.00"
   CavityIns = 11.25
   CavityInsOpt = "R-11"
   ..
+
+
+Mat   "MetalFrameWall16inOC R0.00"
+CodeCat = "Composite"
+CodeItem = "- specify -"
+FrmMat = "Metal"
+FrmConfig = "Wall16inOC"
+FrmDepth = "3_5In"
+CavityIns = 0
+CavityInsOpt = "R-0"
+..
 
 
 Mat   "Compliance Insulation R18.00"
