@@ -1,92 +1,45 @@
-<%#INTERFACE
-
-modelkit_version "~>0.8.0"
-
-parameter "proposed_only", :default => "No"
-parameter "climate_zone", :default=>"ClimateZone3"
-parameter "weather_station", :default=>"OAKLAND_724930"
-
-#parameters for autosizing
-parameter "prototype"
-parameter "software"
-parameter "autosizing", :default=> "No"
-
-#parameters for hvac system
-## Note: VRF system changes thermal zones. These are changed by if statements in the root.pxt file, and not in the template files.
-parameter "hvac_type", :default=> "SZAC"
-parameter "vrf_cu_model", :default=> nil
-
-#parameters for residential DHW
-
-parameter "is_central_dhw", :default=>1
-parameter "sol_frac", :default=>0.2
-
-parameter "fan_efficacy", :default=> 0.7
-
-#DOAS system
-parameter "doas_fan_type", :default => "Relief"
-parameter "supply_temp_control", :default => "FixedDualSetpoint"
-
-#measure parameters
-parameter "res_wood_wall", :default=>"Stucco - 7/8 in.;Plywood - 5/8 in.;Compliance Insulation R1.54;WoodFrameWall16inOCCavInsR5;Gypsum Board - 5/8 in."
-parameter "other_floor", :default=>"Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R6.00;Compliance Insulation R2.15;Compliance Insulation R0.50;Plywood - 5/8 in.;Carpet - 3/4 in."
-parameter "nonres_concrete_wall", :default=>"Stucco - 7/8 in.;Concrete - 140 lb/ft3 - 8 in.;Compliance Insulation R8.07;Compliance Insulation R0.20;Compliance Insulation R1.00;WoodFraming16inOC;Gypsum Board - 1/2 in."
-parameter "wood_framing_roof", :default=>"Roofing felt - 1/8 in.;Building Paper - 1/16 in.;Fiberboard sheathing - 1/2 in.;Compliance Insulation R0.50;Compliance Insulation R0.02;Compliance Insulation R0.01;Gypsum Board - 1/2 in.;WoodRoof16OCCavInsR38"
+// INSERT TEMPLATE 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-com/mixed-use-mid-rise/root.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-com/mixed-use-mid-rise/root.pxt'
+// * proposed_only = "Yes" (:default => "No")
+// * climate_zone = "ClimateZone12" (:default => "ClimateZone3")
+// * weather_station = "CTZ12S22A" (:default => "OAKLAND_724930")
+// * prototype = "mixed-use-mid-rise" (:default => nil)
+// * software = "cbecc-com" (:default => nil)
+// * autosizing = "Yes" (:default => "No")
+//   hvac_type = "SZAC"
+//   vrf_cu_model = nil
+//   is_central_dhw = 1
+// * sol_frac = 0.35 (:default => 0.2)
+//   fan_efficacy = 0.7
+//   doas_fan_type = "Relief"
+//   supply_temp_control = "FixedDualSetpoint"
+// * res_wood_wall = "Compliance Insulation R0.10;Compliance Insulation R0.50;Gypsum Board - 5/8 in.;WoodFrameWall16inOCCavInsR21;Gypsum Board - 5/8 in." (:default => "Stucco - 7/8 in.;Plywood - 5/8 in.;Compliance Insulation R1.54;WoodFrameWall16inOCCavInsR5;Gypsum Board - 5/8 in.")
+//   other_floor = "Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R6.00;Compliance Insulation R2.15;Compliance Insulation R0.50;Plywood - 5/8 in.;Carpet - 3/4 in."
+// * nonres_concrete_wall = "Stucco - 7/8 in.;Concrete - 140 lb/ft3 - 8 in.;Compliance Insulation R1.35;Compliance Insulation R0.20;Compliance Insulation R7.60;WoodFraming16inOC;Gypsum Board - 1/2 in." (:default => "Stucco - 7/8 in.;Concrete - 140 lb/ft3 - 8 in.;Compliance Insulation R8.07;Compliance Insulation R0.20;Compliance Insulation R1.00;WoodFraming16inOC;Gypsum Board - 1/2 in.")
+// * wood_framing_roof = "Roofing felt - 1/8 in.;Building Paper - 1/16 in.;Fiberboard sheathing - 1/2 in.;Compliance Insulation R1.54;Compliance Insulation R1.35;Compliance Insulation R0.20;Compliance Insulation R1.00;Gypsum Board - 1/2 in.;WoodRoof16OCCavInsR38" (:default => "Roofing felt - 1/8 in.;Building Paper - 1/16 in.;Fiberboard sheathing - 1/2 in.;Compliance Insulation R0.50;Compliance Insulation R0.02;Compliance Insulation R0.01;Gypsum Board - 1/2 in.;WoodRoof16OCCavInsR38")
+//   window_u = 0.36
+//   window_shgc = 0.25
+//   window_type = "FixedWindow"
+//   heating_eff = 0.8
 
 
-parameter "window_u", :default=>0.36
-parameter "window_shgc", :default=>0.25
-parameter "window_type", :default=>"FixedWindow"
 
-
-parameter "heating_eff", :default=>0.8
-
-
-%>
-
-<%
-#create climate zone coding for SZHP/SZAC usage. Can be used for other measures if needed.
-
-climate_zone_table = {
-  "ClimateZone1" => "cz01",
-  "ClimateZone2" => "cz02",
-  "ClimateZone3" => "cz03",
-  "ClimateZone4" => "cz04",
-  "ClimateZone5" => "cz05",
-  "ClimateZone6" => "cz06",
-  "ClimateZone7" => "cz07",
-  "ClimateZone8" => "cz08",
-  "ClimateZone9" => "cz09",
-  "ClimateZone10" => "cz10",
-  "ClimateZone11" => "cz11",
-  "ClimateZone12" => "cz12",
-  "ClimateZone13" => "cz13",
-  "ClimateZone14" => "cz14",
-  "ClimateZone15" => "cz15",
-  "ClimateZone16" => "cz16"
-}
-
-cz = climate_zone_table[climate_zone]
-
-%>
 
 RulesetFilename   "T24N_2022.bin"
 
 Proj   "Mid-Rise Mixed-Use (5-story)"
    AnalysisType = "Title24ProposedOnly"
    Ruleset = "CA 2022 Nonresidential, Vers. 1.0 Alpha (T24N_2022.bin)"
-   <%if proposed_only == "Yes"%>
+   
    AnalysisType = "Title24ProposedOnly"
-   <%elsif proposed_only == "No"%>
-   AnalysisType = "Title24Compliance"
-   <%end%>
+   
    BldgEngyModelVersion = 14
    CreateDate = 1567115615
    ModDate = 1570125407
    RunDate = 1570125408
    GasType = "NaturalGas"
-   CliZn = "<%= climate_zone %>"
-   WeatherStation = "<%= weather_station %>"
+   CliZn = "ClimateZone12"
+   WeatherStation = "CTZ12S22A"
    HVACAutoSizing = 0
    ExcptCondNoClgSys = "No"
    ExcptCondRtdCap = "No"
@@ -216,9 +169,11 @@ ConsAssm   "SlabOnOrBelowGradeF073"
 ConsAssm   "ResWoodWallU059"
    SpecMthd = "Layers"
    ExtRoughness = "Smooth"
-<% res_wood_wall.split(";").each_with_index do |material, i| %>
-   MatRef[<%= i + 1 %>] = "<%= material %>"
-<% end %>
+   MatRef[1] = "Compliance Insulation R0.10"
+   MatRef[2] = "Compliance Insulation R0.50"
+   MatRef[3] = "Gypsum Board - 5/8 in."
+   MatRef[4] = "WoodFrameWall16inOCCavInsR21"
+   MatRef[5] = "Gypsum Board - 5/8 in."
    ..
 
 ConsAssm   "WoodFramedInteriorWallU099"
@@ -247,9 +202,9 @@ ConsAssm   "BelowGradeWallC114"
    ..
 
 FenCons   "Res Fixed Window"
-   FenProdType = "<%= window_type %>"
-   SHGC = <%= window_shgc %>
-   UFactor = <%= window_u %>
+   FenProdType = "FixedWindow"
+   SHGC = 0.25
+   UFactor = 0.36
    VT = 0.42
    ..
 
@@ -5398,11 +5353,9 @@ ResSpcDHWFeatures   "F2 1-Bed Core SW rsd1"
 
 Spc   "F2-4 1-Bed N"
    TreeState = 254
-   <%if hvac_type == "VRF"%>
-   ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North CU-2"
-   <% else %>
+   
    ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North"
-   <%end%>
+   
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -5597,11 +5550,9 @@ ResSpcDHWFeatures   "F2 1-Bed N rsd1"
 
 Spc   "F2-4 1-Bed NE Core"
    TreeState = 254
-   <%if hvac_type == "VRF"%>
-   ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North CU-2"
-   <% else %>
+   
    ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North"
-   <%end%>
+   
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -5772,11 +5723,9 @@ ResSpcDHWFeatures   "F2 1-Bed NE Core rsd1"
 
 Spc   "F2-4 1-Bed NE Outer"
    TreeState = 254
-   <%if hvac_type == "VRF"%>
-   ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North CU-2"
-   <% else %>
+   
    ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North"
-   <%end%>
+   
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -5947,11 +5896,9 @@ ResSpcDHWFeatures   "F2 1-Bed NE Outer rsd1"
 
 Spc   "F2-4 1-Bed NW Core"
    TreeState = 254
-   <%if hvac_type == "VRF"%>
-   ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North CU-1"
-   <% else %>
+   
    ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North"
-   <%end%>
+   
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -6122,11 +6069,9 @@ ResSpcDHWFeatures   "F2 1-Bed NW Core rsd1"
 
 Spc   "F2-4 1-Bed NW Outer"
    TreeState = 254
-   <%if hvac_type == "VRF"%>
-   ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North CU-1"
-   <% else %>
+   
    ThrmlZnRef = "Thermal Zone: F2-4 1-Bed North"
-   <%end%>
+   
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -6297,11 +6242,9 @@ ResSpcDHWFeatures   "F2 1-Bed NW Outer rsd1"
 
 Spc   "F2-4 2-Bed Core NE"
    TreeState = 254
-   <%if hvac_type == "VRF"%>
-   ThrmlZnRef = "Thermal Zone: F2-4 2-Bed Core NE"
-   <% else %>
+   
    ThrmlZnRef = "Thermal Zone: F2-4 2-Bed Core NE-NW"
-   <%end%>
+   
    Vol = 10800
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[3] = 1
@@ -6599,11 +6542,9 @@ ResSpcDHWFeatures   "F2 2-Bed Core NE rsd2"
 
 Spc   "F2-4 2-Bed Core NW"
    TreeState = 254
-   <%if hvac_type == "VRF"%>
-   ThrmlZnRef = "Thermal Zone: F2-4 2-Bed Core NW"
-   <% else %>
+   
    ThrmlZnRef = "Thermal Zone: F2-4 2-Bed Core NE-NW"
-   <%end%>
+   
    Vol = 10800
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[3] = 1
@@ -11081,11 +11022,9 @@ ResSpcDHWFeatures   "F5 1-Bed Core SW rsd1"
 
 Spc   "F5 1-Bed N"
    TreeState = 254
-   <%if hvac_type == "VRF"%>
-   ThrmlZnRef = "Thermal Zone: F5 1-Bed North CU-2"
-   <% else %>
+   
    ThrmlZnRef = "Thermal Zone: F5 1-Bed North"
-   <%end%>
+   
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -11280,11 +11219,9 @@ ResSpcDHWFeatures   "F5 1-Bed N rsd1"
 
 Spc   "F5 1-Bed NE Core"
    TreeState = 254
-   <%if hvac_type == "VRF"%>
-   ThrmlZnRef = "Thermal Zone: F5 1-Bed North CU-2"
-   <% else %>
+   
    ThrmlZnRef = "Thermal Zone: F5 1-Bed North"
-   <%end%>
+   
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -11455,11 +11392,9 @@ ResSpcDHWFeatures   "F5 1-Bed NE Core rsd1"
 
 Spc   "F5 1-Bed NE Outer"
    TreeState = 254
-   <%if hvac_type == "VRF"%>
-   ThrmlZnRef = "Thermal Zone: F5 1-Bed North CU-2"
-   <% else %>
+   
    ThrmlZnRef = "Thermal Zone: F5 1-Bed North"
-   <%end%>
+   
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -11630,11 +11565,9 @@ ResSpcDHWFeatures   "F5 1-Bed NE Outer rsd1"
 
 Spc   "F5 1-Bed NW Core"
    TreeState = 254
-   <%if hvac_type == "VRF"%>
-   ThrmlZnRef = "Thermal Zone: F5 1-Bed North CU-1"
-   <% else %>
+   
    ThrmlZnRef = "Thermal Zone: F5 1-Bed North"
-   <%end%>
+   
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -11805,11 +11738,9 @@ ResSpcDHWFeatures   "F5 1-Bed NW Core rsd1"
 
 Spc   "F5 1-Bed NW Outer"
    TreeState = 254
-   <%if hvac_type == "VRF"%>
-   ThrmlZnRef = "Thermal Zone: F5 1-Bed North CU-1"
-   <% else %>
+   
    ThrmlZnRef = "Thermal Zone: F5 1-Bed North"
-   <%end%>
+   
    Vol = 7440
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[2] = 1
@@ -11980,11 +11911,9 @@ ResSpcDHWFeatures   "F5 1-Bed NW Outer rsd1"
 
 Spc   "F5 2-Bed Core NE"
    TreeState = 254
-   <%if hvac_type == "VRF"%>
-   ThrmlZnRef = "Thermal Zone: F5 2-Bed Core NE"
-   <% else %>
+   
    ThrmlZnRef = "Thermal Zone: F5 2-Bed Core NE-NW"
-   <%end%>
+   
    Vol = 10800
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[3] = 1
@@ -12252,11 +12181,9 @@ ResSpcDHWFeatures   "F5 2-Bed Core NE rsd2"
 
 Spc   "F5 2-Bed Core NW"
    TreeState = 254
-   <%if hvac_type == "VRF"%>
-   ThrmlZnRef = "Thermal Zone: F5 2-Bed Core NW"
-   <% else %>
+   
    ThrmlZnRef = "Thermal Zone: F5 2-Bed Core NE-NW"
-   <%end%>
+   
    Vol = 10800
    SpcFuncDefaultsRef = "Residential Space"
    DwellingUnitTypeCnt[3] = 1
@@ -15585,72 +15512,6 @@ ThrmlZn   "Thermal Zone: F2-4 1-Bed Core East"
    ExhSrc = "VentilationSystem"
    ..
 
-<% if hvac_type == "VRF" %>
-ThrmlZn   "Thermal Zone: F2-4 1-Bed North CU-1"
-   Type = "Conditioned"
-   HVACZnCnt = 2
-   PriAirCondgSysRef[1] = "ZnSys F2-4 1-Bed North CU-1"
-   VentSysRef = "Bal F2 1-Bed North CU-1"
-   ExhSrc = "VentilationSystem"
-   ..
-
-ThrmlZn   "Thermal Zone: F2-4 1-Bed North CU-2"
-  Type = "Conditioned"
-  HVACZnCnt = 3
-  PriAirCondgSysRef[1] = "ZnSys F2-4 1-Bed North CU-2"
-  VentSysRef = "Bal F2 1-Bed North CU-2"
-  ExhSrc = "VentilationSystem"
-  ..
-
-ThrmlZn   "Thermal Zone: F2-4 2-Bed Core NE"
-   Type = "Conditioned"
-   HVACZnCnt = 1
-   PriAirCondgSysRef[1] = "ZnSys F2-4 2-Bed Core NE"
-   VentSysRef = "Bal F2 2-Bed Core NE"
-   ExhSrc = "VentilationSystem"
-   ..
-
-ThrmlZn   "Thermal Zone: F2-4 2-Bed Core NW"
-  Type = "Conditioned"
-  HVACZnCnt = 1
-  PriAirCondgSysRef[1] = "ZnSys F2-4 2-Bed Core NW"
-  VentSysRef = "Bal F2 2-Bed Core NW"
-  ExhSrc = "VentilationSystem"
-  ..
-
-ThrmlZn   "Thermal Zone: F5 1-Bed North CU-2"
-   Type = "Conditioned"
-   HVACZnCnt = 3
-   PriAirCondgSysRef[1] = "ZnSys F5 1-Bed North CU-2"
-   VentSysRef = "Bal F5 1-Bed North CU-2"
-   ExhSrc = "VentilationSystem"
-   ..
-
-ThrmlZn   "Thermal Zone: F5 2-Bed Core NW"
-   Type = "Conditioned"
-   HVACZnCnt = 1
-   PriAirCondgSysRef[1] = "ZnSys F5 2-Bed Core NW"
-   VentSysRef = "Bal F5 2-Bed Core NW"
-   ExhSrc = "VentilationSystem"
-   ..
-
-ThrmlZn   "Thermal Zone: F5 1-Bed North CU-1"
-  Type = "Conditioned"
-  HVACZnCnt = 2
-  PriAirCondgSysRef[1] = "ZnSys F5 1-Bed North CU-1"
-  VentSysRef = "Bal F5 1-Bed North CU-1"
-  ExhSrc = "VentilationSystem"
-  ..
-
-ThrmlZn   "Thermal Zone: F5 2-Bed Core NE"
-  Type = "Conditioned"
-  HVACZnCnt = 1
-  PriAirCondgSysRef[1] = "ZnSys F5 2-Bed Core NE"
-  VentSysRef = "Bal F5 2-Bed Core NE"
-  ExhSrc = "VentilationSystem"
-  ..
-
-<% else %>
 ThrmlZn   "Thermal Zone: F2-4 1-Bed North"
    Type = "Conditioned"
    HVACZnCnt = 5
@@ -15683,7 +15544,6 @@ ThrmlZn   "Thermal Zone: F5 2-Bed Core NE-NW"
   ExhSrc = "VentilationSystem"
   ..
 
-<% end %>
 
 ThrmlZn   "Thermal Zone: F2-4 2-Bed East"
    Type = "Conditioned"
@@ -15817,160 +15677,1305 @@ ThrmlZn   "Thermal Zone: Parking Garage"
 
 
 
-<%
-#insert VRF Compressor Units if needed
-
-if (hvac_type == "VRF")
-vrf_cu_names = ["VRF F2-4 CU-1", "VRF F2-4 CU-2", "VRF F5 CU-1", "VRF F5 CU-2"]
-count = [3, 3, 1, 1]
-rated_cooling_cap = 135000
-rated_heating_cap = 150000
-pipe_length = [145,145, 125,125]
-max_height = [-25, -25, -5, -5]
-ctrl_priority = "LoadPriority"
-
-cu_counts = vrf_cu_names.length() -1 #Subtract 1 since indexing at 0
-
-for a in 0..cu_counts do
-  insert 'vrf_cu.pxt',
-    :name => vrf_cu_names[a],
-    :count => count[a],
-    :heat_recovery => "Yes",
-    :cooling_capacity => rated_cooling_cap,
-    :heating_capacity => rated_heating_cap,
-    :equivalent_pipe_len => pipe_length[a],
-    :max_vertical_height => max_height[a],
-    :ctrl_priority   => ctrl_priority
-
-end
-end
-
-#Using csv guides from https://www.rubyguides.com/2018/10/parse-csv-ruby/
-
-require 'csv'
-
-file_zones = Dir.pwd + "/prototypes/" + software + "/" + prototype + "/" + hvac_type +  "/ZnSys_Parameters.csv"
-table_zones = CSV.parse(File.read(file_zones), headers: true)
-
-#Get list of all zone names and counts
-zones = table_zones.by_col[1]
-counts_original = table_zones.by_col[2]
-index = table_zones.by_col[0]
-vent_zones = table_zones.by_col[3]
-
-
-
-num_zones = zones.length() -1 #Subtract 1 since indexing at 0
-
-if (hvac_type == "SZHP")
-  template_name = 'szhp.pxt'
-elsif (hvac_type == "SZAC")
-  template_name = 'szac.pxt'
-elsif (hvac_type == "VRF")
-  template_name = 'vrf_fcu.pxt'
-end
-
-
-if (autosizing == "No")
-
-if (hvac_type == "SZHP" or hvac_type == "SZAC")
-    for a in 0..num_zones do
-      insert template_name,
-        :zone_name => zones[a],
-        :count => counts_original[a],
-        :index => index[a]
-    end
-elsif (hvac_type == "VRF")
-  cu_names = table_zones.by_col[4]
-
-    for a in 0..num_zones do
-      insert template_name,
-        :vrf_cu_name => cu_names[a],
-        :zone_name => zones[a],
-        :count => counts_original[a],
-        :index => index[a]
-    end
-end
-
-
-
-elsif (autosizing == "Yes")
-
-file_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + hvac_type +"/" + cz + "/instance - ab - HVACSecondary.csv"
-
-# https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
-table_capacities = CSV.parse(File.readlines(file_capacities).drop(13).join, headers: true)
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F2-4 1-Bed Core N" (:default => nil)
+// * count = "3" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "1" (:default => nil)
+// * cooling_capacity = "9318.89" (:default => 0)
+// * heating_capacity = "6259.82" (:default => 0)
+// * supply_fan_cfm = "349.06" (:default => 0)
 
 
 
 
+ZnSys   "ZnSys F2-4 1-Bed Core N"
+   Type = "SZAC"
+   Cnt = 3
+   ..
 
-counts = table_capacities.by_col[2][0..num_zones]
+CoilClg   "CoilCooling 1"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 9318.89
+   
+   ..
 
+CoilHtg   "CoilHtg 1"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 6259.82
+   
+   FurnAFUE = 0.8
+   ..
 
-#Implement check to see if original counts is the same as counts in baseline model
-check = counts <=> counts_original
-if check != 0
-  warn("Order of HVAC zones in HVACSecondary CSV file may not match original cibd file.")
-  puts "Original:"
-  puts counts_original
-  puts "HVACSecondary"
-  puts counts
-end
-
-#Define Parameters
-capacity_cooling = table_capacities.by_col[4]
-capacity_heating = table_capacities.by_col[8]
-supply_cfm = table_capacities.by_col[11]
-
-
-#Use for loop to create szhp chunk for each zone
-for a in 0..num_zones do
-
-  if (capacity_cooling[a].to_f > 65000)
-    string = "Warning: " + zones[a] +  " Cooling Capacity > 65,000 Btu/h"
-    puts string
-  end
-
-  if (hvac_type == "SZHP" or hvac_type == "SZAC")
-  insert template_name,
-    :cooling_capacity => capacity_cooling[a],
-    :heating_capacity => capacity_heating[a],
-    :supply_fan_cfm => supply_cfm[a],
-    :zone_name => zones[a],
-    :count => counts[a],
-    :index => index[a]
-  elsif (hvac_type == "VRF")
-  cu_names = table_zones.by_col[4]
-  insert template_name,
-    :vrf_cu_name => cu_names[a],
-    :cooling_capacity => capacity_cooling[a],
-    :heating_capacity => capacity_heating[a],
-    :supply_fan_cfm => supply_cfm[a],
-    :zone_name => zones[a],
-    :count => counts[a],
-    :index => index[a]
-  end
-
-
-end
-
-end
+Fan   "Fan 1"
+  
+  FlowCap = 349.06
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F2-4 1-Bed Core West" (:default => nil)
+// * count = "6" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "2" (:default => nil)
+// * cooling_capacity = "9579.72" (:default => 0)
+// * heating_capacity = "6591.58" (:default => 0)
+// * supply_fan_cfm = "358.831" (:default => 0)
 
 
 
-# Ventilation Systems
+
+ZnSys   "ZnSys F2-4 1-Bed Core West"
+   Type = "SZAC"
+   Cnt = 6
+   ..
+
+CoilClg   "CoilCooling 2"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 9579.72
+   
+   ..
+
+CoilHtg   "CoilHtg 2"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 6591.58
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 2"
+  
+  FlowCap = 358.831
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F2-4 1-Bed Core East" (:default => nil)
+// * count = "6" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "3" (:default => nil)
+// * cooling_capacity = "11558.3" (:default => 0)
+// * heating_capacity = "6599.99" (:default => 0)
+// * supply_fan_cfm = "432.942" (:default => 0)
 
 
-for a in 0..num_zones do
-  insert 'znsys_ventilation.pxt',
-    :name => vent_zones[a],
-    :count => counts_original[a]
-
-end
 
 
-%>
+ZnSys   "ZnSys F2-4 1-Bed Core East"
+   Type = "SZAC"
+   Cnt = 6
+   ..
+
+CoilClg   "CoilCooling 3"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 11558.3
+   
+   ..
+
+CoilHtg   "CoilHtg 3"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 6599.99
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 3"
+  
+  FlowCap = 432.942
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F2-4 1-Bed North" (:default => nil)
+// * count = "15" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "4" (:default => nil)
+// * cooling_capacity = "7178.74" (:default => 0)
+// * heating_capacity = "6451.39" (:default => 0)
+// * supply_fan_cfm = "268.896" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F2-4 1-Bed North"
+   Type = "SZAC"
+   Cnt = 15
+   ..
+
+CoilClg   "CoilCooling 4"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 7178.74
+   
+   ..
+
+CoilHtg   "CoilHtg 4"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 6451.39
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 4"
+  
+  FlowCap = 268.896
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F2-4 2-Bed Core NE-NW" (:default => nil)
+// * count = "6" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "5" (:default => nil)
+// * cooling_capacity = "9155.97" (:default => 0)
+// * heating_capacity = "8555.1" (:default => 0)
+// * supply_fan_cfm = "342.959" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F2-4 2-Bed Core NE-NW"
+   Type = "SZAC"
+   Cnt = 6
+   ..
+
+CoilClg   "CoilCooling 5"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 9155.97
+   
+   ..
+
+CoilHtg   "CoilHtg 5"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 8555.1
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 5"
+  
+  FlowCap = 342.959
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F2-4 2-Bed East" (:default => nil)
+// * count = "9" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "6" (:default => nil)
+// * cooling_capacity = "14390.2" (:default => 0)
+// * heating_capacity = "10006.8" (:default => 0)
+// * supply_fan_cfm = "539.019" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F2-4 2-Bed East"
+   Type = "SZAC"
+   Cnt = 9
+   ..
+
+CoilClg   "CoilCooling 6"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 14390.2
+   
+   ..
+
+CoilHtg   "CoilHtg 6"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 10006.8
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 6"
+  
+  FlowCap = 539.019
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F2-4 2-Bed West" (:default => nil)
+// * count = "9" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "7" (:default => nil)
+// * cooling_capacity = "17346.9" (:default => 0)
+// * heating_capacity = "10006.5" (:default => 0)
+// * supply_fan_cfm = "649.77" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F2-4 2-Bed West"
+   Type = "SZAC"
+   Cnt = 9
+   ..
+
+CoilClg   "CoilCooling 7"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 17346.9
+   
+   ..
+
+CoilHtg   "CoilHtg 7"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 10006.5
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 7"
+  
+  FlowCap = 649.77
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F2-4 3-Bed NE" (:default => nil)
+// * count = "3" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "8" (:default => nil)
+// * cooling_capacity = "19297.3" (:default => 0)
+// * heating_capacity = "14775.7" (:default => 0)
+// * supply_fan_cfm = "722.825" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F2-4 3-Bed NE"
+   Type = "SZAC"
+   Cnt = 3
+   ..
+
+CoilClg   "CoilCooling 8"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 19297.3
+   
+   ..
+
+CoilHtg   "CoilHtg 8"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 14775.7
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 8"
+  
+  FlowCap = 722.825
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F2-4 3-Bed NW" (:default => nil)
+// * count = "3" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "9" (:default => nil)
+// * cooling_capacity = "23584.5" (:default => 0)
+// * heating_capacity = "14776.5" (:default => 0)
+// * supply_fan_cfm = "883.411" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F2-4 3-Bed NW"
+   Type = "SZAC"
+   Cnt = 3
+   ..
+
+CoilClg   "CoilCooling 9"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 23584.5
+   
+   ..
+
+CoilHtg   "CoilHtg 9"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 14776.5
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 9"
+  
+  FlowCap = 883.411
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F2-4 Studio SE" (:default => nil)
+// * count = "3" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "10" (:default => nil)
+// * cooling_capacity = "12535.4" (:default => 0)
+// * heating_capacity = "7871.93" (:default => 0)
+// * supply_fan_cfm = "469.545" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F2-4 Studio SE"
+   Type = "SZAC"
+   Cnt = 3
+   ..
+
+CoilClg   "CoilCooling 10"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 12535.4
+   
+   ..
+
+CoilHtg   "CoilHtg 10"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 7871.93
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 10"
+  
+  FlowCap = 469.545
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F2-4 Studio SW" (:default => nil)
+// * count = "3" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "11" (:default => nil)
+// * cooling_capacity = "11690.8" (:default => 0)
+// * heating_capacity = "7870.1" (:default => 0)
+// * supply_fan_cfm = "437.905" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F2-4 Studio SW"
+   Type = "SZAC"
+   Cnt = 3
+   ..
+
+CoilClg   "CoilCooling 11"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 11690.8
+   
+   ..
+
+CoilHtg   "CoilHtg 11"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 7870.1
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 11"
+  
+  FlowCap = 437.905
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F5 1-Bed Core N" (:default => nil)
+// * count = "1" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "12" (:default => nil)
+// * cooling_capacity = "11330.6" (:default => 0)
+// * heating_capacity = "9273.94" (:default => 0)
+// * supply_fan_cfm = "424.407" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F5 1-Bed Core N"
+   Type = "SZAC"
+   Cnt = 1
+   ..
+
+CoilClg   "CoilCooling 12"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 11330.6
+   
+   ..
+
+CoilHtg   "CoilHtg 12"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 9273.94
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 12"
+  
+  FlowCap = 424.407
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F5 1-Bed Core West" (:default => nil)
+// * count = "2" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "13" (:default => nil)
+// * cooling_capacity = "11206.7" (:default => 0)
+// * heating_capacity = "9673.54" (:default => 0)
+// * supply_fan_cfm = "419.773" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F5 1-Bed Core West"
+   Type = "SZAC"
+   Cnt = 2
+   ..
+
+CoilClg   "CoilCooling 13"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 11206.7
+   
+   ..
+
+CoilHtg   "CoilHtg 13"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 9673.54
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 13"
+  
+  FlowCap = 419.773
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F5 1-Bed Core East" (:default => nil)
+// * count = "2" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "14" (:default => nil)
+// * cooling_capacity = "14193.5" (:default => 0)
+// * heating_capacity = "9672.53" (:default => 0)
+// * supply_fan_cfm = "531.651" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F5 1-Bed Core East"
+   Type = "SZAC"
+   Cnt = 2
+   ..
+
+CoilClg   "CoilCooling 14"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 14193.5
+   
+   ..
+
+CoilHtg   "CoilHtg 14"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 9672.53
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 14"
+  
+  FlowCap = 531.651
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F5 1-Bed North" (:default => nil)
+// * count = "5" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "15" (:default => nil)
+// * cooling_capacity = "9722.64" (:default => 0)
+// * heating_capacity = "9488.85" (:default => 0)
+// * supply_fan_cfm = "364.184" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F5 1-Bed North"
+   Type = "SZAC"
+   Cnt = 5
+   ..
+
+CoilClg   "CoilCooling 15"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 9722.64
+   
+   ..
+
+CoilHtg   "CoilHtg 15"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 9488.85
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 15"
+  
+  FlowCap = 364.184
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F5 2-Bed Core NE-NW" (:default => nil)
+// * count = "2" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "16" (:default => nil)
+// * cooling_capacity = "12425.1" (:default => 0)
+// * heating_capacity = "11154" (:default => 0)
+// * supply_fan_cfm = "465.411" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F5 2-Bed Core NE-NW"
+   Type = "SZAC"
+   Cnt = 2
+   ..
+
+CoilClg   "CoilCooling 16"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 12425.1
+   
+   ..
+
+CoilHtg   "CoilHtg 16"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 11154
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 16"
+  
+  FlowCap = 465.411
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F5 2-Bed East" (:default => nil)
+// * count = "3" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "17" (:default => nil)
+// * cooling_capacity = "16318.2" (:default => 0)
+// * heating_capacity = "14261.1" (:default => 0)
+// * supply_fan_cfm = "611.236" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F5 2-Bed East"
+   Type = "SZAC"
+   Cnt = 3
+   ..
+
+CoilClg   "CoilCooling 17"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 16318.2
+   
+   ..
+
+CoilHtg   "CoilHtg 17"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 14261.1
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 17"
+  
+  FlowCap = 611.236
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F5 2-Bed West" (:default => nil)
+// * count = "3" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "18" (:default => nil)
+// * cooling_capacity = "20526.7" (:default => 0)
+// * heating_capacity = "14261" (:default => 0)
+// * supply_fan_cfm = "768.875" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F5 2-Bed West"
+   Type = "SZAC"
+   Cnt = 3
+   ..
+
+CoilClg   "CoilCooling 18"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 20526.7
+   
+   ..
+
+CoilHtg   "CoilHtg 18"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 14261
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 18"
+  
+  FlowCap = 768.875
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F5 3-Bed NE" (:default => nil)
+// * count = "1" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "19" (:default => nil)
+// * cooling_capacity = "21861.1" (:default => 0)
+// * heating_capacity = "20315.8" (:default => 0)
+// * supply_fan_cfm = "818.857" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F5 3-Bed NE"
+   Type = "SZAC"
+   Cnt = 1
+   ..
+
+CoilClg   "CoilCooling 19"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 21861.1
+   
+   ..
+
+CoilHtg   "CoilHtg 19"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 20315.8
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 19"
+  
+  FlowCap = 818.857
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F5 3-Bed NW" (:default => nil)
+// * count = "1" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "20" (:default => nil)
+// * cooling_capacity = "27807.9" (:default => 0)
+// * heating_capacity = "20316.2" (:default => 0)
+// * supply_fan_cfm = "1041.61" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F5 3-Bed NW"
+   Type = "SZAC"
+   Cnt = 1
+   ..
+
+CoilClg   "CoilCooling 20"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 27807.9
+   
+   ..
+
+CoilHtg   "CoilHtg 20"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 20316.2
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 20"
+  
+  FlowCap = 1041.61
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F5 Studio SE" (:default => nil)
+// * count = "1" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "21" (:default => nil)
+// * cooling_capacity = "13864.2" (:default => 0)
+// * heating_capacity = "10027" (:default => 0)
+// * supply_fan_cfm = "519.317" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F5 Studio SE"
+   Type = "SZAC"
+   Cnt = 1
+   ..
+
+CoilClg   "CoilCooling 21"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 13864.2
+   
+   ..
+
+CoilHtg   "CoilHtg 21"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 10027
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 21"
+  
+  FlowCap = 519.317
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'szac.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/szac.pxt'
+// * zone_name = "ZnSys F5 Studio SW" (:default => nil)
+// * count = "1" (:default => nil)
+//   seer = 14
+//   afue = 0.8
+//   eer = 12.2
+// * index = "22" (:default => nil)
+// * cooling_capacity = "12999.7" (:default => 0)
+// * heating_capacity = "10026.9" (:default => 0)
+// * supply_fan_cfm = "486.933" (:default => 0)
+
+
+
+
+ZnSys   "ZnSys F5 Studio SW"
+   Type = "SZAC"
+   Cnt = 1
+   ..
+
+CoilClg   "CoilCooling 22"
+   Type = "DirectExpansion"
+   DXEER = 12.2
+   DXSEER = 14
+   
+   CapTotNetRtd = 12999.7
+   
+   ..
+
+CoilHtg   "CoilHtg 22"
+   Type = "Furnace"
+   
+   CapTotNetRtd = 10026.9
+   
+   FurnAFUE = 0.8
+   ..
+
+Fan   "Fan 22"
+  
+  FlowCap = 486.933
+  
+   ..
+// END TEMPLATE 'szac.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 1-Bed Core N" (:default => nil)
+// * count = "3" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F2 1-Bed Core N"
+   Type = "VentilationOnly"
+   Cnt = 3
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 1-Bed Core West" (:default => nil)
+// * count = "6" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F2 1-Bed Core West"
+   Type = "VentilationOnly"
+   Cnt = 6
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 1-Bed Core East" (:default => nil)
+// * count = "6" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F2 1-Bed Core East"
+   Type = "VentilationOnly"
+   Cnt = 6
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 1-Bed North" (:default => nil)
+// * count = "15" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F2 1-Bed North"
+   Type = "VentilationOnly"
+   Cnt = 15
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 2-Bed Core NE-NW" (:default => nil)
+// * count = "6" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F2 2-Bed Core NE-NW"
+   Type = "VentilationOnly"
+   Cnt = 6
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 2-Bed East" (:default => nil)
+// * count = "9" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F2 2-Bed East"
+   Type = "VentilationOnly"
+   Cnt = 9
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 2-Bed West" (:default => nil)
+// * count = "9" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F2 2-Bed West"
+   Type = "VentilationOnly"
+   Cnt = 9
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 3-Bed NE" (:default => nil)
+// * count = "3" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F2 3-Bed NE"
+   Type = "VentilationOnly"
+   Cnt = 3
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 3-Bed NW" (:default => nil)
+// * count = "3" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F2 3-Bed NW"
+   Type = "VentilationOnly"
+   Cnt = 3
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 Studio SE" (:default => nil)
+// * count = "3" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F2 Studio SE"
+   Type = "VentilationOnly"
+   Cnt = 3
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F2 Studio SW" (:default => nil)
+// * count = "3" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F2 Studio SW"
+   Type = "VentilationOnly"
+   Cnt = 3
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 1-Bed Core N" (:default => nil)
+// * count = "1" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F5 1-Bed Core N"
+   Type = "VentilationOnly"
+   Cnt = 1
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 1-Bed Core West" (:default => nil)
+// * count = "2" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F5 1-Bed Core West"
+   Type = "VentilationOnly"
+   Cnt = 2
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 1-Bed Core East" (:default => nil)
+// * count = "2" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F5 1-Bed Core East"
+   Type = "VentilationOnly"
+   Cnt = 2
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 1-Bed North" (:default => nil)
+// * count = "5" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F5 1-Bed North"
+   Type = "VentilationOnly"
+   Cnt = 5
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 2-Bed Core NE-NW" (:default => nil)
+// * count = "2" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F5 2-Bed Core NE-NW"
+   Type = "VentilationOnly"
+   Cnt = 2
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 2-Bed East" (:default => nil)
+// * count = "3" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F5 2-Bed East"
+   Type = "VentilationOnly"
+   Cnt = 3
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 2-Bed West" (:default => nil)
+// * count = "3" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F5 2-Bed West"
+   Type = "VentilationOnly"
+   Cnt = 3
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 3-Bed NE" (:default => nil)
+// * count = "1" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F5 3-Bed NE"
+   Type = "VentilationOnly"
+   Cnt = 1
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 3-Bed NW" (:default => nil)
+// * count = "1" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F5 3-Bed NW"
+   Type = "VentilationOnly"
+   Cnt = 1
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 Studio SE" (:default => nil)
+// * count = "1" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F5 Studio SE"
+   Type = "VentilationOnly"
+   Cnt = 1
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+// INSERT TEMPLATE 'znsys_ventilation.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/znsys_ventilation.pxt'
+// * name = "Bal F5 Studio SW" (:default => nil)
+// * count = "1" (:default => nil)
+//   capacity = 0
+//   efficacy = 0.7
+
+
+
+ZnSys   "Bal F5 Studio SW"
+   Type = "VentilationOnly"
+   Cnt = 1
+   ExhSysType = "Balanced"
+   
+   ..
+// END TEMPLATE 'znsys_ventilation.pxt'
+
 
 
 AirSys   "Parking Garage Vent System"
@@ -16179,29 +17184,63 @@ CoilHtg   "BaseVAVBox CoilHtg-10"
    CapTotGrossRtd = 77052.9
    ..
 
-<%
-
-require 'csv'
-file_doas_capacities = Dir.pwd + "/autosizing/" + prototype + "/" + "DOAS_Laundry_Corridor.csv"
-
-# https://stackoverflow.com/questions/25190819/skip-first-5-lines-of-csv
-table_doas_capacities = CSV.parse(File.read(file_doas_capacities), headers: true)
-row_num = cz.scan(/\d/).join('').to_i() - 1
-cooling_capacity_doas = table_doas_capacities.by_col[1][row_num]
-heating_capacity_doas = table_doas_capacities.by_col[2][row_num]
-cfm_doas = table_doas_capacities.by_col[3][row_num]
+// INSERT TEMPLATE 'doas.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/doas.pxt'
+// * name = "DOAS1" (:default => nil)
+// * hvac_type = "SZAC" (:default => nil)
+// * cooling_capacity = "60660.90301" (:default => nil)
+// * heating_capacity = "46976.76" (:default => nil)
+// * supply_fan_cfm = "1611" (:default => nil)
+// * fan_type = "Relief" (:default => nil)
+// * supplytempcontrol = "FixedDualSetpoint" (:default => nil)
 
 
-insert 'doas.pxt',
-  :name => "DOAS1",
-  :hvac_type => hvac_type,
-  :cooling_capacity => cooling_capacity_doas,
-  :heating_capacity => heating_capacity_doas,
-  :supply_fan_cfm => cfm_doas,
-  :fan_type => doas_fan_type,
-  :supplytempcontrol => supply_temp_control
 
-%>
+AirSys   "DOAS1"
+   Type = "DOASCV"
+   CtrlSysType = "DDCToZone"
+   NightCycleFanCtrl = "StaysOff"
+   OptStart = 1
+   AirFlowPerSqFt = 0.15
+   AirFlowPerTon = 400
+   ClgCtrl = "FixedDualSetpoint"
+   
+   ClgFixedSupTemp = 75
+   HtgFixedSupTemp = 55
+   
+   ClRstSupHi = 75
+   ClRstSupLow = 55
+   ..
+
+AirSeg   "DOAS1 SupAirSeg"
+   Type = "Supply"
+   ..
+
+CoilClg   "DOAS1 CoilClg"
+   Type = "DirectExpansion"
+   CapTotNetRtd = 60660.90301
+   ..
+
+CoilHtg   "DOAS1 CoilHtg"
+   Type = "Furnace"
+   CapTotNetRtd = 46976.76
+   ..
+
+
+Fan   "DOAS1 Supply Fan"
+   FlowCap = 1611
+   ..
+
+AirSeg   "DOAS1 ReliefAirSeg"
+   Type = "Relief"
+   Path = "Ducted"
+   ..
+
+
+OACtrl   "DOAS1 OACtrl"
+   ..
+// END TEMPLATE 'doas.pxt'
+
 
 TrmlUnit   "DOAS1 TrmlUnit-1"
    Type = "Uncontrolled"
@@ -16236,28 +17275,56 @@ SpcFuncDefaults   "Corridor Space"
 FenCons   "Nonres Fixed Window"
    FenProdType = "FixedWindow"
    SHGC = 0.25
-   UFactor = <%= window_u %>
+   UFactor = 0.36
    VT = 0.42
    ..
 
 ConsAssm   "OtherFloorU071"
    CompatibleSurfType = "InteriorFloor"
 
-   <% other_floor.split(";").each_with_index do |material, i| %>
-      MatRef[<%= i + 1 %>] = "<%= material %>"
-   <% end %>
+   
+      MatRef[1] = "Concrete - 140 lb/ft3 - 10 in."
+   
+      MatRef[2] = "Compliance Insulation R6.00"
+   
+      MatRef[3] = "Compliance Insulation R2.15"
+   
+      MatRef[4] = "Compliance Insulation R0.50"
+   
+      MatRef[5] = "Plywood - 5/8 in."
+   
+      MatRef[6] = "Carpet - 3/4 in."
+   
    ..
 
 
-<%
+// INSERT TEMPLATE 'waterheater.pxt'
+// Path resolves to 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/waterheater.pxt'
+// * name = "Residential DHW System" (:default => nil)
+//   central = 1
+// * solfrac = 0.35 (:default => 0.2)
 
 
-insert 'waterheater.pxt',
- :name => "Residential DHW System",
- :central => is_central_dhw,
- :solfrac => sol_frac
 
-%>
+
+ResDHWSys   "Residential DHW System"
+   CentralSys = 1
+   DistType = "Demand Control (Standard Design for new construction)"
+   SysStoryCnt = 4
+   AnnualSolFrac = 0.35
+   WtrHtrTankVol = 280
+   ..
+
+ResWtrHtr   "Res Gas Water Heater"
+  InpRating = 160000
+  UEF = 0.57
+  TankVol = 200
+  StdbyLossFrac = 0.02
+  ThrmlEff = 0.8
+  Cnt = 3
+  ..
+// END TEMPLATE 'waterheater.pxt'
+
 
 FluidSys   "Nonresidential Gas DHW System"
    TreeState = 253
@@ -16376,9 +17443,15 @@ Mat   "Fiberboard sheathing - 1/2 in."
 ConsAssm   "WoodFramingAndOtherRoofU028"
    CompatibleSurfType = "Roof"
 
-<% wood_framing_roof.split(";").each_with_index do |material, i| %>
-   MatRef[<%= i + 1 %>] = "<%= material %>"
-<% end %>
+   MatRef[1] = "Roofing felt - 1/8 in."
+   MatRef[2] = "Building Paper - 1/16 in."
+   MatRef[3] = "Fiberboard sheathing - 1/2 in."
+   MatRef[4] = "Compliance Insulation R1.54"
+   MatRef[5] = "Compliance Insulation R1.35"
+   MatRef[6] = "Compliance Insulation R0.20"
+   MatRef[7] = "Compliance Insulation R1.00"
+   MatRef[8] = "Gypsum Board - 1/2 in."
+   MatRef[9] = "WoodRoof16OCCavInsR38"
 
    ..
 
@@ -16410,9 +17483,13 @@ Mat   "Stone - 1 in."
 ConsAssm   "NonResConcreteExteriorWall"
    CompatibleSurfType = "ExteriorWall"
 
-<% nonres_concrete_wall.split(";").each_with_index do |material, i| %>
-   MatRef[<%= i + 1 %>] = "<%= material %>"
-<% end %>
+   MatRef[1] = "Stucco - 7/8 in."
+   MatRef[2] = "Concrete - 140 lb/ft3 - 8 in."
+   MatRef[3] = "Compliance Insulation R1.35"
+   MatRef[4] = "Compliance Insulation R0.20"
+   MatRef[5] = "Compliance Insulation R7.60"
+   MatRef[6] = "WoodFraming16inOC"
+   MatRef[7] = "Gypsum Board - 1/2 in."
    ..
 
 Mat   "WoodFraming16inOC"
@@ -16991,3 +18068,4 @@ clg: 0  htg: 0  'Thermal Zone: Parking Garage'" )
 
 
 END_OF_FILE
+// END TEMPLATE 'C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-com/mixed-use-mid-rise/root.pxt'
