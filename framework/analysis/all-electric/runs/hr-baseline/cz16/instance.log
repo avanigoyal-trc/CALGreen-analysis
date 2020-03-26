@@ -96,3 +96,52 @@
 2020-03-25 21:47:10 - Performing Building Database check...
 2020-03-25 21:47:10 - Building Database check completed, no problems found.
 2020-03-25 21:47:12 - Project Saved
+2020-03-26 14:49:45 - -----------------------------------------------------------------------------
+2020-03-26 14:49:45 - Opening Project 'cz16\instance.cibd22'...
+2020-03-26 14:49:46 -    Model load successful into CBECC-Com 2022.0.1 RV (1113)
+2020-03-26 14:49:47 - Performing Building Database check...
+2020-03-26 14:49:47 - Building Database check completed, no problems found.
+2020-03-26 14:49:53 -   PerfAnal_NRes - starting, w/ arguments:
+2020-03-26 14:49:53 -        BEMBasePathFile    = (null)
+2020-03-26 14:49:53 -        RulesetPathFile    = (null)
+2020-03-26 14:49:53 -        SimWeatherPath     = C:\Users\mnakajima\Documents\CBECC-Com 2022 Data\EPW\
+2020-03-26 14:49:53 -        CompMgrDLLPath     = (null)
+2020-03-26 14:49:53 -        DHWWeatherPath     = (null)
+2020-03-26 14:49:53 -        ProcessingPath     = C:\Users\mnakajima\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\all-electric\runs\hr-baseline\cz16\instance - run\
+2020-03-26 14:49:53 -        ModelPathFile      = C:\Users\mnakajima\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\all-electric\runs\hr-baseline\cz16\instance.cibd22
+2020-03-26 14:49:53 -        LogPathFile        = (null)
+2020-03-26 14:49:53 -        UIVersionString    = CBECC-Com 2022.0.1 RV (1113)
+2020-03-26 14:49:53 -        LoadModelFile      = false
+2020-03-26 14:49:53 -        OptionsCSV         = AllowAnalysisAbort,0,StoreBEMDetails,1,AnalysisThruStep,8,ModelRpt_ALL,1,ExportHourlyResults_All,1,PromptUserUMLHWarning,1,PreAnalysisCheckPromptOption,3,CompReportWarningOption,5,
+2020-03-26 14:49:53 -        ErrorMsg           = (assumed to be initialized)
+2020-03-26 14:49:53 -        ErrorMsgLen        = 2056
+2020-03-26 14:49:53 -        DisplayProgress    = true
+2020-03-26 14:49:53 -        ResultsSummary     = (empty)
+2020-03-26 14:49:53 -        ResultsSummaryLen  = 3200
+2020-03-26 14:49:53 -        pProgCallbackFunc  = (null)
+2020-03-26 14:49:54 - Performing Building Database check...
+2020-03-26 14:49:54 - Building Database check completed, no problems found.
+2020-03-26 14:49:54 - Warning:  The following developer options must be defaulted (not specified by the user) in order to perform a valid compliance analysis:
+          Proj 'High-Rise Mixed-Use (10-story)' DefaultDayltgCtrls
+          Proj 'High-Rise Mixed-Use (10-story)' AutoHardSize
+          Proj 'High-Rise Mixed-Use (10-story)' AutoEffInput
+2020-03-26 14:49:54 -    1 file hash check(s) failed on executable and/or analysis support files (analysis continuing w/ report signature disabled)
+2020-03-26 14:49:57 - Performing Building Database check...
+2020-03-26 14:49:57 - Building Database check completed, no problems found.
+2020-03-26 14:49:57 - Warning:  AirSystem 'Residential DOAS' has a DX cooling coil and the rated supply flow per ton of (net) cooling capacity is 848 cfm/ton. The acceptable range for successful simulation of DX cooling coils in EnergyPlus is normally ~300 to ~450 cfm/ton. If the compliance simulation fails, check flow/cooling capacity inputs for consistency with the design. If simulation still fails, contact the CBECC support team for assistance. evaluating rule: Set CHECKSIM AirSys:SupFlowPerTon  (110:'HVACSecondary-Summary.rule' line 785)
+2020-03-26 14:49:57 - Warning:  The spaces assigned to thermal zone 'Thermal Zone: F1 Lounge' have cooling unmet load hour limits ranging from 150 to 8760. All spaces in the zone will be held to the minimum UMLH limit. evaluating rule: Set CHECKCODE ThrmlZn:ClgUMLHLimit  (60:'ThermalZone-General.rule' line 1738)
+2020-03-26 14:49:57 - Warning:  The spaces assigned to thermal zone 'Thermal Zone: F1 Lounge' have heating unmet load hour limits ranging from 150 to 8760. All spaces in the zone will be held to the minimum UMLH limit. evaluating rule: Set CHECKCODE ThrmlZn:HtgUMLHLimit  (60:'ThermalZone-General.rule' line 1765)
+2020-03-26 14:50:06 -   PerfAnal_NRes - Bypassing OpenStudio (and simulation) for zp model
+2020-03-26 15:13:16 -   PerfSim_E+ - Final Result: FAIL  -- compliance margin: -3.56 (-4.47%)
+2020-03-26 15:13:20 - Analysis result:  FAIL  (TDV margin: -3.56)  Processing time:  Overall 23:26 / SDD2IDF x4 avg 0:13 / SizSim x2 avg 1:06 / AnnSim x2 avg 9:40 / ReportGen x0 0:00 / Other 0:57
+2020-03-26 15:13:20 -       ResultsSummary population:  bAbort = (false) / RuleProcAbort = (false) / iRetVal = 0 / pszResultsSummary = (empty) / iResultsSummaryLen = 3200
+2020-03-26 15:13:20 -       ResultsSummary components1:  2020-03-26 15:13:20 / instance / High-Rise Mixed-Use (10-story) / CTZ16S22A / Title24Compliance / 23:26 / FAIL / -3.56
+2020-03-26 15:13:20 -       ResultsSummary components2:  CBECC-Com 2022.0.1 RV (1113) / BEMCmpMgr 2022.0.1 RV (6107) / CA 2022 Nonresidential, Vers. 1.0 Alpha / 1.11.3.f52686d8e1 / 9.0.1-bb7ca4f0da / CSE19 0.868.0 EXE / C:\Users\mnakajima\Documents\CBECC-Com 2022 Data\EPW\ / C:\Users\mnakajima\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\all-electric\runs\hr-baseline\cz16\
+2020-03-26 15:13:20 -       ResultsSummary:  2020-03-26 15:13:20,"instance","High-Rise Mixed-Use (10-story)","CTZ16S22A","Pol  0% RetAdd NoLeak",125400,150480,"Title24Compliance",23:26,FAIL,-3.56,"--","--","Successful (224 warnings)",14.1985,62853.1,71983.5,88.7882,2855.41,1088.9,52245,191129,231906,0,181711,6890.07,0,0,611636,12160,0,0,0,0,8827.82,0,20987.9,754.553,0,0,0,21742.4,0,0,0,0,0,0,0,0,0,0,0,0,0,25.3877,13.1203,16.1104,0.0177335,0.579343,17.3106,10.589,83.1151,56.3053,0,45.2446,1.55592,0,0,186.221,142.328,43.8931,0,0,,0,34.25,"Thermal Zone: F10 2-Bed NE",0,"--","--","Successful (205 warnings)",54.0022,32387.3,88347.6,1662.43,21395.6,8673.85,52245,204766,231906,0,181711,6890.07,0,0,625273,9370.78,0,0,0,0,8444.71,0,17815.5,754.553,0,0,0,18570.1,0,0,0,0,0,0,0,0,0,0,0,0,0,19.5875,6.63774,19.736,0.344081,4.45423,18.209,10.589,79.5575,56.3053,0,45.2446,1.55592,0,0,182.663,145.317,37.3467,0,0,,0,0,,0,9.13471e-06,24.6492,11.4585,0.032986,1.16845,0.124303,8.95193,46.3854,40.0913,0,31.5421,0.786538,0,0,118.805,6.10013e-06,12.4884,16.15,0.615701,4.95999,1.34738,8.95193,44.5135,40.0913,0,31.5421,0.786538,0,0,116.933,"CBECC-Com 2022.0.1 RV (1113)","BEMCmpMgr 2022.0.1 RV (6107)","CA 2022 Nonresidential, Vers. 1.0 Alpha","1.11.3.f52686d8e1","9.0.1-bb7ca4f0da","CSE19 0.868.0 EXE","C:\Users\mnakajima\Documents\CBECC-Com 2022 Data\EPW\","C:\Users\mnakajima\Documents\GitHub\T24-2022-CASE-Modeling\framework\analysis\all-electric\runs\hr-baseline\cz16\",0.00223583,7.66955,11.1331,0.00916733,0.296825,0.179198,5.74506,25.04,35.9296,0,31.4601,1.13389,0,0,93.56,5.83057,0,0,0,0,4.23282,0,10.06,0.361798,0,0,0,10.42,0.00961625,3.63452,12.8272,0.195274,2.948,1.12108,5.74506,26.49,35.9296,0,31.4601,1.13389,0,0,95.01,4.49316,0,0,0,0,4.04913,0,8.54,0.361798,0,0,0,8.9,8.90442,1.15212,1.67241,0.00137712,0.0445892,6.49102,0.863026,19.129,5.94987,0,4.72593,0.170333,0,0,29.9751,6.86313,0.54598,1.92691,0.0293342,0.44285,6.35198,0.863026,17.0232,5.94987,0,4.72593,0.170333,0,0,27.8693,
+
+2020-03-26 15:13:24 - -----------------------------------------------------------------------------
+2020-03-26 15:13:24 - Opening Project 'cz16\instance.cibd22'...
+2020-03-26 15:13:25 -    Model load successful into CBECC-Com 2022.0.1 RV (1113)
+2020-03-26 15:13:25 - Performing Building Database check...
+2020-03-26 15:13:25 - Building Database check completed, no problems found.
+2020-03-26 15:13:29 - Project Saved
