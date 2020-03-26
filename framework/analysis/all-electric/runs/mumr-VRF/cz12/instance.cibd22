@@ -1,7 +1,5 @@
 // INSERT TEMPLATE 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-com/mixed-use-mid-rise/root.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-com/mixed-use-mid-rise/root.pxt'
-// PARAMETER ERROR:  Undefined parameter specified (res_fixed_window); parameter ignored.
-// PARAMETER ERROR:  Undefined parameter specified (nonres_fixed_window); parameter ignored.
 //   proposed_only = "No"
 // * climate_zone = "ClimateZone12" (:default => "ClimateZone3")
 // * weather_station = "CTZ12S22A" (:default => "OAKLAND_724930")
@@ -15772,8 +15770,8 @@ VRFSys   "VRF F2-4 CU-2"
 //   cop = 3.2
 // * cooling_capacity = 135000 (:default => nil)
 // * heating_capacity = 150000 (:default => nil)
-// * equivalent_pipe_len = 145 (:default => nil)
-// * max_vertical_height = -25 (:default => nil)
+// * equivalent_pipe_len = 125 (:default => nil)
+// * max_vertical_height = -5 (:default => nil)
 
 
 VRFSys   "VRF F5 CU-1"
@@ -15784,8 +15782,8 @@ VRFSys   "VRF F5 CU-1"
    EER = 10.4
    HtgCapNetRtd = 150000
    COP = 3.2
-   EquivalentPipeLen = 145
-   MaxDeltaHgt = -25
+   EquivalentPipeLen = 125
+   MaxDeltaHgt = -5
    ..
 // END TEMPLATE 'vrf_cu.pxt'
 // INSERT TEMPLATE 'vrf_cu.pxt'
@@ -15798,8 +15796,8 @@ VRFSys   "VRF F5 CU-1"
 //   cop = 3.2
 // * cooling_capacity = 135000 (:default => nil)
 // * heating_capacity = 150000 (:default => nil)
-// * equivalent_pipe_len = 145 (:default => nil)
-// * max_vertical_height = -25 (:default => nil)
+// * equivalent_pipe_len = 125 (:default => nil)
+// * max_vertical_height = -5 (:default => nil)
 
 
 VRFSys   "VRF F5 CU-2"
@@ -15810,14 +15808,14 @@ VRFSys   "VRF F5 CU-2"
    EER = 10.4
    HtgCapNetRtd = 150000
    COP = 3.2
-   EquivalentPipeLen = 145
-   MaxDeltaHgt = -25
+   EquivalentPipeLen = 125
+   MaxDeltaHgt = -5
    ..
 // END TEMPLATE 'vrf_cu.pxt'
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F2-4 1-Bed Core N" (:default => nil)
-// * vrf_cu_name = "VRF F2-4 CU-1" (:default => nil)
+// * vrf_cu_name = "VRF F2-4 CU-1" (:default => "")
 // * count = "3" (:default => nil)
 // * index = "1" (:default => nil)
 // * cooling_capacity = "9333.96" (:default => 0)
@@ -15854,7 +15852,7 @@ Fan   "Fan 1"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F2-4 1-Bed Core West" (:default => nil)
-// * vrf_cu_name = "VRF F2-4 CU-1" (:default => nil)
+// * vrf_cu_name = "VRF F2-4 CU-1" (:default => "")
 // * count = "6" (:default => nil)
 // * index = "2" (:default => nil)
 // * cooling_capacity = "9579.08" (:default => 0)
@@ -15891,7 +15889,7 @@ Fan   "Fan 2"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F2-4 1-Bed Core East" (:default => nil)
-// * vrf_cu_name = "VRF F2-4 CU-2" (:default => nil)
+// * vrf_cu_name = "VRF F2-4 CU-2" (:default => "")
 // * count = "6" (:default => nil)
 // * index = "3" (:default => nil)
 // * cooling_capacity = "11557.3" (:default => 0)
@@ -15928,7 +15926,7 @@ Fan   "Fan 3"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F2-4 1-Bed North CU-1" (:default => nil)
-// * vrf_cu_name = "VRF F2-4 CU-1" (:default => nil)
+// * vrf_cu_name = "VRF F2-4 CU-1" (:default => "")
 // * count = "6" (:default => nil)
 // * index = "4" (:default => nil)
 // * cooling_capacity = "7235.74" (:default => 0)
@@ -15965,7 +15963,7 @@ Fan   "Fan 4"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F2-4 1-Bed North CU-2" (:default => nil)
-// * vrf_cu_name = "VRF F2-4 CU-2" (:default => nil)
+// * vrf_cu_name = "VRF F2-4 CU-2" (:default => "")
 // * count = "9" (:default => nil)
 // * index = "5" (:default => nil)
 // * cooling_capacity = "7178.93" (:default => 0)
@@ -16002,7 +16000,7 @@ Fan   "Fan 5"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F2-4 2-Bed Core NE" (:default => nil)
-// * vrf_cu_name = "VRF F2-4 CU-2" (:default => nil)
+// * vrf_cu_name = "VRF F2-4 CU-2" (:default => "")
 // * count = "3" (:default => nil)
 // * index = "6" (:default => nil)
 // * cooling_capacity = "9059.6" (:default => 0)
@@ -16039,7 +16037,7 @@ Fan   "Fan 6"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F2-4 2-Bed Core NW" (:default => nil)
-// * vrf_cu_name = "VRF F2-4 CU-1" (:default => nil)
+// * vrf_cu_name = "VRF F2-4 CU-1" (:default => "")
 // * count = "3" (:default => nil)
 // * index = "7" (:default => nil)
 // * cooling_capacity = "9255.32" (:default => 0)
@@ -16076,7 +16074,7 @@ Fan   "Fan 7"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F5 1-Bed North CU-2" (:default => nil)
-// * vrf_cu_name = "VRF F5 CU-2" (:default => nil)
+// * vrf_cu_name = "VRF F5 CU-2" (:default => "")
 // * count = "3" (:default => nil)
 // * index = "8" (:default => nil)
 // * cooling_capacity = "9726.5" (:default => 0)
@@ -16113,7 +16111,7 @@ Fan   "Fan 8"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F5 2-Bed Core NW" (:default => nil)
-// * vrf_cu_name = "VRF F5 CU-1" (:default => nil)
+// * vrf_cu_name = "VRF F5 CU-1" (:default => "")
 // * count = "1" (:default => nil)
 // * index = "9" (:default => nil)
 // * cooling_capacity = "12590.1" (:default => 0)
@@ -16150,7 +16148,7 @@ Fan   "Fan 9"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F5 1-Bed North CU-1" (:default => nil)
-// * vrf_cu_name = "VRF F5 CU-1" (:default => nil)
+// * vrf_cu_name = "VRF F5 CU-1" (:default => "")
 // * count = "2" (:default => nil)
 // * index = "10" (:default => nil)
 // * cooling_capacity = "9778.19" (:default => 0)
@@ -16187,7 +16185,7 @@ Fan   "Fan 10"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F5 2-Bed Core NE" (:default => nil)
-// * vrf_cu_name = "VRF F5 CU-2" (:default => nil)
+// * vrf_cu_name = "VRF F5 CU-2" (:default => "")
 // * count = "1" (:default => nil)
 // * index = "11" (:default => nil)
 // * cooling_capacity = "12248.8" (:default => 0)
@@ -16224,7 +16222,7 @@ Fan   "Fan 11"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F2-4 2-Bed East" (:default => nil)
-// * vrf_cu_name = "VRF F2-4 CU-2" (:default => nil)
+// * vrf_cu_name = "VRF F2-4 CU-2" (:default => "")
 // * count = "9" (:default => nil)
 // * index = "12" (:default => nil)
 // * cooling_capacity = "14389.7" (:default => 0)
@@ -16261,7 +16259,7 @@ Fan   "Fan 12"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F2-4 2-Bed West" (:default => nil)
-// * vrf_cu_name = "VRF F2-4 CU-1" (:default => nil)
+// * vrf_cu_name = "VRF F2-4 CU-1" (:default => "")
 // * count = "9" (:default => nil)
 // * index = "13" (:default => nil)
 // * cooling_capacity = "17346" (:default => 0)
@@ -16298,7 +16296,7 @@ Fan   "Fan 13"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F2-4 3-Bed NE" (:default => nil)
-// * vrf_cu_name = "VRF F2-4 CU-2" (:default => nil)
+// * vrf_cu_name = "VRF F2-4 CU-2" (:default => "")
 // * count = "3" (:default => nil)
 // * index = "14" (:default => nil)
 // * cooling_capacity = "19292" (:default => 0)
@@ -16335,7 +16333,7 @@ Fan   "Fan 14"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F2-4 3-Bed NW" (:default => nil)
-// * vrf_cu_name = "VRF F2-4 CU-1" (:default => nil)
+// * vrf_cu_name = "VRF F2-4 CU-1" (:default => "")
 // * count = "3" (:default => nil)
 // * index = "15" (:default => nil)
 // * cooling_capacity = "23567.1" (:default => 0)
@@ -16372,7 +16370,7 @@ Fan   "Fan 15"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F2-4 Studio SE" (:default => nil)
-// * vrf_cu_name = "VRF F2-4 CU-2" (:default => nil)
+// * vrf_cu_name = "VRF F2-4 CU-2" (:default => "")
 // * count = "3" (:default => nil)
 // * index = "16" (:default => nil)
 // * cooling_capacity = "12535.2" (:default => 0)
@@ -16409,7 +16407,7 @@ Fan   "Fan 16"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F2-4 Studio SW" (:default => nil)
-// * vrf_cu_name = "VRF F2-4 CU-1" (:default => nil)
+// * vrf_cu_name = "VRF F2-4 CU-1" (:default => "")
 // * count = "3" (:default => nil)
 // * index = "17" (:default => nil)
 // * cooling_capacity = "11690.6" (:default => 0)
@@ -16446,7 +16444,7 @@ Fan   "Fan 17"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F5 1-Bed Core N" (:default => nil)
-// * vrf_cu_name = "VRF F5 CU-1" (:default => nil)
+// * vrf_cu_name = "VRF F5 CU-1" (:default => "")
 // * count = "1" (:default => nil)
 // * index = "18" (:default => nil)
 // * cooling_capacity = "11339.3" (:default => 0)
@@ -16483,7 +16481,7 @@ Fan   "Fan 18"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F5 1-Bed Core West" (:default => nil)
-// * vrf_cu_name = "VRF F5 CU-1" (:default => nil)
+// * vrf_cu_name = "VRF F5 CU-1" (:default => "")
 // * count = "2" (:default => nil)
 // * index = "19" (:default => nil)
 // * cooling_capacity = "11206.3" (:default => 0)
@@ -16520,7 +16518,7 @@ Fan   "Fan 19"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F5 1-Bed Core East" (:default => nil)
-// * vrf_cu_name = "VRF F5 CU-2" (:default => nil)
+// * vrf_cu_name = "VRF F5 CU-2" (:default => "")
 // * count = "2" (:default => nil)
 // * index = "20" (:default => nil)
 // * cooling_capacity = "14192.9" (:default => 0)
@@ -16557,7 +16555,7 @@ Fan   "Fan 20"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F5 2-Bed East" (:default => nil)
-// * vrf_cu_name = "VRF F5 CU-2" (:default => nil)
+// * vrf_cu_name = "VRF F5 CU-2" (:default => "")
 // * count = "3" (:default => nil)
 // * index = "21" (:default => nil)
 // * cooling_capacity = "16317.8" (:default => 0)
@@ -16594,7 +16592,7 @@ Fan   "Fan 21"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F5 2-Bed West" (:default => nil)
-// * vrf_cu_name = "VRF F5 CU-1" (:default => nil)
+// * vrf_cu_name = "VRF F5 CU-1" (:default => "")
 // * count = "3" (:default => nil)
 // * index = "22" (:default => nil)
 // * cooling_capacity = "20526.1" (:default => 0)
@@ -16631,7 +16629,7 @@ Fan   "Fan 22"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F5 3-Bed NE" (:default => nil)
-// * vrf_cu_name = "VRF F5 CU-2" (:default => nil)
+// * vrf_cu_name = "VRF F5 CU-2" (:default => "")
 // * count = "1" (:default => nil)
 // * index = "23" (:default => nil)
 // * cooling_capacity = "21857.3" (:default => 0)
@@ -16668,7 +16666,7 @@ Fan   "Fan 23"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F5 3-Bed NW" (:default => nil)
-// * vrf_cu_name = "VRF F5 CU-1" (:default => nil)
+// * vrf_cu_name = "VRF F5 CU-1" (:default => "")
 // * count = "1" (:default => nil)
 // * index = "24" (:default => nil)
 // * cooling_capacity = "27794.2" (:default => 0)
@@ -16705,7 +16703,7 @@ Fan   "Fan 24"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F5 Studio SE" (:default => nil)
-// * vrf_cu_name = "VRF F5 CU-2" (:default => nil)
+// * vrf_cu_name = "VRF F5 CU-2" (:default => "")
 // * count = "1" (:default => nil)
 // * index = "25" (:default => nil)
 // * cooling_capacity = "13864.1" (:default => 0)
@@ -16742,7 +16740,7 @@ Fan   "Fan 25"
 // INSERT TEMPLATE 'vrf_fcu.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/templates/cbecc-com/vrf_fcu.pxt'
 // * zone_name = "ZnSys F5 Studio SW" (:default => nil)
-// * vrf_cu_name = "VRF F5 CU-1" (:default => nil)
+// * vrf_cu_name = "VRF F5 CU-1" (:default => "")
 // * count = "1" (:default => nil)
 // * index = "26" (:default => nil)
 // * cooling_capacity = "12999.5" (:default => 0)
