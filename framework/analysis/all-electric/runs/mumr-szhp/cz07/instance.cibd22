@@ -4,8 +4,8 @@ Proj   "Mid-Rise Mixed-Use (5-story)"
    Ruleset = "CA 2022 Nonresidential, Vers. 1.0 Alpha (T24N_2022.bin)"
    BldgEngyModelVersion = 14
    CreateDate = 1567115615
-   ModDate = 1580941990
-   RunDate = 1580941991
+   ModDate = 1585190866
+   RunDate = 1585190867
    GasType = "NaturalGas"
    CliZn = "ClimateZone7"
    WeatherStation = "CTZ07S22A"
@@ -69,6 +69,21 @@ Mat   "Compliance Insulation R1.35"
    CodeItem = "Compliance Insulation R1.35"
    ..
 
+Mat   "Compliance Insulation R3.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R3.00"
+   ..
+
+Mat   "Compliance Insulation R7.10"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R7.10"
+   ..
+
+Mat   "Compliance Insulation R3.63"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R3.63"
+   ..
+
 Mat   "WoodFrameWall16inOC R11.25"  
    CodeCat = "Composite"
    FrmMat = "Wood"
@@ -101,6 +116,14 @@ Mat   "WoodFrameWall16inOC R21"
    CavityIns = 21
    ..
 
+Mat   "WoodFrameWall16inOC R25"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 25
+   ..
+
 Mat   "Concrete - 140 lb/ft3 - 10 in."  
    CodeCat = "Concrete"
    CodeItem = "Concrete - 140 lb/ft3 - 10 in."
@@ -115,10 +138,10 @@ ConsAssm   "SlabOnOrBelowGradeF073"
 ConsAssm   "ResWoodWallU059"  
    SpecMthd = "Layers"
    ExtRoughness = "Smooth"
-   MatRef[1] = "Stucco - 7/8 in."
-   MatRef[2] = "Plywood - 5/8 in."
-   MatRef[3] = "Compliance Insulation R1.54"
-   MatRef[4] = "WoodFrameWall16inOCCavInsR5"
+   MatRef[1] = "Compliance Insulation R0.10"
+   MatRef[2] = "Compliance Insulation R1.35"
+   MatRef[3] = "Gypsum Board - 5/8 in."
+   MatRef[4] = "WoodFrameWall16inOCCavInsR21"
    MatRef[5] = "Gypsum Board - 5/8 in."
    ..
 
@@ -15446,6 +15469,22 @@ ThrmlZn   "Thermal Zone: F2-4 2-Bed Core NE-NW"
    ExhSrc = "VentilationSystem"
    ..
 
+ThrmlZn   "Thermal Zone: F5 1-Bed North"  
+   Type = "Conditioned"
+   HVACZnCnt = 5
+   PriAirCondgSysRef[1] = "ZnSys F5 1-Bed North"
+   VentSysRef = "Bal F5 1-Bed North"
+   ExhSrc = "VentilationSystem"
+   ..
+
+ThrmlZn   "Thermal Zone: F5 2-Bed Core NE-NW"  
+   Type = "Conditioned"
+   HVACZnCnt = 2
+   PriAirCondgSysRef[1] = "ZnSys F5 2-Bed Core NE-NW"
+   VentSysRef = "Bal F5 2-Bed Core NE-NW"
+   ExhSrc = "VentilationSystem"
+   ..
+
 ThrmlZn   "Thermal Zone: F2-4 2-Bed East"  
    Type = "Conditioned"
    HVACZnCnt = 3
@@ -15515,22 +15554,6 @@ ThrmlZn   "Thermal Zone: F5 1-Bed Core East"
    HVACZnCnt = 2
    PriAirCondgSysRef[1] = "ZnSys F5 1-Bed Core East"
    VentSysRef = "Bal F5 1-Bed Core East"
-   ExhSrc = "VentilationSystem"
-   ..
-
-ThrmlZn   "Thermal Zone: F5 1-Bed North"  
-   Type = "Conditioned"
-   HVACZnCnt = 5
-   PriAirCondgSysRef[1] = "ZnSys F5 1-Bed North"
-   VentSysRef = "Bal F5 1-Bed North"
-   ExhSrc = "VentilationSystem"
-   ..
-
-ThrmlZn   "Thermal Zone: F5 2-Bed Core NE-NW"  
-   Type = "Conditioned"
-   HVACZnCnt = 2
-   PriAirCondgSysRef[1] = "ZnSys F5 2-Bed Core NE-NW"
-   VentSysRef = "Bal F5 2-Bed Core NE-NW"
    ExhSrc = "VentilationSystem"
    ..
 
@@ -16210,176 +16233,132 @@ ZnSys   "Bal F2 1-Bed Core N"
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
-   RtdFlowCap = 36.6
-   RtdPwr = 25.62
    ..
 
 ZnSys   "Bal F2 1-Bed Core West"  
    Type = "VentilationOnly"
    Cnt = 6
    ExhSysType = "Balanced"
-   RtdFlowCap = 36.6
-   RtdPwr = 25.62
    ..
 
 ZnSys   "Bal F2 1-Bed Core East"  
    Type = "VentilationOnly"
    Cnt = 6
    ExhSysType = "Balanced"
-   RtdFlowCap = 36.6
-   RtdPwr = 25.62
    ..
 
 ZnSys   "Bal F2 1-Bed North"  
    Type = "VentilationOnly"
    Cnt = 15
    ExhSysType = "Balanced"
-   RtdFlowCap = 37.3
-   RtdPwr = 26.11
    ..
 
 ZnSys   "Bal F2 2-Bed Core NE-NW"  
    Type = "VentilationOnly"
    Cnt = 6
    ExhSysType = "Balanced"
-   RtdFlowCap = 54.9
-   RtdPwr = 38.43
    ..
 
 ZnSys   "Bal F2 2-Bed East"  
    Type = "VentilationOnly"
    Cnt = 9
    ExhSysType = "Balanced"
-   RtdFlowCap = 54.9
-   RtdPwr = 38.43
    ..
 
 ZnSys   "Bal F2 2-Bed West"  
    Type = "VentilationOnly"
    Cnt = 9
    ExhSysType = "Balanced"
-   RtdFlowCap = 54.9
-   RtdPwr = 38.43
    ..
 
 ZnSys   "Bal F2 3-Bed NE"  
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
-   RtdFlowCap = 72.3
-   RtdPwr = 50.61
    ..
 
 ZnSys   "Bal F2 3-Bed NW"  
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
-   RtdFlowCap = 72.3
-   RtdPwr = 50.61
    ..
 
 ZnSys   "Bal F2 Studio SE"  
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
-   RtdFlowCap = 31.2
-   RtdPwr = 21.84
    ..
 
 ZnSys   "Bal F2 Studio SW"  
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
-   RtdFlowCap = 31.2
-   RtdPwr = 21.84
    ..
 
 ZnSys   "Bal F5 1-Bed Core N"  
    Type = "VentilationOnly"
    Cnt = 1
    ExhSysType = "Balanced"
-   RtdFlowCap = 36.6
-   RtdPwr = 25.62
    ..
 
 ZnSys   "Bal F5 1-Bed Core West"  
    Type = "VentilationOnly"
    Cnt = 2
    ExhSysType = "Balanced"
-   RtdFlowCap = 36.6
-   RtdPwr = 25.62
    ..
 
 ZnSys   "Bal F5 1-Bed Core East"  
    Type = "VentilationOnly"
    Cnt = 2
    ExhSysType = "Balanced"
-   RtdFlowCap = 36.6
-   RtdPwr = 25.62
    ..
 
 ZnSys   "Bal F5 1-Bed North"  
    Type = "VentilationOnly"
    Cnt = 5
    ExhSysType = "Balanced"
-   RtdFlowCap = 37.3
-   RtdPwr = 26.11
    ..
 
 ZnSys   "Bal F5 2-Bed Core NE-NW"  
    Type = "VentilationOnly"
    Cnt = 2
    ExhSysType = "Balanced"
-   RtdFlowCap = 54.9
-   RtdPwr = 38.43
    ..
 
 ZnSys   "Bal F5 2-Bed East"  
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
-   RtdFlowCap = 54.9
-   RtdPwr = 38.43
    ..
 
 ZnSys   "Bal F5 2-Bed West"  
    Type = "VentilationOnly"
    Cnt = 3
    ExhSysType = "Balanced"
-   RtdFlowCap = 54.9
-   RtdPwr = 38.43
    ..
 
 ZnSys   "Bal F5 3-Bed NE"  
    Type = "VentilationOnly"
    Cnt = 1
    ExhSysType = "Balanced"
-   RtdFlowCap = 72.3
-   RtdPwr = 50.61
    ..
 
 ZnSys   "Bal F5 3-Bed NW"  
    Type = "VentilationOnly"
    Cnt = 1
    ExhSysType = "Balanced"
-   RtdFlowCap = 72.3
-   RtdPwr = 50.61
    ..
 
 ZnSys   "Bal F5 Studio SE"  
    Type = "VentilationOnly"
    Cnt = 1
    ExhSysType = "Balanced"
-   RtdFlowCap = 31.2
-   RtdPwr = 21.84
    ..
 
 ZnSys   "Bal F5 Studio SW"  
    Type = "VentilationOnly"
    Cnt = 1
    ExhSysType = "Balanced"
-   RtdFlowCap = 31.2
-   RtdPwr = 21.84
    ..
 
 AirSys   "Parking Garage Vent System"  
@@ -16727,6 +16706,46 @@ Mat   "WoodRoof16OCCavInsR38"
    CavityIns = 38
    ..
 
+Mat   "WoodRoof16OCCavInsR36"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "7_25In"
+   CavityIns = 36
+   ..
+
+Mat   "WoodRoof16OCCavInsR32"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "7_25In"
+   CavityIns = 32
+   ..
+
+Mat   "WoodRoof16OCCavInsR31"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "7_25In"
+   CavityIns = 31
+   ..
+
+Mat   "WoodRoof16OCCavInsR29"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "7_25In"
+   CavityIns = 29
+   ..
+
+Mat   "WoodRoof16OCCavInsR27"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "7_25In"
+   CavityIns = 27
+   ..
+
 Mat   "WoodRoof16OCCavInsR25"  
    CodeCat = "Composite"
    FrmMat = "Wood"
@@ -16774,9 +16793,8 @@ ConsAssm   "WoodFramingAndOtherRoofU028"
    MatRef[1] = "Roofing felt - 1/8 in."
    MatRef[2] = "Building Paper - 1/16 in."
    MatRef[3] = "Fiberboard sheathing - 1/2 in."
-   MatRef[4] = "Compliance Insulation R4x"
-   MatRef[5] = "Gypsum Board - 1/2 in."
-   MatRef[6] = "WoodRoof16OCCavInsR38"
+   MatRef[4] = "Gypsum Board - 1/2 in."
+   MatRef[5] = "WoodRoof16OCCavInsR29"
    ..
 
 Mat   "Roofing felt - 1/8 in."  
@@ -16950,6 +16968,54 @@ Mat   "WoodFrameWall16inOCCavInsR19"
    CavityIns = 19
    ..
 
+Mat   "WoodFrameWall16inOCCavInsR18"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 18
+   ..
+
+Mat   "WoodFrameWall16inOCCavInsR25"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Wood"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "5_5In"
+   CavityIns = 25
+   ..
+
+Mat   "MetalFrameWall16inOC R13.00"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Metal"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "3_5In"
+   CavityIns = 13
+   CavityInsOpt = "R-13"
+   ..
+
+Mat   "MetalFrameWall16inOC R11.00"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Metal"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "3_5In"
+   CavityIns = 11.25
+   CavityInsOpt = "R-11"
+   ..
+
+Mat   "MetalFrameWall16inOC R0.00"  
+   CodeCat = "Composite"
+   CodeItem = "- specify -"
+   FrmMat = "Metal"
+   FrmConfig = "Wall16inOC"
+   FrmDepth = "3_5In"
+   CavityIns = 0
+   CavityInsOpt = "R-0"
+   ..
+
 Mat   "WoodFrameWall16inOCCavInsR10"  
    CodeCat = "Composite"
    CodeItem = "- specify -"
@@ -17025,6 +17091,11 @@ Mat   "WoodFrameWall16inOCCavInsR21"
 Mat   "Compliance Insulation R13.00"  
    CodeCat = "Insulation Board"
    CodeItem = "Compliance Insulation R13.00"
+   ..
+
+Mat   "Compliance Insulation R14.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R14.00"
    ..
 
 Mat   "Compliance Insulation R6.00"  
@@ -17106,30 +17177,30 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Title3[18] = "Emis. (tonne)"
    Title3[19] = "Emis. (tonne)"
    Enduse1[1] = "Space Heating"
-   Enduse1[2] = "1.0"
-   Enduse1[3] = "66.9"
-   Enduse1[4] = "1.85"
+   Enduse1[2] = "0.9"
+   Enduse1[3] = "66.8"
+   Enduse1[4] = "1.83"
    Enduse1[9] = "--"
    Enduse1[11] = "0.58"
-   Enduse1[17] = "0.25"
+   Enduse1[17] = "0.23"
    Enduse1[18] = "0.32"
-   Enduse1[19] = "0.57"
+   Enduse1[19] = "0.55"
    Enduse2[1] = "Space Cooling"
-   Enduse2[2] = "90.2"
+   Enduse2[2] = "92.6"
    Enduse2[3] = "--"
-   Enduse2[4] = "25.05"
-   Enduse2[9] = "28.7"
-   Enduse2[11] = "1.74"
-   Enduse2[17] = "10.42"
-   Enduse2[19] = "10.42"
+   Enduse2[4] = "25.29"
+   Enduse2[9] = "27.9"
+   Enduse2[11] = "1.75"
+   Enduse2[17] = "10.51"
+   Enduse2[19] = "10.51"
    Enduse3[1] = "Indoor Fans"
-   Enduse3[2] = "56.1"
+   Enduse3[2] = "56.5"
    Enduse3[3] = "--"
-   Enduse3[4] = "14.04"
-   Enduse3[9] = "9.7"
+   Enduse3[4] = "14.08"
+   Enduse3[9] = "9.6"
    Enduse3[11] = "1.32"
-   Enduse3[17] = "7.94"
-   Enduse3[19] = "7.94"
+   Enduse3[17] = "7.95"
+   Enduse3[19] = "7.95"
    Enduse4[1] = "Heat Rejection"
    Enduse4[2] = "--"
    Enduse4[3] = "--"
@@ -17146,13 +17217,13 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Enduse5[19] = "0.03"
    Enduse6[1] = "Domestic Hot Water"
    Enduse6[2] = "12.8"
-   Enduse6[3] = "964.8"
-   Enduse6[4] = "23.70"
+   Enduse6[3] = "865.4"
+   Enduse6[4] = "21.59"
    Enduse6[9] = "2.1"
-   Enduse6[11] = "8.10"
+   Enduse6[11] = "7.30"
    Enduse6[17] = "1.62"
-   Enduse6[18] = "4.63"
-   Enduse6[19] = "6.25"
+   Enduse6[18] = "4.15"
+   Enduse6[19] = "5.77"
    Enduse7[1] = "Indoor Lighting"
    Enduse7[2] = "81.8"
    Enduse7[3] = "--"
@@ -17162,14 +17233,14 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Enduse7[17] = "9.02"
    Enduse7[19] = "9.02"
    Enduse8[1] = "Compliance Total"
-   Enduse8[2] = "242.1"
-   Enduse8[3] = "1,031.7"
-   Enduse8[4] = "83.89"
-   Enduse8[9] = "55.1"
-   Enduse8[11] = "13.25"
-   Enduse8[17] = "29.28"
-   Enduse8[18] = "4.95"
-   Enduse8[19] = "34.23"
+   Enduse8[2] = "244.8"
+   Enduse8[3] = "932.2"
+   Enduse8[4] = "82.04"
+   Enduse8[9] = "54.1"
+   Enduse8[11] = "12.46"
+   Enduse8[17] = "29.36"
+   Enduse8[18] = "4.47"
+   Enduse8[19] = "33.83"
    Enduse9[1] = "Receptacle"
    Enduse9[2] = "217.4"
    Enduse9[3] = "58.7"
@@ -17214,14 +17285,14 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Enduse14[9] = "--"
    Enduse14[11] = "--"
    Enduse15[1] = "TOTAL"
-   Enduse15[2] = "643.2"
-   Enduse15[3] = "1,090.4"
-   Enduse15[4] = "188.00"
-   Enduse15[9] = "123.1"
-   Enduse15[11] = "24.29"
-   Enduse15[17] = "92.71"
-   Enduse15[18] = "5.23"
-   Enduse15[19] = "97.94"
+   Enduse15[2] = "645.9"
+   Enduse15[3] = "990.9"
+   Enduse15[4] = "186.15"
+   Enduse15[9] = "122.1"
+   Enduse15[11] = "23.50"
+   Enduse15[17] = "92.79"
+   Enduse15[18] = "4.75"
+   Enduse15[19] = "97.54"
    ZoneUMLHsLoaded[1] = 1
    ZoneUMLHs[1] = "clg: 0  htg: 0  'Thermal Zone: F1 Business Center'
 clg: 0  htg: 0  'Thermal Zone: F1 Corridor'
@@ -17238,25 +17309,25 @@ clg: 0  htg: 0  'Thermal Zone: F2-4 1-Bed Core West'
 clg: 0  htg: 0  'Thermal Zone: F2-4 1-Bed Core East'
 clg: 0  htg: 0  'Thermal Zone: F2-4 1-Bed North'
 clg: 0  htg: 0  'Thermal Zone: F2-4 2-Bed Core NE-NW'
+clg: 0  htg: 2  'Thermal Zone: F5 1-Bed North'
+clg: 0  htg: 0  'Thermal Zone: F5 2-Bed Core NE-NW'
 clg: 0  htg: 0  'Thermal Zone: F2-4 2-Bed East'
 clg: 0  htg: 0  'Thermal Zone: F2-4 2-Bed West'
 clg: 0  htg: 0  'Thermal Zone: F2-4 3-Bed NE'
 clg: 0  htg: 0  'Thermal Zone: F2-4 3-Bed NW'
 clg: 0  htg: 0  'Thermal Zone: F2-4 Studio SE'
 clg: 0  htg: 0  'Thermal Zone: F2-4 Studio SW'
-clg: 3778  htg: 68  'Thermal Zone: F2-4 Corridor'
+clg: 3902  htg: 34  'Thermal Zone: F2-4 Corridor'
 clg: 0  htg: 0  'Thermal Zone: F5 1-Bed Core N'
-clg: 0  htg: 1  'Thermal Zone: F5 1-Bed Core West'
-clg: 0  htg: 1  'Thermal Zone: F5 1-Bed Core East'
-clg: 0  htg: 1  'Thermal Zone: F5 1-Bed North'
-clg: 0  htg: 0  'Thermal Zone: F5 2-Bed Core NE-NW'
-clg: 0  htg: 2  'Thermal Zone: F5 2-Bed East'
-clg: 0  htg: 2  'Thermal Zone: F5 2-Bed West'
+clg: 0  htg: 2  'Thermal Zone: F5 1-Bed Core West'
+clg: 0  htg: 2  'Thermal Zone: F5 1-Bed Core East'
+clg: 0  htg: 3  'Thermal Zone: F5 2-Bed East'
+clg: 0  htg: 3  'Thermal Zone: F5 2-Bed West'
 clg: 0  htg: 5  'Thermal Zone: F5 3-Bed NE'
-clg: 0  htg: 4  'Thermal Zone: F5 3-Bed NW'
+clg: 0  htg: 5  'Thermal Zone: F5 3-Bed NW'
 clg: 0  htg: 6  'Thermal Zone: F5 Studio SE'
 clg: 0  htg: 6  'Thermal Zone: F5 Studio SW'
-clg: 3406  htg: 364  'Thermal Zone: F5 Corridor'
+clg: 3427  htg: 390  'Thermal Zone: F5 Corridor'
 clg: 0  htg: 0  'Thermal Zone: Parking Garage'"
    SimSummary[1] = "Successful (309 warnings)"
    ..

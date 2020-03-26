@@ -72,6 +72,21 @@
         <CodeItem>Compliance Insulation R1.35</CodeItem>
       </Mat>
       <Mat>
+        <Name>Compliance Insulation R3.00</Name>
+        <CodeCat>Insulation Board</CodeCat>
+        <CodeItem>Compliance Insulation R3.00</CodeItem>
+      </Mat>
+      <Mat>
+        <Name>Compliance Insulation R7.10</Name>
+        <CodeCat>Insulation Board</CodeCat>
+        <CodeItem>Compliance Insulation R7.10</CodeItem>
+      </Mat>
+      <Mat>
+        <Name>Compliance Insulation R3.63</Name>
+        <CodeCat>Insulation Board</CodeCat>
+        <CodeItem>Compliance Insulation R3.63</CodeItem>
+      </Mat>
+      <Mat>
         <Name>WoodFrameWall16inOC R11.25</Name>
         <CodeCat>Composite</CodeCat>
         <CodeItem/>
@@ -108,6 +123,15 @@
         <CavityIns>21</CavityIns>
       </Mat>
       <Mat>
+        <Name>WoodFrameWall16inOC R25</Name>
+        <CodeCat>Composite</CodeCat>
+        <CodeItem/>
+        <FrmMat>Wood</FrmMat>
+        <FrmConfig>Wall16inOC</FrmConfig>
+        <FrmDepth>5_5In</FrmDepth>
+        <CavityIns>25</CavityIns>
+      </Mat>
+      <Mat>
         <Name>Concrete - 140 lb/ft3 - 10 in.</Name>
         <CodeCat>Concrete</CodeCat>
         <CodeItem>Concrete - 140 lb/ft3 - 10 in.</CodeItem>
@@ -124,10 +148,10 @@
         <CompatibleSurfType/>
         <SpecMthd>Layers</SpecMthd>
         <ExtRoughness>Smooth</ExtRoughness>
-        <MatRef index="0">Stucco - 7/8 in.</MatRef>
-        <MatRef index="1">Plywood - 5/8 in.</MatRef>
-        <MatRef index="2">Compliance Insulation R1.54</MatRef>
-        <MatRef index="3">WoodFrameWall16inOCCavInsR5</MatRef>
+        <MatRef index="0">Compliance Insulation R0.10</MatRef>
+        <MatRef index="1">Compliance Insulation R1.35</MatRef>
+        <MatRef index="2">Gypsum Board - 5/8 in.</MatRef>
+        <MatRef index="3">WoodFrameWall16inOCCavInsR21</MatRef>
         <MatRef index="4">Gypsum Board - 5/8 in.</MatRef>
       </ConsAssm>
       <ConsAssm>
@@ -7178,6 +7202,22 @@
           <ExhSrc>VentilationSystem</ExhSrc>
         </ThrmlZn>
         <ThrmlZn>
+          <Name>Thermal Zone: F5 1-Bed North</Name>
+          <Type>Conditioned</Type>
+          <HVACZnCnt>5</HVACZnCnt>
+          <PriAirCondgSysRef index="0">ZnSys F5 1-Bed North</PriAirCondgSysRef>
+          <VentSysRef>Bal F5 1-Bed North</VentSysRef>
+          <ExhSrc>VentilationSystem</ExhSrc>
+        </ThrmlZn>
+        <ThrmlZn>
+          <Name>Thermal Zone: F5 2-Bed Core NE-NW</Name>
+          <Type>Conditioned</Type>
+          <HVACZnCnt>2</HVACZnCnt>
+          <PriAirCondgSysRef index="0">ZnSys F5 2-Bed Core NE-NW</PriAirCondgSysRef>
+          <VentSysRef>Bal F5 2-Bed Core NE-NW</VentSysRef>
+          <ExhSrc>VentilationSystem</ExhSrc>
+        </ThrmlZn>
+        <ThrmlZn>
           <Name>Thermal Zone: F2-4 2-Bed East</Name>
           <Type>Conditioned</Type>
           <HVACZnCnt>3</HVACZnCnt>
@@ -7247,22 +7287,6 @@
           <HVACZnCnt>2</HVACZnCnt>
           <PriAirCondgSysRef index="0">ZnSys F5 1-Bed Core East</PriAirCondgSysRef>
           <VentSysRef>Bal F5 1-Bed Core East</VentSysRef>
-          <ExhSrc>VentilationSystem</ExhSrc>
-        </ThrmlZn>
-        <ThrmlZn>
-          <Name>Thermal Zone: F5 1-Bed North</Name>
-          <Type>Conditioned</Type>
-          <HVACZnCnt>5</HVACZnCnt>
-          <PriAirCondgSysRef index="0">ZnSys F5 1-Bed North</PriAirCondgSysRef>
-          <VentSysRef>Bal F5 1-Bed North</VentSysRef>
-          <ExhSrc>VentilationSystem</ExhSrc>
-        </ThrmlZn>
-        <ThrmlZn>
-          <Name>Thermal Zone: F5 2-Bed Core NE-NW</Name>
-          <Type>Conditioned</Type>
-          <HVACZnCnt>2</HVACZnCnt>
-          <PriAirCondgSysRef index="0">ZnSys F5 2-Bed Core NE-NW</PriAirCondgSysRef>
-          <VentSysRef>Bal F5 2-Bed Core NE-NW</VentSysRef>
           <ExhSrc>VentilationSystem</ExhSrc>
         </ThrmlZn>
         <ThrmlZn>
@@ -7921,176 +7945,132 @@
           <Type>VentilationOnly</Type>
           <Cnt>3</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>36.6</RtdFlowCap>
-          <RtdPwr>25.62</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F2 1-Bed Core West</Name>
           <Type>VentilationOnly</Type>
           <Cnt>6</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>36.6</RtdFlowCap>
-          <RtdPwr>25.62</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F2 1-Bed Core East</Name>
           <Type>VentilationOnly</Type>
           <Cnt>6</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>36.6</RtdFlowCap>
-          <RtdPwr>25.62</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F2 1-Bed North</Name>
           <Type>VentilationOnly</Type>
           <Cnt>15</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>37.3</RtdFlowCap>
-          <RtdPwr>26.11</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F2 2-Bed Core NE-NW</Name>
           <Type>VentilationOnly</Type>
           <Cnt>6</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>54.9</RtdFlowCap>
-          <RtdPwr>38.43</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F2 2-Bed East</Name>
           <Type>VentilationOnly</Type>
           <Cnt>9</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>54.9</RtdFlowCap>
-          <RtdPwr>38.43</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F2 2-Bed West</Name>
           <Type>VentilationOnly</Type>
           <Cnt>9</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>54.9</RtdFlowCap>
-          <RtdPwr>38.43</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F2 3-Bed NE</Name>
           <Type>VentilationOnly</Type>
           <Cnt>3</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>72.3</RtdFlowCap>
-          <RtdPwr>50.61</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F2 3-Bed NW</Name>
           <Type>VentilationOnly</Type>
           <Cnt>3</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>72.3</RtdFlowCap>
-          <RtdPwr>50.61</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F2 Studio SE</Name>
           <Type>VentilationOnly</Type>
           <Cnt>3</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>31.2</RtdFlowCap>
-          <RtdPwr>21.84</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F2 Studio SW</Name>
           <Type>VentilationOnly</Type>
           <Cnt>3</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>31.2</RtdFlowCap>
-          <RtdPwr>21.84</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F5 1-Bed Core N</Name>
           <Type>VentilationOnly</Type>
           <Cnt>1</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>36.6</RtdFlowCap>
-          <RtdPwr>25.62</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F5 1-Bed Core West</Name>
           <Type>VentilationOnly</Type>
           <Cnt>2</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>36.6</RtdFlowCap>
-          <RtdPwr>25.62</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F5 1-Bed Core East</Name>
           <Type>VentilationOnly</Type>
           <Cnt>2</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>36.6</RtdFlowCap>
-          <RtdPwr>25.62</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F5 1-Bed North</Name>
           <Type>VentilationOnly</Type>
           <Cnt>5</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>37.3</RtdFlowCap>
-          <RtdPwr>26.11</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F5 2-Bed Core NE-NW</Name>
           <Type>VentilationOnly</Type>
           <Cnt>2</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>54.9</RtdFlowCap>
-          <RtdPwr>38.43</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F5 2-Bed East</Name>
           <Type>VentilationOnly</Type>
           <Cnt>3</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>54.9</RtdFlowCap>
-          <RtdPwr>38.43</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F5 2-Bed West</Name>
           <Type>VentilationOnly</Type>
           <Cnt>3</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>54.9</RtdFlowCap>
-          <RtdPwr>38.43</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F5 3-Bed NE</Name>
           <Type>VentilationOnly</Type>
           <Cnt>1</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>72.3</RtdFlowCap>
-          <RtdPwr>50.61</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F5 3-Bed NW</Name>
           <Type>VentilationOnly</Type>
           <Cnt>1</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>72.3</RtdFlowCap>
-          <RtdPwr>50.61</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F5 Studio SE</Name>
           <Type>VentilationOnly</Type>
           <Cnt>1</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>31.2</RtdFlowCap>
-          <RtdPwr>21.84</RtdPwr>
         </ZnSys>
         <ZnSys>
           <Name>Bal F5 Studio SW</Name>
           <Type>VentilationOnly</Type>
           <Cnt>1</Cnt>
           <ExhSysType>Balanced</ExhSysType>
-          <RtdFlowCap>31.2</RtdFlowCap>
-          <RtdPwr>21.84</RtdPwr>
         </ZnSys>
         <AirSys>
           <Name>Parking Garage Vent System</Name>
@@ -8438,6 +8418,51 @@
         <CavityIns>38</CavityIns>
       </Mat>
       <Mat>
+        <Name>WoodRoof16OCCavInsR36</Name>
+        <CodeCat>Composite</CodeCat>
+        <CodeItem/>
+        <FrmMat>Wood</FrmMat>
+        <FrmConfig>Roof16inOC</FrmConfig>
+        <FrmDepth>7_25In</FrmDepth>
+        <CavityIns>36</CavityIns>
+      </Mat>
+      <Mat>
+        <Name>WoodRoof16OCCavInsR32</Name>
+        <CodeCat>Composite</CodeCat>
+        <CodeItem/>
+        <FrmMat>Wood</FrmMat>
+        <FrmConfig>Roof16inOC</FrmConfig>
+        <FrmDepth>7_25In</FrmDepth>
+        <CavityIns>32</CavityIns>
+      </Mat>
+      <Mat>
+        <Name>WoodRoof16OCCavInsR31</Name>
+        <CodeCat>Composite</CodeCat>
+        <CodeItem/>
+        <FrmMat>Wood</FrmMat>
+        <FrmConfig>Roof16inOC</FrmConfig>
+        <FrmDepth>7_25In</FrmDepth>
+        <CavityIns>31</CavityIns>
+      </Mat>
+      <Mat>
+        <Name>WoodRoof16OCCavInsR29</Name>
+        <CodeCat>Composite</CodeCat>
+        <CodeItem/>
+        <FrmMat>Wood</FrmMat>
+        <FrmConfig>Roof16inOC</FrmConfig>
+        <FrmDepth>7_25In</FrmDepth>
+        <CavityIns>29</CavityIns>
+      </Mat>
+      <Mat>
+        <Name>WoodRoof16OCCavInsR27</Name>
+        <CodeCat>Composite</CodeCat>
+        <CodeItem/>
+        <FrmMat>Wood</FrmMat>
+        <FrmConfig>Roof16inOC</FrmConfig>
+        <FrmDepth>7_25In</FrmDepth>
+        <CavityIns>27</CavityIns>
+      </Mat>
+      <Mat>
         <Name>WoodRoof16OCCavInsR25</Name>
         <CodeCat>Composite</CodeCat>
         <CodeItem/>
@@ -8489,9 +8514,8 @@
         <MatRef index="0">Roofing felt - 1/8 in.</MatRef>
         <MatRef index="1">Building Paper - 1/16 in.</MatRef>
         <MatRef index="2">Fiberboard sheathing - 1/2 in.</MatRef>
-        <MatRef index="3">Compliance Insulation R4x</MatRef>
-        <MatRef index="4">Gypsum Board - 1/2 in.</MatRef>
-        <MatRef index="5">WoodRoof16OCCavInsR38</MatRef>
+        <MatRef index="3">Gypsum Board - 1/2 in.</MatRef>
+        <MatRef index="4">WoodRoof16OCCavInsR29</MatRef>
       </ConsAssm>
       <Mat>
         <Name>Roofing felt - 1/8 in.</Name>
@@ -8663,6 +8687,54 @@
         <CavityIns>19</CavityIns>
       </Mat>
       <Mat>
+        <Name>WoodFrameWall16inOCCavInsR18</Name>
+        <CodeCat>Composite</CodeCat>
+        <CodeItem>- specify -</CodeItem>
+        <FrmMat>Wood</FrmMat>
+        <FrmConfig>Wall16inOC</FrmConfig>
+        <FrmDepth>5_5In</FrmDepth>
+        <CavityIns>18</CavityIns>
+      </Mat>
+      <Mat>
+        <Name>WoodFrameWall16inOCCavInsR25</Name>
+        <CodeCat>Composite</CodeCat>
+        <CodeItem>- specify -</CodeItem>
+        <FrmMat>Wood</FrmMat>
+        <FrmConfig>Wall16inOC</FrmConfig>
+        <FrmDepth>5_5In</FrmDepth>
+        <CavityIns>25</CavityIns>
+      </Mat>
+      <Mat>
+        <Name>MetalFrameWall16inOC R13.00</Name>
+        <CodeCat>Composite</CodeCat>
+        <CodeItem>- specify -</CodeItem>
+        <FrmMat>Metal</FrmMat>
+        <FrmConfig>Wall16inOC</FrmConfig>
+        <FrmDepth>3_5In</FrmDepth>
+        <CavityIns>13</CavityIns>
+        <CavityInsOpt>R-13</CavityInsOpt>
+      </Mat>
+      <Mat>
+        <Name>MetalFrameWall16inOC R11.00</Name>
+        <CodeCat>Composite</CodeCat>
+        <CodeItem>- specify -</CodeItem>
+        <FrmMat>Metal</FrmMat>
+        <FrmConfig>Wall16inOC</FrmConfig>
+        <FrmDepth>3_5In</FrmDepth>
+        <CavityIns>11.25</CavityIns>
+        <CavityInsOpt>R-11</CavityInsOpt>
+      </Mat>
+      <Mat>
+        <Name>MetalFrameWall16inOC R0.00</Name>
+        <CodeCat>Composite</CodeCat>
+        <CodeItem>- specify -</CodeItem>
+        <FrmMat>Metal</FrmMat>
+        <FrmConfig>Wall16inOC</FrmConfig>
+        <FrmDepth>3_5In</FrmDepth>
+        <CavityIns>0</CavityIns>
+        <CavityInsOpt>R-0</CavityInsOpt>
+      </Mat>
+      <Mat>
         <Name>WoodFrameWall16inOCCavInsR10</Name>
         <CodeCat>Composite</CodeCat>
         <CodeItem>- specify -</CodeItem>
@@ -8740,6 +8812,11 @@
         <CodeItem>Compliance Insulation R13.00</CodeItem>
       </Mat>
       <Mat>
+        <Name>Compliance Insulation R14.00</Name>
+        <CodeCat>Insulation Board</CodeCat>
+        <CodeItem>Compliance Insulation R14.00</CodeItem>
+      </Mat>
+      <Mat>
         <Name>Compliance Insulation R6.00</Name>
         <CodeCat>Insulation Board</CodeCat>
         <CodeItem>Compliance Insulation R6.00</CodeItem>
@@ -8805,9 +8882,9 @@
       <BldgEngyModelVersion>14</BldgEngyModelVersion>
       <CreateDate>1567115615</CreateDate>
       <ModDate>1570125407</ModDate>
-      <RunDate>1580941998</RunDate>
-      <RunDateFormatted>14:33, Wed, Feb 05, 2020</RunDateFormatted>
-      <RunDateISO>2020-02-05T14:33:18-08:00</RunDateISO>
+      <RunDate>1585190874</RunDate>
+      <RunDateFormatted>19:47, Wed, Mar 25, 2020</RunDateFormatted>
+      <RunDateISO>2020-03-25T19:47:54-07:00</RunDateISO>
       <GeometryInpType>Detailed</GeometryInpType>
       <SolDistribution>FullExterior</SolDistribution>
       <NumTimeStepsPerHr>4</NumTimeStepsPerHr>
@@ -9007,7 +9084,7 @@
       <RptGenUIApp>CBECC-Com</RptGenUIApp>
       <CompManagerVersion>BEMCmpMgr 2022.0.1 RV (6107)</CompManagerVersion>
       <SoftwareVersion>CBECC-Com 2022.0.1 RV (1113)</SoftwareVersion>
-      <DHWSimEngVersion>CSE19 0.865.0+dhwloop.68861ec.94 EXE</DHWSimEngVersion>
+      <DHWSimEngVersion>CSE19 0.868.0 EXE</DHWSimEngVersion>
       <ProjFileName>instance.cibd22</ProjFileName>
       <CompReportNum>0</CompReportNum>
       <ResultsCurrentMessage>(not current)</ResultsCurrentMessage>
@@ -9135,8 +9212,8 @@
       <MassHeavyWallUA index="3">0</MassHeavyWallUA>
       <MassHeavyWallUA index="4">0</MassHeavyWallUA>
       <MassHeavyWallUA index="5">0</MassHeavyWallUA>
-      <WoodFrmAndOtherWallUA index="0">141.95</WoodFrmAndOtherWallUA>
-      <WoodFrmAndOtherWallUA index="1">3610.86</WoodFrmAndOtherWallUA>
+      <WoodFrmAndOtherWallUA index="0">75.4091</WoodFrmAndOtherWallUA>
+      <WoodFrmAndOtherWallUA index="1">1918.22</WoodFrmAndOtherWallUA>
       <WoodFrmAndOtherWallUA index="2">0</WoodFrmAndOtherWallUA>
       <WoodFrmAndOtherWallUA index="3">0</WoodFrmAndOtherWallUA>
       <WoodFrmAndOtherWallUA index="4">0</WoodFrmAndOtherWallUA>
@@ -9147,8 +9224,8 @@
       <SpandrelWallUA index="3">0</SpandrelWallUA>
       <SpandrelWallUA index="4">0</SpandrelWallUA>
       <SpandrelWallUA index="5">0</SpandrelWallUA>
-      <WoodFrmAndOtherRoofUA index="0">76.523</WoodFrmAndOtherRoofUA>
-      <WoodFrmAndOtherRoofUA index="1">550.633</WoodFrmAndOtherRoofUA>
+      <WoodFrmAndOtherRoofUA index="0">108.427</WoodFrmAndOtherRoofUA>
+      <WoodFrmAndOtherRoofUA index="1">780.2</WoodFrmAndOtherRoofUA>
       <WoodFrmAndOtherRoofUA index="2">0</WoodFrmAndOtherRoofUA>
       <WoodFrmAndOtherRoofUA index="3">0</WoodFrmAndOtherRoofUA>
       <WoodFrmAndOtherRoofUA index="4">0</WoodFrmAndOtherRoofUA>
@@ -9256,12 +9333,12 @@
       <AltMassFlrMaxUFac index="2">9.999</AltMassFlrMaxUFac>
       <MassHeavyWallUFac index="0">0.0696988</MassHeavyWallUFac>
       <MassHeavyWallUFac index="6">0.0696988</MassHeavyWallUFac>
-      <WoodFrmAndOtherWallUFac index="0">0.110899</WoodFrmAndOtherWallUFac>
-      <WoodFrmAndOtherWallUFac index="1">0.110899</WoodFrmAndOtherWallUFac>
-      <WoodFrmAndOtherWallUFac index="6">0.110899</WoodFrmAndOtherWallUFac>
-      <WoodFrmAndOtherRoofUFac index="0">0.0277257</WoodFrmAndOtherRoofUFac>
-      <WoodFrmAndOtherRoofUFac index="1">0.0277257</WoodFrmAndOtherRoofUFac>
-      <WoodFrmAndOtherRoofUFac index="6">0.0277257</WoodFrmAndOtherRoofUFac>
+      <WoodFrmAndOtherWallUFac index="0">0.0589133</WoodFrmAndOtherWallUFac>
+      <WoodFrmAndOtherWallUFac index="1">0.0589133</WoodFrmAndOtherWallUFac>
+      <WoodFrmAndOtherWallUFac index="6">0.0589133</WoodFrmAndOtherWallUFac>
+      <WoodFrmAndOtherRoofUFac index="0">0.039285</WoodFrmAndOtherRoofUFac>
+      <WoodFrmAndOtherRoofUFac index="1">0.039285</WoodFrmAndOtherRoofUFac>
+      <WoodFrmAndOtherRoofUFac index="6">0.039285</WoodFrmAndOtherRoofUFac>
       <CSE_DHWUseMthd>New (via wsDayUse)</CSE_DHWUseMthd>
       <CSE_DHWPreRunReqd>0</CSE_DHWPreRunReqd>
       <CSE_DHWUseIncFile>DHWDU.txt</CSE_DHWUseIncFile>
@@ -13508,7 +13585,7 @@
         <Name>ResWoodWallU059</Name>
         <CompatibleSurfType>ExteriorWall</CompatibleSurfType>
         <SpecMthd>Layers</SpecMthd>
-        <UFactor>0.111</UFactor>
+        <UFactor>0.059</UFactor>
         <AssignedSurfType>1</AssignedSurfType>
         <Status>New</Status>
         <ExtRoughness>MediumRough</ExtRoughness>
@@ -13522,10 +13599,10 @@
         <SlabInsOrientation>None</SlabInsOrientation>
         <SlabInsThrmlR>R0</SlabInsThrmlR>
         <FieldAppliedCoating>0</FieldAppliedCoating>
-        <MatRef index="0">Stucco - 7/8 in.</MatRef>
-        <MatRef index="1">Plywood - 5/8 in.</MatRef>
-        <MatRef index="2">Compliance Insulation R1.54</MatRef>
-        <MatRef index="3">WoodFrameWall16inOCCavInsR5</MatRef>
+        <MatRef index="0">Compliance Insulation R0.10</MatRef>
+        <MatRef index="1">Compliance Insulation R1.35</MatRef>
+        <MatRef index="2">Gypsum Board - 5/8 in.</MatRef>
+        <MatRef index="3">WoodFrameWall16inOCCavInsR21</MatRef>
         <MatRef index="4">Gypsum Board - 5/8 in.</MatRef>
         <AreaNew>33840</AreaNew>
         <AreaAltered>0</AreaAltered>
@@ -13537,9 +13614,9 @@
         <AreaAltResCond>0</AreaAltResCond>
         <AreaAltRelocCond>0</AreaAltRelocCond>
         <FrmMat>Wood</FrmMat>
-        <CavityInsVal>5</CavityInsVal>
-        <PerfFacRpt>U-Factor: 0.111</PerfFacRpt>
-        <InsCheckSum>2</InsCheckSum>
+        <CavityInsVal>21</CavityInsVal>
+        <PerfFacRpt>U-Factor: 0.059</PerfFacRpt>
+        <InsCheckSum>1</InsCheckSum>
         <RoofDens>0</RoofDens>
         <BuiltUpRoof>0</BuiltUpRoof>
         <BallastedRoof>0</BallastedRoof>
@@ -13703,7 +13780,7 @@
         <Name>WoodFramingAndOtherRoofU028</Name>
         <CompatibleSurfType>Roof</CompatibleSurfType>
         <SpecMthd>Layers</SpecMthd>
-        <UFactor>0.028</UFactor>
+        <UFactor>0.039</UFactor>
         <AssignedSurfType>2</AssignedSurfType>
         <Status>New</Status>
         <ExtRoughness>MediumRough</ExtRoughness>
@@ -13722,13 +13799,12 @@
         <CRRCInitialEmit>0.75</CRRCInitialEmit>
         <CRRCAgedEmit>0.75</CRRCAgedEmit>
         <HasCRRCProdID>0</HasCRRCProdID>
-        <WtPerArea>2.862</WtPerArea>
+        <WtPerArea>2.809</WtPerArea>
         <MatRef index="0">Roofing felt - 1/8 in.</MatRef>
         <MatRef index="1">Building Paper - 1/16 in.</MatRef>
         <MatRef index="2">Fiberboard sheathing - 1/2 in.</MatRef>
-        <MatRef index="3">Compliance Insulation R4x</MatRef>
-        <MatRef index="4">Gypsum Board - 1/2 in.</MatRef>
-        <MatRef index="5">WoodRoof16OCCavInsR38</MatRef>
+        <MatRef index="3">Gypsum Board - 1/2 in.</MatRef>
+        <MatRef index="4">WoodRoof16OCCavInsR29</MatRef>
         <AreaNew>22620</AreaNew>
         <AreaAltered>0</AreaAltered>
         <AreaExisting>0</AreaExisting>
@@ -13742,9 +13818,9 @@
         <LowSlopeFlag>1</LowSlopeFlag>
         <RoofSlopeRpt>Low-Slope</RoofSlopeRpt>
         <FrmMat>Wood</FrmMat>
-        <CavityInsVal>38</CavityInsVal>
-        <PerfFacRpt>U-Factor: 0.028</PerfFacRpt>
-        <InsCheckSum>4</InsCheckSum>
+        <CavityInsVal>29</CavityInsVal>
+        <PerfFacRpt>U-Factor: 0.039</PerfFacRpt>
+        <InsCheckSum>0</InsCheckSum>
         <RoofDens>0</RoofDens>
         <BuiltUpRoof>0</BuiltUpRoof>
         <BallastedRoof>0</BallastedRoof>
@@ -13959,44 +14035,6 @@
         <CodeItemRpt>Plywood - 5/8 in.</CodeItemRpt>
       </Mat>
       <Mat>
-        <Name>Compliance Insulation R1.54</Name>
-        <CodeCat>Insulation Board</CodeCat>
-        <CodeItem>Compliance Insulation R1.54</CodeItem>
-        <RVal>1.54</RVal>
-        <ThrmlCndct>0.0133</ThrmlCndct>
-        <SpecHt>0.27</SpecHt>
-        <Dens>1</Dens>
-        <Thkns>0.245784</Thkns>
-        <FrmMat>- specify -</FrmMat>
-        <FrmConfig>- specify -</FrmConfig>
-        <FrmDepth>- specify -</FrmDepth>
-        <CavityIns>0</CavityIns>
-        <FrmFacHeaders>0</FrmFacHeaders>
-        <HeaderIns>0</HeaderIns>
-        <CMUWt>- specify -</CMUWt>
-        <CMUFill>- specify -</CMUFill>
-        <CodeItemRpt>Compliance Insulation R1.54</CodeItemRpt>
-      </Mat>
-      <Mat>
-        <Name>Compliance Insulation R4x</Name>
-        <CodeCat>Insulation Board</CodeCat>
-        <CodeItem>Compliance Insulation R4.00</CodeItem>
-        <RVal>4</RVal>
-        <ThrmlCndct>0.0133</ThrmlCndct>
-        <SpecHt>0.27</SpecHt>
-        <Dens>1</Dens>
-        <Thkns>0.6384</Thkns>
-        <FrmMat>- specify -</FrmMat>
-        <FrmConfig>- specify -</FrmConfig>
-        <FrmDepth>- specify -</FrmDepth>
-        <CavityIns>0</CavityIns>
-        <FrmFacHeaders>0</FrmFacHeaders>
-        <HeaderIns>0</HeaderIns>
-        <CMUWt>- specify -</CMUWt>
-        <CMUFill>- specify -</CMUFill>
-        <CodeItemRpt>Compliance Insulation R4.00</CodeItemRpt>
-      </Mat>
-      <Mat>
         <Name>Compliance Insulation R1.35</Name>
         <CodeCat>Insulation Board</CodeCat>
         <CodeItem>Compliance Insulation R1.35</CodeItem>
@@ -14054,23 +14092,23 @@
         <CodeItemRpt>Concrete - 140 lb/ft3 - 10 in.</CodeItemRpt>
       </Mat>
       <Mat>
-        <Name>WoodRoof16OCCavInsR38</Name>
+        <Name>WoodRoof16OCCavInsR29</Name>
         <CodeCat>Composite</CodeCat>
         <CodeItem>- specify -</CodeItem>
-        <RVal>26.584</RVal>
+        <RVal>22.2386</RVal>
         <Dens>0</Dens>
         <Thkns>0</Thkns>
         <FrmMat>Wood</FrmMat>
         <FrmConfig>Roof16inOC</FrmConfig>
         <FrmDepth>7_25In</FrmDepth>
-        <CavityIns>38</CavityIns>
+        <CavityIns>29</CavityIns>
         <FrmFacCav>0.9</FrmFacCav>
         <FrmFacMembers>0.1</FrmFacMembers>
         <FrmFacHeaders>0</FrmFacHeaders>
         <HeaderIns>0</HeaderIns>
         <CMUWt>- specify -</CMUWt>
         <CMUFill>- specify -</CMUFill>
-        <CodeItemRpt>Wood framed roof, 16in. OC, 7.25in., R-38</CodeItemRpt>
+        <CodeItemRpt>Wood framed roof, 16in. OC, 7.25in., R-29</CodeItemRpt>
       </Mat>
       <Mat>
         <Name>Building Paper - 1/16 in.</Name>
@@ -14244,23 +14282,42 @@
         <CodeItemRpt>Compliance Insulation R0.20</CodeItemRpt>
       </Mat>
       <Mat>
-        <Name>WoodFrameWall16inOCCavInsR5</Name>
+        <Name>Compliance Insulation R0.10</Name>
+        <CodeCat>Insulation Board</CodeCat>
+        <CodeItem>Compliance Insulation R0.10</CodeItem>
+        <RVal>0.1</RVal>
+        <ThrmlCndct>0.0133</ThrmlCndct>
+        <SpecHt>0.27</SpecHt>
+        <Dens>1</Dens>
+        <Thkns>0.01596</Thkns>
+        <FrmMat>- specify -</FrmMat>
+        <FrmConfig>- specify -</FrmConfig>
+        <FrmDepth>- specify -</FrmDepth>
+        <CavityIns>0</CavityIns>
+        <FrmFacHeaders>0</FrmFacHeaders>
+        <HeaderIns>0</HeaderIns>
+        <CMUWt>- specify -</CMUWt>
+        <CMUFill>- specify -</CMUFill>
+        <CodeItemRpt>Compliance Insulation R0.10</CodeItemRpt>
+      </Mat>
+      <Mat>
+        <Name>WoodFrameWall16inOCCavInsR21</Name>
         <CodeCat>Composite</CodeCat>
         <CodeItem>- specify -</CodeItem>
-        <RVal>5.10429</RVal>
+        <RVal>12.2507</RVal>
         <Dens>0</Dens>
         <Thkns>0</Thkns>
         <FrmMat>Wood</FrmMat>
         <FrmConfig>Wall16inOC</FrmConfig>
         <FrmDepth>5_5In</FrmDepth>
-        <CavityIns>5</CavityIns>
+        <CavityIns>21</CavityIns>
         <FrmFacCav>0.75</FrmFacCav>
         <FrmFacMembers>0.25</FrmFacMembers>
         <FrmFacHeaders>0</FrmFacHeaders>
         <HeaderIns>0</HeaderIns>
         <CMUWt>- specify -</CMUWt>
         <CMUFill>- specify -</CMUFill>
-        <CodeItemRpt>Wood framed wall, 16in. OC, 5.5in., R-5</CodeItemRpt>
+        <CodeItemRpt>Wood framed wall, 16in. OC, 5.5in., R-21</CodeItemRpt>
       </Mat>
       <Mat>
         <Name>Compliance Insulation R6.00</Name>
@@ -41535,7 +41592,7 @@
           <HtgTstatSchRef>RetailHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>25</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>164.84</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>164.781</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <HtgDsgnMaxFlowFrac>0.5</HtgDsgnMaxFlowFrac>
           <VentStd>T24-2022</VentStd>
@@ -41550,7 +41607,7 @@
           <VentPerAreaSim>0.15</VentPerAreaSim>
           <ExhSrc>None</ExhSrc>
           <ClgDsgnLd>9687.45</ClgDsgnLd>
-          <HtgDsgnLd>4523.62</HtgDsgnLd>
+          <HtgDsgnLd>4521.97</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>0</OperableWinHaveInterlock>
@@ -41605,7 +41662,7 @@
           <HtgTstatSchRef>RetailHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>25</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>897.377</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>897.101</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <HtgDsgnMaxFlowFrac>0.5</HtgDsgnMaxFlowFrac>
           <VentStd>T24-2022</VentStd>
@@ -41620,7 +41677,7 @@
           <VentPerAreaSim>0.14</VentPerAreaSim>
           <ExhSrc>None</ExhSrc>
           <ClgDsgnLd>29608.8</ClgDsgnLd>
-          <HtgDsgnLd>24626.2</HtgDsgnLd>
+          <HtgDsgnLd>24618.6</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>0</OperableWinHaveInterlock>
@@ -41686,7 +41743,7 @@ General - Unoccupied</VentFuncList>
           <HtgTstatSchRef>RetailHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>25</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>383.925</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>383.871</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <HtgDsgnMaxFlowFrac>0.5</HtgDsgnMaxFlowFrac>
           <VentStd>T24-2022</VentStd>
@@ -41701,7 +41758,7 @@ General - Unoccupied</VentFuncList>
           <VentPerAreaSim>0.15</VentPerAreaSim>
           <ExhSrc>None</ExhSrc>
           <ClgDsgnLd>25171.6</ClgDsgnLd>
-          <HtgDsgnLd>10535.8</HtgDsgnLd>
+          <HtgDsgnLd>10534.3</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>0</OperableWinHaveInterlock>
@@ -41751,12 +41808,12 @@ General - Unoccupied</VentFuncList>
           <ClgTstatSchRef>RetailClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>55</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>606.235</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>606.227</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>RetailHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>25</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>317.628</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>317.591</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <HtgDsgnMaxFlowFrac>0.5</HtgDsgnMaxFlowFrac>
           <VentStd>T24-2022</VentStd>
@@ -41770,8 +41827,8 @@ General - Unoccupied</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.50</VentPerAreaSim>
           <ExhSrc>None</ExhSrc>
-          <ClgDsgnLd>13321.4</ClgDsgnLd>
-          <HtgDsgnLd>8716.46</HtgDsgnLd>
+          <ClgDsgnLd>13321.2</ClgDsgnLd>
+          <HtgDsgnLd>8715.46</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>0</OperableWinHaveInterlock>
@@ -41826,7 +41883,7 @@ General - Unoccupied</VentFuncList>
           <HtgTstatSchRef>RetailHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>25</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>159.091</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>159.078</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <HtgDsgnMaxFlowFrac>0.5</HtgDsgnMaxFlowFrac>
           <VentStd>T24-2022</VentStd>
@@ -41841,7 +41898,7 @@ General - Unoccupied</VentFuncList>
           <VentPerAreaSim>0.15</VentPerAreaSim>
           <ExhSrc>None</ExhSrc>
           <ClgDsgnLd>6571.53</ClgDsgnLd>
-          <HtgDsgnLd>4365.83</HtgDsgnLd>
+          <HtgDsgnLd>4365.48</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>0</OperableWinHaveInterlock>
@@ -41896,7 +41953,7 @@ General - Unoccupied</VentFuncList>
           <HtgTstatSchRef>RetailHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>25</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>140.554</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>140.515</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <HtgDsgnMaxFlowFrac>0.5</HtgDsgnMaxFlowFrac>
           <VentStd>T24-2022</VentStd>
@@ -41911,7 +41968,7 @@ General - Unoccupied</VentFuncList>
           <VentPerAreaSim>0.15</VentPerAreaSim>
           <ExhSrc>None</ExhSrc>
           <ClgDsgnLd>9536.59</ClgDsgnLd>
-          <HtgDsgnLd>3857.15</HtgDsgnLd>
+          <HtgDsgnLd>3856.06</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>0</OperableWinHaveInterlock>
@@ -41966,7 +42023,7 @@ General - Unoccupied</VentFuncList>
           <HtgTstatSchRef>RetailHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>25</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>1846.5</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>1846.32</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <HtgDsgnMaxFlowFrac>0.5</HtgDsgnMaxFlowFrac>
           <VentStd>T24-2022</VentStd>
@@ -41981,7 +42038,7 @@ General - Unoccupied</VentFuncList>
           <VentPerAreaSim>0.25</VentPerAreaSim>
           <ExhSrc>None</ExhSrc>
           <ClgDsgnLd>91492.7</ClgDsgnLd>
-          <HtgDsgnLd>50672.2</HtgDsgnLd>
+          <HtgDsgnLd>50667.4</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>0</OperableWinHaveInterlock>
@@ -42041,12 +42098,12 @@ General - Unoccupied</VentFuncList>
           <ClgTstatSchRef>RetailClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>55</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>3057.09</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>3057.05</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>RetailHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>25</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>1362.91</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>1362.79</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <HtgDsgnMaxFlowFrac>0.5</HtgDsgnMaxFlowFrac>
           <VentStd>T24-2022</VentStd>
@@ -42060,8 +42117,8 @@ General - Unoccupied</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.25</VentPerAreaSim>
           <ExhSrc>None</ExhSrc>
-          <ClgDsgnLd>67176.2</ClgDsgnLd>
-          <HtgDsgnLd>37401.5</HtgDsgnLd>
+          <ClgDsgnLd>67175.4</ClgDsgnLd>
+          <HtgDsgnLd>37398.2</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>0</OperableWinHaveInterlock>
@@ -42126,7 +42183,7 @@ General - Unoccupied</VentFuncList>
           <HtgTstatSchRef>RetailHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>25</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>994.265</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>994.213</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <HtgDsgnMaxFlowFrac>0.5</HtgDsgnMaxFlowFrac>
           <VentStd>T24-2022</VentStd>
@@ -42140,8 +42197,8 @@ General - Unoccupied</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.25</VentPerAreaSim>
           <ExhSrc>None</ExhSrc>
-          <ClgDsgnLd>46346.8</ClgDsgnLd>
-          <HtgDsgnLd>27285</HtgDsgnLd>
+          <ClgDsgnLd>46346.9</ClgDsgnLd>
+          <HtgDsgnLd>27283.6</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>0</OperableWinHaveInterlock>
@@ -42206,7 +42263,7 @@ General - Unoccupied</VentFuncList>
           <HtgTstatSchRef>RetailHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>25</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>1474.54</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>1474.45</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <HtgDsgnMaxFlowFrac>0.5</HtgDsgnMaxFlowFrac>
           <VentStd>T24-2022</VentStd>
@@ -42221,7 +42278,7 @@ General - Unoccupied</VentFuncList>
           <VentPerAreaSim>0.25</VentPerAreaSim>
           <ExhSrc>None</ExhSrc>
           <ClgDsgnLd>68844.1</ClgDsgnLd>
-          <HtgDsgnLd>40464.8</HtgDsgnLd>
+          <HtgDsgnLd>40462.4</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>0</OperableWinHaveInterlock>
@@ -42282,12 +42339,12 @@ General - Unoccupied</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>953.16</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>907.616</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>592.128</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>571.371</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -42300,8 +42357,8 @@ General - Unoccupied</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>20944.7</ClgDsgnLd>
-          <HtgDsgnLd>17549.4</HtgDsgnLd>
+          <ClgDsgnLd>19943.9</ClgDsgnLd>
+          <HtgDsgnLd>16934.2</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
@@ -42360,12 +42417,12 @@ General - Unoccupied</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>1765.16</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>1702.89</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>1194.12</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>1158.83</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -42378,10 +42435,10 @@ General - Unoccupied</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>38787.5</ClgDsgnLd>
-          <HtgDsgnLd>35391.1</HtgDsgnLd>
+          <ClgDsgnLd>37419.2</ClgDsgnLd>
+          <HtgDsgnLd>34345.2</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
-          <HtgUnmetLdHrs>0.25</HtgUnmetLdHrs>
+          <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
           <WinInterlockRpt>NA</WinInterlockRpt>
           <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
@@ -42438,12 +42495,12 @@ General - Unoccupied</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>1947.95</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>1845.65</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>1199.55</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>1162.54</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -42456,10 +42513,10 @@ General - Unoccupied</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>42804</ClgDsgnLd>
-          <HtgDsgnLd>35552.1</HtgDsgnLd>
+          <ClgDsgnLd>40556.2</ClgDsgnLd>
+          <HtgDsgnLd>34455</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
-          <HtgUnmetLdHrs>0.25</HtgUnmetLdHrs>
+          <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
           <WinInterlockRpt>NA</WinInterlockRpt>
           <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
@@ -42516,12 +42573,12 @@ General - Unoccupied</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>2747.18</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>2695.83</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>2919.32</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>2846.66</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -42534,8 +42591,8 @@ General - Unoccupied</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>60366.4</ClgDsgnLd>
-          <HtgDsgnLd>86522</HtgDsgnLd>
+          <ClgDsgnLd>59238</ClgDsgnLd>
+          <HtgDsgnLd>84368.8</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
@@ -42594,12 +42651,12 @@ General - Unoccupied</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>1730.7</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>1679.12</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>1364.98</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>1287.07</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -42612,8 +42669,8 @@ General - Unoccupied</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>38030.2</ClgDsgnLd>
-          <HtgDsgnLd>40454.9</HtgDsgnLd>
+          <ClgDsgnLd>36896.8</ClgDsgnLd>
+          <HtgDsgnLd>38145.8</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
@@ -42632,6 +42689,162 @@ General - Unoccupied</VentFuncList>
           <LabFumeHoodDens>0</LabFumeHoodDens>
           <ExhFanName>Thermal Zone: F2-4 2-Bed Core NE-NW PropExhFan</ExhFanName>
           <ExhFlowSim>329.4</ExhFlowSim>
+          <ExhTotEff>0.55575</ExhTotEff>
+          <ExhTotStaticPress>3.31085</ExhTotStaticPress>
+          <ExhFanEndUseCat>General</ExhFanEndUseCat>
+          <ClgUMLHLimit>150</ClgUMLHLimit>
+          <HtgUMLHLimit>150</HtgUMLHLimit>
+          <BypassClgUMLHLimit>0</BypassClgUMLHLimit>
+          <BypassHtgUMLHLimit>0</BypassHtgUMLHLimit>
+          <PriAirFlowMax>0</PriAirFlowMax>
+          <PriAirFlowMin>0</PriAirFlowMin>
+          <PriAirFlowMinFrac>0.00</PriAirFlowMinFrac>
+          <CodeDsgnVentPerPerson>18.30</CodeDsgnVentPerPerson>
+          <CodeDsgnVentPerArea>0.05</CodeDsgnVentPerArea>
+          <HasDCV>0</HasDCV>
+          <HasDDCCtrl>0</HasDDCCtrl>
+          <CondgStatus>1</CondgStatus>
+          <VentFuncList>NA</VentFuncList>
+          <HotelMotelGuestRmCnt>0</HotelMotelGuestRmCnt>
+          <ResLivingBdrmCnt>4</ResLivingBdrmCnt>
+          <HasOccSensorCtrl>0</HasOccSensorCtrl>
+        </ThrmlZn>
+        <ThrmlZn>
+          <Name>Thermal Zone: F5 1-Bed North</Name>
+          <Type>Conditioned</Type>
+          <Mult>1</Mult>
+          <FlrArea>3720</FlrArea>
+          <OccNumSim>10.00</OccNumSim>
+          <ThrtlgRng>2</ThrtlgRng>
+          <HVACZnCnt>5</HVACZnCnt>
+          <OccClass>Residential</OccClass>
+          <PriAirCondgSysRef index="0">ZnSys F5 1-Bed North</PriAirCondgSysRef>
+          <PriAirCondgSysPriority index="0">1</PriAirCondgSysPriority>
+          <VentByPriAirCondgSys index="0">0</VentByPriAirCondgSys>
+          <VentSysRef>Bal F5 1-Bed North</VentSysRef>
+          <VentSysPriority>1</VentSysPriority>
+          <HasUnknownHVAC>0</HasUnknownHVAC>
+          <HasNoClg>0</HasNoClg>
+          <AddClgSys>0</AddClgSys>
+          <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
+          <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
+          <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
+          <ClgDsgnFlowSim>1404.04</ClgDsgnFlowSim>
+          <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
+          <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
+          <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
+          <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
+          <HtgDsgnFlowSim>1366.54</HtgDsgnFlowSim>
+          <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
+          <VentStd>T24-2022</VentStd>
+          <VentAirDistEff>1</VentAirDistEff>
+          <VentSrc>Forced</VentSrc>
+          <VentCtrlMthd>Fixed</VentCtrlMthd>
+          <VentSpecMthd>Sum</VentSpecMthd>
+          <VentFlow>187</VentFlow>
+          <CodeVentFlow>187</CodeVentFlow>
+          <VentSpecMthdSim>NoVentilation</VentSpecMthdSim>
+          <VentPerPersonSim>0.0</VentPerPersonSim>
+          <VentPerAreaSim>0.00</VentPerAreaSim>
+          <ExhSrc>VentilationSystem</ExhSrc>
+          <ClgDsgnLd>30852.3</ClgDsgnLd>
+          <HtgDsgnLd>40501.3</HtgDsgnLd>
+          <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
+          <HtgUnmetLdHrs>2</HtgUnmetLdHrs>
+          <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
+          <WinInterlockRpt>NA</WinInterlockRpt>
+          <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
+          <DayltgCtrlLtgFrac2>0</DayltgCtrlLtgFrac2>
+          <DayltgCtrlType>None</DayltgCtrlType>
+          <ExhSysRef>Bal F5 1-Bed North</ExhSysRef>
+          <ExhFlow>186.6</ExhFlow>
+          <MinExhFlow>0</MinExhFlow>
+          <ExhCtrlMthd>ConstantFlowConstantSpeedFan</ExhCtrlMthd>
+          <ExhOperMode>DecoupledFromSystem</ExhOperMode>
+          <ExhAvailSchRef>ResidentialLivingHVACAvail</ExhAvailSchRef>
+          <ExhFlowSchRef>On</ExhFlowSchRef>
+          <ExhBalancedSchRef>Off</ExhBalancedSchRef>
+          <LabFumeHoodDens>0</LabFumeHoodDens>
+          <ExhFanName>Thermal Zone: F5 1-Bed North PropExhFan</ExhFanName>
+          <ExhFlowSim>186.6</ExhFlowSim>
+          <ExhTotEff>0.55575</ExhTotEff>
+          <ExhTotStaticPress>3.31085</ExhTotStaticPress>
+          <ExhFanEndUseCat>General</ExhFanEndUseCat>
+          <ClgUMLHLimit>150</ClgUMLHLimit>
+          <HtgUMLHLimit>150</HtgUMLHLimit>
+          <BypassClgUMLHLimit>0</BypassClgUMLHLimit>
+          <BypassHtgUMLHLimit>0</BypassHtgUMLHLimit>
+          <PriAirFlowMax>0</PriAirFlowMax>
+          <PriAirFlowMin>0</PriAirFlowMin>
+          <PriAirFlowMinFrac>0.00</PriAirFlowMinFrac>
+          <CodeDsgnVentPerPerson>18.66</CodeDsgnVentPerPerson>
+          <CodeDsgnVentPerArea>0.05</CodeDsgnVentPerArea>
+          <HasDCV>0</HasDCV>
+          <HasDDCCtrl>0</HasDDCCtrl>
+          <CondgStatus>1</CondgStatus>
+          <VentFuncList>NA</VentFuncList>
+          <HotelMotelGuestRmCnt>0</HotelMotelGuestRmCnt>
+          <ResLivingBdrmCnt>5</ResLivingBdrmCnt>
+          <HasOccSensorCtrl>0</HasOccSensorCtrl>
+        </ThrmlZn>
+        <ThrmlZn>
+          <Name>Thermal Zone: F5 2-Bed Core NE-NW</Name>
+          <Type>Conditioned</Type>
+          <Mult>1</Mult>
+          <FlrArea>2160</FlrArea>
+          <OccNumSim>6.00</OccNumSim>
+          <ThrtlgRng>2</ThrtlgRng>
+          <HVACZnCnt>2</HVACZnCnt>
+          <OccClass>Residential</OccClass>
+          <PriAirCondgSysRef index="0">ZnSys F5 2-Bed Core NE-NW</PriAirCondgSysRef>
+          <PriAirCondgSysPriority index="0">1</PriAirCondgSysPriority>
+          <VentByPriAirCondgSys index="0">0</VentByPriAirCondgSys>
+          <VentSysRef>Bal F5 2-Bed Core NE-NW</VentSysRef>
+          <VentSysPriority>1</VentSysPriority>
+          <HasUnknownHVAC>0</HasUnknownHVAC>
+          <HasNoClg>0</HasNoClg>
+          <AddClgSys>0</AddClgSys>
+          <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
+          <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
+          <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
+          <ClgDsgnFlowSim>827.508</ClgDsgnFlowSim>
+          <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
+          <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
+          <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
+          <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
+          <HtgDsgnFlowSim>712.343</HtgDsgnFlowSim>
+          <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
+          <VentStd>T24-2022</VentStd>
+          <VentAirDistEff>1</VentAirDistEff>
+          <VentSrc>Forced</VentSrc>
+          <VentCtrlMthd>Fixed</VentCtrlMthd>
+          <VentSpecMthd>Sum</VentSpecMthd>
+          <VentFlow>110</VentFlow>
+          <CodeVentFlow>110</CodeVentFlow>
+          <VentSpecMthdSim>NoVentilation</VentSpecMthdSim>
+          <VentPerPersonSim>0.0</VentPerPersonSim>
+          <VentPerAreaSim>0.00</VentPerAreaSim>
+          <ExhSrc>VentilationSystem</ExhSrc>
+          <ClgDsgnLd>18183.6</ClgDsgnLd>
+          <HtgDsgnLd>21112.2</HtgDsgnLd>
+          <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
+          <HtgUnmetLdHrs>0.25</HtgUnmetLdHrs>
+          <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
+          <WinInterlockRpt>NA</WinInterlockRpt>
+          <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
+          <DayltgCtrlLtgFrac2>0</DayltgCtrlLtgFrac2>
+          <DayltgCtrlType>None</DayltgCtrlType>
+          <ExhSysRef>Bal F5 2-Bed Core NE-NW</ExhSysRef>
+          <ExhFlow>109.8</ExhFlow>
+          <MinExhFlow>0</MinExhFlow>
+          <ExhCtrlMthd>ConstantFlowConstantSpeedFan</ExhCtrlMthd>
+          <ExhOperMode>DecoupledFromSystem</ExhOperMode>
+          <ExhAvailSchRef>ResidentialLivingHVACAvail</ExhAvailSchRef>
+          <ExhFlowSchRef>On</ExhFlowSchRef>
+          <ExhBalancedSchRef>Off</ExhBalancedSchRef>
+          <LabFumeHoodDens>0</LabFumeHoodDens>
+          <ExhFanName>Thermal Zone: F5 2-Bed Core NE-NW PropExhFan</ExhFanName>
+          <ExhFlowSim>109.8</ExhFlowSim>
           <ExhTotEff>0.55575</ExhTotEff>
           <ExhTotStaticPress>3.31085</ExhTotStaticPress>
           <ExhFanEndUseCat>General</ExhFanEndUseCat>
@@ -42672,12 +42885,12 @@ General - Unoccupied</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>4022.14</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>3866.64</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>2565.78</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>2509.06</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -42690,10 +42903,10 @@ General - Unoccupied</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>88382.3</ClgDsgnLd>
-          <HtgDsgnLd>76043.9</HtgDsgnLd>
+          <ClgDsgnLd>84965.2</ClgDsgnLd>
+          <HtgDsgnLd>74362.8</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
-          <HtgUnmetLdHrs>0.25</HtgUnmetLdHrs>
+          <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
           <WinInterlockRpt>NA</WinInterlockRpt>
           <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
@@ -42750,12 +42963,12 @@ General - Unoccupied</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>4535.38</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>4284.61</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>2575.06</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>2506.77</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -42768,10 +42981,10 @@ General - Unoccupied</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>99660</ClgDsgnLd>
-          <HtgDsgnLd>76319</HtgDsgnLd>
+          <ClgDsgnLd>94149.6</ClgDsgnLd>
+          <HtgDsgnLd>74295.1</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
-          <HtgUnmetLdHrs>0.25</HtgUnmetLdHrs>
+          <HtgUnmetLdHrs>0</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
           <WinInterlockRpt>NA</WinInterlockRpt>
           <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
@@ -42828,12 +43041,12 @@ General - Unoccupied</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>1704.94</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>1651.11</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>1225.52</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>1145.14</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -42846,8 +43059,8 @@ General - Unoccupied</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>37464.2</ClgDsgnLd>
-          <HtgDsgnLd>36321.6</HtgDsgnLd>
+          <ClgDsgnLd>36281.4</ClgDsgnLd>
+          <HtgDsgnLd>33939.4</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0.25</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
@@ -42906,12 +43119,12 @@ General - Unoccupied</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>1952.78</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>1853.11</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>1226.83</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>1146.04</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -42924,8 +43137,8 @@ General - Unoccupied</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>42910.2</ClgDsgnLd>
-          <HtgDsgnLd>36360.6</HtgDsgnLd>
+          <ClgDsgnLd>40720.2</ClgDsgnLd>
+          <HtgDsgnLd>33966.2</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0.25</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
@@ -42984,12 +43197,12 @@ General - Unoccupied</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>1226.4</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>1136.19</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>618.44</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>575.032</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -43002,8 +43215,8 @@ General - Unoccupied</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>26948.8</ClgDsgnLd>
-          <HtgDsgnLd>18329.2</HtgDsgnLd>
+          <ClgDsgnLd>24966.6</ClgDsgnLd>
+          <HtgDsgnLd>17042.7</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0.25</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
@@ -43062,12 +43275,12 @@ General - Unoccupied</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>1153.91</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>1066.97</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>617.828</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>574.482</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -43080,8 +43293,8 @@ General - Unoccupied</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>25355.8</ClgDsgnLd>
-          <HtgDsgnLd>18311.1</HtgDsgnLd>
+          <ClgDsgnLd>23445.6</ClgDsgnLd>
+          <HtgDsgnLd>17026.4</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0.25</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
@@ -43139,12 +43352,12 @@ General - Unoccupied</VentFuncList>
           <ClgTstatSchRef>OfficeClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>55</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>4596.42</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>4604.27</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>OfficeHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>25</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>1849.06</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>1683.11</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <HtgDsgnMaxFlowFrac>1</HtgDsgnMaxFlowFrac>
           <VentStd>T24-2022</VentStd>
@@ -43158,10 +43371,10 @@ General - Unoccupied</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.15</VentPerAreaSim>
           <ExhSrc>None</ExhSrc>
-          <ClgDsgnLd>101001</ClgDsgnLd>
-          <HtgDsgnLd>50742.7</HtgDsgnLd>
-          <ClgUnmetLdHrs>3777.75</ClgUnmetLdHrs>
-          <HtgUnmetLdHrs>68.5</HtgUnmetLdHrs>
+          <ClgDsgnLd>101174</ClgDsgnLd>
+          <HtgDsgnLd>46188.6</HtgDsgnLd>
+          <ClgUnmetLdHrs>3901.5</ClgUnmetLdHrs>
+          <HtgUnmetLdHrs>34</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>0</OperableWinHaveInterlock>
           <WinInterlockRpt>NA</WinInterlockRpt>
           <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
@@ -43209,12 +43422,12 @@ Lodging - Laundry rooms, central</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>388.598</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>397.837</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>269.979</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>274.272</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -43227,8 +43440,8 @@ Lodging - Laundry rooms, central</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>8539.03</ClgDsgnLd>
-          <HtgDsgnLd>8001.59</HtgDsgnLd>
+          <ClgDsgnLd>8742.04</ClgDsgnLd>
+          <HtgDsgnLd>8128.8</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>0.25</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
@@ -43287,12 +43500,12 @@ Lodging - Laundry rooms, central</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>694.893</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>718.531</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>550.263</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>553.363</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -43305,10 +43518,10 @@ Lodging - Laundry rooms, central</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>15269.5</ClgDsgnLd>
-          <HtgDsgnLd>16308.6</HtgDsgnLd>
+          <ClgDsgnLd>15788.9</ClgDsgnLd>
+          <HtgDsgnLd>16400.5</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
-          <HtgUnmetLdHrs>1.25</HtgUnmetLdHrs>
+          <HtgUnmetLdHrs>2.25</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
           <WinInterlockRpt>NA</WinInterlockRpt>
           <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
@@ -43365,12 +43578,12 @@ Lodging - Laundry rooms, central</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>867.569</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>854.207</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>550.665</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>553.656</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -43383,10 +43596,10 @@ Lodging - Laundry rooms, central</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>19063.9</ClgDsgnLd>
-          <HtgDsgnLd>16320.5</HtgDsgnLd>
+          <ClgDsgnLd>18770.3</ClgDsgnLd>
+          <HtgDsgnLd>16409.1</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
-          <HtgUnmetLdHrs>1</HtgUnmetLdHrs>
+          <HtgUnmetLdHrs>1.5</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
           <WinInterlockRpt>NA</WinInterlockRpt>
           <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
@@ -43424,162 +43637,6 @@ Lodging - Laundry rooms, central</VentFuncList>
           <HasOccSensorCtrl>0</HasOccSensorCtrl>
         </ThrmlZn>
         <ThrmlZn>
-          <Name>Thermal Zone: F5 1-Bed North</Name>
-          <Type>Conditioned</Type>
-          <Mult>1</Mult>
-          <FlrArea>3720</FlrArea>
-          <OccNumSim>10.00</OccNumSim>
-          <ThrtlgRng>2</ThrtlgRng>
-          <HVACZnCnt>5</HVACZnCnt>
-          <OccClass>Residential</OccClass>
-          <PriAirCondgSysRef index="0">ZnSys F5 1-Bed North</PriAirCondgSysRef>
-          <PriAirCondgSysPriority index="0">1</PriAirCondgSysPriority>
-          <VentByPriAirCondgSys index="0">0</VentByPriAirCondgSys>
-          <VentSysRef>Bal F5 1-Bed North</VentSysRef>
-          <VentSysPriority>1</VentSysPriority>
-          <HasUnknownHVAC>0</HasUnknownHVAC>
-          <HasNoClg>0</HasNoClg>
-          <AddClgSys>0</AddClgSys>
-          <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
-          <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
-          <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>1259.19</ClgDsgnFlowSim>
-          <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
-          <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
-          <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-          <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>1350.65</HtgDsgnFlowSim>
-          <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
-          <VentStd>T24-2022</VentStd>
-          <VentAirDistEff>1</VentAirDistEff>
-          <VentSrc>Forced</VentSrc>
-          <VentCtrlMthd>Fixed</VentCtrlMthd>
-          <VentSpecMthd>Sum</VentSpecMthd>
-          <VentFlow>187</VentFlow>
-          <CodeVentFlow>187</CodeVentFlow>
-          <VentSpecMthdSim>NoVentilation</VentSpecMthdSim>
-          <VentPerPersonSim>0.0</VentPerPersonSim>
-          <VentPerAreaSim>0.00</VentPerAreaSim>
-          <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>27669.3</ClgDsgnLd>
-          <HtgDsgnLd>40030.2</HtgDsgnLd>
-          <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
-          <HtgUnmetLdHrs>1.25</HtgUnmetLdHrs>
-          <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
-          <WinInterlockRpt>NA</WinInterlockRpt>
-          <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
-          <DayltgCtrlLtgFrac2>0</DayltgCtrlLtgFrac2>
-          <DayltgCtrlType>None</DayltgCtrlType>
-          <ExhSysRef>Bal F5 1-Bed North</ExhSysRef>
-          <ExhFlow>186.6</ExhFlow>
-          <MinExhFlow>0</MinExhFlow>
-          <ExhCtrlMthd>ConstantFlowConstantSpeedFan</ExhCtrlMthd>
-          <ExhOperMode>DecoupledFromSystem</ExhOperMode>
-          <ExhAvailSchRef>ResidentialLivingHVACAvail</ExhAvailSchRef>
-          <ExhFlowSchRef>On</ExhFlowSchRef>
-          <ExhBalancedSchRef>Off</ExhBalancedSchRef>
-          <LabFumeHoodDens>0</LabFumeHoodDens>
-          <ExhFanName>Thermal Zone: F5 1-Bed North PropExhFan</ExhFanName>
-          <ExhFlowSim>186.6</ExhFlowSim>
-          <ExhTotEff>0.55575</ExhTotEff>
-          <ExhTotStaticPress>3.31085</ExhTotStaticPress>
-          <ExhFanEndUseCat>General</ExhFanEndUseCat>
-          <ClgUMLHLimit>150</ClgUMLHLimit>
-          <HtgUMLHLimit>150</HtgUMLHLimit>
-          <BypassClgUMLHLimit>0</BypassClgUMLHLimit>
-          <BypassHtgUMLHLimit>0</BypassHtgUMLHLimit>
-          <PriAirFlowMax>0</PriAirFlowMax>
-          <PriAirFlowMin>0</PriAirFlowMin>
-          <PriAirFlowMinFrac>0.00</PriAirFlowMinFrac>
-          <CodeDsgnVentPerPerson>18.66</CodeDsgnVentPerPerson>
-          <CodeDsgnVentPerArea>0.05</CodeDsgnVentPerArea>
-          <HasDCV>0</HasDCV>
-          <HasDDCCtrl>0</HasDDCCtrl>
-          <CondgStatus>1</CondgStatus>
-          <VentFuncList>NA</VentFuncList>
-          <HotelMotelGuestRmCnt>0</HotelMotelGuestRmCnt>
-          <ResLivingBdrmCnt>5</ResLivingBdrmCnt>
-          <HasOccSensorCtrl>0</HasOccSensorCtrl>
-        </ThrmlZn>
-        <ThrmlZn>
-          <Name>Thermal Zone: F5 2-Bed Core NE-NW</Name>
-          <Type>Conditioned</Type>
-          <Mult>1</Mult>
-          <FlrArea>2160</FlrArea>
-          <OccNumSim>6.00</OccNumSim>
-          <ThrtlgRng>2</ThrtlgRng>
-          <HVACZnCnt>2</HVACZnCnt>
-          <OccClass>Residential</OccClass>
-          <PriAirCondgSysRef index="0">ZnSys F5 2-Bed Core NE-NW</PriAirCondgSysRef>
-          <PriAirCondgSysPriority index="0">1</PriAirCondgSysPriority>
-          <VentByPriAirCondgSys index="0">0</VentByPriAirCondgSys>
-          <VentSysRef>Bal F5 2-Bed Core NE-NW</VentSysRef>
-          <VentSysPriority>1</VentSysPriority>
-          <HasUnknownHVAC>0</HasUnknownHVAC>
-          <HasNoClg>0</HasNoClg>
-          <AddClgSys>0</AddClgSys>
-          <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
-          <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
-          <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>747.223</ClgDsgnFlowSim>
-          <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
-          <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
-          <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
-          <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>677.343</HtgDsgnFlowSim>
-          <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
-          <VentStd>T24-2022</VentStd>
-          <VentAirDistEff>1</VentAirDistEff>
-          <VentSrc>Forced</VentSrc>
-          <VentCtrlMthd>Fixed</VentCtrlMthd>
-          <VentSpecMthd>Sum</VentSpecMthd>
-          <VentFlow>110</VentFlow>
-          <CodeVentFlow>110</CodeVentFlow>
-          <VentSpecMthdSim>NoVentilation</VentSpecMthdSim>
-          <VentPerPersonSim>0.0</VentPerPersonSim>
-          <VentPerAreaSim>0.00</VentPerAreaSim>
-          <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>16419.4</ClgDsgnLd>
-          <HtgDsgnLd>20074.9</HtgDsgnLd>
-          <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
-          <HtgUnmetLdHrs>0.25</HtgUnmetLdHrs>
-          <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
-          <WinInterlockRpt>NA</WinInterlockRpt>
-          <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
-          <DayltgCtrlLtgFrac2>0</DayltgCtrlLtgFrac2>
-          <DayltgCtrlType>None</DayltgCtrlType>
-          <ExhSysRef>Bal F5 2-Bed Core NE-NW</ExhSysRef>
-          <ExhFlow>109.8</ExhFlow>
-          <MinExhFlow>0</MinExhFlow>
-          <ExhCtrlMthd>ConstantFlowConstantSpeedFan</ExhCtrlMthd>
-          <ExhOperMode>DecoupledFromSystem</ExhOperMode>
-          <ExhAvailSchRef>ResidentialLivingHVACAvail</ExhAvailSchRef>
-          <ExhFlowSchRef>On</ExhFlowSchRef>
-          <ExhBalancedSchRef>Off</ExhBalancedSchRef>
-          <LabFumeHoodDens>0</LabFumeHoodDens>
-          <ExhFanName>Thermal Zone: F5 2-Bed Core NE-NW PropExhFan</ExhFanName>
-          <ExhFlowSim>109.8</ExhFlowSim>
-          <ExhTotEff>0.55575</ExhTotEff>
-          <ExhTotStaticPress>3.31085</ExhTotStaticPress>
-          <ExhFanEndUseCat>General</ExhFanEndUseCat>
-          <ClgUMLHLimit>150</ClgUMLHLimit>
-          <HtgUMLHLimit>150</HtgUMLHLimit>
-          <BypassClgUMLHLimit>0</BypassClgUMLHLimit>
-          <BypassHtgUMLHLimit>0</BypassHtgUMLHLimit>
-          <PriAirFlowMax>0</PriAirFlowMax>
-          <PriAirFlowMin>0</PriAirFlowMin>
-          <PriAirFlowMinFrac>0.00</PriAirFlowMinFrac>
-          <CodeDsgnVentPerPerson>18.30</CodeDsgnVentPerPerson>
-          <CodeDsgnVentPerArea>0.05</CodeDsgnVentPerArea>
-          <HasDCV>0</HasDCV>
-          <HasDDCCtrl>0</HasDDCCtrl>
-          <CondgStatus>1</CondgStatus>
-          <VentFuncList>NA</VentFuncList>
-          <HotelMotelGuestRmCnt>0</HotelMotelGuestRmCnt>
-          <ResLivingBdrmCnt>4</ResLivingBdrmCnt>
-          <HasOccSensorCtrl>0</HasOccSensorCtrl>
-        </ThrmlZn>
-        <ThrmlZn>
           <Name>Thermal Zone: F5 2-Bed East</Name>
           <Type>Conditioned</Type>
           <Mult>1</Mult>
@@ -43599,12 +43656,12 @@ Lodging - Laundry rooms, central</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>1482.6</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>1548.79</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>1202.74</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>1207.26</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -43617,10 +43674,10 @@ Lodging - Laundry rooms, central</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>32578.6</ClgDsgnLd>
-          <HtgDsgnLd>35646.5</HtgDsgnLd>
+          <ClgDsgnLd>34033.1</ClgDsgnLd>
+          <HtgDsgnLd>35780.5</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
-          <HtgUnmetLdHrs>2.5</HtgUnmetLdHrs>
+          <HtgUnmetLdHrs>3</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
           <WinInterlockRpt>NA</WinInterlockRpt>
           <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
@@ -43677,12 +43734,12 @@ Lodging - Laundry rooms, central</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>1857.15</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>1839.64</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>1203.54</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>1207.84</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -43695,10 +43752,10 @@ Lodging - Laundry rooms, central</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>40808.8</ClgDsgnLd>
-          <HtgDsgnLd>35670.2</HtgDsgnLd>
+          <ClgDsgnLd>40424.1</ClgDsgnLd>
+          <HtgDsgnLd>35797.7</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
-          <HtgUnmetLdHrs>1.75</HtgUnmetLdHrs>
+          <HtgUnmetLdHrs>3</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
           <WinInterlockRpt>NA</WinInterlockRpt>
           <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
@@ -43755,12 +43812,12 @@ Lodging - Laundry rooms, central</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>631.948</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>663.821</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>558.316</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>556.066</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -43773,8 +43830,8 @@ Lodging - Laundry rooms, central</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>13886.4</ClgDsgnLd>
-          <HtgDsgnLd>16547.2</HtgDsgnLd>
+          <ClgDsgnLd>14586.7</ClgDsgnLd>
+          <HtgDsgnLd>16480.6</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
           <HtgUnmetLdHrs>5</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
@@ -43833,12 +43890,12 @@ Lodging - Laundry rooms, central</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>800.914</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>796.321</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>558.657</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>556.313</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -43851,10 +43908,10 @@ Lodging - Laundry rooms, central</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>17599.2</ClgDsgnLd>
-          <HtgDsgnLd>16557.3</HtgDsgnLd>
+          <ClgDsgnLd>17498.3</ClgDsgnLd>
+          <HtgDsgnLd>16487.9</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
-          <HtgUnmetLdHrs>4.5</HtgUnmetLdHrs>
+          <HtgUnmetLdHrs>5</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
           <WinInterlockRpt>NA</WinInterlockRpt>
           <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
@@ -43911,12 +43968,12 @@ Lodging - Laundry rooms, central</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>464.987</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>450.607</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>264.434</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>259.315</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -43929,10 +43986,10 @@ Lodging - Laundry rooms, central</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>10217.6</ClgDsgnLd>
-          <HtgDsgnLd>7837.23</HtgDsgnLd>
+          <ClgDsgnLd>9901.6</ClgDsgnLd>
+          <HtgDsgnLd>7685.52</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
-          <HtgUnmetLdHrs>6</HtgUnmetLdHrs>
+          <HtgUnmetLdHrs>5.75</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
           <WinInterlockRpt>NA</WinInterlockRpt>
           <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
@@ -43989,12 +44046,12 @@ Lodging - Laundry rooms, central</VentFuncList>
           <ClgTstatSchRef>ResidentialLivingClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>58</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>435.676</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>428.638</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>ResidentialLivingHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>27</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>264.309</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>259.223</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <VentStd>T24-2022</VentStd>
           <VentAirDistEff>1</VentAirDistEff>
@@ -44007,10 +44064,10 @@ Lodging - Laundry rooms, central</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.00</VentPerAreaSim>
           <ExhSrc>VentilationSystem</ExhSrc>
-          <ClgDsgnLd>9573.51</ClgDsgnLd>
-          <HtgDsgnLd>7833.52</HtgDsgnLd>
+          <ClgDsgnLd>9418.85</ClgDsgnLd>
+          <HtgDsgnLd>7682.8</HtgDsgnLd>
           <ClgUnmetLdHrs>0</ClgUnmetLdHrs>
-          <HtgUnmetLdHrs>6.5</HtgUnmetLdHrs>
+          <HtgUnmetLdHrs>5.75</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>1</OperableWinHaveInterlock>
           <WinInterlockRpt>NA</WinInterlockRpt>
           <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
@@ -44066,12 +44123,12 @@ Lodging - Laundry rooms, central</VentFuncList>
           <ClgTstatSchRef>OfficeClgSetpt</ClgTstatSchRef>
           <ClgDsgnSupAirTemp>55</ClgDsgnSupAirTemp>
           <ClgDsgnSupAirTempDiff>20</ClgDsgnSupAirTempDiff>
-          <ClgDsgnFlowSim>1675.28</ClgDsgnFlowSim>
+          <ClgDsgnFlowSim>1655</ClgDsgnFlowSim>
           <ClgDsgnSizingFac>1</ClgDsgnSizingFac>
           <HtgTstatSchRef>OfficeHtgSetpt</HtgTstatSchRef>
           <HtgDsgnSupAirTemp>95</HtgDsgnSupAirTemp>
           <HtgDsgnSupAirTempDiff>25</HtgDsgnSupAirTempDiff>
-          <HtgDsgnFlowSim>1134.58</HtgDsgnFlowSim>
+          <HtgDsgnFlowSim>1206.95</HtgDsgnFlowSim>
           <HtgDsgnSizingFac>1</HtgDsgnSizingFac>
           <HtgDsgnMaxFlowFrac>1</HtgDsgnMaxFlowFrac>
           <VentStd>T24-2022</VentStd>
@@ -44085,10 +44142,10 @@ Lodging - Laundry rooms, central</VentFuncList>
           <VentPerPersonSim>0.0</VentPerPersonSim>
           <VentPerAreaSim>0.15</VentPerAreaSim>
           <ExhSrc>None</ExhSrc>
-          <ClgDsgnLd>36812.5</ClgDsgnLd>
-          <HtgDsgnLd>31135.6</HtgDsgnLd>
-          <ClgUnmetLdHrs>3405.75</ClgUnmetLdHrs>
-          <HtgUnmetLdHrs>363.5</HtgUnmetLdHrs>
+          <ClgDsgnLd>36366.8</ClgDsgnLd>
+          <HtgDsgnLd>33121.7</HtgDsgnLd>
+          <ClgUnmetLdHrs>3426.75</ClgUnmetLdHrs>
+          <HtgUnmetLdHrs>390</HtgUnmetLdHrs>
           <OperableWinHaveInterlock>0</OperableWinHaveInterlock>
           <WinInterlockRpt>NA</WinInterlockRpt>
           <DayltgCtrlLtgFrac1>0</DayltgCtrlLtgFrac1>
@@ -54500,56 +54557,56 @@ Thermal Zone: F5 Corridor</ZnServedAsVentSys>
       <EnergyUse>
         <Name>Space Heating</Name>
         <EnduseName>Space Heating</EnduseName>
-        <ProposedTDV index="0">1.8461</ProposedTDV>
-        <PropElecEnergy>1023.62</PropElecEnergy>
-        <PropNatGasEnergy>668.506</PropNatGasEnergy>
+        <ProposedTDV index="0">1.82671</ProposedTDV>
+        <PropElecEnergy>923.585</PropElecEnergy>
+        <PropNatGasEnergy>668.311</PropNatGasEnergy>
         <PropOtherEnergy>0</PropOtherEnergy>
-        <PropTotalEnergy>0.621957</PropTotalEnergy>
-        <PropElecDemand>5.27791e-05</PropElecDemand>
-        <PropElecTDV index="0">0.268436</PropElecTDV>
-        <PropNatGasTDV index="0">1.57766</PropNatGasTDV>
+        <PropTotalEnergy>0.618767</PropTotalEnergy>
+        <PropElecDemand>5.2805e-05</PropElecDemand>
+        <PropElecTDV index="0">0.249499</PropElecTDV>
+        <PropNatGasTDV index="0">1.57721</PropNatGasTDV>
         <PropOtherTDV index="0">0</PropOtherTDV>
-        <ProposedSrc index="0">0.584482</ProposedSrc>
-        <PropElecC02 index="0">0.250592</PropElecC02>
-        <PropNatGasC02 index="0">0.32054</PropNatGasC02>
+        <ProposedSrc index="0">0.581694</ProposedSrc>
+        <PropElecC02 index="0">0.234807</PropElecC02>
+        <PropNatGasC02 index="0">0.320446</PropNatGasC02>
         <PropOtherC02 index="0">0</PropOtherC02>
-        <PropTotalC02 index="0">0.57</PropTotalC02>
+        <PropTotalC02 index="0">0.55</PropTotalC02>
       </EnergyUse>
       <EnergyUse>
         <Name>Space Cooling</Name>
         <EnduseName>Space Cooling</EnduseName>
-        <ProposedTDV index="0">25.0526</ProposedTDV>
-        <PropElecEnergy>90207.1</PropElecEnergy>
+        <ProposedTDV index="0">25.2881</ProposedTDV>
+        <PropElecEnergy>92594.6</PropElecEnergy>
         <PropNatGasEnergy>0</PropNatGasEnergy>
         <PropOtherEnergy>0</PropOtherEnergy>
-        <PropTotalEnergy>2.72148</PropTotalEnergy>
-        <PropElecDemand>28.7191</PropElecDemand>
-        <PropElecTDV index="0">25.0526</PropElecTDV>
+        <PropTotalEnergy>2.79351</PropTotalEnergy>
+        <PropElecDemand>27.9149</PropElecDemand>
+        <PropElecTDV index="0">25.2881</PropElecTDV>
         <PropNatGasTDV index="0">0</PropNatGasTDV>
         <PropOtherTDV index="0">0</PropOtherTDV>
-        <ProposedSrc index="0">1.73593</ProposedSrc>
-        <PropElecC02 index="0">10.4224</PropElecC02>
+        <ProposedSrc index="0">1.74979</ProposedSrc>
+        <PropElecC02 index="0">10.5056</PropElecC02>
         <PropNatGasC02 index="0">0</PropNatGasC02>
         <PropOtherC02 index="0">0</PropOtherC02>
-        <PropTotalC02 index="0">10.42</PropTotalC02>
+        <PropTotalC02 index="0">10.51</PropTotalC02>
       </EnergyUse>
       <EnergyUse>
         <Name>Indoor Fans</Name>
         <EnduseName>Indoor Fans</EnduseName>
-        <ProposedTDV index="0">14.0368</ProposedTDV>
-        <PropElecEnergy>56072</PropElecEnergy>
+        <ProposedTDV index="0">14.0804</ProposedTDV>
+        <PropElecEnergy>56536</PropElecEnergy>
         <PropNatGasEnergy>0</PropNatGasEnergy>
         <PropOtherEnergy>0</PropOtherEnergy>
-        <PropTotalEnergy>1.69165</PropTotalEnergy>
-        <PropElecDemand>9.72434</PropElecDemand>
-        <PropElecTDV index="0">14.0368</PropElecTDV>
+        <PropTotalEnergy>1.70565</PropTotalEnergy>
+        <PropElecDemand>9.56159</PropElecDemand>
+        <PropElecTDV index="0">14.0804</PropElecTDV>
         <PropNatGasTDV index="0">0</PropNatGasTDV>
         <PropOtherTDV index="0">0</PropOtherTDV>
-        <ProposedSrc index="0">1.3221</ProposedSrc>
-        <PropElecC02 index="0">7.93779</PropElecC02>
+        <ProposedSrc index="0">1.32433</ProposedSrc>
+        <PropElecC02 index="0">7.95123</PropElecC02>
         <PropNatGasC02 index="0">0</PropNatGasC02>
         <PropOtherC02 index="0">0</PropOtherC02>
-        <PropTotalC02 index="0">7.94</PropTotalC02>
+        <PropTotalC02 index="0">7.95</PropTotalC02>
       </EnergyUse>
       <EnergyUse>
         <Name>Heat Rejection</Name>
@@ -54571,17 +54628,17 @@ Thermal Zone: F5 Corridor</ZnServedAsVentSys>
       <EnergyUse>
         <Name>Pumps &amp; Misc.</Name>
         <EnduseName>Pumps &amp; Misc.</EnduseName>
-        <ProposedTDV index="0">0.0587721</ProposedTDV>
-        <PropElecEnergy>242.846</PropElecEnergy>
+        <ProposedTDV index="0">0.0587999</ProposedTDV>
+        <PropElecEnergy>242.988</PropElecEnergy>
         <PropNatGasEnergy>0</PropNatGasEnergy>
         <PropOtherEnergy>0</PropOtherEnergy>
-        <PropTotalEnergy>0.00732649</PropTotalEnergy>
+        <PropTotalEnergy>0.00733076</PropTotalEnergy>
         <PropElecDemand>0.042936</PropElecDemand>
-        <PropElecTDV index="0">0.0587721</PropElecTDV>
+        <PropElecTDV index="0">0.0587999</PropElecTDV>
         <PropNatGasTDV index="0">0</PropNatGasTDV>
         <PropOtherTDV index="0">0</PropOtherTDV>
-        <ProposedSrc index="0">0.00531708</ProposedSrc>
-        <PropElecC02 index="0">0.0319234</PropElecC02>
+        <ProposedSrc index="0">0.00531978</ProposedSrc>
+        <PropElecC02 index="0">0.0319396</PropElecC02>
         <PropNatGasC02 index="0">0</PropNatGasC02>
         <PropOtherC02 index="0">0</PropOtherC02>
         <PropTotalC02 index="0">0.03</PropTotalC02>
@@ -54589,20 +54646,20 @@ Thermal Zone: F5 Corridor</ZnServedAsVentSys>
       <EnergyUse>
         <Name>Domestic Hot Water</Name>
         <EnduseName>Domestic Hot Water</EnduseName>
-        <ProposedTDV index="0">23.7036</ProposedTDV>
+        <ProposedTDV index="0">21.5885</ProposedTDV>
         <PropElecEnergy>12790.2</PropElecEnergy>
-        <PropNatGasEnergy>9647.9</PropNatGasEnergy>
+        <PropNatGasEnergy>8654.49</PropNatGasEnergy>
         <PropOtherEnergy>0</PropOtherEnergy>
-        <PropTotalEnergy>8.91629</PropTotalEnergy>
-        <PropElecDemand>2.11939</PropElecDemand>
-        <PropElecTDV index="0">3.06291</PropElecTDV>
-        <PropNatGasTDV index="0">20.6407</PropNatGasTDV>
+        <PropTotalEnergy>8.03794</PropTotalEnergy>
+        <PropElecDemand>2.11897</PropElecDemand>
+        <PropElecTDV index="0">3.06282</PropElecTDV>
+        <PropNatGasTDV index="0">18.5257</PropNatGasTDV>
         <PropOtherTDV index="0">0</PropOtherTDV>
-        <ProposedSrc index="0">8.10291</ProposedSrc>
+        <ProposedSrc index="0">7.29638</ProposedSrc>
         <PropElecC02 index="0">1.62115</PropElecC02>
-        <PropNatGasC02 index="0">4.62604</PropNatGasC02>
+        <PropNatGasC02 index="0">4.14971</PropNatGasC02>
         <PropOtherC02 index="0">0</PropOtherC02>
-        <PropTotalC02 index="0">6.25</PropTotalC02>
+        <PropTotalC02 index="0">5.77</PropTotalC02>
       </EnergyUse>
       <EnergyUse>
         <Name>Indoor Lighting</Name>
@@ -54625,20 +54682,20 @@ Thermal Zone: F5 Corridor</ZnServedAsVentSys>
       <EnergyUse>
         <Name>Compliance Total</Name>
         <EnduseName>Compliance Total</EnduseName>
-        <ProposedTDV index="0">83.8849</ProposedTDV>
-        <PropElecEnergy>242120</PropElecEnergy>
-        <PropNatGasEnergy>10316.4</PropNatGasEnergy>
+        <ProposedTDV index="0">82.0295</ProposedTDV>
+        <PropElecEnergy>244872</PropElecEnergy>
+        <PropNatGasEnergy>9322.8</PropNatGasEnergy>
         <PropOtherEnergy>0</PropOtherEnergy>
-        <PropTotalEnergy>16.4261</PropTotalEnergy>
-        <PropElecDemand>55.0521</PropElecDemand>
-        <PropElecTDV index="0">61.6665</PropElecTDV>
-        <PropNatGasTDV index="0">22.2184</PropNatGasTDV>
+        <PropTotalEnergy>15.6306</PropTotalEnergy>
+        <PropElecDemand>54.0848</PropElecDemand>
+        <PropElecTDV index="0">61.9266</PropElecTDV>
+        <PropNatGasTDV index="0">20.1029</PropNatGasTDV>
         <PropOtherTDV index="0">0</PropOtherTDV>
-        <ProposedSrc index="0">13.2524</ProposedSrc>
-        <PropElecC02 index="0">29.28</PropElecC02>
-        <PropNatGasC02 index="0">4.95</PropNatGasC02>
+        <ProposedSrc index="0">12.4591</ProposedSrc>
+        <PropElecC02 index="0">29.36</PropElecC02>
+        <PropNatGasC02 index="0">4.47</PropNatGasC02>
         <PropOtherC02 index="0">0</PropOtherC02>
-        <PropTotalC02 index="0">34.23</PropTotalC02>
+        <PropTotalC02 index="0">33.83</PropTotalC02>
       </EnergyUse>
       <EnergyUse>
         <Name>Receptacle</Name>
@@ -54748,20 +54805,20 @@ Thermal Zone: F5 Corridor</ZnServedAsVentSys>
       <EnergyUse>
         <Name>TOTAL</Name>
         <EnduseName>TOTAL</EnduseName>
-        <ProposedTDV index="0">187.991</ProposedTDV>
-        <PropElecEnergy>643214</PropElecEnergy>
-        <PropNatGasEnergy>10903.1</PropNatGasEnergy>
+        <ProposedTDV index="0">186.135</ProposedTDV>
+        <PropElecEnergy>645966</PropElecEnergy>
+        <PropNatGasEnergy>9909.53</PropNatGasEnergy>
         <PropOtherEnergy>0</PropOtherEnergy>
-        <PropTotalEnergy>29.0455</PropTotalEnergy>
-        <PropElecDemand>123.054</PropElecDemand>
-        <PropElecTDV index="0">164.523</PropElecTDV>
-        <PropNatGasTDV index="0">23.4674</PropNatGasTDV>
+        <PropTotalEnergy>28.25</PropTotalEnergy>
+        <PropElecDemand>122.087</PropElecDemand>
+        <PropElecTDV index="0">164.783</PropElecTDV>
+        <PropNatGasTDV index="0">21.3519</PropNatGasTDV>
         <PropOtherTDV index="0">0</PropOtherTDV>
-        <ProposedSrc index="0">24.2934</ProposedSrc>
-        <PropElecC02 index="0">92.71</PropElecC02>
-        <PropNatGasC02 index="0">5.23</PropNatGasC02>
+        <ProposedSrc index="0">23.5002</ProposedSrc>
+        <PropElecC02 index="0">92.79</PropElecC02>
+        <PropNatGasC02 index="0">4.75</PropNatGasC02>
         <PropOtherC02 index="0">0</PropOtherC02>
-        <PropTotalC02 index="0">97.94</PropTotalC02>
+        <PropTotalC02 index="0">97.54</PropTotalC02>
       </EnergyUse>
       <EUseSummary>
         <Name>Pol  0% RetAdd NoLeak</Name>
@@ -54788,30 +54845,30 @@ Thermal Zone: F5 Corridor</ZnServedAsVentSys>
         <Title3 index="17">Emis. (tonne)</Title3>
         <Title3 index="18">Emis. (tonne)</Title3>
         <Enduse1 index="0">Space Heating</Enduse1>
-        <Enduse1 index="1">1.0</Enduse1>
-        <Enduse1 index="2">66.9</Enduse1>
-        <Enduse1 index="3">1.85</Enduse1>
+        <Enduse1 index="1">0.9</Enduse1>
+        <Enduse1 index="2">66.8</Enduse1>
+        <Enduse1 index="3">1.83</Enduse1>
         <Enduse1 index="8">--</Enduse1>
         <Enduse1 index="10">0.58</Enduse1>
-        <Enduse1 index="16">0.25</Enduse1>
+        <Enduse1 index="16">0.23</Enduse1>
         <Enduse1 index="17">0.32</Enduse1>
-        <Enduse1 index="18">0.57</Enduse1>
+        <Enduse1 index="18">0.55</Enduse1>
         <Enduse2 index="0">Space Cooling</Enduse2>
-        <Enduse2 index="1">90.2</Enduse2>
+        <Enduse2 index="1">92.6</Enduse2>
         <Enduse2 index="2">--</Enduse2>
-        <Enduse2 index="3">25.05</Enduse2>
-        <Enduse2 index="8">28.7</Enduse2>
-        <Enduse2 index="10">1.74</Enduse2>
-        <Enduse2 index="16">10.42</Enduse2>
-        <Enduse2 index="18">10.42</Enduse2>
+        <Enduse2 index="3">25.29</Enduse2>
+        <Enduse2 index="8">27.9</Enduse2>
+        <Enduse2 index="10">1.75</Enduse2>
+        <Enduse2 index="16">10.51</Enduse2>
+        <Enduse2 index="18">10.51</Enduse2>
         <Enduse3 index="0">Indoor Fans</Enduse3>
-        <Enduse3 index="1">56.1</Enduse3>
+        <Enduse3 index="1">56.5</Enduse3>
         <Enduse3 index="2">--</Enduse3>
-        <Enduse3 index="3">14.04</Enduse3>
-        <Enduse3 index="8">9.7</Enduse3>
+        <Enduse3 index="3">14.08</Enduse3>
+        <Enduse3 index="8">9.6</Enduse3>
         <Enduse3 index="10">1.32</Enduse3>
-        <Enduse3 index="16">7.94</Enduse3>
-        <Enduse3 index="18">7.94</Enduse3>
+        <Enduse3 index="16">7.95</Enduse3>
+        <Enduse3 index="18">7.95</Enduse3>
         <Enduse4 index="0">Heat Rejection</Enduse4>
         <Enduse4 index="1">--</Enduse4>
         <Enduse4 index="2">--</Enduse4>
@@ -54828,13 +54885,13 @@ Thermal Zone: F5 Corridor</ZnServedAsVentSys>
         <Enduse5 index="18">0.03</Enduse5>
         <Enduse6 index="0">Domestic Hot Water</Enduse6>
         <Enduse6 index="1">12.8</Enduse6>
-        <Enduse6 index="2">964.8</Enduse6>
-        <Enduse6 index="3">23.70</Enduse6>
+        <Enduse6 index="2">865.4</Enduse6>
+        <Enduse6 index="3">21.59</Enduse6>
         <Enduse6 index="8">2.1</Enduse6>
-        <Enduse6 index="10">8.10</Enduse6>
+        <Enduse6 index="10">7.30</Enduse6>
         <Enduse6 index="16">1.62</Enduse6>
-        <Enduse6 index="17">4.63</Enduse6>
-        <Enduse6 index="18">6.25</Enduse6>
+        <Enduse6 index="17">4.15</Enduse6>
+        <Enduse6 index="18">5.77</Enduse6>
         <Enduse7 index="0">Indoor Lighting</Enduse7>
         <Enduse7 index="1">81.8</Enduse7>
         <Enduse7 index="2">--</Enduse7>
@@ -54844,14 +54901,14 @@ Thermal Zone: F5 Corridor</ZnServedAsVentSys>
         <Enduse7 index="16">9.02</Enduse7>
         <Enduse7 index="18">9.02</Enduse7>
         <Enduse8 index="0">Compliance Total</Enduse8>
-        <Enduse8 index="1">242.1</Enduse8>
-        <Enduse8 index="2">1,031.7</Enduse8>
-        <Enduse8 index="3">83.89</Enduse8>
-        <Enduse8 index="8">55.1</Enduse8>
-        <Enduse8 index="10">13.25</Enduse8>
-        <Enduse8 index="16">29.28</Enduse8>
-        <Enduse8 index="17">4.95</Enduse8>
-        <Enduse8 index="18">34.23</Enduse8>
+        <Enduse8 index="1">244.8</Enduse8>
+        <Enduse8 index="2">932.2</Enduse8>
+        <Enduse8 index="3">82.04</Enduse8>
+        <Enduse8 index="8">54.1</Enduse8>
+        <Enduse8 index="10">12.46</Enduse8>
+        <Enduse8 index="16">29.36</Enduse8>
+        <Enduse8 index="17">4.47</Enduse8>
+        <Enduse8 index="18">33.83</Enduse8>
         <Enduse9 index="0">Receptacle</Enduse9>
         <Enduse9 index="1">217.4</Enduse9>
         <Enduse9 index="2">58.7</Enduse9>
@@ -54896,14 +54953,14 @@ Thermal Zone: F5 Corridor</ZnServedAsVentSys>
         <Enduse14 index="8">--</Enduse14>
         <Enduse14 index="10">--</Enduse14>
         <Enduse15 index="0">TOTAL</Enduse15>
-        <Enduse15 index="1">643.2</Enduse15>
-        <Enduse15 index="2">1,090.4</Enduse15>
-        <Enduse15 index="3">188.00</Enduse15>
-        <Enduse15 index="8">123.1</Enduse15>
-        <Enduse15 index="10">24.29</Enduse15>
-        <Enduse15 index="16">92.71</Enduse15>
-        <Enduse15 index="17">5.23</Enduse15>
-        <Enduse15 index="18">97.94</Enduse15>
+        <Enduse15 index="1">645.9</Enduse15>
+        <Enduse15 index="2">990.9</Enduse15>
+        <Enduse15 index="3">186.15</Enduse15>
+        <Enduse15 index="8">122.1</Enduse15>
+        <Enduse15 index="10">23.50</Enduse15>
+        <Enduse15 index="16">92.79</Enduse15>
+        <Enduse15 index="17">4.75</Enduse15>
+        <Enduse15 index="18">97.54</Enduse15>
         <ZoneUMLHsLoaded index="0">1</ZoneUMLHsLoaded>
         <ZoneUMLHs index="0">clg: 0  htg: 0  'Thermal Zone: F1 Business Center'
 clg: 0  htg: 0  'Thermal Zone: F1 Corridor'
@@ -54920,25 +54977,25 @@ clg: 0  htg: 0  'Thermal Zone: F2-4 1-Bed Core West'
 clg: 0  htg: 0  'Thermal Zone: F2-4 1-Bed Core East'
 clg: 0  htg: 0  'Thermal Zone: F2-4 1-Bed North'
 clg: 0  htg: 0  'Thermal Zone: F2-4 2-Bed Core NE-NW'
+clg: 0  htg: 2  'Thermal Zone: F5 1-Bed North'
+clg: 0  htg: 0  'Thermal Zone: F5 2-Bed Core NE-NW'
 clg: 0  htg: 0  'Thermal Zone: F2-4 2-Bed East'
 clg: 0  htg: 0  'Thermal Zone: F2-4 2-Bed West'
 clg: 0  htg: 0  'Thermal Zone: F2-4 3-Bed NE'
 clg: 0  htg: 0  'Thermal Zone: F2-4 3-Bed NW'
 clg: 0  htg: 0  'Thermal Zone: F2-4 Studio SE'
 clg: 0  htg: 0  'Thermal Zone: F2-4 Studio SW'
-clg: 3778  htg: 68  'Thermal Zone: F2-4 Corridor'
+clg: 3902  htg: 34  'Thermal Zone: F2-4 Corridor'
 clg: 0  htg: 0  'Thermal Zone: F5 1-Bed Core N'
-clg: 0  htg: 1  'Thermal Zone: F5 1-Bed Core West'
-clg: 0  htg: 1  'Thermal Zone: F5 1-Bed Core East'
-clg: 0  htg: 1  'Thermal Zone: F5 1-Bed North'
-clg: 0  htg: 0  'Thermal Zone: F5 2-Bed Core NE-NW'
-clg: 0  htg: 2  'Thermal Zone: F5 2-Bed East'
-clg: 0  htg: 2  'Thermal Zone: F5 2-Bed West'
+clg: 0  htg: 2  'Thermal Zone: F5 1-Bed Core West'
+clg: 0  htg: 2  'Thermal Zone: F5 1-Bed Core East'
+clg: 0  htg: 3  'Thermal Zone: F5 2-Bed East'
+clg: 0  htg: 3  'Thermal Zone: F5 2-Bed West'
 clg: 0  htg: 5  'Thermal Zone: F5 3-Bed NE'
-clg: 0  htg: 4  'Thermal Zone: F5 3-Bed NW'
+clg: 0  htg: 5  'Thermal Zone: F5 3-Bed NW'
 clg: 0  htg: 6  'Thermal Zone: F5 Studio SE'
 clg: 0  htg: 6  'Thermal Zone: F5 Studio SW'
-clg: 3406  htg: 364  'Thermal Zone: F5 Corridor'
+clg: 3427  htg: 390  'Thermal Zone: F5 Corridor'
 clg: 0  htg: 0  'Thermal Zone: Parking Garage'</ZoneUMLHs>
         <SimSummary index="0">Successful (309 warnings)</SimSummary>
       </EUseSummary>
