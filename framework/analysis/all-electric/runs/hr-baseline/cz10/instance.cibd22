@@ -18,10 +18,10 @@
 // * sol_frac = 0.35 (:default => nil)
 //   doas_fan_type = "Exhaust"
 // * supply_temp_control = "FixedDualSetpoint" (:default => nil)
-// * res_metal_wall = "Stucco - 7/8 in.;Compliance Insulation R17.00;Air - Metal Wall Framing - 16 or 24 in. OC;Gypsum Board - 1/2 in." (:default => "Stucco - 7/8 in.;Compliance Insulation R10.06;Compliance Insulation R2.00;Compliance Insulation R0.20;Compliance Insulation R0.10;Air - Metal Wall Framing - 16 or 24 in. OC;Gypsum Board - 1/2 in.")
+// * res_metal_wall = "Compliance Insulation R7.10;Compliance Insulation R3.63;Gypsum Board - 5/8 in.;Gypsum Board - 5/8 in.;MetalFrameWall16inOC R0.00;Gypsum Board - 5/8 in.;Gypsum Board - 5/8 in." (:default => "Stucco - 7/8 in.;Compliance Insulation R10.06;Compliance Insulation R2.00;Compliance Insulation R0.20;Compliance Insulation R0.10;Air - Metal Wall Framing - 16 or 24 in. OC;Gypsum Board - 1/2 in.")
 // * other_floor = "Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R8.07;Compliance Insulation R0.50;Plywood - 5/8 in.;Carpet - 3/4 in." (:default => "Concrete - 140 lb/ft3 - 10 in.;Compliance Insulation R9.40;Compliance Insulation R6.00;Plywood - 5/8 in.;Carpet - 3/4 in.")
 //   nonres_metal_wall = "Stucco - 7/8 in.;Compliance Insulation R12.00;Compliance Insulation R0.20;Compliance Insulation R0.20;Air - Metal Wall Framing - 16 or 24 in. OC;Gypsum Board - 1/2 in."
-// * wood_framing_roof = "Roofing felt - 1/8 in.;Building Paper - 1/16 in.;Fiberboard sheathing - 1/2 in.;Compliance Insulation R5.00;Compliance Insulation R1.54;Compliance Insulation R0.20;Compliance Insulation R0.10;Gypsum Board - 1/2 in.;WoodRoof16OCCavInsR38" (:default => "Roofing felt - 1/8 in.;Building Paper - 1/16 in.;Fiberboard sheathing - 1/2 in.;Compliance Insulation R6.32;Compliance Insulation R0.02;Compliance Insulation R0.50;Gypsum Board - 1/2 in.;WoodRoof16OCCavInsR38")
+// * wood_framing_roof = "Roofing felt - 1/8 in.;Building Paper - 1/16 in.;Fiberboard sheathing - 1/2 in.;Compliance Insulation R1.54;Compliance Insulation R1.35;Compliance Insulation R0.20;Compliance Insulation R1.00;Gypsum Board - 1/2 in.;WoodRoof16OCCavInsR38" (:default => "Roofing felt - 1/8 in.;Building Paper - 1/16 in.;Fiberboard sheathing - 1/2 in.;Compliance Insulation R6.32;Compliance Insulation R0.02;Compliance Insulation R0.50;Gypsum Board - 1/2 in.;WoodRoof16OCCavInsR38")
 //   window_u = 0.36
 //   window_shgc = 0.25
 //   window_type = "FixedWindow"
@@ -330,13 +330,19 @@ ConsAssm   "ResMetalFramedWall"
    SpecMthd = "Layers"
    ExtRoughness = "Smooth"
    
-      MatRef[1] = "Stucco - 7/8 in."
+      MatRef[1] = "Compliance Insulation R7.10"
    
-      MatRef[2] = "Compliance Insulation R17.00"
+      MatRef[2] = "Compliance Insulation R3.63"
    
-      MatRef[3] = "Air - Metal Wall Framing - 16 or 24 in. OC"
+      MatRef[3] = "Gypsum Board - 5/8 in."
    
-      MatRef[4] = "Gypsum Board - 1/2 in."
+      MatRef[4] = "Gypsum Board - 5/8 in."
+   
+      MatRef[5] = "MetalFrameWall16inOC R0.00"
+   
+      MatRef[6] = "Gypsum Board - 5/8 in."
+   
+      MatRef[7] = "Gypsum Board - 5/8 in."
    
    ..
 
@@ -354,10 +360,10 @@ ConsAssm   "FlatResWoodFramingAndOtherRoof"
   MatRef[1] = "Roofing felt - 1/8 in."
   MatRef[2] = "Building Paper - 1/16 in."
   MatRef[3] = "Fiberboard sheathing - 1/2 in."
-  MatRef[4] = "Compliance Insulation R5.00"
-  MatRef[5] = "Compliance Insulation R1.54"
+  MatRef[4] = "Compliance Insulation R1.54"
+  MatRef[5] = "Compliance Insulation R1.35"
   MatRef[6] = "Compliance Insulation R0.20"
-  MatRef[7] = "Compliance Insulation R0.10"
+  MatRef[7] = "Compliance Insulation R1.00"
   MatRef[8] = "Gypsum Board - 1/2 in."
   MatRef[9] = "WoodRoof16OCCavInsR38"
    ..
@@ -394,7 +400,7 @@ ConsAssm   "IntCeiling"
   ..
 
 FenCons   "Res Fixed Window"
-   FenProdType = FixedWindow
+   FenProdType = "FixedWindow"
    SHGC = 0.25
    UFactor = 0.36
    VT = 0.42
@@ -12499,6 +12505,11 @@ Mat   "Compliance Insulation R9.40"
    CodeItem = "Compliance Insulation R9.40"
    ..
 
+Mat   "Compliance Insulation R7.10"
+  CodeCat = "Insulation Board"
+  CodeItem = "Compliance Insulation R7.10"
+  ..
+
 Mat   "Compliance Insulation R1.54"
   CodeCat = "Insulation Board"
   CodeItem = "Compliance Insulation R1.54"
@@ -12507,6 +12518,11 @@ Mat   "Compliance Insulation R1.54"
 Mat   "Compliance Insulation R1.35"
   CodeCat = "Insulation Board"
   CodeItem = "Compliance Insulation R1.35"
+  ..
+
+Mat   "Compliance Insulation R3.63"
+  CodeCat = "Insulation Board"
+  CodeItem = "Compliance Insulation R3.63"
   ..
 
 Mat   "Compliance Insulation R6.00"
@@ -12524,10 +12540,17 @@ Mat   "Compliance Insulation R6.32"
    CodeItem = "Compliance Insulation R6.32"
    ..
 
+Mat   "Compliance Insulation R3.00"
+  CodeCat = "Insulation Board"
+  CodeItem = "Compliance Insulation R3.00"
+  ..
+
 Mat   "Compliance Insulation R0.02"
    CodeCat = "Insulation Board"
    CodeItem = "Compliance Insulation R0.02"
    ..
+
+
 
 Mat   "Compliance Insulation R10.00"
    CodeCat = "Insulation Board"
@@ -12568,6 +12591,7 @@ Mat   "MetalFrameWall16inOC R13.00"
   CavityInsOpt = "R-13"
   ..
 
+
 Mat   "MetalFrameWall16inOC R11.00"
   CodeCat = "Composite"
   CodeItem = "- specify -"
@@ -12576,6 +12600,16 @@ Mat   "MetalFrameWall16inOC R11.00"
   FrmDepth = "3_5In"
   CavityIns = 11.25
   CavityInsOpt = "R-11"
+  ..
+
+Mat   "MetalFrameWall16inOC R0.00"
+  CodeCat = "Composite"
+  CodeItem = "- specify -"
+  FrmMat = "Metal"
+  FrmConfig = "Wall16inOC"
+  FrmDepth = "3_5In"
+  CavityIns = 0
+  CavityInsOpt = "R-0"
   ..
 
 
