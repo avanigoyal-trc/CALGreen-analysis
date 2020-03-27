@@ -25,7 +25,7 @@ parameter "fan_efficacy", :default=> 0.7
 
 #DOAS system
 parameter "doas_fan_type", :default => "Relief"
-parameter "supply_temp_control"
+parameter "supply_temp_control", :default => "FixedDualSetpoint"
 
 #measure parameters
 parameter "res_wood_wall", :default=>"Stucco - 7/8 in.;Plywood - 5/8 in.;Compliance Insulation R1.54;WoodFrameWall16inOCCavInsR5;Gypsum Board - 5/8 in."
@@ -36,6 +36,8 @@ parameter "wood_framing_roof", :default=>"Roofing felt - 1/8 in.;Building Paper 
 
 parameter "window_u", :default=>0.36
 parameter "window_shgc", :default=>0.25
+parameter "window_type", :default=>"FixedWindow"
+
 
 parameter "heating_eff", :default=>0.8
 
@@ -245,7 +247,7 @@ ConsAssm   "BelowGradeWallC114"
    ..
 
 FenCons   "Res Fixed Window"
-   FenProdType = "FixedWindow"
+   FenProdType = "<%= window_type %>"
    SHGC = <%= window_shgc %>
    UFactor = <%= window_u %>
    VT = 0.42
