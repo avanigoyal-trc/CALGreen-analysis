@@ -1,8 +1,8 @@
 // INSERT TEMPLATE 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-res/low-rise-loaded-corridor-cathedral/root.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-res/low-rise-loaded-corridor-cathedral/root.pxt'
-//   proposed_only = "No"
-// * climate_zone = "CZ9  (Burbank)" (:default => "ClimateZone12")
-// * weather_station = "CTZ09S22A" (:default => nil)
+// * proposed_only = "Yes" (:default => "No")
+// * climate_zone = "CZ13  (Fresno)" (:default => "ClimateZone12")
+// * weather_station = "CTZ13S22A" (:default => nil)
 // * prototype = "low-rise-loaded-corridor-cathedral" (:default => nil)
 // * software = "cbecc-res" (:default => nil)
 //   autosizing = "No"
@@ -10,7 +10,7 @@
 //   is_central_dhw = 1
 //   window_u = 0.3
 //   window_shgc = 0.23
-// * wall_exterior_sheathing = 4 (:default => 0)
+// * wall_exterior_sheathing = 3 (:default => 0)
 // * wall_cavity = "R 21" (:default => nil)
 // * ceiling_sheathing = "R7 Sheathing" (:default => "- no sheathing/insul. -")
 // * ceiling_cavity = "R 38" (:default => nil)
@@ -32,7 +32,7 @@ Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Heat Pump DHW"
    ProjFileName = "instance.ribd22"
    RunTitle = "TDSv30 V06R12 V06 R12 UGLASS15 NGAS PVSTD"
    
-   AnalysisType = "Proposed and Standard"
+   AnalysisType = "Proposed Only"
    
    CALGreen = 0
    TDVType = "TDV"
@@ -92,7 +92,7 @@ Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Heat Pump DHW"
    CAHPSolarOption = "- select -"
    Notes = ""
    Remarks = ""
-   ClimateZone = "CZ9  (Burbank)"
+   ClimateZone = "CZ13  (Fresno)"
    Address = "1516 Ninth St"
    ZipCode = 95814
    RunScope = "Newly Constructed"
@@ -2676,7 +2676,7 @@ Cons   "Exterior Wall Cons"
    CavityLayer = "R 21"
    FrameLayer = "2x6 @ 16 in. O.C."
    SheathInsulLayer = "- specify R-value -"
-   SheathInsulLayerRVal = 4
+   SheathInsulLayerRVal = 3
    WallExtFinishLayer = "Synthetic Stucco"
    OtherSideFinishLayer = "Gypsum Board"
    FlrExtFinishLayer = "- select finish -"

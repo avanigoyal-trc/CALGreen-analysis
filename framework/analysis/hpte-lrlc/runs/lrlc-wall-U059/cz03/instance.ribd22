@@ -1,20 +1,20 @@
 // INSERT TEMPLATE 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-res/low-rise-loaded-corridor-cathedral/root.pxt'
 // Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-res/low-rise-loaded-corridor-cathedral/root.pxt'
-//   proposed_only = "No"
-// * climate_zone = "CZ9  (Burbank)" (:default => "ClimateZone12")
-// * weather_station = "CTZ09S22A" (:default => nil)
+// * proposed_only = "Yes" (:default => "No")
+// * climate_zone = "CZ3  (Oakland)" (:default => "ClimateZone12")
+// * weather_station = "CTZ03S22A" (:default => nil)
 // * prototype = "low-rise-loaded-corridor-cathedral" (:default => nil)
 // * software = "cbecc-res" (:default => nil)
 //   autosizing = "No"
 //   hvac_type = "SZAC"
 //   is_central_dhw = 1
 //   window_u = 0.3
-//   window_shgc = 0.23
-// * wall_exterior_sheathing = 4 (:default => 0)
-// * wall_cavity = "R 21" (:default => nil)
-// * ceiling_sheathing = "R7 Sheathing" (:default => "- no sheathing/insul. -")
-// * ceiling_cavity = "R 38" (:default => nil)
-// * frame_path_cavity = "2x12 @ 16 in. O.C." (:default => nil)
+// * window_shgc = 0.35 (:default => 0.23)
+// * wall_exterior_sheathing = 2.5 (:default => 0)
+// * wall_cavity = "R 19" (:default => nil)
+// * ceiling_sheathing = "R5 Sheathing" (:default => "- no sheathing/insul. -")
+// * ceiling_cavity = "R 30" (:default => nil)
+// * frame_path_cavity = "2x10 @ 16 in. O.C." (:default => nil)
 
 
 
@@ -32,7 +32,7 @@ Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Heat Pump DHW"
    ProjFileName = "instance.ribd22"
    RunTitle = "TDSv30 V06R12 V06 R12 UGLASS15 NGAS PVSTD"
    
-   AnalysisType = "Proposed and Standard"
+   AnalysisType = "Proposed Only"
    
    CALGreen = 0
    TDVType = "TDV"
@@ -92,7 +92,7 @@ Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Heat Pump DHW"
    CAHPSolarOption = "- select -"
    Notes = ""
    Remarks = ""
-   ClimateZone = "CZ9  (Burbank)"
+   ClimateZone = "CZ3  (Oakland)"
    Address = "1516 Ninth St"
    ZipCode = 95814
    RunScope = "Newly Constructed"
@@ -200,7 +200,7 @@ Win   "Zone1WinFront"
    Width = 3
    Multiplier = 28.95
    NFRCUfactor = 0.3
-   NFRCSHGC = 0.23
+   NFRCSHGC = 0.35
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
    exArea = 15
@@ -259,7 +259,7 @@ Win   "Zone1WinLeft"
    Width = 3
    Multiplier = 10.2
    NFRCUfactor = 0.3
-   NFRCSHGC = 0.23
+   NFRCSHGC = 0.35
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
    exArea = 15
@@ -318,7 +318,7 @@ Win   "Zone1WinBack"
    Width = 3
    Multiplier = 28.95
    NFRCUfactor = 0.3
-   NFRCSHGC = 0.23
+   NFRCSHGC = 0.35
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
    exArea = 15
@@ -377,7 +377,7 @@ Win   "Zone1WinRight"
    Width = 3
    Multiplier = 10.2
    NFRCUfactor = 0.3
-   NFRCSHGC = 0.23
+   NFRCSHGC = 0.35
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
    exArea = 15
@@ -491,7 +491,7 @@ Win   "Zone2WinFront"
    Width = 3
    Multiplier = 28.95
    NFRCUfactor = 0.3
-   NFRCSHGC = 0.23
+   NFRCSHGC = 0.35
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
    exArea = 15
@@ -550,7 +550,7 @@ Win   "Zone2WinLeft"
    Width = 3
    Multiplier = 10.2
    NFRCUfactor = 0.3
-   NFRCSHGC = 0.23
+   NFRCSHGC = 0.35
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
    exArea = 15
@@ -609,7 +609,7 @@ Win   "Zone2WinBack"
    Width = 3
    Multiplier = 28.95
    NFRCUfactor = 0.3
-   NFRCSHGC = 0.23
+   NFRCSHGC = 0.35
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
    exArea = 15
@@ -668,7 +668,7 @@ Win   "Zone2WinRight"
    Width = 3
    Multiplier = 10.2
    NFRCUfactor = 0.3
-   NFRCSHGC = 0.23
+   NFRCSHGC = 0.35
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
    exArea = 15
@@ -853,7 +853,7 @@ Win   "Zone3WinFront"
    Width = 3
    Multiplier = 28.95
    NFRCUfactor = 0.3
-   NFRCSHGC = 0.23
+   NFRCSHGC = 0.35
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
    exArea = 15
@@ -912,7 +912,7 @@ Win   "Zone3WinLeft"
    Width = 3
    Multiplier = 10.2
    NFRCUfactor = 0.3
-   NFRCSHGC = 0.23
+   NFRCSHGC = 0.35
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
    exArea = 15
@@ -971,7 +971,7 @@ Win   "Zone3WinBack"
    Width = 3
    Multiplier = 28.95
    NFRCUfactor = 0.3
-   NFRCSHGC = 0.23
+   NFRCSHGC = 0.35
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
    exArea = 15
@@ -1030,7 +1030,7 @@ Win   "Zone3WinRight"
    Width = 3
    Multiplier = 10.2
    NFRCUfactor = 0.3
-   NFRCSHGC = 0.23
+   NFRCSHGC = 0.35
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
    exArea = 15
@@ -1362,7 +1362,7 @@ Win   "Laundry1WinBack"
    Width = 3
    Multiplier = 1.35
    NFRCUfactor = 0.3
-   NFRCSHGC = 0.23
+   NFRCSHGC = 0.35
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
    exArea = 15
@@ -1471,7 +1471,7 @@ Win   "LeasingOffice1WinFront"
    Width = 3
    Multiplier = 2.7
    NFRCUfactor = 0.3
-   NFRCSHGC = 0.23
+   NFRCSHGC = 0.35
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
    exArea = 15
@@ -1578,7 +1578,7 @@ Win   "Lobby1WinFront"
    Width = 3
    Multiplier = 2.7
    NFRCUfactor = 0.3
-   NFRCSHGC = 0.23
+   NFRCSHGC = 0.35
    UfactorSHGCSource = "NFRC"
    ExteriorShade = "Insect Screen (default)"
    exArea = 15
@@ -2673,10 +2673,10 @@ Cons   "Exterior Wall Cons"
    FurringInsulLayer = "- no insulation -"
    Furring2Layer = "- none -"
    FurringLayer = "- none -"
-   CavityLayer = "R 21"
+   CavityLayer = "R 19"
    FrameLayer = "2x6 @ 16 in. O.C."
    SheathInsulLayer = "- specify R-value -"
-   SheathInsulLayerRVal = 4
+   SheathInsulLayerRVal = 2.5
    WallExtFinishLayer = "Synthetic Stucco"
    OtherSideFinishLayer = "Gypsum Board"
    FlrExtFinishLayer = "- select finish -"
@@ -2965,7 +2965,7 @@ Cons   "Cathedral Ceiling"
    CanAssignTo = "Cathedral Ceilings"
    Type = "Wood Framed Ceiling"
    RoofingLayer = "5 PSF (Normal Gravel)"
-   AbvDeckInsulLayer = "R7 Sheathing"
+   AbvDeckInsulLayer = "R5 Sheathing"
    RoofDeckLayer = "Wood Siding/sheathing/decking"
    InsideFinishLayer = "Gypsum Board"
    AtticFloorLayer = "- no attic floor -"
@@ -2979,8 +2979,8 @@ Cons   "Cathedral Ceiling"
    FurringInsulLayer = "- no insulation -"
    Furring2Layer = "- none -"
    FurringLayer = "- none -"
-   CavityLayer =  "R 38"
-   FrameLayer = "2x12 @ 16 in. O.C."
+   CavityLayer =  "R 30"
+   FrameLayer = "2x10 @ 16 in. O.C."
    SheathInsulLayer = "- no sheathing/insul. -"
    WallExtFinishLayer = "- select finish -"
    OtherSideFinishLayer = "Gypsum Board"
