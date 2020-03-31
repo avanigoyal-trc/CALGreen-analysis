@@ -36,6 +36,7 @@ parameter "wood_framing_roof", :default=>"Roofing felt - 1/8 in.;Building Paper 
 
 parameter "window_u", :default=>0.36
 parameter "window_shgc", :default=>0.25
+parameter "window_vt", :default=>0.42
 parameter "window_type", :default=>"FixedWindow"
 
 
@@ -264,7 +265,7 @@ FenCons   "Res Fixed Window"
    FenProdType = "<%= window_type %>"
    SHGC = <%= window_shgc %>
    UFactor = <%= window_u %>
-   VT = 0.42
+   VT = <%= window_vt %>
    ..
 
 Bldg   "Building 1"
