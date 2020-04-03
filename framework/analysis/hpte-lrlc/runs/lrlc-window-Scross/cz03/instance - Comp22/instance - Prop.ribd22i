@@ -4,11 +4,11 @@ Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Heat Pump DHW"
    SoftwareVersion = "CBECC-Res 2022.0.2 RV"
    SoftwareVersionDetail = "CBECC-Res 2022.0.2 RV (1133)"
    BEMVersion = 8
-   CreateDate = 1585614029
-   ModDate = 1585614029
-   RunDate = 1585614020
-   RunDateFmt = "17:20, Mon, Mar 30, 2020"
-   RunDateISO = "2020-03-30T17:20:20-07:00"
+   CreateDate = 1579908925
+   ModDate = 1585868811
+   RunDate = 1585868807
+   RunDateFmt = "16:06, Thu, Apr 02, 2020"
+   RunDateISO = "2020-04-02T16:06:47-07:00"
    PrimSimEngingVer = "CSE19 0.868.0 EXE"
    RulesetVersion = "CA Residential 2022, Vers. 2 Pol-0%RA-NoCH4leak"
    ProjFileName = "instance.ribd22"
@@ -3882,7 +3882,7 @@ Cons   "Exterior Wall Cons"
    CavityLayer = "R 21"
    FrameLayer = "2x6 @ 16 in. O.C."
    SheathInsulLayer = "- specify R-value -"
-   SheathInsulLayerRVal = 4
+   SheathInsulLayerRVal = 1.75
    WallExtFinishLayer = "Synthetic Stucco"
    OtherSideFinishLayer = "Gypsum Board"
    FlrExtFinishLayer = "- select finish -"
@@ -4169,7 +4169,7 @@ Cons   "Cathedral Ceiling"
    CanAssignTo = "Cathedral Ceilings"
    Type = "Wood Framed Ceiling"
    RoofingLayer = "5 PSF (Normal Gravel)"
-   AbvDeckInsulLayer = "R5 Sheathing"
+   AbvDeckInsulLayer = "R6 Sheathing"
    RoofDeckLayer = "Wood Siding/sheathing/decking"
    InsideFinishLayer = "Gypsum Board"
    AtticFloorLayer = "- no attic floor -"
@@ -4183,8 +4183,8 @@ Cons   "Cathedral Ceiling"
    FurringInsulLayer = "- no insulation -"
    Furring2Layer = "- none -"
    FurringLayer = "- none -"
-   CavityLayer = "R 30"
-   FrameLayer = "2x10 @ 16 in. O.C."
+   CavityLayer = "R 25"
+   FrameLayer = "2x8 @ 16 in. O.C."
    SheathInsulLayer = "- no sheathing/insul. -"
    WallExtFinishLayer = "- select finish -"
    OtherSideFinishLayer = "Gypsum Board"
@@ -4240,12 +4240,12 @@ Mat   "Gypsum Board"
    RValPerInch = 0.9091
    ..
 
-Mat   "Insul-R4-D1.5-SH0.35-C0.02083"  
+Mat   "Insul-R1.75-D1.5-SH0.35-C0.04762"  
    Thickness = 1
    Density = 1.5
    SpecHeat = 0.35
-   Conductivity = 0.0208325
-   ConductivityQII = 0.0208325
+   Conductivity = 0.0476171
+   ConductivityQII = 0.0476171
    ConductivityCT = 0.00175
    ..
 
@@ -4322,12 +4322,12 @@ Mat   "3 Coat Stucco"
    RValPerInch = 0.2686
    ..
 
-Mat   "Insul-R5-D1.5-SH0.35-C0.01667"  
+Mat   "Insul-R6-D1.5-SH0.35-C0.01389"  
    Thickness = 1
    Density = 1.5
    SpecHeat = 0.35
-   Conductivity = 0.016666
-   ConductivityQII = 0.016666
+   Conductivity = 0.0138883
+   ConductivityQII = 0.0138883
    ConductivityCT = 0.00175
    ..
 
@@ -4355,11 +4355,11 @@ Mat   "Ins-R18-D1.5-SH0.2-C0.02546"
    ConductivityCT = 0.0032537
    ..
 
-Mat   "Ins-R30-D1.5-SH0.2-C0.02569"  
+Mat   "Ins-R25-D1.5-SH0.2-C0.02417"  
    Density = 1.5
    SpecHeat = 0.2
-   Conductivity = 0.0256944
-   ConductivityQII = 0.0256944
+   Conductivity = 0.0241667
+   ConductivityQII = 0.0241667
    ConductivityCT = 0.00418
    ..
 

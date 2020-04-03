@@ -1,7 +1,7 @@
 RulesetFilename   "CA Res 2022.bin"  
 
 Proj   User: "2019 Prototype 39372ft2 Prop Mixed - In-Unit Heat Pump DHW"  
-   Ruleset = UDef: "CA Residential 2022, Vers. 2 Pol-0%RA-NoCH4leak (CA Res 2022.bin)"  (0)
+   Ruleset = UDef: "CA Residential 2022, Vers. 2 Pol-0%RA-NoCH4leak (CA Res 2022.bin)"  (3)
    RuleFile = PDef: "CA Res 2022.bin"
    DevMode = RVal: 1
    EnergyCodeYearNum = RVal: 2022
@@ -6590,7 +6590,7 @@ Cons   User: "Exterior Wall Cons"
    CavityLayerRVal = RVal: 21
    FrameLayer = UVal: "2x6 @ 16 in. O.C."  (616)
    SheathInsulLayer = UVal: "- specify R-value -"  (99000)
-   SheathInsulLayerRVal = UVal: 4
+   SheathInsulLayerRVal = UVal: 1.75
    WallExtFinishLayer = UVal: "Synthetic Stucco"  (100112)
    OtherSideFinishLayer = UVal: "Gypsum Board"  (100101)
    FlrExtFinishLayer = UVal: "- select finish -"  (0)
@@ -6609,11 +6609,11 @@ Cons   User: "Exterior Wall Cons"
    MaterialLibItem = PDef: "none"  (0)
    CavityPathMats[1] = RVal: "Gypsum Board"
    CavityPathMats[2] = RVal: "Ins-R21-D1.5-SH0.2-C0.02183"
-   CavityPathMats[3] = RVal: "Insul-R4-D1.5-SH0.35-C0.02083"
+   CavityPathMats[3] = RVal: "Insul-R1.75-D1.5-SH0.35-C0.04762"
    CavityPathMats[4] = RVal: "Synthetic Stucco"
    FramePathMats[1] = RVal: "Gypsum Board"
    FramePathMats[2] = RVal: "SoftWood"
-   FramePathMats[3] = RVal: "Insul-R4-D1.5-SH0.35-C0.02083"
+   FramePathMats[3] = RVal: "Insul-R1.75-D1.5-SH0.35-C0.04762"
    FramePathMats[4] = RVal: "Synthetic Stucco"
    NumLayerMats = RVal: 4
    FrameLayerMapIdx[1] = RVal: 3
@@ -6637,25 +6637,25 @@ Cons   User: "Exterior Wall Cons"
    CavityLayerSymVal[3] = RVal: 99000
    CavityLayerSymVal[4] = RVal: 100112
    CavityLayerSymVal[5] = RVal: 0
-   LayerUsrInpInsRVal[3] = RVal: 4
+   LayerUsrInpInsRVal[3] = RVal: 1.75
    FrameSpacing = RVal: 16
    FrmFctrCanBeInput = RVal: 0
    SpecifyFrmFctr = RVal: 0
    PathFraction[1] = RVal: 0.75
    PathFraction[2] = RVal: 0.25
    FramingFactor = RVal: 0.25
-   PathCodeRValue[1] = RVal: 26.4609
-   PathCodeRValue[2] = RVal: 11.073
+   PathCodeRValue[1] = RVal: 24.2108
+   PathCodeRValue[2] = RVal: 8.82286
    PathCodeRValue[3] = RVal: 0
    PathCodeRValue[4] = RVal: 0
-   FrameCodeRValueX = RVal: 11.1167
-   CavityCodeRValueX = RVal: 26.5045
-   FrameCodeUValueX = RVal: 0.0899544
-   CavityCodeUValueX = RVal: 0.0377294
-   OverallCodeUValue = RVal: 0.0509212
-   OverallCodeUValueX = RVal: 0.0507857
+   FrameCodeRValueX = RVal: 8.86674
+   CavityCodeRValueX = RVal: 24.2545
+   FrameCodeUValueX = RVal: 0.112781
+   CavityCodeUValueX = RVal: 0.0412294
+   OverallCodeUValue = RVal: 0.0593133
+   OverallCodeUValueX = RVal: 0.0591173
    CodeMaximumUValue = RVal: 0.05149
-   CodeUValueLabel = RVal: "(meets prescriptive 0.051 U-factor reqmnt. (0.051))"
+   CodeUValueLabel = RVal: "(doesn't meet prescriptive 0.051 U-factor reqmnt. (0.059))"
    CavityThickness = RVal: 5.5
    CavityMatCond[1] = RVal: 0.0218254
    CavityMatCond[2] = RVal: 0.0218254
@@ -6693,7 +6693,7 @@ Cons   User: "Exterior Wall Cons"
    LayerLabels[5] = RVal: "Exterior Finish:"
    LayerLabels[6] = RVal: "none"
    SecTypeLabel = RVal: " "
-   WinterDesUValue = RVal: 0.0509212
+   WinterDesUValue = RVal: 0.0593133
    OverallThickness = RVal: 7.375
    LayerOrderLabel = RVal: "(inside to outside)"
    Path2Label = RVal: "Frame Path"
@@ -6719,7 +6719,7 @@ Cons   User: "Exterior Wall Cons"
    NumLayersRpt = RVal: 4
    AssemblyLayersRpt[1] = RVal: "Inside Finish: Gypsum Board"
    AssemblyLayersRpt[2] = RVal: "Cavity / Frame: R-21 / 2x6"
-   AssemblyLayersRpt[3] = RVal: "Sheathing / Insulation: R-4 Sheathing"
+   AssemblyLayersRpt[3] = RVal: "Sheathing / Insulation: R-1.8 Sheathing"
    AssemblyLayersRpt[4] = RVal: "Exterior Finish: Synthetic Stucco"
    AtcEdg_ConsType = PDef: "n/a"  (0)
    AssignedSurfaceArea = RVal: 13005
@@ -8256,7 +8256,7 @@ Cons   User: "Cathedral Ceiling"
    MaxNumLayers = RVal: 8
    NumLayers = RVal: 6
    RoofingLayer = UVal: "5 PSF (Normal Gravel)"  (100202)
-   AbvDeckInsulLayer = UVal: "R7 Sheathing"  (99007)
+   AbvDeckInsulLayer = UVal: "R2 Sheathing"  (99002)
    RoofDeckLayer = UVal: "Wood Siding/sheathing/decking"  (100102)
    InsideFinishLayer = UVal: "Gypsum Board"  (100101)
    AtticFloorLayer = UVal: "- no attic floor -"  (0)
@@ -8297,12 +8297,12 @@ Cons   User: "Cathedral Ceiling"
    CavityPathMats[1] = RVal: "Gypsum Board"
    CavityPathMats[2] = RVal: "Ins-R38-D1.5-SH0.2-C0.02467"
    CavityPathMats[3] = RVal: "Wood layer"
-   CavityPathMats[4] = RVal: "Insul-R7-D1.5-SH0.35-C0.0119"
+   CavityPathMats[4] = RVal: "Insul-R2-D1.5-SH0.35-C0.04167"
    CavityPathMats[5] = RVal: "5 PSF Roof"
    FramePathMats[1] = RVal: "Gypsum Board"
    FramePathMats[2] = RVal: "SoftWood"
    FramePathMats[3] = RVal: "Wood layer"
-   FramePathMats[4] = RVal: "Insul-R7-D1.5-SH0.35-C0.0119"
+   FramePathMats[4] = RVal: "Insul-R2-D1.5-SH0.35-C0.04167"
    FramePathMats[5] = RVal: "5 PSF Roof"
    NumLayerMats = RVal: 5
    FrameLayerMapIdx[1] = RVal: 3
@@ -8321,14 +8321,14 @@ Cons   User: "Cathedral Ceiling"
    FrameLayerSymVal[1] = RVal: 100101
    FrameLayerSymVal[2] = RVal: 1216
    FrameLayerSymVal[3] = RVal: 100102
-   FrameLayerSymVal[4] = RVal: 99007
+   FrameLayerSymVal[4] = RVal: 99002
    FrameLayerSymVal[5] = RVal: 100202
    FrameLayerSymVal[6] = RVal: 0
    FrameLayerSymVal[7] = RVal: 0
    CavityLayerSymVal[1] = RVal: 100101
    CavityLayerSymVal[2] = RVal: 38
    CavityLayerSymVal[3] = RVal: 100102
-   CavityLayerSymVal[4] = RVal: 99007
+   CavityLayerSymVal[4] = RVal: 99002
    CavityLayerSymVal[5] = RVal: 100202
    CavityLayerSymVal[6] = RVal: 0
    CavityLayerSymVal[7] = RVal: 0
@@ -8338,16 +8338,16 @@ Cons   User: "Cathedral Ceiling"
    PathFraction[1] = RVal: 0.9
    PathFraction[2] = RVal: 0.1
    FramingFactor = RVal: 0.1
-   PathCodeRValue[1] = RVal: 46.9565
-   PathCodeRValue[2] = RVal: 20.4356
+   PathCodeRValue[1] = RVal: 41.9563
+   PathCodeRValue[2] = RVal: 15.4354
    PathCodeRValue[3] = RVal: 0
    PathCodeRValue[4] = RVal: 0
-   FrameCodeRValueX = RVal: 20.4357
-   CavityCodeRValueX = RVal: 46.9562
-   FrameCodeUValueX = RVal: 0.048934
-   CavityCodeUValueX = RVal: 0.0212964
-   OverallCodeUValue = RVal: 0.0240601
-   OverallCodeUValueX = RVal: 0.0240602
+   FrameCodeRValueX = RVal: 15.4357
+   CavityCodeRValueX = RVal: 41.9562
+   FrameCodeUValueX = RVal: 0.0647849
+   CavityCodeUValueX = RVal: 0.0238344
+   OverallCodeUValue = RVal: 0.0279295
+   OverallCodeUValueX = RVal: 0.0279294
    CodeMaximumUValue = RVal: 0
    CodeUValueLabel = RVal: " "
    CavityThickness = RVal: 11.25
@@ -8387,7 +8387,7 @@ Cons   User: "Cathedral Ceiling"
    LayerLabels[5] = RVal: "Sheathing / Insulation:"
    LayerLabels[6] = RVal: "Inside Finish:"
    SecTypeLabel = RVal: "Roofing Type:"
-   WinterDesUValue = RVal: 0.0240601
+   WinterDesUValue = RVal: 0.0279295
    OverallThickness = RVal: 13.75
    LayerOrderLabel = RVal: "(topmost to bottom)"
    Path2Label = RVal: "Frame Path"
@@ -8407,12 +8407,12 @@ Cons   User: "Cathedral Ceiling"
    Furring2LayerAbr = RVal: "no furring"  (0)
    FramingRpt = RVal: "2x12 @ 16 in. O.C."
    CavityRRpt = RVal: "R 38"
-   AbvDeckInsulLayerRpt = RVal: "R-7 Sheathing"  (99007)
+   AbvDeckInsulLayerRpt = RVal: "R-2 Sheathing"  (99002)
    SheathInsul2LayerRpt = RVal: "- no sheathing/insul. -"  (0)
    SheathInsulLayerRpt = RVal: "- no sheathing/insul. -"  (0)
    NumLayersRpt = RVal: 5
    AssemblyLayersRpt[1] = RVal: "Roofing: 5 PSF (Normal Gravel)"
-   AssemblyLayersRpt[2] = RVal: "Above Deck Insulation: R-7 Sheathing"
+   AssemblyLayersRpt[2] = RVal: "Above Deck Insulation: R-2 Sheathing"
    AssemblyLayersRpt[3] = RVal: "Roof Deck: Wood Siding/sheathing/decking"
    AssemblyLayersRpt[4] = RVal: "Cavity / Frame: R-38 / 2x12"
    AssemblyLayersRpt[5] = RVal: "Inside Finish: Gypsum Board"
@@ -8676,12 +8676,21 @@ Mat   User: "Insul-R5-D1.5-SH0.35-C0.01667"
    ConductivityCT = UVal: 0.00175
    ..
 
-Mat   User: "Insul-R7-D1.5-SH0.35-C0.0119"  
+Mat   User: "Insul-R1.75-D1.5-SH0.35-C0.04762"  
    Thickness = UVal: 1
    Density = UVal: 1.5
    SpecHeat = UVal: 0.35
-   Conductivity = UVal: 0.0119043
-   ConductivityQII = UVal: 0.0119043
+   Conductivity = UVal: 0.0476171
+   ConductivityQII = UVal: 0.0476171
+   ConductivityCT = UVal: 0.00175
+   ..
+
+Mat   User: "Insul-R2-D1.5-SH0.35-C0.04167"  
+   Thickness = UVal: 1
+   Density = UVal: 1.5
+   SpecHeat = UVal: 0.35
+   Conductivity = UVal: 0.041665
+   ConductivityQII = UVal: 0.041665
    ConductivityCT = UVal: 0.00175
    ..
 

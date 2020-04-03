@@ -1,6 +1,22 @@
-RulesetFilename   "CA Res 2022.bin"  
+// INSERT TEMPLATE 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-res/low-rise-loaded-corridor-cathedral/root.pxt'
+// Path resolves to 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-res/low-rise-loaded-corridor-cathedral/root.pxt'
+// * proposed_only = "Yes" (:default => "No")
+// * climate_zone = "CZ3  (Oakland)" (:default => "ClimateZone12")
+// * weather_station = "CTZ03S22A" (:default => nil)
+// * prototype = "low-rise-loaded-corridor-cathedral" (:default => nil)
+// * software = "cbecc-res" (:default => nil)
+//   autosizing = "No"
+//   hvac_type = "SZAC"
+//   is_central_dhw = 1
+// * window_u = 0.36 (:default => 0.3)
+// * window_shgc = 0.25 (:default => 0.23)
+// * wall_exterior_sheathing = 1.75 (:default => 0)
+// * wall_cavity = "R 21" (:default => nil)
+// * ceiling_sheathing = "R5 Sheathing" (:default => "- no sheathing/insul. -")
+// * ceiling_cavity = "R 23" (:default => nil)
+// * frame_path_cavity = "2x8 @ 16 in. O.C." (:default => nil)
 
-Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Heat Pump DHW"  
+Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Heat Pump DHW"
    SoftwareVersion = "CBECC-Res 2022.0.2 RV"
    SoftwareVersionDetail = "CBECC-Res 2022.0.2 RV (1133)"
    BEMVersion = 8
@@ -19,24 +35,24 @@ Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Heat Pump DHW"
    PVWInputs = "Simplified"
    PVSizeOption = "Standard Design PV"
    PVWDCSysSize = ( 1, 0, 0, 0, 0 )
-   PVWModuleType = ( "Standard", "Standard", "Standard", "Standard", 
+   PVWModuleType = ( "Standard", "Standard", "Standard", "Standard",
                      "Standard" )
    PVWCalFlexInstType = ( "CFI1", "CFI1", "CFI1", "CFI1", "CFI1" )
-   PVWGeomSpecMethod = ( "azimuth and tilt", "azimuth and tilt", 
-                         "azimuth and tilt", "azimuth and tilt", 
+   PVWGeomSpecMethod = ( "azimuth and tilt", "azimuth and tilt",
+                         "azimuth and tilt", "azimuth and tilt",
                          "azimuth and tilt" )
-   PVWLocSpecMethod = ( "- not specified -", "- not specified -", 
-                        "- not specified -", "- not specified -", 
+   PVWLocSpecMethod = ( "- not specified -", "- not specified -",
+                        "- not specified -", "- not specified -",
                         "- not specified -" )
-   PVWRelLocSpecMeth = ( "- specify relative position -", 
-                         "- specify relative position -", 
-                         "- specify relative position -", 
-                         "- specify relative position -", 
+   PVWRelLocSpecMeth = ( "- specify relative position -",
+                         "- specify relative position -",
+                         "- specify relative position -",
+                         "- specify relative position -",
                          "- specify relative position -" )
-   PVWArrayType = ( "Fixed (open rack)", "Fixed (open rack)", 
-                    "Fixed (open rack)", "Fixed (open rack)", 
+   PVWArrayType = ( "Fixed (open rack)", "Fixed (open rack)",
+                    "Fixed (open rack)", "Fixed (open rack)",
                     "Fixed (open rack)" )
-   PVWPwrElec = ( "- none -", "- none -", "- none -", "- none -", 
+   PVWPwrElec = ( "- none -", "- none -", "- none -", "- none -",
                   "- none -" )
    PVWSolarAccess[1] = 100
    AllowExcessPVEDR = 0
@@ -128,7 +144,7 @@ Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Heat Pump DHW"
    CSERpt_Mtr_Othr_HD = 0
    ..
 
-Zone   "Zone1"  
+Zone   "Zone1"
    TreeState = 254
    Type = "Conditioned"
    Status = "New"
@@ -146,7 +162,7 @@ Zone   "Zone1"
    NumStories = 1
    ..
 
-ExtWall   "Zone1WallFront"  
+ExtWall   "Zone1WallFront"
    TreeState = 254
    Status = "New"
    Orientation = "Front"
@@ -158,7 +174,7 @@ ExtWall   "Zone1WallFront"
    Absorptivity = 0.5
    ..
 
-Win   "Zone1WinFront"  
+Win   "Zone1WinFront"
    Status = "New"
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
    Height = 5
@@ -202,7 +218,7 @@ Win   "Zone1WinFront"
    exRightFinBotUp = 0
    ..
 
-ExtWall   "Zone1WallLeft"  
+ExtWall   "Zone1WallLeft"
    Status = "New"
    Orientation = "Left"
    OrientationValue = 90
@@ -213,7 +229,7 @@ ExtWall   "Zone1WallLeft"
    Absorptivity = 0.5
    ..
 
-Win   "Zone1WinLeft"  
+Win   "Zone1WinLeft"
    Status = "New"
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
    Height = 5
@@ -257,7 +273,7 @@ Win   "Zone1WinLeft"
    exRightFinBotUp = 0
    ..
 
-ExtWall   "Zone1WallBack"  
+ExtWall   "Zone1WallBack"
    Status = "New"
    Orientation = "Back"
    OrientationValue = 180
@@ -268,7 +284,7 @@ ExtWall   "Zone1WallBack"
    Absorptivity = 0.5
    ..
 
-Win   "Zone1WinBack"  
+Win   "Zone1WinBack"
    Status = "New"
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
    Height = 5
@@ -312,7 +328,7 @@ Win   "Zone1WinBack"
    exRightFinBotUp = 0
    ..
 
-ExtWall   "Zone1WallRight"  
+ExtWall   "Zone1WallRight"
    Status = "New"
    Orientation = "Right"
    OrientationValue = 270
@@ -323,7 +339,7 @@ ExtWall   "Zone1WallRight"
    Absorptivity = 0.5
    ..
 
-Win   "Zone1WinRight"  
+Win   "Zone1WinRight"
    Status = "New"
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
    Height = 5
@@ -367,7 +383,7 @@ Win   "Zone1WinRight"
    exRightFinBotUp = 0
    ..
 
-SlabFloor   "Zone1Slab"  
+SlabFloor   "Zone1Slab"
    Status = "New"
    Area = 9916
    Surface = "Default (80% carpeted/covered, 20% exposed)"
@@ -379,7 +395,7 @@ SlabFloor   "Zone1Slab"
    exEdgeInsulOption = "R-5, 8 inches"
    ..
 
-DwellUnit   "OneBedroomZone1"  
+DwellUnit   "OneBedroomZone1"
    DwellUnitTypeRef = "OneBedroom1"
    Count = 4
    CondFlrArea = 720
@@ -387,7 +403,7 @@ DwellUnit   "OneBedroomZone1"
    DryerZoneRef = "Zone1"
    ..
 
-DwellUnit   "TwoBedroomZone1"  
+DwellUnit   "TwoBedroomZone1"
    DwellUnitTypeRef = "TwoBedroom1"
    Count = 4
    CondFlrArea = 1054
@@ -395,7 +411,7 @@ DwellUnit   "TwoBedroomZone1"
    DryerZoneRef = "Zone1"
    ..
 
-DwellUnit   "ThreeBedroomZone1"  
+DwellUnit   "ThreeBedroomZone1"
    DwellUnitTypeRef = "ThreeBedroom1"
    Count = 2
    CondFlrArea = 1410
@@ -403,7 +419,7 @@ DwellUnit   "ThreeBedroomZone1"
    DryerZoneRef = "Zone1"
    ..
 
-Zone   "Zone2"  
+Zone   "Zone2"
    TreeState = 254
    Type = "Conditioned"
    Status = "New"
@@ -421,7 +437,7 @@ Zone   "Zone2"
    NumStories = 1
    ..
 
-ExtWall   "Zone2WallFront"  
+ExtWall   "Zone2WallFront"
    Status = "New"
    Orientation = "Front"
    OrientationValue = 0
@@ -432,7 +448,7 @@ ExtWall   "Zone2WallFront"
    Absorptivity = 0.5
    ..
 
-Win   "Zone2WinFront"  
+Win   "Zone2WinFront"
    Status = "New"
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
    Height = 5
@@ -476,7 +492,7 @@ Win   "Zone2WinFront"
    exRightFinBotUp = 0
    ..
 
-ExtWall   "Zone2WallLeft"  
+ExtWall   "Zone2WallLeft"
    Status = "New"
    Orientation = "Left"
    OrientationValue = 90
@@ -487,7 +503,7 @@ ExtWall   "Zone2WallLeft"
    Absorptivity = 0.5
    ..
 
-Win   "Zone2WinLeft"  
+Win   "Zone2WinLeft"
    Status = "New"
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
    Height = 5
@@ -531,7 +547,7 @@ Win   "Zone2WinLeft"
    exRightFinBotUp = 0
    ..
 
-ExtWall   "Zone2WallBack"  
+ExtWall   "Zone2WallBack"
    Status = "New"
    Orientation = "Back"
    OrientationValue = 180
@@ -542,7 +558,7 @@ ExtWall   "Zone2WallBack"
    Absorptivity = 0.5
    ..
 
-Win   "Zone2WinBack"  
+Win   "Zone2WinBack"
    Status = "New"
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
    Height = 5
@@ -586,7 +602,7 @@ Win   "Zone2WinBack"
    exRightFinBotUp = 0
    ..
 
-ExtWall   "Zone2WallRight"  
+ExtWall   "Zone2WallRight"
    Status = "New"
    Orientation = "Right"
    OrientationValue = 270
@@ -597,7 +613,7 @@ ExtWall   "Zone2WallRight"
    Absorptivity = 0.5
    ..
 
-Win   "Zone2WinRight"  
+Win   "Zone2WinRight"
    Status = "New"
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
    Height = 5
@@ -641,7 +657,7 @@ Win   "Zone2WinRight"
    exRightFinBotUp = 0
    ..
 
-InteriorFloor   "Zone2ToZone1InteriorFloor"  
+InteriorFloor   "Zone2ToZone1InteriorFloor"
    Status = "New"
    Area = 9916
    FloorZ = 9.7
@@ -651,7 +667,7 @@ InteriorFloor   "Zone2ToZone1InteriorFloor"
    Outside = "Zone1"
    ..
 
-DwellUnit   "OneBedroomZone2"  
+DwellUnit   "OneBedroomZone2"
    DwellUnitTypeRef = "OneBedroom2"
    Count = 4
    CondFlrArea = 720
@@ -659,7 +675,7 @@ DwellUnit   "OneBedroomZone2"
    DryerZoneRef = "Zone2"
    ..
 
-DwellUnit   "TwoBedroomZone2"  
+DwellUnit   "TwoBedroomZone2"
    DwellUnitTypeRef = "TwoBedroom2"
    Count = 4
    CondFlrArea = 1054
@@ -667,7 +683,7 @@ DwellUnit   "TwoBedroomZone2"
    DryerZoneRef = "Zone2"
    ..
 
-DwellUnit   "ThreeBedroomZone2"  
+DwellUnit   "ThreeBedroomZone2"
    DwellUnitTypeRef = "ThreeBedroom2"
    Count = 2
    CondFlrArea = 1410
@@ -675,7 +691,7 @@ DwellUnit   "ThreeBedroomZone2"
    DryerZoneRef = "Zone2"
    ..
 
-DwellUnit   "StudioZone2"  
+DwellUnit   "StudioZone2"
    DwellUnitTypeRef = "Studio2"
    Count = 3
    CondFlrArea = 540
@@ -683,7 +699,7 @@ DwellUnit   "StudioZone2"
    DryerZoneRef = "Zone2"
    ..
 
-InteriorFloor   "Zone2ToBusinessCenter1InteriorFloor"  
+InteriorFloor   "Zone2ToBusinessCenter1InteriorFloor"
    Status = "New"
    Area = 324
    FloorZ = 9.7
@@ -693,7 +709,7 @@ InteriorFloor   "Zone2ToBusinessCenter1InteriorFloor"
    Outside = "BusinessCenter1"
    ..
 
-InteriorFloor   "Zone2ToLeasingOffice1InteriorFloor"  
+InteriorFloor   "Zone2ToLeasingOffice1InteriorFloor"
    Status = "New"
    Area = 216
    FloorZ = 9.7
@@ -703,7 +719,7 @@ InteriorFloor   "Zone2ToLeasingOffice1InteriorFloor"
    Outside = "LeasingOffice1"
    ..
 
-InteriorFloor   "Zone2ToFitnessCenter1InteriorFloor"  
+InteriorFloor   "Zone2ToFitnessCenter1InteriorFloor"
    Status = "New"
    Area = 324
    FloorZ = 9.7
@@ -713,7 +729,7 @@ InteriorFloor   "Zone2ToFitnessCenter1InteriorFloor"
    Outside = "FitnessCenter1"
    ..
 
-InteriorFloor   "Zone2ToLaundry1InteriorFloor"  
+InteriorFloor   "Zone2ToLaundry1InteriorFloor"
    Status = "New"
    Area = 108
    FloorZ = 9.7
@@ -723,7 +739,7 @@ InteriorFloor   "Zone2ToLaundry1InteriorFloor"
    Outside = "Laundry1"
    ..
 
-InteriorFloor   "Zone2ToLobby1InteriorFloor"  
+InteriorFloor   "Zone2ToLobby1InteriorFloor"
    Status = "New"
    Area = 540
    FloorZ = 9.7
@@ -733,7 +749,7 @@ InteriorFloor   "Zone2ToLobby1InteriorFloor"
    Outside = "Lobby1"
    ..
 
-InteriorFloor   "Zone2ToMechanicalRoom1InteriorFloor"  
+InteriorFloor   "Zone2ToMechanicalRoom1InteriorFloor"
    Status = "New"
    Area = 108
    FloorZ = 9.7
@@ -743,7 +759,7 @@ InteriorFloor   "Zone2ToMechanicalRoom1InteriorFloor"
    Outside = "MechanicalRoom1"
    ..
 
-Zone   "Zone3"  
+Zone   "Zone3"
    Type = "Conditioned"
    Status = "New"
    HVACSysStatus = "New"
@@ -760,7 +776,7 @@ Zone   "Zone3"
    NumStories = 1
    ..
 
-ExtWall   "Zone3WallFront"  
+ExtWall   "Zone3WallFront"
    Status = "New"
    Orientation = "Front"
    OrientationValue = 0
@@ -771,7 +787,7 @@ ExtWall   "Zone3WallFront"
    Absorptivity = 0.5
    ..
 
-Win   "Zone3WinFront"  
+Win   "Zone3WinFront"
    Status = "New"
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
    Height = 5
@@ -815,7 +831,7 @@ Win   "Zone3WinFront"
    exRightFinBotUp = 0
    ..
 
-ExtWall   "Zone3WallLeft"  
+ExtWall   "Zone3WallLeft"
    Status = "New"
    Orientation = "Left"
    OrientationValue = 90
@@ -826,7 +842,7 @@ ExtWall   "Zone3WallLeft"
    Absorptivity = 0.5
    ..
 
-Win   "Zone3WinLeft"  
+Win   "Zone3WinLeft"
    Status = "New"
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
    Height = 5
@@ -870,7 +886,7 @@ Win   "Zone3WinLeft"
    exRightFinBotUp = 0
    ..
 
-ExtWall   "Zone3WallBack"  
+ExtWall   "Zone3WallBack"
    Status = "New"
    Orientation = "Back"
    OrientationValue = 180
@@ -881,7 +897,7 @@ ExtWall   "Zone3WallBack"
    Absorptivity = 0.5
    ..
 
-Win   "Zone3WinBack"  
+Win   "Zone3WinBack"
    Status = "New"
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
    Height = 5
@@ -925,7 +941,7 @@ Win   "Zone3WinBack"
    exRightFinBotUp = 0
    ..
 
-ExtWall   "Zone3WallRight"  
+ExtWall   "Zone3WallRight"
    Status = "New"
    Orientation = "Right"
    OrientationValue = 270
@@ -936,7 +952,7 @@ ExtWall   "Zone3WallRight"
    Absorptivity = 0.5
    ..
 
-Win   "Zone3WinRight"  
+Win   "Zone3WinRight"
    Status = "New"
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
    Height = 5
@@ -980,7 +996,7 @@ Win   "Zone3WinRight"
    exRightFinBotUp = 0
    ..
 
-InteriorFloor   "Zone3ToZone2InteriorFloor"  
+InteriorFloor   "Zone3ToZone2InteriorFloor"
    Status = "New"
    Area = 11536
    FloorZ = 18.7
@@ -990,7 +1006,7 @@ InteriorFloor   "Zone3ToZone2InteriorFloor"
    Outside = "Zone2"
    ..
 
-DwellUnit   "OneBedroomZone3"  
+DwellUnit   "OneBedroomZone3"
    DwellUnitTypeRef = "OneBedroom3"
    Count = 4
    CondFlrArea = 720
@@ -998,7 +1014,7 @@ DwellUnit   "OneBedroomZone3"
    DryerZoneRef = "Zone3"
    ..
 
-DwellUnit   "TwoBedroomZone3"  
+DwellUnit   "TwoBedroomZone3"
    DwellUnitTypeRef = "TwoBedroom3"
    Count = 4
    CondFlrArea = 1054
@@ -1006,7 +1022,7 @@ DwellUnit   "TwoBedroomZone3"
    DryerZoneRef = "Zone3"
    ..
 
-DwellUnit   "ThreeBedroomZone3"  
+DwellUnit   "ThreeBedroomZone3"
    DwellUnitTypeRef = "ThreeBedroom3"
    Count = 2
    CondFlrArea = 1410
@@ -1014,7 +1030,7 @@ DwellUnit   "ThreeBedroomZone3"
    DryerZoneRef = "Zone3"
    ..
 
-DwellUnit   "StudioZone3"  
+DwellUnit   "StudioZone3"
    DwellUnitTypeRef = "Studio3"
    Count = 3
    CondFlrArea = 540
@@ -1022,7 +1038,7 @@ DwellUnit   "StudioZone3"
    DryerZoneRef = "Zone3"
    ..
 
-CathedralCeiling   "Zone3toCathedralCeiling"  
+CathedralCeiling   "Zone3toCathedralCeiling"
    Status = "New"
    Area = 11536
    RoofRise = 0
@@ -1033,7 +1049,7 @@ CathedralCeiling   "Zone3toCathedralCeiling"
    RoofEmiss = 0.85
    ..
 
-OtherZone   "Corridor1"  
+OtherZone   "Corridor1"
    TreeState = 254
    Type = "Conditioned"
    SpcFunc = "Corridor Area"
@@ -1050,7 +1066,7 @@ OtherZone   "Corridor1"
    IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
-IntWall   "Corridor1ToZone1IntWall"  
+IntWall   "Corridor1ToZone1IntWall"
    Status = "New"
    Area = 1938
    Construction = "IntWall Cons"
@@ -1059,7 +1075,7 @@ IntWall   "Corridor1ToZone1IntWall"
    Outside = "Zone1"
    ..
 
-SlabFloor   "Corridor1Slab"  
+SlabFloor   "Corridor1Slab"
    Status = "New"
    Area = 1444
    Surface = "Carpeted"
@@ -1071,7 +1087,7 @@ SlabFloor   "Corridor1Slab"
    exEdgeInsulOption = "R-5, 8 inches"
    ..
 
-OtherZone   "BusinessCenter1"  
+OtherZone   "BusinessCenter1"
    TreeState = 254
    Type = "Conditioned"
    SpcFunc = "Convention, Conference, Multipurpose and Meeting Area"
@@ -1088,7 +1104,7 @@ OtherZone   "BusinessCenter1"
    IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
-IntWall   "BusinessCenter1ToCorridor1IntWall"  
+IntWall   "BusinessCenter1ToCorridor1IntWall"
    Status = "New"
    Area = 153
    Construction = "IntWall Cons"
@@ -1097,7 +1113,7 @@ IntWall   "BusinessCenter1ToCorridor1IntWall"
    Outside = "Corridor1"
    ..
 
-IntWall   "BusinessCenter1ToLobby1IntWall"  
+IntWall   "BusinessCenter1ToLobby1IntWall"
    Status = "New"
    Area = 153
    Construction = "IntWall Cons"
@@ -1106,7 +1122,7 @@ IntWall   "BusinessCenter1ToLobby1IntWall"
    Outside = "Lobby1"
    ..
 
-IntWall   "BusinessCenter1ToLeasingOffice1IntWall"  
+IntWall   "BusinessCenter1ToLeasingOffice1IntWall"
    Status = "New"
    Area = 153
    Construction = "IntWall Cons"
@@ -1115,7 +1131,7 @@ IntWall   "BusinessCenter1ToLeasingOffice1IntWall"
    Outside = "LeasingOffice1"
    ..
 
-IntWall   "BusinessCenter1ToZone1IntWall"  
+IntWall   "BusinessCenter1ToZone1IntWall"
    Status = "New"
    Area = 153
    Construction = "IntWall Cons"
@@ -1124,7 +1140,7 @@ IntWall   "BusinessCenter1ToZone1IntWall"
    Outside = "Zone1"
    ..
 
-SlabFloor   "BusinessCenter1Slab"  
+SlabFloor   "BusinessCenter1Slab"
    Status = "New"
    Area = 324
    Surface = "Carpeted"
@@ -1136,7 +1152,7 @@ SlabFloor   "BusinessCenter1Slab"
    exEdgeInsulOption = "R-5, 8 inches"
    ..
 
-OtherZone   "FitnessCenter1"  
+OtherZone   "FitnessCenter1"
    TreeState = 254
    Type = "Conditioned"
    SpcFunc = "Exercise/Fitness Center and Gymnasium Areas"
@@ -1153,7 +1169,7 @@ OtherZone   "FitnessCenter1"
    IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
-IntWall   "FitnessCenter1ToCorridor1IntWall"  
+IntWall   "FitnessCenter1ToCorridor1IntWall"
    Status = "New"
    Area = 306
    Construction = "IntWall Cons"
@@ -1162,7 +1178,7 @@ IntWall   "FitnessCenter1ToCorridor1IntWall"
    Outside = "Corridor1"
    ..
 
-IntWall   "FitnessCenter1ToLaundry1IntWall"  
+IntWall   "FitnessCenter1ToLaundry1IntWall"
    Status = "New"
    Area = 76.5
    Construction = "IntWall Cons"
@@ -1171,7 +1187,7 @@ IntWall   "FitnessCenter1ToLaundry1IntWall"
    Outside = "Laundry1"
    ..
 
-IntWall   "FitnessCenter1ToMechanicalRoom1IntWall"  
+IntWall   "FitnessCenter1ToMechanicalRoom1IntWall"
    Status = "New"
    Area = 76.5
    Construction = "IntWall Cons"
@@ -1180,7 +1196,7 @@ IntWall   "FitnessCenter1ToMechanicalRoom1IntWall"
    Outside = "MechanicalRoom1"
    ..
 
-IntWall   "FitnessCenter1ToZone1IntWall"  
+IntWall   "FitnessCenter1ToZone1IntWall"
    Status = "New"
    Area = 153
    Construction = "IntWall Cons"
@@ -1189,7 +1205,7 @@ IntWall   "FitnessCenter1ToZone1IntWall"
    Outside = "Zone1"
    ..
 
-SlabFloor   "FitnessCenter1Slab"  
+SlabFloor   "FitnessCenter1Slab"
    Status = "New"
    Area = 324
    Surface = "Carpeted"
@@ -1201,7 +1217,7 @@ SlabFloor   "FitnessCenter1Slab"
    exEdgeInsulOption = "R-5, 8 inches"
    ..
 
-OtherZone   "Laundry1"  
+OtherZone   "Laundry1"
    TreeState = 254
    Type = "Conditioned"
    SpcFunc = "Laundry Area"
@@ -1219,7 +1235,7 @@ OtherZone   "Laundry1"
    IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
-IntWall   "Laundry1ToCorridor1IntWall"  
+IntWall   "Laundry1ToCorridor1IntWall"
    Status = "New"
    Area = 34
    Construction = "IntWall Cons"
@@ -1228,7 +1244,7 @@ IntWall   "Laundry1ToCorridor1IntWall"
    Outside = "Corridor1"
    ..
 
-IntWall   "Laundry1ToMechanicalRoom1IntWall"  
+IntWall   "Laundry1ToMechanicalRoom1IntWall"
    Status = "New"
    Area = 102
    Construction = "IntWall Cons"
@@ -1237,7 +1253,7 @@ IntWall   "Laundry1ToMechanicalRoom1IntWall"
    Outside = "MechanicalRoom1"
    ..
 
-ExtWall   "Laundry1WallBack"  
+ExtWall   "Laundry1WallBack"
    Status = "New"
    Orientation = "Back"
    OrientationValue = 180
@@ -1248,7 +1264,7 @@ ExtWall   "Laundry1WallBack"
    Absorptivity = 0.5
    ..
 
-Win   "Laundry1WinBack"  
+Win   "Laundry1WinBack"
    Status = "New"
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
    Height = 5
@@ -1292,7 +1308,7 @@ Win   "Laundry1WinBack"
    exRightFinBotUp = 0
    ..
 
-SlabFloor   "Laundry1Slab"  
+SlabFloor   "Laundry1Slab"
    Status = "New"
    Area = 108
    Surface = "Carpeted"
@@ -1304,7 +1320,7 @@ SlabFloor   "Laundry1Slab"
    exEdgeInsulOption = "R-5, 8 inches"
    ..
 
-OtherZone   "LeasingOffice1"  
+OtherZone   "LeasingOffice1"
    TreeState = 254
    Type = "Conditioned"
    SpcFunc = "Office Area (<250 square feet)"
@@ -1321,7 +1337,7 @@ OtherZone   "LeasingOffice1"
    IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
-IntWall   "LeasingOffice1ToLobby1IntWall"  
+IntWall   "LeasingOffice1ToLobby1IntWall"
    Status = "New"
    Area = 102
    Construction = "IntWall Cons"
@@ -1330,7 +1346,7 @@ IntWall   "LeasingOffice1ToLobby1IntWall"
    Outside = "Lobby1"
    ..
 
-IntWall   "LeasingOffice1ToZone1IntWall"  
+IntWall   "LeasingOffice1ToZone1IntWall"
    Status = "New"
    Area = 102
    Construction = "IntWall Cons"
@@ -1339,7 +1355,7 @@ IntWall   "LeasingOffice1ToZone1IntWall"
    Outside = "Zone1"
    ..
 
-ExtWall   "LeasingOffice1WallFront"  
+ExtWall   "LeasingOffice1WallFront"
    Status = "New"
    Orientation = "Front"
    OrientationValue = 0
@@ -1350,7 +1366,7 @@ ExtWall   "LeasingOffice1WallFront"
    Absorptivity = 0.5
    ..
 
-Win   "LeasingOffice1WinFront"  
+Win   "LeasingOffice1WinFront"
    Status = "New"
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
    Height = 5
@@ -1394,7 +1410,7 @@ Win   "LeasingOffice1WinFront"
    exRightFinBotUp = 0
    ..
 
-SlabFloor   "LeasingOffice1Slab"  
+SlabFloor   "LeasingOffice1Slab"
    Status = "New"
    Area = 216
    Surface = "Carpeted"
@@ -1406,7 +1422,7 @@ SlabFloor   "LeasingOffice1Slab"
    exEdgeInsulOption = "R-5, 8 inches"
    ..
 
-OtherZone   "Lobby1"  
+OtherZone   "Lobby1"
    TreeState = 254
    Type = "Conditioned"
    SpcFunc = "Main Entry Lobby"
@@ -1423,7 +1439,7 @@ OtherZone   "Lobby1"
    IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
-IntWall   "Lobby1ToZone1IntWall"  
+IntWall   "Lobby1ToZone1IntWall"
    Status = "New"
    Area = 255
    Construction = "IntWall Cons"
@@ -1432,7 +1448,7 @@ IntWall   "Lobby1ToZone1IntWall"
    Outside = "Zone1"
    ..
 
-ExtWall   "Lobby1WallFront"  
+ExtWall   "Lobby1WallFront"
    Status = "New"
    Orientation = "Front"
    OrientationValue = 0
@@ -1443,14 +1459,14 @@ ExtWall   "Lobby1WallFront"
    Absorptivity = 0.5
    ..
 
-Door   "Lobby1DoorFront"  
+Door   "Lobby1DoorFront"
    Status = "New"
    Area = 40
    Ufactor = 0.2
    exUfactor = 0.2
    ..
 
-Win   "Lobby1WinFront"  
+Win   "Lobby1WinFront"
    Status = "New"
    SpecMethod = "Window Dimensions (required for fins/overhangs)"
    Height = 5
@@ -1494,7 +1510,7 @@ Win   "Lobby1WinFront"
    exRightFinBotUp = 0
    ..
 
-SlabFloor   "Lobby1Slab"  
+SlabFloor   "Lobby1Slab"
    Status = "New"
    Area = 540
    Surface = "Carpeted"
@@ -1506,7 +1522,7 @@ SlabFloor   "Lobby1Slab"
    exEdgeInsulOption = "R-5, 8 inches"
    ..
 
-OtherZone   "MechanicalRoom1"  
+OtherZone   "MechanicalRoom1"
    TreeState = 254
    Type = "Conditioned"
    SpcFunc = "Electrical, Mechanical, Telephone Rooms"
@@ -1523,7 +1539,7 @@ OtherZone   "MechanicalRoom1"
    IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
-IntWall   "MechanicalRoom1ToZone1IntWall"  
+IntWall   "MechanicalRoom1ToZone1IntWall"
    Status = "New"
    Area = 102
    Construction = "IntWall Cons"
@@ -1532,7 +1548,7 @@ IntWall   "MechanicalRoom1ToZone1IntWall"
    Outside = "Zone1"
    ..
 
-ExtWall   "MechanicalRoom1WallBack"  
+ExtWall   "MechanicalRoom1WallBack"
    Status = "New"
    Orientation = "Back"
    OrientationValue = 180
@@ -1543,7 +1559,7 @@ ExtWall   "MechanicalRoom1WallBack"
    Absorptivity = 0.5
    ..
 
-SlabFloor   "MechanicalRoom1Slab"  
+SlabFloor   "MechanicalRoom1Slab"
    Status = "New"
    Area = 108
    Surface = "Exposed"
@@ -1555,7 +1571,7 @@ SlabFloor   "MechanicalRoom1Slab"
    exEdgeInsulOption = "R-5, 8 inches"
    ..
 
-OtherZone   "Stairs1"  
+OtherZone   "Stairs1"
    TreeState = 254
    Type = "Conditioned"
    SpcFunc = "Stairwell"
@@ -1572,7 +1588,7 @@ OtherZone   "Stairs1"
    IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
-IntWall   "Stairs1ToCorridor1IntWall"  
+IntWall   "Stairs1ToCorridor1IntWall"
    Status = "New"
    Area = 153
    Construction = "IntWall Cons"
@@ -1581,7 +1597,7 @@ IntWall   "Stairs1ToCorridor1IntWall"
    Outside = "Corridor1"
    ..
 
-IntWall   "Stairs1ToZone1IntWall"  
+IntWall   "Stairs1ToZone1IntWall"
    Status = "New"
    Area = 68
    Construction = "IntWall Cons"
@@ -1590,7 +1606,7 @@ IntWall   "Stairs1ToZone1IntWall"
    Outside = "Zone1"
    ..
 
-ExtWall   "Stairs1WallBack"  
+ExtWall   "Stairs1WallBack"
    Status = "New"
    Orientation = "Back"
    OrientationValue = 180
@@ -1601,7 +1617,7 @@ ExtWall   "Stairs1WallBack"
    Absorptivity = 0.5
    ..
 
-SlabFloor   "Stairs1Slab"  
+SlabFloor   "Stairs1Slab"
    Status = "New"
    Area = 144
    Surface = "Exposed"
@@ -1613,7 +1629,7 @@ SlabFloor   "Stairs1Slab"
    exEdgeInsulOption = "R-5, 8 inches"
    ..
 
-IntWall   "Stairs1ToLaundry1IntWall"  
+IntWall   "Stairs1ToLaundry1IntWall"
    Status = "New"
    Area = 68
    Construction = "IntWall Cons"
@@ -1622,7 +1638,7 @@ IntWall   "Stairs1ToLaundry1IntWall"
    Outside = "Laundry1"
    ..
 
-OtherZone   "Corridor2"  
+OtherZone   "Corridor2"
    TreeState = 254
    Type = "Conditioned"
    SpcFunc = "Corridor Area"
@@ -1639,7 +1655,7 @@ OtherZone   "Corridor2"
    IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
-InteriorFloor   "Corridor2ToCorridor1InteriorFloor"  
+InteriorFloor   "Corridor2ToCorridor1InteriorFloor"
    Status = "New"
    Area = 1444
    FloorZ = 9.7
@@ -1649,7 +1665,7 @@ InteriorFloor   "Corridor2ToCorridor1InteriorFloor"
    Outside = "Corridor1"
    ..
 
-IntWall   "Corridor2ToZone2IntWall-1"  
+IntWall   "Corridor2ToZone2IntWall-1"
    Status = "New"
    Area = 646
    Construction = "IntWall Cons"
@@ -1658,7 +1674,7 @@ IntWall   "Corridor2ToZone2IntWall-1"
    Outside = "Zone2"
    ..
 
-IntWall   "Corridor2ToZone2IntWall-2"  
+IntWall   "Corridor2ToZone2IntWall-2"
    Status = "New"
    Area = 646
    Construction = "IntWall Cons"
@@ -1667,7 +1683,7 @@ IntWall   "Corridor2ToZone2IntWall-2"
    Outside = "Zone2"
    ..
 
-IntWall   "Corridor2ToZone2IntWall-3"  
+IntWall   "Corridor2ToZone2IntWall-3"
    Status = "New"
    Area = 646
    Construction = "IntWall Cons"
@@ -1676,7 +1692,7 @@ IntWall   "Corridor2ToZone2IntWall-3"
    Outside = "Zone2"
    ..
 
-IntWall   "Corridor2ToZone2IntWall-4"  
+IntWall   "Corridor2ToZone2IntWall-4"
    Status = "New"
    Area = 646
    Construction = "IntWall Cons"
@@ -1685,7 +1701,7 @@ IntWall   "Corridor2ToZone2IntWall-4"
    Outside = "Zone2"
    ..
 
-OtherZone   "Corridor3"  
+OtherZone   "Corridor3"
    Type = "Conditioned"
    SpcFunc = "Corridor Area"
    VentSpcFunc = "General - Corridors"
@@ -1701,7 +1717,7 @@ OtherZone   "Corridor3"
    IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
-InteriorFloor   "Corridor3ToCorridor2InteriorFloor"  
+InteriorFloor   "Corridor3ToCorridor2InteriorFloor"
    Status = "New"
    Area = 1444
    FloorZ = 18.7
@@ -1711,7 +1727,7 @@ InteriorFloor   "Corridor3ToCorridor2InteriorFloor"
    Outside = "Corridor2"
    ..
 
-IntWall   "Corridor3ToZone3IntWall-1"  
+IntWall   "Corridor3ToZone3IntWall-1"
    Status = "New"
    Area = 646
    Construction = "IntWall Cons"
@@ -1720,7 +1736,7 @@ IntWall   "Corridor3ToZone3IntWall-1"
    Outside = "Zone3"
    ..
 
-IntWall   "Corridor3ToZone3IntWall-2"  
+IntWall   "Corridor3ToZone3IntWall-2"
    Status = "New"
    Area = 646
    Construction = "IntWall Cons"
@@ -1729,7 +1745,7 @@ IntWall   "Corridor3ToZone3IntWall-2"
    Outside = "Zone3"
    ..
 
-IntWall   "Corridor3ToZone3IntWall-3"  
+IntWall   "Corridor3ToZone3IntWall-3"
    Status = "New"
    Area = 646
    Construction = "IntWall Cons"
@@ -1738,7 +1754,7 @@ IntWall   "Corridor3ToZone3IntWall-3"
    Outside = "Zone3"
    ..
 
-IntWall   "Corridor3ToZone3IntWall-4"  
+IntWall   "Corridor3ToZone3IntWall-4"
    Status = "New"
    Area = 646
    Construction = "IntWall Cons"
@@ -1747,7 +1763,7 @@ IntWall   "Corridor3ToZone3IntWall-4"
    Outside = "Zone3"
    ..
 
-CathedralCeiling   "Corridor3toCathedralCeiling"  
+CathedralCeiling   "Corridor3toCathedralCeiling"
    Status = "New"
    Area = 1444
    RoofRise = 0
@@ -1758,7 +1774,7 @@ CathedralCeiling   "Corridor3toCathedralCeiling"
    RoofEmiss = 0.85
    ..
 
-OtherZone   "Stairs2"  
+OtherZone   "Stairs2"
    TreeState = 254
    Type = "Conditioned"
    SpcFunc = "Stairwell"
@@ -1775,7 +1791,7 @@ OtherZone   "Stairs2"
    IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
-IntWall   "Stairs2ToCorridor2IntWall"  
+IntWall   "Stairs2ToCorridor2IntWall"
    Status = "New"
    Area = 153
    Construction = "IntWall Cons"
@@ -1784,7 +1800,7 @@ IntWall   "Stairs2ToCorridor2IntWall"
    Outside = "Corridor2"
    ..
 
-IntWall   "Stairs2ToZone2IntWall-1"  
+IntWall   "Stairs2ToZone2IntWall-1"
    Status = "New"
    Area = 68
    Construction = "IntWall Cons"
@@ -1793,7 +1809,7 @@ IntWall   "Stairs2ToZone2IntWall-1"
    Outside = "Zone2"
    ..
 
-ExtWall   "Stairs2WallBack"  
+ExtWall   "Stairs2WallBack"
    Status = "New"
    Orientation = "Back"
    OrientationValue = 180
@@ -1804,7 +1820,7 @@ ExtWall   "Stairs2WallBack"
    Absorptivity = 0.5
    ..
 
-InteriorFloor   "Stairs2ToStairs1InteriorFloor"  
+InteriorFloor   "Stairs2ToStairs1InteriorFloor"
    Status = "New"
    Area = 144
    FloorZ = 9.7
@@ -1814,7 +1830,7 @@ InteriorFloor   "Stairs2ToStairs1InteriorFloor"
    Outside = "Stairs1"
    ..
 
-IntWall   "Stairs2ToZone2IntWall-2"  
+IntWall   "Stairs2ToZone2IntWall-2"
    Status = "New"
    Area = 68
    Construction = "IntWall Cons"
@@ -1823,7 +1839,7 @@ IntWall   "Stairs2ToZone2IntWall-2"
    Outside = "Zone2"
    ..
 
-OtherZone   "Stairs3"  
+OtherZone   "Stairs3"
    Type = "Conditioned"
    SpcFunc = "Stairwell"
    VentSpcFunc = "General - Corridors"
@@ -1839,7 +1855,7 @@ OtherZone   "Stairs3"
    IAQFanCnt = ( 1, 1, 1, 1 )
    ..
 
-IntWall   "Stairs3ToCorridor3IntWall"  
+IntWall   "Stairs3ToCorridor3IntWall"
    Status = "New"
    Area = 153
    Construction = "IntWall Cons"
@@ -1848,7 +1864,7 @@ IntWall   "Stairs3ToCorridor3IntWall"
    Outside = "Corridor3"
    ..
 
-IntWall   "Stairs3ToZone3IntWall-1"  
+IntWall   "Stairs3ToZone3IntWall-1"
    Status = "New"
    Area = 68
    Construction = "IntWall Cons"
@@ -1857,7 +1873,7 @@ IntWall   "Stairs3ToZone3IntWall-1"
    Outside = "Zone3"
    ..
 
-ExtWall   "Stairs3WallBack"  
+ExtWall   "Stairs3WallBack"
    Status = "New"
    Orientation = "Back"
    OrientationValue = 180
@@ -1868,7 +1884,7 @@ ExtWall   "Stairs3WallBack"
    Absorptivity = 0.5
    ..
 
-InteriorFloor   "Stairs3ToStairs2InteriorFloor"  
+InteriorFloor   "Stairs3ToStairs2InteriorFloor"
    Status = "New"
    Area = 144
    FloorZ = 18.7
@@ -1878,7 +1894,7 @@ InteriorFloor   "Stairs3ToStairs2InteriorFloor"
    Outside = "Stairs2"
    ..
 
-IntWall   "Stairs3ToZone3IntWall-2"  
+IntWall   "Stairs3ToZone3IntWall-2"
    Status = "New"
    Area = 68
    Construction = "IntWall Cons"
@@ -1887,7 +1903,7 @@ IntWall   "Stairs3ToZone3IntWall-2"
    Outside = "Zone3"
    ..
 
-CathedralCeiling   "Stairs3toCathedralCeiling"  
+CathedralCeiling   "Stairs3toCathedralCeiling"
    Status = "New"
    Area = 144
    RoofRise = 0
@@ -1898,7 +1914,7 @@ CathedralCeiling   "Stairs3toCathedralCeiling"
    RoofEmiss = 0.85
    ..
 
-EUseSummary   "EUSummary"  
+EUseSummary   "EUSummary"
    Title1[2] = "Proposed Design:"
    Title1[10] = "Proposed"
    Title2[2] = "Site"
@@ -1908,7 +1924,7 @@ EUseSummary   "EUSummary"
    Title3[1] = "End Use"
    Title3[2] = "(kWh)"
    Title3[3] = "(therms)"
-   Title3[4] = "(kTDV/ft²-yr)"
+   Title3[4] = "(kTDV/ftï¿½-yr)"
    Title3[10] = "(kW)"
    Enduse1[1] = "Space Heating"
    Enduse1[2] = "12,188"
@@ -1984,70 +2000,70 @@ EUseSummary   "EUSummary"
    EDRMsg = "Energy Design Ratings not available for analysis type 'Proposed Only'"
    ..
 
-SchDay   "CARes2013 InsLighting Hrly"  
+SchDay   "CARes2013 InsLighting Hrly"
    Type = "Fraction"
-   Hr = ( 0.023, 0.019, 0.015, 0.017, 0.021, 0.031, 0.042, 0.041, 0.034, 
-          0.029, 0.027, 0.025, 0.021, 0.021, 0.021, 0.026, 0.031, 0.044, 
+   Hr = ( 0.023, 0.019, 0.015, 0.017, 0.021, 0.031, 0.042, 0.041, 0.034,
+          0.029, 0.027, 0.025, 0.021, 0.021, 0.021, 0.026, 0.031, 0.044,
           0.084, 0.118, 0.113, 0.096, 0.063, 0.038 )
    ..
 
-SchDay   "CARes2013 Occupancy Hrly"  
+SchDay   "CARes2013 Occupancy Hrly"
    Type = "Fraction"
-   Hr = ( 0.035, 0.035, 0.035, 0.035, 0.035, 0.059, 0.082, 0.055, 0.027, 
-          0.014, 0.014, 0.014, 0.014, 0.014, 0.019, 0.027, 0.041, 0.055, 
+   Hr = ( 0.035, 0.035, 0.035, 0.035, 0.035, 0.059, 0.082, 0.055, 0.027,
+          0.014, 0.014, 0.014, 0.014, 0.014, 0.019, 0.027, 0.041, 0.055,
           0.068, 0.082, 0.082, 0.07, 0.053, 0.035 )
    ..
 
-SchDay   "CARes2013 Equipment Hrly"  
+SchDay   "CARes2013 Equipment Hrly"
    Type = "Fraction"
-   Hr = ( 0.037, 0.035, 0.034, 0.034, 0.032, 0.036, 0.042, 0.044, 0.037, 
-          0.032, 0.033, 0.033, 0.032, 0.033, 0.035, 0.037, 0.044, 0.053, 
+   Hr = ( 0.037, 0.035, 0.034, 0.034, 0.032, 0.036, 0.042, 0.044, 0.037,
+          0.032, 0.033, 0.033, 0.032, 0.033, 0.035, 0.037, 0.044, 0.053,
           0.058, 0.06, 0.062, 0.06, 0.052, 0.045 )
    ..
 
-SchDay   "CARes2013 ExtLighting Hrly"  
+SchDay   "CARes2013 ExtLighting Hrly"
    Type = "Fraction"
-   Hr = ( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+   Hr = ( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
           0.25, 0.25, 0.25, 0.25 )
    ..
 
-SchDay   "CARes2013 SZ Heat Hrly"  
+SchDay   "CARes2013 SZ Heat Hrly"
    Type = "Temperature"
-   Hr = ( 65, 65, 65, 65, 65, 65, 66.5, 68, 68, 68, 68, 68, 68, 68, 68, 
+   Hr = ( 65, 65, 65, 65, 65, 65, 66.5, 68, 68, 68, 68, 68, 68, 68, 68,
           68, 68, 68, 68, 68, 68, 68, 68, 65 )
    ..
 
-SchDay   "CARes2013 Liv Heat Hrly"  
+SchDay   "CARes2013 Liv Heat Hrly"
    Type = "Temperature"
-   Hr = ( 65, 65, 65, 65, 65, 65, 66.5, 68, 68, 68, 68, 68, 68, 68, 68, 
+   Hr = ( 65, 65, 65, 65, 65, 65, 66.5, 68, 68, 68, 68, 68, 68, 68, 68,
           68, 68, 68, 68, 68, 68, 68, 68, 65 )
    ..
 
-SchDay   "CARes2013 Slp Heat Hrly"  
+SchDay   "CARes2013 Slp Heat Hrly"
    Type = "Temperature"
-   Hr = ( 65, 65, 65, 65, 65, 65, 66.5, 68, 68, 65, 65, 65, 65, 65, 65, 
+   Hr = ( 65, 65, 65, 65, 65, 65, 66.5, 68, 68, 65, 65, 65, 65, 65, 65,
           65, 68, 68, 68, 68, 68, 68, 68, 65 )
    ..
 
-SchDay   "CARes2013 SZ Cool Hrly"  
+SchDay   "CARes2013 SZ Cool Hrly"
    Type = "Temperature"
-   Hr = ( 78, 78, 78, 78, 78, 78, 78, 83, 83, 83, 83, 83, 83, 82, 81, 80, 
+   Hr = ( 78, 78, 78, 78, 78, 78, 78, 83, 83, 83, 83, 83, 83, 82, 81, 80,
           79, 78, 78, 78, 78, 78, 78, 78 )
    ..
 
-SchDay   "CARes2013 Liv Cool Hrly"  
+SchDay   "CARes2013 Liv Cool Hrly"
    Type = "Temperature"
-   Hr = ( 78, 78, 78, 78, 78, 78, 78, 83, 83, 83, 83, 83, 83, 82, 81, 80, 
+   Hr = ( 78, 78, 78, 78, 78, 78, 78, 83, 83, 83, 83, 83, 83, 82, 81, 80,
           79, 78, 78, 78, 78, 78, 78, 78 )
    ..
 
-SchDay   "CARes2013 Slp Cool Hrly"  
+SchDay   "CARes2013 Slp Cool Hrly"
    Type = "Temperature"
-   Hr = ( 78, 78, 78, 78, 78, 78, 78, 83, 83, 83, 83, 83, 83, 82, 81, 80, 
+   Hr = ( 78, 78, 78, 78, 78, 78, 78, 83, 83, 83, 83, 83, 83, 82, 81, 80,
           79, 78, 78, 78, 78, 78, 78, 78 )
    ..
 
-Cons   "Exterior Wall Cons"  
+Cons   "Exterior Wall Cons"
    TreeState = 254
    CanAssignTo = "Exterior Walls"
    Type = "Wood Framed Wall"
@@ -2079,7 +2095,7 @@ Cons   "Exterior Wall Cons"
    RoofingType = "all others"
    ..
 
-Cons   "Interior Floor Cons"  
+Cons   "Interior Floor Cons"
    CanAssignTo = "Interior Floors"
    Type = "Wood Framed Floor"
    RoofingLayer = "Light Roof (Asphalt Shingle)"
@@ -2109,7 +2125,7 @@ Cons   "Interior Floor Cons"
    RoofingType = "all others"
    ..
 
-Cons   "Attic Roof Cons"  
+Cons   "Attic Roof Cons"
    CanAssignTo = "Attic Roofs"
    Type = "Built-up Roof"
    RoofingLayer = "5 PSF (Normal Gravel)"
@@ -2140,7 +2156,7 @@ Cons   "Attic Roof Cons"
    CavInsulOverFrame = 0
    ..
 
-Cons   "Garage Attic Roof Cons"  
+Cons   "Garage Attic Roof Cons"
    CanAssignTo = "Attic Roofs"
    Type = "Wood Framed Ceiling"
    RoofingLayer = "10 PSF (RoofTile)"
@@ -2171,7 +2187,7 @@ Cons   "Garage Attic Roof Cons"
    CavInsulOverFrame = 0
    ..
 
-Cons   "Ext Floor Cons"  
+Cons   "Ext Floor Cons"
    CanAssignTo = "Exterior Floors"
    Type = "Wood Framed Floor"
    RoofingLayer = "Light Roof (Asphalt Shingle)"
@@ -2202,7 +2218,7 @@ Cons   "Ext Floor Cons"
    RoofingType = "all others"
    ..
 
-Cons   "Garage Ext Wall Cons"  
+Cons   "Garage Ext Wall Cons"
    CanAssignTo = "Exterior Walls"
    Type = "Wood Framed Wall"
    RoofingLayer = "Light Roof (Asphalt Shingle)"
@@ -2232,7 +2248,7 @@ Cons   "Garage Ext Wall Cons"
    RoofingType = "all others"
    ..
 
-Cons   "Garage Ceiling Below Attic Cons"  
+Cons   "Garage Ceiling Below Attic Cons"
    CanAssignTo = "Ceilings (below attic)"
    Type = "Wood Framed Ceiling"
    RoofingLayer = "Light Roof (Asphalt Shingle)"
@@ -2262,7 +2278,7 @@ Cons   "Garage Ceiling Below Attic Cons"
    RoofingType = "all others"
    ..
 
-Cons   "R19 IntFloor Cons"  
+Cons   "R19 IntFloor Cons"
    CanAssignTo = "Interior Floors"
    Type = "Wood Framed Floor"
    RoofingLayer = "Light Roof (Asphalt Shingle)"
@@ -2292,7 +2308,7 @@ Cons   "R19 IntFloor Cons"
    RoofingType = "all others"
    ..
 
-Cons   "IntWall Cons"  
+Cons   "IntWall Cons"
    CanAssignTo = "Interior Walls"
    Type = "Wood Framed Wall"
    RoofingLayer = "Light Roof (Asphalt Shingle)"
@@ -2322,7 +2338,7 @@ Cons   "IntWall Cons"
    RoofingType = "all others"
    ..
 
-Cons   "Interior Floor"  
+Cons   "Interior Floor"
    CanAssignTo = "Interior Floors"
    Type = "Wood Framed Floor"
    RoofingLayer = "Light Roof (Asphalt Shingle)"
@@ -2352,7 +2368,7 @@ Cons   "Interior Floor"
    RoofingType = "all others"
    ..
 
-Cons   "Cathedral Ceiling"  
+Cons   "Cathedral Ceiling"
    CanAssignTo = "Cathedral Ceilings"
    Type = "Wood Framed Ceiling"
    RoofingLayer = "5 PSF (Normal Gravel)"
@@ -2382,7 +2398,7 @@ Cons   "Cathedral Ceiling"
    RoofingType = "all others"
    ..
 
-Mat   "SoftWood"  
+Mat   "SoftWood"
    Density = 35
    SpecHeat = 0.39
    Conductivity = 0.08167
@@ -2390,14 +2406,14 @@ Mat   "SoftWood"
    RValPerInch = 1.0204
    ..
 
-Mat   "Steel"  
+Mat   "Steel"
    Density = 489
    SpecHeat = 0.12
    Conductivity = 26.2
    RValPerInch = 0.00318
    ..
 
-Mat   "SIPSskin"  
+Mat   "SIPSskin"
    Thickness = 0.4375
    Density = 41
    SpecHeat = 0.45
@@ -2406,19 +2422,19 @@ Mat   "SIPSskin"
    RValPerInch = 1.36
    ..
 
-Mat   "Ceiling Insul"  
+Mat   "Ceiling Insul"
    Density = 1.5
    SpecHeat = 0.2
    ConductivityCT = 0.00418
    ..
 
-Mat   "Other Insul"  
+Mat   "Other Insul"
    Density = 1.5
    SpecHeat = 0.2
    ConductivityCT = 0.0032537
    ..
 
-Mat   "Gypsum Board"  
+Mat   "Gypsum Board"
    Thickness = 0.5
    Density = 40
    SpecHeat = 0.27
@@ -2427,7 +2443,7 @@ Mat   "Gypsum Board"
    RValPerInch = 0.9091
    ..
 
-Mat   "Insul-R4-D1.5-SH0.35-C0.02083"  
+Mat   "Insul-R4-D1.5-SH0.35-C0.02083"
    Thickness = 1
    Density = 1.5
    SpecHeat = 0.35
@@ -2436,7 +2452,7 @@ Mat   "Insul-R4-D1.5-SH0.35-C0.02083"
    ConductivityCT = 0.00175
    ..
 
-Mat   "Synthetic Stucco"  
+Mat   "Synthetic Stucco"
    Thickness = 0.375
    Density = 58
    SpecHeat = 0.2
@@ -2444,7 +2460,7 @@ Mat   "Synthetic Stucco"
    RValPerInch = 0.5333
    ..
 
-Mat   "Carpet"  
+Mat   "Carpet"
    Thickness = 0.5
    Density = 12.3
    SpecHeat = 0.34
@@ -2452,7 +2468,7 @@ Mat   "Carpet"
    RValPerInch = 4.1667
    ..
 
-Mat   "Wood layer"  
+Mat   "Wood layer"
    Thickness = 0.5
    Density = 41
    SpecHeat = 0.45
@@ -2461,7 +2477,7 @@ Mat   "Wood layer"
    RValPerInch = 1.36
    ..
 
-Mat   "5 PSF Roof"  
+Mat   "5 PSF Roof"
    Thickness = 0.5
    Density = 120
    SpecHeat = 0.2
@@ -2469,7 +2485,7 @@ Mat   "5 PSF Roof"
    RValPerInch = 0.0833
    ..
 
-Mat   "TileGap"  
+Mat   "TileGap"
    Thickness = 0.75
    Density = 0.075
    SpecHeat = 0.24
@@ -2477,7 +2493,7 @@ Mat   "TileGap"
    RValPerInch = 1.1333
    ..
 
-Mat   "10 PSF Roof"  
+Mat   "10 PSF Roof"
    Thickness = 1
    Density = 120
    SpecHeat = 0.2
@@ -2485,7 +2501,7 @@ Mat   "10 PSF Roof"
    RValPerInch = 0.0833
    ..
 
-Mat   "VertWallCavity"  
+Mat   "VertWallCavity"
    Thickness = 3.5
    Density = 0.075
    SpecHeat = 0.24
@@ -2494,7 +2510,7 @@ Mat   "VertWallCavity"
    RValPerInch = 1.1333
    ..
 
-Mat   "3 Coat Stucco"  
+Mat   "3 Coat Stucco"
    Thickness = 0.875
    Density = 116
    SpecHeat = 0.2
@@ -2502,7 +2518,7 @@ Mat   "3 Coat Stucco"
    RValPerInch = 0.2686
    ..
 
-Mat   "Ins-R21-D1.5-SH0.2-C0.02183"  
+Mat   "Ins-R21-D1.5-SH0.2-C0.02183"
    Density = 1.5
    SpecHeat = 0.2
    Conductivity = 0.0218254
@@ -2510,7 +2526,7 @@ Mat   "Ins-R21-D1.5-SH0.2-C0.02183"
    ConductivityCT = 0.0032537
    ..
 
-Mat   "Ins-R9.1-D1.5-SH0.2-C0.03205"  
+Mat   "Ins-R9.1-D1.5-SH0.2-C0.03205"
    Density = 1.5
    SpecHeat = 0.2
    Conductivity = 0.0320513
@@ -2518,7 +2534,7 @@ Mat   "Ins-R9.1-D1.5-SH0.2-C0.03205"
    ConductivityCT = 0.00418
    ..
 
-Mat   "Ins-R13-D1.5-SH0.2-C0.02244"  
+Mat   "Ins-R13-D1.5-SH0.2-C0.02244"
    Density = 1.5
    SpecHeat = 0.2
    Conductivity = 0.0224376
@@ -2526,14 +2542,14 @@ Mat   "Ins-R13-D1.5-SH0.2-C0.02244"
    ConductivityCT = 0.0032537
    ..
 
-Mat   "FrameGap"  
+Mat   "FrameGap"
    Density = 0
    SpecHeat = 0
    Conductivity = 200
    RValPerInch = 0.000417
    ..
 
-Mat   "Ins-R18-D1.5-SH0.2-C0.0162"  
+Mat   "Ins-R18-D1.5-SH0.2-C0.0162"
    Density = 1.5
    SpecHeat = 0.2
    Conductivity = 0.0162037
@@ -2541,7 +2557,7 @@ Mat   "Ins-R18-D1.5-SH0.2-C0.0162"
    ConductivityCT = 0.0032537
    ..
 
-Mat   "Ins-R18-D1.5-SH0.2-C0.02546"  
+Mat   "Ins-R18-D1.5-SH0.2-C0.02546"
    Density = 1.5
    SpecHeat = 0.2
    Conductivity = 0.025463
@@ -2549,14 +2565,14 @@ Mat   "Ins-R18-D1.5-SH0.2-C0.02546"
    ConductivityCT = 0.0032537
    ..
 
-Mat   "Concrete"  
+Mat   "Concrete"
    Density = 144
    SpecHeat = 0.2
    Conductivity = 1
    RValPerInch = 0.0833
    ..
 
-Mat   "Light Roof"  
+Mat   "Light Roof"
    Thickness = 0.2
    Density = 120
    SpecHeat = 0.2
@@ -2564,7 +2580,7 @@ Mat   "Light Roof"
    RValPerInch = 0.0833
    ..
 
-Mat   "Ins-R18-D1.5-SH0.2-C0.02546 24"  
+Mat   "Ins-R18-D1.5-SH0.2-C0.02546 24"
    Density = 1.5
    SpecHeat = 0.2
    Conductivity = 0.025463
@@ -2572,7 +2588,7 @@ Mat   "Ins-R18-D1.5-SH0.2-C0.02546 24"
    ConductivityCT = 0.00418
    ..
 
-Mat   "Ins-R38-D1.5-SH0.2-C0.01206"  
+Mat   "Ins-R38-D1.5-SH0.2-C0.01206"
    Density = 1.5
    SpecHeat = 0.2
    Conductivity = 0.0120614
@@ -2580,7 +2596,7 @@ Mat   "Ins-R38-D1.5-SH0.2-C0.01206"
    ConductivityCT = 0.00418
    ..
 
-Mat   "Insul-R6-D1.5-SH0.35-C0.01389"  
+Mat   "Insul-R6-D1.5-SH0.35-C0.01389"
    Thickness = 1
    Density = 1.5
    SpecHeat = 0.35
@@ -2589,7 +2605,7 @@ Mat   "Insul-R6-D1.5-SH0.35-C0.01389"
    ConductivityCT = 0.00175
    ..
 
-Mat   "Ins-R38-D1.5-SH0.2-C0.00768"  
+Mat   "Ins-R38-D1.5-SH0.2-C0.00768"
    Density = 1.5
    SpecHeat = 0.2
    Conductivity = 0.00767544
@@ -2597,7 +2613,7 @@ Mat   "Ins-R38-D1.5-SH0.2-C0.00768"
    ConductivityCT = 0.00418
    ..
 
-Mat   "Ins-R30-D1.5-SH0.2-C0.00972"  
+Mat   "Ins-R30-D1.5-SH0.2-C0.00972"
    Density = 1.5
    SpecHeat = 0.2
    Conductivity = 0.00972222
@@ -2605,7 +2621,7 @@ Mat   "Ins-R30-D1.5-SH0.2-C0.00972"
    ConductivityCT = 0.00418
    ..
 
-Mat   "Insul-R5-D1.5-SH0.35-C0.01667"  
+Mat   "Insul-R5-D1.5-SH0.35-C0.01667"
    Thickness = 1
    Density = 1.5
    SpecHeat = 0.35
@@ -2614,7 +2630,7 @@ Mat   "Insul-R5-D1.5-SH0.35-C0.01667"
    ConductivityCT = 0.00175
    ..
 
-Mat   "Insul-R1.75-D1.5-SH0.35-C0.04762"  
+Mat   "Insul-R1.75-D1.5-SH0.35-C0.04762"
    Thickness = 1
    Density = 1.5
    SpecHeat = 0.35
@@ -2623,7 +2639,7 @@ Mat   "Insul-R1.75-D1.5-SH0.35-C0.04762"
    ConductivityCT = 0.00175
    ..
 
-Mat   "Ins-R23-D1.5-SH0.2-C0.02627"  
+Mat   "Ins-R23-D1.5-SH0.2-C0.02627"
    Density = 1.5
    SpecHeat = 0.2
    Conductivity = 0.0262681
@@ -2631,7 +2647,7 @@ Mat   "Ins-R23-D1.5-SH0.2-C0.02627"
    ConductivityCT = 0.00418
    ..
 
-DwellUnitType   "OneBedroom1"  
+DwellUnitType   "OneBedroom1"
    NumBedrooms = 1
    CondFlrArea = 720
    WasherOption = "In-Unit"
@@ -2664,7 +2680,7 @@ DwellUnitType   "OneBedroom1"
    DHWSolFracType = "- none -"
    ..
 
-DwellUnitType   "OneBedroom2"  
+DwellUnitType   "OneBedroom2"
    NumBedrooms = 1
    CondFlrArea = 720
    WasherOption = "In-Unit"
@@ -2697,7 +2713,7 @@ DwellUnitType   "OneBedroom2"
    DHWSolFracType = "- none -"
    ..
 
-DwellUnitType   "OneBedroom3"  
+DwellUnitType   "OneBedroom3"
    NumBedrooms = 1
    CondFlrArea = 720
    WasherOption = "In-Unit"
@@ -2738,7 +2754,7 @@ DwellUnitType   "OneBedroom3"
    DHWSolFracType = "- none -"
    ..
 
-DwellUnitType   "TwoBedroom1"  
+DwellUnitType   "TwoBedroom1"
    NumBedrooms = 2
    CondFlrArea = 1054
    WasherOption = "In-Unit"
@@ -2779,7 +2795,7 @@ DwellUnitType   "TwoBedroom1"
    DHWSolFracType = "- none -"
    ..
 
-DwellUnitType   "TwoBedroom2"  
+DwellUnitType   "TwoBedroom2"
    NumBedrooms = 2
    CondFlrArea = 1054
    WasherOption = "In-Unit"
@@ -2820,7 +2836,7 @@ DwellUnitType   "TwoBedroom2"
    DHWSolFracType = "- none -"
    ..
 
-DwellUnitType   "TwoBedroom3"  
+DwellUnitType   "TwoBedroom3"
    NumBedrooms = 2
    CondFlrArea = 1054
    WasherOption = "In-Unit"
@@ -2861,7 +2877,7 @@ DwellUnitType   "TwoBedroom3"
    DHWSolFracType = "- none -"
    ..
 
-DwellUnitType   "ThreeBedroom1"  
+DwellUnitType   "ThreeBedroom1"
    NumBedrooms = 3
    CondFlrArea = 1410
    WasherOption = "In-Unit"
@@ -2902,7 +2918,7 @@ DwellUnitType   "ThreeBedroom1"
    DHWSolFracType = "- none -"
    ..
 
-DwellUnitType   "ThreeBedroom2"  
+DwellUnitType   "ThreeBedroom2"
    NumBedrooms = 3
    CondFlrArea = 1410
    WasherOption = "In-Unit"
@@ -2943,7 +2959,7 @@ DwellUnitType   "ThreeBedroom2"
    DHWSolFracType = "- none -"
    ..
 
-DwellUnitType   "ThreeBedroom3"  
+DwellUnitType   "ThreeBedroom3"
    NumBedrooms = 3
    CondFlrArea = 1410
    WasherOption = "In-Unit"
@@ -2984,7 +3000,7 @@ DwellUnitType   "ThreeBedroom3"
    DHWSolFracType = "- none -"
    ..
 
-DwellUnitType   "Studio2"  
+DwellUnitType   "Studio2"
    NumBedrooms = 1
    CondFlrArea = 540
    WasherOption = "In-Unit"
@@ -3025,7 +3041,7 @@ DwellUnitType   "Studio2"
    DHWSolFracType = "- none -"
    ..
 
-DwellUnitType   "Studio3"  
+DwellUnitType   "Studio3"
    NumBedrooms = 1
    CondFlrArea = 540
    WasherOption = "In-Unit"
@@ -3066,7 +3082,7 @@ DwellUnitType   "Studio3"
    DHWSolFracType = "- none -"
    ..
 
-HVACSys   "HVACGasElectric"  
+HVACSys   "HVACGasElectric"
    TreeState = 253
    Type = "Other Heating and Cooling System"
    Status = "New"
@@ -3094,7 +3110,7 @@ HVACSys   "HVACGasElectric"
    Fan = "HVACFan-Furnace"
    ..
 
-HVACSys   "HVACHeatpump-Res"  
+HVACSys   "HVACHeatpump-Res"
    TreeState = 253
    Type = "Heat Pump Heating and Cooling System"
    Status = "New"
@@ -3120,7 +3136,7 @@ HVACSys   "HVACHeatpump-Res"
    Fan = "HVACFan-HeatPump"
    ..
 
-HVACSys   "HVACHeatpump-Corridor1"  
+HVACSys   "HVACHeatpump-Corridor1"
    TreeState = 253
    Type = "Heat Pump Heating and Cooling System"
    Status = "New"
@@ -3146,7 +3162,7 @@ HVACSys   "HVACHeatpump-Corridor1"
    Fan = "HVACFan-HeatPump"
    ..
 
-HVACSys   "HVACHeatpump-BusinessCenter1"  
+HVACSys   "HVACHeatpump-BusinessCenter1"
    TreeState = 253
    Type = "Heat Pump Heating and Cooling System"
    Status = "New"
@@ -3172,7 +3188,7 @@ HVACSys   "HVACHeatpump-BusinessCenter1"
    Fan = "HVACFan-HeatPump"
    ..
 
-HVACSys   "HVACHeatpump-FitnessCenter1"  
+HVACSys   "HVACHeatpump-FitnessCenter1"
    TreeState = 253
    Type = "Heat Pump Heating and Cooling System"
    Status = "New"
@@ -3198,7 +3214,7 @@ HVACSys   "HVACHeatpump-FitnessCenter1"
    Fan = "HVACFan-HeatPump"
    ..
 
-HVACSys   "HVACHeatpump-Laundry1"  
+HVACSys   "HVACHeatpump-Laundry1"
    TreeState = 253
    Type = "Heat Pump Heating and Cooling System"
    Status = "New"
@@ -3224,7 +3240,7 @@ HVACSys   "HVACHeatpump-Laundry1"
    Fan = "HVACFan-HeatPump"
    ..
 
-HVACSys   "HVACHeatpump-LeasingOffice1"  
+HVACSys   "HVACHeatpump-LeasingOffice1"
    TreeState = 253
    Type = "Heat Pump Heating and Cooling System"
    Status = "New"
@@ -3250,7 +3266,7 @@ HVACSys   "HVACHeatpump-LeasingOffice1"
    Fan = "HVACFan-HeatPump"
    ..
 
-HVACSys   "HVACHeatpump-Lobby1"  
+HVACSys   "HVACHeatpump-Lobby1"
    TreeState = 253
    Type = "Heat Pump Heating and Cooling System"
    Status = "New"
@@ -3276,7 +3292,7 @@ HVACSys   "HVACHeatpump-Lobby1"
    Fan = "HVACFan-HeatPump"
    ..
 
-HVACSys   "HVACHeatpump-Stairs"  
+HVACSys   "HVACHeatpump-Stairs"
    TreeState = 253
    Type = "Heat Pump Heating and Cooling System"
    Status = "New"
@@ -3302,7 +3318,7 @@ HVACSys   "HVACHeatpump-Stairs"
    Fan = "HVACFan-HeatPump"
    ..
 
-HVACSys   "HVACHeatpump-Corridor2"  
+HVACSys   "HVACHeatpump-Corridor2"
    TreeState = 253
    Type = "Heat Pump Heating and Cooling System"
    Status = "New"
@@ -3328,7 +3344,7 @@ HVACSys   "HVACHeatpump-Corridor2"
    Fan = "HVACFan-HeatPump"
    ..
 
-HVACSys   "HVACHeatpump-Corridor3"  
+HVACSys   "HVACHeatpump-Corridor3"
    TreeState = 253
    Type = "Heat Pump Heating and Cooling System"
    Status = "New"
@@ -3354,13 +3370,13 @@ HVACSys   "HVACHeatpump-Corridor3"
    Fan = "HVACFan-HeatPump"
    ..
 
-HVACHeat   "HeatingComponent"  
+HVACHeat   "HeatingComponent"
    Type = "CntrlFurnace - Fuel-fired central furnace"
    AFUE = 80
    AutoSize = 1
    ..
 
-HVACCool   "CoolingComponent"  
+HVACCool   "CoolingComponent"
    Type = "SplitAirCond - Split air conditioning system"
    SEER = 14
    EER = 11.7
@@ -3373,7 +3389,7 @@ HVACCool   "CoolingComponent"
    IsZonal = 0
    ..
 
-HVACHtPump   "HeatpumpSystem-Res"  
+HVACHtPump   "HeatpumpSystem-Res"
    Type = "SplitHeatPump - Central split heat pump"
    HSPF = 8.2
    AutoSize = 1
@@ -3391,7 +3407,7 @@ HVACHtPump   "HeatpumpSystem-Res"
    VCHPDucts = "Unducted"
    ..
 
-HVACHtPump   "HeatpumpSystem-Corridor1"  
+HVACHtPump   "HeatpumpSystem-Corridor1"
    Type = "SplitHeatPump - Central split heat pump"
    HSPF = 8.2
    AutoSize = 1
@@ -3409,7 +3425,7 @@ HVACHtPump   "HeatpumpSystem-Corridor1"
    VCHPDucts = "Unducted"
    ..
 
-HVACHtPump   "HeatpumpSystem-BusinessCenter1"  
+HVACHtPump   "HeatpumpSystem-BusinessCenter1"
    Type = "SplitHeatPump - Central split heat pump"
    HSPF = 8.2
    AutoSize = 1
@@ -3427,7 +3443,7 @@ HVACHtPump   "HeatpumpSystem-BusinessCenter1"
    VCHPDucts = "Unducted"
    ..
 
-HVACHtPump   "HeatpumpSystem-FitnessCenter1"  
+HVACHtPump   "HeatpumpSystem-FitnessCenter1"
    Type = "SplitHeatPump - Central split heat pump"
    HSPF = 8.2
    AutoSize = 1
@@ -3445,7 +3461,7 @@ HVACHtPump   "HeatpumpSystem-FitnessCenter1"
    VCHPDucts = "Unducted"
    ..
 
-HVACHtPump   "HeatpumpSystem-Laundry1"  
+HVACHtPump   "HeatpumpSystem-Laundry1"
    Type = "SplitHeatPump - Central split heat pump"
    HSPF = 8.2
    AutoSize = 1
@@ -3463,7 +3479,7 @@ HVACHtPump   "HeatpumpSystem-Laundry1"
    VCHPDucts = "Unducted"
    ..
 
-HVACHtPump   "HeatpumpSystem-LeasingOffice1"  
+HVACHtPump   "HeatpumpSystem-LeasingOffice1"
    Type = "SplitHeatPump - Central split heat pump"
    HSPF = 8.2
    AutoSize = 1
@@ -3481,7 +3497,7 @@ HVACHtPump   "HeatpumpSystem-LeasingOffice1"
    VCHPDucts = "Unducted"
    ..
 
-HVACHtPump   "HeatpumpSystem-Lobby1"  
+HVACHtPump   "HeatpumpSystem-Lobby1"
    Type = "SplitHeatPump - Central split heat pump"
    HSPF = 8.2
    AutoSize = 1
@@ -3499,7 +3515,7 @@ HVACHtPump   "HeatpumpSystem-Lobby1"
    VCHPDucts = "Unducted"
    ..
 
-HVACHtPump   "HeatpumpSystem-Stairs"  
+HVACHtPump   "HeatpumpSystem-Stairs"
    Type = "SplitHeatPump - Central split heat pump"
    HSPF = 8.2
    AutoSize = 1
@@ -3517,7 +3533,7 @@ HVACHtPump   "HeatpumpSystem-Stairs"
    VCHPDucts = "Unducted"
    ..
 
-HVACHtPump   "HeatpumpSystem-Corridor2"  
+HVACHtPump   "HeatpumpSystem-Corridor2"
    Type = "SplitHeatPump - Central split heat pump"
    HSPF = 8.2
    AutoSize = 1
@@ -3535,7 +3551,7 @@ HVACHtPump   "HeatpumpSystem-Corridor2"
    VCHPDucts = "Unducted"
    ..
 
-HVACHtPump   "HeatpumpSystem-Corridor3"  
+HVACHtPump   "HeatpumpSystem-Corridor3"
    Type = "SplitHeatPump - Central split heat pump"
    HSPF = 8.2
    AutoSize = 1
@@ -3553,7 +3569,7 @@ HVACHtPump   "HeatpumpSystem-Corridor3"
    VCHPDucts = "Unducted"
    ..
 
-HVACDist   "AirDistributionSystem-Res"  
+HVACDist   "AirDistributionSystem-Res"
    Type = "Ducts located entirely in conditioned space"
    Status = "New"
    DefaultSystem = 1
@@ -3561,7 +3577,7 @@ HVACDist   "AirDistributionSystem-Res"
    IsLessThanFortyFt = 0
    ..
 
-HVACDist   "AirDistributionSystem-NonRes"  
+HVACDist   "AirDistributionSystem-NonRes"
    Type = "Ducts located entirely in conditioned space"
    Status = "New"
    DefaultSystem = 1
@@ -3569,7 +3585,7 @@ HVACDist   "AirDistributionSystem-NonRes"
    IsLessThanFortyFt = 0
    ..
 
-HVACDist   "AirDistributionSystem"  
+HVACDist   "AirDistributionSystem"
    Type = "Ducts located entirely in conditioned space"
    Status = "New"
    DefaultSystem = 1
@@ -3577,19 +3593,19 @@ HVACDist   "AirDistributionSystem"
    IsLessThanFortyFt = 0
    ..
 
-HVACFan   "HVACFan-HeatPump"  
+HVACFan   "HVACFan-HeatPump"
    Type = "Single Speed PSC Furnace Fan"
    DefaultSystem = 0
    WperCFMCool = 0.58
    ..
 
-HVACFan   "HVACFan-Furnace"  
+HVACFan   "HVACFan-Furnace"
    Type = "Single Speed PSC Furnace Fan"
    DefaultSystem = 0
    WperCFMCool = 0.45
    ..
 
-IAQFan   "TwoBedroomIAQFan"  
+IAQFan   "TwoBedroomIAQFan"
    IAQCFM = 54.14
    WperCFMIAQ = 0.6
    IAQFanType = "Balanced"
@@ -3597,7 +3613,7 @@ IAQFan   "TwoBedroomIAQFan"
    SetPerfByHVIInterp = 0
    ..
 
-IAQFan   "OneBedroomIAQFan"  
+IAQFan   "OneBedroomIAQFan"
    IAQCFM = 36.6
    WperCFMIAQ = 0.6
    IAQFanType = "Balanced"
@@ -3605,7 +3621,7 @@ IAQFan   "OneBedroomIAQFan"
    SetPerfByHVIInterp = 0
    ..
 
-IAQFan   "ThreeBedroomIAQFan"  
+IAQFan   "ThreeBedroomIAQFan"
    IAQCFM = 72.3
    WperCFMIAQ = 0.6
    IAQFanType = "Balanced"
@@ -3613,7 +3629,7 @@ IAQFan   "ThreeBedroomIAQFan"
    SetPerfByHVIInterp = 0
    ..
 
-IAQFan   "StudioIAQFan"  
+IAQFan   "StudioIAQFan"
    IAQCFM = 31.2
    WperCFMIAQ = 0.6
    IAQFanType = "Balanced"
@@ -3621,7 +3637,7 @@ IAQFan   "StudioIAQFan"
    SetPerfByHVIInterp = 0
    ..
 
-DHWSys   "DHWGas"  
+DHWSys   "DHWGas"
    SystemType = "Standard"
    MFamDistType = "Multi-family: Recirculating with no control (continuous pumping)"
    CentralDHW = 1
@@ -3639,7 +3655,7 @@ DHWSys   "DHWGas"
    TotBathsServed = 1
    ..
 
-DHWSys   "DHWHeatpump"  
+DHWSys   "DHWHeatpump"
    SystemType = "Standard"
    MFamDistType = "Multi-family: Recirculation demand control"
    CentralDHW = 1
@@ -3661,7 +3677,7 @@ DHWSys   "DHWHeatpump"
    TotBathsServed = 1
    ..
 
-DHWSys   "DHWElectric"  
+DHWSys   "DHWElectric"
    SystemType = "Standard"
    MFamDistType = "Multi-family: No loops or recirc pump"
    CentralDHW = 0
@@ -3675,7 +3691,7 @@ DHWSys   "DHWElectric"
    SolFracType = "- none -"
    ..
 
-DHWHeater   "Gas"  
+DHWHeater   "Gas"
    HeaterElementType = "Gas"
    TankType = "Commercial Storage (TE & SBL)"
    HPWH_NEEARated = 0
@@ -3692,7 +3708,7 @@ DHWHeater   "Gas"
    ElecMiniTankPower = 0
    ..
 
-DHWHeater   "Heatpump"  
+DHWHeater   "Heatpump"
    HeaterElementType = "Heat Pump"
    TankType = "Small Storage"
    HPWH_NEEARated = 1
@@ -3711,7 +3727,7 @@ DHWHeater   "Heatpump"
    ElecMiniTankPower = 0
    ..
 
-DHWHeater   "Electric"  
+DHWHeater   "Electric"
    HeaterElementType = "Electric Resistance"
    TankType = "Consumer Instantaneous (UEF)"
    HPWH_NEEARated = 0
@@ -3729,7 +3745,7 @@ DHWHeater   "Electric"
    ElecMiniTankPower = 0
    ..
 
-DHWLoopTankHeater   "LoopTank2"  
+DHWLoopTankHeater   "LoopTank2"
    whEF = 0.97
    whResHtPwr = 20000
    whVol = 300
@@ -3739,3 +3755,4 @@ DHWLoopTankHeater   "LoopTank2"
 
 
 END_OF_FILE
+// END TEMPLATE 'C:/Users/mnakajima/Documents/GitHub/T24-2022-CASE-Modeling/framework/prototypes/cbecc-res/low-rise-loaded-corridor-cathedral/root.pxt'
