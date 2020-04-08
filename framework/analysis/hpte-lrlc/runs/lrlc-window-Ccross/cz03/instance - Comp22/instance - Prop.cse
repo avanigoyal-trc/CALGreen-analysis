@@ -1,4 +1,4 @@
- #define  RunDateFmt  17:17, Mon, Mar 30, 2020
+ #define  RunDateFmt  16:03, Thu, Apr 02, 2020
  #define  RunID                7   // Proposed
  #define  AnalysisType        12   // Proposed Only
  #define  CompCodeBase      2022   // CA2022
@@ -89,7 +89,7 @@ CONSTRUCTION   "cc-Exterior Wall Cons"
       lrThk = 0.458333                  // Thickness (feet), ft
 
    LAYER   "cl3-Exterior Wall Cons"  
-      lrMat = "m-Insul-R4-D1.5-SH0.35-C0.02083"    // Layer material
+      lrMat = "m-Insul-R1.75-D1.5-SH0.35-C0.04762"    // Layer material
       lrThk = 0.083333                  // Thickness (feet), ft
 
    LAYER   "cl4-Exterior Wall Cons"  
@@ -107,7 +107,7 @@ CONSTRUCTION   "fc-Exterior Wall Cons"
       lrThk = 0.458333                  // Thickness (feet), ft
 
    LAYER   "fl3-Exterior Wall Cons"  
-      lrMat = "m-Insul-R4-D1.5-SH0.35-C0.02083"    // Layer material
+      lrMat = "m-Insul-R1.75-D1.5-SH0.35-C0.04762"    // Layer material
       lrThk = 0.083333                  // Thickness (feet), ft
 
    LAYER   "fl4-Exterior Wall Cons"  
@@ -385,15 +385,15 @@ CONSTRUCTION   "cc-Cathedral Ceiling"
       lrThk = 0.041667                  // Thickness (feet), ft
 
    LAYER   "cl2-Cathedral Ceiling"  
-      lrMat = "m-Ins-R30-D1.5-SH0.2-C0.02569"    // Layer material
-      lrThk = 0.770833                  // Thickness (feet), ft
+      lrMat = "m-Ins-R25-D1.5-SH0.2-C0.02417"    // Layer material
+      lrThk = 0.604167                  // Thickness (feet), ft
 
    LAYER   "cl3-Cathedral Ceiling"  
       lrMat = "m-Wood layer"            // Layer material
       lrThk = 0.041667                  // Thickness (feet), ft
 
    LAYER   "cl4-Cathedral Ceiling"  
-      lrMat = "m-Insul-R5-D1.5-SH0.35-C0.01667"    // Layer material
+      lrMat = "m-Insul-R6-D1.5-SH0.35-C0.01389"    // Layer material
       lrThk = 0.083333                  // Thickness (feet), ft
 
    LAYER   "cl5-Cathedral Ceiling"  
@@ -408,14 +408,14 @@ CONSTRUCTION   "fc-Cathedral Ceiling"
 
    LAYER   "fl2-Cathedral Ceiling"  
       lrMat = "m-SoftWood"              // Layer material
-      lrThk = 0.770833                  // Thickness (feet), ft
+      lrThk = 0.604167                  // Thickness (feet), ft
 
    LAYER   "fl3-Cathedral Ceiling"  
       lrMat = "m-Wood layer"            // Layer material
       lrThk = 0.041667                  // Thickness (feet), ft
 
    LAYER   "fl4-Cathedral Ceiling"  
-      lrMat = "m-Insul-R5-D1.5-SH0.35-C0.01667"    // Layer material
+      lrMat = "m-Insul-R6-D1.5-SH0.35-C0.01389"    // Layer material
       lrThk = 0.083333                  // Thickness (feet), ft
 
    LAYER   "fl5-Cathedral Ceiling"  
@@ -504,10 +504,10 @@ MATERIAL   "m-Gypsum Board"
    matCond = 0.09167                    // Conductivity (always per foot of thickness), Btuh-ft/ft2-°F
    matCondCT = 0.000122                 // Coefficient for temperature adjustment of matCond in the forward difference surface conduction model, F(-1)
 
-MATERIAL   "m-Insul-R4-D1.5-SH0.35-C0.02083"  
+MATERIAL   "m-Insul-R1.75-D1.5-SH0.35-C0.04762"  
    matDens = 1.5                        // Density, lb/ft3
    matSpHt = 0.35                       // Specific heat of material, Btu/lb-°F
-   matCond = 0.020833                   // Conductivity (always per foot of thickness), Btuh-ft/ft2-°F
+   matCond = 0.047617                   // Conductivity (always per foot of thickness), Btuh-ft/ft2-°F
    matCondCT = 0.00175                  // Coefficient for temperature adjustment of matCond in the forward difference surface conduction model, F(-1)
 
 MATERIAL   "m-Synthetic Stucco"  
@@ -557,10 +557,10 @@ MATERIAL   "m-3 Coat Stucco"
    matSpHt = 0.2                        // Specific heat of material, Btu/lb-°F
    matCond = 0.4167                     // Conductivity (always per foot of thickness), Btuh-ft/ft2-°F
 
-MATERIAL   "m-Insul-R5-D1.5-SH0.35-C0.01667"  
+MATERIAL   "m-Insul-R6-D1.5-SH0.35-C0.01389"  
    matDens = 1.5                        // Density, lb/ft3
    matSpHt = 0.35                       // Specific heat of material, Btu/lb-°F
-   matCond = 0.016666                   // Conductivity (always per foot of thickness), Btuh-ft/ft2-°F
+   matCond = 0.013888                   // Conductivity (always per foot of thickness), Btuh-ft/ft2-°F
    matCondCT = 0.00175                  // Coefficient for temperature adjustment of matCond in the forward difference surface conduction model, F(-1)
 
 MATERIAL   "m-Ins-R21-D1.5-SH0.2-C0.02183"  
@@ -581,10 +581,10 @@ MATERIAL   "m-Ins-R18-D1.5-SH0.2-C0.02546"
    matCond = 0.025463                   // Conductivity (always per foot of thickness), Btuh-ft/ft2-°F
    matCondCT = 0.003254                 // Coefficient for temperature adjustment of matCond in the forward difference surface conduction model, F(-1)
 
-MATERIAL   "m-Ins-R30-D1.5-SH0.2-C0.02569"  
+MATERIAL   "m-Ins-R25-D1.5-SH0.2-C0.02417"  
    matDens = 1.5                        // Density, lb/ft3
    matSpHt = 0.2                        // Specific heat of material, Btu/lb-°F
-   matCond = 0.025694                   // Conductivity (always per foot of thickness), Btuh-ft/ft2-°F
+   matCond = 0.024167                   // Conductivity (always per foot of thickness), Btuh-ft/ft2-°F
    matCondCT = 0.00418                  // Coefficient for temperature adjustment of matCond in the forward difference surface conduction model, F(-1)
 
 MATERIAL   "m-SNEICConcrete"  

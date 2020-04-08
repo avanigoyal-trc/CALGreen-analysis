@@ -5,7 +5,7 @@ Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Heat Pump DHW"
    SoftwareVersionDetail = "CBECC-Res 2022.0.2 RV (1133)"
    BEMVersion = 8
    CreateDate = 1579908925
-   ModDate = 1585677999
+   ModDate = 1585868629
    ProjFileName = "instance.ribd22"
    RunTitle = "TDSv30 V06R12 V06 R12 UGLASS15 NGAS PVSTD"
    AnalysisType = "Proposed Only"
@@ -1911,14 +1911,14 @@ EUseSummary   "EUSummary"
    Title3[4] = "(kTDV/ft²-yr)"
    Title3[10] = "(kW)"
    Enduse1[1] = "Space Heating"
-   Enduse1[2] = "12,850"
-   Enduse1[3] = "1,081.2"
-   Enduse1[4] = "19.14"
+   Enduse1[2] = "12,981"
+   Enduse1[3] = "1,136.7"
+   Enduse1[4] = "19.74"
    Enduse1[10] = "0.00"
    Enduse2[1] = "Space Cooling"
-   Enduse2[2] = "15,216"
-   Enduse2[4] = "22.90"
-   Enduse2[10] = "13.58"
+   Enduse2[2] = "15,634"
+   Enduse2[4] = "23.61"
+   Enduse2[10] = "13.98"
    Enduse3[1] = "IAQ Ventilation"
    Enduse3[2] = "16,204"
    Enduse3[4] = "11.03"
@@ -1936,9 +1936,9 @@ EUseSummary   "EUSummary"
    Enduse6[4] = "13.45"
    Enduse6[10] = "3.88"
    Enduse7[1] = "Appl. & Cooking"
-   Enduse7[2] = "25,435"
+   Enduse7[2] = "25,423"
    Enduse7[3] = "1,344.3"
-   Enduse7[4] = "28.63"
+   Enduse7[4] = "28.62"
    Enduse7[10] = "3.45"
    Enduse8[1] = "Plug Loads"
    Enduse8[2] = "61,865"
@@ -1949,15 +1949,15 @@ EUseSummary   "EUSummary"
    Enduse9[4] = "1.27"
    Enduse9[10] = "0.29"
    Enduse10[1] = "TOTAL"
-   Enduse10[2] = "151,200"
-   Enduse10[3] = "6,999.1"
-   Enduse10[4] = "176.97"
-   Enduse10[10] = "32.30"
+   Enduse10[2] = "151,736"
+   Enduse10[3] = "7,054.6"
+   Enduse10[4] = "178.27"
+   Enduse10[10] = "32.70"
    Enduse11[1] = "Compliance Total"
-   Enduse11[2] = "44,467"
-   Enduse11[3] = "5,654.8"
-   Enduse11[4] = "91.37"
-   Enduse11[10] = "15.46"
+   Enduse11[2] = "45,015"
+   Enduse11[3] = "5,710.3"
+   Enduse11[4] = "92.68"
+   Enduse11[10] = "15.86"
    Enduse13[1] = "Photovoltaics"
    Enduse13[2] = "-1,601"
    Enduse13[4] = "-0.84"
@@ -1969,14 +1969,14 @@ EUseSummary   "EUSummary"
    Enduse99[1] = "Self Utilization Credit"
    PropDesignPVInp[1] = 1
    PropDesignPVInp[6] = 1
-   UnscaledPropPVRatio = 0.0104799
-   PropElecCarbon[1] = 21.2096
-   PropFuelCarbon[1] = 31.5592
-   PropFinalCarbon[1] = 52.7687
-   PropExclExpCarbon[1] = 52.7687
+   UnscaledPropPVRatio = 0.0104432
+   PropElecCarbon[1] = 21.2793
+   PropFuelCarbon[1] = 31.8094
+   PropFinalCarbon[1] = 53.0886
+   PropExclExpCarbon[1] = 53.0886
    PropExportCarbon[1] = 0
    PropSelfConsCarbon[1] = 0.0444921
-   PropNoSolFlxCarbon[1] = 52.8132
+   PropNoSolFlxCarbon[1] = 53.1331
    HideCompSummary = 4
    HideEDRs = 4
    HideC02Emissions = 0
@@ -2069,7 +2069,7 @@ Cons   "Exterior Wall Cons"
    CavityLayer = "R 21"
    FrameLayer = "2x6 @ 16 in. O.C."
    SheathInsulLayer = "- specify R-value -"
-   SheathInsulLayerRVal = 4
+   SheathInsulLayerRVal = 1.75
    WallExtFinishLayer = "Synthetic Stucco"
    OtherSideFinishLayer = "Gypsum Board"
    FlrExtFinishLayer = "- select finish -"
@@ -2356,7 +2356,7 @@ Cons   "Cathedral Ceiling"
    CanAssignTo = "Cathedral Ceilings"
    Type = "Wood Framed Ceiling"
    RoofingLayer = "5 PSF (Normal Gravel)"
-   AbvDeckInsulLayer = "R7 Sheathing"
+   AbvDeckInsulLayer = "R2 Sheathing"
    RoofDeckLayer = "Wood Siding/sheathing/decking"
    InsideFinishLayer = "Gypsum Board"
    AtticFloorLayer = "- no attic floor -"
@@ -2614,12 +2614,21 @@ Mat   "Insul-R5-D1.5-SH0.35-C0.01667"
    ConductivityCT = 0.00175
    ..
 
-Mat   "Insul-R7-D1.5-SH0.35-C0.0119"  
+Mat   "Insul-R1.75-D1.5-SH0.35-C0.04762"  
    Thickness = 1
    Density = 1.5
    SpecHeat = 0.35
-   Conductivity = 0.0119043
-   ConductivityQII = 0.0119043
+   Conductivity = 0.0476171
+   ConductivityQII = 0.0476171
+   ConductivityCT = 0.00175
+   ..
+
+Mat   "Insul-R2-D1.5-SH0.35-C0.04167"  
+   Thickness = 1
+   Density = 1.5
+   SpecHeat = 0.35
+   Conductivity = 0.041665
+   ConductivityQII = 0.041665
    ConductivityCT = 0.00175
    ..
 

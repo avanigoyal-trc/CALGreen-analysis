@@ -5,7 +5,7 @@ Proj   "2019 Prototype 39372ft2 Prop Mixed - In-Unit Heat Pump DHW"
    SoftwareVersionDetail = "CBECC-Res 2022.0.2 RV (1133)"
    BEMVersion = 8
    CreateDate = 1579908925
-   ModDate = 1585677894
+   ModDate = 1585868536
    ProjFileName = "instance.ribd22"
    RunTitle = "TDSv30 V06R12 V06 R12 UGLASS15 NGAS PVSTD"
    AnalysisType = "Proposed Only"
@@ -1911,14 +1911,14 @@ EUseSummary   "EUSummary"
    Title3[4] = "(kTDV/ft²-yr)"
    Title3[10] = "(kW)"
    Enduse1[1] = "Space Heating"
-   Enduse1[2] = "12,071"
-   Enduse1[3] = "667.0"
-   Enduse1[4] = "14.50"
+   Enduse1[2] = "12,172"
+   Enduse1[3] = "707.4"
+   Enduse1[4] = "14.93"
    Enduse1[10] = "0.01"
    Enduse2[1] = "Space Cooling"
-   Enduse2[2] = "452"
-   Enduse2[4] = "2.47"
-   Enduse2[10] = "0.26"
+   Enduse2[2] = "469"
+   Enduse2[4] = "2.58"
+   Enduse2[10] = "0.27"
    Enduse3[1] = "IAQ Ventilation"
    Enduse3[2] = "16,204"
    Enduse3[4] = "11.09"
@@ -1936,9 +1936,9 @@ EUseSummary   "EUSummary"
    Enduse6[4] = "13.74"
    Enduse6[10] = "3.88"
    Enduse7[1] = "Appl. & Cooking"
-   Enduse7[2] = "24,618"
+   Enduse7[2] = "24,606"
    Enduse7[3] = "1,344.3"
-   Enduse7[4] = "28.12"
+   Enduse7[4] = "28.11"
    Enduse7[10] = "3.23"
    Enduse8[1] = "Plug Loads"
    Enduse8[2] = "61,865"
@@ -1949,15 +1949,15 @@ EUseSummary   "EUSummary"
    Enduse9[4] = "1.31"
    Enduse9[10] = "0.29"
    Enduse10[1] = "TOTAL"
-   Enduse10[2] = "134,844"
-   Enduse10[3] = "6,843.7"
-   Enduse10[4] = "154.51"
-   Enduse10[10] = "18.76"
+   Enduse10[2] = "134,950"
+   Enduse10[3] = "6,884.1"
+   Enduse10[4] = "155.04"
+   Enduse10[10] = "18.78"
    Enduse11[1] = "Compliance Total"
-   Enduse11[2] = "28,923"
-   Enduse11[3] = "5,499.4"
-   Enduse11[4] = "68.41"
-   Enduse11[10] = "2.13"
+   Enduse11[2] = "29,041"
+   Enduse11[3] = "5,539.7"
+   Enduse11[4] = "68.95"
+   Enduse11[10] = "2.15"
    Enduse13[1] = "Photovoltaics"
    Enduse13[2] = "-1,596"
    Enduse13[4] = "-0.83"
@@ -1969,14 +1969,14 @@ EUseSummary   "EUSummary"
    Enduse99[1] = "Self Utilization Credit"
    PropDesignPVInp[1] = 1
    PropDesignPVInp[6] = 1
-   UnscaledPropPVRatio = 0.0116948
-   PropElecCarbon[1] = 18.7376
-   PropFuelCarbon[1] = 30.8582
-   PropFinalCarbon[1] = 49.5958
-   PropExclExpCarbon[1] = 49.5958
+   UnscaledPropPVRatio = 0.0116857
+   PropElecCarbon[1] = 18.7563
+   PropFuelCarbon[1] = 31.0402
+   PropFinalCarbon[1] = 49.7965
+   PropExclExpCarbon[1] = 49.7965
    PropExportCarbon[1] = 0
    PropSelfConsCarbon[1] = 0.047168
-   PropNoSolFlxCarbon[1] = 49.643
+   PropNoSolFlxCarbon[1] = 49.8437
    HideCompSummary = 4
    HideEDRs = 4
    HideC02Emissions = 0
@@ -2069,7 +2069,7 @@ Cons   "Exterior Wall Cons"
    CavityLayer = "R 21"
    FrameLayer = "2x6 @ 16 in. O.C."
    SheathInsulLayer = "- specify R-value -"
-   SheathInsulLayerRVal = 4
+   SheathInsulLayerRVal = 1.75
    WallExtFinishLayer = "Synthetic Stucco"
    OtherSideFinishLayer = "Gypsum Board"
    FlrExtFinishLayer = "- select finish -"
@@ -2356,7 +2356,7 @@ Cons   "Cathedral Ceiling"
    CanAssignTo = "Cathedral Ceilings"
    Type = "Wood Framed Ceiling"
    RoofingLayer = "5 PSF (Normal Gravel)"
-   AbvDeckInsulLayer = "R5 Sheathing"
+   AbvDeckInsulLayer = "R6 Sheathing"
    RoofDeckLayer = "Wood Siding/sheathing/decking"
    InsideFinishLayer = "Gypsum Board"
    AtticFloorLayer = "- no attic floor -"
@@ -2370,8 +2370,8 @@ Cons   "Cathedral Ceiling"
    FurringInsulLayer = "- no insulation -"
    Furring2Layer = "- none -"
    FurringLayer = "- none -"
-   CavityLayer = "R 30"
-   FrameLayer = "2x10 @ 16 in. O.C."
+   CavityLayer = "R 25"
+   FrameLayer = "2x8 @ 16 in. O.C."
    SheathInsulLayer = "- no sheathing/insul. -"
    WallExtFinishLayer = "- select finish -"
    OtherSideFinishLayer = "Gypsum Board"
@@ -2614,11 +2614,20 @@ Mat   "Insul-R5-D1.5-SH0.35-C0.01667"
    ConductivityCT = 0.00175
    ..
 
-Mat   "Ins-R30-D1.5-SH0.2-C0.02569"  
+Mat   "Insul-R1.75-D1.5-SH0.35-C0.04762"  
+   Thickness = 1
+   Density = 1.5
+   SpecHeat = 0.35
+   Conductivity = 0.0476171
+   ConductivityQII = 0.0476171
+   ConductivityCT = 0.00175
+   ..
+
+Mat   "Ins-R25-D1.5-SH0.2-C0.02417"  
    Density = 1.5
    SpecHeat = 0.2
-   Conductivity = 0.0256944
-   ConductivityQII = 0.0256944
+   Conductivity = 0.0241667
+   ConductivityQII = 0.0241667
    ConductivityCT = 0.00418
    ..
 

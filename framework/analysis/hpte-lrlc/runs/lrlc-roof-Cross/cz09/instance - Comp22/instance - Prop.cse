@@ -1,4 +1,4 @@
- #define  RunDateFmt  18:57, Mon, Mar 30, 2020
+ #define  RunDateFmt  15:30, Thu, Apr 02, 2020
  #define  RunID                7   // Proposed
  #define  AnalysisType        12   // Proposed Only
  #define  CompCodeBase      2022   // CA2022
@@ -89,7 +89,7 @@ CONSTRUCTION   "cc-Exterior Wall Cons"
       lrThk = 0.458333                  // Thickness (feet), ft
 
    LAYER   "cl3-Exterior Wall Cons"  
-      lrMat = "m-Insul-R4-D1.5-SH0.35-C0.02083"    // Layer material
+      lrMat = "m-Insul-R1.75-D1.5-SH0.35-C0.04762"    // Layer material
       lrThk = 0.083333                  // Thickness (feet), ft
 
    LAYER   "cl4-Exterior Wall Cons"  
@@ -107,7 +107,7 @@ CONSTRUCTION   "fc-Exterior Wall Cons"
       lrThk = 0.458333                  // Thickness (feet), ft
 
    LAYER   "fl3-Exterior Wall Cons"  
-      lrMat = "m-Insul-R4-D1.5-SH0.35-C0.02083"    // Layer material
+      lrMat = "m-Insul-R1.75-D1.5-SH0.35-C0.04762"    // Layer material
       lrThk = 0.083333                  // Thickness (feet), ft
 
    LAYER   "fl4-Exterior Wall Cons"  
@@ -504,10 +504,10 @@ MATERIAL   "m-Gypsum Board"
    matCond = 0.09167                    // Conductivity (always per foot of thickness), Btuh-ft/ft2-°F
    matCondCT = 0.000122                 // Coefficient for temperature adjustment of matCond in the forward difference surface conduction model, F(-1)
 
-MATERIAL   "m-Insul-R4-D1.5-SH0.35-C0.02083"  
+MATERIAL   "m-Insul-R1.75-D1.5-SH0.35-C0.04762"  
    matDens = 1.5                        // Density, lb/ft3
    matSpHt = 0.35                       // Specific heat of material, Btu/lb-°F
-   matCond = 0.020833                   // Conductivity (always per foot of thickness), Btuh-ft/ft2-°F
+   matCond = 0.047617                   // Conductivity (always per foot of thickness), Btuh-ft/ft2-°F
    matCondCT = 0.00175                  // Coefficient for temperature adjustment of matCond in the forward difference surface conduction model, F(-1)
 
 MATERIAL   "m-Synthetic Stucco"  
@@ -3225,8 +3225,8 @@ ZONE   "Zone1-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "None"               // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -3239,8 +3239,8 @@ ZONE   "Zone1-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "Inscrn"             // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -3262,8 +3262,8 @@ ZONE   "Zone1-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "None"               // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -3276,8 +3276,8 @@ ZONE   "Zone1-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "Inscrn"             // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -3299,8 +3299,8 @@ ZONE   "Zone1-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "None"               // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -3313,8 +3313,8 @@ ZONE   "Zone1-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "Inscrn"             // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -3336,8 +3336,8 @@ ZONE   "Zone1-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "None"               // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -3350,8 +3350,8 @@ ZONE   "Zone1-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "Inscrn"             // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -3996,8 +3996,8 @@ ZONE   "Zone2-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "None"               // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -4010,8 +4010,8 @@ ZONE   "Zone2-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "Inscrn"             // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -4033,8 +4033,8 @@ ZONE   "Zone2-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "None"               // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -4047,8 +4047,8 @@ ZONE   "Zone2-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "Inscrn"             // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -4070,8 +4070,8 @@ ZONE   "Zone2-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "None"               // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -4084,8 +4084,8 @@ ZONE   "Zone2-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "Inscrn"             // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -4107,8 +4107,8 @@ ZONE   "Zone2-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "None"               // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -4121,8 +4121,8 @@ ZONE   "Zone2-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "Inscrn"             // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -4863,8 +4863,8 @@ ZONE   "Zone3-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "None"               // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -4877,8 +4877,8 @@ ZONE   "Zone3-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "Inscrn"             // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -4900,8 +4900,8 @@ ZONE   "Zone3-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "None"               // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -4914,8 +4914,8 @@ ZONE   "Zone3-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "Inscrn"             // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -4937,8 +4937,8 @@ ZONE   "Zone3-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "None"               // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -4951,8 +4951,8 @@ ZONE   "Zone3-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "Inscrn"             // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -4974,8 +4974,8 @@ ZONE   "Zone3-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "None"               // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -4988,8 +4988,8 @@ ZONE   "Zone3-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "Inscrn"             // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -5531,8 +5531,8 @@ ZONE   "Laundry1-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "None"               // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -5545,8 +5545,8 @@ ZONE   "Laundry1-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "Inscrn"             // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -5703,8 +5703,8 @@ ZONE   "LeasingOffice1-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "None"               // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -5717,8 +5717,8 @@ ZONE   "LeasingOffice1-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "Inscrn"             // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -5855,8 +5855,8 @@ ZONE   "Lobby1-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "None"               // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
@@ -5869,8 +5869,8 @@ ZONE   "Lobby1-zn"
          wnModel = "ASHWAT"             // Window model
          wnFMult = 0.85                 // F? multiplier
          wnNGlz = 2                     // Number of glazing layers
-         wnUnfrc = 0.3                  // NFRC U-factor, Btuh/ft2-°F
-         wnSHGC = 0.23                  // NFRC solar heat gain coefficient
+         wnUnfrc = 0.36                 // NFRC U-factor, Btuh/ft2-°F
+         wnSHGC = 0.25                  // NFRC solar heat gain coefficient
          wnDirtLoss = 0.1               // Dirt loss factor
          wnExShd = "Inscrn"             // Exterior shade type
          wnInShd = "DrapeMed"           // Interior shade type
