@@ -4,8 +4,8 @@ Proj   "Mid-Rise Mixed-Use (5-story)"
    Ruleset = "CA 2022 Nonresidential, Vers. 1.0 Alpha (T24N_2022.bin)"
    BldgEngyModelVersion = 14
    CreateDate = 1567115615
-   ModDate = 1585187160
-   RunDate = 1585187161
+   ModDate = 1586499567
+   RunDate = 1586499568
    GasType = "NaturalGas"
    CliZn = "ClimateZone3"
    WeatherStation = "CTZ03S22A"
@@ -64,6 +64,11 @@ Mat   "Compliance Insulation R4x"
    CodeItem = "Compliance Insulation R4.00"
    ..
 
+Mat   "Compliance Insulation R1.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R1.00"
+   ..
+
 Mat   "Compliance Insulation R1.35"  
    CodeCat = "Insulation Board"
    CodeItem = "Compliance Insulation R1.35"
@@ -74,14 +79,24 @@ Mat   "Compliance Insulation R3.00"
    CodeItem = "Compliance Insulation R3.00"
    ..
 
-Mat   "Compliance Insulation R7.10"  
-   CodeCat = "Insulation Board"
-   CodeItem = "Compliance Insulation R7.10"
-   ..
-
 Mat   "Compliance Insulation R3.63"  
    CodeCat = "Insulation Board"
    CodeItem = "Compliance Insulation R3.63"
+   ..
+
+Mat   "Compliance Insulation R4.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R4.00"
+   ..
+
+Mat   "Compliance Insulation R6.00"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R6.00"
+   ..
+
+Mat   "Compliance Insulation R7.10"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R7.10"
    ..
 
 Mat   "WoodFrameWall16inOC R11.25"  
@@ -174,7 +189,7 @@ FenCons   "Res Fixed Window"
    FenProdType = "OperableWindow"
    SHGC = 0.26
    UFactor = 0.46
-   VT = 0.42
+   VT = 0.32
    ..
 
 Bldg   "Building 1"  
@@ -16509,7 +16524,7 @@ SpcFuncDefaults   "Corridor Space"
 FenCons   "Nonres Fixed Window"  
    FenProdType = "FixedWindow"
    SHGC = 0.25
-   UFactor = 0.46
+   UFactor = 0.36
    VT = 0.42
    ..
 
@@ -16594,12 +16609,28 @@ Mat   "WoodRoof16OCCavInsR31"
    CavityIns = 31
    ..
 
+Mat   "WoodRoof16OCCavInsR30"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "7_25In"
+   CavityIns = 30
+   ..
+
 Mat   "WoodRoof16OCCavInsR29"  
    CodeCat = "Composite"
    FrmMat = "Wood"
    FrmConfig = "Roof16inOC"
    FrmDepth = "7_25In"
    CavityIns = 29
+   ..
+
+Mat   "WoodRoof16OCCavInsR28"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "7_25In"
+   CavityIns = 28
    ..
 
 Mat   "WoodRoof16OCCavInsR27"  
@@ -16616,6 +16647,14 @@ Mat   "WoodRoof16OCCavInsR25"
    FrmConfig = "Roof16inOC"
    FrmDepth = "7_25In"
    CavityIns = 25
+   ..
+
+Mat   "WoodRoof16OCCavInsR23"  
+   CodeCat = "Composite"
+   FrmMat = "Wood"
+   FrmConfig = "Roof16inOC"
+   FrmDepth = "7_25In"
+   CavityIns = 23
    ..
 
 Mat   "WoodRoof16OCCavInsR20"  
@@ -16809,11 +16848,6 @@ Mat   "Compliance Insulation R0.10"
    CodeItem = "Compliance Insulation R0.10"
    ..
 
-Mat   "Compliance Insulation R4.00"  
-   CodeCat = "Insulation Board"
-   CodeItem = "Compliance Insulation R4.00"
-   ..
-
 Mat   "WoodFrameWall16inOCCavInsR5"  
    CodeCat = "Composite"
    CodeItem = "- specify -"
@@ -16962,11 +16996,6 @@ Mat   "Compliance Insulation R14.00"
    CodeItem = "Compliance Insulation R14.00"
    ..
 
-Mat   "Compliance Insulation R6.00"  
-   CodeCat = "Insulation Board"
-   CodeItem = "Compliance Insulation R6.00"
-   ..
-
 Mat   "Compliance Insulation R2.15"  
    CodeCat = "Insulation Board"
    CodeItem = "Compliance Insulation R2.15"
@@ -16990,11 +17019,6 @@ Mat   "Compliance Insulation R0.05"
 Mat   "Compliance Insulation R15.00"  
    CodeCat = "Insulation Board"
    CodeItem = "Compliance Insulation R15.00"
-   ..
-
-Mat   "Compliance Insulation R1.00"  
-   CodeCat = "Insulation Board"
-   CodeItem = "Compliance Insulation R1.00"
    ..
 
 Mat   "Compliance Insulation R2.00"  
@@ -17042,25 +17066,25 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Title3[19] = "Emis. (tonne)"
    Enduse1[1] = "Space Heating"
    Enduse1[2] = "0.0"
-   Enduse1[3] = "318.3"
-   Enduse1[4] = "7.40"
+   Enduse1[3] = "313.5"
+   Enduse1[4] = "7.29"
    Enduse1[9] = "--"
-   Enduse1[11] = "2.62"
+   Enduse1[11] = "2.58"
    Enduse1[17] = "0.00"
-   Enduse1[18] = "1.53"
-   Enduse1[19] = "1.53"
+   Enduse1[18] = "1.50"
+   Enduse1[19] = "1.50"
    Enduse2[1] = "Space Cooling"
    Enduse2[2] = "40.8"
    Enduse2[3] = "--"
    Enduse2[4] = "15.07"
-   Enduse2[9] = "13.3"
+   Enduse2[9] = "13.4"
    Enduse2[11] = "0.71"
    Enduse2[17] = "4.24"
    Enduse2[19] = "4.24"
    Enduse3[1] = "Indoor Fans"
-   Enduse3[2] = "49.7"
+   Enduse3[2] = "49.8"
    Enduse3[3] = "--"
-   Enduse3[4] = "12.86"
+   Enduse3[4] = "12.87"
    Enduse3[9] = "7.9"
    Enduse3[11] = "1.21"
    Enduse3[17] = "7.25"
@@ -17081,13 +17105,13 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Enduse5[19] = "0.04"
    Enduse6[1] = "Domestic Hot Water"
    Enduse6[2] = "13.7"
-   Enduse6[3] = "961.0"
-   Enduse6[4] = "23.65"
+   Enduse6[3] = "1,060.5"
+   Enduse6[4] = "25.75"
    Enduse6[9] = "2.3"
-   Enduse6[11] = "8.20"
+   Enduse6[11] = "9.02"
    Enduse6[17] = "1.74"
-   Enduse6[18] = "4.61"
-   Enduse6[19] = "6.35"
+   Enduse6[18] = "5.08"
+   Enduse6[19] = "6.82"
    Enduse7[1] = "Indoor Lighting"
    Enduse7[2] = "81.9"
    Enduse7[3] = "--"
@@ -17097,14 +17121,14 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Enduse7[17] = "9.05"
    Enduse7[19] = "9.05"
    Enduse8[1] = "Compliance Total"
-   Enduse8[2] = "186.4"
-   Enduse8[3] = "1,279.3"
-   Enduse8[4] = "78.34"
-   Enduse8[9] = "37.9"
-   Enduse8[11] = "14.26"
+   Enduse8[2] = "186.5"
+   Enduse8[3] = "1,374.0"
+   Enduse8[4] = "80.34"
+   Enduse8[9] = "38.0"
+   Enduse8[11] = "15.04"
    Enduse8[17] = "22.32"
-   Enduse8[18] = "6.14"
-   Enduse8[19] = "28.46"
+   Enduse8[18] = "6.58"
+   Enduse8[19] = "28.90"
    Enduse9[1] = "Receptacle"
    Enduse9[2] = "217.4"
    Enduse9[3] = "58.7"
@@ -17149,14 +17173,14 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Enduse14[9] = "--"
    Enduse14[11] = "--"
    Enduse15[1] = "TOTAL"
-   Enduse15[2] = "587.5"
-   Enduse15[3] = "1,338.0"
-   Enduse15[4] = "182.52"
-   Enduse15[9] = "105.9"
-   Enduse15[11] = "25.29"
+   Enduse15[2] = "587.6"
+   Enduse15[3] = "1,432.7"
+   Enduse15[4] = "184.52"
+   Enduse15[9] = "106.0"
+   Enduse15[11] = "26.07"
    Enduse15[17] = "85.68"
-   Enduse15[18] = "6.42"
-   Enduse15[19] = "92.10"
+   Enduse15[18] = "6.86"
+   Enduse15[19] = "92.54"
    ZoneUMLHsLoaded[1] = 1
    ZoneUMLHs[1] = "clg: 0  htg: 0  'Thermal Zone: F1 Business Center'
 clg: 0  htg: 0  'Thermal Zone: F1 Corridor'
@@ -17178,10 +17202,10 @@ clg: 0  htg: 7  'Thermal Zone: F5 2-Bed Core NE-NW'
 clg: 0  htg: 3  'Thermal Zone: F2-4 2-Bed East'
 clg: 0  htg: 2  'Thermal Zone: F2-4 2-Bed West'
 clg: 0  htg: 8  'Thermal Zone: F2-4 3-Bed NE'
-clg: 0  htg: 8  'Thermal Zone: F2-4 3-Bed NW'
-clg: 0  htg: 6  'Thermal Zone: F2-4 Studio SE'
+clg: 0  htg: 7  'Thermal Zone: F2-4 3-Bed NW'
+clg: 0  htg: 7  'Thermal Zone: F2-4 Studio SE'
 clg: 0  htg: 6  'Thermal Zone: F2-4 Studio SW'
-clg: 865  htg: 1806  'Thermal Zone: F2-4 Corridor'
+clg: 864  htg: 1808  'Thermal Zone: F2-4 Corridor'
 clg: 0  htg: 11  'Thermal Zone: F5 1-Bed Core N'
 clg: 0  htg: 18  'Thermal Zone: F5 1-Bed Core West'
 clg: 0  htg: 16  'Thermal Zone: F5 1-Bed Core East'
@@ -17191,7 +17215,7 @@ clg: 0  htg: 23  'Thermal Zone: F5 3-Bed NE'
 clg: 0  htg: 21  'Thermal Zone: F5 3-Bed NW'
 clg: 0  htg: 25  'Thermal Zone: F5 Studio SE'
 clg: 0  htg: 26  'Thermal Zone: F5 Studio SW'
-clg: 1052  htg: 2233  'Thermal Zone: F5 Corridor'
+clg: 1053  htg: 2233  'Thermal Zone: F5 Corridor'
 clg: 0  htg: 0  'Thermal Zone: Parking Garage'"
    SimSummary[1] = "Successful (222 warnings)"
    ..
