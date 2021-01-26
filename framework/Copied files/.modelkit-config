@@ -1,0 +1,20 @@
+
+cbecc-com-path = 'C:\Program Files (x86)\CBECC-Com 2022\CBECC-Com22.exe'
+cbecc-res-path = 'C:\Program Files (x86)\CBECC-Res 2022\CBECC-Res22.exe'
+cse-path = 'C:\Program Files (x86)\CBECC-Res 2022\CSE\CSE19.exe'
+
+max-workers = 3 # Maximum number of simulations to run in parallel
+
+cbecc-com-weather = 'C:\Users\Avani Goyal\Documents\CBECC-Com 2022 Data\EPW'
+
+
+[template-compose]
+annotate = true
+#indent = "    "  # Turn off indent because it adds blank lines that CBECC does not like
+esc-line = "// "
+
+[energyplus-run]
+engine = 'C:\EnergyPlusV9-0-1'  # Use full EnergyPlus installation, not CBECC-Com one; must be an absolute path
+readvars = true
+keep = false
+output-files = "eplusout.err; eplusout.sql; eplustbl.htm; eplusvar.csv"

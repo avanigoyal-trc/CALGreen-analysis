@@ -1,0 +1,104 @@
+---
+title: "Clean instance - run files"
+author: "Neil Perry"
+date: "June 11, 2020"
+output: html_document
+---
+
+### Install Packages
+```{r}
+install.packages("tidyverse")
+install.packages("fs")
+
+```
+
+#Load packages
+```{r echo=True, include=FALSE}
+library(tidyverse)
+library(fs)
+```
+
+```{r}
+#paste the directory you want to search (and remove files from) here with forward slashes
+searchdir = "C:/Users/ndperry/Documents/GitHub/T24-2022-CASE-Modeling/framework/analysis/hrmf-alt"
+searchdir = "C:/Users/ndperry/Documents/GitHub/2020-Reach-Codes-Modeling/framework/analysis/hrmf-alt"
+
+#paste the directory you want to move files to here with forward slashes
+pastedir = "C:/Users/ndperry/TRC/MF Title 24 Case 2022 - Documents/3-CASE Development/Modelkit files/NP Run files"
+
+pastedir = "C:/Users/ndperry/Documents/GitHub/2020-Reach-Codes-Modeling/framework/autosizing/high-rise"
+
+pastedir = "C:/Users/ndperry/desktop/temp"
+
+#find folders in searchdir path titled "instance - run"
+test_search = list.dirs(path=searchdir,recursive = TRUE)
+test_search = list.files(path=searchdir,recursive = TRUE)
+
+#use regular expressions to match end of string
+test_search_filtered_regex = test_search[grepl("instance - run$",test_search)]
+
+test_search_filtered_regex = test_search[grepl("ab - HVACPrimary.csv$",test_search)]
+test_search_filtered_regex = test_search[grepl("ap - HVACSecondary.csv$",test_search)]
+
+#reach code format, hasn't been tested yet
+test_search_filtered_regex = test_search[grepl(" - run$",test_search)]
+
+#as DF
+test_search_filtered_df = as.data.frame(test_search_filtered_regex)
+
+fullpath = paste(searchdir,test_search_filtered_regex,sep="/")
+```
+
+
+#Find run folders, copy, and paste elsewhere
+```{r pressure, echo=FALSE}
+
+#create for loop 
+i = 1
+
+for (value in test_search_filtered_regex){
+  #get folder name one level up
+  cz_name = gsub("/","",basename(dirname(test_search_filtered_regex[[i]])))
+  #get folder name two levels up
+  casefolder_name = gsub("/","",basename(dirname(dirname(test_search_filtered_regex[[i]]))))
+  
+  #generate target destination paste folder with case name and CZ
+  pastepath = path(pastedir,casefolder_name,cz_name)
+  
+  #move file or create destination folder if it doesn't exist then move
+  if(dir_exists(pastepath)){
+    file_move(test_search_filtered_regex[[i]],pastepath)
+  } else {
+    dir_create(pastepath)
+  file_move(test_search_filtered_regex[[i]],pastepath)
+  }
+  
+  i = i + 1
+}
+
+
+```
+
+#Find run folders, and copy elsewhere
+```{r pressure, echo=FALSE}
+
+#create for loop 
+i = 1
+
+for (value in fullpath){
+  
+  pastepath = path(pastedir)
+  
+  #move file or create destination folder if it doesn't exist then move
+    if(dir_exists(pastepath)){
+    file_copy(fullpath[[i]],pastepath)
+  } else {
+    dir_create(pastepath)
+  file_copy(fullpath[[i]],pastepath)
+  }
+  
+  i = i + 1
+}
+
+
+```

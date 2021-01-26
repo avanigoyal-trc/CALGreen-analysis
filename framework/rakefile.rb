@@ -229,7 +229,7 @@ task :compose do |task|
       #:indent => "    ",  # Turn off indent because it adds blank lines that CBECC does not like
       :"esc-line" => ESC_LINE[software_name],
       :dirs => "#{templates_dir}/#{software_name};#{case_dir}",
-      :files => "#{case_pxv_path};#{baseline_pxv_path};#{global_pxv_path}",
+      :files => "#{baseline_pxv_path};#{case_pxv_path};#{global_pxv_path}",
       :output => out_path)
   end
 
