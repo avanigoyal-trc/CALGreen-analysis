@@ -13,6 +13,7 @@ parameter "heating_capacity", :default => 0
 parameter "supply_fan_cfm", :default => 0
 parameter "supp_heating", :default => "Resistance"
 parameter "lockout_temp", :default => 17
+parameter "ctrl_method", :default => "ConstantVolume"
 %>
 
 ZnSys   "<%=zone_name%>"
@@ -51,6 +52,7 @@ Fan   "Fan <%=index%>"
   <%if supply_fan_cfm != 0 %>
   FlowCap = <%=supply_fan_cfm%>
   <%end%>
+  CtrlMthd = "<%=ctrl_method%>"
    ..
 
 CoilHtg   "SupCoilHtg <%=index%>"
