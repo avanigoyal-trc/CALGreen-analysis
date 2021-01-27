@@ -45,7 +45,7 @@ parameter "window_shgc", :default=>0.25
 parameter "window_vt", :default=>0.42
 parameter "window_type", :default=>"FixedWindow"
 parameter "heating_eff", :default=>0.8
-parameter "wattpercfm", :default => 0.45
+parameter "wattpercfm", :default => 0.58
 parameter "refcg_mult", :default => 1
 parameter "afuehspf_derate", :default => 1
 parameter "cfmperton", :default => 350
@@ -11777,7 +11777,8 @@ elsif (hvac_type == "SZHP_resfan")
            :zone_name => zones[a],
            :count => counts_original[a],
            :index => index[a],
-           :refcg_mult => refcg_mult
+           :refcg_mult => refcg_mult,
+		   :wattpercfm => wattpercfm
        end
 
    elsif (hvac_type == "SZAC_resfan")
@@ -11841,13 +11842,14 @@ elsif (hvac_type == "SZHP_resfan")
   insert template_name,
     :cooling_capacity => capacity_cooling[a],
     :heating_capacity => 0,
-    :supply_fan_cfm => supply_cfm[a],
+    :supply_fan_cfm => ((capacity_cooling[a].to_f*cfmperton.to_f)/12000),
     :zone_name => zones[a],
     :count => counts[a],
     :index => index[a],
-	 :refcg_mult => refcg_mult,
+	:refcg_mult => refcg_mult,
     :eer => eer,
-    :seer => seer
+    :seer => seer,
+	:wattpercfm => wattpercfm
 
   elsif (hvac_type == "SZHP_resfan")
   insert template_name,
@@ -11858,7 +11860,6 @@ elsif (hvac_type == "SZHP_resfan")
     :count => counts[a],
     :index => index[a],
 	:refcg_mult => refcg_mult,
-	:wattpercfm => wattpercfm,
 	:afuehspf_derate => afuehspf_derate
 
      elsif (hvac_type == "SZAC")
