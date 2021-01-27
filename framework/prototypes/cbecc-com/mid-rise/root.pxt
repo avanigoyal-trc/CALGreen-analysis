@@ -19,6 +19,7 @@ parameter "hspf", :default => 8.2
 parameter "seer", :default => 14
 parameter "eer", :default => 11.4
 parameter "afue", :default => 0.8
+parameter "ctrl_method", :default=> "ctrl_method"
 
 #parameters for residential DHW
 
@@ -16373,14 +16374,22 @@ end
 if (autosizing == "No")
 
 
-if (hvac_type == "SZHP" or hvac_type == "SZAC" or hvac_type == "SZAC_rescfm")
+if (hvac_type == "SZHP")
     for a in 0..num_zones do
       insert template_name,
         :zone_name => zones[a],
         :count => counts_original[a],
         :index => index[a],
-        :refcg_mult => refcg_mult
+        :ctrl_method => ctrl_method
     end
+elsif (hvac_type == "SZAC" or hvac_type == "SZAC_rescfm" )
+    for a in 0..num_zones do
+            insert template_name,
+            :zone_name => zones[a],
+            :count => counts_original[a],
+            :index => index[a],
+            :refcg_mult => refcg_mult
+         end
 
 elsif (hvac_type == "SZAC_resfan")
     for a in 0..num_zones do
@@ -16450,9 +16459,10 @@ for a in 0..num_zones do
     :zone_name => zones[a],
     :count => counts[a],
     :index => index[a],
-	 :refcg_mult => refcg_mult,
     :eer => eer,
-    :seer => seer
+    :seer => seer,
+    :hspf => hspf, 
+    :ctrl_method => ctrl_method
 
   elsif (hvac_type == "SZHP_resfan")
   insert template_name,
@@ -16534,7 +16544,9 @@ indices = [num_zones + 2, num_zones + 3, num_zones + 4, num_zones + 5]
    :count => lc_counts[a],
    :index => indices[a],
    :seer => seer,
-   :eer => eer
+   :eer => eer,
+   :hspf => hspf,
+   :ctrl_method => ctrl_method
 
 
 
@@ -16544,7 +16556,11 @@ indices = [num_zones + 2, num_zones + 3, num_zones + 4, num_zones + 5]
     :supply_fan_cfm => corridor_supply_cfm,
     :zone_name => corridor_zones[a],
     :count => lc_counts[a],
-    :index => indices[a + 2]
+    :index => indices[a + 2],
+    :seer => seer, 
+    :eer => eer, 
+    :hspf => hspf, 
+    :ctrl_method = ctrl_method
 
  end
  

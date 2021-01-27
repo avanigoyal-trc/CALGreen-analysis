@@ -23,6 +23,7 @@ parameter "laundry_supply_cfm", :default =>180
 parameter "seer", :default => 14
 parameter "hspf", :default => 8.2
 parameter "eer", :default => 11.4
+parameter "ctrl_method", :default => "ConstantVolume"
 
 
 parameter "is_central_dhw"
@@ -11771,14 +11772,23 @@ elsif (hvac_type == "SZHP_resfan")
 
    if (autosizing == "No")
 
-   if (hvac_type == "SZHP" or hvac_type == "SZAC" or hvac_type == "SZAC_rescfm")
+   if (hvac_type == "SZHP")
        for a in 0..num_zones do
          insert template_name,
            :zone_name => zones[a],
            :count => counts_original[a],
            :index => index[a],
-           :refcg_mult => refcg_mult
+           :ctrl_method => ctrl_method
        end
+   
+   elsif(hvac_type == "SZAC" or hvac_type == "SZAC_rescfm" )
+      for a in 0..num_zones do
+            insert template_name,
+            :zone_name => zones[a],
+            :count => counts_original[a],
+            :index => index[a],
+            :refcg_mult => refcg_mult
+         end
 
    elsif (hvac_type == "SZAC_resfan")
        for a in 0..num_zones do
@@ -11847,7 +11857,9 @@ elsif (hvac_type == "SZHP_resfan")
     :index => index[a],
 	 :refcg_mult => refcg_mult,
     :eer => eer,
-    :seer => seer
+    :seer => seer,
+    :hspf => hspf,
+    :ctrl_method => ctrl_method
 
   elsif (hvac_type == "SZHP_resfan")
   insert template_name,
@@ -11947,7 +11959,9 @@ elsif (hvac_type == "SZHP_resfan")
       :count => lc_counts[a],
       :index => indices[a],
       :seer => seer,
-      :eer => eer
+      :eer => eer,
+      :hspf => hspf,
+      :ctrl_method => ctrl_method
 
 
 
@@ -11959,7 +11973,9 @@ elsif (hvac_type == "SZHP_resfan")
       :count => lc_counts[a],
       :index => indices[a + 2],
       :seer => seer,
-      :eer => eer
+      :eer => eer,
+      :hspf => hspf,
+      :ctrl_method => ctrl_method
 
    end
 
