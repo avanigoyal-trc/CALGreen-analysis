@@ -10,7 +10,7 @@
 //   vrf_cu_model = nil
 //   hspf = 8.2
 //   seer = 14
-//   eer = 11.4
+//   eer = 11.7
 //   afue = 0.8
 //   is_central_dhw = 1
 //   sol_frac = 0.2
@@ -32,7 +32,7 @@
 //   window_vt = 0.42
 // * window_type = "OperableWindow" (:default => "FixedWindow")
 //   heating_eff = 0.8
-// * wattpercfm = 0.58 (:default => 0.45)
+//   wattpercfm = 0.58
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 //   cfmperton = 350
@@ -65,7 +65,7 @@ Proj   "Mid-Rise Mixed-Use (5-story)"
    AutoHardSize = 1
    AutoEffInput = 1
    AutoHardSizeAirFlowPerSqFt = 0.58278
-   AutoHardSizeAirFlowPerTon = 449.489
+   AutoHardSizeAirFlowPerTon = 350
    DefaultDayltgCtrls = 0
    RunTitle = "Mid-Rise Mixed-Use (5-story)"
    CompOptLtg = 1
@@ -16136,13 +16136,13 @@ ThrmlZn   "Thermal Zone: Parking Garage"
 // * zone_name = "ZnSys F2-4 1-Bed Core N" (:default => nil)
 // * count = "3" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "1" (:default => nil)
 // * cooling_capacity = "8283" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "310.259" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 241.5875 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -16167,7 +16167,7 @@ CoilClg   "CoilCooling 1"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 8283
@@ -16189,8 +16189,8 @@ CoilHtg   "CoilHtg 1"
 Fan   "Fan 1"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 310.259
-  PwrIdx =  0.45
+  FlowCap = 241.5875
+  PwrIdx =  0.58
   
    ..
 
@@ -16203,13 +16203,13 @@ CoilHtg   "SupCoilHtg 1"
 // * zone_name = "ZnSys F2-4 1-Bed Core West" (:default => nil)
 // * count = "6" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "2" (:default => nil)
 // * cooling_capacity = "8366.3" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "313.379" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 244.0170833333333 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -16236,7 +16236,7 @@ CoilClg   "CoilCooling 2"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 8366.3
@@ -16258,8 +16258,8 @@ CoilHtg   "CoilHtg 2"
 Fan   "Fan 2"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 313.379
-  PwrIdx =  0.45
+  FlowCap = 244.0170833333333
+  PwrIdx =  0.58
   
    ..
 
@@ -16272,13 +16272,13 @@ CoilHtg   "SupCoilHtg 2"
 // * zone_name = "ZnSys F2-4 1-Bed Core East" (:default => nil)
 // * count = "6" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "3" (:default => nil)
 // * cooling_capacity = "9953.3" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "372.824" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 290.3045833333333 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -16305,7 +16305,7 @@ CoilClg   "CoilCooling 3"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 9953.3
@@ -16327,8 +16327,8 @@ CoilHtg   "CoilHtg 3"
 Fan   "Fan 3"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 372.824
-  PwrIdx =  0.45
+  FlowCap = 290.3045833333333
+  PwrIdx =  0.58
   
    ..
 
@@ -16341,13 +16341,13 @@ CoilHtg   "SupCoilHtg 3"
 // * zone_name = "ZnSys F2-4 1-Bed North" (:default => nil)
 // * count = "15" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "4" (:default => nil)
 // * cooling_capacity = "5681.86" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "212.827" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 165.72091666666665 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -16374,7 +16374,7 @@ CoilClg   "CoilCooling 4"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 5681.86
@@ -16396,8 +16396,8 @@ CoilHtg   "CoilHtg 4"
 Fan   "Fan 4"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 212.827
-  PwrIdx =  0.45
+  FlowCap = 165.72091666666665
+  PwrIdx =  0.58
   
    ..
 
@@ -16410,13 +16410,13 @@ CoilHtg   "SupCoilHtg 4"
 // * zone_name = "ZnSys F2-4 2-Bed Core NE-NW" (:default => nil)
 // * count = "6" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "5" (:default => nil)
 // * cooling_capacity = "7459.2" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "279.402" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 217.56 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -16443,7 +16443,7 @@ CoilClg   "CoilCooling 5"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 7459.2
@@ -16465,8 +16465,8 @@ CoilHtg   "CoilHtg 5"
 Fan   "Fan 5"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 279.402
-  PwrIdx =  0.45
+  FlowCap = 217.56
+  PwrIdx =  0.58
   
    ..
 
@@ -16479,13 +16479,13 @@ CoilHtg   "SupCoilHtg 5"
 // * zone_name = "ZnSys F5 1-Bed North" (:default => nil)
 // * count = "5" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "6" (:default => nil)
 // * cooling_capacity = "7132.68" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "267.17" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 208.0365 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -16512,7 +16512,7 @@ CoilClg   "CoilCooling 6"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 7132.68
@@ -16534,8 +16534,8 @@ CoilHtg   "CoilHtg 6"
 Fan   "Fan 6"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 267.17
-  PwrIdx =  0.45
+  FlowCap = 208.0365
+  PwrIdx =  0.58
   
    ..
 
@@ -16548,13 +16548,13 @@ CoilHtg   "SupCoilHtg 6"
 // * zone_name = "ZnSys F5 2-Bed Core NE-NW" (:default => nil)
 // * count = "2" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "7" (:default => nil)
 // * cooling_capacity = "9450.55" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "353.993" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 275.64104166666664 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -16581,7 +16581,7 @@ CoilClg   "CoilCooling 7"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 9450.55
@@ -16603,8 +16603,8 @@ CoilHtg   "CoilHtg 7"
 Fan   "Fan 7"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 353.993
-  PwrIdx =  0.45
+  FlowCap = 275.64104166666664
+  PwrIdx =  0.58
   
    ..
 
@@ -16617,13 +16617,13 @@ CoilHtg   "SupCoilHtg 7"
 // * zone_name = "ZnSys F2-4 2-Bed East" (:default => nil)
 // * count = "9" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "8" (:default => nil)
 // * cooling_capacity = "12646.3" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "473.698" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 368.85041666666666 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -16650,7 +16650,7 @@ CoilClg   "CoilCooling 8"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 12646.3
@@ -16672,8 +16672,8 @@ CoilHtg   "CoilHtg 8"
 Fan   "Fan 8"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 473.698
-  PwrIdx =  0.45
+  FlowCap = 368.85041666666666
+  PwrIdx =  0.58
   
    ..
 
@@ -16686,13 +16686,13 @@ CoilHtg   "SupCoilHtg 8"
 // * zone_name = "ZnSys F2-4 2-Bed West" (:default => nil)
 // * count = "9" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "9" (:default => nil)
 // * cooling_capacity = "15403.6" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "576.979" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 449.27166666666665 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -16719,7 +16719,7 @@ CoilClg   "CoilCooling 9"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 15403.6
@@ -16741,8 +16741,8 @@ CoilHtg   "CoilHtg 9"
 Fan   "Fan 9"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 576.979
-  PwrIdx =  0.45
+  FlowCap = 449.27166666666665
+  PwrIdx =  0.58
   
    ..
 
@@ -16755,13 +16755,13 @@ CoilHtg   "SupCoilHtg 9"
 // * zone_name = "ZnSys F2-4 3-Bed NE" (:default => nil)
 // * count = "3" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "10" (:default => nil)
 // * cooling_capacity = "16461.7" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "616.615" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 480.1329166666667 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -16788,7 +16788,7 @@ CoilClg   "CoilCooling 10"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 16461.7
@@ -16810,8 +16810,8 @@ CoilHtg   "CoilHtg 10"
 Fan   "Fan 10"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 616.615
-  PwrIdx =  0.45
+  FlowCap = 480.1329166666667
+  PwrIdx =  0.58
   
    ..
 
@@ -16824,13 +16824,13 @@ CoilHtg   "SupCoilHtg 10"
 // * zone_name = "ZnSys F2-4 3-Bed NW" (:default => nil)
 // * count = "3" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "11" (:default => nil)
 // * cooling_capacity = "20389.2" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "763.726" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 594.685 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -16857,7 +16857,7 @@ CoilClg   "CoilCooling 11"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 20389.2
@@ -16879,8 +16879,8 @@ CoilHtg   "CoilHtg 11"
 Fan   "Fan 11"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 763.726
-  PwrIdx =  0.45
+  FlowCap = 594.685
+  PwrIdx =  0.58
   
    ..
 
@@ -16893,13 +16893,13 @@ CoilHtg   "SupCoilHtg 11"
 // * zone_name = "ZnSys F2-4 Studio SE" (:default => nil)
 // * count = "3" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "12" (:default => nil)
 // * cooling_capacity = "12026.7" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "450.489" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 350.77875 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -16926,7 +16926,7 @@ CoilClg   "CoilCooling 12"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 12026.7
@@ -16948,8 +16948,8 @@ CoilHtg   "CoilHtg 12"
 Fan   "Fan 12"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 450.489
-  PwrIdx =  0.45
+  FlowCap = 350.77875
+  PwrIdx =  0.58
   
    ..
 
@@ -16962,13 +16962,13 @@ CoilHtg   "SupCoilHtg 12"
 // * zone_name = "ZnSys F2-4 Studio SW" (:default => nil)
 // * count = "3" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "13" (:default => nil)
 // * cooling_capacity = "11114.6" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "416.323" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 324.17583333333334 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -16995,7 +16995,7 @@ CoilClg   "CoilCooling 13"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 11114.6
@@ -17017,8 +17017,8 @@ CoilHtg   "CoilHtg 13"
 Fan   "Fan 13"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 416.323
-  PwrIdx =  0.45
+  FlowCap = 324.17583333333334
+  PwrIdx =  0.58
   
    ..
 
@@ -17031,13 +17031,13 @@ CoilHtg   "SupCoilHtg 13"
 // * zone_name = "ZnSys F5 1-Bed Core N" (:default => nil)
 // * count = "1" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "14" (:default => nil)
 // * cooling_capacity = "9673.47" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "362.342" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 282.142875 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -17064,7 +17064,7 @@ CoilClg   "CoilCooling 14"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 9673.47
@@ -17086,8 +17086,8 @@ CoilHtg   "CoilHtg 14"
 Fan   "Fan 14"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 362.342
-  PwrIdx =  0.45
+  FlowCap = 282.142875
+  PwrIdx =  0.58
   
    ..
 
@@ -17100,13 +17100,13 @@ CoilHtg   "SupCoilHtg 14"
 // * zone_name = "ZnSys F5 1-Bed Core West" (:default => nil)
 // * count = "2" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "15" (:default => nil)
 // * cooling_capacity = "9454.09" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "354.125" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 275.74429166666664 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -17133,7 +17133,7 @@ CoilClg   "CoilCooling 15"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 9454.09
@@ -17155,8 +17155,8 @@ CoilHtg   "CoilHtg 15"
 Fan   "Fan 15"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 354.125
-  PwrIdx =  0.45
+  FlowCap = 275.74429166666664
+  PwrIdx =  0.58
   
    ..
 
@@ -17169,13 +17169,13 @@ CoilHtg   "SupCoilHtg 15"
 // * zone_name = "ZnSys F5 1-Bed Core East" (:default => nil)
 // * count = "2" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "16" (:default => nil)
 // * cooling_capacity = "12099.8" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "453.226" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 352.91083333333336 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -17202,7 +17202,7 @@ CoilClg   "CoilCooling 16"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 12099.8
@@ -17224,8 +17224,8 @@ CoilHtg   "CoilHtg 16"
 Fan   "Fan 16"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 453.226
-  PwrIdx =  0.45
+  FlowCap = 352.91083333333336
+  PwrIdx =  0.58
   
    ..
 
@@ -17238,13 +17238,13 @@ CoilHtg   "SupCoilHtg 16"
 // * zone_name = "ZnSys F5 2-Bed East" (:default => nil)
 // * count = "3" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "17" (:default => nil)
 // * cooling_capacity = "13591.6" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "509.105" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 396.4216666666667 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -17271,7 +17271,7 @@ CoilClg   "CoilCooling 17"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 13591.6
@@ -17293,8 +17293,8 @@ CoilHtg   "CoilHtg 17"
 Fan   "Fan 17"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 509.105
-  PwrIdx =  0.45
+  FlowCap = 396.4216666666667
+  PwrIdx =  0.58
   
    ..
 
@@ -17307,13 +17307,13 @@ CoilHtg   "SupCoilHtg 17"
 // * zone_name = "ZnSys F5 2-Bed West" (:default => nil)
 // * count = "3" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "18" (:default => nil)
 // * cooling_capacity = "17425.7" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "652.721" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 508.2495833333333 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -17340,7 +17340,7 @@ CoilClg   "CoilCooling 18"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 17425.7
@@ -17362,8 +17362,8 @@ CoilHtg   "CoilHtg 18"
 Fan   "Fan 18"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 652.721
-  PwrIdx =  0.45
+  FlowCap = 508.2495833333333
+  PwrIdx =  0.58
   
    ..
 
@@ -17376,13 +17376,13 @@ CoilHtg   "SupCoilHtg 18"
 // * zone_name = "ZnSys F5 3-Bed NE" (:default => nil)
 // * count = "1" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "19" (:default => nil)
 // * cooling_capacity = "17673.3" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "661.997" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 515.47125 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -17409,7 +17409,7 @@ CoilClg   "CoilCooling 19"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 17673.3
@@ -17431,8 +17431,8 @@ CoilHtg   "CoilHtg 19"
 Fan   "Fan 19"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 661.997
-  PwrIdx =  0.45
+  FlowCap = 515.47125
+  PwrIdx =  0.58
   
    ..
 
@@ -17445,13 +17445,13 @@ CoilHtg   "SupCoilHtg 19"
 // * zone_name = "ZnSys F5 3-Bed NW" (:default => nil)
 // * count = "1" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "20" (:default => nil)
 // * cooling_capacity = "23093" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "865.007" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 673.5458333333333 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -17478,7 +17478,7 @@ CoilClg   "CoilCooling 20"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 23093
@@ -17500,8 +17500,8 @@ CoilHtg   "CoilHtg 20"
 Fan   "Fan 20"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 865.007
-  PwrIdx =  0.45
+  FlowCap = 673.5458333333333
+  PwrIdx =  0.58
   
    ..
 
@@ -17514,13 +17514,13 @@ CoilHtg   "SupCoilHtg 20"
 // * zone_name = "ZnSys F5 Studio SE" (:default => nil)
 // * count = "1" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "21" (:default => nil)
 // * cooling_capacity = "12938.5" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "484.644" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 377.37291666666664 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -17547,7 +17547,7 @@ CoilClg   "CoilCooling 21"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 12938.5
@@ -17569,8 +17569,8 @@ CoilHtg   "CoilHtg 21"
 Fan   "Fan 21"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 484.644
-  PwrIdx =  0.45
+  FlowCap = 377.37291666666664
+  PwrIdx =  0.58
   
    ..
 
@@ -17583,13 +17583,13 @@ CoilHtg   "SupCoilHtg 21"
 // * zone_name = "ZnSys F5 Studio SW" (:default => nil)
 // * count = "1" (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = "22" (:default => nil)
 // * cooling_capacity = "11978.1" (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = "448.672" (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 349.36125 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -17616,7 +17616,7 @@ CoilClg   "CoilCooling 22"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 11978.1
@@ -17638,8 +17638,8 @@ CoilHtg   "CoilHtg 22"
 Fan   "Fan 22"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 448.672
-  PwrIdx =  0.45
+  FlowCap = 349.36125
+  PwrIdx =  0.58
   
    ..
 
@@ -17652,13 +17652,13 @@ CoilHtg   "SupCoilHtg 22"
 // * zone_name = "ZnSys F2-4 Laundry" (:default => nil)
 // * count = 3 (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = 23 (:default => nil)
 // * cooling_capacity = 6480 (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = 216 (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 189.0 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -17685,7 +17685,7 @@ CoilClg   "CoilCooling 23"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 6480
@@ -17707,8 +17707,8 @@ CoilHtg   "CoilHtg 23"
 Fan   "Fan 23"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 216
-  PwrIdx =  0.45
+  FlowCap = 189.0
+  PwrIdx =  0.58
   
    ..
 
@@ -17726,8 +17726,8 @@ CoilHtg   "SupCoilHtg 23"
 // * index = 25 (:default => nil)
 // * cooling_capacity = 32175 (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = 1073 (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 938.4375 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -17776,8 +17776,8 @@ CoilHtg   "CoilHtg 25"
 Fan   "Fan 25"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 1073
-  PwrIdx =  0.45
+  FlowCap = 938.4375
+  PwrIdx =  0.58
   
    ..
 
@@ -17790,13 +17790,13 @@ CoilHtg   "SupCoilHtg 25"
 // * zone_name = "ZnSys F5 Laundry" (:default => nil)
 // * count = 1 (:default => nil)
 //   seer = 14
-//   eer = 11.4
+// * eer = 11.7 (:default => 11.4)
 //   hspf = 8.2
 // * index = 24 (:default => nil)
 // * cooling_capacity = 6480 (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = 216 (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 189.0 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -17823,7 +17823,7 @@ CoilClg   "CoilCooling 24"
    DXSEER = 14
    
    
-   DXEER = 11.4
+   DXEER = 11.7
    
    
    CapTotNetRtd = 6480
@@ -17845,8 +17845,8 @@ CoilHtg   "CoilHtg 24"
 Fan   "Fan 24"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 216
-  PwrIdx =  0.45
+  FlowCap = 189.0
+  PwrIdx =  0.58
   
    ..
 
@@ -17864,8 +17864,8 @@ CoilHtg   "SupCoilHtg 24"
 // * index = 26 (:default => nil)
 // * cooling_capacity = 32175 (:default => 0)
 //   heating_capacity = 0
-// * supply_fan_cfm = 1073 (:default => 0)
-//   wattpercfm = 0.45
+// * supply_fan_cfm = 938.4375 (:default => 0)
+// * wattpercfm = 0.58 (:default => 0.45)
 //   refcg_mult = 1
 //   afuehspf_derate = 1
 
@@ -17914,8 +17914,8 @@ CoilHtg   "CoilHtg 26"
 Fan   "Fan 26"
   
   ModelingMthd = "PowerPerUnitFlow"
-  FlowCap = 1073
-  PwrIdx =  0.45
+  FlowCap = 938.4375
+  PwrIdx =  0.58
   
    ..
 

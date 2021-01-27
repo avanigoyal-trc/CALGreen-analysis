@@ -17,7 +17,7 @@ parameter "hvac_type", :default=> "SZAC"
 parameter "vrf_cu_model", :default=> nil
 parameter "hspf", :default => 8.2
 parameter "seer", :default => 14
-parameter "eer", :default => 11.4
+parameter "eer", :default => 11.7
 parameter "afue", :default => 0.8
 parameter "ctrl_method", :default=> "ConstantVolume"
 
@@ -54,7 +54,7 @@ parameter "window_type", :default=>"FixedWindow"
 
 
 parameter "heating_eff", :default=>0.8
-parameter "wattpercfm", :default => 0.45
+parameter "wattpercfm", :default => 0.58
 parameter "refcg_mult", :default => 1
 parameter "afuehspf_derate", :default => 1
 parameter "cfmperton", :default => 350
@@ -114,7 +114,7 @@ Proj   "Mid-Rise Mixed-Use (5-story)"
    AutoHardSize = 1
    AutoEffInput = 1
    AutoHardSizeAirFlowPerSqFt = 0.58278
-   AutoHardSizeAirFlowPerTon = 449.489
+   AutoHardSizeAirFlowPerTon = <%= cfmperton %>
    DefaultDayltgCtrls = 0
    RunTitle = "Mid-Rise Mixed-Use (5-story)"
    CompOptLtg = 1
@@ -16382,6 +16382,8 @@ if (hvac_type == "SZHP")
         :index => index[a],
         :refcg_mult => refcg_mult, 
         :ctrl_method => ctrl_method
+		    :wattpercfm => wattpercfm
+
     end
 elsif (hvac_type == "SZAC" or hvac_type == "SZAC_rescfm" )
     for a in 0..num_zones do
@@ -16456,10 +16458,11 @@ for a in 0..num_zones do
   insert template_name,
     :cooling_capacity => capacity_cooling[a],
     :heating_capacity => 0,
-    :supply_fan_cfm => supply_cfm[a],
+    :supply_fan_cfm => ((capacity_cooling[a].to_f*cfmperton.to_f)/12000),
     :zone_name => zones[a],
     :count => counts[a],
     :index => index[a],
+	  :wattpercfm => wattpercfm,
     :eer => eer,
     :seer => seer,
     :hspf => hspf, 
@@ -16541,7 +16544,7 @@ indices = [num_zones + 2, num_zones + 3, num_zones + 4, num_zones + 5]
  insert template_name,
    :cooling_capacity => laundry_cooling_capacity,
    :heating_capacity => 0,
-   :supply_fan_cfm => laundry_supply_cfm,
+   :supply_fan_cfm => ((laundry_cooling_capacity.to_f*cfmperton.to_f)/12000),
    :zone_name => laundry_zones[a],
    :count => lc_counts[a],
    :index => indices[a],
@@ -16550,13 +16553,15 @@ indices = [num_zones + 2, num_zones + 3, num_zones + 4, num_zones + 5]
    :hspf => hspf,
    :refcg_mult => refcg_mult, 
    :ctrl_method => ctrl_method
+   :wattpercfm => wattpercfm
 
 
 
   insert template_name,
     :cooling_capacity => corridor_cooling_capacity,
     :heating_capacity => 0,
-    :supply_fan_cfm => corridor_supply_cfm,
+    :supply_fan_cfm => ((corridor_cooling_capacity.to_f*cfmperton.to_f)/12000),
+	:wattpercfm => wattpercfm,
     :zone_name => corridor_zones[a],
     :count => lc_counts[a],
     :index => indices[a + 2],
