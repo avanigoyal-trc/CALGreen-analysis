@@ -22,7 +22,7 @@ parameter "laundry_heating_capacity", :default => 3940
 parameter "laundry_supply_cfm", :default =>180
 parameter "seer", :default => 14
 parameter "hspf", :default => 8.2
-parameter "eer", :default => 11.4
+parameter "eer", :default => 11.7
 
 
 parameter "is_central_dhw"
@@ -11943,7 +11943,8 @@ elsif (hvac_type == "SZHP_resfan")
    insert template_name,
       :cooling_capacity => laundry_cooling_capacity,
       :heating_capacity => 0,
-      :supply_fan_cfm => laundry_supply_cfm,
+      :supply_fan_cfm => ((laundry_cooling_capacity.to_f*cfmperton.to_f)/12000),
+	  :wattpercfm => wattpercfm,
       :zone_name => laundry_zones[a],
       :count => lc_counts[a],
       :index => indices[a],
@@ -11955,7 +11956,8 @@ elsif (hvac_type == "SZHP_resfan")
       insert template_name,
       :cooling_capacity => corridor_cooling_capacity,
       :heating_capacity => 0,
-      :supply_fan_cfm => corridor_supply_cfm,
+      :supply_fan_cfm => ((corridor_cooling_capacity.to_f*cfmperton.to_f)/12000),
+	  :wattpercfm => wattpercfm,
       :zone_name => corridor_zones[a],
       :count => lc_counts[a],
       :index => indices[a + 2],
