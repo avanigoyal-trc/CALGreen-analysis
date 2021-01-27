@@ -1,0 +1,22 @@
+<%#INTERFACE
+
+modelkit_version "~>0.8.0"
+
+parameter "chiller_name"
+parameter "chiller_capacity", :default => 0
+
+%>
+
+Chlr   "<%=chiller_name%>"
+   FuelSrc = "Electric"
+   CndsrType = "Fluid"
+   CndsrFluidSegInRef = "BaseCWPrimSupSeg"
+   CndsrFluidSegOutRef = "BaseCWPrimRetSeg"
+   EvapFluidSegInRef = "BaseChWPrimRetSeg"
+   EvapFluidSegOutRef = "BaseChWPrimSupSeg"
+ <%if chiller_capacity != 0 %>
+   CapRtd = <%=chiller_capacity%>
+ <%end%>
+   UnldRatMin = 0.15
+   PLRMin = 0.15
+   ..

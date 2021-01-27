@@ -1,0 +1,34 @@
+<%#INTERFACE
+
+modelkit_version "~>0.8.0"
+parameter "capacity", :default=>0
+parameter "input_rate", :default=>0
+parameter "count"
+parameter "dhw_thermaleff", :default=>0
+parameter "fluid_seg_out_ref", :default=>"SHWSupplyGas"
+parameter "fluid_seg_makeup_ref", :default=>"SHWMakeupGas"
+parameter "ef", :default=>0
+parameter "elec_ignition", :default =>0
+%>
+
+WtrHtr   "WaterHeater1"
+   Cnt = <%=count%>
+   FluidSegOutRef = "<%=fluid_seg_out_ref%>"
+   FluidSegMakeupRef = "<%=fluid_seg_makeup_ref%>"
+    <%if capacity != 0%>
+   StorCap = <%=capacity%>
+   <%end%>
+   <%if dhw_thermaleff != 0%>
+   ThrmlEff = <%=dhw_thermaleff%>
+   <%end%>
+   <%if ef != 0%>
+   EF = <%=ef%>
+   <%end%>
+   FuelSrc = "Gas"
+   <%if input_rate != 0 %>
+     CapRtd = <%=input_rate%>
+   <%end%>
+   <%if elec_ignition != 0%>
+   ElecIgnit = <%=elec_ignition%>
+   <%end%>
+   ..

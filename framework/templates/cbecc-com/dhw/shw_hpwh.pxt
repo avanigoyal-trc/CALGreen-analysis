@@ -1,0 +1,53 @@
+<%#INTERFACE
+
+modelkit_version "~>0.8.0"
+parameter "capacity"
+parameter "split", :default => 1 #0 for packaged
+parameter "storage_tank_zone"
+parameter "input_rate", :default => 0
+parameter "cop", :default => 0
+parameter "ef", :default => 0
+parameter "count"
+parameter "compressor_loc", :default=> 1
+parameter "fluid_seg_out_ref", :default=>"SHWSupplyGas"
+parameter "fluid_seg_makeup_ref", :default=>"SHWMakeupGas"
+
+%>
+
+WtrHtr   "WaterHeater1"
+   <% if split.to_i == 1 %>
+   Type = "HeatPumpSplit"
+   Cnt = <%=count%>
+   FuelSrc = "Electricity"
+   FluidSegOutRef = "<%=fluid_seg_out_ref%>"
+   FluidSegMakeupRef = "<%=fluid_seg_makeup_ref%>"
+   StorCap = <%=capacity%>
+   <% if cop != 0 %>
+   COP = <%=cop%>
+   <%end%>
+   <%if ef != 0%>
+   EF = <%=ef%>
+   <%end%>
+   CprsrLoc = <%=compressor_loc%>
+   StorLoc = 0
+   StorZnRef = "<%=storage_tank_zone%>"
+   InpPwr = <%=input_rate%>
+   <% elsif split.to_i == 0%>
+   Type = "HeatPumpPackaged"
+   Cnt = <%=count%>
+   FuelSrc = "Electricity"
+   FluidSegOutRef = "<%=fluid_seg_out_ref%>"
+   FluidSegMakeupRef = "<%=fluid_seg_makeup_ref%>"
+   StorCap = <%=capacity%>
+   <% if cop != 0 %>
+   COP = <%=cop%>
+   <%end%>
+   <%if ef != 0%>
+   EF = <%=ef%>
+   <%end%>
+   StorZnRef = "<%=storage_tank_zone%>"
+   <% if input_rate != 0 %>
+   InpPwr = <%=input_rate%>
+   <% end%>
+   <%end%>
+   ..

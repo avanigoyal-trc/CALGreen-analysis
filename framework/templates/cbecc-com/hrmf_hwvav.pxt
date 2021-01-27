@@ -1,0 +1,148 @@
+<%#INTERFACE
+
+modelkit_version "~>0.8.0"
+
+parameter "sup_fan_eff", :default=>0.650
+parameter "clg_stages", :default=>1
+%>
+
+AirSys   "BaseAirSys6"  
+   Type = "VAV"
+   CtrlSysType = "DDCToZone"
+   OptStart = 1
+   ..
+
+AirSeg   "BaseSys6 SupAirSeg"  
+   Type = "Supply"
+   ..
+
+CoilClg   "BaseSys6 CoilClg"
+   Type = "DirectExpansion"
+   NumClgStages = <%=clg_stages%>
+   ..
+
+CoilHtg   "BaseSys6 CoilHtg"  
+   Type = "HotWater"
+   FluidSegInRef = "HW Supply"
+   FluidSegOutRef = "HW Return"
+   ..
+
+Fan   "BaseSys6 Fan"  
+   CtrlMthd = "VariableSpeedDrive"
+   ..
+
+AirSeg   "BaseSys6 RetAirSeg"  
+   Type = "Return"
+   ..
+
+OACtrl   "BaseSys6 OACtrl"  
+   EconoCtrlMthd = "DifferentialDryBulb"
+   EconoIntegration = "Integrated"
+   AirSegSupRef = "BaseSys6 SupAirSeg"
+   AirSegRetRef = "BaseSys6 RetAirSeg"
+   ..
+
+TrmlUnit   "BaseVAVBox TU Business Center"  
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Business Center"
+   ReheatCtrlMthd = "SingleMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-1"  
+   Type = "HotWater"
+   FluidSegInRef = "HW Supply"
+   FluidSegOutRef = "HW Return"
+   ..
+
+TrmlUnit   "BaseVAVBox TU2 Fitness Center"  
+   TreeState = 253
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Fitness Center"
+   ReheatCtrlMthd = "SingleMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-1-2"  
+   Type = "HotWater"
+   FluidSegInRef = "HW Supply"
+   FluidSegOutRef = "HW Return"
+   ..
+
+TrmlUnit   "BaseVAVBox TU3 Leasing Office"  
+   TreeState = 253
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Leasing Office"
+   ReheatCtrlMthd = "SingleMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-1-3"  
+   Type = "HotWater"
+   FluidSegInRef = "HW Supply"
+   FluidSegOutRef = "HW Return"
+   ..
+
+TrmlUnit   "BaseVAVBox TU4 Lounge"  
+   TreeState = 253
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Lounge"
+   ReheatCtrlMthd = "SingleMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-1-4"  
+   Type = "HotWater"
+   FluidSegInRef = "HW Supply"
+   FluidSegOutRef = "HW Return"
+   ..
+
+TrmlUnit   "BaseVAVBox TU F1 Retail E Core"  
+   TreeState = 253
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Retail E Core"
+   Cnt = 2
+   ReheatCtrlMthd = "SingleMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-1-5"  
+   Type = "HotWater"
+   FluidSegInRef = "HW Supply"
+   FluidSegOutRef = "HW Return"
+   ..
+
+TrmlUnit   "BaseVAVBox TU F1 Retail E Outer"  
+   TreeState = 253
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Retail E Outer"
+   ReheatCtrlMthd = "SingleMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-1-6"  
+   Type = "HotWater"
+   FluidSegInRef = "HW Supply"
+   FluidSegOutRef = "HW Return"
+   ..
+
+TrmlUnit   "BaseVAVBox TU F1 Retail W Core"  
+   TreeState = 253
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Retail W Core"
+   Cnt = 2
+   ReheatCtrlMthd = "SingleMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-1-7"  
+   Type = "HotWater"
+   FluidSegInRef = "HW Supply"
+   FluidSegOutRef = "HW Return"
+   ..
+
+TrmlUnit   "BaseVAVBox TU F1 Retail W Outer"  
+   TreeState = 253
+   Type = "VAVReheatBox"
+   ZnServedRef = "Thermal Zone: F1 Retail W Outer"
+   ReheatCtrlMthd = "SingleMaximum"
+   ..
+
+CoilHtg   "BaseVAVBox CoilHtg-1-8"  
+   Type = "HotWater"
+   FluidSegInRef = "HW Supply"
+   FluidSegOutRef = "HW Return"
+   ..

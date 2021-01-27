@@ -11,6 +11,8 @@ parameter "index"
 parameter "cooling_capacity", :default => 0
 parameter "heating_capacity", :default => 0
 parameter "supply_fan_cfm", :default => 0
+parameter "refcg_mult", :default => 1
+parameter "fan_control", :default => "ConstantVolume"
 %>
 
 <%
@@ -18,6 +20,15 @@ if (cooling_capacity.to_f >= 45000)
   eer = 11.7
 end
 %>
+
+<%
+eer = eer*refcg_mult
+%>
+
+<%
+seer = seer*refcg_mult
+%>
+
 
 ZnSys   "<%=zone_name%>"
    Type = "SZAC"
@@ -27,15 +38,18 @@ ZnSys   "<%=zone_name%>"
 CoilClg   "CoilCooling <%=index%>"
    Type = "DirectExpansion"
    DXEER = <%=eer%>
+   <%if seer != 0 %>
    DXSEER = <%=seer%>
-   <%if cooling_capacity != 0 %>
+   <%end%>
+   <%if cooling_capacity.to_i != 0 %>
    CapTotNetRtd = <%=cooling_capacity%>
    <%end%>
+   BypassMinEffCheck = 1
    ..
 
 CoilHtg   "CoilHtg <%=index%>"
    Type = "Furnace"
-   <%if heating_capacity != 0 %>
+   <%if heating_capacity.to_i != 0 %>
    CapTotNetRtd = <%=heating_capacity%>
    <%end%>
    FurnAFUE = <%=afue%>
@@ -45,4 +59,5 @@ Fan   "Fan <%=index%>"
   <%if supply_fan_cfm != 0 %>
   FlowCap = <%=supply_fan_cfm%>
   <%end%>
+  ControlMethod = "<%=fan_control%>" 
    ..

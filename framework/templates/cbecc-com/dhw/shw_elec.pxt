@@ -1,0 +1,26 @@
+<%#INTERFACE
+
+modelkit_version "~>0.8.0"
+parameter "capacity", :default=>0
+parameter "input_rate", :default=>0
+parameter "count"
+parameter "dhw_thermaleff", :default=>0
+
+
+%>
+
+WtrHtr   "WaterHeater1"
+   Cnt = <%=count%>
+   FluidSegOutRef = "SHWSupplyGas"
+   FluidSegMakeupRef = "SHWMakeupGas"
+   <%if capacity != 0 %>
+     StorCap = <%=capacity%>
+   <%end%>
+   <%if dhw_thermaleff != 0%>
+   ThrmlEff = <%=dhw_thermaleff%>
+   <%end%>
+   FuelSrc = "Electricity"
+   <%if input_rate != 0 %>
+     CapRtd = <%=input_rate%>
+   <%end%>
+   ..

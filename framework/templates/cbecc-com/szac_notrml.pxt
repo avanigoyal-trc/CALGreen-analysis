@@ -1,0 +1,79 @@
+<%#INTERFACE
+
+modelkit_version "~>0.8.0"
+
+parameter "zone_name"
+parameter "count"
+parameter "seer", :default=> 14 #Need to implement if statements based on capacity
+parameter "afue", :default=> 0.8 #Need to implement if statements based on capacity
+parameter "eer", :default=> 12.2
+parameter "index"
+parameter "cooling_capacity", :default => 0
+parameter "heating_capacity", :default => 0
+parameter "supply_fan_cfm", :default => 0
+parameter "refcg_mult", :default => 1
+parameter "status", :default=>"New"
+
+parameter "fan_model", :default=>"BrakeHorsePower"
+parameter "sup_fan_eff", :default=>0.650
+parameter "motor_eff_sup", :default=>0
+%>
+
+<%
+if (cooling_capacity.to_f >= 45000)
+  eer = 11.7
+end
+%>
+
+<%
+eer = eer*refcg_mult
+%>
+
+<%
+seer = seer*refcg_mult
+%>
+
+
+ZnSys   "<%=zone_name%>"
+   Status = "<%=status%>"
+   Type = "SZAC"
+   Cnt = <%=count%>
+   ..
+
+CoilClg   "CoilCooling <%=index%>"
+   Type = "DirectExpansion"
+   <%if seer != 0 %>
+     DXSEER = <%=seer%>
+   <%end%>
+   <%if eer != 0 %>
+     DXEER = <%=eer%>
+   <%end%>
+   <%if cooling_capacity != 0 %>
+   CapTotNetRtd = <%=cooling_capacity%>
+   <%end%>
+   BypassMinEffCheck = 1
+   ..
+
+CoilHtg   "CoilHtg <%=index%>"
+   Type = "Furnace"
+   <%if heating_capacity != 0 %>
+   CapTotNetRtd = <%=heating_capacity%>
+   <%end%>
+   <%if afue != 0 %>
+     FurnAFUE = <%=afue%>
+     <%end%>
+   BypassMinEffCheck = 1
+   ..
+
+Fan   "Fan <%=index%>"
+   ModelingMthd = "<%=fan_model%>"
+   <%if sup_fan_eff != 0%>
+   FlowEff = <%=sup_fan_eff%>
+   <%end%>
+   <%if motor_eff_sup != 0%>
+   MtrEff = <%=motor_eff_sup%>
+   <%end%>
+   <%if supply_fan_cfm != 0 %>
+   FlowCap = <%=supply_fan_cfm%>
+   <%end%>
+   ..

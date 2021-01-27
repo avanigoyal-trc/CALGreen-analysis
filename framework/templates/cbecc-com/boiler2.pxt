@@ -1,0 +1,50 @@
+ <%#INTERFACE
+
+modelkit_version "~>0.8.0"
+
+parameter "boilername", :default=> "Boiler1"
+parameter "blr_capacity", :default => 0
+parameter "blr_thermaleff", :default => 0
+parameter "pump_eff", :default => 0
+parameter "pump_speed", :default => "VariableSpeed"
+
+%>
+
+FluidSys   "Hot Water System"
+   TreeState = 253
+   Type = "HotWater"
+   ..
+
+Blr   "<%=boilername%>"
+   Type = "HotWater"
+   FuelSrc = "Gas"
+   FluidSegInRef = "HW Return"
+   FluidSegOutRef = "HW Supply"
+   EntTempDsgn = 140
+   LvgTempDsgn = 180
+   DraftType = "MechanicalNoncondensing"
+<%if blr_capacity != 0 %>
+   CapRtd = <%=blr_capacity%>
+<%end%>
+<%if blr_thermaleff != 0 %>
+   ThrmlEff = <%=blr_thermaleff%>
+<%end%>
+   UnldRatMin = 0.25
+   DraftFanHp = 0.221745
+   ParasiticLd = 117.836
+   ..
+
+Pump   "HW Pump"
+   SpdCtrl = "<%=pump_speed%>"
+   <%if pump_eff != 0 %>
+   MtrEff = <%=pump_eff%>
+   <%end%>
+   ..
+   
+FluidSeg   "HW Supply"
+   Type = "PrimarySupply"
+   ..
+
+FluidSeg   "HW Return"
+   Type = "PrimaryReturn"
+   ..

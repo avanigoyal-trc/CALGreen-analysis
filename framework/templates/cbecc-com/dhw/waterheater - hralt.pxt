@@ -1,0 +1,34 @@
+<%#INTERFACE
+
+modelkit_version "~>0.8.0"
+parameter "name"
+parameter "central", :default=> 0
+parameter "solfrac", :default=> 0.2
+parameter "dhw_thermaleff", :default=> 0
+parameter "dhw_fuel_type", :default=>"Gas"
+parameter "dhw_tank_loc", :default=>"Unconditioned"
+parameter "dhw_input", :default=> 0
+%>
+
+ResDHWSys   "<%=name%>"
+   CentralSys = <%=central%>
+   DistType = "Demand Control (Standard Design for new construction)"
+   SysStoryCnt = 9
+   ..
+
+ResWtrHtr   "Res Gas Water Heater"
+  <%if dhw_fuel_type == "Elec" %>
+   ElementType = "Heat Pump"
+   TankZn = "<%=dhw_tank_loc%>"
+   <%end%>
+   <%if dhw_input != 0%>
+   InpRating = <%=dhw_input%>
+   <%end%> 
+  UEF = 0.57
+  TankVol = 266.67
+  StdbyLossFrac = 0.02
+  <%if dhw_thermaleff != 0%>
+  ThrmlEff = <%=dhw_thermaleff%>
+  <%end%> 
+  Cnt = 3
+  ..

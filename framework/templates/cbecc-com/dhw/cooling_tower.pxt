@@ -1,0 +1,28 @@
+<%#INTERFACE
+
+modelkit_version "~>0.8.0"
+
+parameter "cooling_tower_name"
+parameter "tower_capacity", :default => 0
+parameter "tower_airflow", :default => 0
+parameter "condenser_water_flow", :default =>0
+
+%>
+
+HtRej   "<%=cooling_tower_name%>"
+   Type = "OpenTower"
+   ModCtrl = "VariableSpeedDrive"
+   FluidSegInRef = "BaseCWPrimRetSeg"
+   FluidSegOutRef = "BaseCWPrimSupSeg"
+ <%if tower_capacity != 0 %>
+   CapRtd = <%=tower_capacity%>
+ <%end%>
+ <%if tower_airflow !=0 %>
+   AirFlowCap = <%=tower_airflow%>
+ <%end%>
+ <%if condenser_water_flow !=0 %>
+   WtrFlowCap = <%=condenser_water_flow%>
+ <%end%>
+   LowSpdAirFlowRat = 0.5
+   MinSpdRat = 0.5
+   ..

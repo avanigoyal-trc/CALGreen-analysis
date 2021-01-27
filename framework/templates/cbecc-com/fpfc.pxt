@@ -14,6 +14,7 @@ parameter "supply_fan_cfm", :default => 0
 ZnSys   "<%=zone_name%>"
    TreeState = 253
    Type = "FPFC"
+   Cnt = <%=count%>
    AirFlowPerSqFt = 0.8
    ..
 
@@ -35,7 +36,7 @@ CoilHtg   "CoilHtg <%=index%>"
    <%end%>
    ..
 
-Fan   "Fan 23"
+Fan   "Fan <%=index%>"
    CtrlMthd = "ConstantVolume"
    <%if supply_fan_cfm != 0 %>
    FlowCap = <%=supply_fan_cfm%>

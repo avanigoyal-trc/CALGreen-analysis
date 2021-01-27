@@ -5,11 +5,14 @@ modelkit_version "~>0.8.0"
 parameter "zone_name"
 parameter "count"
 parameter "seer", :default=> 14 #Need to implement if statements based on capacity
+parameter "eer", :default=> 11.7
 parameter "hspf", :default=> 8.2 #Need to implement if statements based on capacity
 parameter "index"
 parameter "cooling_capacity", :default => 0
 parameter "heating_capacity", :default => 0
 parameter "supply_fan_cfm", :default => 0
+parameter "supp_heating", :default => "Resistance"
+parameter "lockout_temp", :default => 17
 %>
 
 ZnSys   "<%=zone_name%>"
@@ -22,19 +25,25 @@ ZnSys   "<%=zone_name%>"
 
 CoilClg   "CoilCooling <%=index%>"
    Type = "DirectExpansion"
+   <%if seer != 0 %>
    DXSEER = <%=seer%>
-   <%if cooling_capacity != 0 %>
+   <%end%>
+   DXEER = <%=eer%>
+   <%if cooling_capacity.to_i != 0 %>
    CapTotNetRtd = <%=cooling_capacity%>
    <%end%>
    ..
 
 CoilHtg   "CoilHtg <%=index%>"
    Type = "HeatPump"
-   <%if heating_capacity != 0 %>
+   <%if heating_capacity.to_i != 0 %>
    CapTotNetRtd = <%=heating_capacity%>
    <%end%>
+   <% if hspf != 0%>
    HtPumpHSPF = <%=hspf%>
+   <%end%>
    HtPumpSuppCoilHtgRef = "SupCoilHtg <%=index%>"
+   HtPumpCprsrLockoutTemp = <%=lockout_temp%>
    HtPumpDefHtSrc = "Electric"
    ..
 
@@ -45,5 +54,5 @@ Fan   "Fan <%=index%>"
    ..
 
 CoilHtg   "SupCoilHtg <%=index%>"
-   Type = "Resistance"
+   Type = "<%=supp_heating%>"
    ..

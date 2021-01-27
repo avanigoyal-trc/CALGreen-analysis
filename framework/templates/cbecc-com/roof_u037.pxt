@@ -1,0 +1,23 @@
+<%#INTERFACE
+
+modelkit_version "~>0.8.0"
+
+parameter "roof_reflectance"
+
+%>
+
+ConsAssm   "Roof"
+   CompatibleSurfType = "Roof"
+   CRRCInitialRefl = <%=roof_reflectance%>
+   CRRCAgedRefl = <%=roof_reflectance%>
+   CRRCInitialEmit = 0.85
+   CRRCAgedEmit = 0.85
+   CRRCProdID = "XXXX-XXXX"
+   MatRef[1] = "Metal Standing Seam - 1/16 in."
+   MatRef[2] = "Compliance Insulation R5.00"
+   MatRef[3] = "Compliance Insulation R5.00"
+   MatRef[4] = "Compliance Insulation R5.00"
+   MatRef[5] = "Compliance Insulation R5.00"
+   MatRef[6] = "Compliance Insulation R5.00"
+   MatRef[7] = "Compliance Insulation R1.00"
+   ..

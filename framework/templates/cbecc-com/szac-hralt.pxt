@@ -1,0 +1,168 @@
+<%#INTERFACE
+
+modelkit_version "~>0.8.0"
+
+parameter "analysis", :default=> nil
+parameter "case_name", :default=> nil
+parameter "climate_zone", :default=> nil #form of czxx
+parameter "zone_name"
+parameter "status", :default=>"New"
+parameter "count"
+parameter "cooling_capacity", :default => 0
+parameter "heating_capacity", :default => 0
+parameter "supply_fan_cfm", :default => 0
+parameter "seer", :default=>0
+parameter "eer", :default=>0
+parameter "ieer", :default=>0
+parameter "eer_135",:default=> 0
+parameter "eer_240", :default => 0
+parameter "eer_760", :default => 0
+parameter "ieer_135",:default=> 0
+parameter "ieer_240", :default => 0
+parameter "ieer_760", :default => 0
+parameter "afue", :default=>0
+parameter "cooling_stage", :default=>1
+parameter "mineff_check", :default=>0
+
+parameter "motor_eff_sup", :default=>0
+parameter "fan_model", :default=>"BrakeHorsePower"
+parameter "sup_fan_eff", :default=>0.650
+parameter "econ_cutoff", :default=>54000
+
+parameter "airsys_control_type", :default=>"Other"
+parameter "optimum_start", :default => 0
+parameter "cooling_control", :default=>"NoSATControl"
+parameter "existing_hvac", :default=>0
+
+%>
+
+<%
+if existing_hvac == 1
+
+  if cooling_capacity.to_f < 135000
+    eer = eer_135
+    ieer = ieer_135
+  elsif cooling_capacity.to_f <240000
+    eer = eer_240
+    ieer = ieer_240
+  elsif cooling_capacity.to_f <760000
+    eer = eer_760
+    ieer = ieer_760
+  end
+end
+
+%>
+
+AirSys   "<%=zone_name%>"
+   Status = "<%=status%>"
+   Type = "SZAC"
+   CtrlZnRef = "<%=zone_name%> Thermal Zone"
+   Cnt = <%=count%>
+   CtrlSysType = "<%=airsys_control_type%>"
+   OptStart = <%=optimum_start%>
+   ClgCtrl = "<%=cooling_control%>"
+   ..
+
+AirSeg   "<%=zone_name%> SupAirSeg"
+   Type = "Supply"
+   ..
+
+CoilClg   "<%=zone_name%> CoilClg"
+   Type = "DirectExpansion"
+   NumClgStages = <%=cooling_stage%>
+   <%if seer != 0 %>
+     DXSEER = <%=seer%>
+   <%end%>
+   <%if ieer != 0 %>
+     DXIEER = <%=ieer%>
+   <%end%>
+   <%if eer != 0 %>
+     DXEER = <%=eer%>
+   <%end%>
+   FuelSrc = "Electric"
+   BypassMinEffCheck = <%=mineff_check.to_i%>
+   <%if cooling_capacity != 0 %>
+     CapTotNetRtd = <%=cooling_capacity%>
+     <%
+     if !analysis.nil?
+     file_name = Dir.pwd + "/analysis/" + analysis + "/runs/" + case_name + "/" + climate_zone + "/" + zone_name + "_CoolingCapacity.txt"
+     File.write(file_name, cooling_capacity)
+     end
+     %>
+    <%end%>
+   ..
+
+CoilHtg   "<%=zone_name%> CoilHtg"
+   Type = "Furnace"
+   FuelSrc = "Gas"
+
+   <%if afue != 0 %>
+     FurnAFUE = <%=afue%>
+     <%end%>
+   <%if heating_capacity != 0 %>
+     CapTotGrossRtd = <%=heating_capacity%>
+
+     <%
+     if !analysis.nil?
+     file_name = Dir.pwd + "/analysis/" + analysis + "/runs/" + case_name + "/" + climate_zone + "/" + zone_name + "_HeatingCapacity.txt"
+     File.write(file_name, heating_capacity)
+     end
+     %>
+
+     <%end%>
+    BypassMinEffCheck = 1
+   ..
+
+Fan   "<%=zone_name%> Fan"
+   ModelingMthd = "<%=fan_model%>"
+   <%if sup_fan_eff != 0%>
+   FlowEff = <%=sup_fan_eff%>
+   <%end%>
+   <%if motor_eff_sup != 0%>
+   MtrEff = <%=motor_eff_sup%>
+   <%end%>
+   <%if supply_fan_cfm != 0 %>
+   FlowCap = <%=supply_fan_cfm%>
+   <%end%>
+   ..
+
+AirSeg   "<%=zone_name%> ReturnAirSeg"
+   Type = "Return"
+   Path = "Direct"
+   ..
+
+ <%
+   if !analysis.nil?
+   file_name = Dir.pwd + "/analysis/" + analysis + "/runs/" + case_name + "/" + climate_zone + "/" + zone_name + "_Economizer.txt"
+   end
+ %>
+
+TrmlUnit   "<%=zone_name%> TerminalUnit"
+   Type = "Uncontrolled"
+   ZnServedRef = "<%=zone_name%> Thermal Zone"
+   PriAirSegRef = "<%=zone_name%> SupAirSeg"
+   <%if supply_fan_cfm != 0 %>
+   PriAirFlowMax = <%=supply_fan_cfm%>
+   <%end%>
+   ..
+
+OACtrl   "<%=zone_name%> OAControl"
+  <%if cooling_capacity.to_f > econ_cutoff %>
+  EconoCtrlMthd = "DifferentialDryBulb"
+  <%
+  if !analysis.nil?
+  File.write(file_name, "DifferentialDryBulb")
+  end
+  %>
+  <%else%>
+  EconoCtrlMthd = "NoEconomizer"
+  <%
+  if !analysis.nil?
+  File.write(file_name, "NoEconomizer")
+  end
+  %>
+  <%end%>
+  EconoIntegration = "Integrated"
+  AirSegSupRef = "<%=zone_name%> SupAirSeg"
+  AirSegRetRef = "<%=zone_name%> ReturnAirSeg"
+  ..
