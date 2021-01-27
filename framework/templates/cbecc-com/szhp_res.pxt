@@ -5,7 +5,7 @@ modelkit_version "~>0.8.0"
 parameter "zone_name"
 parameter "count"
 parameter "seer", :default=> 14 #Need to implement if statements based on capacity
-parameter "eer", :default=> 11.4
+parameter "eer", :default=> 11.7
 parameter "hspf", :default=> 8.2 #Need to implement if statements based on capacity
 parameter "index"
 parameter "cooling_capacity", :default => 0
@@ -14,6 +14,7 @@ parameter "supply_fan_cfm", :default => 0
 parameter "wattpercfm", :default => 0.45
 parameter "refcg_mult", :default => 1
 parameter "afuehspf_derate", :default => 1
+parameter "ctrl_method", :default => "ConstantVolume"
 %>
 
 <%
@@ -75,6 +76,7 @@ Fan   "Fan <%=index%>"
   FlowCap = <%=supply_fan_cfm%>
   PwrIdx =  <%=wattpercfm%>
   <%end%>
+  CtrlMthd = "<%=ctrl_method%>"
    ..
 
 CoilHtg   "SupCoilHtg <%=index%>"
