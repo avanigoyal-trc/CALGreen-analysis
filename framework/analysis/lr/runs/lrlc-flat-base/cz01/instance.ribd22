@@ -1,5 +1,6 @@
 // INSERT TEMPLATE 'C:/Users/agoyal/OneDrive - TRC/Documents/GitHub/CALGreen-analysis/framework/prototypes/cbecc-res/Low-rise-loaded-corridor-cathedral/root.pxt'
 // Path resolves to 'C:/Users/agoyal/OneDrive - TRC/Documents/GitHub/CALGreen-analysis/framework/prototypes/cbecc-res/Low-rise-loaded-corridor-cathedral/root.pxt'
+// PARAMETER ERROR:  Undefined parameter specified (roof_rise); parameter ignored.
 //   proposed_only = "No"
 // * climate_zone = "CZ1  (Arcata)" (:default => "ClimateZone12")
 // * weather_station = "CTZ01S22A" (:default => nil)
@@ -7,16 +8,20 @@
 // * software = "cbecc-res" (:default => nil)
 //   autosizing = "No"
 // * hvac_type = "SZHP" (:default => "SZAC")
+//   seer = 14
+//   eer = 11.7
+//   hspf = 8.2
+//   multispeed_compressor = 0
 //   is_central_dhw = 1
 //   window_u = 0.3
 // * window_shgc = 0.35 (:default => 0.23)
 // * wall_exterior_sheathing = 4 (:default => 0)
 // * wall_cavity = "R 21" (:default => nil)
-// * ceiling_sheathing = "R7 Sheathing" (:default => "- no sheathing/insul. -")
+// * ceiling_sheathing = "R2 Sheathing" (:default => "- no sheathing/insul. -")
 // * ceiling_cavity = "R 38" (:default => nil)
 // * frame_path_cavity = "2x12 @ 16 in. O.C." (:default => nil)
 //   asr = 0.1
-//   te = 0.85
+// * te = 0.75 (:default => 0.85)
 
 
 
@@ -1122,7 +1127,7 @@ CathedralCeiling   "Zone3toCathedralCeiling"
    OrientationValue = 0
    Construction = "Cathedral Ceiling"
    RoofSolReflect = 0.1
-   RoofEmiss = 0.85
+   RoofEmiss = 0.75
    ..
 
 OtherZone   "Corridor1"
@@ -1899,7 +1904,7 @@ CathedralCeiling   "Corridor3toCathedralCeiling"
    OrientationValue = 0
    Construction = "Cathedral Ceiling"
    RoofSolReflect = 0.1
-   RoofEmiss = 0.85
+   RoofEmiss = 0.75
    ..
 
 OtherZone   "Stairs2"
@@ -2050,7 +2055,7 @@ CathedralCeiling   "Stairs3toCathedralCeiling"
    OrientationValue = 0
    Construction = "Cathedral Ceiling"
    RoofSolReflect = 0.1
-   RoofEmiss = 0.85
+   RoofEmiss = 0.75
    ..
 
 EUseSummary   "EUSummary"
@@ -2967,7 +2972,7 @@ Cons   "Cathedral Ceiling"
    CanAssignTo = "Cathedral Ceilings"
    Type = "Wood Framed Ceiling"
    RoofingLayer = "5 PSF (Normal Gravel)"
-   AbvDeckInsulLayer = "R7 Sheathing"
+   AbvDeckInsulLayer = "R2 Sheathing"
    RoofDeckLayer = "Wood Siding/sheathing/decking"
    InsideFinishLayer = "Gypsum Board"
    AtticFloorLayer = "- no attic floor -"
@@ -4017,8 +4022,6 @@ HVACHtPump   "HeatpumpSystem-Res"
    Type = "SplitHeatPump - Central split heat pump"
    HSPF = 8.2
    AutoSize = 1
-   Cap47 = 24000
-   Cap17 = 12000
    SEER = 14
    EER = 11.7
    CFMperTon = 350
