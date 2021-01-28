@@ -9,6 +9,10 @@ parameter "weather_station"
 parameter "prototype"
 parameter "software"
 parameter "hvac_type", :default => "SZAC"
+parameter "seer", :default=>14
+parameter "eer", :default=>11.7
+parameter "hspf", :default=>8.2
+parameter "multispeed_compressor", :default=>0 #1 if we want to have a multi-speed compressor
 
 #parameters for residential DHW
 
@@ -2118,15 +2122,15 @@ HVACCool   "CoolingComponent"
 
 HVACHtPump   "HeatpumpSystem"
    Type = "SplitHeatPump - Central split heat pump"
-   HSPF = 8.2
+   HSPF = <%=hspf%>
    AutoSize = 1
-   SEER = 14
-   EER = 11.7
+   SEER = <%=seer%>
+   EER = <%=eer%>
    CFMperTon = 350
    ACCharge = "Verified"
    RefrigerantType = "R410A"
    ClSizingFactor = 1.1
-   IsMultiSpeed = 0
+   IsMultiSpeed = <%=multispeed_compressor%>
    IsZonal = 0
    UseEERinAnalysis = 1
    VCHPDucts = "Unducted"
