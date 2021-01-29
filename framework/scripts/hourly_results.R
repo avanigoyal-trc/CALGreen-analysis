@@ -213,11 +213,11 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
     
     cz_list <- cz[!(cz %in% cz_missing)]
     
-    all_results <- data.table::rbindlist(lapply(cz_list, get))
+    all_results <- data.table::rbindlist(lapply(cz_list, get)) %>% mutate(Measure = measure)
     
     
     
-    writeData(wb, measure, all_results)  
+    assign(measure, all_results)  
     
   }
   addWorksheet(wb, "Description")
