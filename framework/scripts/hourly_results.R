@@ -5,7 +5,7 @@ library(data.table)
 library(readxl)
 
 tdv_2022_generate_com <- function(path, measures = NULL, cz = NULL, lifetime, folder = NA, file = NA, res_or_nr = "nr", remove_DHW = FALSE){
-## For CBECC-Com
+  ## For CBECC-Com
   
   ##path: String format, path to prototype results folder starting at framework ie. "analysis/hvac_autosizing"
   if(is.null(measures)){
@@ -13,9 +13,9 @@ tdv_2022_generate_com <- function(path, measures = NULL, cz = NULL, lifetime, fo
   }
   
   if(is.null(cz)){
-  cz <- c("cz01", "cz02", "cz03", "cz04", "cz05", "cz06", "cz07",
-          "cz08", "cz09", "cz10", "cz11", "cz12", "cz13", "cz14",
-          "cz15", "cz16")
+    cz <- c("cz01", "cz02", "cz03", "cz04", "cz05", "cz06", "cz07",
+            "cz08", "cz09", "cz10", "cz11", "cz12", "cz13", "cz14",
+            "cz15", "cz16")
   }
   
   if (lifetime == 15){
@@ -26,11 +26,11 @@ tdv_2022_generate_com <- function(path, measures = NULL, cz = NULL, lifetime, fo
   }
   if (lifetime == 30){
     if(res_or_nr == "nr"){
-    elec_sheet_name =  "Elec Non-Res (30 Year)"
-    gas_sheet_name = "Gas Non-Res (30 Year)"
+      elec_sheet_name =  "Elec Non-Res (30 Year)"
+      gas_sheet_name = "Gas Non-Res (30 Year)"
     }else if (res_or_nr == "res"){
-    elec_sheet_name =  "Elec Res (30 Year)"
-    gas_sheet_name = "Gas Res (30 Year)"
+      elec_sheet_name =  "Elec Res (30 Year)"
+      gas_sheet_name = "Gas Res (30 Year)"
     }
     
   }
@@ -49,23 +49,23 @@ tdv_2022_generate_com <- function(path, measures = NULL, cz = NULL, lifetime, fo
     for(clim in cz){
       
       if(is.na(folder)){
-      folder <- "instance - run"
-      file <- "instance - ap - HourlyResults.csv"
+        folder <- "instance - run"
+        file <- "instance - ap - HourlyResults.csv"
       }
       
       if(!(paste(clim, folder, file, sep = "/") %in% list.files(here::here(path, "runs", measure), recursive = T))){
-         cz_missing <- c(cz_missing, clim)
-         next
-       }
-       
+        cz_missing <- c(cz_missing, clim)
+        next
+      }
+      
       hourly <- read_csv(here::here(path, "runs", measure, clim, folder, file), skip = 16)
-  
+      
       cfa_df <- read_csv(here::here(path, "runs", measure, clim, folder, file), skip = 10, col_names = FALSE)
       
       cfa <- as.numeric(cfa_df$X4[1])
       
       clim_num <- as.numeric(str_extract(clim, "\\d+"))
-    
+      
       hourly_totals_results <- hourly %>% select(Mo, Da, Hr, `(kWh)_5`, `(kWh)_14`, `(kBtu)_5`, `(kBtu)_12`, `(kWh)_13`, `(kBtu)_11`, `(kTDV/kWh)`, `(kTDV/MBtu)`)
       
       hourly_totals <- cbind(hourly_totals_results, tdv_2022_elec[,clim_num +1], tdv_2022_gas[, clim_num + 1])
@@ -89,11 +89,13 @@ tdv_2022_generate_com <- function(path, measures = NULL, cz = NULL, lifetime, fo
       hourly_totals_with_tdv <- hourly_totals %>% rowwise() %>% 
         mutate(CZ = as.numeric(str_extract_all(clim, "\\d+"))) %>%
         group_by(CZ) %>%
-        mutate(kTDV_Total_Elec_2022 = sum(Elec_kWh*`kTDV/kWh_2022`)/cfa,
-        kTDV_Total_NG_2022 = sum(NG_kBtu*`kTDV/Therm_2022`/100)/cfa)  # per therm
-        
+        summarise(kWh_Elec_Total = sum(Elec_kWh),
+                  kBtu_NG_Total = sum(NG_kBtu),
+                  kTDV_Total_Elec_2022 = sum(Elec_kWh*`kTDV/kWh_2022`)/cfa,
+                   kTDV_Total_NG_2022 = sum(NG_kBtu*`kTDV/Therm_2022`/100)/cfa)  # per therm
       
-     
+      
+      
       assign( clim, hourly_totals_with_tdv, envir = .GlobalEnv)
       
     }
@@ -105,10 +107,14 @@ tdv_2022_generate_com <- function(path, measures = NULL, cz = NULL, lifetime, fo
     
     
     writeData(wb, measure, all_results)  
-   
+    
   }
   
-  saveWorkbook(wb, here::here(path, "HourlyResults.xlsx"), overwrite = TRUE)
+  addWorksheet(wb, "Description")
+  description_of_run <- paste("LifeTime: ", lifetime, "TDVMultiplier: ", res_or_nr, "DHW Removed: ", remove_DHW, sep = " ")
+  writeData(wb, "Description", description_of_run)
+  
+  saveWorkbook(wb, here::here(path, "TDVAnnual.xlsx"), overwrite = TRUE)
   
 }
 
@@ -194,7 +200,9 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
       hourly_totals_with_tdv <- hourly_totals %>% rowwise() %>% 
         mutate(CZ = as.numeric(str_extract_all(clim, "\\d+"))) %>%
         group_by(CZ) %>%
-        summarise(kTDV_Total_Elec_2022 = sum(Elec_kWh*`kTDV/kWh_2022`)/cfa,
+        summarise(kWh_Elec_Total = sum(Elec_kWh),
+                  Therm_NG_Total = sum(NG_Therm),
+                  kTDV_Total_Elec_2022 = sum(Elec_kWh*`kTDV/kWh_2022`)/cfa,
                   kTDV_Total_NG_2022 = sum(NG_Therm*`kTDV/Therm_2022`)/cfa)  # per therm
       
       
@@ -212,8 +220,11 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
     writeData(wb, measure, all_results)  
     
   }
+  addWorksheet(wb, "Description")
+  description_of_run <- paste("LifeTime: ", lifetime, "TDVMultiplier: ", res_or_nr, "DHW Removed: ", remove_DHW, sep = ",")
+  writeData(wb, "Description", description_of_run)
   
-  saveWorkbook(wb, here::here(path, "HourlyResults.xlsx"), overwrite = TRUE)
+  saveWorkbook(wb, here::here(path, "TDVAnnual.xlsx"), overwrite = TRUE)
   
 }
 
