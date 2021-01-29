@@ -42,7 +42,7 @@ tdv_2022_generate_com <- function(path, measures = NULL, cz = NULL, lifetime, fo
   
   for (measure in measures){
     
-    addWorksheet(wb, measure)
+    
     
     cz_missing <- c()
     
@@ -102,13 +102,19 @@ tdv_2022_generate_com <- function(path, measures = NULL, cz = NULL, lifetime, fo
     
     cz_list <- cz[!(cz %in% cz_missing)]
     
-    all_results <- data.table::rbindlist(lapply(cz_list, get))
+    all_results <- data.table::rbindlist(lapply(cz_list, get)) %>% mutate(Measure = measure)
     
     
     
-    writeData(wb, measure, all_results)  
+    assign(measure, all_results, envir = .GlobalEnv)  
     
   }
+  
+  all_measures <- data.table::rbindlist(lapply(measures, get))
+  
+  addWorksheet(wb, "Results")
+  writeData(wb, "Results", all_measures)
+  
   
   addWorksheet(wb, "Description")
   description_of_run <- paste("LifeTime: ", lifetime, "TDVMultiplier: ", res_or_nr, "DHW Removed: ", remove_DHW, sep = " ")
@@ -156,7 +162,7 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
   
   for (measure in measures){
     
-    addWorksheet(wb, measure)
+    
     
     cz_missing <- c()
     
@@ -217,9 +223,16 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
     
     
     
-    assign(measure, all_results)  
+    assign(measure, all_results, envir = .GlobalEnv)  
     
   }
+  
+  all_measures <- data.table::rbindlist(lapply(measures, get))
+  
+  addWorksheet(wb, "Results")
+  writeData(wb, "Results", all_measures)
+  
+  
   addWorksheet(wb, "Description")
   description_of_run <- paste("LifeTime: ", lifetime, "TDVMultiplier: ", res_or_nr, "DHW Removed: ", remove_DHW, sep = ",")
   writeData(wb, "Description", description_of_run)
