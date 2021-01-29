@@ -4,8 +4,8 @@ Proj   "High-Rise Mixed-Use (10-story)"
    Ruleset = "CA 2022 Nonresidential, Vers. 1.0 Alpha (T24N_2022.bin)"
    BldgEngyModelVersion = 14
    CreateDate = 1568323931
-   ModDate = 1611793980
-   RunDate = 1611793981
+   ModDate = 1611912516
+   RunDate = 1611912517
    GasType = "NaturalGas"
    CliZn = "ClimateZone13"
    WeatherStation = "CTZ13S22A"
@@ -96,6 +96,11 @@ Mat   "Concrete - Solid Grout - 115 lb/ft3 - 8 in."
    ..
 
 Mat   "Compliance Insulation R0.10"  
+   CodeCat = "Insulation Board"
+   CodeItem = "Compliance Insulation R0.10"
+   ..
+
+Mat   "Compliance Insulation R2.15"  
    CodeCat = "Insulation Board"
    CodeItem = "Compliance Insulation R0.10"
    ..
@@ -355,11 +360,11 @@ ConsAssm   "SlabOnOrBelowGrade"
 ConsAssm   "ResMetalFramedWall"  
    SpecMthd = "Layers"
    ExtRoughness = "Smooth"
-   MatRef[1] = "Stucco - 7/8 in."
-   MatRef[2] = "Compliance Insulation R0.10"
+   MatRef[1] = "Compliance Insulation R7.10"
+   MatRef[2] = "Compliance Insulation R3.63"
    MatRef[3] = "Gypsum Board - 5/8 in."
    MatRef[4] = "Gypsum Board - 5/8 in."
-   MatRef[5] = "WoodFrameWall16inOCCavInsR21"
+   MatRef[5] = "MetalFrameWall16inOC R13.00"
    MatRef[6] = "Gypsum Board - 5/8 in."
    MatRef[7] = "Gypsum Board - 5/8 in."
    ..
@@ -11324,6 +11329,7 @@ CoilHtg   "CoilHtg 1"
    ..
 
 Fan   "Fan 1"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 278.679
    PwrIdx = 0.58
@@ -11356,6 +11362,7 @@ CoilHtg   "CoilHtg 2"
    ..
 
 Fan   "Fan 2"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 231.086
    PwrIdx = 0.58
@@ -11388,6 +11395,7 @@ CoilHtg   "CoilHtg 3"
    ..
 
 Fan   "Fan 3"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 387.065
    PwrIdx = 0.58
@@ -11420,6 +11428,7 @@ CoilHtg   "CoilHtg 4"
    ..
 
 Fan   "Fan 4"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 383.218
    PwrIdx = 0.58
@@ -11452,6 +11461,7 @@ CoilHtg   "CoilHtg 5"
    ..
 
 Fan   "Fan 5"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 377.178
    PwrIdx = 0.58
@@ -11484,6 +11494,7 @@ CoilHtg   "CoilHtg 6"
    ..
 
 Fan   "Fan 6"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 514.85
    PwrIdx = 0.58
@@ -11516,6 +11527,7 @@ CoilHtg   "CoilHtg 7"
    ..
 
 Fan   "Fan 7"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 708.161
    PwrIdx = 0.58
@@ -11548,6 +11560,7 @@ CoilHtg   "CoilHtg 8"
    ..
 
 Fan   "Fan 8"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 582.738
    PwrIdx = 0.58
@@ -11580,6 +11593,7 @@ CoilHtg   "CoilHtg 9"
    ..
 
 Fan   "Fan 9"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 701.455
    PwrIdx = 0.58
@@ -11612,6 +11626,7 @@ CoilHtg   "CoilHtg 10"
    ..
 
 Fan   "Fan 10"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 205.768
    PwrIdx = 0.58
@@ -11644,6 +11659,7 @@ CoilHtg   "CoilHtg 11"
    ..
 
 Fan   "Fan 11"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 361.29
    PwrIdx = 0.58
@@ -11676,6 +11692,7 @@ CoilHtg   "CoilHtg 12"
    ..
 
 Fan   "Fan 12"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 357.21
    PwrIdx = 0.58
@@ -11708,6 +11725,7 @@ CoilHtg   "CoilHtg 13"
    ..
 
 Fan   "Fan 13"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 311.436
    PwrIdx = 0.58
@@ -11740,6 +11758,7 @@ CoilHtg   "CoilHtg 14"
    ..
 
 Fan   "Fan 14"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 487.448
    PwrIdx = 0.58
@@ -11772,6 +11791,7 @@ CoilHtg   "CoilHtg 15"
    ..
 
 Fan   "Fan 15"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 648.783
    PwrIdx = 0.58
@@ -11804,6 +11824,7 @@ CoilHtg   "CoilHtg 16"
    ..
 
 Fan   "Fan 16"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 545.956
    PwrIdx = 0.58
@@ -11836,6 +11857,7 @@ CoilHtg   "CoilHtg 17"
    ..
 
 Fan   "Fan 17"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 654.462
    PwrIdx = 0.58
@@ -11868,6 +11890,7 @@ CoilHtg   "CoilHtg 18"
    ..
 
 Fan   "Fan 18"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 172.472
    PwrIdx = 0.58
@@ -11900,6 +11923,7 @@ CoilHtg   "CoilHtg 19"
    ..
 
 Fan   "Fan 19"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 157.5
    PwrIdx = 0.58
@@ -11932,6 +11956,7 @@ CoilHtg   "CoilHtg 21"
    ..
 
 Fan   "Fan 21"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 1050
    PwrIdx = 0.58
@@ -11964,6 +11989,7 @@ CoilHtg   "CoilHtg 20"
    ..
 
 Fan   "Fan 20"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 157.5
    PwrIdx = 0.58
@@ -11996,6 +12022,7 @@ CoilHtg   "CoilHtg 22"
    ..
 
 Fan   "Fan 22"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 1050
    PwrIdx = 0.58
@@ -12687,30 +12714,30 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Title3[18] = "Emis. (tonne)"
    Title3[19] = "Emis. (tonne)"
    Enduse1[1] = "Space Heating"
-   Enduse1[2] = "30.7"
+   Enduse1[2] = "29.6"
    Enduse1[3] = "101.8"
-   Enduse1[4] = "9.40"
+   Enduse1[4] = "9.14"
    Enduse1[9] = "--"
-   Enduse1[11] = "1.77"
-   Enduse1[17] = "6.76"
+   Enduse1[11] = "1.73"
+   Enduse1[17] = "6.51"
    Enduse1[18] = "0.49"
-   Enduse1[19] = "7.25"
+   Enduse1[19] = "7.00"
    Enduse2[1] = "Space Cooling"
-   Enduse2[2] = "125.0"
+   Enduse2[2] = "123.8"
    Enduse2[3] = "--"
-   Enduse2[4] = "42.05"
-   Enduse2[9] = "61.5"
-   Enduse2[11] = "2.62"
-   Enduse2[17] = "17.45"
-   Enduse2[19] = "17.45"
+   Enduse2[4] = "41.61"
+   Enduse2[9] = "60.4"
+   Enduse2[11] = "2.61"
+   Enduse2[17] = "17.36"
+   Enduse2[19] = "17.36"
    Enduse3[1] = "Indoor Fans"
-   Enduse3[2] = "79.5"
+   Enduse3[2] = "79.0"
    Enduse3[3] = "--"
-   Enduse3[4] = "20.53"
-   Enduse3[9] = "20.0"
-   Enduse3[11] = "1.81"
-   Enduse3[17] = "12.06"
-   Enduse3[19] = "12.06"
+   Enduse3[4] = "20.40"
+   Enduse3[9] = "19.8"
+   Enduse3[11] = "1.80"
+   Enduse3[17] = "12.01"
+   Enduse3[19] = "12.01"
    Enduse4[1] = "Heat Rejection"
    Enduse4[2] = "0.2"
    Enduse4[3] = "--"
@@ -12745,14 +12772,14 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Enduse7[17] = "5.75"
    Enduse7[19] = "5.75"
    Enduse8[1] = "Compliance Total"
-   Enduse8[2] = "293.5"
+   Enduse8[2] = "290.7"
    Enduse8[3] = "810.0"
-   Enduse8[4] = "98.24"
-   Enduse8[9] = "92.0"
-   Enduse8[11] = "12.42"
-   Enduse8[17] = "42.70"
+   Enduse8[4] = "97.41"
+   Enduse8[9] = "90.7"
+   Enduse8[11] = "12.36"
+   Enduse8[17] = "42.31"
    Enduse8[18] = "3.89"
-   Enduse8[19] = "46.59"
+   Enduse8[19] = "46.20"
    Enduse9[1] = "Receptacle"
    Enduse9[2] = "274.5"
    Enduse9[3] = "157.7"
@@ -12800,14 +12827,14 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Enduse14[9] = "--"
    Enduse14[11] = "--"
    Enduse15[1] = "TOTAL"
-   Enduse15[2] = "641.6"
+   Enduse15[2] = "638.8"
    Enduse15[3] = "1,227.3"
-   Enduse15[4] = "185.22"
-   Enduse15[9] = "148.4"
-   Enduse15[11] = "23.87"
-   Enduse15[17] = "98.26"
+   Enduse15[4] = "184.39"
+   Enduse15[9] = "147.1"
+   Enduse15[11] = "23.81"
+   Enduse15[17] = "97.87"
    Enduse15[18] = "5.89"
-   Enduse15[19] = "104.15"
+   Enduse15[19] = "103.76"
    ZoneUMLHsLoaded[1] = 1
    ZoneUMLHs[1] = "clg: 0  htg: 0  'Thermal Zone: L1 Parking Garage'
 clg: 0  htg: 0  'Thermal Zone: L2 Parking Garage'
@@ -12829,7 +12856,7 @@ clg: 0  htg: 0  'Thermal Zone: F10 2-Bed NW'
 clg: 0  htg: 0  'Thermal Zone: F10 2-Bed SE'
 clg: 0  htg: 0  'Thermal Zone: F10 2-Bed SW'
 clg: 0  htg: 0  'Thermal Zone: F10 Corridor'
-clg: 6  htg: 0  'Thermal Zone: F10 Laundry'
+clg: 5  htg: 0  'Thermal Zone: F10 Laundry'
 clg: 0  htg: 0  'Thermal Zone: F10 Studio N'
 clg: 0  htg: 0  'Thermal Zone: F2-9 1-Bed SE'
 clg: 0  htg: 0  'Thermal Zone: F2-9 1-Bed SW'
@@ -12839,7 +12866,7 @@ clg: 0  htg: 0  'Thermal Zone: F2-9 2-Bed NW'
 clg: 0  htg: 0  'Thermal Zone: F2-9 2-Bed SE'
 clg: 0  htg: 0  'Thermal Zone: F2-9 2-Bed SW'
 clg: 0  htg: 0  'Thermal Zone: F2-9 Corridor'
-clg: 3  htg: 0  'Thermal Zone: F2-9 Laundry'
+clg: 1  htg: 0  'Thermal Zone: F2-9 Laundry'
 clg: 0  htg: 0  'Thermal Zone: F2-9 Studio N'"
    SimSummary[1] = "Successful (259 warnings)"
    ..
