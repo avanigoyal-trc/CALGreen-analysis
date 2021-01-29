@@ -7,7 +7,9 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    BldgEngyModelVersion = UVal: 14
    CreateDate = UVal: 1567115615
    ModDate = UVal: 1570125407
-   RunDate = UVal: 1570125408
+   RunDate = UVal: 1611944400
+   RunDateFormatted = UVal: "10:20, Fri, Jan 29, 2021"
+   RunDateISO = UVal: "2021-01-29T10:20:00-08:00"
    GeometryInpType = RVal: "Detailed"  (1)
    SolDistribution = RVal: "FullExterior"  (2)
    NumTimeStepsPerHr = RVal: 4
@@ -198,6 +200,9 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    ProjFileName = UVal: "instance.cibd22"
    CompReportNum = RVal: 0
    ResultsCurrentMessage = UVal: "(not current)"
+   ModelPath = PDef: "C:\Users\agoyal\OneDrive - TRC\Documents\GitHub\CALGreen-analysis\framework\analysis\hr\runs\mr-base22\cz07\"
+   ModelFile = PDef: "instance"
+   ProcessingPath = PDef: "C:\Users\agoyal\OneDrive - TRC\Documents\GitHub\CALGreen-analysis\framework\analysis\hr\runs\mr-base22\cz07\instance - run\"
    PropHasNoClgZns = RVal: 0
    AddClgSysZns = RVal: 0
    PropHasUnknownHVACZns = RVal: 0
@@ -319,8 +324,8 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    MassHeavyWallUA[4] = RVal: 0
    MassHeavyWallUA[5] = RVal: 0
    MassHeavyWallUA[6] = RVal: 0
-   WoodFrmAndOtherWallUA[1] = RVal: 0
-   WoodFrmAndOtherWallUA[2] = RVal: 0
+   WoodFrmAndOtherWallUA[1] = RVal: 82.8758
+   WoodFrmAndOtherWallUA[2] = RVal: 2108.15
    WoodFrmAndOtherWallUA[3] = RVal: 0
    WoodFrmAndOtherWallUA[4] = RVal: 0
    WoodFrmAndOtherWallUA[5] = RVal: 0
@@ -440,9 +445,9 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    AltMassFlrMaxUFac[3] = RVal: 9.999
    MassHeavyWallUFac[1] = RVal: 0.0696988
    MassHeavyWallUFac[7] = RVal: 0.0696988
-   WoodFrmAndOtherWallUFac[1] = RVal: 0
-   WoodFrmAndOtherWallUFac[2] = RVal: 0
-   WoodFrmAndOtherWallUFac[7] = RVal: 0
+   WoodFrmAndOtherWallUFac[1] = RVal: 0.0647467
+   WoodFrmAndOtherWallUFac[2] = RVal: 0.0647467
+   WoodFrmAndOtherWallUFac[7] = RVal: 0.0647467
    WoodFrmAndOtherRoofUFac[1] = RVal: 0.039285
    WoodFrmAndOtherRoofUFac[2] = RVal: 0.039285
    WoodFrmAndOtherRoofUFac[7] = RVal: 0.039285
@@ -519,7 +524,7 @@ Proj   User: "Mid-Rise Mixed-Use (5-story)"
    CO2EmissionsResultsDecPrec = RVal: 2
    ZipCodeMsg = RVal: "Enter zip code to default CZ and weather file"
    HasBaseHVAC = RVal: 1
-   ModelName = RVal: "NoName"
+   ModelName = RVal: "instance22"
    TblName = RVal: "NoName"
    AvgStateElecCostMsg = RVal: "Electricity cost is equal to the California state average cost"
    AvgStateOtherFuelCostMsg = RVal: " "
@@ -5462,6 +5467,7 @@ ConsAssm   User: "SlabOnOrBelowGradeF073-user"
 ConsAssm   User: "ResWoodWallU059"  
    CompatibleSurfType = RVal: "ExteriorWall"  (1)
    SpecMthd = RVal: "Layers"  (1)
+   UFactor = RVal: 0.0647467
    AssignedSurfType = RVal: 1
    Status = RVal: "New"  (1)
    ExtRoughness = RVal: "MediumRough"  (3)
@@ -5480,7 +5486,7 @@ ConsAssm   User: "ResWoodWallU059"
    MatRef[1] = UVal: "Stucco - 7/8 in."
    MatRef[2] = UVal: "Compliance Insulation R0.10"
    MatRef[3] = UVal: "Gypsum Board - 5/8 in."
-   MatRef[4] = UVal: "- none -"
+   MatRef[4] = UVal: "WoodFrameWall16inOC R21"
    MatRef[5] = UVal: "Gypsum Board - 5/8 in."
    AreaNew = RVal: 33840
    AreaAltered = RVal: 0
@@ -5491,8 +5497,8 @@ ConsAssm   User: "ResWoodWallU059"
    AreaAltNonResCond = RVal: 0
    AreaAltResCond = RVal: 0
    AreaAltRelocCond = RVal: 0
-   CavityInsVal = RVal: 0
-   PerfFacRpt = RVal: "NA"
+   CavityInsVal = RVal: 21
+   PerfFacRpt = RVal: "U-Factor: 0.065"
    InsCheckSum = RVal: 0.1
    RoofDens = RDef: 0
    BuiltUpRoof = RDef: 0
@@ -5502,6 +5508,8 @@ ConsAssm   User: "ResWoodWallU059"
    InsdAirFilmR = RVal: 0.68
    HtCapCat = RVal: "NotMass"  (3)
    ConsType = RVal: "WoodFramingAndOtherWall"  (6)
+   UAValueNewNonRes = RVal: 82.8758
+   UAValueNewRes = RVal: 2108.15
    ..
 
 ConsAssm   User: "WoodFramedInteriorWallU099"  
@@ -6042,6 +6050,32 @@ Mat   User: "WoodFrameWall16inOC R11.25"
    IsMetalRoof = RVal: 0
    RefCnt = RVal: 1
    SimpleCompositeR = RVal: 7.20374
+   HeatCap = RVal: 0
+   InsCheck = RVal: 0
+   ..
+
+Mat   User: "WoodFrameWall16inOC R21"  
+   CodeCat = UVal: "Composite"  (40)
+   CodeItem = PDef: "- specify -"  (0)
+   RVal = RVal: 12.2507
+   Dens = RVal: 0
+   Thkns = RVal: 0
+   FrmMat = UVal: "Wood"  (1)
+   FrmConfig = UVal: "Wall16inOC"  (1)
+   FrmDepth = UVal: "5_5In"  (12)
+   CavityIns = UVal: 21
+   FrmFacCav = RVal: 0.75
+   FrmFacMembers = RVal: 0.25
+   FrmFacHeaders = RVal: 0
+   HeaderIns = RVal: 0
+   CMUWt = PDef: "- specify -"  (0)
+   CMUFill = PDef: "- specify -"  (0)
+   CavityInsVal = RVal: 21
+   FrmDepthVal = RVal: 5.5
+   IsMetalWall = RVal: 0
+   IsMetalRoof = RVal: 0
+   RefCnt = RVal: 1
+   SimpleCompositeR = RVal: 12.2507
    HeatCap = RVal: 0
    InsCheck = RVal: 0
    ..
@@ -7732,7 +7766,7 @@ Spc   User: "Parking Garage"
    DayltgCtrlLtgPwr = RVal: 0
    HasDayltgCtrl = RVal: 0
    SlabTypeCount = RVal: 0
-   NonCompExtSurf = RVal: 0
+   NonCompExtSurf = RVal: 1
    ExtDrArea = RVal: 0
    ExtNewDrArea = RVal: 0
    NonCompIntSurf = RVal: 0
@@ -7872,6 +7906,7 @@ Roof   User: "Surface 1085"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.625
+   NonCompIns = RVal: 1
    MaxUFactor = RVal: 0.049
    AreaNew = RVal: 5280
    ..
@@ -9181,6 +9216,7 @@ ExtWall   User: "Surface 65"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 150
    AreaNewNonResCond = RVal: 150
@@ -9441,6 +9477,7 @@ IntWall   User: "Surface 66"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -9523,6 +9560,7 @@ IntWall   User: "Surface 67"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 150
    ..
 
@@ -9605,6 +9643,7 @@ IntWall   User: "Surface 68"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -10451,6 +10490,7 @@ ExtWall   User: "Surface 43"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 600
    AreaNewNonResCond = RVal: 600
@@ -10663,6 +10703,7 @@ ExtWall   User: "Surface 56"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 70
    AreaNewNonResCond = RVal: 70
@@ -10959,6 +11000,7 @@ IntWall   User: "Surface 41"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 100
    ..
 
@@ -11041,6 +11083,7 @@ IntWall   User: "Surface 44"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -11123,6 +11166,7 @@ IntWall   User: "Surface 45"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 270
    ..
 
@@ -11205,6 +11249,7 @@ IntWall   User: "Surface 46"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 70
    ..
 
@@ -11287,6 +11332,7 @@ IntWall   User: "Surface 47"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 90
    ..
 
@@ -11369,6 +11415,7 @@ IntWall   User: "Surface 48"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -11451,6 +11498,7 @@ IntWall   User: "Surface 49"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -11533,6 +11581,7 @@ IntWall   User: "Surface 50"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 290
    ..
 
@@ -11615,6 +11664,7 @@ IntWall   User: "Surface 51"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 80
    ..
 
@@ -11697,6 +11747,7 @@ IntWall   User: "Surface 52"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -11779,6 +11830,7 @@ IntWall   User: "Surface 53"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -11861,6 +11913,7 @@ IntWall   User: "Surface 54"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -11943,6 +11996,7 @@ IntWall   User: "Surface 55"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 370
    ..
 
@@ -12025,6 +12079,7 @@ IntWall   User: "Surface 57"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 600
    ..
 
@@ -12107,6 +12162,7 @@ IntWall   User: "Surface 58"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -12189,6 +12245,7 @@ IntWall   User: "Surface 59"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -12271,6 +12328,7 @@ IntWall   User: "Surface 60"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 170
    ..
 
@@ -13110,6 +13168,7 @@ ExtWall   User: "Surface 39-2"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 150
    AreaNewNonResCond = RVal: 150
@@ -13322,6 +13381,7 @@ ExtWall   User: "Surface 62-2"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 170
    AreaNewNonResCond = RVal: 170
@@ -13612,6 +13672,7 @@ IntWall   User: "Surface 36"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 360
    ..
 
@@ -13694,6 +13755,7 @@ IntWall   User: "Surface 40"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -13776,6 +13838,7 @@ IntWall   User: "Surface 42"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -13858,6 +13921,7 @@ IntWall   User: "Surface 61"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 300
    ..
 
@@ -13940,6 +14004,7 @@ IntWall   User: "Surface 60-2"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 130
    ..
 
@@ -14022,6 +14087,7 @@ IntWall   User: "Surface 40-2"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 120
    ..
 
@@ -14862,6 +14928,7 @@ IntWall   User: "Surface 160"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -14944,6 +15011,7 @@ IntWall   User: "Surface 161"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -15026,6 +15094,7 @@ IntWall   User: "Surface 163"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -15866,6 +15935,7 @@ IntWall   User: "Surface 168"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -15948,6 +16018,7 @@ IntWall   User: "Surface 169"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -16788,6 +16859,7 @@ IntWall   User: "Surface 155"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -16870,6 +16942,7 @@ IntWall   User: "Surface 156"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -17678,6 +17751,7 @@ ExtWall   User: "Surface 74"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 300
    AreaNewNonResCond = RVal: 300
@@ -17938,6 +18012,7 @@ IntWall   User: "Surface 72"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 60
    ..
 
@@ -18020,6 +18095,7 @@ IntWall   User: "Surface 73"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -18828,6 +18904,7 @@ ExtWall   User: "Surface 80"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 230
    AreaNewNonResCond = RVal: 230
@@ -19088,6 +19165,7 @@ IntWall   User: "Surface 78"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 160
    ..
 
@@ -19170,6 +19248,7 @@ IntWall   User: "Surface 79"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 150
    ..
 
@@ -19252,6 +19331,7 @@ IntWall   User: "Surface 81"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 150
    ..
 
@@ -20089,6 +20169,7 @@ IntWall   User: "Surface 85"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 60
    ..
 
@@ -20171,6 +20252,7 @@ IntWall   User: "Surface 86"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 270
    ..
 
@@ -20253,6 +20335,7 @@ IntWall   User: "Surface 89"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 100
    ..
 
@@ -21089,6 +21172,7 @@ ExtWall   User: "Surface 128"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 290
    AreaNewNonResCond = RVal: 290
@@ -21373,6 +21457,7 @@ IntWall   User: "Surface 127"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 600
    ..
 
@@ -22184,6 +22269,7 @@ ExtWall   User: "Surface 144"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 240
    AreaNewNonResCond = RVal: 240
@@ -22444,6 +22530,7 @@ IntWall   User: "Surface 143"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 600
    ..
 
@@ -22526,6 +22613,7 @@ IntWall   User: "Surface 145"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 600
    ..
 
@@ -23337,6 +23425,7 @@ ExtWall   User: "Surface 137"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 240
    AreaNewNonResCond = RVal: 240
@@ -24326,6 +24415,7 @@ ExtWall   User: "Surface 150"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 240
    AreaNewNonResCond = RVal: 240
@@ -24537,6 +24627,7 @@ ExtWall   User: "Surface 151"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 600
    AreaNewNonResCond = RVal: 600
@@ -25526,6 +25617,7 @@ ExtWall   User: "Surface 119"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 240
    AreaNewNonResCond = RVal: 240
@@ -25786,6 +25878,7 @@ IntWall   User: "Surface 118"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 600
    ..
 
@@ -26597,6 +26690,7 @@ ExtWall   User: "Surface 105"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 600
    AreaNewNonResCond = RVal: 600
@@ -26808,6 +26902,7 @@ ExtWall   User: "Surface 106"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 240
    AreaNewNonResCond = RVal: 240
@@ -27068,6 +27163,7 @@ IntWall   User: "Surface 107"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 600
    ..
 
@@ -27879,6 +27975,7 @@ ExtWall   User: "Surface 111"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 240
    AreaNewNonResCond = RVal: 240
@@ -28868,6 +28965,7 @@ ExtWall   User: "Surface 10"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 600
    AreaNewNonResCond = RVal: 600
@@ -29079,6 +29177,7 @@ ExtWall   User: "Surface 11"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 240
    AreaNewNonResCond = RVal: 240
@@ -29290,6 +29389,7 @@ ExtWall   User: "Surface 9"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 240
    AreaNewNonResCond = RVal: 240
@@ -29550,6 +29650,7 @@ IntWall   User: "Surface 8"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 600
    ..
 
@@ -30361,6 +30462,7 @@ ExtWall   User: "Surface 20"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 240
    AreaNewNonResCond = RVal: 240
@@ -30572,6 +30674,7 @@ ExtWall   User: "Surface 22"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 240
    AreaNewNonResCond = RVal: 240
@@ -31561,6 +31664,7 @@ ExtWall   User: "Surface 2"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 240
    AreaNewNonResCond = RVal: 240
@@ -31772,6 +31876,7 @@ ExtWall   User: "Surface 4"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 240
    AreaNewNonResCond = RVal: 240
@@ -31983,6 +32088,7 @@ ExtWall   User: "Surface 5"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 600
    AreaNewNonResCond = RVal: 600
@@ -32243,6 +32349,7 @@ IntWall   User: "Surface 3"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 600
    ..
 
@@ -33054,6 +33161,7 @@ ExtWall   User: "Surface 15"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 240
    AreaNewNonResCond = RVal: 240
@@ -33265,6 +33373,7 @@ ExtWall   User: "Surface 17"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 240
    AreaNewNonResCond = RVal: 240
@@ -33525,6 +33634,7 @@ IntWall   User: "Surface 16"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 600
    ..
 
@@ -34348,6 +34458,7 @@ ExtWall   User: "Surface 30"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 300
    AreaNewNonResCond = RVal: 300
@@ -34559,6 +34670,7 @@ ExtWall   User: "Surface 32"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 240
    AreaNewNonResCond = RVal: 240
@@ -34831,6 +34943,7 @@ IntWall   User: "Surface 29"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -35638,6 +35751,7 @@ ExtWall   User: "Surface 99"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 100
    AreaNewNonResCond = RVal: 100
@@ -36623,6 +36737,7 @@ ExtWall   User: "Surface 95"
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0696988
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 100
    AreaNewNonResCond = RVal: 100
@@ -37826,6 +37941,8 @@ ExtWall   User: "Surface 1061"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 720
    AreaNewResCond = RVal: 720
@@ -38147,6 +38264,7 @@ IntWall   User: "Surface 1060"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 150
    ..
 
@@ -38229,6 +38347,7 @@ IntWall   User: "Surface 1062"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 150
    ..
 
@@ -38311,6 +38430,7 @@ IntWall   User: "Surface 1063"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 450
    ..
 
@@ -38393,6 +38513,7 @@ IntWall   User: "Surface 1065"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 900
    ..
 
@@ -38475,6 +38596,7 @@ IntWall   User: "Surface 1066"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 150
    ..
 
@@ -38557,6 +38679,7 @@ IntWall   User: "Surface 1068"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 720
    ..
 
@@ -39417,6 +39540,8 @@ ExtWall   User: "Surface 869"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 900
    AreaNewResCond = RVal: 900
@@ -39738,6 +39863,7 @@ IntWall   User: "Surface 867"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -39820,6 +39946,7 @@ IntWall   User: "Surface 868"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 540
    ..
 
@@ -39902,6 +40029,7 @@ IntWall   User: "Surface 870"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 720
    ..
 
@@ -39984,6 +40112,7 @@ IntWall   User: "Surface 871"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 900
    ..
 
@@ -40844,6 +40973,8 @@ ExtWall   User: "Surface 891"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 900
    AreaNewResCond = RVal: 900
@@ -41177,6 +41308,7 @@ IntWall   User: "Surface 887"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -41259,6 +41391,7 @@ IntWall   User: "Surface 889"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 900
    ..
 
@@ -41341,6 +41474,7 @@ IntWall   User: "Surface 892"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 540
    ..
 
@@ -41423,6 +41557,7 @@ IntWall   User: "Surface 893"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 720
    ..
 
@@ -42283,6 +42418,8 @@ ExtWall   User: "Surface 875"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 900
    AreaNewResCond = RVal: 900
@@ -42604,6 +42741,7 @@ IntWall   User: "Surface 876"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 900
    ..
 
@@ -42686,6 +42824,7 @@ IntWall   User: "Surface 878"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 720
    ..
 
@@ -43546,6 +43685,8 @@ ExtWall   User: "Surface 970"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 900
    AreaNewResCond = RVal: 900
@@ -43867,6 +44008,7 @@ IntWall   User: "Surface 965"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 720
    ..
 
@@ -43949,6 +44091,7 @@ IntWall   User: "Surface 968"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 900
    ..
 
@@ -44809,6 +44952,8 @@ ExtWall   User: "Surface 207"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 720
    AreaNewResCond = RVal: 720
@@ -45130,6 +45275,7 @@ IntWall   User: "Surface 208"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 930
    ..
 
@@ -45212,6 +45358,7 @@ IntWall   User: "Surface 209"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 720
    ..
 
@@ -45294,6 +45441,7 @@ IntWall   User: "Surface 210"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 930
    ..
 
@@ -46154,6 +46302,8 @@ ExtWall   User: "Surface 213"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 720
    AreaNewResCond = RVal: 720
@@ -46475,6 +46625,7 @@ IntWall   User: "Surface 214"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 930
    ..
 
@@ -46557,6 +46708,7 @@ IntWall   User: "Surface 215"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 720
    ..
 
@@ -47417,6 +47569,8 @@ ExtWall   User: "Surface 219"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 720
    AreaNewResCond = RVal: 720
@@ -47738,6 +47892,7 @@ IntWall   User: "Surface 220"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 930
    ..
 
@@ -47820,6 +47975,7 @@ IntWall   User: "Surface 221"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 720
    ..
 
@@ -48680,6 +48836,8 @@ ExtWall   User: "Surface 201"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 720
    AreaNewResCond = RVal: 720
@@ -49001,6 +49159,7 @@ IntWall   User: "Surface 203"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 720
    ..
 
@@ -49083,6 +49242,7 @@ IntWall   User: "Surface 204"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 930
    ..
 
@@ -49943,6 +50103,8 @@ ExtWall   User: "Surface 195"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 720
    AreaNewResCond = RVal: 720
@@ -50264,6 +50426,7 @@ IntWall   User: "Surface 197"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 720
    ..
 
@@ -50346,6 +50509,7 @@ IntWall   User: "Surface 198"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 930
    ..
 
@@ -51218,6 +51382,8 @@ ExtWall   User: "Surface 1006"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 360
    AreaNewResCond = RVal: 360
@@ -51606,6 +51772,7 @@ IntWall   User: "Surface 1001"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 900
    ..
 
@@ -51688,6 +51855,7 @@ IntWall   User: "Surface 1002"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -51770,6 +51938,7 @@ IntWall   User: "Surface 1004"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 540
    ..
 
@@ -51852,6 +52021,7 @@ IntWall   User: "Surface 1005"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 450
    ..
 
@@ -51934,6 +52104,7 @@ IntWall   User: "Surface 998"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 450
    ..
 
@@ -52016,6 +52187,7 @@ IntWall   User: "Surface 999"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 1080
    ..
 
@@ -52876,6 +53048,8 @@ ExtWall   User: "Surface 994"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 360
    AreaNewResCond = RVal: 360
@@ -53264,6 +53438,7 @@ IntWall   User: "Surface 990"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 1080
    ..
 
@@ -53346,6 +53521,7 @@ IntWall   User: "Surface 991"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 540
    ..
 
@@ -53428,6 +53604,7 @@ IntWall   User: "Surface 993"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 900
    ..
 
@@ -53510,6 +53687,7 @@ IntWall   User: "Surface 996"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -54370,6 +54548,8 @@ ExtWall   User: "Surface 981"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
@@ -54758,6 +54938,7 @@ IntWall   User: "Surface 977"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 900
    ..
 
@@ -54840,6 +55021,7 @@ IntWall   User: "Surface 978"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 1080
    ..
 
@@ -54922,6 +55104,7 @@ IntWall   User: "Surface 979"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 900
    ..
 
@@ -55782,6 +55965,8 @@ ExtWall   User: "Surface 922"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
@@ -56304,6 +56489,7 @@ IntWall   User: "Surface 921"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 1080
    ..
 
@@ -56386,6 +56572,7 @@ IntWall   User: "Surface 923"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 900
    ..
 
@@ -56468,6 +56655,7 @@ IntWall   User: "Surface 926"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 900
    ..
 
@@ -57329,6 +57517,8 @@ ExtWall   User: "Surface 1034"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 900
    AreaNewResCond = RVal: 900
@@ -57540,6 +57730,8 @@ ExtWall   User: "Surface 1036"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
@@ -57861,6 +58053,7 @@ IntWall   User: "Surface 1033"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 540
    ..
 
@@ -57943,6 +58136,7 @@ IntWall   User: "Surface 1035"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 540
    ..
 
@@ -58025,6 +58219,7 @@ IntWall   User: "Surface 1038"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 900
    ..
 
@@ -58885,6 +59080,8 @@ ExtWall   User: "Surface 861"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
@@ -59273,6 +59470,7 @@ IntWall   User: "Surface 860"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 1080
    ..
 
@@ -60133,6 +60331,8 @@ ExtWall   User: "Surface 1053"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 900
    AreaNewResCond = RVal: 900
@@ -60343,6 +60543,8 @@ ExtWall   User: "Surface 1059"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
@@ -60664,6 +60866,7 @@ IntWall   User: "Surface 1054"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 540
    ..
 
@@ -60746,6 +60949,7 @@ IntWall   User: "Surface 1055"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 900
    ..
 
@@ -60828,6 +61032,7 @@ IntWall   User: "Surface 1058"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 540
    ..
 
@@ -61688,6 +61893,8 @@ ExtWall   User: "Surface 796"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
@@ -62009,6 +62216,7 @@ IntWall   User: "Surface 794"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 1080
    ..
 
@@ -62869,6 +63077,8 @@ ExtWall   User: "Surface 184"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 900
    AreaNewResCond = RVal: 900
@@ -63079,6 +63289,8 @@ ExtWall   User: "Surface 185"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 1410
    AreaNewResCond = RVal: 1410
@@ -63400,6 +63612,7 @@ IntWall   User: "Surface 182"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 480
    ..
 
@@ -64260,6 +64473,8 @@ ExtWall   User: "Surface 901"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 1410
    AreaNewResCond = RVal: 1410
@@ -64470,6 +64685,8 @@ ExtWall   User: "Surface 902"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 900
    AreaNewResCond = RVal: 900
@@ -64791,6 +65008,7 @@ IntWall   User: "Surface 905"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 480
    ..
 
@@ -66660,6 +66878,7 @@ IntWall   User: "Surface 928"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 150
    ..
 
@@ -66742,6 +66961,7 @@ IntWall   User: "Surface 935"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -66824,6 +67044,7 @@ IntWall   User: "Surface 937"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 300
    ..
 
@@ -66906,6 +67127,7 @@ IntWall   User: "Surface 938"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 210
    ..
 
@@ -66988,6 +67210,7 @@ IntWall   User: "Surface 943"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 150
    ..
 
@@ -67070,6 +67293,7 @@ IntWall   User: "Surface 953"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 300
    ..
 
@@ -67152,6 +67376,7 @@ IntWall   User: "Surface 954"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 150
    ..
 
@@ -67234,6 +67459,7 @@ IntWall   User: "Surface 960"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 150
    ..
 
@@ -67316,6 +67542,7 @@ IntWall   User: "Surface 964"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -68151,6 +68378,7 @@ IntWall   User: "Surface 177"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 150
    ..
 
@@ -68233,6 +68461,7 @@ IntWall   User: "Surface 179"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 150
    ..
 
@@ -69821,6 +70050,7 @@ IntWall   User: "Surface 975"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 150
    ..
 
@@ -70630,6 +70860,8 @@ ExtWall   User: "Surface 984"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 360
    AreaNewNonResCond = RVal: 360
@@ -71687,6 +71919,8 @@ ExtWall   User: "Surface 1021"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 300
    AreaNewNonResCond = RVal: 300
@@ -72665,6 +72899,8 @@ ExtWall   User: "Surface 1050"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 300
    AreaNewNonResCond = RVal: 300
@@ -73697,6 +73933,8 @@ ExtWall   User: "Surface 1043"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 540
    AreaNewResCond = RVal: 540
@@ -73907,6 +74145,8 @@ ExtWall   User: "Surface 1045"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 900
    AreaNewResCond = RVal: 900
@@ -74939,6 +75179,8 @@ ExtWall   User: "Surface 912"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 540
    AreaNewResCond = RVal: 540
@@ -75149,6 +75391,8 @@ ExtWall   User: "Surface 913"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 900
    AreaNewResCond = RVal: 900
@@ -76347,6 +76591,8 @@ ExtWall   User: "Surface 840"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 240
    AreaNewResCond = RVal: 240
@@ -76601,6 +76847,7 @@ IntWall   User: "Surface 833"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -76683,6 +76930,7 @@ IntWall   User: "Surface 834"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -76765,6 +77013,7 @@ IntWall   User: "Surface 835"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 300
    ..
 
@@ -76847,6 +77096,7 @@ IntWall   User: "Surface 836"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 150
    ..
 
@@ -76929,6 +77179,7 @@ IntWall   User: "Surface 837"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -77011,6 +77262,7 @@ IntWall   User: "Surface 839"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -77110,6 +77362,7 @@ Roof   User: "Surface 838"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 720
    AreaNewResCond = RVal: 720
@@ -77972,6 +78225,8 @@ ExtWall   User: "Surface 773"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 300
    AreaNewResCond = RVal: 300
@@ -78226,6 +78481,7 @@ IntWall   User: "Surface 772"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 60
    ..
 
@@ -78308,6 +78564,7 @@ IntWall   User: "Surface 774"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -78390,6 +78647,7 @@ IntWall   User: "Surface 777"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -78472,6 +78730,7 @@ IntWall   User: "Surface 778"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 300
    ..
 
@@ -78571,6 +78830,7 @@ Roof   User: "Surface 776"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 720
    AreaNewResCond = RVal: 720
@@ -79432,6 +79692,8 @@ ExtWall   User: "Surface 845"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 300
    AreaNewResCond = RVal: 300
@@ -79686,6 +79948,7 @@ IntWall   User: "Surface 841"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 300
    ..
 
@@ -79768,6 +80031,7 @@ IntWall   User: "Surface 844"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 60
    ..
 
@@ -79850,6 +80114,7 @@ IntWall   User: "Surface 846"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -79932,6 +80197,7 @@ IntWall   User: "Surface 847"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -80031,6 +80297,7 @@ Roof   User: "Surface 842"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 720
    AreaNewResCond = RVal: 720
@@ -80892,6 +81159,8 @@ ExtWall   User: "Surface 768"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 300
    AreaNewResCond = RVal: 300
@@ -81146,6 +81415,7 @@ IntWall   User: "Surface 769"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 300
    ..
 
@@ -81228,6 +81498,7 @@ IntWall   User: "Surface 771"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -81327,6 +81598,7 @@ Roof   User: "Surface 766"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 720
    AreaNewResCond = RVal: 720
@@ -82188,6 +82460,8 @@ ExtWall   User: "Surface 805"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 300
    AreaNewResCond = RVal: 300
@@ -82442,6 +82716,7 @@ IntWall   User: "Surface 801"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -82524,6 +82799,7 @@ IntWall   User: "Surface 802"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 300
    ..
 
@@ -82623,6 +82899,7 @@ Roof   User: "Surface 804"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 720
    AreaNewResCond = RVal: 720
@@ -83484,6 +83761,8 @@ ExtWall   User: "Surface 730"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 240
    AreaNewResCond = RVal: 240
@@ -83738,6 +84017,7 @@ IntWall   User: "Surface 728"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 310
    ..
 
@@ -83820,6 +84100,7 @@ IntWall   User: "Surface 729"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -83902,6 +84183,7 @@ IntWall   User: "Surface 731"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 310
    ..
 
@@ -84001,6 +84283,7 @@ Roof   User: "Surface 727"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 744
    AreaNewResCond = RVal: 744
@@ -84862,6 +85145,8 @@ ExtWall   User: "Surface 717"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 240
    AreaNewResCond = RVal: 240
@@ -85116,6 +85401,7 @@ IntWall   User: "Surface 715"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 310
    ..
 
@@ -85198,6 +85484,7 @@ IntWall   User: "Surface 716"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -85297,6 +85584,7 @@ Roof   User: "Surface 714"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 744
    AreaNewResCond = RVal: 744
@@ -86158,6 +86446,8 @@ ExtWall   User: "Surface 808"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 240
    AreaNewResCond = RVal: 240
@@ -86412,6 +86702,7 @@ IntWall   User: "Surface 806"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 310
    ..
 
@@ -86494,6 +86785,7 @@ IntWall   User: "Surface 807"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -86593,6 +86885,7 @@ Roof   User: "Surface 811"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 744
    AreaNewResCond = RVal: 744
@@ -87454,6 +87747,8 @@ ExtWall   User: "Surface 916"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 240
    AreaNewResCond = RVal: 240
@@ -87708,6 +88003,7 @@ IntWall   User: "Surface 915"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -87790,6 +88086,7 @@ IntWall   User: "Surface 920"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 310
    ..
 
@@ -87889,6 +88186,7 @@ Roof   User: "Surface 917"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 744
    AreaNewResCond = RVal: 744
@@ -88750,6 +89048,8 @@ ExtWall   User: "Surface 670"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 240
    AreaNewResCond = RVal: 240
@@ -89004,6 +89304,7 @@ IntWall   User: "Surface 673"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 310
    ..
 
@@ -89086,6 +89387,7 @@ IntWall   User: "Surface 675"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 240
    ..
 
@@ -89185,6 +89487,7 @@ Roof   User: "Surface 672"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 744
    AreaNewResCond = RVal: 744
@@ -90047,6 +90350,8 @@ ExtWall   User: "Surface 733"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 120
    AreaNewResCond = RVal: 120
@@ -90301,6 +90606,7 @@ IntWall   User: "Surface 732"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 360
    ..
 
@@ -90383,6 +90689,7 @@ IntWall   User: "Surface 734"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -90465,6 +90772,7 @@ IntWall   User: "Surface 735"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 150
    ..
 
@@ -90547,6 +90855,7 @@ IntWall   User: "Surface 736"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 150
    ..
 
@@ -90629,6 +90938,7 @@ IntWall   User: "Surface 739"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 60
    ..
 
@@ -90711,6 +91021,7 @@ IntWall   User: "Surface 740"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 300
    ..
 
@@ -90810,6 +91121,7 @@ Roof   User: "Surface 737"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
@@ -91672,6 +91984,8 @@ ExtWall   User: "Surface 783"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 120
    AreaNewResCond = RVal: 120
@@ -91926,6 +92240,7 @@ IntWall   User: "Surface 779"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -92008,6 +92323,7 @@ IntWall   User: "Surface 780"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 300
    ..
 
@@ -92090,6 +92406,7 @@ IntWall   User: "Surface 784"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 360
    ..
 
@@ -92172,6 +92489,7 @@ IntWall   User: "Surface 786"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 60
    ..
 
@@ -92271,6 +92589,7 @@ Roof   User: "Surface 782"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
@@ -93132,6 +93451,8 @@ ExtWall   User: "Surface 883"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 360
    AreaNewResCond = RVal: 360
@@ -93386,6 +93707,7 @@ IntWall   User: "Surface 880"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 360
    ..
 
@@ -93468,6 +93790,7 @@ IntWall   User: "Surface 881"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 300
    ..
 
@@ -93550,6 +93873,7 @@ IntWall   User: "Surface 884"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 300
    ..
 
@@ -93649,6 +93973,7 @@ Roof   User: "Surface 882"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
@@ -94510,6 +94835,8 @@ ExtWall   User: "Surface 857"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 360
    AreaNewResCond = RVal: 360
@@ -94764,6 +95091,7 @@ IntWall   User: "Surface 855"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 360
    ..
 
@@ -94846,6 +95174,7 @@ IntWall   User: "Surface 856"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 300
    ..
 
@@ -94928,6 +95257,7 @@ IntWall   User: "Surface 859"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 300
    ..
 
@@ -95027,6 +95357,7 @@ Roof   User: "Surface 854"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
@@ -95888,6 +96219,8 @@ ExtWall   User: "Surface 1026"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 360
    AreaNewResCond = RVal: 360
@@ -96098,6 +96431,8 @@ ExtWall   User: "Surface 1032"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 300
    AreaNewResCond = RVal: 300
@@ -96352,6 +96687,7 @@ IntWall   User: "Surface 1028"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -96434,6 +96770,7 @@ IntWall   User: "Surface 1029"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -96516,6 +96853,7 @@ IntWall   User: "Surface 1030"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 300
    ..
 
@@ -96615,6 +96953,7 @@ Roof   User: "Surface 1027"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
@@ -97476,6 +97815,8 @@ ExtWall   User: "Surface 722"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 360
    AreaNewResCond = RVal: 360
@@ -97730,6 +98071,7 @@ IntWall   User: "Surface 720"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 360
    ..
 
@@ -97829,6 +98171,7 @@ Roof   User: "Surface 724"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
@@ -98690,6 +99033,8 @@ ExtWall   User: "Surface 829"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 360
    AreaNewResCond = RVal: 360
@@ -98900,6 +99245,8 @@ ExtWall   User: "Surface 830"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 300
    AreaNewResCond = RVal: 300
@@ -99154,6 +99501,7 @@ IntWall   User: "Surface 825"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -99236,6 +99584,7 @@ IntWall   User: "Surface 828"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 180
    ..
 
@@ -99318,6 +99667,7 @@ IntWall   User: "Surface 831"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 300
    ..
 
@@ -99417,6 +99767,7 @@ Roof   User: "Surface 827"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
@@ -100278,6 +100629,8 @@ ExtWall   User: "Surface 822"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 360
    AreaNewResCond = RVal: 360
@@ -100532,6 +100885,7 @@ IntWall   User: "Surface 820"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 360
    ..
 
@@ -100631,6 +100985,7 @@ Roof   User: "Surface 823"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 1080
    AreaNewResCond = RVal: 1080
@@ -101492,6 +101847,8 @@ ExtWall   User: "Surface 812"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 470
    AreaNewResCond = RVal: 470
@@ -101702,6 +102059,8 @@ ExtWall   User: "Surface 815"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 300
    AreaNewResCond = RVal: 300
@@ -101956,6 +102315,7 @@ IntWall   User: "Surface 813"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 160
    ..
 
@@ -102055,6 +102415,7 @@ Roof   User: "Surface 814"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 1410
    AreaNewResCond = RVal: 1410
@@ -102916,6 +103277,8 @@ ExtWall   User: "Surface 787"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 300
    AreaNewResCond = RVal: 300
@@ -103126,6 +103489,8 @@ ExtWall   User: "Surface 792"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 470
    AreaNewResCond = RVal: 470
@@ -103380,6 +103745,7 @@ IntWall   User: "Surface 790"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 160
    ..
 
@@ -103479,6 +103845,7 @@ Roof   User: "Surface 788"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 1410
    AreaNewResCond = RVal: 1410
@@ -104502,6 +104869,7 @@ IntWall   User: "Surface 680"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -104584,6 +104952,7 @@ IntWall   User: "Surface 681"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -104666,6 +105035,7 @@ IntWall   User: "Surface 690"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -104748,6 +105118,7 @@ IntWall   User: "Surface 691"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 60
    ..
 
@@ -104830,6 +105201,7 @@ IntWall   User: "Surface 694"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -104912,6 +105284,7 @@ IntWall   User: "Surface 704"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 100
    ..
 
@@ -104994,6 +105367,7 @@ IntWall   User: "Surface 707"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 70
    ..
 
@@ -105076,6 +105450,7 @@ IntWall   User: "Surface 709"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 100
    ..
 
@@ -105158,6 +105533,7 @@ IntWall   User: "Surface 712"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 60
    ..
 
@@ -105257,6 +105633,7 @@ Roof   User: "Surface 696"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.049
    AreaNew = RVal: 2145
    AreaNewNonResCond = RVal: 2145
@@ -106189,6 +106566,7 @@ IntWall   User: "Surface 756"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -106271,6 +106649,7 @@ IntWall   User: "Surface 758"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -106370,6 +106749,7 @@ Roof   User: "Surface 754"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.049
    AreaNew = RVal: 25
    AreaNewNonResCond = RVal: 25
@@ -107223,6 +107603,7 @@ Roof   User: "Surface 744"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.049
    AreaNew = RVal: 25
    AreaNewNonResCond = RVal: 25
@@ -108059,6 +108440,7 @@ IntWall   User: "Surface 1012"
    IsExisting = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
    OverallUFactor = RVal: 0.0991826
+   NonCompIns = RVal: 0
    AreaNew = RVal: 50
    ..
 
@@ -108158,6 +108540,7 @@ Roof   User: "Surface 1007"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.049
    AreaNew = RVal: 25
    AreaNewNonResCond = RVal: 25
@@ -108968,6 +109351,8 @@ ExtWall   User: "Surface 898"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 120
    AreaNewNonResCond = RVal: 120
@@ -109239,6 +109624,7 @@ Roof   User: "Surface 900"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.049
    AreaNew = RVal: 180
    AreaNewNonResCond = RVal: 180
@@ -110046,6 +110432,8 @@ ExtWall   User: "Surface 851"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 100
    AreaNewNonResCond = RVal: 100
@@ -110317,6 +110705,7 @@ Roof   User: "Surface 850"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.049
    AreaNew = RVal: 180
    AreaNewNonResCond = RVal: 180
@@ -111124,6 +111513,8 @@ ExtWall   User: "Surface 760"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "NonResidential"  (3)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.069
    AreaNew = RVal: 100
    AreaNewNonResCond = RVal: 100
@@ -111395,6 +111786,7 @@ Roof   User: "Surface 765"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.049
    AreaNew = RVal: 180
    AreaNewNonResCond = RVal: 180
@@ -112257,6 +112649,8 @@ ExtWall   User: "Surface 1013"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 300
    AreaNewResCond = RVal: 300
@@ -112468,6 +112862,8 @@ ExtWall   User: "Surface 1014"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 180
    AreaNewResCond = RVal: 180
@@ -112739,6 +113135,7 @@ Roof   User: "Surface 1016"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 540
    AreaNewResCond = RVal: 540
@@ -113601,6 +113998,8 @@ ExtWall   User: "Surface 747"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 300
    AreaNewResCond = RVal: 300
@@ -113812,6 +114211,8 @@ ExtWall   User: "Surface 750"
    ConsType = RVal: "MetalFrameWall"  (2)
    ContainsHollowCoreMasonryMaterial = RVal: 0
    BldgTypeForExtWall = RVal: "Residential"  (1)
+   OverallUFactor = RVal: 0.0647467
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.105
    AreaNew = RVal: 180
    AreaNewResCond = RVal: 180
@@ -114083,6 +114484,7 @@ Roof   User: "Surface 749"
    SteepSlopeFlag = RVal: 0
    LowSlopeFlag = RVal: 1
    OverallUFactor = RVal: 0.039285
+   NonCompIns = RVal: 0
    MaxUFactor = RVal: 0.03901
    AreaNew = RVal: 540
    AreaNewResCond = RVal: 540
@@ -131006,24 +131408,24 @@ CrvMapDblVar   User: "CoilClgDXSEEREIR_fTwbToadbSI-24"
    ArrayVar2[8] = UVal: 27.78
    ArrayVar2[9] = UVal: 43.33
    ArrayOut[1] = RVal: 1
-   ArrayOut[2] = RVal: 0.78414
-   ArrayOut[3] = RVal: 1.21791
-   ArrayOut[4] = RVal: 1.16301
-   ArrayOut[5] = RVal: 0.916875
-   ArrayOut[6] = RVal: 1.41138
-   ArrayOut[7] = RVal: 0.884805
-   ArrayOut[8] = RVal: 0.690413
-   ArrayOut[9] = RVal: 1.08116
-   EERRtd = RVal: 11.4
-   EIRRtdnf = RVal: 0.247647
+   ArrayOut[2] = RVal: 0.80823
+   ArrayOut[3] = RVal: 1.21223
+   ArrayOut[4] = RVal: 1.16372
+   ArrayOut[5] = RVal: 0.945042
+   ArrayOut[6] = RVal: 1.40562
+   ArrayOut[7] = RVal: 0.884312
+   ArrayOut[8] = RVal: 0.711624
+   ArrayOut[9] = RVal: 1.07553
+   EERRtd = RVal: 11.7
+   EIRRtdnf = RVal: 0.240266
    EERfT67_82 = RVal: 14
-   EERfT67_110 = RVal: 9.6
-   EERfT57_95 = RVal: 9.9978
+   EERfT67_110 = RVal: 9.9
+   EERfT57_95 = RVal: 10.2609
    EERT57_82 = RVal: 12.278
-   EERT57_110 = RVal: 8.4192
-   EERT77_95 = RVal: 12.654
+   EERT57_110 = RVal: 8.6823
+   EERT77_95 = RVal: 12.987
    EERT77_82 = RVal: 15.54
-   EERT77_110 = RVal: 10.656
+   EERT77_110 = RVal: 10.989
    ..
 
 CrvMapDblVar   User: "CoilClgDXSEEREIR_fTwbToadbSI-25"  
@@ -131098,24 +131500,24 @@ CrvMapDblVar   User: "CoilClgDXSEEREIR_fTwbToadbSI-26"
    ArrayVar2[8] = UVal: 27.78
    ArrayVar2[9] = UVal: 43.33
    ArrayOut[1] = RVal: 1
-   ArrayOut[2] = RVal: 0.78414
-   ArrayOut[3] = RVal: 1.21791
-   ArrayOut[4] = RVal: 1.16301
-   ArrayOut[5] = RVal: 0.916875
-   ArrayOut[6] = RVal: 1.41138
-   ArrayOut[7] = RVal: 0.884805
-   ArrayOut[8] = RVal: 0.690413
-   ArrayOut[9] = RVal: 1.08116
-   EERRtd = RVal: 11.4
-   EIRRtdnf = RVal: 0.247647
+   ArrayOut[2] = RVal: 0.80823
+   ArrayOut[3] = RVal: 1.21223
+   ArrayOut[4] = RVal: 1.16372
+   ArrayOut[5] = RVal: 0.945042
+   ArrayOut[6] = RVal: 1.40562
+   ArrayOut[7] = RVal: 0.884312
+   ArrayOut[8] = RVal: 0.711624
+   ArrayOut[9] = RVal: 1.07553
+   EERRtd = RVal: 11.7
+   EIRRtdnf = RVal: 0.240266
    EERfT67_82 = RVal: 14
-   EERfT67_110 = RVal: 9.6
-   EERfT57_95 = RVal: 9.9978
+   EERfT67_110 = RVal: 9.9
+   EERfT57_95 = RVal: 10.2609
    EERT57_82 = RVal: 12.278
-   EERT57_110 = RVal: 8.4192
-   EERT77_95 = RVal: 12.654
+   EERT57_110 = RVal: 8.6823
+   EERT77_95 = RVal: 12.987
    EERT77_82 = RVal: 15.54
-   EERT77_110 = RVal: 10.656
+   EERT77_110 = RVal: 10.989
    ..
 
 FluidSys   User: "NonResBaseGasSHWSystem"  
