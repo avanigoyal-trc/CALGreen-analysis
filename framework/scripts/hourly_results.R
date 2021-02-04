@@ -92,7 +92,11 @@ tdv_2022_generate_com <- function(path, measures = NULL, cz = NULL, lifetime, fo
         summarise(kWh_Elec_Total = sum(Elec_kWh),
                   kBtu_NG_Total = sum(NG_kBtu),
                   kTDV_Total_Elec_2022 = sum(Elec_kWh*`kTDV/kWh_2022`)/cfa,
-                   kTDV_Total_NG_2022 = sum(NG_kBtu*`kTDV/Therm_2022`/100)/cfa)  # per therm
+                  kTDV_Total_NG_2022 = sum(NG_kBtu*`kTDV/Therm_2022`/100)/cfa, # per therm
+                  kWh_Elec_Comp = sum(Elec_Comp_kWh),
+                  kBtu_NG_Comp = sum(NG_Comp_kBtu),
+                  kTDV_Comp_Elec_2022 = sum(Elec_Comp_kWh*`kTDV/kWh_2022`)/cfa,
+                  kTDV_Comp_NG_2022 = sum(NG_Comp_kBtu*`kTDV/Therm_2022`/100)/cfa)  
       
       
       
@@ -185,19 +189,27 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
       
       clim_num <- as.numeric(str_extract(clim, "\\d+"))
       
-      hourly_totals_results <- hourly %>% select(Mo, Da, Hr, `(kWh)_4`, `(kWh)_12`, `(Therms)_4`, `(Therms)_10`, `(TDV/Btu)`, `(TDV/Btu)_1`)
+      hourly_totals_results <- hourly %>%
+        select(Mo, Da, Hr, `(kWh)`,`(kWh)_1`,`(kWh)_2`,`(kWh)_3`,`(kWh)_4`,`(kWh)_5`, `(kWh)_12`, `(Therms)`,`(Therms)_1`,`(Therms)_2`,`(Therms)_3`,`(Therms)_4`,`(Therms)_5`, `(Therms)_10`, `(TDV/Btu)`, `(TDV/Btu)_1`) %>%
+        rowwise() %>%
+        mutate(Elec_kWh_Comp = sum(`(kWh)`,`(kWh)_1`,`(kWh)_2`,`(kWh)_3`,`(kWh)_4`,`(kWh)_5`)) %>%
+        mutate(NG_Therm_Comp = sum(`(Therms)`,`(Therms)_1`,`(Therms)_2`,`(Therms)_3`,`(Therms)_4`,`(Therms)_5`)) %>%
+        select(Mo, Da, Hr,`(kWh)_4`, `(kWh)_12`, Elec_kWh_Comp, `(Therms)_4`, `(Therms)_10`,NG_Therm_Comp, `(TDV/Btu)`, `(TDV/Btu)_1` )
+        
       
       hourly_totals <- cbind(hourly_totals_results, tdv_2022_elec[,clim_num +1], tdv_2022_gas[, clim_num + 1])
       
       
       
-      names(hourly_totals) <- c("Month", "Day", "Hour", "DHW_kWh", "Elec_kWh", "DHW_Therm", "NG_Therm", "TDV/Btu_elec", "TDV/Btu_gas","kTDV/kWh_2022", "kTDV/Therm_2022")
+      names(hourly_totals) <- c("Month", "Day", "Hour", "DHW_kWh", "Elec_kWh", "Elec_kWh_Comp", "DHW_Therm", "NG_Therm", "NG_Therm_Comp","TDV/Btu_elec", "TDV/Btu_gas","kTDV/kWh_2022", "kTDV/Therm_2022")
       
       if(remove_DHW){
         
         hourly_totals <- hourly_totals %>%
           mutate(Elec_kWh = Elec_kWh - DHW_kWh) %>%
           mutate(NG_Therm = NG_Therm - DHW_Therm) %>%
+          mutate(Elec_kWh_Comp = Elec_kWh_Comp - DHW_kWh) %>%
+          mutate(NG_Therm_Comp = NG_Therm_Comp - DHW_Therm) %>%
           select(-DHW_kWh, -DHW_Therm)
         
       }
@@ -209,7 +221,11 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
         summarise(kWh_Elec_Total = sum(Elec_kWh),
                   Therm_NG_Total = sum(NG_Therm),
                   kTDV_Total_Elec_2022 = sum(Elec_kWh*`kTDV/kWh_2022`)/cfa,
-                  kTDV_Total_NG_2022 = sum(NG_Therm*`kTDV/Therm_2022`)/cfa)  # per therm
+                  kTDV_Total_NG_2022 = sum(NG_Therm*`kTDV/Therm_2022`)/cfa, 
+                  kWh_Elec_Comp = sum(Elec_kWh_Comp),
+                  Therm_NG_Comp = sum(NG_Therm_Comp),
+                  kTDV_Comp_Elec_2022 = sum(Elec_kWh_Comp*`kTDV/kWh_2022`)/cfa,
+                  kTDV_Comp_NG_2022 = sum(NG_Therm_Comp*`kTDV/Therm_2022`)/cfa)  # per therm
       
       
       
