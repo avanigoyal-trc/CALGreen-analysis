@@ -162,6 +162,9 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
   tdv_2022_elec <- read_excel(here::here("scripts/2022_TDV_Multipliers.xlsx"), skip = 2, sheet = elec_sheet_name)
   tdv_2022_gas <- read_excel(here::here("scripts/2022_TDV_Multipliers.xlsx"), skip = 2, sheet = gas_sheet_name)
   
+  source_elec <- read_excel(here::here("scripts/2022_Source_Energy.xlsx"), skip = 2, sheet = elec_sheet_name)
+  source_gas <- read_excel(here::here("scripts/2022_Source_Energy.xlsx"), skip = 2, sheet = gas_sheet_name)
+  
   wb <- createWorkbook()
   
   for (measure in measures){
@@ -195,13 +198,13 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
         mutate(Elec_kWh_Comp = sum(`(kWh)`,`(kWh)_1`,`(kWh)_2`,`(kWh)_3`,`(kWh)_4`,`(kWh)_5`)) %>%
         mutate(NG_Therm_Comp = sum(`(Therms)`,`(Therms)_1`,`(Therms)_2`,`(Therms)_3`,`(Therms)_4`,`(Therms)_5`)) %>%
         select(Mo, Da, Hr,`(kWh)_4`, `(kWh)_12`, Elec_kWh_Comp, `(Therms)_4`, `(Therms)_10`,NG_Therm_Comp, `(TDV/Btu)`, `(TDV/Btu)_1` )
-        
-      
-      hourly_totals <- cbind(hourly_totals_results, tdv_2022_elec[,clim_num +1], tdv_2022_gas[, clim_num + 1])
       
       
+      hourly_totals <- cbind(hourly_totals_results, tdv_2022_elec[,clim_num +1], tdv_2022_gas[, clim_num + 1], source_elec[,clim_num + 1], source_gas[, clim_num + 1])
       
-      names(hourly_totals) <- c("Month", "Day", "Hour", "DHW_kWh", "Elec_kWh", "Elec_kWh_Comp", "DHW_Therm", "NG_Therm", "NG_Therm_Comp","TDV/Btu_elec", "TDV/Btu_gas","kTDV/kWh_2022", "kTDV/Therm_2022")
+      
+      
+      names(hourly_totals) <- c("Month", "Day", "Hour", "DHW_kWh", "Elec_kWh", "Elec_kWh_Comp", "DHW_Therm", "NG_Therm", "NG_Therm_Comp","TDV/Btu_elec", "TDV/Btu_gas","kTDV/kWh_2022", "kTDV/Therm_2022", "Source kBtu/kwh", "Source kBtu/Therm")
       
       if(remove_DHW){
         
@@ -222,6 +225,8 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
                   Therm_NG_Total = sum(NG_Therm),
                   kTDV_Total_Elec_2022 = sum(Elec_kWh*`kTDV/kWh_2022`)/cfa,
                   kTDV_Total_NG_2022 = sum(NG_Therm*`kTDV/Therm_2022`)/cfa, 
+                  Source_kBtu_Elec = sum(Elec_kWh*`Source kBtu/kwh`),
+                  Source_kBtu_NG = sum(NG_Therm*`Source kBtu/Therm`),
                   kWh_Elec_Comp = sum(Elec_kWh_Comp),
                   Therm_NG_Comp = sum(NG_Therm_Comp),
                   kTDV_Comp_Elec_2022 = sum(Elec_kWh_Comp*`kTDV/kWh_2022`)/cfa,
@@ -256,4 +261,5 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
   saveWorkbook(wb, here::here(path, "TDVAnnual.xlsx"), overwrite = TRUE)
   
 }
+
 
