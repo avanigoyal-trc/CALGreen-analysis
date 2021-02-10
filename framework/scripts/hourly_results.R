@@ -128,7 +128,7 @@ tdv_2022_generate_com <- function(path, measures = NULL, cz = NULL, lifetime, fo
   
 }
 
-tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  file = NA, res_or_nr = "nr", remove_DHW = FALSE){
+tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  file = NA, res_or_nr = "nr", remove_DHW = FALSE, remove_PVB = FALSE){
   ## For CBECC-Res
   
   ##path: String format, path to prototype results folder starting at framework ie. "analysis/hvac_autosizing"
@@ -193,18 +193,19 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
       clim_num <- as.numeric(str_extract(clim, "\\d+"))
       
       hourly_totals_results <- hourly %>%
-        select(Mo, Da, Hr, `(kWh)`,`(kWh)_1`,`(kWh)_2`,`(kWh)_3`,`(kWh)_4`,`(kWh)_5`, `(kWh)_12`, `(Therms)`,`(Therms)_1`,`(Therms)_2`,`(Therms)_3`,`(Therms)_4`,`(Therms)_5`, `(Therms)_10`, `(TDV/Btu)`, `(TDV/Btu)_1`) %>%
+        select(Mo, Da, Hr, `(kWh)`,`(kWh)_1`,`(kWh)_2`,`(kWh)_3`,`(kWh)_4`,`(kWh)_5`,`(kWh)_10`,`(kWh)_11`, `(kWh)_12`, `(Therms)`,`(Therms)_1`,`(Therms)_2`,`(Therms)_3`,`(Therms)_4`,`(Therms)_5`, `(Therms)_10`, `(TDV/Btu)`, `(TDV/Btu)_1`) %>%
         rowwise() %>%
         mutate(Elec_kWh_Comp = sum(`(kWh)`,`(kWh)_1`,`(kWh)_2`,`(kWh)_3`,`(kWh)_4`,`(kWh)_5`)) %>%
         mutate(NG_Therm_Comp = sum(`(Therms)`,`(Therms)_1`,`(Therms)_2`,`(Therms)_3`,`(Therms)_4`,`(Therms)_5`)) %>%
-        select(Mo, Da, Hr,`(kWh)_4`, `(kWh)_12`, Elec_kWh_Comp, `(Therms)_4`, `(Therms)_10`,NG_Therm_Comp, `(TDV/Btu)`, `(TDV/Btu)_1` )
+        mutate(Elec_kWh_PVB = sum(`(kWh)_10`,`(kWh)_11`)) %>%
+        select(Mo, Da, Hr,`(kWh)_4`, Elec_kWh_PVB, `(kWh)_12`, Elec_kWh_Comp, `(Therms)_4`, `(Therms)_10`,NG_Therm_Comp, `(TDV/Btu)`, `(TDV/Btu)_1` )
       
       
       hourly_totals <- cbind(hourly_totals_results, tdv_2022_elec[,clim_num +1], tdv_2022_gas[, clim_num + 1], source_elec[,clim_num + 1], source_gas[, clim_num + 1])
       
       
       
-      names(hourly_totals) <- c("Month", "Day", "Hour", "DHW_kWh", "Elec_kWh", "Elec_kWh_Comp", "DHW_Therm", "NG_Therm", "NG_Therm_Comp","TDV/Btu_elec", "TDV/Btu_gas","kTDV/kWh_2022", "kTDV/Therm_2022", "Source kBtu/kwh", "Source kBtu/Therm")
+      names(hourly_totals) <- c("Month", "Day", "Hour", "DHW_kWh", "Elec_kWh_PVB", "Elec_kWh", "Elec_kWh_Comp", "DHW_Therm", "NG_Therm", "NG_Therm_Comp","TDV/Btu_elec", "TDV/Btu_gas","kTDV/kWh_2022", "kTDV/Therm_2022", "Source kBtu/kwh", "Source kBtu/Therm")
       
       if(remove_DHW){
         
@@ -214,6 +215,15 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
           mutate(Elec_kWh_Comp = Elec_kWh_Comp - DHW_kWh) %>%
           mutate(NG_Therm_Comp = NG_Therm_Comp - DHW_Therm) %>%
           select(-DHW_kWh, -DHW_Therm)
+        
+      }
+      
+      if(remove_PVB){
+        
+        hourly_totals <- hourly_totals %>%
+          mutate(Elec_kWh = Elec_kWh - Elec_kWh_PVB) %>%
+          select(-Elec_kWh_PVB)
+        
         
       }
       
@@ -255,7 +265,7 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
   
   
   addWorksheet(wb, "Description")
-  description_of_run <- paste("LifeTime: ", lifetime, "TDVMultiplier: ", res_or_nr, "DHW Removed: ", remove_DHW, sep = ",")
+  description_of_run <- paste("LifeTime: ", lifetime, "TDVMultiplier: ", res_or_nr, "DHW Removed: ", remove_DHW, "PVB Removed: ", remove_PVB, sep = ",")
   writeData(wb, "Description", description_of_run)
   
   saveWorkbook(wb, here::here(path, "TDVAnnual.xlsx"), overwrite = TRUE)
