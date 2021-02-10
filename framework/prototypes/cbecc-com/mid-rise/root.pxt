@@ -20,6 +20,7 @@ parameter "seer", :default => 14
 parameter "eer", :default => 11.7
 parameter "afue", :default => 0.8
 parameter "ctrl_method", :default=> "ConstantVolume"
+parameter "include_FPB", :default => "No"
 
 #parameters for residential DHW
 
@@ -16658,6 +16659,9 @@ CoilHtg   "BaseSys5 CoilHtg"
 Fan   "BaseSys5 Fan"
    CtrlMthd = "VariableSpeedDrive"
    FlowCap = 19577.6
+   <%if include_FPB == "Yes"%>
+   MtrBHP = 16.19
+   <%end%>
    ..
 
 AirSeg   "BaseSys5 RetAirSeg"
