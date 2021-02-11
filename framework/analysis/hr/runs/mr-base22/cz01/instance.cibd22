@@ -4,8 +4,8 @@ Proj   "Mid-Rise Mixed-Use (5-story)"
    Ruleset = "CA 2022 Nonresidential, Vers. 1.0 Alpha (T24N_2022.bin)"
    BldgEngyModelVersion = 14
    CreateDate = 1567115615
-   ModDate = 1611790959
-   RunDate = 1611790960
+   ModDate = 1613028832
+   RunDate = 1613028833
    GasType = "NaturalGas"
    CliZn = "ClimateZone1"
    WeatherStation = "CTZ01S22A"
@@ -376,6 +376,7 @@ Spc   "F1 Business Center"
    ThrmlZnRef = "Thermal Zone: F1 Business Center"
    Vol = 3600
    SpcFunc = "Convention, Conference, Multipurpose and Meeting Area"
+   IntLPDReg = 0.6
    SHWFluidSegRef = "DHW Supply Elec"
    OccSensorCtrl = 1
    ..
@@ -547,6 +548,7 @@ Spc   "F1 Corridor"
    ThrmlZnRef = "Thermal Zone: F1 Corridor"
    Vol = 14850
    SpcFuncDefaultsRef = "Corridor Space"
+   IntLPDReg = 0.4
    PriSide100PctControlled = 1
    SecSide100PctControlled = 1
    OccSensorCtrl = 1
@@ -1150,6 +1152,7 @@ Spc   "F1 Lounge"
    ThrmlZnRef = "Thermal Zone: F1 Lounge"
    Vol = 10500
    SpcFunc = "Lounge, Breakroom, or Waiting Area"
+   IntLPDReg = 0.55
    PriSide100PctControlled = 0
    SHWFluidSegRef = "DHW Supply Gas"
    OccSensorCtrl = 1
@@ -1482,6 +1485,7 @@ Spc   "F1 Elevator Core"
    ThrmlZnRef = "Thermal Zone: F1 Corridor"
    Vol = 250
    SpcFuncDefaultsRef = "Elevator"
+   IntLPDReg = 0.4
    ..
 
 PolyLp   "PolyLoop 46"  
@@ -1605,6 +1609,7 @@ Spc   "F1 Elevator N"
    ThrmlZnRef = "Thermal Zone: F1 Corridor"
    Vol = 250
    SpcFuncDefaultsRef = "Elevator"
+   IntLPDReg = 0.4
    ..
 
 PolyLp   "PolyLoop 51"  
@@ -1704,6 +1709,7 @@ Spc   "F1 Elevator S"
    ThrmlZnRef = "Thermal Zone: F1 Corridor"
    Vol = 250
    SpcFuncDefaultsRef = "Elevator"
+   IntLPDReg = 0.4
    ..
 
 PolyLp   "PolyLoop 55"  
@@ -1802,6 +1808,7 @@ Spc   "F1 Fitness Center"
    ThrmlZnRef = "Thermal Zone: F1 Fitness Center"
    Vol = 9000
    SpcFunc = "Exercise/Fitness Center and Gymnasium Areas"
+   IntLPDReg = 0.5
    SHWFluidSegRef = "DHW Supply Gas"
    ..
 
@@ -1947,6 +1954,7 @@ Spc   "F1 Leasing Office"
    ThrmlZnRef = "Thermal Zone: F1 Leasing Office"
    Vol = 3450
    SpcFunc = "Office Area (>250 square feet)"
+   IntLPDReg = 0.6
    SHWFluidSegRef = "DHW Supply Elec"
    ..
 
@@ -2116,6 +2124,7 @@ Spc   "F1 Mechanical Room"
    ThrmlZnRef = "Thermal Zone: F1 Mechanical Room"
    Vol = 4320
    SpcFunc = "Electrical, Mechanical, Telephone Rooms"
+   IntLPDReg = 0.4
    SHWFluidSegRef = "DHW Supply Elec"
    ..
 
@@ -2239,6 +2248,7 @@ Spc   "F1 Retail N Core"
    ThrmlZnRef = "Thermal Zone: F1 Retail N-NW"
    Vol = 16650
    SpcFuncDefaultsRef = "Retail Space"
+   IntLPDReg = 0.95
    ..
 
 PolyLp   "PolyLoop 77"  
@@ -2392,6 +2402,7 @@ Spc   "F1 Retail NE Core"
    ThrmlZnRef = "Thermal Zone: F1 Retail NE"
    Vol = 14400
    SpcFuncDefaultsRef = "Retail Space"
+   IntLPDReg = 0.95
    SHWFluidSegRef = "DHW Supply Elec"
    ..
 
@@ -2537,6 +2548,7 @@ Spc   "F1 Retail NE Inner"
    ThrmlZnRef = "Thermal Zone: F1 Retail NE"
    Vol = 14400
    SpcFuncDefaultsRef = "Retail Space"
+   IntLPDReg = 0.95
    ..
 
 PolyLp   "PolyLoop 88"  
@@ -2633,6 +2645,7 @@ Spc   "F1 Retail NE Outer"
    ThrmlZnRef = "Thermal Zone: F1 Retail NE"
    Vol = 14400
    SpcFuncDefaultsRef = "Retail Space"
+   IntLPDReg = 0.95
    PriSide100PctControlled = 1
    SecSide100PctControlled = 1
    ..
@@ -2777,6 +2790,7 @@ Spc   "F1 Retail NW Inner Core"
    ThrmlZnRef = "Thermal Zone: F1 Retail N-NW"
    Vol = 14400
    SpcFuncDefaultsRef = "Retail Space"
+   IntLPDReg = 0.95
    ..
 
 PolyLp   "PolyLoop 98"  
@@ -2897,6 +2911,7 @@ Spc   "F1 Retail NW Outer"
    ThrmlZnRef = "Thermal Zone: F1 Retail N-NW"
    Vol = 14400
    SpcFuncDefaultsRef = "Retail Space"
+   IntLPDReg = 0.95
    PriSide100PctControlled = 1
    SecSide100PctControlled = 1
    ..
@@ -3065,6 +3080,7 @@ Spc   "F1 Retail NW Outer Core"
    ThrmlZnRef = "Thermal Zone: F1 Retail N-NW"
    Vol = 14400
    SpcFuncDefaultsRef = "Retail Space"
+   IntLPDReg = 0.95
    ..
 
 PolyLp   "PolyLoop 110"  
@@ -3161,6 +3177,7 @@ Spc   "F1 Retail SE Bottom"
    ThrmlZnRef = "Thermal Zone: F1 Retail SE"
    Vol = 14400
    SpcFuncDefaultsRef = "Retail Space"
+   IntLPDReg = 0.95
    PriSide100PctControlled = 1
    SecSide100PctControlled = 1
    ..
@@ -3375,6 +3392,7 @@ Spc   "F1 Retail SE Top"
    ThrmlZnRef = "Thermal Zone: F1 Retail SE"
    Vol = 14400
    SpcFuncDefaultsRef = "Retail Space"
+   IntLPDReg = 0.95
    PriSide100PctControlled = 1
    SecSide100PctControlled = 1
    ..
@@ -3519,6 +3537,7 @@ Spc   "F1 Retail SW Bottom"
    ThrmlZnRef = "Thermal Zone: F1 Retail SW"
    Vol = 14400
    SpcFuncDefaultsRef = "Retail Space"
+   IntLPDReg = 0.95
    PriSide100PctControlled = 1
    SecSide100PctControlled = 1
    ..
@@ -3733,6 +3752,7 @@ Spc   "F1 Retail SW Core"
    ThrmlZnRef = "Thermal Zone: F1 Retail SW"
    Vol = 14400
    SpcFuncDefaultsRef = "Retail Space"
+   IntLPDReg = 0.95
    PriSide100PctControlled = 1
    SecSide100PctControlled = 1
    ..
@@ -3901,6 +3921,7 @@ Spc   "F1 Retail SW Top"
    ThrmlZnRef = "Thermal Zone: F1 Retail SW"
    Vol = 15480
    SpcFuncDefaultsRef = "Retail Space"
+   IntLPDReg = 0.95
    PriSide100PctControlled = 1
    SecSide100PctControlled = 1
    ..
@@ -4085,6 +4106,7 @@ Spc   "F1 Stairs E"
    ThrmlZnRef = "Thermal Zone: F1 Corridor"
    Vol = 1800
    SpcFunc = "Stairwell"
+   IntLPDReg = 0.6
    OccSensorCtrl = 1
    ..
 
@@ -4183,6 +4205,7 @@ Spc   "F1 Stairs W"
    ThrmlZnRef = "Thermal Zone: F1 Corridor"
    Vol = 1800
    SpcFunc = "Stairwell"
+   IntLPDReg = 0.6
    OccSensorCtrl = 1
    ..
 
@@ -8609,6 +8632,7 @@ Spc   "F2-4 Corridor"
    ThrmlZnRef = "Thermal Zone: F2-4 Corridor"
    Vol = 21450
    SpcFunc = "Corridor Area"
+   IntLPDReg = 0.4
    OccSensorCtrl = 1
    ..
 
@@ -9287,6 +9311,7 @@ Spc   "F2-4 Elevator Core"
    ThrmlZnRef = "Thermal Zone: F2-4 Corridor"
    Vol = 250
    SpcFuncDefaultsRef = "Elevator"
+   IntLPDReg = 0.4
    ..
 
 PolyLp   "PolyLoop 354"  
@@ -9385,6 +9410,7 @@ Spc   "F2-4 Elevator N"
    ThrmlZnRef = "Thermal Zone: F2-4 Corridor"
    Vol = 250
    SpcFuncDefaultsRef = "Elevator"
+   IntLPDReg = 0.4
    ..
 
 PolyLp   "PolyLoop 358"  
@@ -9435,6 +9461,7 @@ Spc   "F2-4 Elevator S"
    ThrmlZnRef = "Thermal Zone: F2-4 Corridor"
    Vol = 250
    SpcFuncDefaultsRef = "Elevator"
+   IntLPDReg = 0.4
    ..
 
 PolyLp   "PolyLoop 360"  
@@ -9509,6 +9536,7 @@ Spc   "F2-4 Laundry"
    ThrmlZnRef = "Thermal Zone: F2-4 Laundry"
    Vol = 1800
    SpcFunc = "Laundry Area"
+   IntLPDReg = 0.45
    SHWFluidSegRef = "DHW Supply Gas"
    ..
 
@@ -9638,6 +9666,7 @@ Spc   "F2-4 Stair E"
    ThrmlZnRef = "Thermal Zone: F2-4 Corridor"
    Vol = 1800
    SpcFunc = "Stairwell"
+   IntLPDReg = 0.6
    OccSensorCtrl = 1
    ..
 
@@ -9735,6 +9764,7 @@ Spc   "F2-4 Stair W"
    ThrmlZnRef = "Thermal Zone: F2-4 Corridor"
    Vol = 1800
    SpcFunc = "Stairwell"
+   IntLPDReg = 0.6
    OccSensorCtrl = 1
    ..
 
@@ -14293,6 +14323,7 @@ Spc   "F5 Corridor"
    ThrmlZnRef = "Thermal Zone: F5 Corridor"
    Vol = 21450
    SpcFunc = "Corridor Area"
+   IntLPDReg = 0.4
    OccSensorCtrl = 1
    ..
 
@@ -14775,6 +14806,7 @@ Spc   "F5 Elevator Core"
    ThrmlZnRef = "Thermal Zone: F5 Corridor"
    Vol = 250
    SpcFuncDefaultsRef = "Elevator"
+   IntLPDReg = 0.4
    ..
 
 PolyLp   "PolyLoop 937"  
@@ -14896,6 +14928,7 @@ Spc   "F5 Elevator N"
    ThrmlZnRef = "Thermal Zone: F5 Corridor"
    Vol = 250
    SpcFuncDefaultsRef = "Elevator"
+   IntLPDReg = 0.4
    ..
 
 PolyLp   "PolyLoop 942"  
@@ -14969,6 +15002,7 @@ Spc   "F5 Elevator S"
    ThrmlZnRef = "Thermal Zone: F5 Corridor"
    Vol = 250
    SpcFuncDefaultsRef = "Elevator"
+   IntLPDReg = 0.4
    ..
 
 PolyLp   "PolyLoop 945"  
@@ -15066,6 +15100,7 @@ Spc   "F5 Laundry"
    ThrmlZnRef = "Thermal Zone: F5 Laundry"
    Vol = 1800
    SpcFunc = "Laundry Area"
+   IntLPDReg = 0.45
    SHWFluidSegRef = "DHW Supply Gas"
    ..
 
@@ -15187,6 +15222,7 @@ Spc   "F5 Stair E"
    ThrmlZnRef = "Thermal Zone: F5 Corridor"
    Vol = 1800
    SpcFunc = "Stairwell"
+   IntLPDReg = 0.6
    OccSensorCtrl = 1
    ..
 
@@ -15307,6 +15343,7 @@ Spc   "F5 Stair W"
    ThrmlZnRef = "Thermal Zone: F5 Corridor"
    Vol = 1800
    SpcFunc = "Stairwell"
+   IntLPDReg = 0.6
    OccSensorCtrl = 1
    ..
 
@@ -16067,6 +16104,7 @@ CoilHtg   "CoilHtg 1"
    ..
 
 Fan   "Fan 1"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 197.112
    PwrIdx = 0.58
@@ -16099,6 +16137,7 @@ CoilHtg   "CoilHtg 2"
    ..
 
 Fan   "Fan 2"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 167.502
    PwrIdx = 0.58
@@ -16131,6 +16170,7 @@ CoilHtg   "CoilHtg 3"
    ..
 
 Fan   "Fan 3"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 197.503
    PwrIdx = 0.58
@@ -16163,6 +16203,7 @@ CoilHtg   "CoilHtg 4"
    ..
 
 Fan   "Fan 4"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 107.537
    PwrIdx = 0.58
@@ -16195,6 +16236,7 @@ CoilHtg   "CoilHtg 5"
    ..
 
 Fan   "Fan 5"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 160.625
    PwrIdx = 0.58
@@ -16227,6 +16269,7 @@ CoilHtg   "CoilHtg 6"
    ..
 
 Fan   "Fan 6"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 144.732
    PwrIdx = 0.58
@@ -16259,6 +16302,7 @@ CoilHtg   "CoilHtg 7"
    ..
 
 Fan   "Fan 7"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 212.911
    PwrIdx = 0.58
@@ -16291,6 +16335,7 @@ CoilHtg   "CoilHtg 8"
    ..
 
 Fan   "Fan 8"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 257.852
    PwrIdx = 0.58
@@ -16323,6 +16368,7 @@ CoilHtg   "CoilHtg 9"
    ..
 
 Fan   "Fan 9"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 315.776
    PwrIdx = 0.58
@@ -16355,6 +16401,7 @@ CoilHtg   "CoilHtg 10"
    ..
 
 Fan   "Fan 10"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 310.581
    PwrIdx = 0.58
@@ -16387,6 +16434,7 @@ CoilHtg   "CoilHtg 11"
    ..
 
 Fan   "Fan 11"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 384.113
    PwrIdx = 0.58
@@ -16419,6 +16467,7 @@ CoilHtg   "CoilHtg 12"
    ..
 
 Fan   "Fan 12"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 282.313
    PwrIdx = 0.58
@@ -16451,6 +16500,7 @@ CoilHtg   "CoilHtg 13"
    ..
 
 Fan   "Fan 13"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 262.916
    PwrIdx = 0.58
@@ -16483,6 +16533,7 @@ CoilHtg   "CoilHtg 14"
    ..
 
 Fan   "Fan 14"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 243.643
    PwrIdx = 0.58
@@ -16515,6 +16566,7 @@ CoilHtg   "CoilHtg 15"
    ..
 
 Fan   "Fan 15"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 200.79
    PwrIdx = 0.58
@@ -16547,6 +16599,7 @@ CoilHtg   "CoilHtg 16"
    ..
 
 Fan   "Fan 16"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 259.739
    PwrIdx = 0.58
@@ -16579,6 +16632,7 @@ CoilHtg   "CoilHtg 17"
    ..
 
 Fan   "Fan 17"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 284.311
    PwrIdx = 0.58
@@ -16611,6 +16665,7 @@ CoilHtg   "CoilHtg 18"
    ..
 
 Fan   "Fan 18"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 376.2
    PwrIdx = 0.58
@@ -16643,6 +16698,7 @@ CoilHtg   "CoilHtg 19"
    ..
 
 Fan   "Fan 19"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 344.528
    PwrIdx = 0.58
@@ -16675,6 +16731,7 @@ CoilHtg   "CoilHtg 20"
    ..
 
 Fan   "Fan 20"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 462.373
    PwrIdx = 0.58
@@ -16707,6 +16764,7 @@ CoilHtg   "CoilHtg 21"
    ..
 
 Fan   "Fan 21"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 312.375
    PwrIdx = 0.58
@@ -16739,6 +16797,7 @@ CoilHtg   "CoilHtg 22"
    ..
 
 Fan   "Fan 22"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 292.058
    PwrIdx = 0.58
@@ -16771,6 +16830,7 @@ CoilHtg   "CoilHtg 23"
    ..
 
 Fan   "Fan 23"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 189
    PwrIdx = 0.58
@@ -16790,7 +16850,7 @@ CoilClg   "CoilCooling 25"
    Type = "DirectExpansion"
    CapTotNetRtd = 32175
    DXSEER = 14
-   DXEER = 11.4
+   DXEER = 11.7
    BypassMinEffCheck = 1
    ..
 
@@ -16803,6 +16863,7 @@ CoilHtg   "CoilHtg 25"
    ..
 
 Fan   "Fan 25"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 938.438
    PwrIdx = 0.58
@@ -16835,6 +16896,7 @@ CoilHtg   "CoilHtg 24"
    ..
 
 Fan   "Fan 24"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 189
    PwrIdx = 0.58
@@ -16854,7 +16916,7 @@ CoilClg   "CoilCooling 26"
    Type = "DirectExpansion"
    CapTotNetRtd = 32175
    DXSEER = 14
-   DXEER = 11.4
+   DXEER = 11.7
    BypassMinEffCheck = 1
    ..
 
@@ -16867,6 +16929,7 @@ CoilHtg   "CoilHtg 26"
    ..
 
 Fan   "Fan 26"  
+   CtrlMthd = "ConstantVolume"
    ModelingMthd = "PowerPerUnitFlow"
    FlowCap = 938.438
    PwrIdx = 0.58
@@ -17926,26 +17989,26 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Title3[18] = "Emis. (tonne)"
    Title3[19] = "Emis. (tonne)"
    Enduse1[1] = "Space Heating"
-   Enduse1[2] = "41.3"
-   Enduse1[3] = "390.4"
-   Enduse1[4] = "19.79"
-   Enduse1[9] = "1.4"
-   Enduse1[11] = "4.49"
-   Enduse1[17] = "7.65"
-   Enduse1[18] = "1.87"
-   Enduse1[19] = "9.52"
+   Enduse1[2] = "42.4"
+   Enduse1[3] = "400.5"
+   Enduse1[4] = "20.27"
+   Enduse1[9] = "1.6"
+   Enduse1[11] = "4.60"
+   Enduse1[17] = "7.79"
+   Enduse1[18] = "1.92"
+   Enduse1[19] = "9.71"
    Enduse2[1] = "Space Cooling"
-   Enduse2[2] = "8.4"
+   Enduse2[2] = "8.3"
    Enduse2[3] = "--"
-   Enduse2[4] = "2.00"
-   Enduse2[9] = "6.6"
+   Enduse2[4] = "1.98"
+   Enduse2[9] = "6.5"
    Enduse2[11] = "0.19"
-   Enduse2[17] = "1.17"
-   Enduse2[19] = "1.17"
+   Enduse2[17] = "1.16"
+   Enduse2[19] = "1.16"
    Enduse3[1] = "Indoor Fans"
    Enduse3[2] = "50.1"
    Enduse3[3] = "--"
-   Enduse3[4] = "12.39"
+   Enduse3[4] = "12.40"
    Enduse3[9] = "7.5"
    Enduse3[11] = "1.28"
    Enduse3[17] = "7.67"
@@ -17974,22 +18037,22 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Enduse6[18] = "5.08"
    Enduse6[19] = "6.92"
    Enduse7[1] = "Indoor Lighting"
-   Enduse7[2] = "82.0"
+   Enduse7[2] = "74.0"
    Enduse7[3] = "--"
-   Enduse7[4] = "18.92"
-   Enduse7[9] = "14.3"
-   Enduse7[11] = "1.51"
-   Enduse7[17] = "9.07"
-   Enduse7[19] = "9.07"
+   Enduse7[4] = "17.10"
+   Enduse7[9] = "13.0"
+   Enduse7[11] = "1.37"
+   Enduse7[17] = "8.20"
+   Enduse7[19] = "8.20"
    Enduse8[1] = "Compliance Total"
-   Enduse8[2] = "196.6"
-   Enduse8[3] = "1,449.7"
-   Enduse8[4] = "79.07"
-   Enduse8[9] = "32.4"
-   Enduse8[11] = "16.51"
-   Enduse8[17] = "27.44"
-   Enduse8[18] = "6.95"
-   Enduse8[19] = "34.39"
+   Enduse8[2] = "189.6"
+   Enduse8[3] = "1,459.8"
+   Enduse8[4] = "77.72"
+   Enduse8[9] = "31.1"
+   Enduse8[11] = "16.48"
+   Enduse8[17] = "26.70"
+   Enduse8[18] = "7.00"
+   Enduse8[19] = "33.70"
    Enduse9[1] = "Receptacle"
    Enduse9[2] = "251.1"
    Enduse9[3] = "116.2"
@@ -18037,14 +18100,14 @@ EUseSummary   "Pol  0% RetAdd NoLeak"
    Enduse14[9] = "--"
    Enduse14[11] = "--"
    Enduse15[1] = "TOTAL"
-   Enduse15[2] = "539.4"
-   Enduse15[3] = "1,761.3"
-   Enduse15[4] = "171.85"
-   Enduse15[9] = "87.5"
-   Enduse15[11] = "27.92"
-   Enduse15[17] = "80.57"
-   Enduse15[18] = "8.45"
-   Enduse15[19] = "89.02"
+   Enduse15[2] = "532.4"
+   Enduse15[3] = "1,771.4"
+   Enduse15[4] = "170.50"
+   Enduse15[9] = "86.3"
+   Enduse15[11] = "27.89"
+   Enduse15[17] = "79.83"
+   Enduse15[18] = "8.50"
+   Enduse15[19] = "88.33"
    ZoneUMLHsLoaded[1] = 1
    ZoneUMLHs[1] = "clg: 0  htg: 0  'Thermal Zone: F1 Business Center'
 clg: 0  htg: 0  'Thermal Zone: F1 Corridor'
@@ -18059,7 +18122,7 @@ clg: 0  htg: 0  'Thermal Zone: F1 Retail SW'
 clg: 0  htg: 0  'Thermal Zone: F2-4 1-Bed Core N'
 clg: 0  htg: 0  'Thermal Zone: F2-4 1-Bed Core West'
 clg: 0  htg: 0  'Thermal Zone: F2-4 1-Bed Core East'
-clg: 0  htg: 8  'Thermal Zone: F2-4 1-Bed North'
+clg: 0  htg: 7  'Thermal Zone: F2-4 1-Bed North'
 clg: 0  htg: 0  'Thermal Zone: F2-4 2-Bed Core NE-NW'
 clg: 0  htg: 8  'Thermal Zone: F5 1-Bed North'
 clg: 0  htg: 1  'Thermal Zone: F5 2-Bed Core NE-NW'
@@ -18080,7 +18143,7 @@ clg: 0  htg: 4  'Thermal Zone: F5 3-Bed NE'
 clg: 0  htg: 0  'Thermal Zone: F5 3-Bed NW'
 clg: 0  htg: 0  'Thermal Zone: F5 Studio SE'
 clg: 0  htg: 0  'Thermal Zone: F5 Studio SW'
-clg: 0  htg: 8  'Thermal Zone: F5 Corridor'
+clg: 0  htg: 10  'Thermal Zone: F5 Corridor'
 clg: 0  htg: 0  'Thermal Zone: F5 Laundry'
 clg: 0  htg: 0  'Thermal Zone: Parking Garage'"
    SimSummary[1] = "Successful (272 warnings)"
