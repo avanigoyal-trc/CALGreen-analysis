@@ -18,6 +18,7 @@
 // * hspf = 9 (:default => 8.2)
 // * eer = 13 (:default => 11.7)
 // * ctrl_method = "TwoSpeed" (:default => "ConstantVolume")
+// * include_FPB = "Yes" (:default => "No")
 // * is_central_dhw = 1 (:default => nil)
 // * sol_frac = 0.35 (:default => nil)
 //   doas_fan_type = "Exhaust"
@@ -13381,6 +13382,9 @@ CoilHtg   "BaseSys6 CoilHtg"
 
 Fan   "BaseSys6 Fan"
    CtrlMthd = "VariableSpeedDrive"
+   
+   MtrBHP = 11.49
+   
    ..
 
 AirSeg   "BaseSys6 RetAirSeg"
