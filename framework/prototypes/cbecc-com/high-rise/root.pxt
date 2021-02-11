@@ -24,6 +24,7 @@ parameter "seer", :default => 14
 parameter "hspf", :default => 8.2
 parameter "eer", :default => 11.7
 parameter "ctrl_method", :default => "ConstantVolume"
+parameter "include_FPB", :default => "No"
 
 
 
@@ -12118,6 +12119,9 @@ CoilHtg   "BaseSys6 CoilHtg"
 
 Fan   "BaseSys6 Fan"
    CtrlMthd = "VariableSpeedDrive"
+   <%if include_FPB == "Yes"%>
+   MtrBHP = 11.49
+   <%end%>
    ..
 
 AirSeg   "BaseSys6 RetAirSeg"
