@@ -43,6 +43,10 @@ parameter "frame_path_cavity"
 
 parameter "asr", :default=> 0.1
 parameter "te", :default=> 0.85
+
+parameter "fan_furn", :default=> 0.45
+parameter "fan_hp", :default=> 0.58
+
 %>
 
 <%
@@ -4333,13 +4337,13 @@ HVACDist   "AirDistributionSystem"
 HVACFan   "HVACFan-HeatPump"
    Type = "Single Speed PSC Furnace Fan"
    DefaultSystem = 0
-   WperCFMCool = 0.58
+   WperCFMCool = <%= fan_hp %>
    ..
 
 HVACFan   "HVACFan-Furnace"
    Type = "Single Speed PSC Furnace Fan"
    DefaultSystem = 0
-   WperCFMCool = 0.45
+   WperCFMCool = <%= fan_furn %>
    ..
 
 IAQFan   "TwoBedroomIAQFan"

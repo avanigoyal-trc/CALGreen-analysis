@@ -35,6 +35,9 @@ parameter "radiantbarrier_attic", :default=> 0
 parameter "attic_ins", :default=> "R 19"
 
 parameter "duct_ins", :default=> "8.0"
+
+parameter "fan_furn", :default=> 0.45
+parameter "fan_hp", :default=> 0.58
 %>
 
 <%
@@ -2169,13 +2172,13 @@ HVACDist   "Distribution System attic"
 HVACFan   "HVACFan-Furnace"
    Type = "Single Speed PSC Furnace Fan"
    DefaultSystem = 0
-   WperCFMCool = 0.45
+   WperCFMCool = <%= fan_furn %>
    ..
 
 HVACFan   "HVACFan-HeatPump"
    Type = "Single Speed PSC Furnace Fan"
    DefaultSystem = 0
-   WperCFMCool = 0.58
+   WperCFMCool = <%= fan_hp %>
    ..
 
 IAQFan   "IAQFan1"
