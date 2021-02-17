@@ -38,6 +38,8 @@ parameter "duct_ins", :default=> "8.0"
 
 parameter "fan_furn", :default=> 0.45
 parameter "fan_hp", :default=> 0.58
+parameter "iaq_fan", :default=> 0.6
+
 %>
 
 <%
@@ -2183,7 +2185,7 @@ HVACFan   "HVACFan-HeatPump"
 
 IAQFan   "IAQFan1"
    IAQCFM = 37.5
-   WperCFMIAQ = 0.6
+   WperCFMIAQ = <%= iaq_fan %>
    IAQFanType = "Balanced"
    IncludesRecov = 0
    SetPerfByHVIInterp = 0
@@ -2191,7 +2193,7 @@ IAQFan   "IAQFan1"
 
 IAQFan   "IAQFan2"
    IAQCFM = 54.9
-   WperCFMIAQ = 0.6
+   WperCFMIAQ = <%= iaq_fan %>
    IAQFanType = "Balanced"
    IncludesRecov = 0
    SetPerfByHVIInterp = 0

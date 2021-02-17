@@ -46,7 +46,7 @@ parameter "te", :default=> 0.85
 
 parameter "fan_furn", :default=> 0.45
 parameter "fan_hp", :default=> 0.58
-
+parameter "iaq_fan", :default=> 0.6
 %>
 
 <%
@@ -4348,7 +4348,7 @@ HVACFan   "HVACFan-Furnace"
 
 IAQFan   "TwoBedroomIAQFan"
    IAQCFM = 54.14
-   WperCFMIAQ = 0.6
+   WperCFMIAQ = <%= iaq_fan %>
    IAQFanType = "Balanced"
    IncludesRecov = 0
    SetPerfByHVIInterp = 0
@@ -4356,7 +4356,7 @@ IAQFan   "TwoBedroomIAQFan"
 
 IAQFan   "OneBedroomIAQFan"
    IAQCFM = 36.6
-   WperCFMIAQ = 0.6
+   WperCFMIAQ = <%= iaq_fan %>
    IAQFanType = "Balanced"
    IncludesRecov = 0
    SetPerfByHVIInterp = 0
@@ -4364,7 +4364,7 @@ IAQFan   "OneBedroomIAQFan"
 
 IAQFan   "ThreeBedroomIAQFan"
    IAQCFM = 72.3
-   WperCFMIAQ = 0.6
+   WperCFMIAQ = <%= iaq_fan %>
    IAQFanType = "Balanced"
    IncludesRecov = 0
    SetPerfByHVIInterp = 0
@@ -4372,7 +4372,7 @@ IAQFan   "ThreeBedroomIAQFan"
 
 IAQFan   "StudioIAQFan"
    IAQCFM = 31.2
-   WperCFMIAQ = 0.6
+   WperCFMIAQ = <%= iaq_fan %>
    IAQFanType = "Balanced"
    IncludesRecov = 0
    SetPerfByHVIInterp = 0
