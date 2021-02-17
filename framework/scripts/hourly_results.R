@@ -121,7 +121,7 @@ tdv_2022_generate_com <- function(path, measures = NULL, cz = NULL, lifetime, fo
   
   
   addWorksheet(wb, "Description")
-  description_of_run <- paste("LifeTime: ", lifetime, "TDVMultiplier: ", res_or_nr, "DHW Removed: ", remove_DHW, sep = " ")
+  description_of_run <- paste("LifeTime: ", lifetime, "TDVMultiplier: ", res_or_nr, "DHW Removed: ", remove_DHW, "Date Produced:", Sys.Date(),  sep = " ")
   writeData(wb, "Description", description_of_run)
   
   saveWorkbook(wb, here::here(path, "TDVAnnual.xlsx"), overwrite = TRUE)
@@ -265,7 +265,7 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
   
   
   addWorksheet(wb, "Description")
-  description_of_run <- paste("LifeTime: ", lifetime, "TDVMultiplier: ", res_or_nr, "DHW Removed: ", remove_DHW, "PVB Removed: ", remove_PVB, sep = ",")
+  description_of_run <- paste("LifeTime: ", lifetime, "TDVMultiplier: ", res_or_nr, "DHW Removed: ", remove_DHW, "PVB Removed: ", remove_PVB, "Date Produced: ", Sys.Date(), sep = " ")
   writeData(wb, "Description", description_of_run)
   
   saveWorkbook(wb, here::here(path, "TDVAnnual.xlsx"), overwrite = TRUE)
