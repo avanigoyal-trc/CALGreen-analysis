@@ -35,8 +35,16 @@ tdv_2022_generate_com <- function(path, measures = NULL, cz = NULL, lifetime, fo
     
   }
   
+  
+  
   tdv_2022_elec <- read_excel(here::here("scripts/2022_TDV_Multipliers.xlsx"), skip = 2, sheet = elec_sheet_name)
   tdv_2022_gas <- read_excel(here::here("scripts/2022_TDV_Multipliers.xlsx"), skip = 2, sheet = gas_sheet_name)
+  
+  source_elec <- read_excel(here::here("scripts/2022_Source_Energy.xlsx"), skip = 2, sheet = elec_sheet_name)
+  source_gas <- read_excel(here::here("scripts/2022_Source_Energy.xlsx"), skip = 2, sheet = gas_sheet_name)
+  
+  co2_elec <- read_excel(here::here("scripts/2022_CO2_Multipliers.xlsx"), skip = 2, sheet = elec_sheet_name)
+  co2_gas <- read_excel(here::here("scripts/2022_CO2_Multipliers.xlsx"), skip = 2, sheet = gas_sheet_name)
   
   wb <- createWorkbook()
   
@@ -68,11 +76,11 @@ tdv_2022_generate_com <- function(path, measures = NULL, cz = NULL, lifetime, fo
       
       hourly_totals_results <- hourly %>% select(Mo, Da, Hr, `(kWh)_5`, `(kWh)_14`, `(kBtu)_5`, `(kBtu)_12`, `(kWh)_13`, `(kBtu)_11`, `(kTDV/kWh)`, `(kTDV/MBtu)`)
       
-      hourly_totals <- cbind(hourly_totals_results, tdv_2022_elec[,clim_num +1], tdv_2022_gas[, clim_num + 1])
+      hourly_totals <- cbind(hourly_totals_results, tdv_2022_elec[,clim_num +1], tdv_2022_gas[, clim_num + 1], source_elec[,clim_num +1], source_gas[, clim_num + 1], co2_elec[,clim_num +1], co2_gas[, clim_num + 1])
       
       
       
-      names(hourly_totals) <- c("Month", "Day", "Hour", "DHW_kWh", "Elec_kWh", "DHW_kBtu", "NG_kBtu", "Elec_Comp_kWh", "NG_Comp_kBtu", "kTDV/kWh", "kTDV/MBtu","kTDV/kWh_2022", "kTDV/Therm_2022")
+      names(hourly_totals) <- c("Month", "Day", "Hour", "DHW_kWh", "Elec_kWh", "DHW_kBtu", "NG_kBtu", "Elec_Comp_kWh", "NG_Comp_kBtu", "kTDV/kWh", "kTDV/MBtu","kTDV/kWh_2022", "kTDV/Therm_2022", "Source kBtu/kwh", "Source kBtu/Therm", "CO2 Ton/kwh", "CO2 Ton/Therm")
       
       if(remove_DHW){
         
@@ -96,7 +104,14 @@ tdv_2022_generate_com <- function(path, measures = NULL, cz = NULL, lifetime, fo
                   kWh_Elec_Comp = sum(Elec_Comp_kWh),
                   kBtu_NG_Comp = sum(NG_Comp_kBtu),
                   kTDV_Comp_Elec_2022 = sum(Elec_Comp_kWh*`kTDV/kWh_2022`)/cfa,
-                  kTDV_Comp_NG_2022 = sum(NG_Comp_kBtu*`kTDV/Therm_2022`/100)/cfa)  
+                  kTDV_Comp_NG_2022 = sum(NG_Comp_kBtu*`kTDV/Therm_2022`/100)/cfa,
+                  Source_kBtu_Elec = sum(Elec_kWh*`Source kBtu/kwh`),
+                  Source_kBtu_NG = sum(NG_kBtu*`Source kBtu/Therm`/100),
+                  Source_kBtu_Total = Source_kBtu_Elec + Source_kBtu_NG,
+                  CO2_ton_Elec = sum(Elec_kWh*`CO2 Ton/kWh`),
+                  CO2_ton_NG = sum(NG_kBtu*`CO2 Ton/Therm`/100),
+                  CO2_ton_Total = CO2_ton_Elec + CO2_ton_NG)  
+      
       
       
       
@@ -165,6 +180,9 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
   source_elec <- read_excel(here::here("scripts/2022_Source_Energy.xlsx"), skip = 2, sheet = elec_sheet_name)
   source_gas <- read_excel(here::here("scripts/2022_Source_Energy.xlsx"), skip = 2, sheet = gas_sheet_name)
   
+  co2_elec <- read_excel(here::here("scripts/2022_CO2_Multipliers.xlsx"), skip = 2, sheet = elec_sheet_name)
+  co2_gas <- read_excel(here::here("scripts/2022_CO2_Multipliers.xlsx"), skip = 2, sheet = gas_sheet_name)
+  
   wb <- createWorkbook()
   
   for (measure in measures){
@@ -201,11 +219,11 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
         select(Mo, Da, Hr,`(kWh)_4`, Elec_kWh_PVB, `(kWh)_12`, Elec_kWh_Comp, `(Therms)_4`, `(Therms)_10`,NG_Therm_Comp, `(TDV/Btu)`, `(TDV/Btu)_1` )
       
       
-      hourly_totals <- cbind(hourly_totals_results, tdv_2022_elec[,clim_num +1], tdv_2022_gas[, clim_num + 1], source_elec[,clim_num + 1], source_gas[, clim_num + 1])
+      hourly_totals <- cbind(hourly_totals_results, tdv_2022_elec[,clim_num +1], tdv_2022_gas[, clim_num + 1], source_elec[,clim_num + 1], source_gas[, clim_num + 1], co2_elec[,clim_num + 1], co2_gas[, clim_num + 1])
       
       
       
-      names(hourly_totals) <- c("Month", "Day", "Hour", "DHW_kWh", "Elec_kWh_PVB", "Elec_kWh", "Elec_kWh_Comp", "DHW_Therm", "NG_Therm", "NG_Therm_Comp","TDV/Btu_elec", "TDV/Btu_gas","kTDV/kWh_2022", "kTDV/Therm_2022", "Source kBtu/kwh", "Source kBtu/Therm")
+      names(hourly_totals) <- c("Month", "Day", "Hour", "DHW_kWh", "Elec_kWh_PVB", "Elec_kWh", "Elec_kWh_Comp", "DHW_Therm", "NG_Therm", "NG_Therm_Comp","TDV/Btu_elec", "TDV/Btu_gas","kTDV/kWh_2022", "kTDV/Therm_2022", "Source kBtu/kwh", "Source kBtu/Therm", "CO2 Ton/kwh", "CO2 Ton/Therm")
       
       if(remove_DHW){
         
@@ -235,12 +253,16 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
                   Therm_NG_Total = sum(NG_Therm),
                   kTDV_Total_Elec_2022 = sum(Elec_kWh*`kTDV/kWh_2022`)/cfa,
                   kTDV_Total_NG_2022 = sum(NG_Therm*`kTDV/Therm_2022`)/cfa, 
-                  Source_kBtu_Elec = sum(Elec_kWh*`Source kBtu/kwh`),
-                  Source_kBtu_NG = sum(NG_Therm*`Source kBtu/Therm`),
                   kWh_Elec_Comp = sum(Elec_kWh_Comp),
                   Therm_NG_Comp = sum(NG_Therm_Comp),
                   kTDV_Comp_Elec_2022 = sum(Elec_kWh_Comp*`kTDV/kWh_2022`)/cfa,
-                  kTDV_Comp_NG_2022 = sum(NG_Therm_Comp*`kTDV/Therm_2022`)/cfa)  # per therm
+                  kTDV_Comp_NG_2022 = sum(NG_Therm_Comp*`kTDV/Therm_2022`)/cfa, # per therm
+                  Source_kBtu_Elec = sum(Elec_kWh*`Source kBtu/kwh`),
+                  Source_kBtu_NG = sum(NG_Therm*`Source kBtu/Therm`),
+                  Source_kBtu_Total = sum(Source_kBtu_Elec, Source_kBtu_NG),
+                  CO2_ton_Elec = sum(Elec_kWh*`CO2 Ton/kwh`),
+                  CO2_ton_NG = sum(NG_Therm*`CO2 Ton/Therm`),
+                  CO2_ton_Total = sum(CO2_ton_Elec, CO2_ton_NG))  
       
       
       
