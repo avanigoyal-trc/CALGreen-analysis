@@ -4,7 +4,7 @@ library(openxlsx)
 library(data.table)
 library(readxl)
 
-hourly_results_spreadsheet_com <- function(path, measures = NULL, cz = NULL, folder = NA, file = NA, remove_DHW = FALSE){
+hourly_results_spreadsheet_com <- function(path, measures = NULL, lifetime, res_or_nr, cz = NULL, folder = NA, file = NA, remove_DHW = FALSE){
   ## For CBECC-Com
   
   ##path: String format, path to prototype results folder starting at framework ie. "analysis/hvac_autosizing"
@@ -18,6 +18,27 @@ hourly_results_spreadsheet_com <- function(path, measures = NULL, cz = NULL, fol
             "cz15", "cz16")
   }
   
+  if (lifetime == 15){
+    
+    elec_sheet_name =  "Elec Non-Res (15 Year)"
+    gas_sheet_name = "Gas Non-Res (15 Year)"
+    
+  }
+  if (lifetime == 30){
+    if(res_or_nr == "nr"){
+      elec_sheet_name =  "Elec Non-Res (30 Year)"
+      gas_sheet_name = "Gas Non-Res (30 Year)"
+    }else if (res_or_nr == "res"){
+      elec_sheet_name =  "Elec Res (30 Year)"
+      gas_sheet_name = "Gas Res (30 Year)"
+    }
+    
+  }
+  
+  
+  
+  tdv_2022_elec <- read_excel(here::here("scripts/2022_TDV_Multipliers.xlsx"), skip = 2, sheet = elec_sheet_name)
+  tdv_2022_gas <- read_excel(here::here("scripts/2022_TDV_Multipliers.xlsx"), skip = 2, sheet = gas_sheet_name)
   
   wb <- createWorkbook()
   
@@ -47,13 +68,13 @@ hourly_results_spreadsheet_com <- function(path, measures = NULL, cz = NULL, fol
       
       clim_num <- as.numeric(str_extract(clim, "\\d+"))
       
-      hourly_totals_results <- hourly %>% select(Mo, Da, Hr, `(kWh)_5`, `(kWh)_14`, `(kBtu)_5`, `(kBtu)_12`, `(kWh)_13`, `(kBtu)_11`)
+      hourly_totals <- hourly %>% select(Mo, Da, Hr, `(kWh)_5`, `(kWh)_14`, `(kBtu)_5`, `(kBtu)_12`, `(kWh)_13`, `(kBtu)_11`)
       
-     
+      hourly_totals_results <- cbind(hourly_totals, tdv_2022_elec[,clim_num +1], tdv_2022_gas[, clim_num + 1])
       
       
       
-      names(hourly_totals_results) <- c("Month", "Day", "Hour", "DHW_kWh", "Elec_kWh", "DHW_kBtu", "NG_kBtu", "Elec_Comp_kWh", "NG_Comp_kBtu")
+      names(hourly_totals_results) <- c("Month", "Day", "Hour", "DHW_kWh", "Elec_kWh", "DHW_kBtu", "NG_kBtu", "Elec_Comp_kWh", "NG_Comp_kBtu", "kTDV/kWh", "kTDV/MBtu")
       
       if(remove_DHW){
         
@@ -69,7 +90,9 @@ hourly_results_spreadsheet_com <- function(path, measures = NULL, cz = NULL, fol
       
       hourly_results <- hourly_totals_results %>% rowwise() %>% 
         mutate(CZ = as.numeric(str_extract_all(clim, "\\d+"))) %>%
-        select(Month, Day, Hour, CZ, Elec_kWh, NG_kBtu, Elec_Comp_kWh, NG_Comp_kBtu)  
+       mutate(kTDV_Total_Elec_2022 =Elec_kWh*`kTDV/kWh_2022`/cfa,
+      kTDV_Total_NG_2022 = (NG_kBtu*`kTDV/Therm_2022`/100)/cfa) %>%
+        select(Month, Day, Hour, CZ, Elec_kWh, NG_kBtu, Elec_Comp_kWh, NG_Comp_kBtu, kTDV_Total_Elec_2022, kTDV_Total_NG_2022)  
       
       
       
@@ -102,7 +125,7 @@ hourly_results_spreadsheet_com <- function(path, measures = NULL, cz = NULL, fol
   
   
   addWorksheet(wb, "Description")
-  description_of_run <- paste( "DHW Removed: ", remove_DHW, "Date Produced:", Sys.Date(),  sep = " ")
+  description_of_run <- paste("LifeTime: ", lifetime, "; TDVMultiplier: ", res_or_nr, "; DHW Removed: ", remove_DHW, "Date Produced:", Sys.Date(),  sep = " ")
   writeData(wb, "Description", description_of_run)
   
   saveWorkbook(wb, here::here(path, "HourlyResults.xlsx"), overwrite = TRUE)
@@ -248,7 +271,7 @@ tdv_2022_generate_com <- function(path, measures = NULL, cz = NULL, lifetime, fo
   
 }
 
-hourly_results_spreadsheet_res <- function(path, measures = NULL, cz = NULL,  file = NA,  remove_DHW = FALSE, remove_PVB = FALSE){
+hourly_results_spreadsheet_res <- function(path, measures = NULL, lifetime, res_or_nr, cz = NULL,  file = NA,  remove_DHW = FALSE, remove_PVB = FALSE){
   ## For CBECC-Res
   
   ##path: String format, path to prototype results folder starting at framework ie. "analysis/hvac_autosizing"
@@ -262,7 +285,25 @@ hourly_results_spreadsheet_res <- function(path, measures = NULL, cz = NULL,  fi
             "cz15", "cz16")
   }
   
+  if (lifetime == 15){
+    
+    elec_sheet_name =  "Elec Non-Res (15 Year)"
+    gas_sheet_name = "Gas Non-Res (15 Year)"
+    
+  }
+  if (lifetime == 30){
+    if(res_or_nr == "nr"){
+      elec_sheet_name =  "Elec Non-Res (30 Year)"
+      gas_sheet_name = "Gas Non-Res (30 Year)"
+    }else if (res_or_nr == "res"){
+      elec_sheet_name =  "Elec Res (30 Year)"
+      gas_sheet_name = "Gas Res (30 Year)"
+    }
+    
+  }
   
+  tdv_2022_elec <- read_excel(here::here("scripts/2022_TDV_Multipliers.xlsx"), skip = 2, sheet = elec_sheet_name)
+  tdv_2022_gas <- read_excel(here::here("scripts/2022_TDV_Multipliers.xlsx"), skip = 2, sheet = gas_sheet_name)
   
   wb <- createWorkbook()
   
@@ -291,7 +332,7 @@ hourly_results_spreadsheet_res <- function(path, measures = NULL, cz = NULL,  fi
       
       clim_num <- as.numeric(str_extract(clim, "\\d+"))
       
-      hourly_totals <- hourly %>%
+      hourly_totals_results <- hourly %>%
         select(Mo, Da, Hr, `(kWh)`,`(kWh)_1`,`(kWh)_2`,`(kWh)_3`,`(kWh)_4`,`(kWh)_5`,`(kWh)_10`,`(kWh)_11`, `(kWh)_12`, `(Therms)`,`(Therms)_1`,`(Therms)_2`,`(Therms)_3`,`(Therms)_4`,`(Therms)_5`, `(Therms)_10`, `(TDV/Btu)`, `(TDV/Btu)_1`) %>%
         rowwise() %>%
         mutate(Elec_kWh_Comp = sum(`(kWh)`,`(kWh)_1`,`(kWh)_2`,`(kWh)_3`,`(kWh)_4`,`(kWh)_5`)) %>%
@@ -299,9 +340,9 @@ hourly_results_spreadsheet_res <- function(path, measures = NULL, cz = NULL,  fi
         mutate(Elec_kWh_PVB = sum(`(kWh)_10`,`(kWh)_11`)) %>%
         select(Mo, Da, Hr,`(kWh)_4`, Elec_kWh_PVB, `(kWh)_12`, Elec_kWh_Comp, `(Therms)_4`, `(Therms)_10`,NG_Therm_Comp)
       
+      hourly_totals <- cbind(hourly_totals_results, tdv_2022_elec[,clim_num +1], tdv_2022_gas[, clim_num + 1])
       
-      
-      names(hourly_totals) <- c("Month", "Day", "Hour", "DHW_kWh", "Elec_kWh_PVB", "Elec_kWh", "Elec_kWh_Comp", "DHW_Therm", "NG_Therm", "NG_Therm_Comp")
+      names(hourly_totals) <- c("Month", "Day", "Hour", "DHW_kWh", "Elec_kWh_PVB", "Elec_kWh", "Elec_kWh_Comp", "DHW_Therm", "NG_Therm", "NG_Therm_Comp","kTDV/kWh_2022", "kTDV/Therm_2022")
       
       if(remove_DHW){
         
@@ -326,7 +367,9 @@ hourly_results_spreadsheet_res <- function(path, measures = NULL, cz = NULL,  fi
       
       hourly_totals_with_tdv <- hourly_totals %>% rowwise() %>% 
         mutate(CZ = as.numeric(str_extract_all(clim, "\\d+"))) %>%
-        select(Month, Day, Hour, CZ, Elec_kWh, NG_Therm, Elec_kWh_Comp, NG_Therm_Comp)
+        mutate(kTDV_Total_Elec_2022 = (Elec_kWh*`kTDV/kWh_2022`)/cfa,
+               kTDV_Total_NG_2022 = (NG_Therm*`kTDV/Therm_2022`)/cfa) %>%
+        select(Month, Day, Hour, CZ, Elec_kWh, NG_Therm, Elec_kWh_Comp, NG_Therm_Comp, kTDV_Total_Elec_2022, kTDV_Total_NG_2022)
       
       
       
@@ -356,7 +399,7 @@ hourly_results_spreadsheet_res <- function(path, measures = NULL, cz = NULL,  fi
   
   
   addWorksheet(wb, "Description")
-  description_of_run <- paste("DHW Removed: ", remove_DHW, "; PVB Removed: ", remove_PVB, "; Date Produced: ", Sys.Date(), sep = " ")
+  description_of_run <- paste("LifeTime: ", lifetime, "; TDVMultiplier: ", res_or_nr,"; DHW Removed: ", remove_DHW, "; PVB Removed: ", remove_PVB, "; Date Produced: ", Sys.Date(), sep = " ")
   writeData(wb, "Description", description_of_run)
   
   saveWorkbook(wb, here::here(path, "HourlyResults.xlsx"), overwrite = TRUE)
