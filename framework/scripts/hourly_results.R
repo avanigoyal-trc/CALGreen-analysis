@@ -559,3 +559,146 @@ tdv_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  f
 }
 
 
+co2_2022_generate_res <- function(path, measures = NULL, cz = NULL, lifetime,  file = NA, res_or_nr = "nr", remove_DHW = FALSE, remove_PVB = FALSE){
+  ## For CBECC-Res
+  
+  ##path: String format, path to prototype results folder starting at framework ie. "analysis/hvac_autosizing"
+  if(is.null(measures)){
+    measures <- list.files(here::here(path, "runs"))
+  }
+  
+  if(is.null(cz)){
+    cz <- c("cz01", "cz02", "cz03", "cz04", "cz05", "cz06", "cz07",
+            "cz08", "cz09", "cz10", "cz11", "cz12", "cz13", "cz14",
+            "cz15", "cz16")
+  }
+  
+  if (lifetime == 15){
+    
+    elec_sheet_name =  "Elec Non-Res (15 Year)"
+    gas_sheet_name = "Gas Non-Res (15 Year)"
+    
+  }
+  if (lifetime == 30){
+    if(res_or_nr == "nr"){
+      elec_sheet_name =  "Elec Non-Res (30 Year)"
+      gas_sheet_name = "Gas Non-Res (30 Year)"
+    }else if (res_or_nr == "res"){
+      elec_sheet_name =  "Elec Res (30 Year)"
+      gas_sheet_name = "Gas Res (30 Year)"
+    }
+    
+  }
+  
+  
+  co2_elec <- read_excel(here::here("scripts/2022_CO2_Multipliers.xlsx"), skip = 2, sheet = elec_sheet_name)
+  co2_gas <- read_excel(here::here("scripts/2022_CO2_Multipliers.xlsx"), skip = 2, sheet = gas_sheet_name)
+  
+  wb <- createWorkbook()
+  
+  for (measure in measures){
+    
+    
+    
+    cz_missing <- c()
+    
+    for(clim in cz){
+      
+      if(is.na(file)){
+        file <- "instance - Prop - HourlyResults.csv"
+      }
+      
+      if(!(paste(clim, file, sep = "/") %in% list.files(here::here(path, "runs", measure), recursive = T))){
+        cz_missing <- c(cz_missing, clim)
+        next
+      }
+      
+      hourly <- read_csv(here::here(path, "runs", measure, clim,  file), skip = 14)
+      
+      cfa_df <- read_csv(here::here(path, "runs", measure, clim,  file), skip = 7, col_names = FALSE)
+      
+      cfa <- as.numeric(cfa_df$X4[1])
+      
+      clim_num <- as.numeric(str_extract(clim, "\\d+"))
+      
+      hourly_totals_results <- hourly %>%
+        select(Mo:`(Therms)_10`)
+      
+      hourly_totals <- cbind(hourly_totals_results, co2_elec[,clim_num + 1], co2_gas[, clim_num + 1])
+      
+      
+      
+      names(hourly_totals) <- c("Month", "Day", "Hour","SpcHeat_kWh",   
+                                "SpcCool_kWh", "IAQVent_kWh", "OtherHVAC_kWh", "WtrHeat_kWh", "WtrHtPump_kWh", 
+                                "InsLight_kWh", "Appl&Cook_kWh", "PlgLds_kWh", "Exterior_kWh", "PV_kWh", "Battery_kWh", "Total_kWh",
+                                "SpcHeat_Therms", "SpcCool_Therms", "IAQVent_Therms", "OtherHVAC_Therms", "WtrHeat_Therms", "WtrHtPump_Therms",
+                                "InsLight_Therms", "Appl&Cook_Therms", "PlugLds_Therms", "Exterior_Therms", "Total_Therms",
+                                 "CO2 Ton/kwh", "CO2 Ton/Therm")
+      
+      if(remove_DHW){
+        
+        hourly_totals <- hourly_totals %>%
+          mutate(Total_kWh = Total_kWh - WtrHeat_kWh) %>%
+          mutate(Total_Therm = Total_Therm - WtrHeat_Therm)
+      }
+      
+      if(remove_PVB){
+        
+        hourly_totals <- hourly_totals %>%
+          mutate(Total_kWh = Total_kWh -PV_kWh - Battery_kWh) %>%
+          select(-PV_kWh, -Battery_kWh)
+        
+        
+      }
+      
+      
+      totals_kWh <- hourly_totals %>% rowwise() %>% 
+        mutate(CZ = as.numeric(str_extract_all(clim, "\\d+"))) %>%
+        group_by(CZ) %>%
+        summarise_at(vars(SpcHeat_kWh:Total_kWh), function(x){sum(x*hourly_totals$`CO2 Ton/kwh`)})
+      
+      names(totals_kWh) <- gsub("_kWh", "", names(totals_kWh))
+      
+      totals_Therms <-  hourly_totals %>% rowwise() %>% 
+        mutate(CZ = as.numeric(str_extract_all(clim, "\\d+"))) %>%
+        group_by(CZ) %>%
+        summarise_at(vars(SpcHeat_Therms:Total_Therms), function(x){sum(x*hourly_totals$`CO2 Ton/Therm`)})
+      
+      names(totals_Therms) <- gsub("_Therms", "", names(totals_Therms))
+      
+      
+      summed_co2 <- cbind(totals_kWh$CZ, totals_kWh[2:12] + totals_Therms[2:12])
+      
+      names(summed_co2) <- names(totals_kWh)
+      
+      assign( clim, summed_co2, envir = .GlobalEnv)
+      
+      
+    }
+    
+    cz_list <- cz[!(cz %in% cz_missing)]
+    
+    all_results <- data.table::rbindlist(lapply(cz_list, get)) %>% mutate(Measure = measure)
+    
+    
+    
+    assign(measure, all_results, envir = .GlobalEnv)  
+    
+  }
+  
+  all_measures <- data.table::rbindlist(lapply(measures, get))
+  
+  addWorksheet(wb, "Results")
+  writeData(wb, "Results", all_measures)
+  
+  
+  addWorksheet(wb, "Description")
+  description_of_run <- paste("LifeTime: ", lifetime, "TDVMultiplier: ", res_or_nr, "DHW Removed: ", remove_DHW, "PVB Removed: ", remove_PVB, "Date Produced: ", Sys.Date(), sep = " ")
+  writeData(wb, "Description", description_of_run)
+  
+  saveWorkbook(wb, here::here(path, "CO2EmissionsAnnual.xlsx"), overwrite = TRUE)
+  
+}
+
+
+
