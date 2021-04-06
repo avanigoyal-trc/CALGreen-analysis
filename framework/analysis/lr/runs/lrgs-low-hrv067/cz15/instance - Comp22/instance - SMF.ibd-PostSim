@@ -14,10 +14,10 @@ Proj   User: "2019 Prototype 7320ft2 Prop Gas"
    RuleRepoRev = RVal: 1715
    ShowNotRegWatermark = RVal: 1
    CreateDate = UVal: 1582925619
-   ModDate = UVal: 1617217128
-   RunDate = UVal: 1617217117
-   RunDateFmt = UVal: "11:58, Wed, Mar 31, 2021"
-   RunDateISO = UVal: "2021-03-31T11:58:37-07:00"
+   ModDate = UVal: 1617252719
+   RunDate = UVal: 1617252708
+   RunDateFmt = UVal: "21:51, Wed, Mar 31, 2021"
+   RunDateISO = UVal: "2021-03-31T21:51:48-07:00"
    PrimSimEngingVer = UVal: "CSE19 0.868.1 EXE"
    RulesetVersion = UVal: "CA Residential 2022, Vers. 2 Pol-0%RA-NoCH4leak"
    ProjFileName = UVal: "instance.ribd22"
@@ -528,7 +528,7 @@ Proj   User: "2019 Prototype 7320ft2 Prop Gas"
    CSE_DefineFloat[27] = RVal: 1
    CSE_DefineFloat[28] = RVal: 0
    CSE_DefineFloat[29] = RVal: 1
-   CSE_DefineString[1] = RVal: "11:58, Wed, Mar 31, 2021"
+   CSE_DefineString[1] = RVal: "21:51, Wed, Mar 31, 2021"
    CSE_DefineString[2] = RVal: "              6   // StdMixedFuel"
    CSE_DefineString[3] = RVal: "      13   // Proposed and Standard"
    CSE_DefineString[4] = RVal: "    2022   // CA2022"
@@ -772,7 +772,7 @@ Proj   User: "2019 Prototype 7320ft2 Prop Gas"
    CSERpt_Mtr_Othr_HD = UVal: 0
    CF1R_EDR_PVRow[1] = RVal: "2019 Prototype 7320ft2 Prop GasEDR_PVRow1"
    NumUIDialogTabs = RVal: 12
-   DefaultingRounds = RVal: 8
+   DefaultingRounds = RVal: 14
    ..
 
 Zone   User: "Zone1"  
@@ -3566,10 +3566,10 @@ EUseSummary   User: "EUSummary"
    StdMixedFuelPV = UVal: -1736.92
    StdMixedFuelPVTDV = UVal: -93.9
    StdMixedFuelPVMlt = UVal: 20.8397
-   PrelimPropkWh = UVal: 36348
-   PrelimPropCompTDV = UVal: 100.259
+   PrelimPropkWh = UVal: 35697.1
+   PrelimPropCompTDV = UVal: 95.21
    PrelimPropPV = UVal: -1736.92
-   PropInputPVMult = UVal: 20.9267
+   PropInputPVMult = UVal: 20.5519
    HideCompSummary = UVal: 0
    HideEDRs = UVal: 0
    HideC02Emissions = UVal: 0
@@ -9486,6 +9486,9 @@ IAQVentRpt   User: "OneBedroomDownstairsZone1 1/2 fan 1/1 cnt 1/1"
    WperCFMIAQ = RVal: 0.6
    IAQFanType = RVal: "Balanced"
    IAQRecovEffect = RVal: 0
+   SensRecovEff = RVal: 67
+   AdjSensRecovEff = RVal: 72
+   SetPerfByHVIInterp = RVal: 0
    CF1R_FanIAQRow = RVal: "OneBedroomDownstairsZone1 1/2 fan 1/1 cnt 1/1FanIAQRow"
    ..
 
@@ -9502,6 +9505,9 @@ IAQVentRpt   User: "OneBedroomDownstairsZone1 2/2 fan 1/1 cnt 1/1"
    WperCFMIAQ = RVal: 0.6
    IAQFanType = RVal: "Balanced"
    IAQRecovEffect = RVal: 0
+   SensRecovEff = RVal: 67
+   AdjSensRecovEff = RVal: 72
+   SetPerfByHVIInterp = RVal: 0
    CF1R_FanIAQRow = RVal: "OneBedroomDownstairsZone1 2/2 fan 1/1 cnt 1/1FanIAQRow"
    ..
 
@@ -9518,6 +9524,9 @@ IAQVentRpt   User: "TwoBedroomDownstairsZone1 1/2 fan 1/1 cnt 1/1"
    WperCFMIAQ = RVal: 0.6
    IAQFanType = RVal: "Balanced"
    IAQRecovEffect = RVal: 0
+   SensRecovEff = RVal: 67
+   AdjSensRecovEff = RVal: 72
+   SetPerfByHVIInterp = RVal: 0
    CF1R_FanIAQRow = RVal: "TwoBedroomDownstairsZone1 1/2 fan 1/1 cnt 1/1FanIAQRow"
    ..
 
@@ -9534,6 +9543,9 @@ IAQVentRpt   User: "TwoBedroomDownstairsZone1 2/2 fan 1/1 cnt 1/1"
    WperCFMIAQ = RVal: 0.6
    IAQFanType = RVal: "Balanced"
    IAQRecovEffect = RVal: 0
+   SensRecovEff = RVal: 67
+   AdjSensRecovEff = RVal: 72
+   SetPerfByHVIInterp = RVal: 0
    CF1R_FanIAQRow = RVal: "TwoBedroomDownstairsZone1 2/2 fan 1/1 cnt 1/1FanIAQRow"
    ..
 
@@ -9550,6 +9562,9 @@ IAQVentRpt   User: "OneBedroomUpstairsZone1 1/2 fan 1/1 cnt 1/1"
    WperCFMIAQ = RVal: 0.6
    IAQFanType = RVal: "Balanced"
    IAQRecovEffect = RVal: 0
+   SensRecovEff = RVal: 67
+   AdjSensRecovEff = RVal: 72
+   SetPerfByHVIInterp = RVal: 0
    CF1R_FanIAQRow = RVal: "OneBedroomUpstairsZone1 1/2 fan 1/1 cnt 1/1FanIAQRow"
    ..
 
@@ -9566,6 +9581,9 @@ IAQVentRpt   User: "OneBedroomUpstairsZone1 2/2 fan 1/1 cnt 1/1"
    WperCFMIAQ = RVal: 0.6
    IAQFanType = RVal: "Balanced"
    IAQRecovEffect = RVal: 0
+   SensRecovEff = RVal: 67
+   AdjSensRecovEff = RVal: 72
+   SetPerfByHVIInterp = RVal: 0
    CF1R_FanIAQRow = RVal: "OneBedroomUpstairsZone1 2/2 fan 1/1 cnt 1/1FanIAQRow"
    ..
 
@@ -9582,6 +9600,9 @@ IAQVentRpt   User: "TwoBedroomUpstairsZone1 1/2 fan 1/1 cnt 1/1"
    WperCFMIAQ = RVal: 0.6
    IAQFanType = RVal: "Balanced"
    IAQRecovEffect = RVal: 0
+   SensRecovEff = RVal: 67
+   AdjSensRecovEff = RVal: 72
+   SetPerfByHVIInterp = RVal: 0
    CF1R_FanIAQRow = RVal: "TwoBedroomUpstairsZone1 1/2 fan 1/1 cnt 1/1FanIAQRow"
    ..
 
@@ -9598,6 +9619,9 @@ IAQVentRpt   User: "TwoBedroomUpstairsZone1 2/2 fan 1/1 cnt 1/1"
    WperCFMIAQ = RVal: 0.6
    IAQFanType = RVal: "Balanced"
    IAQRecovEffect = RVal: 0
+   SensRecovEff = RVal: 67
+   AdjSensRecovEff = RVal: 72
+   SetPerfByHVIInterp = RVal: 0
    CF1R_FanIAQRow = RVal: "TwoBedroomUpstairsZone1 2/2 fan 1/1 cnt 1/1FanIAQRow"
    ..
 
@@ -9631,7 +9655,7 @@ cf1rPayload   User: "CF1RPayload"
    attrib_complianceDocumentSchemaVersion = RVal: "complianceDocumentSchemaVersion1"
    attrib_displayTag = RVal: "CF1R-PRF-01-E"
    attrib_payloadDocument = RVal: "CF1RPRF01E"
-   attrib_processedDate = RVal: "2021-03-31T11:58:37-07:00"
+   attrib_processedDate = RVal: "2021-03-31T21:51:48-07:00"
    attrib_reportRequestor = RVal: "reportRequestor1"
    attrib_reportRequestorIP_Address = RVal: "reportRequestorIP_Address1"
    attrib_revision = RVal: "revision3"
@@ -9645,7 +9669,7 @@ cf1rDocumentData   User: "CF1RDocData"
 
 cf1rHeader   User: "CF1RHeader"  
    comp_header01_ProjectName = RVal: "2019 Prototype 7320ft2 Prop Gas"
-   comp_header02_RunDateTime = RVal: "2021-03-31T11:58:37-07:00"
+   comp_header02_RunDateTime = RVal: "2021-03-31T21:51:48-07:00"
    comp_header03_RunDescription = RVal: "TDSv30 V19R12 V19 R12 UGLASS15 ELEC PVSTD"
    comp_header04_InputFilename = RVal: "instance.ribd22"
    ..
@@ -9733,26 +9757,33 @@ cf1rSpecialFeature   User: "CF1R SecE SclFtr 2"
    ..
 
 cf1rSpecialFeature   User: "CF1R SecE SclFtr 3"  
+   E01_SpecialFeatureCategory = RVal: "IAQVentilationHRV_SRE_ASRE"
+   E01b_SpecialFeatureCategoryString = RVal: "IAQ Ventilation System: as high as 67 SRE and 72 ASRE"
+   E01c_SpecialFeatureCategoryData[1] = RVal: "67"
+   E01c_SpecialFeatureCategoryData[2] = RVal: "72"
+   ..
+
+cf1rSpecialFeature   User: "CF1R SecE SclFtr 4"  
    E01_SpecialFeatureCategory = RVal: "CoolRoofInstalled"
    E01b_SpecialFeatureCategoryString = RVal: "Cool roof"
    ..
 
-cf1rSpecialFeature   User: "CF1R SecE SclFtr 4"  
+cf1rSpecialFeature   User: "CF1R SecE SclFtr 5"  
    E01_SpecialFeatureCategory = RVal: "InsulationBelowRoofDeck"
    E01b_SpecialFeatureCategoryString = RVal: "Insulation below roof deck"
    ..
 
-cf1rSpecialFeature   User: "CF1R SecE SclFtr 5"  
+cf1rSpecialFeature   User: "CF1R SecE SclFtr 6"  
    E01_SpecialFeatureCategory = RVal: "DuctsNonstandardLocation"
    E01b_SpecialFeatureCategoryString = RVal: "Non-standard duct location (any location other than attic)"
    ..
 
-cf1rSpecialFeature   User: "CF1R SecE SclFtr 6"  
+cf1rSpecialFeature   User: "CF1R SecE SclFtr 7"  
    E01_SpecialFeatureCategory = RVal: "SolarWaterHeatingCreditMF"
    E01b_SpecialFeatureCategoryString = RVal: "Solar water heating credit, multifamily building"
    ..
 
-cf1rSpecialFeature   User: "CF1R SecE SclFtr 7"  
+cf1rSpecialFeature   User: "CF1R SecE SclFtr 8"  
    E01_SpecialFeatureCategory = RVal: "RecirculationDemandControlMF"
    E01b_SpecialFeatureCategoryString = RVal: "Multifamily: Recirculating demand control"
    ..
@@ -10812,8 +10843,8 @@ cf1rtblRowFanIAQ   User: "OneBedroomDownstairsZone1 1/2 fan 1/1 cnt 1/1FanIAQRow
    Ee02_FanFlowCapacity = RVal: 38
    Ee03_FanPowerPerFlow = RVal: 0.6
    Ee04_VentilationSystemType = RVal: "Balanced"
-   Ee05a_NotApplicableMessage = RVal: "n/a"
-   Ee05b_NotApplicableMessage = RVal: "n/a"
+   Ee05a_SensibleRecoveryEfficiency = RVal: 67
+   Ee05b_AdjustedSensibleRecoveryEfficiency = RVal: 72
    Ee06_IAQ_VentilationVerificationRequired = RVal: "true"
    Ee07_VentilationOperationSchedule = RVal: "Continuous"
    Ee08_WeatherStationName = RVal: "Palm Springs Intl"
@@ -10831,8 +10862,8 @@ cf1rtblRowFanIAQ   User: "OneBedroomDownstairsZone1 2/2 fan 1/1 cnt 1/1FanIAQRow
    Ee02_FanFlowCapacity = RVal: 38
    Ee03_FanPowerPerFlow = RVal: 0.6
    Ee04_VentilationSystemType = RVal: "Balanced"
-   Ee05a_NotApplicableMessage = RVal: "n/a"
-   Ee05b_NotApplicableMessage = RVal: "n/a"
+   Ee05a_SensibleRecoveryEfficiency = RVal: 67
+   Ee05b_AdjustedSensibleRecoveryEfficiency = RVal: 72
    Ee06_IAQ_VentilationVerificationRequired = RVal: "true"
    Ee07_VentilationOperationSchedule = RVal: "Continuous"
    Ee08_WeatherStationName = RVal: "Palm Springs Intl"
@@ -10850,8 +10881,8 @@ cf1rtblRowFanIAQ   User: "TwoBedroomDownstairsZone1 1/2 fan 1/1 cnt 1/1FanIAQRow
    Ee02_FanFlowCapacity = RVal: 55
    Ee03_FanPowerPerFlow = RVal: 0.6
    Ee04_VentilationSystemType = RVal: "Balanced"
-   Ee05a_NotApplicableMessage = RVal: "n/a"
-   Ee05b_NotApplicableMessage = RVal: "n/a"
+   Ee05a_SensibleRecoveryEfficiency = RVal: 67
+   Ee05b_AdjustedSensibleRecoveryEfficiency = RVal: 72
    Ee06_IAQ_VentilationVerificationRequired = RVal: "true"
    Ee07_VentilationOperationSchedule = RVal: "Continuous"
    Ee08_WeatherStationName = RVal: "Palm Springs Intl"
@@ -10869,8 +10900,8 @@ cf1rtblRowFanIAQ   User: "TwoBedroomDownstairsZone1 2/2 fan 1/1 cnt 1/1FanIAQRow
    Ee02_FanFlowCapacity = RVal: 55
    Ee03_FanPowerPerFlow = RVal: 0.6
    Ee04_VentilationSystemType = RVal: "Balanced"
-   Ee05a_NotApplicableMessage = RVal: "n/a"
-   Ee05b_NotApplicableMessage = RVal: "n/a"
+   Ee05a_SensibleRecoveryEfficiency = RVal: 67
+   Ee05b_AdjustedSensibleRecoveryEfficiency = RVal: 72
    Ee06_IAQ_VentilationVerificationRequired = RVal: "true"
    Ee07_VentilationOperationSchedule = RVal: "Continuous"
    Ee08_WeatherStationName = RVal: "Palm Springs Intl"
@@ -10888,8 +10919,8 @@ cf1rtblRowFanIAQ   User: "OneBedroomUpstairsZone1 1/2 fan 1/1 cnt 1/1FanIAQRow"
    Ee02_FanFlowCapacity = RVal: 38
    Ee03_FanPowerPerFlow = RVal: 0.6
    Ee04_VentilationSystemType = RVal: "Balanced"
-   Ee05a_NotApplicableMessage = RVal: "n/a"
-   Ee05b_NotApplicableMessage = RVal: "n/a"
+   Ee05a_SensibleRecoveryEfficiency = RVal: 67
+   Ee05b_AdjustedSensibleRecoveryEfficiency = RVal: 72
    Ee06_IAQ_VentilationVerificationRequired = RVal: "true"
    Ee07_VentilationOperationSchedule = RVal: "Continuous"
    Ee08_WeatherStationName = RVal: "Palm Springs Intl"
@@ -10907,8 +10938,8 @@ cf1rtblRowFanIAQ   User: "OneBedroomUpstairsZone1 2/2 fan 1/1 cnt 1/1FanIAQRow"
    Ee02_FanFlowCapacity = RVal: 38
    Ee03_FanPowerPerFlow = RVal: 0.6
    Ee04_VentilationSystemType = RVal: "Balanced"
-   Ee05a_NotApplicableMessage = RVal: "n/a"
-   Ee05b_NotApplicableMessage = RVal: "n/a"
+   Ee05a_SensibleRecoveryEfficiency = RVal: 67
+   Ee05b_AdjustedSensibleRecoveryEfficiency = RVal: 72
    Ee06_IAQ_VentilationVerificationRequired = RVal: "true"
    Ee07_VentilationOperationSchedule = RVal: "Continuous"
    Ee08_WeatherStationName = RVal: "Palm Springs Intl"
@@ -10926,8 +10957,8 @@ cf1rtblRowFanIAQ   User: "TwoBedroomUpstairsZone1 1/2 fan 1/1 cnt 1/1FanIAQRow"
    Ee02_FanFlowCapacity = RVal: 55
    Ee03_FanPowerPerFlow = RVal: 0.6
    Ee04_VentilationSystemType = RVal: "Balanced"
-   Ee05a_NotApplicableMessage = RVal: "n/a"
-   Ee05b_NotApplicableMessage = RVal: "n/a"
+   Ee05a_SensibleRecoveryEfficiency = RVal: 67
+   Ee05b_AdjustedSensibleRecoveryEfficiency = RVal: 72
    Ee06_IAQ_VentilationVerificationRequired = RVal: "true"
    Ee07_VentilationOperationSchedule = RVal: "Continuous"
    Ee08_WeatherStationName = RVal: "Palm Springs Intl"
@@ -10945,8 +10976,8 @@ cf1rtblRowFanIAQ   User: "TwoBedroomUpstairsZone1 2/2 fan 1/1 cnt 1/1FanIAQRow"
    Ee02_FanFlowCapacity = RVal: 55
    Ee03_FanPowerPerFlow = RVal: 0.6
    Ee04_VentilationSystemType = RVal: "Balanced"
-   Ee05a_NotApplicableMessage = RVal: "n/a"
-   Ee05b_NotApplicableMessage = RVal: "n/a"
+   Ee05a_SensibleRecoveryEfficiency = RVal: 67
+   Ee05b_AdjustedSensibleRecoveryEfficiency = RVal: 72
    Ee06_IAQ_VentilationVerificationRequired = RVal: "true"
    Ee07_VentilationOperationSchedule = RVal: "Continuous"
    Ee08_WeatherStationName = RVal: "Palm Springs Intl"

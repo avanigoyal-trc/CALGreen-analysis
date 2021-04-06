@@ -1,4 +1,4 @@
- #define  RunDateFmt  11:58, Wed, Mar 31, 2021
+ #define  RunDateFmt  21:51, Wed, Mar 31, 2021
  #define  RunID                7   // Proposed
  #define  AnalysisType        13   // Proposed and Standard
  #define  CompCodeBase      2022   // CA2022
@@ -1053,14 +1053,6 @@ IZXFER   "Zone1-NVHD"
    izNVEff = 0.5                        // Vent discharge coefficient coefficient
    izCpr = -0.3                         // Wind pressure coefficient (for AIRNETEXT)
 
-IZXFER   "Zone1-IAQHRV"  
-   izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
-   izZn1 = "Zone1-zn"                   // Name of primary zone (flow rates > 0 are into the primary zone)
-   izFanVfDs = 184.8                    // Fan design or rated flow at rated pressure, cfm
-   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
-   izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
-   izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
-
 IZXFER   "Zone2-InfLU"  
    izNVType = "AIRNETEXT"               // Choice determining interzone ventilation
    izZn1 = "Zone2-zn"                   // Name of primary zone (flow rates > 0 are into the primary zone)
@@ -1169,10 +1161,42 @@ IZXFER   "Zone2-NVHD"
    izNVEff = 0.5                        // Vent discharge coefficient coefficient
    izCpr = -0.3                         // Wind pressure coefficient (for AIRNETEXT)
 
-IZXFER   "Zone2-IAQHRV"  
+IZXFER   "OneBedroomDownstairsZone1-1-IAQFan1-IAQHRV"  
+   izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
+   izZn1 = "Zone1-zn"                   // Name of primary zone (flow rates > 0 are into the primary zone)
+   izFanVfDs = 75                       // Fan design or rated flow at rated pressure, cfm
+   izSRE = 0.67                         // sensible recovery efficiency (SRE)., frac
+   izASRE = 0.72                        // adjusted sensible recovery efficiency (ASRE)., frac
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
+   izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
+
+IZXFER   "TwoBedroomDownstairsZone1-1-IAQFan2-IAQHRV"  
+   izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
+   izZn1 = "Zone1-zn"                   // Name of primary zone (flow rates > 0 are into the primary zone)
+   izFanVfDs = 109.8                    // Fan design or rated flow at rated pressure, cfm
+   izSRE = 0.67                         // sensible recovery efficiency (SRE)., frac
+   izASRE = 0.72                        // adjusted sensible recovery efficiency (ASRE)., frac
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
+   izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
+
+IZXFER   "OneBedroomUpstairsZone1-1-IAQFan1-IAQHRV"  
    izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
    izZn1 = "Zone2-zn"                   // Name of primary zone (flow rates > 0 are into the primary zone)
-   izFanVfDs = 184.8                    // Fan design or rated flow at rated pressure, cfm
+   izFanVfDs = 75                       // Fan design or rated flow at rated pressure, cfm
+   izSRE = 0.67                         // sensible recovery efficiency (SRE)., frac
+   izASRE = 0.72                        // adjusted sensible recovery efficiency (ASRE)., frac
+   izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
+   izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
+   izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
+
+IZXFER   "TwoBedroomUpstairsZone1-1-IAQFan2-IAQHRV"  
+   izNVType = "AIRNETHERV"              // Choice determining interzone ventilation
+   izZn1 = "Zone2-zn"                   // Name of primary zone (flow rates > 0 are into the primary zone)
+   izFanVfDs = 109.8                    // Fan design or rated flow at rated pressure, cfm
+   izSRE = 0.67                         // sensible recovery efficiency (SRE)., frac
+   izASRE = 0.72                        // adjusted sensible recovery efficiency (ASRE)., frac
    izFanElecPwr = 0.6                   // Fan input power per unit air flow (at design flow and pressure), W/cfm
    izFanMtr = "MtrElec"                 // Name of meter, if any, to record energy used by supply fan (enduse = 'Fan')
    izFanEndUse = "FANV"                 // Enduse to apply fan energy usage to
