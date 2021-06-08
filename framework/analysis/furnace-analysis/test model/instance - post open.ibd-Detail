@@ -13,7 +13,7 @@ Proj   User: "2019 Prototype 7320ft2 Prop Gas"
    BEMVersion = UVal: 8
    RuleRepoRev = RVal: 1715
    CreateDate = UVal: 1582925619
-   ModDate = UVal: 1623109032
+   ModDate = UVal: 1623113169
    ProjFileName = UVal: "instance.ribd22"
    CSEName = RVal: "CSE19"
    CSEinclDHWMFL_EU = RVal: 1
@@ -1094,10 +1094,10 @@ DwellUnit   User: "OneBedroomDownstairsZone1"
    IAQCFM_Supply = RVal: 0
    IAQPwr_Supply = RVal: 0
    IAQHRVCFM = RVal: 75
-   IAQHRVPwr = RVal: 45
+   IAQHRVPwr = RVal: 75
    IAQHRVCFMxRcvEff = RVal: 0
-   IAQHRVCFMxSRE = RVal: 0
-   IAQHRVCFMxASRE = RVal: 0
+   IAQHRVCFMxSRE = RVal: 5025
+   IAQHRVCFMxASRE = RVal: 5400
    IAQCFMIsBalanced = RVal: 1
    IAQCFM_Balanced = RVal: 75
    StdDesignIAQCFM = RVal: 75
@@ -1782,10 +1782,10 @@ DwellUnit   User: "OneBedroomUpstairsZone1"
    IAQCFM_Supply = RVal: 0
    IAQPwr_Supply = RVal: 0
    IAQHRVCFM = RVal: 75
-   IAQHRVPwr = RVal: 45
+   IAQHRVPwr = RVal: 75
    IAQHRVCFMxRcvEff = RVal: 0
-   IAQHRVCFMxSRE = RVal: 0
-   IAQHRVCFMxASRE = RVal: 0
+   IAQHRVCFMxSRE = RVal: 5025
+   IAQHRVCFMxASRE = RVal: 5400
    IAQCFMIsBalanced = RVal: 1
    IAQCFM_Balanced = RVal: 75
    StdDesignIAQCFM = RVal: 75
@@ -4778,10 +4778,10 @@ DwellUnitType   User: "OneBedroom"
    IAQCFM_Supply = RVal: 0
    IAQPwr_Supply = RVal: 0
    IAQHRVCFM = RVal: 37.5
-   IAQHRVPwr = RVal: 22.5
+   IAQHRVPwr = RVal: 37.5
    IAQHRVCFMxRcvEff = RVal: 0
-   IAQHRVCFMxSRE = RVal: 0
-   IAQHRVCFMxASRE = RVal: 0
+   IAQHRVCFMxSRE = RVal: 2512.5
+   IAQHRVCFMxASRE = RVal: 2700
    IAQCFMFracHRVCompat = RVal: 1
    HVACSysType = UVal: "Heat Pump Heating and Cooling System"  (2)
    HVACSysTypeAbbrev = RVal: "Heat Pump"  (2)
@@ -5219,10 +5219,10 @@ DwellUnitType   User: "OneBedroom-2"
    IAQCFM_Supply = RVal: 0
    IAQPwr_Supply = RVal: 0
    IAQHRVCFM = RVal: 37.5
-   IAQHRVPwr = RVal: 22.5
+   IAQHRVPwr = RVal: 37.5
    IAQHRVCFMxRcvEff = RVal: 0
-   IAQHRVCFMxSRE = RVal: 0
-   IAQHRVCFMxASRE = RVal: 0
+   IAQHRVCFMxSRE = RVal: 2512.5
+   IAQHRVCFMxASRE = RVal: 2700
    IAQCFMFracHRVCompat = RVal: 1
    HVACSysType = UVal: "Heat Pump Heating and Cooling System"  (2)
    HVACSysTypeAbbrev = RVal: "Heat Pump"  (2)
@@ -6414,16 +6414,20 @@ HVACFan   User: "HVACFan-HeatPump"
 
 IAQFan   User: "IAQFan1"  
    IAQCFM = UVal: 37.5
-   WperCFMIAQ = UVal: 0.6
+   WperCFMIAQ = UVal: 1
    IAQFanType = UVal: "Balanced"  (3)
    IAQRecovEffect = RVal: 0
-   IncludesRecov = UVal: 0
+   IncludesRecov = UVal: 1
+   SensRecovEff = UVal: 67
+   AdjSensRecovEff = UVal: 72
    SetPerfByHVIInterp = UVal: 0
    IAQErrID = RVal: 0
-   TreeDescrip = RVal: "Balanced, 37.5 CFM"
+   TreeDescrip = RVal: "Balanced, 37.5 CFM, HRV SRE 67%, ASRE 72%"
    IAQFanTypeStr = RVal: "Balanced"
    NumAssignments = RVal: 2
-   WperCFMIAQRpt = RVal: 0.6
+   WperCFMIAQRpt = RVal: 1
+   HRV_SRE_Rpt = RVal: 67
+   HRV_ASRE_Rpt = RVal: 72
    ..
 
 IAQFan   User: "IAQFan2"  
