@@ -1,0 +1,74 @@
+---
+title: "Clean instance - run files"
+author: "Neil Perry"
+date: "June 11, 2020"
+output: html_document
+---
+
+### Install Packages
+```{r}
+install.packages("tidyverse")
+install.packages("fs")
+
+```
+
+#Load packages
+```{r echo=True, include=FALSE}
+library(tidyverse)
+library(fs)
+library(here)
+```
+
+```{r}
+#paste the directory you want to search (and remove files from) here with forward slashes
+searchdir = here("analysis/all-electric/runs")
+
+
+#paste the directory you want to move files to here with forward slashes
+pastedir = "C:/Documents/Models"
+
+
+
+
+#find folders in searchdir path titled "instance - run"
+test_search = list.files(path=searchdir,recursive = TRUE)
+
+
+test_search_filtered_regex = test_search[grepl("hr-win-aw-SZHPFurn/cz[0-9]{2}/instance.cibd22$",test_search)]
+
+
+#as DF
+test_search_filtered_df = as.data.frame(test_search_filtered_regex)
+
+fullpath = paste(searchdir,test_search_filtered_regex,sep="/")
+```
+
+
+#Find run folders, copy, and paste elsewhere
+```{r pressure, echo=FALSE}
+
+#create for loop 
+i = 1
+
+for (value in test_search_filtered_regex){
+  #get folder name one level up
+  cz_name = gsub("/","",basename(dirname(test_search_filtered_regex[[i]])))
+  #get folder name two levels up
+  casefolder_name = gsub("/","",basename(dirname(dirname(test_search_filtered_regex[[i]]))))
+  
+  #generate target destination paste folder with case name and CZ
+  pastepath = paste(pastedir,casefolder_name,cz_name, sep = "/")
+  copypath = paste(searchdir, test_search_filtered_regex[[i]], sep = "/")
+  #move file or create destination folder if it doesn't exist then move
+  if(dir_exists(pastepath)){
+    file_copy(copypath,pastepath, overwrite = TRUE)
+  } else {
+    dir_create(pastepath)
+  file_copy(copypath,pastepath, overwrite = TRUE)
+  }
+  
+  i = i + 1
+}
+
+
+```

@@ -271,7 +271,7 @@ tdv_2022_generate_com <- function(path, measures = NULL, cz = NULL, lifetime, fo
   
 }
 
-hourly_results_spreadsheet_res <- function(path, measures = NULL, lifetime, res_or_nr, cz = NULL,  file = NA,  remove_DHW = FALSE, remove_PVB = FALSE){
+hourly_results_spreadsheet_res <- function(path, measures = NULL, lifetime, res_or_nr, cz = NULL,  file = NA,  remove_DHW = FALSE, remove_PVB = FALSE, only_PVB = FALSE){
   ## For CBECC-Res
   
   ##path: String format, path to prototype results folder starting at framework ie. "analysis/hvac_autosizing"
@@ -343,6 +343,15 @@ hourly_results_spreadsheet_res <- function(path, measures = NULL, lifetime, res_
       hourly_totals <- cbind(hourly_totals_results, tdv_2022_elec[,clim_num +1], tdv_2022_gas[, clim_num + 1])
       
       names(hourly_totals) <- c("Month", "Day", "Hour", "DHW_kWh", "Elec_kWh_PVB", "Elec_kWh", "Elec_kWh_Comp", "DHW_Therm", "NG_Therm", "NG_Therm_Comp","kTDV/kWh_2022", "kTDV/Therm_2022")
+      
+      if(only_PVB){
+        hourly_totals <- hourly_totals %>%
+          mutate(Elec_kWh = Elec_kWh_PVB) %>%
+          mutate(NG_Therm = 0) %>%
+          mutate(Elec_kWh_Comp = 0) %>%
+          mutate(NG_Therm_Comp = 0)
+      }
+      
       
       if(remove_DHW){
         

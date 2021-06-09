@@ -9,6 +9,7 @@ parameter "weather_station"
 parameter "prototype"
 parameter "software"
 parameter "hvac_type", :default => "SZAC"
+parameter "ac_charge", :default => "Verified"
 parameter "seer", :default=>14
 parameter "eer", :default=>11.7
 parameter "hspf", :default=>8.2
@@ -16,8 +17,9 @@ parameter "multispeed_compressor", :default=>0 #1 if we want to have a multi-spe
 
 #parameters for residential DHW
 
-#parameter "is_central_dhw", :default=>1
-#parameter "sol_frac", :default=>0.2
+parameter "waterheater_type", :default=>"Central"
+parameter "compact_distr", :default => "No"
+parameter "dwhr", :default => "No"
 
 parameter "window_u", :default=>0.3
 parameter "window_shgc", :default=>0.23
@@ -39,6 +41,7 @@ parameter "duct_ins", :default=> "8.0"
 parameter "fan_furn", :default=> 0.45
 parameter "fan_hp", :default=> 0.58
 parameter "iaq_fan", :default=> 0.6
+parameter "hrv_erv", :default => "No"
 
 %>
 
@@ -1924,7 +1927,25 @@ DwellUnitType   "OneBedroom"
    DHWSysRef[1] = "DHWGas"
    TotShowersServed[1] = 1
    TotBathsServed[1] = 1
+   <% if compact_distr == "No"%>
    CompactDistrib = "not compact"
+   <%elsif compact_distr == "Yes"%>
+   CompactDistrib = "Basic Credit"
+   CDNumFloorsServed = 1
+   UsrSpecCmpctDist = 0
+   CDServesMBathFix[1] = 1
+   CDMBathFixDist[1] = 1
+   CDServesKitFix[1] = 1
+   CDKitFixDist[1] = 1
+   CDServesThirdFix[1] = 1
+   CDThirdFixDist[1] = 1
+   <%end%>
+   <%if dwhr == "Yes"%>
+   DWHRSysRef1[1] = "Drain Water Heat Recovery System 1"
+   DWHRSysShowers1[1] = 1
+   DWHRSysTakeCold1[1] = 1
+   DWHRSysFeedHeater1[1] = 0
+   <%end%>
    ServesAsDHWHtr = 0
    DHWSystemType = "Standard"
    DHWAmbientCond = "Unconditioned"
@@ -1965,7 +1986,25 @@ DwellUnitType   "TwoBedroom"
    DHWSysRef[1] = "DHWGas"
    TotShowersServed[1] = 1
    TotBathsServed[1] = 1
+   <% if compact_distr == "No"%>
    CompactDistrib = "not compact"
+   <%elsif compact_distr == "Yes"%>
+   CompactDistrib = "Basic Credit"
+   CDNumFloorsServed = 1
+   UsrSpecCmpctDist = 0
+   CDServesMBathFix[1] = 1
+   CDMBathFixDist[1] = 1
+   CDServesKitFix[1] = 1
+   CDKitFixDist[1] = 1
+   CDServesThirdFix[1] = 1
+   CDThirdFixDist[1] = 1
+   <%end%>
+   <%if dwhr == "Yes"%>
+   DWHRSysRef1[1] = "Drain Water Heat Recovery System 1"
+   DWHRSysShowers1[1] = 1
+   DWHRSysTakeCold1[1] = 1
+   DWHRSysFeedHeater1[1] = 0
+   <%end%>
    ServesAsDHWHtr = 0
    DHWSystemType = "Standard"
    DHWAmbientCond = "Unconditioned"
@@ -2006,7 +2045,25 @@ DwellUnitType   "OneBedroom-2"
    DHWSysRef[1] = "DHWGas"
    TotShowersServed[1] = 1
    TotBathsServed[1] = 1
+   <% if compact_distr == "No"%>
    CompactDistrib = "not compact"
+   <%elsif compact_distr == "Yes"%>
+   CompactDistrib = "Basic Credit"
+   CDNumFloorsServed = 1
+   UsrSpecCmpctDist = 0
+   CDServesMBathFix[1] = 1
+   CDMBathFixDist[1] = 1
+   CDServesKitFix[1] = 1
+   CDKitFixDist[1] = 1
+   CDServesThirdFix[1] = 1
+   CDThirdFixDist[1] = 1
+   <%end%>
+   <%if dwhr == "Yes"%>
+   DWHRSysRef1[1] = "Drain Water Heat Recovery System 1"
+   DWHRSysShowers1[1] = 1
+   DWHRSysTakeCold1[1] = 1
+   DWHRSysFeedHeater1[1] = 0
+   <%end%>
    ServesAsDHWHtr = 0
    DHWSystemType = "Standard"
    DHWAmbientCond = "Unconditioned"
@@ -2047,7 +2104,25 @@ DwellUnitType   "TwoBedroom-2"
    DHWSysRef[1] = "DHWGas"
    TotShowersServed[1] = 1
    TotBathsServed[1] = 1
+   <% if compact_distr == "No"%>
    CompactDistrib = "not compact"
+   <%elsif compact_distr == "Yes"%>
+   CompactDistrib = "Basic Credit"
+   CDNumFloorsServed = 1
+   UsrSpecCmpctDist = 0
+   CDServesMBathFix[1] = 1
+   CDMBathFixDist[1] = 1
+   CDServesKitFix[1] = 1
+   CDKitFixDist[1] = 1
+   CDServesThirdFix[1] = 1
+   CDThirdFixDist[1] = 1
+   <%end%>
+   <%if dwhr == "Yes"%>
+   DWHRSysRef1[1] = "Drain Water Heat Recovery System 1"
+   DWHRSysShowers1[1] = 1
+   DWHRSysTakeCold1[1] = 1
+   DWHRSysFeedHeater1[1] = 0
+   <%end%>
    ServesAsDHWHtr = 0
    DHWSystemType = "Standard"
    DHWAmbientCond = "Unconditioned"
@@ -2117,7 +2192,7 @@ HVACCool   "CoolingComponent"
    SEER = 14
    EER = 11.7
    CFMperTon = 350
-   ACCharge = "Verified"
+   ACCharge = "<%=ac_charge%>"
    RefrigerantType = "R410A"
    AutoSize = 1
    UseEERinAnalysis = 1
@@ -2132,7 +2207,7 @@ HVACHtPump   "HeatpumpSystem"
    SEER = <%=seer%>
    EER = <%=eer%>
    CFMperTon = 350
-   ACCharge = "Verified"
+   ACCharge = "<%=ac_charge%>"
    RefrigerantType = "R410A"
    ClSizingFactor = 1.1
    IsMultiSpeed = <%=multispeed_compressor%>
@@ -2187,7 +2262,13 @@ IAQFan   "IAQFan1"
    IAQCFM = 37.5
    WperCFMIAQ = <%= iaq_fan %>
    IAQFanType = "Balanced"
+   <% if hrv_erv == "No"%>
    IncludesRecov = 0
+   <% elsif hrv_erv == "Yes"%>
+   IncludesRecov = 1
+   SensRecovEff = 67
+   AdjSensRecovEff = 72
+   <%end%>
    SetPerfByHVIInterp = 0
    ..
 
@@ -2195,10 +2276,17 @@ IAQFan   "IAQFan2"
    IAQCFM = 54.9
    WperCFMIAQ = <%= iaq_fan %>
    IAQFanType = "Balanced"
+   <% if hrv_erv == "No"%>
    IncludesRecov = 0
+   <% elsif hrv_erv == "Yes"%>
+   IncludesRecov = 1
+   SensRecovEff = 67
+   AdjSensRecovEff = 72
+   <%end%>
    SetPerfByHVIInterp = 0
    ..
 
+<%if waterheater_type == "Central"%>
 DHWSys   "DHWGas"
    SystemType = "Standard"
    MFamDistType = "Multi-family: Recirculation demand control"
@@ -2219,6 +2307,20 @@ DHWSys   "DHWGas"
    DHWSolarSysRef = "DHW Solar System"
    SolFracType = "- none -"
    ..
+<%elsif waterheater_type == "Individual"%>
+
+DHWSys   "DHWGas"  
+   SystemType = "Standard"
+   CentralDHW = 0
+   UseMaxDurNumHtrs = 0
+   DHWHeater[1] = "Gas"
+   HeaterMult[1] = 1
+   TotShowersServed = 1
+   TotBathsServed = 1
+   SolFracType = "- none -"
+   ..
+
+<%end%>
 
 DHWSys   "DHWHeatpump"
    SystemType = "Standard"
@@ -2261,7 +2363,7 @@ DHWSys   "DHWElectric"
 
 DWHRSys   "Drain Water Heat Recovery System 1"
    Type = "Vertical"
-   CSARatedEff = 50
+   CSARatedEff = 42
    ..
 
 DWHRSys   "Drain Water Heat Recovery System 2"
@@ -2269,6 +2371,7 @@ DWHRSys   "Drain Water Heat Recovery System 2"
    CSARatedEff = 50
    ..
 
+<% if waterheater_type == "Central"%>
 DHWHeater   "Gas"
    HeaterElementType = "Gas"
    TankType = "Residential-Duty Commercial Storage (UEF)"
@@ -2286,6 +2389,31 @@ DHWHeater   "Gas"
    HasElecMiniTank = 0
    ElecMiniTankPower = 0
    ..
+
+<%elsif waterheater_type == "Individual" %>
+
+DHWHeater   "Gas"  
+   HeaterElementType = "Gas"
+   TankType = "Consumer Instantaneous (UEF)"
+   HPWH_NEEARated = 0
+   HPWHBrand = "n/a"
+   HPWHModel = "n/a"
+   EnergyFactor = 0.81
+   IsUEFHtPump = 0
+   TankVolume = 0
+   IntInsulRVal = 0
+   ExtInsulRVal = 0
+   AmbientCond = "Unconditioned"
+   RecovEff = 83.3662
+   RatedFlow = 4.7
+   AnnFuelUse = 205
+   AnnElecUse = 52
+   StandbyElec = 4
+   HasElecMiniTank = 0
+   ElecMiniTankPower = 0
+   ..
+
+<%end%>
 
 DHWHeater   "Heatpump"
    HeaterElementType = "Heat Pump"
